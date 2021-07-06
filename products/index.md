@@ -34,22 +34,4 @@ notitle: "true"
             Learn more
         </div>
     </a>
-    <a href="/docs/iot-gateway/what-is-iot-gateway/" class="card thingsboard-gw">
-        <div class="card-title">
-            <span class="title-text">ThingsBoard<br/>IoT Gateway</span>
-        </div>
-        <div class="card-img product gateway-bg"></div>
-        <div class="card-description">
-            Learn more
-        </div>
-    </a>
-    <a href="/products/trendz/" class="card trendz">
-        <div class="card-title">
-            <span class="title-text">Trendz<br/>Analytics Platform</span>
-        </div>
-        <div class="card-img product trendz-bg"></div>
-        <div class="card-description">  
-            Learn more
-        </div>
-    </a>
 </div>

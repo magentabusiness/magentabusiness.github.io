@@ -212,9 +212,7 @@ Browse other [samples](/docs/samples) or explore guides related to main ThingsBo
  - [Rule Engine](/docs/user-guide/rule-engine/) - how to use rule engine to analyze data from devices.
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
 
-{% include templates/feedback.md %}
 
-{% include socials.html %}
 
 ## Next steps
 

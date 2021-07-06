@@ -13,10 +13,6 @@ docs-header:
   title: Documentation
 - toc: guides
   title: Guides
-- toc: installation
-  title: Installation
-- toc: reference
-  title: Architecture
 - toc: api
   title: API
 - toc: faq

@@ -101,9 +101,7 @@ If we configured our device as shown above the device will be sending data to Th
 [Cricket Wi-Fi module - Documentation](https://thingsonedge.com/documentation)
 
 
-{% include templates/feedback.md %}
 
-{% include socials.html %}
 
 ## Next steps
 

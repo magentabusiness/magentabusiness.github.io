@@ -7,16 +7,6 @@ description:
 <div id="background">
 <div class="main"></div><div class="small1"></div><div class="small2"></div><div class="small3"></div><div class="small4"></div><div class="bottom"></div><div class="small5"></div>
 </div>
-<section id="tb-customers">
-	<main>
-		<a href="/industries/telecom/#tmobile"><object data="/images/customers/clear/t-mobile.svg"></object></a>
-		<a href="https://www.bosch.com/"><object data="/images/customers/clear/bosch.svg"></object></a>
-		<a href="https://www.prosegur.com/"><object data="/images/customers/clear/prosegur.svg"></object></a>
-		<a href="http://www.engie.sk/en/kontakt"><object data="/images/customers/clear/engie.svg"></object></a>
-		<a href="/industries/smart-energy/#circutor"><object data="/images/customers/clear/circutor.svg"></object></a>
-		<a href="/industries/telecom/#tektelic"><object data="/images/customers/clear/tektelic.svg"></object></a>
-	</main>
-</section>
 <section id="intro">
 	<main>
 		<h1 class="intro_title"><a href="what-is-thingsboard-cloud/">ThingsBoard Cloud</a> is a fully managed, scalable and fault-tolerant platform for your IoT applications</h1>
