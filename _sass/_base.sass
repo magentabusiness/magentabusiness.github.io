@@ -254,19 +254,19 @@ details[open]
       position: relative
       @media screen and (max-width: 1024px)
         font-size: 14px
-      &::after
-        content: ""
-        background-image: url(/images/pe/read-more-arrow.svg)
-        background-size: contain
-        display: block
-        position: absolute
-        top: 4px
-        right: 26px
-        width: 14px
-        height: 14px
-        transform: rotate(90deg)
-        transition: transform .3s
-        border: none
+      //&::after
+      //  content: ""
+      //  background-image: url(/images/pe/read-more-arrow.svg)
+      //  background-size: contain
+      //  display: block
+      //  position: absolute
+      //  top: 4px
+      //  right: 26px
+      //  width: 14px
+      //  height: 14px
+      //  transform: rotate(90deg)
+      //  transition: transform .3s
+      //  border: none
     .product-description
       color: #899aab
       font-size: 13px
@@ -274,46 +274,46 @@ details[open]
       @media screen and (max-width: 1024px)
         font-size: 10px
 
-  .products
-    transition: visibility, opacity ease-in-out
-    transition-duration: 0.3s
-    border-radius: 4px
-    box-shadow: 0 30px 60px -30px rgba(0, 0, 0, .3), 0 50px 100px -20px rgba(0, 0, 0, 0.25)
-    background-color: #fff
-    position: absolute
-    top: 81px
-    left: -17px
-    right: 0
-    padding: 8px
-    display: flex
-    flex-direction: column
-    visibility: hidden
-    opacity: 0
-    a.product
-      color: #212529
-      font-size: 16px
-      font-weight: normal
-      padding: 8px 14px
-      &:hover, &.active
-        text-decoration: none
-        color: #2a7dec
-      &.active
-        font-weight: 500
-        border-radius: 4px
-        background: #f9fbff
-  &:hover, &.active
-    cursor: pointer
-    .product-title
-      color: #2a7dec
-      &::after
-        filter: invert(35%) sepia(96%) saturate(1837%) hue-rotate(202deg) brightness(98%) contrast(89%)
-  &.active
-    .product-title
-      &::after
-        transform: rotate(-90deg)
-    .products
-      visibility: visible
-      opacity: 1
+  //.products
+  //  transition: visibility, opacity ease-in-out
+  //  transition-duration: 0.3s
+  //  border-radius: 4px
+  //  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, .3), 0 50px 100px -20px rgba(0, 0, 0, 0.25)
+  //  background-color: #fff
+  //  position: absolute
+  //  top: 81px
+  //  left: -17px
+  //  right: 0
+  //  padding: 8px
+  //  display: flex
+  //  flex-direction: column
+  //  visibility: hidden
+  //  opacity: 0
+  //  a.product
+  //    color: #212529
+  //    font-size: 16px
+  //    font-weight: normal
+  //    padding: 8px 14px
+  //    &:hover, &.active
+  //      text-decoration: none
+  //      color: #2a7dec
+  //    &.active
+  //      font-weight: 500
+  //      border-radius: 4px
+  //      background: #f9fbff
+  //&:hover, &.active
+  //  cursor: pointer
+  //  .product-title
+  //    color: #2a7dec
+  //    &::after
+  //      filter: invert(35%) sepia(96%) saturate(1837%) hue-rotate(202deg) brightness(98%) contrast(89%)
+  //&.active
+  //  .product-title
+  //    &::after
+  //      transform: rotate(-90deg)
+  //  .products
+  //    visibility: visible
+  //    opacity: 1
 
 header
   @media screen and (min-width: 1280px)

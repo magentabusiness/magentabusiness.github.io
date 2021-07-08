@@ -1,12 +1,12 @@
-- title: Cloud
-  fulltitle: ThingsBoard Cloud
-  description: ThingsBoard Documentation
-  tag: paas
-  icon: /images/thingsboard-c-icon.svg
-  path: /docs/paas/
-  guides: /docs/paas/guides/
-  getStarted: /docs/paas/getting-started-guides/helloworld/
-  docsPrefix: /docs/paas/
+#- title: Cloud
+#  fulltitle: ThingsBoard Cloud
+#  description: ThingsBoard Documentation
+#  tag: paas
+#  icon: /images/thingsboard-c-icon.svg
+#  path: /docs/paas/
+#  guides: /docs/paas/guides/
+#  getStarted: /docs/paas/getting-started-guides/helloworld/
+#  docsPrefix: /docs/paas/
 - title: Professional Edition
   fulltitle: ThingsBoard Professional Edition
   description: ThingsBoard Documentation
@@ -16,32 +16,32 @@
   guides: /docs/pe/guides/
   getStarted: /docs/pe/getting-started-guides/helloworld/
   docsPrefix: /docs/pe/
-- title: Community Edition
-  fulltitle: ThingsBoard Community Edition
-  description: ThingsBoard Documentation
-  tag: ce
-  icon: /images/thingsboard-cm-icon.svg
-  path: /docs/
-  guides: /docs/guides/
-  getStarted: /docs/getting-started-guides/helloworld/
-  docsPrefix: /docs/
-- title: IoT Gateway
-  fulltitle: ThingsBoard IoT Gateway
-  description: ThingsBoard Documentation
-  tag: gw
-  icon: /images/gateway-icon.svg
-  path: /docs/iot-gateway/
-  getStarted: /docs/iot-gateway/getting-started/
-- title: License Server
-  fulltitle: ThingsBoard License Server
-  description: ThingsBoard Documentation
-  tag: license
-  icon: /images/license-icon.svg
-  path: /products/license-server/
-- title: Trendz Analytics
-  fulltitle: Trendz Analytics
-  description: Trendz Documentation
-  tag: trendz
-  icon: /images/trendz-icon.svg
-  path: /docs/trendz/
-  getStarted: /docs/trendz/getting-started/
+#- title: Community Edition
+#  fulltitle: ThingsBoard Community Edition
+#  description: ThingsBoard Documentation
+#  tag: ce
+#  icon: /images/thingsboard-cm-icon.svg
+#  path: /docs/
+#  guides: /docs/guides/
+#  getStarted: /docs/getting-started-guides/helloworld/
+#  docsPrefix: /docs/
+#- title: IoT Gateway
+#  fulltitle: ThingsBoard IoT Gateway
+#  description: ThingsBoard Documentation
+#  tag: gw
+#  icon: /images/gateway-icon.svg
+#  path: /docs/iot-gateway/
+#  getStarted: /docs/iot-gateway/getting-started/
+#- title: License Server
+#  fulltitle: ThingsBoard License Server
+#  description: ThingsBoard Documentation
+#  tag: license
+#  icon: /images/license-icon.svg
+#  path: /products/license-server/
+#- title: Trendz Analytics
+#  fulltitle: Trendz Analytics
+#  description: Trendz Documentation
+#  tag: trendz
+#  icon: /images/trendz-icon.svg
+#  path: /docs/trendz/
+#  getStarted: /docs/trendz/getting-started/
