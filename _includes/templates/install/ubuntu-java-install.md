@@ -1,4 +1,4 @@
-ThingsBoard service is running on Java 11. Follow this instructions to install OpenJDK 11:
+IoT Hub service is running on Java 11. Follow this instructions to install OpenJDK 11:
 
 ```bash
 sudo apt update

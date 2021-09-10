@@ -17,7 +17,7 @@ sudo service tb-edge restart
 ```
 {: .copy-code}
 
-Check status of ThingsBoard Edge service:
+Check status of IoT Hub Edge service:
 ```bash
 sudo service tb-edge status
 ```

@@ -4,7 +4,7 @@
 
 ## Overview
 
-Since ThingsBoard 3.2, a System Administrator is able to configure common settings for multiple tenants using Tenant Profiles. 
+Since IoT Hub 3.2, a System Administrator is able to configure common settings for multiple tenants using Tenant Profiles. 
 Each Tenant has the one and only profile at a single point in time.
 
 Let's review the settings available in the tenant profile, one-by-one.
@@ -13,20 +13,20 @@ Let's review the settings available in the tenant profile, one-by-one.
 
 This group of settings allows the System Administrator to configure a maximum number of entities that each Tenant is able to create.
 
-**ThingsBoard Community** edition supports limits for the following entities: devices, assets, customers, users, dashboards, and rule chains.
+**IoT Hub Community** edition supports limits for the following entities: devices, assets, customers, users, dashboards, and rule chains.
 
-**ThingsBoard Professional** edition supports limits for everything listed above and as well additional constraint support for the following entities: integrations, converters, and scheduler events.
+**IoT Hub Professional** edition supports limits for everything listed above and as well additional constraint support for the following entities: integrations, converters, and scheduler events.
 
 {% include images-gallery.html imageCollection="entityLimits" %}
  
 ## API Limits & Usage
 
 This group of settings allows a System Administrator to configure a maximum number of messages, API calls, etc., per month that each Tenant would like to perform. 
-ThingsBoard constantly collects and analyzes statistics about API Usage. The typical update interval of the statistics is 1 minute
+IoT Hub constantly collects and analyzes statistics about API Usage. The typical update interval of the statistics is 1 minute
 
-ThingsBoard tracks API usage for six main components: Transport, Rule Engine, JS functions, Telemetry persistence, Email, and SMS services. The platform will disable the component if one of the related API Limits reaches a threshold. 
+IoT Hub tracks API usage for six main components: Transport, Rule Engine, JS functions, Telemetry persistence, Email, and SMS services. The platform will disable the component if one of the related API Limits reaches a threshold. 
 For example, if Tenant devices produce more than 100M messages per a month, the platform will disable all connections for devices that belong to this Tenant. 
-When the API usage is disabled or reaches a certain threshold (typically 80%) ThingsBoard will notify the Tenant Administrator via email.  
+When the API usage is disabled or reaches a certain threshold (typically 80%) IoT Hub will notify the Tenant Administrator via email.  
 
 Let's review each limit separately:
 
@@ -67,11 +67,11 @@ A Tenant Administrator is able to overwrite default TTL using the "**Save Timese
 **Alarms sent** means the total number of alarms created per the period (one month by default).
 
 **Emails sent** means the number of emails that are sent from the rule engine using system SMTP provider (settings). 
-Please note that the Tenant Administrator is able to define custom SMTP settings in both Community and Professional Editions of the platform. 
+Please note that the Tenant Administrator is able to define custom SMTP settings in both Community and IoT Hubs of the platform. 
 Emails sent with custom SMTP settings do not affect API limits.  
 
 **SMS sent** means the number of SMSes that are sent from the rule engine using the system SMS provider. 
-Please note that the Tenant Administrator is able to define custom SMS provider settings in both Community and Professional Editions of the platform. 
+Please note that the Tenant Administrator is able to define custom SMS provider settings in both Community and IoT Hubs of the platform. 
 SMS sent with custom SMTP settings do not affect API limits.
 
 ### API Usage dashboard
@@ -92,23 +92,23 @@ You can define multiple intervals with ",". For example, "100:1,1000:60" means "
 
 {% include images-gallery.html imageCollection="rateLimits" %}
 
-## Processing in isolated ThingsBoard Core and Rule Engine containers
+## Processing in isolated IoT Hub Core and Rule Engine containers
 
 Isolated processing should be disabled by default. These options are only useful in rare cases of a [microservices](/docs/{{docsPrefix}}reference/msa/) deployment.
-Experienced DevOps / System Administrators are required to configure the ThingsBoard cluster to use these settings. 
+Experienced DevOps / System Administrators are required to configure the IoT Hub cluster to use these settings. 
 Misconfiguration may cause issues with the processing of incoming messages. 
-ThingsBoard team is working to simplify the configuration process and expect to provide improvements in ThingsBoard 3.3 release.  
+IoT Hub team is working to simplify the configuration process and expect to provide improvements in IoT Hub 3.3 release.  
 
-Starting ThingsBoard 2.5 you may deploy isolated Core and Rule Engine [microservices](/docs/{{docsPrefix}}reference/msa/) for each or specific tenants. 
-ThingsBoard Core is responsible for handling WebSocket subscriptions, tracking device connectivity, and other calculations that are not directly related to message processing.
-ThingsBoard Rule Engine is the main "worker" in the cluster and is responsible for processing incoming messages.
+Starting IoT Hub 2.5 you may deploy isolated Core and Rule Engine [microservices](/docs/{{docsPrefix}}reference/msa/) for each or specific tenants. 
+IoT Hub Core is responsible for handling WebSocket subscriptions, tracking device connectivity, and other calculations that are not directly related to message processing.
+IoT Hub Rule Engine is the main "worker" in the cluster and is responsible for processing incoming messages.
 
 By default, all messages (such as telemetry, connectivity, and lifecycle events) are pushed to the same message queue/topic (powered by Kafka, RabbitMQ, AWS SQS, Azure Service Bus, Goole Pub/Sub).
-ThingsBoard pushes messages for all Tenants to a common queue when isolated processing is disabled (default). 
+IoT Hub pushes messages for all Tenants to a common queue when isolated processing is disabled (default). 
 This requires fewer processing resources and allows data from multiple Tenants to be processed under a single Rule Engine.
 This way, you don't need to host a separate container or VM per Tenant.  
 
-ThingsBoard pushes messages to a separate queue when you select processing to be isolated for a particular tenant. 
+IoT Hub pushes messages to a separate queue when you select processing to be isolated for a particular tenant. 
 This provides a better level of isolation for those tenants. However, this also requires you to launch separate microservices for a particular Tenant. 
 In order to do this, you should specify the TB_SERVICE_TENANT_ID environment variable for that microservice. The value should be set to the isolated Tenant Id.
 This will instruct Rule Engine / Core microservice to subscribe to specific message queue topics that contain data for that particular Tenant.    

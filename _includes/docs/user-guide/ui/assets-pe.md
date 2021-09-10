@@ -3,13 +3,13 @@
 
 ## Introduction
 
-Thingsboard support following asset management features using Web UI and [REST API](/docs/{{docsPrefix}}reference/rest-api/).
+IoT Hub support following asset management features using Web UI and [REST API](/docs/{{docsPrefix}}reference/rest-api/).
 
 {% include images-gallery.html imageCollection="asset-intro-pe" %}
 
 ## Adding and delete asset
 
-Tenant administrators can register new assets or delete them from Thingsboard.
+Tenant administrators can register new assets or delete them from IoT Hub.
 To add a new asset group, click the plus icon in the upper right corner.
 Enter the name for the new asset group, set up the sharing configuration, and click Add.
 
@@ -53,13 +53,13 @@ _Documentation dedicated to events is coming soon._
 
 ## Asset relations
 
-ThingsBoard provides the user interface and REST APIs to provision and manage multiple entity types and their [relations](/docs/{{docsPrefix}}user-guide/entities-and-relations/) in your IoT application.
+IoT Hub provides the user interface and REST APIs to provision and manage multiple entity types and their [relations](/docs/{{docsPrefix}}user-guide/entities-and-relations/) in your IoT application.
 
 {% include images-gallery.html imageCollection="asset-relations-pe" %}
 
 ## Audit logs
 
-ThingsBoard provides the ability to track user actions in order to keep an [audit log](/docs/{{docsPrefix}}user-guide/audit-log/).
+IoT Hub provides the ability to track user actions in order to keep an [audit log](/docs/{{docsPrefix}}user-guide/audit-log/).
 It is possible to log user actions related to main entities: assets, devices, dashboard, rules, etc.
 
 {% include images-gallery.html imageCollection="asset-auditlogs-pe" %}

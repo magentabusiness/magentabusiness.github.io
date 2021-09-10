@@ -1,6 +1,6 @@
 {% include templates/install/queue-confluent-cloud-config.md %}
 
-Create docker compose file for ThingsBoard queue service:
+Create docker compose file for IoT Hub queue service:
 
 ```text
 docker-compose.yml

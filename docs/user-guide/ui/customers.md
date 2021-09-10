@@ -1,9 +1,9 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 assignees:
 - ashvayka
 title: Customers
-description: ThingsBoard Customers management
+description: IoT Hub Customers management
 
 ---
 

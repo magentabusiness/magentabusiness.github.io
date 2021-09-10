@@ -1,4 +1,4 @@
-Now let's start the ThingsBoard service!
+Now let's start the IoT Hub service!
 Open the command prompt as an Administrator and execute the following command:
 
 ```shell
@@ -8,11 +8,11 @@ net start thingsboard
 Expected output:
 
 ```text
-The ThingsBoard Server Application service is starting.
-The ThingsBoard Server Application service was started successfully.
+The IoT Hub Server Application service is starting.
+The IoT Hub Server Application service was started successfully.
 ```
 
-In order to restart the ThingsBoard service you can execute following commands:
+In order to restart the IoT Hub service you can execute following commands:
 
 ```shell
 net stop thingsboard

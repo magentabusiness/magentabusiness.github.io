@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - ashvayka
 title: Widgets Library
-description: ThingsBoard Dashboard Widgets Library
+description: IoT Hub Dashboard Widgets Library
 wl-dashboard-widgets:
     0:
         image: /images/user-guide/ui/widgets/widget-library/wl-dashboard-widgets-pe.png

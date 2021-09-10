@@ -1,7 +1,7 @@
 ---
-layout: docwithnav
-title: 4G LTE Industrial Router and ThingsBoard
-description: 4G LTE Industrial Router with ThingsBoard PE Platform
+layout: docwithnav-pe
+title: 4G LTE Industrial Router and IoT Hub
+description: 4G LTE Industrial Router with IoT Hub Platform
 hidetoc: "true"
 ---
 
@@ -10,13 +10,13 @@ hidetoc: "true"
 
 ## Introduction
 
-This article contains instructions on how to configure ThingsBoard PE platform and connect KERNEL devices. ThingsBoard PE platform is an open-source IoT platform for data collection, processing, visualization, and device management. It enables device connectivity via industry standard MQTT protocol. ThingsBoard combines scalability, fault-tolerance and performance so you will never lose your data.
+This article contains instructions on how to configure IoT Hub platform and connect KERNEL devices. IoT Hub platform is an open-source IoT platform for data collection, processing, visualization, and device management. It enables device connectivity via industry standard MQTT protocol. IoT Hub combines scalability, fault-tolerance and performance so you will never lose your data.
 
 ## Integration flow:
 
-### Step 1 ThingsBoard : Device configuration
+### Step 1 IoT Hub : Device configuration
 
-* [Step 1.1] Login to your ThingsBoard instance, Open "Device Groups" page.
+* [Step 1.1] Login to your IoT Hub instance, Open "Device Groups" page.
 <br/>
 <img src="/images/samples/kingpigeon/home.png" width="1000"/>
 <br/>
@@ -62,7 +62,7 @@ This article contains instructions on how to configure ThingsBoard PE platform a
 * [Step 2.4] Edit thingsboard configuration.
 <br/>
 <img src="/images/samples/kingpigeon/r4003.png" width="800"/>
-<br/>1.Choose ThingsBoard platform.
+<br/>1.Choose IoT Hub platform.
 <br/>2.Set MQTT ID, See "Step 1.4".
 <br/>3.Set username, See "Step 1.4".
 <br/>4.Set password, See "Step 1.4".
@@ -102,7 +102,7 @@ This article contains instructions on how to configure ThingsBoard PE platform a
 <img src="/images/samples/kingpigeon/chart03.png" width="400"/>
 <br/>
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main IoT Hub features:
 
  - [Create Dashboard](/docs/getting-started-guides/helloworld/#step-3-create-dashboard) - how to create a new dashboard.
  - [Working with IoT dashboards](/docs/user-guide/dashboards/) - how to work with dashboards.

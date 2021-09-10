@@ -1,4 +1,4 @@
-Let's assume you have a vehicle with mounted IoT monitoring system connected to ThingsBoard **Edge**. 
+Let's assume you have a vehicle with mounted IoT monitoring system connected to IoT Hub **Edge**. 
 You want to collect all messages from the device on the edge and push to the cloud only data related to business logic. 
 For example, mileage readings may help to track how many miles left to travel till the next oil change. 
 
@@ -11,7 +11,7 @@ The In-vehicle monitoring system has 10 sensors:
 * Tire temperature
 * Pressure in each tire (4x)
 
-ThingsBoard Edge has the following responsibilities:
+IoT Hub Edge has the following responsibilities:
  * **Collects readings** from 10 sensors
  * **Pushes to the cloud** only "distance" readings
 

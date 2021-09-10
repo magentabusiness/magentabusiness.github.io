@@ -1,5 +1,5 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: Rule Engine Architecture
 description: Rule Engine Architecture
 

@@ -2,7 +2,7 @@
 
 For installing RabbitMQ use this [instruction](https://www.rabbitmq.com/install-windows.html).
 
-##### ThingsBoard Configuration
+##### IoT Hub Configuration
 
 
 Open the Notepad or other editor as administrator user (right click on the app icon and select "Run as administrator").  

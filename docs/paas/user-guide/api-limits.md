@@ -5,5 +5,5 @@ description: Configuring API Limits
 
 ---
 
-The API limits are configured by ThingsBoard Cloud administrator and depend on the subscription plan. 
+The API limits are configured by IoT Hub administrator and depend on the subscription plan. 
 Please check [Subscriptions](/products/paas/subscription/) page for more info. 

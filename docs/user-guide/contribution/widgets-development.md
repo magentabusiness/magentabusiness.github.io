@@ -1,5 +1,5 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 assignees:
 - ikulikov
 title: Widgets Development Guide

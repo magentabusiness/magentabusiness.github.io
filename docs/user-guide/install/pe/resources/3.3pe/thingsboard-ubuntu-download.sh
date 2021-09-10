@@ -1,1 +1,1 @@
-wget https://dist.thingsboard.io/thingsboard-3.3pe.deb
+wget https://dist.iothub.magenta.at/thingsboard-3.3pe.deb

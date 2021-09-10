@@ -3,7 +3,7 @@
 * TOC
 {:toc}
 
-Huawei OceanConnect Integration allows to stream data from OceanConnect platform to ThingsBoard and converts binary device payloads to the ThingsBoard format.
+Huawei OceanConnect Integration allows to stream data from OceanConnect platform to IoT Hub and converts binary device payloads to the IoT Hub format.
 
 
  ![image](/images/user-guide/integrations/ocean-connect-integration.svg)

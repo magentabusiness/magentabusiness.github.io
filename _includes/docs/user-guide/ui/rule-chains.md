@@ -20,7 +20,7 @@ See [**Rule Engine**](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/re-getting-
 
 #### Rule Chain export
 
-You are able to export your rule chain to JSON format and import it to the same or another ThingsBoard instance.
+You are able to export your rule chain to JSON format and import it to the same or another IoT Hub instance.
 
 In order to export rule chain, you should navigate to the **Rule Chains** page and click on the export button located on the particular rule chain row.
  

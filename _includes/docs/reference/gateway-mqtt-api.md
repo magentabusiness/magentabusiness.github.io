@@ -4,11 +4,11 @@
 
 ## Introduction
 
-The Gateway is a special type of device in ThingsBoard that is able to act as a bridge between external devices connected to different systems and ThingsBoard.
+The Gateway is a special type of device in IoT Hub that is able to act as a bridge between external devices connected to different systems and IoT Hub.
 Gateway API provides the ability to exchange data between **multiple devices** and the platform using **single MQTT connection**.
-The Gateway also acts as a ThingsBoard device and can leverage existing [MQTT Device API](/docs/{{docsPrefix}}reference/mqtt-api/) to report stats, receive configuration updates and much more.
+The Gateway also acts as a IoT Hub device and can leverage existing [MQTT Device API](/docs/{{docsPrefix}}reference/mqtt-api/) to report stats, receive configuration updates and much more.
 
-The API listed below is used by [**ThingsBoard open-source IoT Gateway**](/docs/iot-gateway/what-is-iot-gateway/).
+The API listed below is used by [**IoT Hub open-source IoT Gateway**](/docs/iot-gateway/what-is-iot-gateway/).
 
 ## Basic MQTT API
 
@@ -16,7 +16,7 @@ Please refer to generic [MQTT Device API](/docs/{{docsPrefix}}reference/mqtt-api
  
 ## Device Connect API
 
-In order to inform ThingsBoard that device is connected to the Gateway, one needs to publish following message:
+In order to inform IoT Hub that device is connected to the Gateway, one needs to publish following message:
  
 ```shell
 Topic: v1/gateway/connect
@@ -25,12 +25,12 @@ Message: {"device":"Device A"}
 
 where **Device A** is your device name.
 
-Once received, ThingsBoard will lookup or create a device with the name specified.
-Also, ThingsBoard will publish messages about new attribute updates and RPC commands for a particular device to this Gateway.
+Once received, IoT Hub will lookup or create a device with the name specified.
+Also, IoT Hub will publish messages about new attribute updates and RPC commands for a particular device to this Gateway.
 
 ## Device Disconnect API
 
-In order to inform ThingsBoard that device is disconnected from the Gateway, one needs to publish following message:
+In order to inform IoT Hub that device is disconnected from the Gateway, one needs to publish following message:
  
 ```shell
 Topic: v1/gateway/disconnect
@@ -39,11 +39,11 @@ Message: {"device":"Device A"}
 
 where **Device A** is your device name.
 
-Once received, ThingsBoard will no longer publish updates for this particular device to this Gateway.
+Once received, IoT Hub will no longer publish updates for this particular device to this Gateway.
 
 ## Attributes API
 
-ThingsBoard attributes API allows devices to
+IoT Hub attributes API allows devices to
 
 * Upload [client-side](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types) device attributes to the server.
 * Request [client-side](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types) and [shared](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types) device attributes from the server.
@@ -51,7 +51,7 @@ ThingsBoard attributes API allows devices to
  
 ##### Publish attribute update to the server
 
-In order to publish client-side device attributes to ThingsBoard server node, send PUBLISH message to the following topic:
+In order to publish client-side device attributes to IoT Hub server node, send PUBLISH message to the following topic:
 
 ```shell
 Topic: v1/gateway/attributes
@@ -62,7 +62,7 @@ where **Device A** and **Device B** are your device names, **attribute1** and **
 
 ##### Request attribute values from the server
 
-In order to request client-side or shared device attributes to ThingsBoard server node, send PUBLISH message to the following topic:
+In order to request client-side or shared device attributes to IoT Hub server node, send PUBLISH message to the following topic:
 
 ```shell
 Topic: v1/gateway/attributes/request
@@ -99,7 +99,7 @@ Message: {"device": "Device A", "data": {"attribute1": "value1", "attribute2": 4
 
 ## Telemetry upload API
 
-In order to publish device telemetry to ThingsBoard server node, send PUBLISH message to the following topic:
+In order to publish device telemetry to IoT Hub server node, send PUBLISH message to the following topic:
 
 ```shell
 Topic: v1/gateway/telemetry

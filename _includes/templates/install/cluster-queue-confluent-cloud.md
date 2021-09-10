@@ -1,6 +1,6 @@
 {% include templates/install/queue-confluent-cloud-config.md %}
 
-Configure ThingsBoard environment file:
+Configure IoT Hub environment file:
 
 ```text
 sudo nano .env
@@ -14,7 +14,7 @@ TB_QUEUE_TYPE=confluent
 ```
 {: .copy-code}
 
-Configure Confluent Cloud environment file for ThingsBoard queue service:
+Configure Confluent Cloud environment file for IoT Hub queue service:
 
 ```text
 sudo nano queue-confluent-cloud.env

@@ -1,19 +1,19 @@
 {% assign peDocsPrefix == '' %}
 {% if docsPrefix == 'pe/' %}
-<p>The ThingsBoard Professional Edition(PE) documentation can help you set up ThingsBoard PE, learn about the platform and get your IoT projects running on ThingsBoard PE.</p>
+<p>The IoT Hub documentation can help you set up IoT Hub, learn about the platform and get your IoT projects running on IoT Hub.</p>
 {% elsif docsPrefix == 'paas/' %}
 {% assign peDocsPrefix = docsPrefix %}
-<p>The ThingsBoard Cloud documentation can help you to start with ThingsBoard Cloud, learn about the platform and get your IoT projects running on ThingsBoard Cloud.</p>
+<p>The IoT Hub documentation can help you to start with IoT Hub, learn about the platform and get your IoT projects running on IoT Hub.</p>
 {% endif %}
 
-<a style="margin: 10px 10px 10px 0;" href="/docs/{{docsPrefix}}getting-started-guides/what-is-thingsboard/" class="button">ThingsBoard Overview</a>
+<a style="margin: 10px 10px 10px 0;" href="/docs/{{docsPrefix}}getting-started-guides/what-is-thingsboard/" class="button">IoT Hub Overview</a>
 <a style="margin: 10px;" href="/docs/{{docsPrefix}}getting-started-guides/helloworld/" class="button">Getting started</a>
 <a style="margin: 10px;" href="/docs/{{docsPrefix}}guides/" class="button">&nbsp;&nbsp;&nbsp;Guides&nbsp;&nbsp;&nbsp;</a>
 
 {% if docsPrefix == 'pe/' %}
-<h2 id="features">Professional Edition Features</h2>
+<h2 id="features">IoT Hub Features</h2>
 {% elsif docsPrefix == 'paas/' %}
-<h2 id="features">ThingsBoard Cloud Features</h2>
+<h2 id="features">IoT Hub Features</h2>
 {% endif %}
 
 <ul>
@@ -48,6 +48,6 @@
 <li><b><a href="/docs/{{peDocsPrefix}}user-guide/file-storage/">File Storage</a></b> - ability to store binary content (files) in the DB.</li>
 </ul>
 
-<h2>Video Tutorials</h2>
+<!-- <h2>Video Tutorials</h2>
 
-<p>The ThingsBoard Youtube <b><a href="https://www.youtube.com/channel/UCDb9fsV-YR4JmnipAMGsVAQ/videos">channel</a></b> contains useful video tutorials that cover various platform features.</p>
+<p>The IoT Hub Youtube <b><a href="https://www.youtube.com/channel/UCDb9fsV-YR4JmnipAMGsVAQ/videos">channel</a></b> contains useful video tutorials that cover various platform features.</p> -->

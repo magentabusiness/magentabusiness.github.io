@@ -1,7 +1,7 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: Temperature and humidity upload over MQTT using Raspberry Pi, ESP32 with HTU21D, Xiaomi sensor and Bluetooth Low Energy
-description: ThingsBoard IoT Platform sample for Raspberry Pi, ESP32 with HTU21D, Xiaomi sensor and temperature/humidity monitor using Bluetooth Low Energy
+description: IoT Hub IoT Platform sample for Raspberry Pi, ESP32 with HTU21D, Xiaomi sensor and temperature/humidity monitor using Bluetooth Low Energy
 hidetoc: "true"
 ---
 
@@ -12,9 +12,9 @@ hidetoc: "true"
 
 {% include templates/what-is-thingsboard.md %}
 
-This sample demo performs collection of temperature and humidity values produced by BLE broadcasting devices and further visualization on the real-time web dashboard. In this example we use [HTU21D](https://www.sparkfun.com/products/13763) connected to [ESP32](https://espressif.com/en/products/hardware/esp32/overview) and  [Xiaomi Smart Temperature & Humidity Sensor](https://www.amazon.com/Xiaomi-Bluetooth-Temperature-Sensitive-Thermometer/dp/B07B9SJJZJ). The purpose of this application is to demonstrate ThingsBoard  [data collection API](/docs/user-guide/telemetry/) , [visualization capabilities](/docs/user-guide/visualization/), [gateway API](/docs/iot-gateway/what-is-iot-gateway/) and the capabilities of [Bluetooth Low Energy](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy) protocol, which you can use with both custom and mass-produce devices.
+This sample demo performs collection of temperature and humidity values produced by BLE broadcasting devices and further visualization on the real-time web dashboard. In this example we use [HTU21D](https://www.sparkfun.com/products/13763) connected to [ESP32](https://espressif.com/en/products/hardware/esp32/overview) and  [Xiaomi Smart Temperature & Humidity Sensor](https://www.amazon.com/Xiaomi-Bluetooth-Temperature-Sensitive-Thermometer/dp/B07B9SJJZJ). The purpose of this application is to demonstrate IoT Hub  [data collection API](/docs/user-guide/telemetry/) , [visualization capabilities](/docs/user-guide/visualization/), [gateway API](/docs/iot-gateway/what-is-iot-gateway/) and the capabilities of [Bluetooth Low Energy](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy) protocol, which you can use with both custom and mass-produce devices.
 
-Data is collected by a python script that is running on [Raspberry Pi](https://en.wikipedia.org/wiki/Raspberry_Pi). It pushes data to ThingsBoard server via MQTT protocol by using  [ThingsBoard MQTT client Python SDK](https://github.com/thingsboard/thingsboard-python-client-sdk) library. Data is visualized using built-in customizable dashboard. Demo that is running on Raspberry Pi is written in Python which is quite simple and easy to understand.
+Data is collected by a python script that is running on [Raspberry Pi](https://en.wikipedia.org/wiki/Raspberry_Pi). It pushes data to IoT Hub server via MQTT protocol by using  [IoT Hub MQTT client Python SDK](https://github.com/thingsboard/thingsboard-python-client-sdk) library. Data is visualized using built-in customizable dashboard. Demo that is running on Raspberry Pi is written in Python which is quite simple and easy to understand.
 
   ![Ble diagram](/images/samples/ble/ble-diagram.png)
 
@@ -185,7 +185,7 @@ Demo script scans for available BLE devices and connects to them. It can read a 
 If you are not interested in modifying or extending a list of supported devices, you can skip this sub-section.
 The demo script consists of few modules: the main module and couple of extension modules.
 
-The [**main**](https://github.com/thingsboard/tb-ble-adapter/blob/master/tb_ble_adapter/adapter.py) module is responsible for receiving commands from ThingsBoard and sending telemetry data. It also scans nearby devices and connects to them.
+The [**main**](https://github.com/thingsboard/tb-ble-adapter/blob/master/tb_ble_adapter/adapter.py) module is responsible for receiving commands from IoT Hub and sending telemetry data. It also scans nearby devices and connects to them.
 
 Extensions are [**modules**](https://github.com/thingsboard/tb-ble-adapter/tree/master/tb_ble_adapter/extensions) that responsible for extracting application-specific data from the BLE device. If you want to implement support for a new device, you can create additional extension class and inherit it from [**provided intarface**](https://github.com/thingsboard/tb-ble-adapter/blob/master/tb_ble_adapter/extensions/ExtensionInterface.py). Use [**this**](https://github.com/thingsboard/tb-ble-adapter/blob/master/tb_ble_adapter/extensions/MiTempHumidityExtension.py) as an example.
 
@@ -301,7 +301,7 @@ Download the dashboard file using this [**link**](/docs/samples/ble/resources/de
 Also this dashboard needs a custom widget bundle. Download it with this [**link**](/docs/samples/ble/resources/custom_widget.json) and import using import/export [**instructions**](/docs/user-guide/ui/widget-library/).
 
 ## Data visualization
-Finally, open ThingsBoard Web UI. You can access this dashboard by logging in as a tenant administrator.
+Finally, open IoT Hub Web UI. You can access this dashboard by logging in as a tenant administrator.
 
 In case of local installation:
 *   login:  tenant@thingsboard.org
@@ -325,7 +325,7 @@ After, open **“Dashboards”** section and find previously imported dashboard 
 In order to perform troubleshooting, you must check demo script output. It displays connection status with every device, as well as received and sent data. 
 
 ## See also
-Browse other  [samples](/docs/samples)  or explore guides related to main ThingsBoard features:
+Browse other  [samples](/docs/samples)  or explore guides related to main IoT Hub features:
 
 *   [Device attributes](/docs/user-guide/attributes/)  - how to use device attributes.
 *   [Telemetry data collection](/docs/user-guide/telemetry/)  - how to collect telemetry data.

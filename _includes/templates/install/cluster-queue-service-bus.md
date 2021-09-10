@@ -1,6 +1,6 @@
 {% include templates/install/queue-service-bus-config.md %}
 
-Configure ThingsBoard environment file:
+Configure IoT Hub environment file:
 
 ```text
 sudo nano .env
@@ -14,7 +14,7 @@ TB_QUEUE_TYPE=service-bus
 ```
 {: .copy-code}
 
-Configure Service Bus environment file for ThingsBoard queue service:
+Configure Service Bus environment file for IoT Hub queue service:
 
 ```text
 sudo nano queue-service-bus.env

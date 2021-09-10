@@ -1,13 +1,13 @@
 |---
 | **Parameter**             | **Example value**                            | **Description**                                                                |
 |:-|:-|-
-| *deviceName*              | **DEVICE_NAME**                              | Device name in ThingsBoard.                                                    |
+| *deviceName*              | **DEVICE_NAME**                              | Device name in IoT Hub.                                                    |
 | *provisionDeviceKey*      | **PUT_PROVISION_KEY_HERE**                   | Provisioning device key, you should take it from configured device profile.    |
 | *provisionDeviceSecret*   | **PUT_PROVISION_SECRET_HERE**                | Provisioning device secret, you should take it from configured device profile. | 
 | credentialsType           | **MQTT_BASIC**                               | Credentials type parameter.                                                    |
-| username                  | **DEVICE_USERNAME_HERE**                     | Username for device in ThingsBoard.                                            |
-| password                  | **DEVICE_PASSWORD_HERE**                     | Password for device in ThingsBoard.                                            |
-| clientId                  | **DEVICE_CLIENT_ID_HERE**                    | Client id for device in ThingsBoard.                                           |
+| username                  | **DEVICE_USERNAME_HERE**                     | Username for device in IoT Hub.                                            |
+| password                  | **DEVICE_PASSWORD_HERE**                     | Password for device in IoT Hub.                                            |
+| clientId                  | **DEVICE_CLIENT_ID_HERE**                    | Client id for device in IoT Hub.                                           |
 |---
 
 Provisioning request data example:
@@ -41,7 +41,7 @@ Provisioning response example:
 
 #### Sample script
 
-To communicate with ThingsBoard we will use Paho MQTT module, so we should install it:
+To communicate with IoT Hub we will use Paho MQTT module, so we should install it:
 
 ```bash
 pip3 install paho-mqtt --user
@@ -83,11 +83,11 @@ RESULT_CODES = {
 def collect_required_data():
     config = {}
     print("\n\n", "="*80, sep="")
-    print(" "*10, "\033[1m\033[94mThingsBoard device provisioning with basic authorization example script.\033[0m", sep="")
+    print(" "*10, "\033[1m\033[94mIoT Hub device provisioning with basic authorization example script.\033[0m", sep="")
     print("="*80, "\n\n", sep="")
-    host = input("Please write your ThingsBoard \033[93mhost\033[0m or leave it blank to use default (thingsboard.cloud): ")
+    host = input("Please write your IoT Hub \033[93mhost\033[0m or leave it blank to use default (thingsboard.cloud): ")
     config["host"] = host if host else "thingsboard.cloud"
-    port = input("Please write your ThingsBoard \033[93mport\033[0m or leave it blank to use default (1883): ")
+    port = input("Please write your IoT Hub \033[93mport\033[0m or leave it blank to use default (1883): ")
     config["port"] = int(port) if port else 1883
     config["provision_device_key"] = input("Please write \033[93mprovision device key\033[0m: ")
     config["provision_device_secret"] = input("Please write \033[93mprovision device secret\033[0m: ")
@@ -116,17 +116,17 @@ class ProvisionClient(Client):
 
     def __on_connect(self, client, userdata, flags, rc):  # Callback for connect
         if rc == 0:
-            print("[Provisioning client] Connected to ThingsBoard ")
+            print("[Provisioning client] Connected to IoT Hub ")
             client.subscribe(self.PROVISION_RESPONSE_TOPIC)  # Subscribe to provisioning response topic
             provision_request = dumps(self.__provision_request)
             print("[Provisioning client] Sending provisioning request %s" % provision_request)
             client.publish(self.PROVISION_REQUEST_TOPIC, provision_request)  # Publishing provisioning request topic
         else:
-            print("[Provisioning client] Cannot connect to ThingsBoard!, result: %s" % RESULT_CODES[rc])
+            print("[Provisioning client] Cannot connect to IoT Hub!, result: %s" % RESULT_CODES[rc])
 
     def __on_message(self, client, userdata, msg):
         decoded_payload = msg.payload.decode("UTF-8")
-        print("[Provisioning client] Received data from ThingsBoard: %s" % decoded_payload)
+        print("[Provisioning client] Received data from IoT Hub: %s" % decoded_payload)
         decoded_message = loads(decoded_payload)
         provision_device_status = decoded_message.get("status")
         if provision_device_status == "SUCCESS":
@@ -136,7 +136,7 @@ class ProvisionClient(Client):
         self.disconnect()
 
     def provision(self):
-        print("[Provisioning client] Connecting to ThingsBoard (provisioning client)")
+        print("[Provisioning client] Connecting to IoT Hub (provisioning client)")
         self.__clean_credentials()
         self.connect(self._host, self._port, 60)
         self.loop_forever()
@@ -146,7 +146,7 @@ class ProvisionClient(Client):
         new_client = None
         if client_credentials:
             new_client = Client(client_id=client_credentials["clientId"])  # Setting client id
-            new_client.username_pw_set(client_credentials["userName"], client_credentials["password"])  # Setting username and password for ThingsBoard client
+            new_client.username_pw_set(client_credentials["userName"], client_credentials["password"])  # Setting username and password for IoT Hub client
             print("[Provisioning client] Read credentials from file.")
         else:
             print("[Provisioning client] Cannot read credentials from file!")
@@ -174,16 +174,16 @@ class ProvisionClient(Client):
 
 def on_tb_connected(client, userdata, flags, rc):  # Callback for connect with received credentials
     if rc == 0:
-        print("[ThingsBoard client] Connected to ThingsBoard with credentials: username: %s, password: %s, client id: %s" % (client._username.decode(), client._password.decode(), client._client_id.decode()))
+        print("[IoT Hub client] Connected to IoT Hub with credentials: username: %s, password: %s, client id: %s" % (client._username.decode(), client._password.decode(), client._client_id.decode()))
     else:
-        print("[ThingsBoard client] Cannot connect to ThingsBoard!, result: %s" % RESULT_CODES[rc])
+        print("[IoT Hub client] Cannot connect to IoT Hub!, result: %s" % RESULT_CODES[rc])
 
 
 if __name__ == '__main__':
     config = collect_required_data()
 
-    THINGSBOARD_HOST = config["host"]  # ThingsBoard instance host
-    THINGSBOARD_PORT = config["port"]  # ThingsBoard instance MQTT port
+    THINGSBOARD_HOST = config["host"]  # IoT Hub instance host
+    THINGSBOARD_PORT = config["port"]  # IoT Hub instance MQTT port
 
     PROVISION_REQUEST = {"provisionDeviceKey": config["provision_device_key"],
                          # Provision device key, replace this value with your value from device profile.

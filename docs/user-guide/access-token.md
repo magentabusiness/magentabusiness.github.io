@@ -1,9 +1,9 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 assignees:
 - vsosliuk
 title: Access Token based authentication
-description: ThingsBoard Access Token based authentication.
+description: IoT Hub Access Token based authentication.
 
 ---
 

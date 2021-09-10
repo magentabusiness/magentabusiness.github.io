@@ -1,7 +1,7 @@
 Download installation package:
 
 ```bash
-wget https://dist.thingsboard.io/tb-aws-integration-{{ site.release.pe_ver }}.rpm
+wget https://dist.iothub.magenta.at/tb-aws-integration-{{ site.release.pe_ver }}.rpm
 ```
 {: .copy-code}
 
@@ -39,7 +39,7 @@ export INTEGRATION_ROUTING_KEY=b75**************************34d
 export INTEGRATION_SECRET=vna**************mik
 ```
 
-Execute the following command to start ThingsBoard:
+Execute the following command to start IoT Hub:
 
 ```bash
 sudo service tb-aws-integration start

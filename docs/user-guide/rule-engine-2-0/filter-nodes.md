@@ -1,5 +1,5 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: Filter Nodes
 description: Rule Engine 2.0 Filter Nodes
 

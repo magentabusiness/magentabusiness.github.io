@@ -1,13 +1,13 @@
-To provision dashboard to edge we need to open edge dashboards on **{{currentThingsBoardVersion}}** server and assign the newly created dashboard. Once this dashboard is assigned we are going to open ThingsBoard **Edge** UI to see the same dashboard on the edge.
+To provision dashboard to edge we need to open edge dashboards on **{{currentIoT HubVersion}}** server and assign the newly created dashboard. Once this dashboard is assigned we are going to open IoT Hub **Edge** UI to see the same dashboard on the edge.
 
-Please open **{{currentThingsBoardVersion}}** using the URL **http://SERVER_URL**.
+Please open **{{currentIoT HubVersion}}** using the URL **http://SERVER_URL**.
 
-{% if currentThingsBoardVersion == "ThingsBoard Professional Edition" %}
+{% if currentIoT HubVersion == "IoT Hub" %}
 {% include images-gallery.html imageCollection="step6PE" showListImageTitles="true" %}{% endif %}
-{% if currentThingsBoardVersion == "ThingsBoard Community Edition" %}
+{% if currentIoT HubVersion == "IoT Hub Community Edition" %}
 {% include images-gallery.html imageCollection="step6CE" showListImageTitles="true" %}{% endif %}
 
-Let's open ThingsBoard **Edge** UI using the URL **http://EDGE_URL**. to verify that dashboard was provisioned.
+Let's open IoT Hub **Edge** UI using the URL **http://EDGE_URL**. to verify that dashboard was provisioned.
 
 {% include images-gallery.html imageCollection="step6Edge" showListImageTitles="true" %}
 

@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - ashvayka
 title: Tenants
-description: ThingsBoard Tenants management 
+description: IoT Hub Tenants management 
 tenants-pe:
     0:
         image: /images/user-guide/tenant-profile/PE/tenant-1-pe.png
@@ -58,7 +58,7 @@ tenant-edit-pe:
 
 ## Introduction
 
-ThingsBoard supports [Multi-tenancy](https://en.wikipedia.org/wiki/Multitenancy) right out of the box. You can think of the ThingsBoard tenant as a separate business entity. This is the individual or organization that owns or manufactures the device.
+IoT Hub supports [Multi-tenancy](https://en.wikipedia.org/wiki/Multitenancy) right out of the box. You can think of the IoT Hub tenant as a separate business entity. This is the individual or organization that owns or manufactures the device.
 
 ##### Сreate a new Tenant
 

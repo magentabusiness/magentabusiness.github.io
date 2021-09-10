@@ -1,5 +1,5 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 assignees:
 - ddiachenko
 title: YOUR_INTEGRATION_GUIDE
@@ -40,7 +40,7 @@ Widget/dashboard example for visualization of the data from your device. You can
 * [Step 1.2] Prerequisites (min prerequisites for devices/device versions/required(mandatory) software).
 * [Step 1.3] Configuration of devices (setup/programmation/configuration).
 
-### Block 2 ThingsBoard configuration (please use PE only recommendations)
+### Block 2 IoT Hub configuration (please use PE only recommendations)
 
 Choose one of the suitable methods of integration according to Connectivity diagram below
 
@@ -51,7 +51,7 @@ Choose one of the suitable methods of integration according to Connectivity diag
 
 #### Integration method
 
-* [Step 2.1] ThingsBoard Prerequisites (f.e. versions/components/etc. - optional).
+* [Step 2.1] IoT Hub Prerequisites (f.e. versions/components/etc. - optional).
 * [Step 2.2] Uplink/Downlink (may be created basic Up/Down -link).
 * [Step 2.3] Integration.
 * [Step 2.4] Uplink/Downlink configuration.

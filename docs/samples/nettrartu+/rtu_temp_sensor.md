@@ -1,7 +1,7 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: Temperature upload over MQTT using Nettra RTU
-description: ThingsBoard IoT Platform sample for temperature upload over MQTT using Nettra RTU
+description: IoT Hub IoT Platform sample for temperature upload over MQTT using Nettra RTU
 hidetoc: "true"
 ---
 
@@ -10,7 +10,7 @@ hidetoc: "true"
 
 ## Introduction
 
-This guide contains step-by-step instructions on how to connect your Nettra RTU device to ThingsBoard Community Edition through ethernet, using as sample, one of the many applications that the Nettra RTU has. In particular, this sample application will allow you to monitor temperature using ThingsBoard web UI to display the data coming from the sensor. 
+This guide contains step-by-step instructions on how to connect your Nettra RTU device to IoT Hub Community Edition through ethernet, using as sample, one of the many applications that the Nettra RTU has. In particular, this sample application will allow you to monitor temperature using IoT Hub web UI to display the data coming from the sensor. 
 
 ### Nettra RTU
 [Nettra RTU](http://nettra.tech/rtu.html) called **"RTU+"** is a powerful IoT electronic device that has digital and analog inputs and outputs, as well as several integrated communication interfaces as modem, ethernet, 802.15.4, RS485, RS232 and GPS. It is an ideal product to implement monitoring, acquisition and control applications over a distributed data network. 
@@ -33,7 +33,7 @@ Once you complete this sample/tutorial, you will see your sensor data on a dashb
 
 ### Software
  - [RTU+ Configuration Interface](https://nettra.atlassian.net/wiki/spaces/RTU/pages/26083766/Software).
- - You will need to have ThingsBoard server up and running. Use either [Live Demo](/docs/user-guide/live-demo/) or [Installation Guide](/docs/user-guide/install/installation-options/) to install ThingsBoard.
+ - You will need to have IoT Hub server up and running. Use either [Live Demo](/docs/user-guide/live-demo/) or [Installation Guide](/docs/user-guide/install/installation-options/) to install IoT Hub.
 
 ## Connection diagram
 
@@ -42,11 +42,11 @@ The following picture summarizes the connections for this simple project:
 
 ![image](/images/samples/nettrartu+/rtu_temp_sensor/connection_diagram.png)
 
-## ThingsBoard configuration
+## IoT Hub configuration
 
-This step contains instructions that are necessary to connect your device to ThingsBoard.
+This step contains instructions that are necessary to connect your device to IoT Hub.
 
-Sign up ThingsBoard Web UI as [live-demo](https://demo.thingsboard.io/signup). See [Live Demo](/docs/user-guide/live-demo/) page for more details how to get your account.
+Sign up IoT Hub Web UI as [live-demo](https://iothub.magenta.at/signup). See [Live Demo](/docs/user-guide/live-demo/) page for more details how to get your account.
 
 ### Device
 
@@ -63,7 +63,7 @@ Sign up ThingsBoard Web UI as [live-demo](https://demo.thingsboard.io/signup). S
 ### Dashboard
 
 Download the dashboard file (.json) using this [link](/docs/samples/nettrartu+/resources/rtu_.json).
-Use import/export [instructions](/docs/user-guide/ui/dashboards/#iot-dashboard-importexport) to import the dashboard to your ThingsBoard instance.
+Use import/export [instructions](/docs/user-guide/ui/dashboards/#iot-dashboard-importexport) to import the dashboard to your IoT Hub instance.
 
 ## Connect RTU+ to PC
 
@@ -104,7 +104,7 @@ Once you have your RTU+ connected to the PC, we can proceed with its configurati
 3. Fill the ***MQTT*** boxes as follow:
    <br/><br/>
    **Interfaz** : Ethernet &nbsp;&nbsp; **Puerto** : 1883<br/>
-   **Servidor** : ThingsBoard HOST/IP address that is accessible within your local network. Specify `demo.thingsboard.io` if you are using [live demo](https://demo.thingsboard.io/) server.<br/>
+   **Servidor** : IoT Hub HOST/IP address that is accessible within your local network. Specify `iothub.magenta.at` if you are using [live demo](https://iothub.magenta.at/) server.<br/>
    **Usuario** : $RTU_DEMO_TOKEN (provided in *Device* subsection)<br/>
    **Contraseña** : Leave empty<br/>
    **Client ID** : RTU+<br/>
@@ -114,7 +114,7 @@ Once you have your RTU+ connected to the PC, we can proceed with its configurati
 4. Fill the ***Time Synchronization*** boxes as follow:
    <br/><br/>
    **Interfaz** : NTP Ethernet<br/>
-   **Servidor** : ThingsBoard HOST/IP address that is accessible within your local network. Specify `demo.thingsboard.io` if you are using [live demo](https://demo.thingsboard.io/) server.<br/>
+   **Servidor** : IoT Hub HOST/IP address that is accessible within your local network. Specify `iothub.magenta.at` if you are using [live demo](https://iothub.magenta.at/) server.<br/>
    **Frecuencia** : 10<br/>
    **Huso** : Write your time zone<br/>
 
@@ -204,7 +204,7 @@ while(1)
 
 ## Data visualization
 
-Finally, open ThingsBoard Web UI in the Live Demo server with same user and password as *ThingsBoard configuration* section.
+Finally, open IoT Hub Web UI in the Live Demo server with same user and password as *IoT Hub configuration* section.
 
 Go to *"Devices"* section and locate *"RTU+ Device"*, open device details and switch to *"Latest telemetry"* tab.
 If all is configured correctly you should be able to see latest values of *"temperature"* in the table.<br/><br/>
@@ -218,7 +218,7 @@ As a result, you will see a time-series chart displaying temperature level (simi
 
 ## See also
 
-Browse other [samples](/docs/samples) or explore guides related to main ThingsBoard features:
+Browse other [samples](/docs/samples) or explore guides related to main IoT Hub features:
 
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
  - [Telemetry data collection](/docs/user-guide/telemetry/) - how to collect telemetry data.

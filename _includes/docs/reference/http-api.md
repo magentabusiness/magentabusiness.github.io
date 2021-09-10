@@ -10,7 +10,7 @@
 You can find more information about HTTP [here](https://www.w3.org/Protocols/rfc2616/rfc2616.txt).
 HTTP protocol is TCP based and uses request-response model.  
 
-ThingsBoard server nodes act as an HTTP Server that supports both HTTP and HTTPS protocols.
+IoT Hub server nodes act as an HTTP Server that supports both HTTP and HTTPS protocols.
 
 ##### Client libraries setup
 
@@ -34,7 +34,7 @@ Using custom binary format or some serialization framework is also possible. See
 
 ## Telemetry upload API
 
-In order to publish telemetry data to ThingsBoard server node, send POST request to the following URL:
+In order to publish telemetry data to IoT Hub server node, send POST request to the following URL:
  
 ```shell
 http(s)://host:port/api/v1/$ACCESS_TOKEN/telemetry
@@ -74,7 +74,7 @@ D,telemetry-data-with-ts.json,json,resources/telemetry-data-with-ts.json,/docs/r
  
 ## Attributes API
 
-ThingsBoard attributes API allows devices to
+IoT Hub attributes API allows devices to
 
 * Upload [client-side](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types) device attributes to the server.
 * Request [client-side](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types) and [shared](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types) device attributes from the server.
@@ -82,7 +82,7 @@ ThingsBoard attributes API allows devices to
  
 ##### Publish attribute update to the server
 
-In order to publish client-side device attributes to ThingsBoard server node, send POST request to the following URL:
+In order to publish client-side device attributes to IoT Hub server node, send POST request to the following URL:
 
 ```shell
 http(s)://host:port/api/v1/$ACCESS_TOKEN/attributes
@@ -95,7 +95,7 @@ C,new-attributes-values.json,json,resources/new-attributes-values.json,/docs/ref
 
 ##### Request attribute values from the server
 
-In order to request client-side or shared device attributes to ThingsBoard server node, send GET request to the following URL:
+In order to request client-side or shared device attributes to IoT Hub server node, send GET request to the following URL:
 
 ```shell
 http(s)://host:port/api/v1/$ACCESS_TOKEN/attributes?clientKeys=attribute1,attribute2&sharedKeys=shared1,shared2
@@ -230,7 +230,7 @@ The supported data format is:
 
 ## Firmware API
 
-When ThingsBoard initiates the firmware update over HTTP it sets the fw_title, fw_version, fw_checksum, fw_checksum_algorithm shared attributes.
+When IoT Hub initiates the firmware update over HTTP it sets the fw_title, fw_version, fw_checksum, fw_checksum_algorithm shared attributes.
 To receive the shared attribute updates, the device has to GET request
 
 ```shell

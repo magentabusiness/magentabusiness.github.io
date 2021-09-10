@@ -1,9 +1,9 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 assignees:
 - ashvayka
 title: Devices
-description: ThingsBoard IoT Device management
+description: IoT Hub IoT Device management
 
 ---
 

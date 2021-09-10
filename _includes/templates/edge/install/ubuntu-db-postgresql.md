@@ -1,9 +1,9 @@
 
-ThingsBoard Edge uses PostgreSQL database as a local storage.
+IoT Hub Edge uses PostgreSQL database as a local storage.
 
 {% include templates/install/postgres-install-ubuntu.md %}
 
-Then, press "Ctrl+D" to return to main user console and connect to the database to create ThingsBoard Edge DB:
+Then, press "Ctrl+D" to return to main user console and connect to the database to create IoT Hub Edge DB:
 
 ```text
 psql -U postgres -d postgres -h 127.0.0.1 -W

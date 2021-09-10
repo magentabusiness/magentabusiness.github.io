@@ -29,7 +29,7 @@ to manage such options as customer groups, [user groups](/docs/{{docsPrefix}}use
 
 ##### Deleting customer
 
-You can delete a customer account from ThingsBoard in two ways:
+You can delete a customer account from IoT Hub in two ways:
 1. Click a trash can opposite to the customer name and confirm deleting an account in the dialog box.
 2. In the customer details, select Delete customer and confirm deleting an account in the dialog box.
 

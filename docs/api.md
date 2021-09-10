@@ -1,7 +1,7 @@
 ---
-layout: docwithnav
-title: ThingsBoard API reference
-description: ThingsBoard API reference and supported IoT Protocols
+layout: docwithnav-pe
+title: IoT Hub API reference
+description: IoT Hub API reference and supported IoT Protocols
 
 ---
 

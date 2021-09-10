@@ -4,10 +4,10 @@
 
 ## Overview
 
-Since ThingsBoard 3.2, the Tenant administrator is able to configure common settings for multiple devices using Device Profiles. 
+Since IoT Hub 3.2, the Tenant administrator is able to configure common settings for multiple devices using Device Profiles. 
 Each Device has one and only profile at a single point in time. 
 
-Experienced ThingsBoard users can notice that the device type has been deprecated in favor of the Device Profile. 
+Experienced IoT Hub users can notice that the device type has been deprecated in favor of the Device Profile. 
 The update script will automatically create Device Profiles based on unique Device Types and assign them to the appropriate devices.  
 
 Let's take a look at the settings available in the device profile one by one.
@@ -20,7 +20,7 @@ By default, the [Root Rule Chain](/docs/{{docsPrefix}}user-guide/rule-engine-2-0
 However, the more different device types you have, the more complex your Root Rule Chain may become. 
 Many platform users create their Root Rule Chain for the sole purpose of sending messages to specific rule chains depending on the device type. 
 
-To avoid this painful and mundane activity, since ThingsBoard 3.2, you can specify a custom root Rule Chain for your devices.
+To avoid this painful and mundane activity, since IoT Hub 3.2, you can specify a custom root Rule Chain for your devices.
 The new Rule Chain will receive all telemetry, device activity(Active/Inactive), and device lifecycle(Created/Updated/Deleted) events.
 This setting is available in the Device Profile wizard and in the Device Profile details.  
 
@@ -43,7 +43,7 @@ This setting is available in the Device Profile wizard and Device Profile detail
 
 ### Transport configuration
 
-Since ThingsBoard 3.2, the platform supports two transport types: Default and MQTT. 
+Since IoT Hub 3.2, the platform supports two transport types: Default and MQTT. 
 
 #### Default transport type
 
@@ -65,14 +65,14 @@ Custom MQTT topic filters support single '+' and multi-level '#' wildcards and a
 For example, using the configuration from the image below will allow you to publish time-series data with the following command:
 
 ```bash
-mosquitto_pub -h 'demo.thingsboard.io' -i 'c1' -u 't1' -P 'secret' -t '/telemetry' -m '{"humidity": 10.3}'
+mosquitto_pub -h 'iothub.magenta.at' -i 'c1' -u 't1' -P 'secret' -t '/telemetry' -m '{"humidity": 10.3}'
 ```
 {: .copy-code}
 
 and attribute updates with the following command:
 
 ```bash
-mosquitto_pub -h 'demo.thingsboard.io' -i 'c1' -u 't1' -P 'secret' -t '/attributes' -m '{"firmwareVersion": "1.3"}'
+mosquitto_pub -h 'iothub.magenta.at' -i 'c1' -u 't1' -P 'secret' -t '/attributes' -m '{"firmwareVersion": "1.3"}'
 ```
 {: .copy-code}
 
@@ -86,14 +86,14 @@ By default, the platform expects devices to send data via JSON. However, it is a
 
 Protocol Buffers, or Protobuf, is a language- and a platform-neutral way of serializing structured data. It is convenient to minimize the size of transmitted data.  
 
-At the moment of writing (ThingsBoard 3.2), platform supports customizable proto schemas for [telemetry upload](/docs/{{docsPrefix}}reference/mqtt-api/#telemetry-upload-api) 
+At the moment of writing (IoT Hub 3.2), platform supports customizable proto schemas for [telemetry upload](/docs/{{docsPrefix}}reference/mqtt-api/#telemetry-upload-api) 
 and [attribute upload](/docs/{{docsPrefix}}reference/mqtt-api/#publish-attribute-update-to-the-server). 
 We plan to the add ability to define a schema for downlink messages (RPC calls and attribute updates) in future releases.  
 
 {% include images-gallery.html imageCollection="mqttProtobufSetting" %}
 
 
-ThingsBoard parses the protobuf structures dynamically, that is why, it does not support some protobuf features like OneOf, extensions and maps, yet.
+IoT Hub parses the protobuf structures dynamically, that is why, it does not support some protobuf features like OneOf, extensions and maps, yet.
 
 #### CoAP transport type
 
@@ -108,18 +108,18 @@ However, it is also possible to send data via [Protocol Buffers](https://develop
 
 Protocol Buffers, or Protobuf, is a language- and a platform-neutral way of serializing structured data. It is convenient to minimize the size of transmitted data.  
 
-At the moment of writing (ThingsBoard 3.2.2), platform supports customizable proto schemas for [telemetry upload](/docs/{{docsPrefix}}reference/coap-api/#telemetry-upload-api) 
+At the moment of writing (IoT Hub 3.2.2), platform supports customizable proto schemas for [telemetry upload](/docs/{{docsPrefix}}reference/coap-api/#telemetry-upload-api) 
 and [attribute upload](/docs/{{docsPrefix}}reference/coap-api/#publish-attribute-update-to-the-server). 
 We plan to the add ability to define a schema for downlink messages (RPC calls and attribute updates) in future releases.  
 
 {% include images-gallery.html imageCollection="coapProtobufSetting" %}
 
 
-ThingsBoard parses the protobuf structures dynamically, that is why, it does not support some protobuf features like OneOf, extensions and maps, yet.
+IoT Hub parses the protobuf structures dynamically, that is why, it does not support some protobuf features like OneOf, extensions and maps, yet.
 
 ##### CoAP device type: Efento NB-IoT
 
-At the moment of writing (ThingsBoard 3.2.2), platform supports integration with next Efento NB-IoT sensors: 
+At the moment of writing (IoT Hub 3.2.2), platform supports integration with next Efento NB-IoT sensors: 
 
  - temperature,
  - humidity,
@@ -134,7 +134,7 @@ FW version: 06.02 or newer.
 ### Alarm Rules
 
 Platform users can use Rule Engine to configure alarms. Rule Engine is a quite powerful feature, but it requires some programming skills.
-Since ThingsBoard 3.2, we have introduced Alarm Rules to simplify the process of configuring the most popular alarm types.
+Since IoT Hub 3.2, we have introduced Alarm Rules to simplify the process of configuring the most popular alarm types.
 Now you don't need to be the Rule Engine guru to configure your processing logic. 
 Under the hood, Rule Engine evaluates Alarm Rules using the "Device Profile" rule node.
 
@@ -143,7 +143,7 @@ Alarm Rule consists of the following properties:
 
  * **Alarm Type** - a type of Alarm. Alarm type must be unique within the device profile alarm rules;
  * **Create Conditions** - defines the criteria when the Alarm will be created/updated. The condition consists of the following properties:
-   * Severity - will be used to create/update an alarm. ThingsBoard verifies Create Conditions in the descending order of the severity. For example, if a condition with Critical severity is true, the platform will raise alarm with Critical severity, and "Major", "Minor" or "Warning" conditions will not be evaluated. Severity must be unique per alarm rule (e.g., two conditions created within the same alarm rule can't have the same severity);        
+   * Severity - will be used to create/update an alarm. IoT Hub verifies Create Conditions in the descending order of the severity. For example, if a condition with Critical severity is true, the platform will raise alarm with Critical severity, and "Major", "Minor" or "Warning" conditions will not be evaluated. Severity must be unique per alarm rule (e.g., two conditions created within the same alarm rule can't have the same severity);        
    * Key Filters - list of logical expressions against attributes or telemetry values. For example, *"(temperature < 0 OR temperature > 20) AND softwareVersion = '2.5.5'"*;
    * Condition Type - either simple, duration, or repeating. For example, *3 times in a row* or *during 5 minutes*. The simple condition will raise an alarm once the first matching event occurrs;
    * Schedule - defines the time interval during which the rule is active. Either "active all the time", "active at specific time" or "custom";
@@ -153,10 +153,10 @@ Alarm Rule consists of the following properties:
 
 Let's learn how to use the Alarm Rules with an example. Let's assume we would like to keep track of the temperature inside of the fridge with valuable goods.  
 We also assume that we have already created a device profile called "Temperature Sensors", and provisioned our device with the temperature sensor and with access token - "ACCESS_TOKEN".
-The command listed below upload the temperature readings to demo.thingsboard.io.  
+The command listed below upload the temperature readings to iothub.magenta.at.  
 
 ```bash
-mosquitto_pub -d -h 'demo.thingsboard.io' -t "v1/devices/me/telemetry" -u "$ACCESS_TOKEN" -m '{"temperature": 5.3}'
+mosquitto_pub -d -h 'iothub.magenta.at' -t "v1/devices/me/telemetry" -u "$ACCESS_TOKEN" -m '{"temperature": 5.3}'
 ```
 {: .copy-code}
 
@@ -239,7 +239,7 @@ The Rule Node will fetch the state from the database when the first message from
 
 #### Notifications about alarms
 
-Assuming you have configured alarm rules you may also want to receive a notification when ThingsBoard creates or updates the alarm.
+Assuming you have configured alarm rules you may also want to receive a notification when IoT Hub creates or updates the alarm.
 The device profile rule node has three main outbound relation types that you can use: 'Alarm Created', 'Alarm Severity Updated', and 'Alarm Cleared'.
 See the example rule chain below. Please make sure that the system administrator has configured the SMS/email providers before you proceed or configure your own settings in the rule nodes. 
 
@@ -252,7 +252,7 @@ There is also an additional 'Alarm Updated' relation type that should be ignored
 
 ### Device provisioning
 
-Device provisioning allows a device to automatically register in ThingsBoard either during or after manufacturing. 
+Device provisioning allows a device to automatically register in IoT Hub either during or after manufacturing. 
 **See separate documentation [page](/docs/{{docsPrefix}}user-guide/device-provisioning/) for more details.**
 
 

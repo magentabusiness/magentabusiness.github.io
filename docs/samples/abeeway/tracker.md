@@ -8,9 +8,9 @@ hidetoc: "true"
 
 {% assign feature = "Platform Integrations" %}{% include templates/pe-feature-banner.md %}
 
-This guide provides step-by-step instructions for connecting the Abeeway Micro Tracker and Abeeway Industrial Tracker to ThingsBoard Professional Edition (PE).
+This guide provides step-by-step instructions for connecting the Abeeway Micro Tracker and Abeeway Industrial Tracker to IoT Hub .
 The connection is through the IoT network in the new global standard LoRaWAN and ThingPark Wireless OSS intelligent logger (Actility).
-In this guide, we will use the free ThingsBoard PE demo server [thingsboard.cloud](https://thingsboard.cloud/signup) in this guide. 
+In this guide, we will use the free IoT Hub demo server [thingsboard.cloud](https://thingsboard.cloud/signup) in this guide. 
 This guide will be useful to anyone who wants to connect their trackers manufactured by Abeeway or another industrial IoT application to the LoRaWAN network.
 
 ![image](/images/samples/abeeway/actility_dashboard_example.png)
@@ -23,16 +23,16 @@ This guide will be useful to anyone who wants to connect their trackers manufact
 We assume:
 - You are registered on the Actility [website](https://www.actility.com/).
 - You have at least one Abeeway Micro Tracker or Abeeway Industrial Tracker that is already connected  with ACTILITY THINGPARK IoT NETWORK and is active.
-- We also assume you already have a ThingsBoard PE server or free demo account. 
+- We also assume you already have a IoT Hub server or free demo account. 
 Otherwise, you can register for a 30-days free demo account here: [thingsboard.cloud](https://thingsboard.cloud/signup).
-We expect you to have at least a basic knowledge about ThingsBoard, so we do recommend to complete the [Getting Started](/docs/getting-started-guides/helloworld) guide.
+We expect you to have at least a basic knowledge about IoT Hub, so we do recommend to complete the [Getting Started](/docs/getting-started-guides/helloworld) guide.
  
  
 ## Integration overview
 
-ThingsBoard Platform Integrations feature allows to push data from various platforms and connectivity solutions to ThingsBoard. 
-We will use platform ThingPark Wireless company Actility to consume data from LoRaWAN networks and automatically register devices in ThingsBoard.
-Besides configuring the integration, we will also set ThingsBoard up to decode incoming data, store it in the database, visualize on the dashboard and generate alarms based on configurable thresholds.
+IoT Hub Platform Integrations feature allows to push data from various platforms and connectivity solutions to IoT Hub. 
+We will use platform ThingPark Wireless company Actility to consume data from LoRaWAN networks and automatically register devices in IoT Hub.
+Besides configuring the integration, we will also set IoT Hub up to decode incoming data, store it in the database, visualize on the dashboard and generate alarms based on configurable thresholds.
 
 ## Step 1. Checking the registration for the platform ThingPark Wireless company Actility
            
@@ -40,9 +40,9 @@ Besides configuring the integration, we will also set ThingsBoard up to decode i
 
 Few things to notice:
 
-The <b>DevEUI</b> from the incoming message will become the Device <b>Name</b> in ThingsBoard;
+The <b>DevEUI</b> from the incoming message will become the Device <b>Name</b> in IoT Hub;
 
-ThingsBoard will automatically create device with type “tracker” and name equal to <b>DevEUI</b>;
+IoT Hub will automatically create device with type “tracker” and name equal to <b>DevEUI</b>;
 
 Therefore, when creating a new device, in the <b>Name</b> field, enter the value <b>DevEUI</b>: from the Device Information (ThingPark Wireless OSS intelligent logger (Actility)) section
 
@@ -68,7 +68,7 @@ Therefore, when creating a new device, in the <b>Name</b> field, enter the value
 
 ## Step 2. Creation UpLink and DownLink DATA Converters
 In order to create an [Integration](/docs/user-guide/integrations), we should create the [Uplink Data Converter](/docs/user-guide/integrations/#uplink-data-converter) and the [Downlink Data Converter](/docs/user-guide/integrations/#downlink-data-converter) first. 
-The converters will decode incoming telemetry payload data from global standard LoRaWAN that contains in encoded hex string to human readable, simplified ThingsBoard data format.
+The converters will decode incoming telemetry payload data from global standard LoRaWAN that contains in encoded hex string to human readable, simplified IoT Hub data format.
 
 <details>
     <summary>
@@ -451,7 +451,7 @@ Alternatively, you can import it from this [file](/docs/user-guide/resources/act
 ## Step 5. Integration configuration
 <details>
     <summary>
-        <font color="#006400"><i><b>Screenshot of creating integration on the ThingsBoard platform</b></i></font> <br> (<b>click to open expanded view</b>)
+        <font color="#006400"><i><b>Screenshot of creating integration on the IoT Hub platform</b></i></font> <br> (<b>click to open expanded view</b>)
     </summary> 
     <img src="/images/samples/abeeway/create_integration.png">
 </details>
@@ -474,21 +474,21 @@ Alternatively, you can import it from this [file](/docs/user-guide/resources/act
 
 
 ## Step 6. Verifying devices connectivity after the creation and configuration of the Integration.
-After creating and configuring the integration and connecting it to platform ThingPark Wireless company Actility, ThingsBoard will begin receiving the first reports of the telemetry from your devices.
+After creating and configuring the integration and connecting it to platform ThingPark Wireless company Actility, IoT Hub will begin receiving the first reports of the telemetry from your devices.
 <details>
    <summary>
        <font color="#006400"><i><b>Screenshot of receiving the first reports of the telemetry</b></i></font> (<b>click to open expanded view</b>)
    </summary> 
    <img src="/images/samples/abeeway/after_integr_mesag.png">
 </details>
-On the basis of these first messages ThingsBoard system will automatically create devices with type  and name  under which devices were registered in the ThingPark Actility Enterprise. 
+On the basis of these first messages IoT Hub system will automatically create devices with type  and name  under which devices were registered in the ThingPark Actility Enterprise. 
 <details>
    <summary>
-       <font color="#006400"><i><b>Screenshot of how ThingsBoard system will automatically create devices</b></i></font> (<b>click to open expanded view</b>)
+       <font color="#006400"><i><b>Screenshot of how IoT Hub system will automatically create devices</b></i></font> (<b>click to open expanded view</b>)
    </summary> 
    <img src="/images/samples/abeeway/after_integr_dev.png">
 </details> 
-That's why after creating and configuring the integration and before starting the Dashboard setup you need to check that all your devices are detected and visible in ThingsBoard.
+That's why after creating and configuring the integration and before starting the Dashboard setup you need to check that all your devices are detected and visible in IoT Hub.
 
 ## Step 7. Creation  and  configuration of the Dashboard
 <details>
@@ -903,13 +903,13 @@ and also the content of the data itself (a detailed description of the data).
          </details>          
         <details>
           <summary>
-              <font color="#228b22"><i><b>Screenshot of receiving confirmation from the ThingPark Wireless to ThingsBoardabout sending a message to the device</b></i></font> (<b>click to open expanded view</b>)
+              <font color="#228b22"><i><b>Screenshot of receiving confirmation from the ThingPark Wireless to IoT Hubabout sending a message to the device</b></i></font> (<b>click to open expanded view</b>)
           </summary> 
           <img src="/images/samples/abeeway/receiving_confirmation_singboard.png">
          </details>  
         <details>
           <summary>
-              <font color="#228b22"><i><b>Screenshot of decoding device response by Thingsboard  UpLink decoder</b></i></font> (<b>click to open expanded view</b>)
+              <font color="#228b22"><i><b>Screenshot of decoding device response by IoT Hub  UpLink decoder</b></i></font> (<b>click to open expanded view</b>)
           </summary> 
           <img src="/images/samples/abeeway/decoding_device_response.png">
          </details>          

@@ -4,7 +4,7 @@
 ## Introduction
 
 Devices are basic IoT entities that can produce telemetry data and handle RPC commands. For example, sensors, actuators, switches;
-ThingsBoard support following device management features using Web UI and [REST API](/docs/{{docsPrefix}}reference/rest-api/).
+IoT Hub support following device management features using Web UI and [REST API](/docs/{{docsPrefix}}reference/rest-api/).
 
 {% include images-gallery.html imageCollection="device-pe" showListImageTitles="true" %}
 
@@ -59,6 +59,6 @@ _Documentation dedicated to Events is coming soon._
 
 ## Device deletion
 
-Tenant administrator can delete devices from ThingsBoard. To delete device, you should:
+Tenant administrator can delete devices from IoT Hub. To delete device, you should:
 
 {% include images-gallery.html imageCollection="device-delete-pe" showListImageTitles="true" %}

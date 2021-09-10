@@ -1,5 +1,5 @@
 
-Execute the following command to start ThingsBoard:
+Execute the following command to start IoT Hub:
 
 ```bash
 sudo service thingsboard start

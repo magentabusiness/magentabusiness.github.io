@@ -1,5 +1,5 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: Notifications and Alarms on your smartphone using Telegram Bot
 
 ---

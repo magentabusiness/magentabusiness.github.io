@@ -1,4 +1,4 @@
-## Introduction to thingsboard.io
+## Introduction to iothub.magenta.at
 
 Our website is open-sourced. You may find the code of in this [repo](https://github.com/thingsboard/thingsboard.github.io). Everyone can contribute to the website. The flow is as follows...
 
@@ -19,10 +19,10 @@ If you have enough knowledge then go through further steps. Ensure that you alre
 
 Whe-e! Starting now you have a copy of our website in your private GitHub repository.
 
-## Local deployment of ThingsBoard documentation repo (website)
+## Local deployment of IoT Hub documentation repo (website)
 
 Now you can launch the website on your local machine to see the up-to-date version.
-thingsboard.io uses jekyll site generator. So, in order to run the website on localhost you need a jekyll server installed.
+iothub.magenta.at uses jekyll site generator. So, in order to run the website on localhost you need a jekyll server installed.
 
 The below commands set up your environment for running GitHub pages locally.
 Any edits you make will be viewable on a lightweight webserver that runs on your local machine.

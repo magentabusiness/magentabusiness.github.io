@@ -1,7 +1,7 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: Connect Tektelic LoRaWAN sensors using TEKTELIC KONA Core Network Server
-description: Learn how to get data from Tektelic LoRaWAN sensors at ThingsBoard
+description: Learn how to get data from Tektelic LoRaWAN sensors at IoT Hub
 
 ---
 
@@ -9,7 +9,7 @@ description: Learn how to get data from Tektelic LoRaWAN sensors at ThingsBoard
 {:toc}
 
 [Tektelic](https://tektelic.com) is a premier supplier of LoRaWAN® IoT Gateways, Sensors and custom applications.
-This guide describes how to stream data from TEKTELIC KONA Core Network Server to ThingsBoard.
+This guide describes how to stream data from TEKTELIC KONA Core Network Server to IoT Hub.
 
 ### Prerequisites
  A gateway and a sensor that is designed to work in EU868 frequency band will be used.  
@@ -75,26 +75,26 @@ This guide describes how to stream data from TEKTELIC KONA Core Network Server t
  
  Be aware, *Application* and *Network* session keys are changing whenever a sensor has been rejoined.  
  Smart Room Sensor is rejoining every time after the battery has been disconnected.  
-### Step 2. Configure integration with ThingsBoard
- ThingsBoard provides [MQTT Gateway API](/docs/reference/gateway-mqtt-api/).  
+### Step 2. Configure integration with IoT Hub
+ IoT Hub provides [MQTT Gateway API](/docs/reference/gateway-mqtt-api/).  
  Network Server integration, in turn, uses this MQTT Gateway API.  
- So sensors and gateways will be created automatically at ThingsBoard side.  
-##### Step 2.1 Add a gateway device in ThingsBoard
- - Create a new device in ThingsBoard. Just for convenience, let’s set its type as *ns_integration*, the type name doesn't affect the functionality.  
+ So sensors and gateways will be created automatically at IoT Hub side.  
+##### Step 2.1 Add a gateway device in IoT Hub
+ - Create a new device in IoT Hub. Just for convenience, let’s set its type as *ns_integration*, the type name doesn't affect the functionality.  
  *Is gateway* checkbox has to be set to make a device using [MQTT Gateway API](/docs/reference/gateway-mqtt-api/).  
- Please don’t confuse gateway-device in ThingsBoard with a LoRa gateway, it’s just name matching.  
+ Please don’t confuse gateway-device in IoT Hub with a LoRa gateway, it’s just name matching.  
  It’s necessary to copy the device access token to use it in the next step.  
  
  <img src="/images/samples/tektelic/tb_gateway.png" width="800">  
  
 ##### Step 2.2 Add an integration in Network Server
  Open *Local sensors* application in Network Server and click *MANAGE INTEGRATIONS* button.  
- Now it's necessary to create a new integration with a ThingsBoard.  
+ Now it's necessary to create a new integration with a IoT Hub.  
  Click the *Add integration* icon in the right top corner and set the next fields:
    - *Name* - integration name could be any.
-   - *Type* - ThingsBoard because of obvious reasons.
+   - *Type* - IoT Hub because of obvious reasons.
    - *Data Converter* - an appropriate Network Server converter.
-   - *Application Address* - ThingsBoard instance address without http or https prefix.
+   - *Application Address* - IoT Hub instance address without http or https prefix.
    - *Token* - the token copied in Step 2.1.  
    
  <img src="/images/samples/tektelic/ns_integration.png" width="800">  
@@ -103,8 +103,8 @@ This guide describes how to stream data from TEKTELIC KONA Core Network Server t
  
 ### Step 3. Integration verification
  After the integration has been created, wait for a new uplink (or trigger it) from the sensor.  
- **Only after a new uplink** Network Server, through [MQTT Gateway API](/docs/reference/gateway-mqtt-api/), will create new devices in ThingsBoard.  
- In ThingsBoard open device-gateway from step 2.1, go to the *RELATIONS* tab, and select outbound relations with a direction *From*.  
+ **Only after a new uplink** Network Server, through [MQTT Gateway API](/docs/reference/gateway-mqtt-api/), will create new devices in IoT Hub.  
+ In IoT Hub open device-gateway from step 2.1, go to the *RELATIONS* tab, and select outbound relations with a direction *From*.  
  There should be present the gateway and the sensor added in Network Server at Step 1.1 and Step 1.2
  
  <img src="/images/samples/tektelic/tb_from_relations.png" width="1000">  
@@ -117,7 +117,7 @@ This guide describes how to stream data from TEKTELIC KONA Core Network Server t
  Open the sensor's *LATEST TELEMETRY* tab, it will contain data that Network Server sent in the last message.  
  Part of the data (*nsGateway*, *nsRssi*, *nsFPort*, for example) is related to LoRa, to Network Server, and to the gateway which receives an uplink.  
  The rest of the data is added by Network Server converter (in our case - by Tektelic Home Sensor from Step 2.2), and it is related to the sensor's payload (*humidity*, *accelerometer*, *Impact*, etc.).  
- This part of telemetry data depends on Network Server converter used for a ThingsBoard integration and how that converter parses the sensor's payload (array of bytes) into JSON at Network Server side.  
+ This part of telemetry data depends on Network Server converter used for a IoT Hub integration and how that converter parses the sensor's payload (array of bytes) into JSON at Network Server side.  
  So if you are using another model of the sensor, please take it into account.  
  <br/>
  Once integration verification passed successfully, the received telemetry is available for visualization.  
@@ -128,7 +128,7 @@ This guide describes how to stream data from TEKTELIC KONA Core Network Server t
  
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main IoT Hub features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

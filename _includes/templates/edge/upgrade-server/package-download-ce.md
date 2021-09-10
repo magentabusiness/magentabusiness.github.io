@@ -1,12 +1,12 @@
 Ubuntu
 ```bash
-wget https://dist.thingsboard.io/docs/thingsboard-edge/resources/3.3/thingsboard-ubuntu-download.sh
+wget https://dist.iothub.magenta.at/docs/thingsboard-edge/resources/3.3/thingsboard-ubuntu-download.sh
 ```
 {: .copy-code}
 
 CentOS
 ```bash
-wget https://dist.thingsboard.io/docs/thingsboard-edge/resources/3.3/thingsboard-ubuntu-download.sh
+wget https://dist.iothub.magenta.at/docs/thingsboard-edge/resources/3.3/thingsboard-ubuntu-download.sh
 ```
 {: .copy-code}
 

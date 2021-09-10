@@ -1,17 +1,17 @@
 * TOC
 {:toc}
 
-ThingsBoard provides the ability to run MQTT server over SSL. Both one-way and two-way SSL are supported.
+IoT Hub provides the ability to run MQTT server over SSL. Both one-way and two-way SSL are supported.
 To enable SSL, you will need to obtain a valid or generate a self-signed SSL certificate and add it to the keystore.
 Once added, you will need to specify the keystore information in **thingsboard.yml** file.
-See the instructions on how to generate SSL certificate and use it in your ThingsBoard installation below.
+See the instructions on how to generate SSL certificate and use it in your IoT Hub installation below.
 You can skip certificate generation step if you already have a certificate.
 
 ### Self-signed certificate generation
 
 **Note** This step requires Linux based OS with Java installed.
 
-Download [**server.keygen.sh**](https://raw.githubusercontent.com/thingsboard/thingsboard/master/tools/src/main/shell/server.keygen.sh) from the official ThingsBoard repository to your working directory.
+Download [**server.keygen.sh**](https://raw.githubusercontent.com/thingsboard/thingsboard/master/tools/src/main/shell/server.keygen.sh) from the official IoT Hub repository to your working directory.
 
 Download [**keygen.properties**](https://raw.githubusercontent.com/thingsboard/thingsboard/master/tools/src/main/shell/keygen.properties) file to your working directory and populate it with desired values. 
 For example:
@@ -19,8 +19,8 @@ For example:
 ```bash
 DOMAIN_SUFFIX="$(hostname)"
 SUBJECT_ALTERNATIVE_NAMES="ip:127.0.0.1"
-ORGANIZATIONAL_UNIT=ThingsBoard
-ORGANIZATION=ThingsBoard
+ORGANIZATIONAL_UNIT=IoT Hub
+ORGANIZATION=IoT Hub
 CITY="San Francisco"
 STATE_OR_PROVINCE=CA
 TWO_LETTER_COUNTRY_CODE=US
@@ -75,7 +75,7 @@ You may run this script with no arguments, or alternatively, you can specify the
 
 This script will run keytool using the configuration specified. It will generate the following output files:
 
- - **SERVER_FILE_PREFIX.jks** - Java keystore file. This is the file which will be used by ThingsBoard MQTT Service
+ - **SERVER_FILE_PREFIX.jks** - Java keystore file. This is the file which will be used by IoT Hub MQTT Service
  - **SERVER_FILE_PREFIX.cer** - Server public key file. It will be then imported to client's .jks keystore file.
  - **SERVER_FILE_PREFIX.pub.pem** - Server public key in **PEM** format, which can be then used as a keystore or imported by non-Java clients.   
 
@@ -110,13 +110,13 @@ export MQTT_BIND_PORT=8883
 
 The **key_store** Property must point to the **.jks** file location. **key_store_password** and **key_password** must be the same as were used in keystore generation.
 
-**NOTE:** ThingsBoard supports **.p12** keystores as well. if this is the case, set **key_store_type** value to **'PKCS12'**
+**NOTE:** IoT Hub supports **.p12** keystores as well. if this is the case, set **key_store_type** value to **'PKCS12'**
 
-After these values are set, launch or restart your ThingsBoard server.
+After these values are set, launch or restart your IoT Hub server.
 
 ### Example of configuration 
-The next combination of the **keygen.properties** example was used to generate a proper .jks and .pem in a case of the ThingsBoard uses the next default **thingsboard.conf** with the enchantments being specified below.   
-This example is based on the default ThingsBoard installation of the **2.5 version**. 
+The next combination of the **keygen.properties** example was used to generate a proper .jks and .pem in a case of the IoT Hub uses the next default **thingsboard.conf** with the enchantments being specified below.   
+This example is based on the default IoT Hub installation of the **2.5 version**. 
 
 
 **thingsboard.conf:**
@@ -131,8 +131,8 @@ export MQTT_BIND_PORT=8883
 **keygen.properties:** 
 ```bash
 DOMAIN_SUFFIX=localhost
-ORGANIZATIONAL_UNIT=Thingsboard
-ORGANIZATION=Thingsboard
+ORGANIZATIONAL_UNIT=IoT Hub
+ORGANIZATION=IoT Hub
 CITY=SF
 STATE_OR_PROVINCE=CA
 TWO_LETTER_COUNTRY_CODE=US

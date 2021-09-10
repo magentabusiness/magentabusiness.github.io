@@ -1031,7 +1031,7 @@ To perform an action you should click any of the nodes in the Entities hierarchy
 
 ###### 6. On HTML element click (only in HTML Cards and Value Title widgets)
 
-ThingsBoard has two widgets that you can configure fully by yourself by customizing an HTML code in their settings. When a code is written, it is possible to input an action source in it.  
+IoT Hub has two widgets that you can configure fully by yourself by customizing an HTML code in their settings. When a code is written, it is possible to input an action source in it.  
 How to add an action source to HTML Cards and Value Title widgets:
 
 - **HTML Cards widget**
@@ -1142,7 +1142,7 @@ To configure _On polygon click_ action source on the Map widget, you should:
 3. Input Polygon key name and remember it, it's going to be used later.
 4. Click an orange tick mark on the right top of the window to apply changes.
 5. Click the right bottom tick icon to save the changes.
-6. With the main left ThingsBoard menu go to Assets.
+6. With the main left IoT Hub menu go to Assets.
 7. From the assets list select an asset you'd like to add a polygon to and open it.
 8. In the Assets details window, go to the Attributes cell.
 9. Click the "+" icon to add a new attribute to the asset.

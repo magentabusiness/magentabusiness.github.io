@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-We assume you have completed the general [Getting Started](/docs/{{docsPrefix}}getting-started-guides/helloworld/) guide to get familiar with ThingsBoard.
+We assume you have completed the general [Getting Started](/docs/{{docsPrefix}}getting-started-guides/helloworld/) guide to get familiar with IoT Hub.
 
 ## LwM2M basics
 
@@ -16,13 +16,13 @@ The up-to-date list of available objects is available inside [this](https://gith
 The registry allows efficient serialization/deserialization of telemetry.
 LwM2M Protocol defines process of device registration, configuration, management and firmware/software updates.
 
-ThingsBoard implements both LwM2M server and bootstrap server that supports plain UDP and DTLS (secure transport over UDP).
-ThingsBoard allows you to provision own LwM2M models (objects and resources) and [map](TODO) those objects to ThingsBoard [telemetry](TODO) and [attributes](TODO).
+IoT Hub implements both LwM2M server and bootstrap server that supports plain UDP and DTLS (secure transport over UDP).
+IoT Hub allows you to provision own LwM2M models (objects and resources) and [map](TODO) those objects to IoT Hub [telemetry](TODO) and [attributes](TODO).
 The platform also supports typical [LwM2M commands](TODO) using RPC calls.
 
 ## Getting started
 
-This part of documentation covers provisioning of your first LwM2M device in ThingsBoard. We will use [Eclipse Wakaama](https://github.com/eclipse/wakaama#test-client-example) test client to simulate LwM2M device.
+This part of documentation covers provisioning of your first LwM2M device in IoT Hub. We will use [Eclipse Wakaama](https://github.com/eclipse/wakaama#test-client-example) test client to simulate LwM2M device.
 
 ### Step 1. Upload LwM2M models
 
@@ -47,11 +47,11 @@ Let's define a profile that supports Device Object (id: 3), Connectivity, Firmwa
 TODO: add screens how to do this.
 
 You may notice that Device Object supports Manufacturer, model, and serial numbers.
-Let's configure ThingsBoard to fetch those data when device connects and store it as ThingsBoard attributes.
+Let's configure IoT Hub to fetch those data when device connects and store it as IoT Hub attributes.
 
 TODO: add screens how to do this.
 
-Now, let's configure ThingsBoard to observe Radio Signal Strength, Link Quality and device location push it as ThingsBoard telemetry.
+Now, let's configure IoT Hub to observe Radio Signal Strength, Link Quality and device location push it as IoT Hub telemetry.
 Observe is a powerful LwM2M feature that will instruct a device to report changes of those values.
 You may also define conditions for reporting specific resource via LwM2M attributes. These settings are covered in the [advanced](#object-and-resource-attributes) documentation.
 
@@ -64,7 +64,7 @@ Transport Configuration also allows you to define 9bootstrap](#bootstrap) and [o
 We assume you have already created L2M2M device profile using the previous step.
 
 Now, let's create the device using our profile and configure LwM2M Credentials.
-ThingsBoard supports 4 different types of credentials: Pre-Shared Key (PSK), Raw Public Ket (RPK), X.509 Certificates and "No Security" mode.
+IoT Hub supports 4 different types of credentials: Pre-Shared Key (PSK), Raw Public Ket (RPK), X.509 Certificates and "No Security" mode.
 
 TODO: add screens with 4 different types of credentials populated.
 
@@ -147,7 +147,7 @@ To be able to use the Key, you have to assign it to the attribute in the Device 
 _TO DO: add screenshots for each point._
 
 
-Below you can find examples of usage for commands that are supported by the Thingsboard platform for LWM2M protocol. Please note that your target client may not support all of them, please refer to the client’s documentation for detailed information on supported commands.
+Below you can find examples of usage for commands that are supported by the IoT Hub platform for LWM2M protocol. Please note that your target client may not support all of them, please refer to the client’s documentation for detailed information on supported commands.
 
 
 ### Read Operation
@@ -205,9 +205,9 @@ Read {"key":"batteryLevel"}
 Read {"id":"/3/0"}
 
 # Response:
-{"result":"CONTENT","value":"LwM2mObjectInstance [id=0, resources={0=LwM2mSingleResource [id=0, value=Thingsboard Test Device, 
+{"result":"CONTENT","value":"LwM2mObjectInstance [id=0, resources={0=LwM2mSingleResource [id=0, value=IoT Hub Test Device, 
 type=STRING], 1=LwM2mSingleResource [id=1, value=Model 500, type=STRING], 2=LwM2mSingleResource [id=2, value=TH-500-000-0001, 
-type=STRING], 3=LwM2mSingleResource [id=3, value=TestThingsboard@TestMore1024_2.04, type=STRING], 6=LwM2mSingleResource [id=6, 
+type=STRING], 3=LwM2mSingleResource [id=3, value=TestIoT Hub@TestMore1024_2.04, type=STRING], 6=LwM2mSingleResource [id=6, 
 value=1, type=INTEGER], 7=LwM2mSingleResource [id=7, value=96, type=INTEGER], 8=LwM2mSingleResource [id=8, value=37, type=INTEGER], 
 9=LwM2mSingleResource [id=9, value=75, type=INTEGER], 10=LwM2mSingleResource [id=10, value=110673, type=INTEGER], 
 11=LwM2mMultipleResource [id=11, values={0=LwM2mResourceInstance [id=0, value=1, type=INTEGER]}, type=INTEGER], 13=LwM2mSingleResource 
@@ -457,9 +457,9 @@ type=INTEGER], /5/0/3=LwM2mSingleResource [id=3, value=0, type=INTEGER], /
 ReadComposite {"ids":["/3/0", "/1_1.2/0"]}
 
 # Response:
-{"result":"CONTENT","value":"{/3/0=LwM2mObjectInstance [id=0, resources={0=LwM2mSingleResource [id=0, value=Thingsboard Test Device, 
+{"result":"CONTENT","value":"{/3/0=LwM2mObjectInstance [id=0, resources={0=LwM2mSingleResource [id=0, value=IoT Hub Test Device, 
 type=STRING], 1=LwM2mSingleResource [id=1, value=Model 500, type=STRING], 2=LwM2mSingleResource [id=2, value=TH-500-000-0001, type=STRING], 
-3=LwM2mSingleResource [id=3, value=TestThingsboard@TestMore1024_2.04, type=STRING], 6=LwM2mSingleResource [id=6, value=1, type=INTEGE
+3=LwM2mSingleResource [id=3, value=TestIoT Hub@TestMore1024_2.04, type=STRING], 6=LwM2mSingleResource [id=6, value=1, type=INTEGE
 R], 7=LwM2mSingleResource [id=7, value=2, type=INTEGER], 8=LwM2mSingleResource [id=8, value=61, type=INTEGER], 9=LwM2mSingleResource [id=9, 
 value=25, type=INTEGER], 10=LwM2mSingleResource [id=10, value=102044, type=INTEGER], 11=LwM2mMultipleResource [id=11, 
 values={0=LwM2mResourceInstance [id=0, value=1, type=INTEGER]}, type=INTEGER], 13=LwM2mSingleResource [id=13, 
@@ -573,9 +573,9 @@ Observe {"id":"/3/0/9"}
 Observe {"id":"/3/0"}
  
 # Response:
-{"result":"CONTENT","value":"LwM2mObjectInstance [id=0, resources={0=LwM2mSingleResource [id=0, value=Thingsboard 
+{"result":"CONTENT","value":"LwM2mObjectInstance [id=0, resources={0=LwM2mSingleResource [id=0, value=IoT Hub 
 Test Device, type=STRING], 1=LwM2mSingleResource [id=1, value=Model 500, type=STRING], 2=LwM2mSingleResource [id=2, 
-value=TH-500-000-0001, type=STRING], 3=LwM2mSingleResource [id=3, value=TestThingsboard@TestMore1024_2.04, type=STRING], 
+value=TH-500-000-0001, type=STRING], 3=LwM2mSingleResource [id=3, value=TestIoT Hub@TestMore1024_2.04, type=STRING], 
 6=LwM2mSingleResource [id=6, value=1, type=INTEGER], 7=LwM2mSingleResource [id=7, value=90, type=INTEGER], 8=LwM2mSingleResource 
 [id=8, value=29, type=INTEGER], 9=LwM2mSingleResource [id=9, value=19, type=INTEGER], 10=LwM2mSingleResource [id=10, value=76962, 
 type=INTEGER], 11=LwM2mMultipleResource [id=11, values={0=LwM2mResourceInstance [id=0, value=1, type=INTEGER]}, type=INTEGER], 
@@ -616,7 +616,7 @@ ObserveCancel {"key":"updateResult"}
 </details>
 
 ### Cancel All Observations Operation
-The "Cancel All Observations" operation is Thingsboard-specific operation and allows to cancel all observations 
+The "Cancel All Observations" operation is IoT Hub-specific operation and allows to cancel all observations 
 on the device at once
 
 <b> Example: Cancel All Observations</b>
@@ -631,7 +631,7 @@ ObserveCancelAll
 
 
 ### Read All Observations Operation
-The "Read All Observations" operation is Thingsboard-specific operation and allows to get all observations 
+The "Read All Observations" operation is IoT Hub-specific operation and allows to get all observations 
 that are set on the device
 
 <b> Example: Read All Observations</b>

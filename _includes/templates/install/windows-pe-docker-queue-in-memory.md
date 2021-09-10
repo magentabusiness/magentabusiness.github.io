@@ -1,6 +1,6 @@
-**ThingsBoard includes In Memory Queue service and use it by default without extra settings.**
+**IoT Hub includes In Memory Queue service and use it by default without extra settings.**
 
-Create docker compose file for ThingsBoard queue service:
+Create docker compose file for IoT Hub queue service:
 
 ```text
 docker-compose.yml

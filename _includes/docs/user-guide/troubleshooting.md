@@ -56,7 +56,7 @@ After this you can find the following messages in your [logs](#logs):
 
 **Note:** This can be used only if Redis is selected as a cache.
 
-It is possible that the data inside the cache somehow got corrupted. Regardless of the reason, it is always safe to clear cache, ThingsBoard will just refill it at the runtime.
+It is possible that the data inside the cache somehow got corrupted. Regardless of the reason, it is always safe to clear cache, IoT Hub will just refill it at the runtime.
 To clear Redis cache you need to log into the server/container/pod with Redis on it and call <code>redis-cli FLUSHALL</code> command.
 
 So if you are struggling with identifying the reason of some problem, you can safely clear Redis cache to make sure it isn't the reason of the issue.
@@ -66,7 +66,7 @@ So if you are struggling with identifying the reason of some problem, you can sa
 
 ### Read logs
 
-Regardless of the deployment type, ThingsBoard logs are stored on the same server/container as ThingsBoard Server/Node itself in the following directory:
+Regardless of the deployment type, IoT Hub logs are stored on the same server/container as IoT Hub Server/Node itself in the following directory:
 
 ```bash
 /var/log/thingsboard
@@ -84,9 +84,9 @@ Kubernetes Deployment%,%kubernetes%,%templates/troubleshooting/logs/view-logs/ku
 
 ### Enable certain logs
 
-ThingsBoard provides the ability to enable/disable logging for certain parts of the system depending on what information do you need for troubleshooting.
+IoT Hub provides the ability to enable/disable logging for certain parts of the system depending on what information do you need for troubleshooting.
 
-You can do this by modifying <b>logback.xml</b> file. As logs itself, it is stored on the same server/container as ThingsBoard Server/Node in the following directory:
+You can do this by modifying <b>logback.xml</b> file. As logs itself, it is stored on the same server/container as IoT Hub Server/Node in the following directory:
 
 ```bash
 /usr/share/thingsboard/conf
@@ -143,7 +143,7 @@ Kubernetes Deployment%,%kubernetes%,%templates/troubleshooting/logs/enable-logs/
 ## Metrics
 
 You may enable prometheus metrics by setting environment variables `METRICS_ENABLED` to value `true` and `METRICS_ENDPOINTS_EXPOSE` to value `prometheus` in the configuration file.
-If you are running ThingsBoard as microservices with separate services for MQTT and COAP transport, you also need to set environment variables `WEB_APPLICATION_ENABLE` to value `true`, 
+If you are running IoT Hub as microservices with separate services for MQTT and COAP transport, you also need to set environment variables `WEB_APPLICATION_ENABLE` to value `true`, 
 `WEB_APPLICATION_TYPE` to value `servlet` and `HTTP_BIND_PORT` to value `8081` for MQTT and COAP services in order to enable web-server with Prometheus metrics.
 
 These metrics are exposed at the path: `https://<yourhostname>/actuator/prometheus` which can be scraped by prometheus (No authentication required).
@@ -152,7 +152,7 @@ These metrics are exposed at the path: `https://<yourhostname>/actuator/promethe
 
 Some internal state metrics can be exposed by the Spring Actuator using Prometheus.
 
-Here's the list of metrics ThingsBoard pushes to Prometheus.
+Here's the list of metrics IoT Hub pushes to Prometheus.
 
 #### <b>tb-node</b> metrics:
 - <i>attributes_queue_${index_of_queue}</i> (statsNames - <i>totalMsgs, failedMsgs, successfulMsgs</i>): stats about writing <b>attributes</b> to the database. 
@@ -215,7 +215,7 @@ Stats descriptions:
 You can import preconfigured Grafana dashboards from [here](https://github.com/thingsboard/thingsboard/tree/master/docker/monitoring/grafana/provisioning/dashboards). 
 **Note:** Depending on the cluster configuration you may need to make changes to the dashboards.
 
-Also, you can view Grafana dashboards after deploying ThingsBoards docker-compose cluster configuration (for more information please follow [this guide](/docs/user-guide/install/cluster/docker-compose-setup/)).
+Also, you can view Grafana dashboards after deploying IoT Hubs docker-compose cluster configuration (for more information please follow [this guide](/docs/user-guide/install/cluster/docker-compose-setup/)).
 Make sure that `MONITORING_ENABLED` environment variable is set to `true`. 
 After deployment, you will be able to reach Prometheus at `http://localhost:9090` and Grafana at `http://localhost:3000` (default login is `admin` and password `foobar`).
 
@@ -226,7 +226,7 @@ Here's screenshots of default preconfigured Grafana dashboards:
 
 ## OAuth2
 
-Sometimes after configuring OAuth you can not see the button for logging in with OAuth provider. This happens when “Domain name” and “Redirect URI Template” contain faulty values, they need to be the same you use for accessing your ThingsBoard web page.
+Sometimes after configuring OAuth you can not see the button for logging in with OAuth provider. This happens when “Domain name” and “Redirect URI Template” contain faulty values, they need to be the same you use for accessing your IoT Hub web page.
 
 Example:
 
@@ -237,7 +237,7 @@ Example:
 
 Base URL in "HOME" section should not contain "/" or other characters.
 
-> Go to your ThingsBoard as a System Administrator. Check the General
+> Go to your IoT Hub as a System Administrator. Check the General
 > Settings -> Base URL should not contain “/” at the end (e.g. “https://
 > mycompany.com ” instead of “https://mycompany.com/”).
 
@@ -257,11 +257,11 @@ For OAuth2 configuration click [here](/docs/{{docsPrefix}}user-guide/oauth-2-sup
         </a>
         <a href="http://stackoverflow.com/questions/tagged/thingsboard">
             <h1>Stack Overflow</h1>
-            <p>The ThingsBoard team will also monitor posts tagged thingsboard. If there aren’t any existing questions that help, please ask a new one!</p>
+            <p>The IoT Hub team will also monitor posts tagged thingsboard. If there aren’t any existing questions that help, please ask a new one!</p>
         </a>
     </div>
 </section>
 
-If your problem isn't answered by any of the guides above, feel free to contact ThingsBoard team.
+If your problem isn't answered by any of the guides above, feel free to contact IoT Hub team.
 
 <a class="button" href="/docs/contact-us/">Contact us</a>

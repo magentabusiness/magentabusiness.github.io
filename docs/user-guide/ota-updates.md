@@ -1,5 +1,5 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 assignees:
 - ashvayka
 title: Over-the-air firmware and software updates

@@ -1,22 +1,22 @@
 * TOC
 {:toc}
 
-ThingsBoard rule engine supports basic analysis of incoming telemetry data, for example, threshold crossing.
+IoT Hub rule engine supports basic analysis of incoming telemetry data, for example, threshold crossing.
 The idea behind rule engine is to provide functionality to route data from IoT Devices to different plugins, based on device attributes or the data itself.   
 However, most of the real-life use cases also require the support of advanced analytics: machine learning, predictive analytics, etc.
   
 This tutorial will demonstrate how you can:
 
- - route telemetry device data from ThingsBoard to Kafka topic using the built-in rule engine capabilities (works for both ThingsBoard CE and PE).
+ - route telemetry device data from IoT Hub to Kafka topic using the built-in rule engine capabilities (works for both IoT Hub CE and PE).
  - aggregate data from multiple devices using a simple Kafka Streams application.
- - push results of the analytics back to ThingsBoard for persistence and visualization using ThingsBoard PE Kafka Integration.
+ - push results of the analytics back to IoT Hub for persistence and visualization using IoT Hub Kafka Integration.
 
 The analytics in this tutorial is, of course, quite simple, but our goal is to highlight the integration steps.
 
 ![image](/images/samples/analytics/kafka-streams/kafka-streams-example.svg)
 
 Let's assume we have a large number of solar panels which include a number of solar modules. 
-ThingsBoard is used to collect, store and visualize anomaly telemetry from these solar modules in each panels.
+IoT Hub is used to collect, store and visualize anomaly telemetry from these solar modules in each panels.
 
 We calculated anomaly by comparing value produced from a solar module with the average valued produced by all modules of the same panel and standard **deviation** of the same value.
 
@@ -30,7 +30,7 @@ In order to store and visualize the results of the analytics, we are going to cr
 
 The following services must be up and running:
 
-* ThingsBoard PE v2.4.2+ [instance](/docs/user-guide/install/pe/installation-options/)
+* IoT Hub v2.4.2+ [instance](/docs/user-guide/install/pe/installation-options/)
 * Kafka [server](https://kafka.apache.org/23/documentation/streams/quickstart#quickstart_streams_download)
 
 ### Step 1. Rule Chain configuration
@@ -40,7 +40,7 @@ Typically, you don't need them in production, but it is very useful for debuggin
 Two of those modules will produce the same value and one module will produce much lower value. 
 Of course, you should replace this with real data produced by real devices. This is just an example.
 
-Let's create three devices with type "solar-module". If you are using ThingsBoard PE, you cna put them to new "Solar Modules" group.
+Let's create three devices with type "solar-module". If you are using IoT Hub, you cna put them to new "Solar Modules" group.
 
 ![image](/images/samples/analytics/kafka-streams/solar-module-devices.png) 
 
@@ -80,12 +80,12 @@ Then application calculates average power produced by module for each panel and 
 Once this is done, the app compares each module values with the average and if the difference is bigger then the deviation, we treat this as anomaly. 
   
 The results of anomaly calculations are pushed to the "anomalies-topic". 
-ThingsBoard subscribed to this topic using Kafka Integration, generate alarms and store anomalies to the database.
+IoT Hub subscribed to this topic using Kafka Integration, generate alarms and store anomalies to the database.
 
 
 #### Download the sample application
 
-Feel free to grab the [code from the ThingsBoard repository](https://github.com/thingsboard/kafka-streams-example) and build the project with maven:
+Feel free to grab the [code from the IoT Hub repository](https://github.com/thingsboard/kafka-streams-example) and build the project with maven:
 
 ```bash
 mvn clean install
@@ -281,7 +281,7 @@ private static boolean isAnomalyModule(SolarModuleAggregatorJoiner module) {
 
 ### Step 3. Configure the Kafka Integration.
 
-Let's configure ThingsBoard to subscribe to the “solar-module-anomalies” topic and create alarms. We will use Kafka Integration that is available since ThingsBoard v2.4.2.
+Let's configure IoT Hub to subscribe to the “solar-module-anomalies” topic and create alarms. We will use Kafka Integration that is available since IoT Hub v2.4.2.
 
 #### Configure Uplink Converter
 
@@ -359,7 +359,7 @@ return result;
 ``` 
 {: .copy-code}
 
-The purpose of the decoder function is to parse the incoming data and metadata to a format that ThingsBoard can consume. 
+The purpose of the decoder function is to parse the incoming data and metadata to a format that IoT Hub can consume. 
 **deviceName** and **deviceType** are required, while **attributes** and **telemetry** are optional.
 **Attributes** and **telemetry** are flat key-value objects. Nested objects are not supported.
 

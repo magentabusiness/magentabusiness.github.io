@@ -1,5 +1,5 @@
 
-ThingsBoard System Administrator is able to configure SMS provider that will be used to distribute SMS messages about alarms.
+IoT Hub System Administrator is able to configure SMS provider that will be used to distribute SMS messages about alarms.
 This configuration step is required in production environments if you plan to use SMS messages. 
   
 Tenant administrator is able to setup [**sms rule node**](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/external-nodes/#send-sms-node) to distribute alarms produced by [**rule engine**](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/re-getting-started/).  

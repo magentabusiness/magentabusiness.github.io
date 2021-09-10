@@ -1,8 +1,8 @@
 {% include templates/install/queue-service-bus-config.md %}
 
-##### ThingsBoard Configuration
+##### IoT Hub Configuration
 
-Edit ThingsBoard configuration file
+Edit IoT Hub configuration file
 
 ```text
 sudo nano /etc/thingsboard/conf/thingsboard.conf

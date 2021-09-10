@@ -2,26 +2,26 @@
 
 ##### Provisioning edge on cloud and installation
 
-Additionally, you will need to have ThingsBoard **Edge** up and running and connected to the {{currentThingsBoardVersion}} server.
+Additionally, you will need to have IoT Hub **Edge** up and running and connected to the {{currentIoT HubVersion}} server.
 
-{% if currentThingsBoardVersion == "ThingsBoard Professional Edition" %}
-To provision ThingsBoard **Edge** on {{currentThingsBoardVersion}} server please visit this guide [Provision ThingsBoard Edge on {{currentThingsBoardVersion}} server](/docs/edge/provision-edge-on-server-pe/).
+{% if currentIoT HubVersion == "IoT Hub" %}
+To provision IoT Hub **Edge** on {{currentIoT HubVersion}} server please visit this guide [Provision IoT Hub Edge on {{currentIoT HubVersion}} server](/docs/edge/provision-edge-on-server-pe/).
 {% endif %}
-{% if currentThingsBoardVersion == "ThingsBoard Community Edition" %}
-To provision ThingsBoard **Edge** on {{currentThingsBoardVersion}} server please visit this guide [Provision ThingsBoard Edge on {{currentThingsBoardVersion}} server](/docs/edge/provision-edge-on-server-ce/).
+{% if currentIoT HubVersion == "IoT Hub Community Edition" %}
+To provision IoT Hub **Edge** on {{currentIoT HubVersion}} server please visit this guide [Provision IoT Hub Edge on {{currentIoT HubVersion}} server](/docs/edge/provision-edge-on-server-ce/).
 {% endif %}
 
-Once ThingsBoard **Edge** provisioned on {{currentThingsBoardVersion}} server please follow [Installation Guide](/docs/edge/install/installation-options/) - this guide will help you to install ThingsBoard **Edge** and connect it to {{currentThingsBoardVersion}} server.
+Once IoT Hub **Edge** provisioned on {{currentIoT HubVersion}} server please follow [Installation Guide](/docs/edge/install/installation-options/) - this guide will help you to install IoT Hub **Edge** and connect it to {{currentIoT HubVersion}} server.
 
-{% if currentThingsBoardVersion == "ThingsBoard Professional Edition" %}
+{% if currentIoT HubVersion == "IoT Hub" %}
 {% capture contenttogglespec %}
 Cloud<br/><small>Connect edge to https://thingsboard.cloud</small>%,%ce%,%templates/edge/pe-cloud.md%br%
 On-premise server<br/><small>Connect edge to on-premise instance</small>%,%pe%,%templates/edge/on-premise-cloud.md{% endcapture %}
 {% include content-toggle.html content-toggle-id="cloudType" toggle-spec=contenttogglespec %}
 {% endif %}
-{% if currentThingsBoardVersion == "ThingsBoard Community Edition" %}
+{% if currentIoT HubVersion == "IoT Hub Community Edition" %}
 {% capture contenttogglespec %}
-Live Demo<br/><small>Connect edge to https://demo.thingsboard.io</small>%,%ce%,%templates/edge/ce-cloud.md%br%
+Live Demo<br/><small>Connect edge to https://iothub.magenta.at</small>%,%ce%,%templates/edge/ce-cloud.md%br%
 On-premise server<br/><small>Connect edge to on-premise instance</small>%,%pe%,%templates/edge/on-premise-cloud.md{% endcapture %}
 {% include content-toggle.html content-toggle-id="cloudType" toggle-spec=contenttogglespec %}
 {% endif %}

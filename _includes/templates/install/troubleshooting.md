@@ -1,4 +1,4 @@
-ThingsBoard logs are stored in the following directory:
+IoT Hub logs are stored in the following directory:
  
 ```bash
 /var/log/thingsboard

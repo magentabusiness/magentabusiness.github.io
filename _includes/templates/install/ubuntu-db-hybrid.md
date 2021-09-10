@@ -1,6 +1,6 @@
 {% capture hybrid-info %}
-ThingsBoard team recommends to use Hybrid database approach if you do plan to have 1M+ devices in production or high data ingestion rate (> 5000 msg/sec).
-In this case, ThingsBoard will be storing timeseries data in Cassandra while continue to use PostgreSQL for main entities (devices/assets/dashboards/customers).  
+IoT Hub team recommends to use Hybrid database approach if you do plan to have 1M+ devices in production or high data ingestion rate (> 5000 msg/sec).
+In this case, IoT Hub will be storing timeseries data in Cassandra while continue to use PostgreSQL for main entities (devices/assets/dashboards/customers).  
 {% endcapture %}
 {% include templates/info-banner.md content=hybrid-info %}
 
@@ -14,9 +14,9 @@ In this case, ThingsBoard will be storing timeseries data in Cassandra while con
 
 {% include templates/install/cassandra-ubuntu-install.md %}
 
-##### ThingsBoard Configuration
+##### IoT Hub Configuration
 
-Edit ThingsBoard configuration file 
+Edit IoT Hub configuration file 
 
 ```bash 
 sudo nano /etc/thingsboard/conf/thingsboard.conf
@@ -38,10 +38,10 @@ export SPRING_DATASOURCE_MAXIMUM_POOL_SIZE=5
 ``` 
 {: .copy-code}
 
-You can optionally add the following parameters to reconfigure your ThingsBoard instance to connect to external Cassandra nodes:
+You can optionally add the following parameters to reconfigure your IoT Hub instance to connect to external Cassandra nodes:
 
 ```bash
-export CASSANDRA_CLUSTER_NAME=Thingsboard Cluster
+export CASSANDRA_CLUSTER_NAME=IoT Hub Cluster
 export CASSANDRA_KEYSPACE_NAME=thingsboard
 export CASSANDRA_URL=127.0.0.1:9042
 export CASSANDRA_USE_CREDENTIALS=false

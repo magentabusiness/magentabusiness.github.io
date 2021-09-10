@@ -1,15 +1,15 @@
-In order to connect ThingsBoard Edge you must create <strong>Edge entity</strong> on the ThingsBoard server first.
+In order to connect IoT Hub Edge you must create <strong>Edge entity</strong> on the IoT Hub server first.
 
 {% capture important_note %}
 **Note**
 
-You can create Edge entity on ThingsBoard server in case you are using **3.3 version or higher**.
+You can create Edge entity on IoT Hub server in case you are using **3.3 version or higher**.
 {% endcapture %}
 {% include templates/info-banner.md content= important_note %}
 
 #### Create edge entity
 
-Please make sure you have ThingsBoard Edge license key from **Step 1** in front of you. 
+Please make sure you have IoT Hub Edge license key from **Step 1** in front of you. 
 
 {% include images-gallery.html imageCollection="addEdge" showListImageTitles="true" %}
 

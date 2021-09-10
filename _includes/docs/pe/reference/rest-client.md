@@ -3,13 +3,13 @@
  
 ## REST Client
 
-The ThingsBoard REST API Client helps you interact with ThingsBoard REST API from your Java application.
-With Rest Client you can programmatically create assets, devices, customers, users and other entities and their relations in ThingsBoard.
+The IoT Hub REST API Client helps you interact with IoT Hub REST API from your Java application.
+With Rest Client you can programmatically create assets, devices, customers, users and other entities and their relations in IoT Hub.
  
 The recommended method for installing the Rest Client is with a build automation tool, like Maven. 
 The version of the REST Client depends on the version of the platform that you are using.   
   
-## Professional Edition REST Client
+## IoT Hub REST Client
 
 In order to add REST Client to your Maven/Gradle project, you should use the following dependency:
  
@@ -31,7 +31,7 @@ In order to download the REST Client dependency, you should add the following re
 <repositories>
     <repository>
         <id>thingsboard</id>
-        <url>https://repo.thingsboard.io/artifactory/libs-release-public</url>
+        <url>https://repo.iothub.magenta.at/artifactory/libs-release-public</url>
     </repository>
 </repositories>
 ```
@@ -41,7 +41,7 @@ In order to download the REST Client dependency, you should add the following re
 You can find the example application **[here](https://github.com/thingsboard/tb-pe-rest-client-example)**.
 
 ```java
-// ThingsBoard REST API URL
+// IoT Hub REST API URL
 final String url = "http://localhost:8080";
 
 // Default System Administrator credentials

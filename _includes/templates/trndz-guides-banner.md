@@ -2,7 +2,7 @@
 - [**Getting started guide**](/docs/trendz/getting-started/) - These guide provide quick overview of main Trendz features.
 {% endif %}
 {% if currentGuide != "InstallationOptions" %}
-- [**Installation guides**](/docs/trendz/install/installation-options/) - Learn how to setup ThingsBoard on various available operating systems.
+- [**Installation guides**](/docs/trendz/install/installation-options/) - Learn how to setup IoT Hub on various available operating systems.
 {% endif %}
 {% if currentGuide != "CalculatedFields" %}
 - [**Calculated Fields**](/docs/trendz/calculated-fields) - Learn about Calculated fields and how to use them.
@@ -23,6 +23,6 @@
 - [**Available Visualizations**](/docs/trendz/visualizations-overview) - Learn about visualization widgets available in Trendz and how to configure them.
 {% endif %}
 {% if currentGuide != "EmbedVisualizations" %}
-- [**Share and embed Visualizations**](/docs/trendz/embed-visuals) - Learn how to add Trendz visualizations on ThingsBoard dashboard or 3rd party web pages.
+- [**Share and embed Visualizations**](/docs/trendz/embed-visuals) - Learn how to add Trendz visualizations on IoT Hub dashboard or 3rd party web pages.
 {% endif %}  
 <br/>

@@ -1,24 +1,24 @@
 #- title: Cloud
-#  fulltitle: ThingsBoard Cloud
-#  description: ThingsBoard Documentation
+#  fulltitle: IoT Hub
+#  description: IoT Hub Documentation
 #  tag: paas
 #  icon: /images/thingsboard-c-icon.svg
 #  path: /docs/paas/
 #  guides: /docs/paas/guides/
 #  getStarted: /docs/paas/getting-started-guides/helloworld/
 #  docsPrefix: /docs/paas/
-- title: Professional Edition
-  fulltitle: ThingsBoard Professional Edition
-  description: ThingsBoard Documentation
+- title: IoT Hub
+  fulltitle: IoT Hub
+  description: IoT Hub Documentation
   tag: pe
-  icon: /images/thingsboard-p-icon.svg
+  icon: /images/IoT_4_512.png
   path: /docs/pe/
   guides: /docs/pe/guides/
   getStarted: /docs/pe/getting-started-guides/helloworld/
   docsPrefix: /docs/pe/
 #- title: Community Edition
-#  fulltitle: ThingsBoard Community Edition
-#  description: ThingsBoard Documentation
+#  fulltitle: IoT Hub Community Edition
+#  description: IoT Hub Documentation
 #  tag: ce
 #  icon: /images/thingsboard-cm-icon.svg
 #  path: /docs/
@@ -26,15 +26,15 @@
 #  getStarted: /docs/getting-started-guides/helloworld/
 #  docsPrefix: /docs/
 #- title: IoT Gateway
-#  fulltitle: ThingsBoard IoT Gateway
-#  description: ThingsBoard Documentation
+#  fulltitle: IoT Hub IoT Gateway
+#  description: IoT Hub Documentation
 #  tag: gw
 #  icon: /images/gateway-icon.svg
 #  path: /docs/iot-gateway/
 #  getStarted: /docs/iot-gateway/getting-started/
 #- title: License Server
-#  fulltitle: ThingsBoard License Server
-#  description: ThingsBoard Documentation
+#  fulltitle: IoT Hub License Server
+#  description: IoT Hub Documentation
 #  tag: license
 #  icon: /images/license-icon.svg
 #  path: /products/license-server/

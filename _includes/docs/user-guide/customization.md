@@ -2,9 +2,9 @@
 * TOC
 {:toc}
 
-There are multiple ways to customize ThingsBoard platform to suit your needs:
+There are multiple ways to customize IoT Hub platform to suit your needs:
 {% unless docsPrefix == 'paas/' %}
- - [Rule Engine](/docs/{{docsPrefix}}user-guide/contribution/rule-node-development/) - allows to create custom rule nodes and add them to your ThingsBoard server instance.
+ - [Rule Engine](/docs/{{docsPrefix}}user-guide/contribution/rule-node-development/) - allows to create custom rule nodes and add them to your IoT Hub server instance.
 {% endunless %}
  - [Widgets Library](/docs/{{docsPrefix}}user-guide/contribution/widgets-development/) - allows to develop new widgets.
 {% unless docsPrefix %}

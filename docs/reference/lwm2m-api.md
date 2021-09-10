@@ -1,5 +1,5 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 assignees:
 - ashvayka
 title: LWM2M Device API Reference

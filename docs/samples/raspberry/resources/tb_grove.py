@@ -61,7 +61,7 @@ def main():
         elif request_body['method'] == 'getServoAngle':
             client.send_rpc_reply(request_id, servo_angle)
 
-    # Connecting to ThingsBoard
+    # Connecting to IoT Hub
     client = TBDeviceMqttClient(thingsboard_server, access_token)
     client.set_server_side_rpc_request_handler(on_server_side_rpc_request)
     client.connect()
@@ -112,7 +112,7 @@ def main():
 
             log.debug('light: {}'.format(light_sensor.light))
 
-            # Formatting the data for sending to ThingsBoard
+            # Formatting the data for sending to IoT Hub
             telemetry = {'distance': distance,
                          'temperature': temperature,
                          'humidity': humidity,

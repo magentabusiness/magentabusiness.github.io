@@ -1,7 +1,7 @@
 
 For installing RabbitMQ use this [instruction](https://www.rabbitmq.com/install-debian.html).
 
-Configuration environment file for ThingsBoard queue service:
+Configuration environment file for IoT Hub queue service:
 
 ```text
 nano tb-node.env

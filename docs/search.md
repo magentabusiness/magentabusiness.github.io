@@ -1,5 +1,5 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: Search Results
 hidetoc: "true"
 ---

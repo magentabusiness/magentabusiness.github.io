@@ -3,7 +3,7 @@ layout: docwithnav-paas
 assignees:
 - ashvayka
 title: Mail Settings
-description: ThingsBoard IoT platform mail settings
+description: IoT Hub IoT platform mail settings
 
 ---
 

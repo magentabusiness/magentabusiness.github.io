@@ -10,10 +10,10 @@
 
 ### Introduction
 
-Custom integration is **only executed remotely** from the main ThingsBoard instance. It allows to create integration with custom configuration 
+Custom integration is **only executed remotely** from the main IoT Hub instance. It allows to create integration with custom configuration 
 that will use any transport protocol for communication with your devices.
 
-This guide contains step-by-step instructions on how to create and launch ThingsBoard custom integration.
+This guide contains step-by-step instructions on how to create and launch IoT Hub custom integration.
 For example, we will launch custom integration that uses TCP transport protocol to stream data from devices and pushes the converted data to 
 [thingsboard.cloud](https://thingsboard.cloud/signup).
 
@@ -21,7 +21,7 @@ Before we start, you can find the full code of custom integration example that w
  
 ### Prerequisites
 
-We assume you already have a tenant administrator account on your own ThingsBoard PE v2.4.1+ instance or thingsboard.cloud.
+We assume you already have a tenant administrator account on your own IoT Hub v2.4.1+ instance or thingsboard.cloud.
 
 Let’s assume that we have a sensor which is sending current temperature, humidity and battery level readings respectively in the following format: **“25,40,94”**.
  
@@ -77,7 +77,7 @@ function decodeToJson(payload) {
 return result;
 ``` 
 
-The purpose of the decoder function is to parse the incoming data and metadata to a format that ThingsBoard can consume. 
+The purpose of the decoder function is to parse the incoming data and metadata to a format that IoT Hub can consume. 
 **deviceName** and **deviceType** are required, while **attributes** and **telemetry** are optional.
 **Attributes** and **telemetry** are flat key-value objects. Nested objects are not supported.
 
@@ -106,7 +106,7 @@ We will get back to this later in this guide.
 
 #### Download the sample application
 
-Feel free to grab the [code from the ThingsBoard repository](https://github.com/thingsboard/remote-integration-example) and build the project with maven:
+Feel free to grab the [code from the IoT Hub repository](https://github.com/thingsboard/remote-integration-example) and build the project with maven:
 
 ```bash
 mvn clean install
@@ -119,7 +119,7 @@ Go ahead and add that maven project to your favorite IDE.
 Main dependencies that are used in the project:
 
 ```xml
-<!-- Api ThingsBoard provides to create custom integration -->
+<!-- Api IoT Hub provides to create custom integration -->
 <dependency>
     <groupId>org.thingsboard.common.integration</groupId>
     <artifactId>remote-integration-api</artifactId>
@@ -131,7 +131,7 @@ Main dependencies that are used in the project:
     <artifactId>netty-all</artifactId>
     <version>${netty.version}</version>
 </dependency>
-<!-- Grpc transport between remote integration and ThingsBoard -->
+<!-- Grpc transport between remote integration and IoT Hub -->
 <dependency>
     <groupId>io.grpc</groupId>
     <artifactId>grpc-netty</artifactId>
@@ -142,10 +142,10 @@ Main dependencies that are used in the project:
 #### Source code review
 
 Main source code is the [CustomIntegration](https://github.com/thingsboard/remote-integration-example/blob/master/src/main/java/org/thingsboard/integration/custom/basic/CustomIntegration.java) Java class.
-Integration is expecting "Hello to ThingsBoard" message from the TCP client and replies with the "Hello from ThingsBoard!".
-Once the [client emulator](https://github.com/thingsboard/remote-integration-example/blob/master/src/main/java/org/thingsboard/integration/custom/client/CustomClient.java) receives "Hello from ThingsBoard!"
-, it will start sending auto-generated data to ThingsBoard in the following format: **“25,40,94”**. 
-The Integration will pass the incoming message as-is to the [uplink converter](/docs/{{peDocsPrefix}}user-guide/integrations/custom/#uplink-converter) and push data to ThingsBoard.
+Integration is expecting "Hello to IoT Hub" message from the TCP client and replies with the "Hello from IoT Hub!".
+Once the [client emulator](https://github.com/thingsboard/remote-integration-example/blob/master/src/main/java/org/thingsboard/integration/custom/client/CustomClient.java) receives "Hello from IoT Hub!"
+, it will start sending auto-generated data to IoT Hub in the following format: **“25,40,94”**. 
+The Integration will pass the incoming message as-is to the [uplink converter](/docs/{{peDocsPrefix}}user-guide/integrations/custom/#uplink-converter) and push data to IoT Hub.
 
 
 ## Next steps

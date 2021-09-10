@@ -20,7 +20,7 @@ mosquitto_pub -d -q 1 -h "$HOST_NAME" -p "1883" -t "v1/devices/me/telemetry" -u 
 ```
 {: .copy-code}
 
-For example, $HOST_NAME reference ThingsBoard Cloud server, access token is ABC123:
+For example, $HOST_NAME reference IoT Hub server, access token is ABC123:
 
 ```bash
 mosquitto_pub -d -q 1 -h "thingsboard.cloud" -p "1883" -t "v1/devices/me/telemetry" -u "ABC123" -m {"temperature":25} 
@@ -44,7 +44,7 @@ Client mosqpub|xxx received PUBACK (Mid: 1)
 Client mosqpub|xxx sending DISCONNECT
 ```
 
-**Note:** Since ThingsBoard 3.2, you are able to use basic MQTT credentials (combination of client id, user name and password ) 
+**Note:** Since IoT Hub 3.2, you are able to use basic MQTT credentials (combination of client id, user name and password ) 
 and customize **topic names** and **payload type** using Device Profile. See more info [here](/docs/user-guide/device-profiles/#mqtt-transport-type).
 
 <br/>

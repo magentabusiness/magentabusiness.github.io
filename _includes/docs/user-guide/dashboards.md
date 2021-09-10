@@ -3,11 +3,11 @@
 
 ## Prerequisites
 
-For faster learning and a better understanding of this guide, first, you have to follow the [Getting Started](/docs/{{docsPrefix}}getting-started-guides/helloworld/) guide to get familiar with ThingsBoard devices and dashboards.
+For faster learning and a better understanding of this guide, first, you have to follow the [Getting Started](/docs/{{docsPrefix}}getting-started-guides/helloworld/) guide to get familiar with IoT Hub devices and dashboards.
 
 ## Introduction
 
-ThingsBoard provides the ability to create and manage dashboards. 
+IoT Hub provides the ability to create and manage dashboards. 
 
 Each dashboard can contain plenty of widgets. Dashboards display data from many entities: devices, assets, etc. Dashboards can be assigned to Customers. 
 
@@ -118,7 +118,7 @@ See more examples how to use filters in this video:
 
 #### Widget types
 
-All IoT dashboards are constructed using ThingsBoard widgets that are displayed in Widget library. 
+All IoT dashboards are constructed using IoT Hub widgets that are displayed in Widget library. 
 Each widget provides end-user functions such as data visualization, remote device control, alarms management and displaying static custom html content.  
 There are five types of widgets:
 
@@ -174,7 +174,7 @@ The data keys list for data source depends on the [widget type](/docs/{{docsPref
    Additionally, you can configure [time window](/docs/{{docsPrefix}}user-guide/dashboards/#time-window) and [alarm filter](/docs/{{docsPrefix}}user-guide/dashboards/#alarm-filter).
 
 Let's assume you don't have the required time series or attribute key in the database yet. 
-In such a case, you can still add a key to the data source, and the widget will start displaying the data as soon as the device will send it to ThingsBoard. 
+In such a case, you can still add a key to the data source, and the widget will start displaying the data as soon as the device will send it to IoT Hub. 
 
 {% include images-gallery.html imageCollection="add-data-source3" %}
 
@@ -210,7 +210,7 @@ Now, it is time to add a data source:
 
 - **Entity count data source**
 
-Since version 3.2.2 ThingsBoard has added an Entity count data source. This feature allows you to see the number of entities by displaying them on a widget and thus determine the number of devices, assets, etc.
+Since version 3.2.2 IoT Hub has added an Entity count data source. This feature allows you to see the number of entities by displaying them on a widget and thus determine the number of devices, assets, etc.
 
 Let's get familiar with this feature using a basic example, displaying the total number of existing devices on the widget.
 
@@ -271,7 +271,7 @@ Data key definition consists of type (time series, attribute of entity field) an
 
 List of available attribute keys is basically a list of all client, server and shared [attributes](/docs/{{docsPrefix}}user-guide/attributes/) of your device or other entity.
 
-List of available time series keys depends on what time series data you devices [report](/docs/{{docsPrefix}}user-guide/telemetry/#device-telemetry-upload-api) to ThingsBoard 
+List of available time series keys depends on what time series data you devices [report](/docs/{{docsPrefix}}user-guide/telemetry/#device-telemetry-upload-api) to IoT Hub 
 or what time series data you have saved via rule engine or [REST API](/docs/{{docsPrefix}}reference/rest-api/).
 
 List of entity fields depends on the entity type and may extend in the future:
@@ -415,8 +415,8 @@ Read more about [widget actions](/docs/{{docsPrefix}}user-guide/ui/widget-action
 
 Dashboard time window represents the time interval and aggregation function that will be used to fetch the time series or alarm data.
 Time window is used by all the time series and alarm widgets unless they are explicitly [configured](/docs/{{docsPrefix}}user-guide/dashboards/#4-widget-time-window) to overwrite its execution.  
-In the case of a time series widget, ThingsBoard fetches telemetry with a timestamp that matches the time window.  
-In the case of an alarm widget, ThingsBoard fetches alarms with the created time that matches the time window.
+In the case of a time series widget, IoT Hub fetches telemetry with a timestamp that matches the time window.  
+In the case of an alarm widget, IoT Hub fetches alarms with the created time that matches the time window.
 
 The time window can work in two modes:
 - In the **real-time mode**, widgets constantly receive updates from the server and automatically show you only the data that matches the time window for a current timestamp.
@@ -618,7 +618,7 @@ The dashboard import window should pop up, and you will be prompted to upload th
 
 ## Export
 
-In ThingsBoard Community Edition, a Dashboard export or an exporting of a specific widget is possible as a configuration file in JSON format. 
+In IoT Hub Community Edition, a Dashboard export or an exporting of a specific widget is possible as a configuration file in JSON format. 
 You can use this file to transfer your Dashboard or widget configuration to another instance.
 
 ### Export dashboard
@@ -641,9 +641,9 @@ This action saves the configuration file of the JSON format with all the setting
 
 {% include images-gallery.html imageCollection="export-widget" %}
 
-### ThingsBoard Professional Edition export
+### IoT Hub export
 
-In ThingsBoard Professional Edition, dashboard export is possible in several additional formats: PDF, PNG & JPEG.
+In IoT Hub, dashboard export is possible in several additional formats: PDF, PNG & JPEG.
 This is useful when you need to send the data displayed in your dashboard by email or print.
 
 {% include images-gallery.html imageCollection="pro-export" %}

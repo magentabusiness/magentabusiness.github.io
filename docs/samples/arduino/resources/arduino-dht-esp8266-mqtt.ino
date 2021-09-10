@@ -77,7 +77,7 @@ void getAndSendTemperatureAndHumidityData()
     return;
   }
 
-  Serial.println("Sending data to ThingsBoard:");
+  Serial.println("Sending data toIoT Hub:");
   Serial.print("Humidity: ");
   Serial.print(humidity);
   Serial.print(" %\t");
@@ -117,7 +117,7 @@ void InitWiFi()
 void reconnect() {
   // Loop until we're reconnected
   while (!tb.connected()) {
-    Serial.print("Connecting to ThingsBoard node ...");
+    Serial.print("Connecting toIoT Hub node ...");
     // Attempt to connect (clientId, username, password)
     if ( tb.connect(thingsboardServer, TOKEN) ) {
       Serial.println( "[DONE]" );

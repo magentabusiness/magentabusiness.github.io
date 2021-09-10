@@ -31,7 +31,7 @@ curl -v -X POST -d "{\"temperature\": 25}" $HOST_NAME/api/v1/$ACCESS_TOKEN/telem
 For example, $HOST_NAME reference live demo server, access token is ABC123:
 
 ```bash
-curl -v -X POST -d "{\"temperature\": 25}" https://demo.thingsboard.io/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json" 
+curl -v -X POST -d "{\"temperature\": 25}" https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json" 
 ```
 {: .copy-code}
 

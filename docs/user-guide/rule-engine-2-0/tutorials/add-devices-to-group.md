@@ -1,5 +1,5 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: Add & remove devices to group dynamically
 description: Add & remove devices to group
 
@@ -14,9 +14,9 @@ This tutorial will show how to dynamically add & remove device from the device g
 
 ## Use case
 
-Let's assume your device is reporting temperature readings to ThingsBoard and you would like to visualize devices that have reported temperature > 50°C. 
+Let's assume your device is reporting temperature readings to IoT Hub and you would like to visualize devices that have reported temperature > 50°C. 
 
-In this tutorial we will configure ThingsBoard Rule Engine to automatically update "High temperature devices" group members based on incoming temperature readings from the device.
+In this tutorial we will configure IoT Hub Rule Engine to automatically update "High temperature devices" group members based on incoming temperature readings from the device.
 You can use this tutorial as a basis for much more complex filtering.  
 
 ## Prerequisites 

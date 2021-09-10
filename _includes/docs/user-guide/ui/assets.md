@@ -1,12 +1,12 @@
 
-Thingsboard support following asset management features using Web UI and [REST API](/docs/{{docsPrefix}}reference/rest-api/).
+IoT Hub support following asset management features using Web UI and [REST API](/docs/{{docsPrefix}}reference/rest-api/).
 
 * TOC
 {:toc}
 
 ## Add and delete assets
 
-Tenant administrator is able to register new assets or delete them from Thingsboard.
+Tenant administrator is able to register new assets or delete them from IoT Hub.
 
 ![image](/images/user-guide/ui/assets.png)
 

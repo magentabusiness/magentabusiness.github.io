@@ -1,5 +1,5 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: API & Rate Limits
 description: Configuring API Limits
 

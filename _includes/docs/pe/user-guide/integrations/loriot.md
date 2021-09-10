@@ -6,7 +6,7 @@
 ## Overview
 
 LORIOT is LoRaWAN network designed for connecting your devices using LoRaWAN stack. After integrating LORIOT with the
-ThingsBoard, you can connect, communicate, process and visualize data from devices in the ThingsBoard IoT platform.
+IoT Hub, you can connect, communicate, process and visualize data from devices in the IoT Hub IoT platform.
 
 ## Create LORIOT account
 
@@ -23,7 +23,7 @@ specified link.
 ## Create Uplink Converter
 
 Before creating the integration, you need to create an **Uplink converter** in **Data converters.**
-Uplink is necessary in order to convert the incoming data from the device into the required format for displaying them in ThingsBoard.
+Uplink is necessary in order to convert the incoming data from the device into the required format for displaying them in IoT Hub.
 Click on the **"plus"** and on **"Create new converter".** 
 To view the events, enable **Debug.** In the function decoder field, specify a script to parse
 and transform data. 
@@ -49,7 +49,7 @@ Let's review sample uplink message from LORIOT:
      "snr"  : 1.2
  }
 ```
-As you can see the unique device id arrives in the "EUI" field. We will use it as a device name in ThingsBoard. Device data is encoded in the "data" field.
+As you can see the unique device id arrives in the "EUI" field. We will use it as a device name in IoT Hub. Device data is encoded in the "data" field.
 The encoded data here is:
 ```
 "data": "2A3F"
@@ -82,7 +82,7 @@ var payloadJson = decodeToJson(payload);
 var deviceName = payloadJson.EUI;
 // Specify the device type. Use one data converter per device type or application.
 var deviceType = 'temperature-sensor';
-// Optionally, add the customer name and device group to automatically create them in ThingsBoard and assign new device to it.
+// Optionally, add the customer name and device group to automatically create them in IoT Hub and assign new device to it.
 // var customerName = 'customer';
 // var groupName = 'thermostat devices';
 // Result object with device/asset attributes/telemetry data
@@ -138,7 +138,7 @@ Now that the Uplink converter has been created, it is possible to create an inte
 
 {% include images-gallery.html imageCollection="integration" %}
 
-In order for data to be transferred from LORIOT to ThingsBoard, you need to configure an **Output** for your LORIOT application. You can do this manually (recommended) or ThingsBoard Integration can do this for you (you will need to specify login and password from your LORIOT account for us to be able to automatically provision the output).  
+In order for data to be transferred from LORIOT to IoT Hub, you need to configure an **Output** for your LORIOT application. You can do this manually (recommended) or IoT Hub Integration can do this for you (you will need to specify login and password from your LORIOT account for us to be able to automatically provision the output).  
 <br>
 
 <div style="font-size: 20px; margin-bottom: 8px; font-weight: bold;">Configuration the Output options</div>
@@ -172,7 +172,7 @@ Once the Headers filter has been configured, it will also need to be specified i
 
 It may be useful to "emulate" the message from device using console instead of the LORIOT server. To send an uplink message, you need a **HTTP endpoint URL** from the integration, **port** and **EUI** from LORIOT. 
 
-Let`s go to the **Integrations** tab in ThingsBoard. Find your LORIOT integration and click on it. There you can find the HTTP endpoint URL. Click on the icon to copy the url.
+Let`s go to the **Integrations** tab in IoT Hub. Find your LORIOT integration and click on it. There you can find the HTTP endpoint URL. Click on the icon to copy the url.
 
 {% include images-gallery.html imageCollection="endpoint_url" %}
 
@@ -210,7 +210,7 @@ Received data can be viewed in the Uplink converter. In the **“In”** and **"
 
 Use the Dashboards to work with data. Dashboards are a modern format for collecting and visualizing data sets. Visibility of data presentation is achieved through a variety of widgets. 
 
-ThingsBoard has examples of several types of dashboards that you can use. You can find them in **Solution templates** tab.
+IoT Hub has examples of several types of dashboards that you can use. You can find them in **Solution templates** tab.
 
 {% include images-gallery.html imageCollection="solution_templates" %}
 

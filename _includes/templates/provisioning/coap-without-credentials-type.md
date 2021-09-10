@@ -1,6 +1,6 @@
 | **Parameter**             | **Example value**                            | **Description**                                                                |
 |:-|:-
-| *deviceName*              | **DEVICE_NAME**                              | Device name in ThingsBoard.                                                    |
+| *deviceName*              | **DEVICE_NAME**                              | Device name in IoT Hub.                                                    |
 | *provisionDeviceKey*      | **PUT_PROVISION_KEY_HERE**                   | Provisioning device key, you should take it from configured device profile.    |
 | *provisionDeviceSecret*   | **PUT_PROVISION_SECRET_HERE**                | Provisioning device secret, you should take it from configured device profile. | 
 |-
@@ -30,7 +30,7 @@ Provisioning response example:
 
 #### Sample script
 
-To communicate with ThingsBoard we will use CoAPthon3 module, so we should install it:
+To communicate with IoT Hub we will use CoAPthon3 module, so we should install it:
 
 ```bash
 pip3 install coapthon3 --user
@@ -63,11 +63,11 @@ from json import loads, dumps
 def collect_required_data():
     config = {}
     print("\n\n", "="*80, sep="")
-    print(" "*10, "\033[1m\033[94mThingsBoard device provisioning without authorization example script. CoAP API\033[0m", sep="")
+    print(" "*10, "\033[1m\033[94mIoT Hub device provisioning without authorization example script. CoAP API\033[0m", sep="")
     print("="*80, "\n\n", sep="")
-    host = input("Please write your ThingsBoard \033[93mhost\033[0m or leave it blank to use default (thingsboard.cloud): ")
+    host = input("Please write your IoT Hub \033[93mhost\033[0m or leave it blank to use default (thingsboard.cloud): ")
     config["host"] = host if host else "thingsboard.cloud"
-    port = input("Please write your ThingsBoard \033[93mCoAP port\033[0m or leave it blank to use default (5683): ")
+    port = input("Please write your IoT Hub \033[93mCoAP port\033[0m or leave it blank to use default (5683): ")
     config["port"] = int(port) if port else 5683
     config["provision_device_key"] = input("Please write \033[93mprovision device key\033[0m: ")
     config["provision_device_secret"] = input("Please write \033[93mprovision device secret\033[0m: ")
@@ -78,7 +78,7 @@ def collect_required_data():
     return config
 
 
-# Example for message to ThingsBoard
+# Example for message to IoT Hub
 to_publish = {
   "stringKey": "value1",
   "booleanKey": True,
@@ -95,8 +95,8 @@ if __name__ == '__main__':
 
     config = collect_required_data()
 
-    THINGSBOARD_HOST = config["host"]  # ThingsBoard instance host
-    THINGSBOARD_PORT = config["port"]  # ThingsBoard instance MQTT port
+    THINGSBOARD_HOST = config["host"]  # IoT Hub instance host
+    THINGSBOARD_PORT = config["port"]  # IoT Hub instance MQTT port
 
     PROVISION_REQUEST = {"provisionDeviceKey": config["provision_device_key"],  # Provision device key, replace this value with your value from device profile.
                          "provisionDeviceSecret": config["provision_device_secret"],  # Provision device secret, replace this value with your value from device profile.
@@ -113,7 +113,7 @@ if __name__ == '__main__':
     if received_token is not None:
         thingsboardClient = HelperClient(server=(THINGSBOARD_HOST, THINGSBOARD_PORT))
         response = thingsboardClient.post('/api/v1/%s/telemetry' % (received_token,), dumps(to_publish))
-        print("[THINGSBOARD CLIENT] Response from Thingsboard.")
+        print("[THINGSBOARD CLIENT] Response from IoT Hub.")
         print(response)
         thingsboardClient.stop()
     else:

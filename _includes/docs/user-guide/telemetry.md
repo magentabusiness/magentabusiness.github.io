@@ -2,7 +2,7 @@
 * TOC
 {:toc}
 
-ThingsBoard provides a rich set of features related to time-series data:
+IoT Hub provides a rich set of features related to time-series data:
 
  - **Collect** data from devices using various [protocols and integrations](/docs/{{docsPrefix}}getting-started-guides/connectivity/);
  - **Store** time series data in SQL (PostgreSQL) or NoSQL (Cassandra or Timescale) databases;
@@ -17,7 +17,7 @@ This guide provides an overview of the features listed above, and some useful li
 
 ## Data points
 
-ThingsBoard internally treats time-series data as timestamped key-value pairs. We call single timestamped key-value pair a **data point**. 
+IoT Hub internally treats time-series data as timestamped key-value pairs. We call single timestamped key-value pair a **data point**. 
 Flexibility and simplicity of the key-value format allow easy and seamless integration with almost any IoT device on the market. 
 Key is always a string and is basically a data point key name, while the value can be either string, boolean, double, integer or JSON.
 
@@ -45,7 +45,7 @@ The following JSON contains 5 data points: temperature (double), humidity (integ
 ```
 {: .copy-code}
 
-You may notice that the JSON listed above does not have a timestamp information. In such case, ThingsBoard uses current server timestamp. 
+You may notice that the JSON listed above does not have a timestamp information. In such case, IoT Hub uses current server timestamp. 
 However, you may include timestamp information into the message. See example below:
 
 ```json
@@ -73,7 +73,7 @@ Most of the protocols above support JSON, Protobuf or own data format. For other
 
 ## Data visualization
 
-We assume you have already pushed time-series data to ThingsBoard. Now you may use it in your dashboards. 
+We assume you have already pushed time-series data to IoT Hub. Now you may use it in your dashboards. 
 We recommend [dashboards overview](/docs/{{docsPrefix}}user-guide/dashboards/) to get started.
 Once you are familiar how to create dashboards and configure data sources,
 you may use widgets to visualize either latest values or real-time changes and historical values.
@@ -86,12 +86,12 @@ You may also use [input widgets](/docs/{{docsPrefix}}user-guide/ui/widget-librar
 
 {% if docsPrefix == "paas/" %}
 
-ThingsBoard Cloud stores time-series data in the Cassandra database with replication factor of 3. 
-The on-prem installation of ThingsBoard support storage of time-series data in SQL (PostgreSQL) or NoSQL (Cassandra or Timescale) databases.
+IoT Hub stores time-series data in the Cassandra database with replication factor of 3. 
+The on-prem installation of IoT Hub support storage of time-series data in SQL (PostgreSQL) or NoSQL (Cassandra or Timescale) databases.
 
 {% else %}
 
-System administrator is able to configure ThingsBoard to store time-series data in SQL (PostgreSQL) or NoSQL (Cassandra or Timescale) databases.
+System administrator is able to configure IoT Hub to store time-series data in SQL (PostgreSQL) or NoSQL (Cassandra or Timescale) databases.
 Using SQL storage is recommended for small environments with less than 5000 [data points](#data-points) per second.
 Storing data in Cassandra makes sense when you have either high throughput or high availability requirements for your solution.
 
@@ -103,7 +103,7 @@ See [SQL vs NoSQL vs Hybrid](/docs/{{docsPrefix}}reference/#sql-vs-nosql-vs-hybr
 
 {% if docsPrefix == "paas/" %}
 
-ThingsBoard Cloud stores data with configurable time-to-live (TTL) parameter. 
+IoT Hub stores data with configurable time-to-live (TTL) parameter. 
 The value of the parameter is part of the [Subscription](/products/paas/subscription/) plan.
 You may overwrite the default value in the "Save Timeseries" rule node or using "TTL" metadata field of your message.
 This allows you to optimize storage consumption. The maximum allowed value of TTL is 5 years.
@@ -125,7 +125,7 @@ That is why, you may only [configure](/docs/{{docsPrefix}}user-guide/install/con
 
 ## Data durability
 
-The device that sends message with time-series data to ThingsBoard will receive confirmation 
+The device that sends message with time-series data to IoT Hub will receive confirmation 
 once the message is successfully stored into the Rule Engine [Queue](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#rule-engine-queue) 
 that is configured for particular device [profile](/docs/{{docsPrefix}}user-guide/device-profiles/#queue-name).
 
@@ -173,7 +173,7 @@ Useful to calculate total water consumption for the building/district based on d
 
 ## Data Query REST API
 
-ThingsBoard provides following REST API to fetch entity data:
+IoT Hub provides following REST API to fetch entity data:
 
 {% capture api_note %}
 **NOTE:** The API is available via Swagger UI. Please review the general [REST API](/docs/{{docsPrefix}}reference/rest-api/) documentation for more details.
@@ -231,7 +231,7 @@ The supported parameters are described below:
  - **agg** - the aggregation function. One of MIN, MAX, AVG, SUM, COUNT, NONE.
  - **limit** - the max amount of data points to return or intervals to process.
 
-ThingsBoard will use *startTs*, *endTs*, and *interval* to identify aggregation partitions or sub-queries and execute asynchronous queries to DB that leverage built-in aggregation functions.
+IoT Hub will use *startTs*, *endTs*, and *interval* to identify aggregation partitions or sub-queries and execute asynchronous queries to DB that leverage built-in aggregation functions.
 
 {% capture tabspec %}get-telemetry-values
 A,get-telemetry-values.sh,shell,resources/get-telemetry-values.sh,/docs/{{docsPrefix}}user-guide/resources/get-telemetry-values.sh
@@ -276,7 +276,7 @@ Change values of the following variables :
  
  In case of live-demo server : 
  
- - replace **host:port** with **demo-thingsboard.io** and choose secure connection - **wss://**
+ - replace **host:port** with **iothub.magenta.at** and choose secure connection - **wss://**
  
  In case of local installation :
  

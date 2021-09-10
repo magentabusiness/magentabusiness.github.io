@@ -1,6 +1,6 @@
 {% include templates/install/queue-aws-sqs-config.md %}
 
-Configure ThingsBoard environment file:
+Configure IoT Hub environment file:
 
 ```text
 sudo nano .env
@@ -14,7 +14,7 @@ TB_QUEUE_TYPE=aws-sqs
 ```
 {: .copy-code}
 
-Configure AWS SQS environment file for ThingsBoard queue service:
+Configure AWS SQS environment file for IoT Hub queue service:
 
 ```text
 sudo nano queue-aws-sqs.env

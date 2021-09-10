@@ -1,6 +1,6 @@
 ---
 layout: common
-title: ThingsBoard Professional Edition on AWS Marketplace
+title: IoT Hub on AWS Marketplace
 notitle: "true"
 ---
 
@@ -13,14 +13,14 @@ notitle: "true"
         <form id="contact-form" class="contact-form" action="https://app.mailerlite.com/webforms/submit/x1e5q3" data-id="1174474" data-code="x1e5q3" method="POST" target="_blank">
             <fieldset>
                 <div class="form-title center">
-                    <h1>Deploy ThingsBoard PE Maker</h1>
+                    <h1>Deploy IoT Hub Maker</h1>
                 </div>
                 <div class="cloud-provider">
                     <div class="logo-container partner">
                         <img src="/images/pe/aws_logo.svg">
                     </div>
                     <div class="cloud-provider-desc">
-                        <p>Deploy using AWS marketplace. With up to 10 devices, this pricing model is ideal for makers that are getting started with ThingsBoard PE.</p>
+                        <p>Deploy using AWS marketplace. With up to 10 devices, this pricing model is ideal for makers that are getting started with IoT Hub.</p>
                         <p>
                             <span class="cloud-price-aws">$0.014/hr or $100/year (18% savings)</span>
                             <span class="cloud-price-aws-desc"> for software + AWS usage fees</span>
@@ -77,7 +77,7 @@ notitle: "true"
         <form id="contact-form" class="contact-form" action="https://app.mailerlite.com/webforms/submit/c1a6q7" data-id="1174562" data-code="c1a6q7" method="POST" target="_blank">
             <fieldset>
                 <div class="form-title center">
-                    <h1>Deploy ThingsBoard PE Prototype</h1>
+                    <h1>Deploy IoT Hub Prototype</h1>
                 </div>
                 <div class="cloud-provider">
                     <div class="logo-container partner">
@@ -141,7 +141,7 @@ notitle: "true"
         <form id="contact-form" class="contact-form" action="https://app.mailerlite.com/webforms/submit/f6r0q1" data-id="1174572" data-code="f6r0q1" method="POST" target="_blank">
             <fieldset>
                 <div class="form-title center">
-                    <h1>Deploy ThingsBoard PE Startup</h1>
+                    <h1>Deploy IoT Hub Startup</h1>
                 </div>
                 <div class="cloud-provider">
                     <div class="logo-container partner">
@@ -205,7 +205,7 @@ notitle: "true"
         <form id="contact-form" class="contact-form" action="https://app.mailerlite.com/webforms/submit/w2i0j2" data-id="1174576" data-code="w2i0j2" method="POST" target="_blank">
             <fieldset>
                 <div class="form-title center">
-                    <h1>Deploy ThingsBoard PE Business</h1>
+                    <h1>Deploy IoT Hub Business</h1>
                 </div>
                 <div class="cloud-provider">
                     <div class="logo-container partner">
@@ -269,7 +269,7 @@ notitle: "true"
         <form id="contact-form" class="contact-form" action="https://app.mailerlite.com/webforms/submit/m8r8r9" data-id="1174606" data-code="m8r8r9" method="POST" target="_blank">
             <fieldset>
                 <div class="form-title center">
-                    <h1>Deploy ThingsBoard PE Enterprise</h1>
+                    <h1>Deploy IoT Hub Enterprise</h1>
                 </div>
                 <div class="cloud-provider">
                     <div class="logo-container partner">

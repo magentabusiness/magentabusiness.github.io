@@ -11,24 +11,24 @@
     </div>
 </div> 
 
-## ThingsBoard CE vs PE security features comparison
+## IoT Hub CE vs PE security features comparison
 
-ThingsBoard Community Edition (TB CE) supports a straight-forward security model with three main roles: System administrator, Tenant administrator, and Customer user. 
+IoT Hub Community Edition (TB CE) supports a straight-forward security model with three main roles: System administrator, Tenant administrator, and Customer user. 
 A system administrator is able to manage tenants, while a tenant administrator manages devices, dashboards, customers, and other entities that belong to a particular tenant.
 Customer user is able to view dashboards and control devices that are assigned to a specific customer.
 TB CE functionality is sufficient for a lot of simple use cases, especially building real-time [end-user dashboards](/docs/{{docsPrefix}}user-guide/dashboards/).
  
-ThingsBoard Professional Edition (TB PE) brings much more flexibility in terms of user, customer, and role management. 
+IoT Hub  brings much more flexibility in terms of user, customer, and role management. 
 It is designed to cover use cases for businesses and enterprises with multiple user groups that have different permissions but may interact with the same devices and assets. 
 
-TB PE security model was significantly improved in v2.3 to enable new security features and to support advanced RBAC for IoT applications. For example:
+IoT Hub security model was significantly improved in v2.3 to enable new security features and to support advanced RBAC for IoT applications. For example:
 
   - ability to create a hierarchy of customers with multiple levels of sub-customers, independent users, and devices; 
   - ability to create roles with a flexible set of permissions;
   - ability to assign roles to exact user groups;
   - ability to grant specific permissions to particular user groups over precise device groups.
    
-This document covers features that are exclusive to TB PE. We will start with a glossary and will provide step-by-step examples of how to configure the most popular use cases.
+This document covers features that are exclusive to IoT Hub. We will start with a glossary and will provide step-by-step examples of how to configure the most popular use cases.
 
 ## Glossary
  
@@ -38,7 +38,7 @@ A Tenant is a separate business-entity: an individual, or an organization that o
 
 **Entity**
 
-An Entity can be a device, asset, user, dashboard, entity view, etc. Any entity is managed by ThingsBoard. See [entities and relations](/docs/{{docsPrefix}}user-guide/entities-and-relations/) guide for more details.
+An Entity can be a device, asset, user, dashboard, entity view, etc. Any entity is managed by IoT Hub. See [entities and relations](/docs/{{docsPrefix}}user-guide/entities-and-relations/) guide for more details.
 
 **Entity Group (EG)** 
 
@@ -57,7 +57,7 @@ The Customer group is also an EG. It has the same features as regular EG, but we
 
 **User**
 
-Users are able to login to the ThingsBoard web interface, execute REST API calls, access devices, and assets if it's allowed. The User is also an Entity in ThingsBoard.
+Users are able to login to the IoT Hub web interface, execute REST API calls, access devices, and assets if it's allowed. The User is also an Entity in IoT Hub.
 
 **User Group (UG)**
 
@@ -67,11 +67,11 @@ A User group is also an EG. It has the same features as regular EG, but we have 
 
 Each EG belongs to one owner. This can be either Tenant or Customer. 
 Also, each Customer has only one owner. If the Customer Owner is a Tenant, it means that this is a top-level Customer.
-If the Customer owner is another Customer, it means that this is a sub-customer. There might be multiple levels of Customers in ThingsBoard.
+If the Customer owner is another Customer, it means that this is a sub-customer. There might be multiple levels of Customers in IoT Hub.
 
 **Resource**
 
-Anything that has a secure APIs or represents a ThingsBoard Entity is a resource. 
+Anything that has a secure APIs or represents a IoT Hub Entity is a resource. 
 Examples of Entities are listed in the Entity definition above. Groups of entities are also resources, for example, Device Group, Asset Group, Dashboard Group. 
 Additional resources are white-labeling, audit logs, and admin settings.
 
@@ -93,7 +93,7 @@ GPE is basically a mapping between UG, Role, and optional EG. See "Generic roles
 
 ## Customer hierarchy
 
-ThingsBoard supports the "recursive" customer hierarchy with an unlimited number of sub-customers. 
+IoT Hub supports the "recursive" customer hierarchy with an unlimited number of sub-customers. 
 The root-level Owner is Tenant. Each Owner may have multiple Entity Groups (EGs), User Groups (UGs), and Customer Groups (CGs).
 
 **Note:** Each Entity has only one owner. However, Entities can belong to multiple EGs that belong to the same owner.
@@ -148,12 +148,12 @@ Your main customer is a Building Manager that wants to monitor HVAC systems, ele
 The Building Manager may want to design and share some dashboards with the end-users - office workers.
 Besides, your engineers responsible for the maintenance are interested in supervising the devices state, for example, receive alerts when the battery level forgoes below certain thresholds.
 
-To summarize those requirements in ThingsBoard terms, we should implement the following roles:
+To summarize those requirements in IoT Hub terms, we should implement the following roles:
  * Supervisors - read-only access to all devices' telemetry in all the buildings, and the ability to create their custom dashboards, but no access to dashboards created by users from different user groups.
  * Facility Managers - allows provisioning new devices for each facility, setup thresholds, manage users, and configure dashboards.
  * End Users - allows having read-only access to the state of the facility where this user belongs to.
 
-Let's configure ThingsBoard to support this use case. The instructions below assume that you have logged in as a Tenant Administrator.
+Let's configure IoT Hub to support this use case. The instructions below assume that you have logged in as a Tenant Administrator.
 
 **Supervisors**
 
@@ -228,7 +228,7 @@ Now, let's create a Read-only User. Let's assume we want to assign "End User Das
 So, our read-only user will not have access to the administration panel to the left, since they are still not allowed to perform any server-side API calls, except read-only browsing the data.  
 1. Choose Customer User in the User Group section;
 2. Click "+" at the top right of the screen;
-3. Input email address, for example, we will use bob@thingsboard.io, click "Add";
+3. Input email address, for example, we will use bob@iothub.magenta.at, click "Add";
 4. In the opened window you can see the User Activation Link, click "ok";
 5. Now, click at the created User;
 6. At the right top of the screen you shall see the "Pen" icon, click on it;

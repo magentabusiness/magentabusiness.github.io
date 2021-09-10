@@ -1,5 +1,5 @@
 
-ThingsBoard Edge uses PostgreSQL database as a local storage.
+IoT Hub Edge uses PostgreSQL database as a local storage.
 
 {% include templates/install/postgres-install-rhel.md %}
 

@@ -143,7 +143,7 @@ void InitLWiFi()
 void reconnect() {
   // Loop until we're reconnected
   while (!client.connected()) {
-    Serial.print("Connecting to ThingsBoard node ...");
+    Serial.print("Connecting toIoT Hub node ...");
     // Attempt to connect (clientId, username, password)
     if ( client.connect("LinkIt One Device", TOKEN, NULL) ) {
       Serial.println( "[DONE]" );

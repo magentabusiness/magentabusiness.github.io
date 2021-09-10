@@ -1,6 +1,6 @@
 #include <DHTesp.h>         // DHT for ESP32 library
 #include <WiFi.h>           // WiFi control for ESP32
-#include <ThingsBoard.h>    // ThingsBoard SDK
+#include <ThingsBoard.h>    //IoT Hub SDK
 
 // Helper macro to calculate array size
 #define COUNT_OF(x) ((sizeof(x)/sizeof(0[x])) / ((size_t)(!(sizeof(x) % sizeof(0[x])))))
@@ -10,25 +10,25 @@
 // WiFi password
 #define WIFI_PASSWORD       "WIFI_PASSWORD"
 
-// See https://thingsboard.io/docs/getting-started-guides/helloworld/ 
+// See https://iothub.magenta.at/docs/getting-started-guides/helloworld/ 
 // to understand how to obtain an access token
 #define TOKEN               "TOKEN"
-// ThingsBoard server instance.
-#define THINGSBOARD_SERVER  "demo.thingsboard.io"
+//IoT Hub server instance.
+#define THINGSBOARD_SERVER  "iothub.magenta.at"
 
 // Baud rate for debug serial
 #define SERIAL_DEBUG_BAUD    115200
 
-// Initialize ThingsBoard client
+// InitializeIoT Hub client
 WiFiClient espClient;
-// Initialize ThingsBoard instance
+// InitializeIoT Hub instance
 ThingsBoard tb(espClient);
 // the Wifi radio's status
 int status = WL_IDLE_STATUS;
 
 // Array with LEDs that should be lit up one by one
 uint8_t leds_cycling[] = { 25, 26, 32 };
-// Array with LEDs that should be controlled from ThingsBoard, one by one
+// Array with LEDs that should be controlled fromIoT Hub, one by one
 uint8_t leds_control[] = { 19, 22, 21 };
 
 // DHT object
@@ -154,11 +154,11 @@ void loop() {
     return;
   }
 
-  // Reconnect to ThingsBoard, if needed
+  // Reconnect toIoT Hub, if needed
   if (!tb.connected()) {
     subscribed = false;
 
-    // Connect to the ThingsBoard
+    // Connect to theIoT Hub
     Serial.print("Connecting to: ");
     Serial.print(THINGSBOARD_SERVER);
     Serial.print(" with token ");
@@ -188,8 +188,8 @@ void loop() {
   if (send_passed > send_delay) {
     Serial.println("Sending data...");
 
-    // Uploads new telemetry to ThingsBoard using MQTT. 
-    // See https://thingsboard.io/docs/reference/mqtt-api/#telemetry-upload-api 
+    // Uploads new telemetry toIoT Hub using MQTT. 
+    // See https://iothub.magenta.at/docs/reference/mqtt-api/#telemetry-upload-api 
     // for more details
 
     TempAndHumidity lastValues = dht.getTempAndHumidity();    

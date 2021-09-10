@@ -1,7 +1,7 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: Nettra RTU overview
-description: ThingsBoard IoT Platform hardware samples for Nettra RTU devices.
+description: IoT Hub IoT Platform hardware samples for Nettra RTU devices.
 
 ---
 

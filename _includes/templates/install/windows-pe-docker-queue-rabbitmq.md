@@ -1,7 +1,7 @@
 
 For installing RabbitMQ use this [instruction](https://www.rabbitmq.com/install-windows.html).
 
-Create docker compose file for ThingsBoard queue service:
+Create docker compose file for IoT Hub queue service:
 
 ```text
 docker-compose.yml

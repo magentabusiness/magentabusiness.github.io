@@ -1,10 +1,10 @@
-##### ThingsBoard Cloud server 
+##### IoT Hub server 
 
-To start using ThingsBoard **Edge** you need to have {{currentThingsBoardVersion}} server that supports edge functionality up and running. 
+To start using IoT Hub **Edge** you need to have {{currentIoT HubVersion}} server that supports edge functionality up and running. 
 
-{% if currentThingsBoardVersion == "ThingsBoard Professional Edition" %}
+{% if currentIoT HubVersion == "IoT Hub" %}
 {% include templates/edge/obtain-pe-cloud.md %}
 {% endif %}
-{% if currentThingsBoardVersion == "ThingsBoard Community Edition" %}
+{% if currentIoT HubVersion == "IoT Hub Community Edition" %}
 {% include templates/edge/obtain-ce-cloud.md %}
 {% endif %}

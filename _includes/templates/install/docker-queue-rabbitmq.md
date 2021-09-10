@@ -1,7 +1,7 @@
 
 For installing RabbitMQ use this [instruction](https://www.rabbitmq.com/install-debian.html).
 
-Create docker compose file for ThingsBoard queue service:
+Create docker compose file for IoT Hub queue service:
 
 ```text
 nano docker-compose.yml

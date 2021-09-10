@@ -1,12 +1,12 @@
 ---
-layout: docwithnav
-title: ThingsBoard Documentation
-description: ThingsBoard documentation - learn about the platform and get your IoT projects running on ThingsBoard
+layout: docwithnav-pe
+title: IoT Hub Documentation
+description: IoT Hub documentation - learn about the platform and get your IoT projects running on IoT Hub
 ---
 
-<p>The ThingsBoard documentation can help you set up ThingsBoard, learn about the platform and get your IoT projects running on ThingsBoard.</p>
+<p>The IoT Hub documentation can help you set up IoT Hub, learn about the platform and get your IoT projects running on IoT Hub.</p>
 
-<a style="margin: 10px 10px 10px 0;" href="/docs/getting-started-guides/what-is-thingsboard/" class="button">ThingsBoard Overview</a>
+<a style="margin: 10px 10px 10px 0;" href="/docs/getting-started-guides/what-is-thingsboard/" class="button">IoT Hub Overview</a>
 <a style="margin: 10px;" href="/docs/getting-started-guides/helloworld/" class="button">Getting started</a>
 <a style="margin: 10px;" href="/docs/guides/" class="button">&nbsp;&nbsp;&nbsp;Guides&nbsp;&nbsp;&nbsp;</a>
 
@@ -38,4 +38,4 @@ description: ThingsBoard documentation - learn about the platform and get your I
 
 <h2>Video Tutorials</h2>
 
-<p>The ThingsBoard Youtube <b><a href="https://www.youtube.com/channel/UCDb9fsV-YR4JmnipAMGsVAQ/videos">channel</a></b> contains useful video tutorials that cover various platform features.</p>
+<p>The IoT Hub Youtube <b><a href="https://www.youtube.com/channel/UCDb9fsV-YR4JmnipAMGsVAQ/videos">channel</a></b> contains useful video tutorials that cover various platform features.</p>

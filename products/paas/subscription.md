@@ -2,7 +2,7 @@
 layout: docwithnav-paas
 assignees:
 - ashvayka
-title: ThingsBoard Cloud Subscription plans definition
+title: IoT Hub Subscription plans definition
 description: Features and advantages of subscription payment model
 
 ---
@@ -246,8 +246,8 @@ where "**K**" means 1 thousand, "**M**" means 1 million, "**B**" means 1 billion
 
 ### White-labeling
 
-ThingsBoard web interface allows you to configure your company or product logo and color scheme in 2 minutes with zero coding efforts and no service restart required. 
-See feature [documentation](/docs/user-guide/white-labeling/) for more details. ThingsBoard Cloud extends white-labeling feature with ability to configure own domain name easily. 
+IoT Hub web interface allows you to configure your company or product logo and color scheme in 2 minutes with zero coding efforts and no service restart required. 
+See feature [documentation](/docs/user-guide/white-labeling/) for more details. IoT Hub extends white-labeling feature with ability to configure own domain name easily. 
 See [managing domain](/products/paas/domains/) for more details. 
 
 The white-labeling feature is available for **Prototype** and **Startup** subscription plans. 

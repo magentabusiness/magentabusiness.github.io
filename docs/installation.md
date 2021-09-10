@@ -1,7 +1,7 @@
 ---
-layout: docwithnav
-title: ThingsBoard Installation
-description: ThingsBoard installation instructions for various operation systems and cloud platforms
+layout: docwithnav-pe
+title: IoT Hub Installation
+description: IoT Hub installation instructions for various operation systems and cloud platforms
 notitle: "true"
 ---
 
@@ -10,12 +10,12 @@ notitle: "true"
        <div class="install-hero">
           <div class="container">
             <div class="install-hero-content">
-                <h1>Choose ThingsBoard product</h1>
+                <h1>Choose IoT Hub product</h1>
             </div>
             <div class="cards">
                 <a href="/docs/user-guide/install/installation-options/" class="card thingsboard-ce">
                     <div class="card-title">
-                        <span class="title-text">ThingsBoard<br/>Community Edition</span>
+                        <span class="title-text">IoT Hub<br/>Community Edition</span>
                     </div>
                     <div class="card-img product community-edition-bg"></div>
                     <div class="card-description">
@@ -24,7 +24,7 @@ notitle: "true"
                 </a>
                 <a href="/docs/user-guide/install/pe/installation-options/" class="card thingsboard-pe">
                     <div class="card-title">
-                        <span class="title-text">ThingsBoard<br/>Professional Edition</span>
+                        <span class="title-text">IoT Hub<br/>IoT Hub</span>
                     </div>
                     <div class="card-img product professional-edition-bg"></div>
                     <div class="card-description">  

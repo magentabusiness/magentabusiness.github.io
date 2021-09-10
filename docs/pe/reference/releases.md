@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe
-title: ThingsBoard PE Release Notes
-description: ThingsBoard architecture
+title: IoT Hub Release Notes
+description: IoT Hub architecture
 
 ---
 

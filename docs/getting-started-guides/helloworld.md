@@ -1,13 +1,13 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 assignees:
 - ashvayka
-title: Getting Started with ThingsBoard
-description: Getting started with ThingsBoard open-source IoT platform and simulated IoT devices
+title: Getting Started with IoT Hub
+description: Getting started with IoT Hub open-source IoT platform and simulated IoT devices
 step1:
     0:
         image: /images/helloworld/hello-world-step-1-item-1.png 
-        title: 'Login to your ThingsBoard instance and open the Devices page.'
+        title: 'Login to your IoT Hub instance and open the Devices page.'
     1:
         image: /images/helloworld/hello-world-step-1-item-2.png 
         title: 'Click on the "+" icon in the top right corner of the table and then select "Add new device".'
@@ -248,10 +248,10 @@ mqttWindows:
 
 ## Introduction
 
-The goal of this tutorial is to demonstrate the basic usage of the most popular ThingsBoard features. You will learn how to:
+The goal of this tutorial is to demonstrate the basic usage of the most popular IoT Hub features. You will learn how to:
 
- - Connect devices to ThingsBoard;
- - Push data from devices to ThingsBoard;
+ - Connect devices to IoT Hub;
+ - Push data from devices to IoT Hub;
  - Build real-time end-user dashboards;
  - Define thresholds and trigger alarms;
  - Push notifications about new alarms over email, sms or other systems.
@@ -274,7 +274,7 @@ You may also use:
 ## Step 2. Connect device
 
 To connect the device you need to get the device credentials first. 
-ThingsBoard supports various device credentials. We recommend using default auto-generated credentials which is access token for this guide.
+IoT Hub supports various device credentials. We recommend using default auto-generated credentials which is access token for this guide.
 
 {% include images-gallery.html imageCollection="step2" showListImageTitles="true" %}
 
@@ -358,12 +358,12 @@ Note that the temperature value should be 26 or higher to raise the alarm. Once 
 It is quite easy to configure email or sms notifications for alarms. We recommend reviewing alarm rule [examples](/docs/user-guide/device-profiles/#alarm-rules) 
 and documentation about [alarm notifications](/docs/user-guide/device-profiles/#notifications-about-alarms). 
  
-**Note**: At the moment ThingsBoard supports AWS SNS and Twilio to send SMS. 
+**Note**: At the moment IoT Hub supports AWS SNS and Twilio to send SMS. 
 Both services are non-free and require you to create an account. However, you may integrate with other SMS/EMAIL gateways using [REST API call](/docs/user-guide/rule-engine-2-0/external-nodes/#rest-api-call-node) node.  
 
 ## Step 7. Assign Device and Dashboard to Customer
 
-One of the most important ThingsBoard features is the ability to assign Dashboards to Customers. 
+One of the most important IoT Hub features is the ability to assign Dashboards to Customers. 
 You may assign different devices to different customers. Then, you may create a Dashboard(s) and assign it to multiple customers.
 Each customer user will see his own devices and will not be able to see devices or any other data that belongs to a different customer.
 
@@ -400,7 +400,7 @@ You may optionally configure the dashboard to appear just after user login to th
 
 {% assign currentGuide = "GettingStartedGuides" %}{% include templates/guides-banner.md %}
 
-## ThingsBoard Community Edition education course
+## IoT Hub Community Edition education course
  
  <div id="video">  
      <div id="video_wrapper">
@@ -412,5 +412,5 @@ You may optionally configure the dashboard to appear just after user login to th
 
 ## Your feedback
 
-Don't hesitate to star ThingsBoard on **[github](https://github.com/thingsboard/thingsboard)** to help us spread the word.
+Don't hesitate to star IoT Hub on **[github](https://github.com/thingsboard/thingsboard)** to help us spread the word.
 If you have some questions about this sample - post it on the **[forum](https://groups.google.com/forum/#!forum/thingsboard)**.

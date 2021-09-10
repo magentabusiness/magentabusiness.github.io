@@ -1,10 +1,10 @@
 * TOC
 {:toc}
 
-ThingsBoard allows you to send Remote Procedure Calls (RPC) from server-side applications to devices and vice versa.
+IoT Hub allows you to send Remote Procedure Calls (RPC) from server-side applications to devices and vice versa.
 Basically, this feature allows you to send commands to devices and receive results of commands execution. 
 Similarly, you can execute a request from the device, apply some calculations or other server-side logic on the back-end and send the response back to the device.
-This guide covers ThingsBoard RPC capabilities. After reading this guide, you will get familiar with the following topics:
+This guide covers IoT Hub RPC capabilities. After reading this guide, you will get familiar with the following topics:
 
 - RPC types;
 - Basic RPC use-cases;
@@ -40,7 +40,7 @@ Server-side RPC can be divided into one-way and two-way:
 
 ## Device RPC API
 
-ThingsBoard provides a convenient API to send and receive RPC commands from applications running on the device.
+IoT Hub provides a convenient API to send and receive RPC commands from applications running on the device.
 This API is specific for each supported network protocol.
 You can review API and examples on the corresponding reference page:
 
@@ -50,7 +50,7 @@ You can review API and examples on the corresponding reference page:
 
 ## Server-side RPC API
 
-ThingsBoard provides **System RPC Service** that allows you to send RPC calls from server-side applications to the device.
+IoT Hub provides **System RPC Service** that allows you to send RPC calls from server-side applications to the device.
 In order to send an RPC request you need to execute an HTTP POST request to the following URL:
 
 ```shell
@@ -84,7 +84,7 @@ You can use the following [guide](/docs/{{docsPrefix}}reference/rest-api/#rest-a
 
 ## Persistent RPC
 
-Since version 3.3, ThingsBoard provides the new feature: **Persistent RPC**.
+Since version 3.3, IoT Hub provides the new feature: **Persistent RPC**.
 Unlike basic RPC, Persistent RPC has an increased timeout and the command is stored in the database for configurable amount of time.
 Persistent RPC is extremely useful when your device is in power-saving mode. 
 Power-saving mode (or PSM) is when the device temporary is turning off to save the battery energy.
@@ -94,7 +94,7 @@ In addition, every time you send the Persistent RPC, the response will contain R
 
 #### Persistent RPC Configuration
 
-To configure parameters for sending a Persistent RPC request, first, you need to edit the ThingsBoard configuration file:
+To configure parameters for sending a Persistent RPC request, first, you need to edit the IoT Hub configuration file:
 
 ```
 sudo nano /etc/thingsboard/conf/thingsboard.conf
@@ -140,7 +140,7 @@ RPC states determine steps that happen when you send RPC request. There are five
 
 #### Usage of Persistent RPC
 
-To send the Persistent RPC through ThingsBoard, you need to add RPC Debug Terminal widget to your dashboard. 
+To send the Persistent RPC through IoT Hub, you need to add RPC Debug Terminal widget to your dashboard. 
 How to add RPC Debug Terminal and use this widget, you can read [here](/docs/{{docsPrefix}}reference/lwm2m-api/#rpc-commands).
 Then, follow these steps to test the Persistent RPC:
 

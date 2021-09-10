@@ -1,5 +1,5 @@
 To connect the device you need to get the device credentials first.
-ThingsBoard support different device credentials. We recommend to use default auto-generated credentials which is access token for this guide.
+IoT Hub support different device credentials. We recommend to use default auto-generated credentials which is access token for this guide.
 
 {% include images-gallery.html imageCollection="step31" showListImageTitles="true" %}
 

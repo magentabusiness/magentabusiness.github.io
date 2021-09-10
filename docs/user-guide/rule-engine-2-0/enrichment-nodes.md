@@ -1,5 +1,5 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: Enrichment Nodes
 description: Rule Engine 2.0 Enrichment Nodes
 

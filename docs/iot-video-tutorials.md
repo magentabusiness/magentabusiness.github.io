@@ -1,5 +1,5 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: IoT Video Tutorials
 
 ---
@@ -7,7 +7,7 @@ title: IoT Video Tutorials
 * TOC
 {:toc}
 
-The ThingsBoard Youtube [channel](https://www.youtube.com/channel/UCDb9fsV-YR4JmnipAMGsVAQ/videos) provides useful video tutorials covering various features of the ThingsBoard platform.
+The IoT Hub Youtube [channel](https://www.youtube.com/channel/UCDb9fsV-YR4JmnipAMGsVAQ/videos) provides useful video tutorials covering various features of the IoT Hub platform.
 We recommend to subscribe to this channel in order to receive the latest updates. Some of the video tutorials are listed below.
 Non-video tutorials are available on the [Samples](/docs/samples/) page.
 
@@ -17,7 +17,7 @@ Non-video tutorials are available on the [Samples](/docs/samples/) page.
 
 #### Getting started guide
 
-This video tutorial will give you a brief introduction to the ThingsBoard platform and a hands-on part to help you to get started. 
+This video tutorial will give you a brief introduction to the IoT Hub platform and a hands-on part to help you to get started. 
 
 You will learn how to provision a new Device, collect data using MQTT and visualize it on a real-time dashboard.
 
@@ -45,7 +45,7 @@ You will learn how to:
 </div>
 
 
-#### Device data management using ThingsBoard
+#### Device data management using IoT Hub
 
 This video tutorial will cover the basic operations that can be done with the device attributes to implement practical device management use cases.
 
@@ -79,9 +79,9 @@ You will learn how to:
 
 # Device Connection Demos
 
-#### Temperature upload from ESP8266 and DHT22 using Thingsboard
+#### Temperature upload from ESP8266 and DHT22 using IoT Hub
 
-This video tutorial shows a demo about how to upload the temperature and humidity data from ESP8266 and DHT22 over MQTT using Arduino SDK and Thingsboard.  
+This video tutorial shows a demo about how to upload the temperature and humidity data from ESP8266 and DHT22 over MQTT using Arduino SDK and IoT Hub.  
 
 For more details and source code reference, please refer to the tutorial documentation in the related links. 
 
@@ -91,11 +91,11 @@ For more details and source code reference, please refer to the tutorial documen
         <iframe src="https://www.youtube.com/embed/S8JNPYsdT_M" frameborder="0" allowfullscreen></iframe>
     </div>
 </div><br>
-Related Links: <a href="https://blog.thingsboard.io/2016/12/temperature-upload-over-mqtt-using_21.html">Tutorial Documentation
+Related Links: <a href="https://blog.iothub.magenta.at/2016/12/temperature-upload-over-mqtt-using_21.html">Tutorial Documentation
 
-#### ESP8266 GPIO control using Thingsboard
+#### ESP8266 GPIO control using IoT Hub
 
-This video tutorial showsa demo about how to control ESP8266 GPIO over MQTT using Arduino SDK and Thingsboard 
+This video tutorial showsa demo about how to control ESP8266 GPIO over MQTT using Arduino SDK and IoT Hub 
 
 For more details and source code reference, please refer to the tutorial documentation in the related links. 
 
@@ -105,11 +105,11 @@ For more details and source code reference, please refer to the tutorial documen
         <iframe src="https://www.youtube.com/embed/NGU_MJd7fk8" frameborder="0" allowfullscreen></iframe>
     </div>
 </div><br>
-Related Links: <a href="https://blog.thingsboard.io/2017/01/esp8266-gpio-control-over-mqtt-using.html">Tutorial documentation
+Related Links: <a href="https://blog.iothub.magenta.at/2017/01/esp8266-gpio-control-over-mqtt-using.html">Tutorial documentation
 
-#### Temperature upload from Raspberry Pi and DHT22 using Thingsboard
+#### Temperature upload from Raspberry Pi and DHT22 using IoT Hub
 
-This video tutorial shows a demo about how to upload the temperature and humidity data from Raspberry Pi and DHT22 over MQTT using Python and Thingsboard 
+This video tutorial shows a demo about how to upload the temperature and humidity data from Raspberry Pi and DHT22 over MQTT using Python and IoT Hub 
 
 For more details and source code reference, please refer to the tutorial documentation in the related links. 
 
@@ -119,10 +119,10 @@ For more details and source code reference, please refer to the tutorial documen
         <iframe src="https://www.youtube.com/embed/-26bxb90tt0" frameborder="0" allowfullscreen></iframe>
     </div>
 </div><br>
-Related Links: <a href="https://blog.thingsboard.io/2017/01/temperature-upload-over-mqtt-using.html">Tutorial documentation
+Related Links: <a href="https://blog.iothub.magenta.at/2017/01/temperature-upload-over-mqtt-using.html">Tutorial documentation
 
-#### Raspberry Pi GPIO control using Thingsboard
-This video tutorial shows a demo about how to contro Raspberry Pi GPIO over MQTT using Python and Thingsboard. 
+#### Raspberry Pi GPIO control using IoT Hub
+This video tutorial shows a demo about how to contro Raspberry Pi GPIO over MQTT using Python and IoT Hub. 
 For more details and source code reference, please refer to the tutorial documentation in the related links. 
 
 <br>
@@ -132,9 +132,9 @@ For more details and source code reference, please refer to the tutorial documen
     </div>
 </div><br>
 Related Links:<br>
-<a href="https://blog.thingsboard.io/2016/12/raspberry-pi-gpio-control-over-mqtt.html">Raspberry Pi GPIO control over MQTT using Python and Thingsboard Tutorial documentation
+<a href="https://blog.iothub.magenta.at/2016/12/raspberry-pi-gpio-control-over-mqtt.html">Raspberry Pi GPIO control over MQTT using Python and IoT Hub Tutorial documentation
 <br>
-<a href="https://blog.thingsboard.io/2017/01/raspberry-pi-gpio-control-using-android.html">Raspberry Pi GPIO control using Android Things and Thingsboard tutorial documentation
+<a href="https://blog.iothub.magenta.at/2017/01/raspberry-pi-gpio-control-using-android.html">Raspberry Pi GPIO control using Android Things and IoT Hub tutorial documentation
 
 
 # Visualization
@@ -244,10 +244,10 @@ You will learn how to:
     </div>
 </div><br>
 
-# ThingsBoard Professional Edition (PE) Features 
+# IoT Hub  Features 
 
-#### ThingsBoard PE: White Labeling Guide
-ThingsBoard Professional Edition web interface allows you to configure your company or product logo and color scheme in 2 minutes with zero coding efforts and no service restart required. 
+#### IoT Hub: White Labeling Guide
+IoT Hub web interface allows you to configure your company or product logo and color scheme in 2 minutes with zero coding efforts and no service restart required. 
 
 In this video tutorial, you will learn the configuration options that are available:
 
@@ -263,8 +263,8 @@ In this video tutorial, you will learn the configuration options that are availa
 </div><br>
 
 
-#### ThingsBoard PE: Entity Groups Configuration Guide
-ThingsBoard Professional Editions allows you to configure multiple custom Device & Asset Groups. Each entity (device or asset) may belong to multiple groups at the same time. The special group “All” always contains all devices that belong to a specific tenant account. This video tutorial will show you how to configure entity groups
+#### IoT Hub: Entity Groups Configuration Guide
+IoT Hubs allows you to configure multiple custom Device & Asset Groups. Each entity (device or asset) may belong to multiple groups at the same time. The special group “All” always contains all devices that belong to a specific tenant account. This video tutorial will show you how to configure entity groups
 
 You will learn how to:
 
@@ -282,8 +282,8 @@ You will learn how to:
 Related Links: <a href="https://gist.github.com/Terny22/987074fc7e43ee75c83973363436c1d0"> Thermostat emulator
 <br>
 
-#### ThingsBoard PE: CSV/XLS data export
-In this video tutorial, you will see how ThingsBoard Professional Edition allows you to export data from widgets to CSV or XLS. This functionality is available almost in any widget if it is applicable to the widget type. The list of columns in the exported data set corresponds to the list of parameters you configure in the data set configuration. 
+#### IoT Hub: CSV/XLS data export
+In this video tutorial, you will see how IoT Hub allows you to export data from widgets to CSV or XLS. This functionality is available almost in any widget if it is applicable to the widget type. The list of columns in the exported data set corresponds to the list of parameters you configure in the data set configuration. 
 
 You will learn how to:
 
@@ -297,9 +297,9 @@ You will learn how to:
 </div><br>
 
 
-#### ThingsBoard PE: AWS IoT Integration Configuration Guide
+#### IoT Hub: AWS IoT Integration Configuration Guide
 
-AWS IoT Integration allows to stream data from AWS IoT Backend to ThingsBoard Professional Edition and converts device payloads to the ThingsBoard format. This video tutorial will show you how to configure AWS IoT Integration.
+AWS IoT Integration allows to stream data from AWS IoT Backend to IoT Hub and converts device payloads to the IoT Hub format. This video tutorial will show you how to configure AWS IoT Integration.
 
 You will learn how to:
 
@@ -317,11 +317,11 @@ You will learn how to:
 ## Integration
 
 
-####  ThingsBoard PE: Data Converters Configuration Guide
+####  IoT Hub: Data Converters Configuration Guide
 
-Data Converters are a part of the Platform Integration feature. ThingsBoard uses two types of data converters:
+Data Converters are a part of the Platform Integration feature. IoT Hub uses two types of data converters:
 
- - Uplink data converters: to parse the payload of the incoming message and transform it to the same format used by ThingsBoard. 
+ - Uplink data converters: to parse the payload of the incoming message and transform it to the same format used by IoT Hub. 
  - Downlink data converters: to transform the incoming rule engine message and its metadata to the format that is used by the corresponding Integration.
 
 This video tutorial will show you how to configure data converters.
@@ -339,8 +339,8 @@ You will learn how to:
 </div><br>
 
 
-#### ThingsBoard PE: SigFox Integration Configuration Guide
-Sigfox Integration allows to stream data from Sigfox Backend to ThingsBoard Professional Edition and converts binary device payloads to the ThingsBoard format. This video tutorial will show you how to configure SigFox Integration
+#### IoT Hub: SigFox Integration Configuration Guide
+Sigfox Integration allows to stream data from Sigfox Backend to IoT Hub and converts binary device payloads to the IoT Hub format. This video tutorial will show you how to configure SigFox Integration
 
 
 You will learn how to:
@@ -354,12 +354,12 @@ You will learn how to:
     </div>
 </div><br>
 
-#### ThingsBoard PE: HTTP Integration Configuration Guide 
-ThingsBoard Professional Edition HTTP Integration allows to convert existing protocols and payload formats to ThingsBoard message format and it is useful in several deployment scenarios, such as: 
+#### IoT Hub: HTTP Integration Configuration Guide 
+IoT Hub HTTP Integration allows to convert existing protocols and payload formats to IoT Hub message format and it is useful in several deployment scenarios, such as: 
 
  - stream device and/or asset data from an external system, IoT platform or connectivity provider backend.
  - stream device and/or asset data from your custom application running in the cloud.
- - connect the existing device that uses a custom HTTP-based protocol to ThingsBoard. 
+ - connect the existing device that uses a custom HTTP-based protocol to IoT Hub. 
 
 This video tutorial will show you how to configure HTTP Integration.
 
@@ -374,12 +374,12 @@ You will learn how to:
     </div>
 </div><br>
 
-#### ThingsBoard PE: IBM Watson IoT Integration Configuration Guide 
-IBM Watson IoT Integration allows to stream data from IBM Watson IoT to ThingsBoard Professional Edition and converts device payloads to the ThingsBoard format. This video tutorial will show you how to configure IBM Wastson Integration
+#### IoT Hub: IBM Watson IoT Integration Configuration Guide 
+IBM Watson IoT Integration allows to stream data from IBM Watson IoT to IoT Hub and converts device payloads to the IoT Hub format. This video tutorial will show you how to configure IBM Wastson Integration
 
 You will learn how to:
 
- - prepare the IBM Watson platform for integration with ThingsBoard 
+ - prepare the IBM Watson platform for integration with IoT Hub 
  - add IBM Watson Integration and set up security.
  - use converters and the decoder function.
 
@@ -389,12 +389,12 @@ You will learn how to:
     </div>
 </div><br>
 
-#### ThingsBoard PE: Azure Event Hub Integration Configuration Guide
-Azure Event Hub Integration allows to stream data from Azure Event Hub to ThingsBoard Professional Edition and converts device payloads to the ThingsBoard format. This video tutorial will show you how to configure Azure Event Hub Integration.
+#### IoT Hub: Azure Event Hub Integration Configuration Guide
+Azure Event Hub Integration allows to stream data from Azure Event Hub to IoT Hub and converts device payloads to the IoT Hub format. This video tutorial will show you how to configure Azure Event Hub Integration.
 
 You will learn how to:
 
- - prepare the Azure Event Hub platform for integration with ThingsBoard 
+ - prepare the Azure Event Hub platform for integration with IoT Hub 
  - add Azure Event Hub Integration and enable security.
  - use converters and the decoder function.
 
@@ -405,12 +405,12 @@ You will learn how to:
 </div><br>
 
 
-#### ThingsBoard PE: MQTT Integration Configuration Guide
-ThingsBoard Professional Edition MQTT Integration allows to convert existing protocols and payload formats to ThingsBoard message format and it is useful in several deployment scenarios, such as: 
+#### IoT Hub: MQTT Integration Configuration Guide
+IoT Hub MQTT Integration allows to convert existing protocols and payload formats to IoT Hub message format and it is useful in several deployment scenarios, such as: 
 
 - stream device and/or asset data from an external system, IoT platform or connectivity provider backend.
 - stream device and/or asset data from your custom application running in the cloud.
-- connect the existing device that uses a custom MQTT-based protocol to ThingsBoard.
+- connect the existing device that uses a custom MQTT-based protocol to IoT Hub.
 
 This video tutorial will show you how to configure MQTT Integration.
 

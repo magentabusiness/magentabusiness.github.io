@@ -1,6 +1,6 @@
 | **Parameter**             | **Example value**                            | **Description**                                                                |
 |:-|:-
-| *deviceName*              | **DEVICE_NAME**                              | Device name in ThingsBoard.                                                    |
+| *deviceName*              | **DEVICE_NAME**                              | Device name in IoT Hub.                                                    |
 | *provisionDeviceKey*      | **PUT_PROVISION_KEY_HERE**                   | Provisioning device key, you should take it from configured device profile.    |
 | *provisionDeviceSecret*   | **PUT_PROVISION_SECRET_HERE**                | Provisioning device secret, you should take it from configured device profile. | 
 |-
@@ -56,11 +56,11 @@ from json import dumps
 def collect_required_data():
     config = {}
     print("\n\n", "="*80, sep="")
-    print(" "*10, "\033[1m\033[94mThingsBoard device provisioning without authorization example script. HTTP API\033[0m", sep="")
+    print(" "*10, "\033[1m\033[94mIoT Hub device provisioning without authorization example script. HTTP API\033[0m", sep="")
     print("="*80, "\n\n", sep="")
-    host = input("Please write your ThingsBoard \033[93mhost\033[0m or leave it blank to use default (https://thingsboard.cloud): ")
+    host = input("Please write your IoT Hub \033[93mhost\033[0m or leave it blank to use default (https://thingsboard.cloud): ")
     config["host"] = host if host else "https://thingsboard.cloud"
-    port = input("Please write your ThingsBoard \033[93mHTTP port\033[0m or leave it blank to use default (80): ")
+    port = input("Please write your IoT Hub \033[93mHTTP port\033[0m or leave it blank to use default (80): ")
     config["port"] = int(port) if port else 80
     config["provision_device_key"] = input("Please write \033[93mprovision device key\033[0m: ")
     config["provision_device_secret"] = input("Please write \033[93mprovision device secret\033[0m: ")
@@ -71,7 +71,7 @@ def collect_required_data():
     return config
 
 
-# Example for message to ThingsBoard
+# Example for message to IoT Hub
 to_publish = {
   "stringKey": "value1",
   "booleanKey": True,
@@ -88,8 +88,8 @@ if __name__ == '__main__':
 
     config = collect_required_data()
 
-    THINGSBOARD_HOST = config["host"]  # ThingsBoard instance host
-    THINGSBOARD_PORT = config["port"]  # ThingsBoard instance MQTT port
+    THINGSBOARD_HOST = config["host"]  # IoT Hub instance host
+    THINGSBOARD_PORT = config["port"]  # IoT Hub instance MQTT port
 
     PROVISION_REQUEST = {"provisionDeviceKey": config["provision_device_key"],  # Provision device key, replace this value with your value from device profile.
                          "provisionDeviceSecret": config["provision_device_secret"],  # Provision device secret, replace this value with your value from device profile.
@@ -103,7 +103,7 @@ if __name__ == '__main__':
     received_token = decoded_response.get("credentialsValue")
     if received_token is not None:
         response = post('%s:%i/api/v1/%s/telemetry' % (THINGSBOARD_HOST, THINGSBOARD_PORT, received_token,), dumps(to_publish))
-        print("[THINGSBOARD CLIENT] Response code from Thingsboard.")
+        print("[THINGSBOARD CLIENT] Response code from IoT Hub.")
         print(response.status_code)
     else:
         print("Failed to get access token from response.")

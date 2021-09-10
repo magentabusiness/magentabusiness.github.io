@@ -1,19 +1,19 @@
 var mqtt = require('mqtt');
 
 // Don't forget to update accessToken constant with your device access token
-const thingsboardHost = "demo.thingsboard.io";
+const thingsboardHost = "iothub.magenta.at";
 const ACCESS_TOKEN = "Z61K03FAGSziW9b0nKsm";
 const minDirection = 0, maxDirection = 359;
 
 
-// Initialization of mqtt client using Thingsboard host and device access token
+// Initialization of mqtt client using IoT Hub host and device access token
 console.log('Connecting to: %s using access token: %s', thingsboardHost, ACCESS_TOKEN);
 var client  = mqtt.connect('mqtt://'+ thingsboardHost, { username: ACCESS_TOKEN });
 
 // Initialization of wind direction data with random values
  var  windDirection = minDirection + (maxDirection - minDirection) * Math.random();
 
-// Triggers when client is successfully connected to the Thingsboard server
+// Triggers when client is successfully connected to the IoT Hub server
 client.on('connect', function () {
     console.log('Client connected!');
     // Schedules telemetry data upload once per five second

@@ -1,6 +1,6 @@
 {% capture postgresql-info %}
-ThingsBoard team recommends to use PostgreSQL for development and production environments with reasonable load (< 5000 msg/sec).
-Many cloud vendors support managed PostgreSQL servers which is a cost-effective solution for most of ThingsBoard instances.
+IoT Hub team recommends to use PostgreSQL for development and production environments with reasonable load (< 5000 msg/sec).
+Many cloud vendors support managed PostgreSQL servers which is a cost-effective solution for most of IoT Hub instances.
 {% endcapture %}
 {% include templates/info-banner.md content=postgresql-info %}
 
@@ -10,9 +10,9 @@ Many cloud vendors support managed PostgreSQL servers which is a cost-effective 
 
 {% include templates/install/create-tb-db.md %}
 
-##### ThingsBoard Configuration
+##### IoT Hub Configuration
 
-Edit ThingsBoard configuration file 
+Edit IoT Hub configuration file 
 
 ```bash 
 sudo nano /etc/thingsboard/conf/thingsboard.conf

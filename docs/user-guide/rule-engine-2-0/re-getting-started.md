@@ -1,5 +1,5 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: Getting Started with Rule Engine
 description: Getting Started with Rule Engine
 

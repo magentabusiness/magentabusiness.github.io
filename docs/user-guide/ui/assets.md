@@ -1,9 +1,9 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 assignees:
 - ikulikov
 title: Assets
-description: Thingsboard IoT Asset management
+description: IoT Hub IoT Asset management
 
 ---
 

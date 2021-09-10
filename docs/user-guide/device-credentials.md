@@ -1,9 +1,9 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 assignees:
 - vsosliuk
 title: Device authentication options
-description: ThingsBoard IoT Device authentication options.
+description: IoT Hub IoT Device authentication options.
 
 ---
 

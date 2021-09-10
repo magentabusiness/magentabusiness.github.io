@@ -8,12 +8,12 @@ Json converter is default converter, it looks for deviceName, deviceType, attrib
 | timeout                     | **60000**                 | Timeout for triggering "Device Disconnected" event                                                                                        |
 | attributes                  |                           | This subsection contains parameters of the incoming message, that will be interpreted as attributes for the device.                       |
 | ... type                    | **string**                | Type of incoming data for a current attribute.                                                                                            |
-| ... key                     | **serialNumber**          | Attribute name, that will sends to ThingsBoard instance.                                                                                  |
-| ... value                   | **${serial}**             | Simple JSON expression, uses for looking value in the incoming message, that will send to ThingsBoard instance as value of key parameter. |
+| ... key                     | **serialNumber**          | Attribute name, that will sends to IoT Hub instance.                                                                                  |
+| ... value                   | **${serial}**             | Simple JSON expression, uses for looking value in the incoming message, that will send to IoT Hub instance as value of key parameter. |
 | timeseries                  |                           | This subsection contains parameters of the incoming message, that will be interpreted as telemetry for the device.                        |
 | ... type                    | **string**                | Type of incoming data for a current telemetry.                                                                                            |
-| ... key                     | **Maintainer**            | Telemetry name, that will sends to ThingsBoard instance.                                                                                  |
-| ... value                   | **${Developer}**          | Simple JSON expression, uses for looking value in the incoming message, that will send to ThingsBoard instance as value of key parameter. |
+| ... key                     | **Maintainer**            | Telemetry name, that will sends to IoT Hub instance.                                                                                  |
+| ... value                   | **${Developer}**          | Simple JSON expression, uses for looking value in the incoming message, that will send to IoT Hub instance as value of key parameter. |
 |--- 
 
 {% capture difference %}

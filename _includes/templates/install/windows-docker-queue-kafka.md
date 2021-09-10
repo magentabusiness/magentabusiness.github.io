@@ -2,7 +2,7 @@
 
 [Apache Kafka](https://kafka.apache.org/) is an open-source stream-processing software platform.
 
-Create docker compose file for ThingsBoard queue service:
+Create docker compose file for IoT Hub queue service:
 
 ```text
 docker-compose.yml

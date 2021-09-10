@@ -6,7 +6,7 @@ description:
 
 {% assign docsPrefix = "paas/" %}
 
-ThingsBoard web interface allows you to configure your company or product logo and color scheme in 2 minutes with zero coding efforts and no service restart required.
+IoT Hub web interface allows you to configure your company or product logo and color scheme in 2 minutes with zero coding efforts and no service restart required.
 The following configuration options are available:
 
 - Configure color scheme, icon and favicon on System Administrator level;

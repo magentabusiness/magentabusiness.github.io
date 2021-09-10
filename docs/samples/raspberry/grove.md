@@ -1,7 +1,7 @@
 ---
-layout: docwithnav
-title: Connecting Raspberry Pi with Grove Base Hat to ThingsBoard
-description: ThingsBoard IoT Platform sample for Raspberry Pi Grove Base Hat connecting over MQTT
+layout: docwithnav-pe
+title: Connecting Raspberry Pi with Grove Base Hat to IoT Hub
+description: IoT Hub IoT Platform sample for Raspberry Pi Grove Base Hat connecting over MQTT
 
 ---
 
@@ -11,14 +11,14 @@ description: ThingsBoard IoT Platform sample for Raspberry Pi Grove Base Hat con
 
 ## Introduction 
 
-ThingsBoard Community Edition is an open-source server-side platform that allows you to monitor and control IoT devices. 
+IoT Hub Community Edition is an open-source server-side platform that allows you to monitor and control IoT devices. 
 It is free for both personal and commercial usage and you can deploy it anywhere. 
 If you are not familiar with the platform yet, we recommend to review [what is thingsboard page](/docs/getting-started-guides/what-is-thingsboard/) and [getting started guide](/docs/getting-started-guides/helloworld/) at first and then proceed with this tutorial.
 Within this guide we use [thingsboard.cloud](https://thingsboard.cloud).
 
-This sample application will allow you to collect information from sensors and control Servo, Led of your Raspberry Pi device with Grove Base Hat PCB using ThingsBoard web UI. The purpose of this application is to demonstrate ThingsBoard and Grove Base Hat PCB integrations.
+This sample application will allow you to collect information from sensors and control Servo, Led of your Raspberry Pi device with Grove Base Hat PCB using IoT Hub web UI. The purpose of this application is to demonstrate IoT Hub and Grove Base Hat PCB integrations.
 
-Raspberry Pi will use simple application written in Python for connecting to ThingsBoard server via MQTT, sending information from sensors and listening to RPC commands. ThingsBoard built-in dashboards will be used for data visualizing and controlling Servo and Led as well.
+Raspberry Pi will use simple application written in Python for connecting to IoT Hub server via MQTT, sending information from sensors and listening to RPC commands. IoT Hub built-in dashboards will be used for data visualizing and controlling Servo and Led as well.
 
 At the end we will get the following result:
 <br>
@@ -38,7 +38,7 @@ At the end we will get the following result:
 
 ## Prerequisites
 
-For the purpose of this tutorial you need ThingsBoard server up and running. Within this guide we use [thingsboard.cloud](https://thingsboard.cloud)
+For the purpose of this tutorial you need IoT Hub server up and running. Within this guide we use [thingsboard.cloud](https://thingsboard.cloud)
 
 
 Hardware and pinouts:
@@ -86,7 +86,7 @@ By first we need to configure the Raspberry Pi. Please follow this [article](htt
 
 After the configuration we need to install libraries used in the script to the Raspberry Pi.
 
-The following command will install thingsboard python client sdk, it is used for communication with ThingsBoard server: 
+The following command will install thingsboard python client sdk, it is used for communication with IoT Hub server: 
 
 
 ```bash
@@ -120,9 +120,9 @@ sudo python3 ./Seeed_Python_DHT/setup.py install
 
 ## Application source code
 
-Our application consists of a single python script that is well documented. You will need to modify THINGSBOARD_HOST constant to match your ThingsBoard server installation IP address or hostname.
+Our application consists of a single python script that is well documented. You will need to modify THINGSBOARD_HOST constant to match your IoT Hub server installation IP address or hostname.
 
-Also we need say to ThingsBoard that we want to connect this device and get the device ACCESS_TOKEN, which will be used in the script.
+Also we need say to IoT Hub that we want to connect this device and get the device ACCESS_TOKEN, which will be used in the script.
 <b>Log in to your environment</b> — <b>Device groups</b> — <b>Add device group</b>  — <b>Add new device</b> (e.g. Device 1 with type grove) — <b>Open device details</b> — <b>Copy access token</b>.
 
 
@@ -200,7 +200,7 @@ def main():
         elif request_body['method'] == 'getServoAngle':
             client.send_rpc_reply(request_id, servo_angle)
 
-    # Connecting to ThingsBoard
+    # Connecting to IoT Hub
     client = TBDeviceMqttClient(thingsboard_server, access_token)
     client.set_server_side_rpc_request_handler(on_server_side_rpc_request)
     client.connect()
@@ -251,7 +251,7 @@ def main():
 
             log.debug('light: {}'.format(light_sensor.light))
 
-            # Formatting the data for sending to ThingsBoard
+            # Formatting the data for sending to IoT Hub
             telemetry = {'distance': distance,
                          'temperature': temperature,
                          'humidity': humidity,
@@ -277,7 +277,7 @@ if __name__ == '__main__':
 
 ## Data Visualization and Control
 
-To configure dashboard you should login into ThingsBoard environment. 
+To configure dashboard you should login into IoT Hub environment. 
 
 To proceed with this step, please download a [grove_seeed_studio.json](/docs/samples/raspberry/resources/grove_seeed_studio.json) file, which contains preconfigured dashboard for this script.
 Once logged in, open Dashboards, click on the plus button in the bottom right corner of the screen and select the "Import dashboard" icon. Select recently downloaded file of dashboard configuration. Now you must edit the alias of Grove widget you should do this by pressing on the pen icon. Select the Filter type parameter as "Single entity", set Type as "Device" and from the list of devices  - select your GROVE device.
@@ -305,7 +305,7 @@ Also from dashboard you can control the servo (by rotating the knob control with
 
 ## See Also
 
-Browse other [samples](/docs/samples) or explore guides related to main ThingsBoard features:
+Browse other [samples](/docs/samples) or explore guides related to main IoT Hub features:
 
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
  - [Telemetry data collection](/docs/user-guide/telemetry/) - how to collect telemetry data.

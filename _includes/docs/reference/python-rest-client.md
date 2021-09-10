@@ -4,12 +4,12 @@
  
 ## Python REST Client
 
-The ThingsBoard Python REST API Client helps you interact with ThingsBoard REST API from your Python script.
-With Python Rest Client you can programmatically create assets, devices, customers, users and other entities and their relations in ThingsBoard.
+The IoT Hub Python REST API Client helps you interact with IoT Hub REST API from your Python script.
+With Python Rest Client you can programmatically create assets, devices, customers, users and other entities and their relations in IoT Hub.
 
 Source code of the Python REST API Client you can find [here](https://github.com/thingsboard/python_tb_rest_client).
 
-In order to install the ThingsBoard Python REST client, you should use the following command:
+In order to install the IoT Hub Python REST client, you should use the following command:
 
 ```bash
 pip3 install tb-rest-client
@@ -32,7 +32,7 @@ logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(levelname)s - %(module)s - %(lineno)d - %(message)s',
                     datefmt='%Y-%m-%d %H:%M:%S')
 
-# ThingsBoard REST API URL
+# IoT Hub REST API URL
 url = "http://localhost:8080"
 # Default Tenant Administrator credentials
 username = "tenant@thingsboard.org"
@@ -67,4 +67,4 @@ with RestClientCE(base_url=url) as rest_client:
 
 ```
 
-The Professional Edition Python REST Client example you can find [here](/docs/pe/reference/python-rest-client/#professional-edition-python-rest-client-example).
+The IoT Hub Python REST Client example you can find [here](/docs/pe/reference/python-rest-client/#professional-edition-python-rest-client-example).

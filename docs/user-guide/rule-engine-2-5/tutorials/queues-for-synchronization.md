@@ -1,5 +1,5 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: Using queues for synchronization
 description: Using queues for synchronization
 

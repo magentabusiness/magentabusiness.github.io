@@ -10,7 +10,7 @@ View last logs for the desired pod:
 kubectl logs -f POD_NAME
 ```
 
-To view ThingsBoard node logs use command:
+To view IoT Hub node logs use command:
 
 ```bash
 kubectl logs -f tb-node-0
@@ -31,7 +31,7 @@ kubectl logs -f tb-node-1 > tb-node-1.log
 ```
 
 
-**Note:** you can always log into the ThingsBoard container and view logs there:
+**Note:** you can always log into the IoT Hub container and view logs there:
 
 ```bash
 kubectl exec -it tb-node-0 -- bash

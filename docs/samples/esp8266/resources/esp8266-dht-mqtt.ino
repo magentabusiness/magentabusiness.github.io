@@ -61,7 +61,7 @@ void getAndSendTemperatureAndHumidityData()
     return;
   }
 
-  Serial.println("Sending data to ThingsBoard:");
+  Serial.println("Sending data toIoT Hub:");
   Serial.print("Humidity: ");
   Serial.print(humidity);
   Serial.print(" %\t");
@@ -99,7 +99,7 @@ void reconnect() {
       }
       Serial.println("Connected to AP");
     }
-    Serial.print("Connecting to ThingsBoard node ...");
+    Serial.print("Connecting toIoT Hub node ...");
     if ( tb.connect(thingsboardServer, TOKEN) ) {
       Serial.println( "[DONE]" );
     } else {

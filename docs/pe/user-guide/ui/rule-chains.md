@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - vparomskiy
 title: Rule Chains
-description: ThingsBoard Rule Chains management
+description: IoT Hub Rule Chains management
 
 ---
 

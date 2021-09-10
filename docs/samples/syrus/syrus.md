@@ -1,6 +1,6 @@
 ---
-layout: docwithnav
-title: Integration Syrus 4 IoT Telematics Gateway - Thingsboard
+layout: docwithnav-pe
+title: Integration Syrus 4 IoT Telematics Gateway - IoT Hub
 description: Syrus 4 IoT Telematics Gateway integration guide
 hidetoc: "true"
 
@@ -13,19 +13,19 @@ hidetoc: "true"
 
 ## Description
 
-Here&#39;s a detailed integration example between Syrus 4G IoT Telematics Gateway with Thingsboard Platform over MQTT connection.
+Here&#39;s a detailed integration example between Syrus 4G IoT Telematics Gateway with IoT Hub Platform over MQTT connection.
 
 ## Getting Started
 
 [Syrus 4G IoT Telematics Gateway.](https://syrus.pegasusgateway.com/syrdocs/syrus4/getting-started/)
 
-[Thingsboard Sign Up](https://demo.thingsboard.io/signup)
+[IoT Hub Sign Up](https://iothub.magenta.at/signup)
 
-## Provisioning the device for Thingsboard
+## Provisioning the device for IoT Hub
 
 For simplicity, we will provision device manually using the UI.
 
-### 1. Login to your ThingsBoard instance and open Devices page.
+### 1. Login to your IoT Hub instance and open Devices page.
 
 ![image](/images/samples/syrus/device_page.png)
 
@@ -43,7 +43,7 @@ Now your device should be listed first, since the table sorts the devices by usi
 
 ### 2. Token creation
 
-To connect the device you need to get the device credentials first. ThingsBoard supports different device credentials. We recommend using default auto-generated credentials which is an access token for this guide.
+To connect the device you need to get the device credentials first. IoT Hub supports different device credentials. We recommend using default auto-generated credentials which is an access token for this guide.
 
 Click on the device row in the table to open device details
 
@@ -94,11 +94,11 @@ here is an example:
 
 ![image](/images/samples/syrus/example.png)
 
-Replace [YOUR\_TOKEN] with the copied access token you got from Thingsboard when you created the device.
+Replace [YOUR\_TOKEN] with the copied access token you got from IoT Hub when you created the device.
 
 More information about: [https://syrus.pegasusgateway.com/syrdocs/syrus4/syruslang/#destinations](https://syrus.pegasusgateway.com/syrdocs/syrus4/syruslang/#destinations)
 
-The second file contains all the events that will be sent to the Thingsboard over MQTT, here is an example, this will send Ignition On/Off events and track points every minute:
+The second file contains all the events that will be sent to the IoT Hub over MQTT, here is an example, this will send Ignition On/Off events and track points every minute:
 
 {% highlight bash %}
 _####### ###### ####### ###### #######_
@@ -182,7 +182,7 @@ Finally, go back to the Information tab and click the Start button:
 
 ![image](/images/samples/syrus/information_tab.png)
 
-## Check your data in Thingsboard demo account
+## Check your data in IoT Hub demo account
 
 The reported variables are automatically created according to the fieldset configuration.
 
@@ -190,6 +190,6 @@ Go to Devices, choose Syrus 4 and click &quot;Latest telemetry&quot;
 
 ![image](/images/samples/syrus/latest_telemetry.png)
 
-Now you can use Thingsboard&#39;s tools to design your own dashboard with Syrus 4G data:
+Now you can use IoT Hub&#39;s tools to design your own dashboard with Syrus 4G data:
 
 ![image](/images/samples/syrus/dashboard.png)

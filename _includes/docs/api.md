@@ -1,5 +1,5 @@
 
-ThingsBoard API consists of two main parts: device API and server-side API.
+IoT Hub API consists of two main parts: device API and server-side API.
 
 Device API is grouped by supported communication protocols:
 
@@ -8,7 +8,7 @@ Device API is grouped by supported communication protocols:
 * [**HTTP API**](/docs/{{docsPrefix}}reference/http-api)
 * [**LWM2M API**](/docs/{{docsPrefix}}reference/lwm2m-api)
 
-[**Gateway MQTT API**](/docs/{{docsPrefix}}reference/gateway-mqtt-api) allows you to connect **existing** devices to the platform using **[ThingsBoard Gateway](/docs/iot-gateway/what-is-iot-gateway/)**
+[**Gateway MQTT API**](/docs/{{docsPrefix}}reference/gateway-mqtt-api) allows you to connect **existing** devices to the platform using **[IoT Hub Gateway](/docs/iot-gateway/what-is-iot-gateway/)**
 or implement your own gateway.
 
 Server-side API is available as REST API:

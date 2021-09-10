@@ -1,6 +1,6 @@
 {% include templates/install/queue-aws-sqs-config.md %}
 
-Create docker compose file for ThingsBoard queue service:
+Create docker compose file for IoT Hub queue service:
 
 ```text
 docker-compose.yml

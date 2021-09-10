@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - ashvayka
 title: Working with IoT dashboards
-description: IoT dashboards using ThingsBoard
+description: IoT dashboards using IoT Hub
 redirect_from: "/docs/pe/user-guide/ui/dashboards/"
 creating-dash:
     0:

@@ -1,7 +1,7 @@
 ---
-layout: docwithnav
-title: ThingsBoard architecture
-description: ThingsBoard architecture
+layout: docwithnav-pe
+title: IoT Hub architecture
+description: IoT Hub architecture
 
 ---
 

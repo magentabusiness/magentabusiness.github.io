@@ -3,7 +3,7 @@ layout: docwithnav-paas
 assignees:
 - ashvayka
 title: Working with IoT dashboards
-description: IoT dashboards using ThingsBoard
+description: IoT dashboards using IoT Hub
 redirect_from: "/docs/paas/user-guide/ui/dashboards/"
 creating-dash:
     0:

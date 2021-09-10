@@ -3,7 +3,7 @@ layout: docwithnav-paas
 assignees:
 - ashvayka
 title: Managing domain
-description: Domain managing through ThingsBoard Cloud
+description: Domain managing through IoT Hub
 registerDomain:
     0:
         image: /images/cloud/register-domain-step-1.png
@@ -22,7 +22,7 @@ registerDomain:
         title: 'Step 5. After registering CNAME record, click <span style="background-color: #fff; color: #000; padding: 0 10px;"><b>I&#39;ve added CNAME records</b></span> button. Domain verification and certificate provisioning will start at this time. Be patient, this process can take a while.'
     5:
         image: /images/cloud/register-domain-step-6.png
-        title: 'Step 6. If all went well, dialog will be closed, and you will see your domain name on the <span style="background-color: #fff; color: #000; padding: 0 10px;"><b>Domain</b></span> page. Now you can use your domain name to access <b>ThingsBoard Cloud</b> Web UI and services.'
+        title: 'Step 6. If all went well, dialog will be closed, and you will see your domain name on the <span style="background-color: #fff; color: #000; padding: 0 10px;"><b>Domain</b></span> page. Now you can use your domain name to access <b>IoT Hub</b> Web UI and services.'
     6:
         image: /images/cloud/register-domain-step-7.png
         title: 'Step 7. In case of any issues during domain provisioning you will see the dialog prompt with error details. In this case you should try to correct the issue (ex. correct invalid entered CNAME record) otherwise you can contact <a href="/docs/contact-us/" target="_blank">support</a>.'
@@ -32,7 +32,7 @@ domainDetails:
         title: 'To view a registered domain details click <span style="background-color: #fff; color: #000; padding: 0 10px;"><b>Domain details</b></span> button on the <span style="background-color: #fff; color: #000; padding: 0 10px;"><b>Domain</b></span> page.'
     1:
         image: /images/cloud/domain-details-step-2.png
-        title: '<span style="background-color: #fff; color: #000; padding: 0 10px;"><b>ThingsBoard Cloud</b></span> will automatically renew the certificate earlier than 30 days before it expires, no action is required from your part unless you change or delete the domain CNAME record.'
+        title: '<span style="background-color: #fff; color: #000; padding: 0 10px;"><b>IoT Hub</b></span> will automatically renew the certificate earlier than 30 days before it expires, no action is required from your part unless you change or delete the domain CNAME record.'
 deleteDomain:
     0:
         image: /images/cloud/delete-domain-step-1.png
@@ -45,10 +45,10 @@ deleteDomain:
 * TOC
 {:toc}
 
-The **ThingsBoard Cloud** allows registering your custom domain.
-When you register your domain, **ThingsBoard Cloud** will automatically request SSL certificate from [Let's Encrypt](https://letsencrypt.org/) for it and will manage further certificate renewals.
-After domain registration, you will be able to access **ThingsBoard Cloud** Web UI via your domain name using secure HTTPS connection.
-Like Web UI all other **ThingsBoard Cloud** services such as MQTT/HTTP/CoAP transports or HTTP integrations will be accessible via your custom domain name.
+The **IoT Hub** allows registering your custom domain.
+When you register your domain, **IoT Hub** will automatically request SSL certificate from [Let's Encrypt](https://letsencrypt.org/) for it and will manage further certificate renewals.
+After domain registration, you will be able to access **IoT Hub** Web UI via your domain name using secure HTTPS connection.
+Like Web UI all other **IoT Hub** services such as MQTT/HTTP/CoAP transports or HTTP integrations will be accessible via your custom domain name.
 
 ### Domain registration
 
@@ -61,14 +61,14 @@ You must be owner of the domain you are registering.
 
 {% include templates/info-banner.md content=domain_owner_note %}
 
-In order to use your own domain name to access **ThingsBoard Cloud** you must register it first. Follow the next steps to do that:
+In order to use your own domain name to access **IoT Hub** you must register it first. Follow the next steps to do that:
 
 * Step 1. Expand **White Labeling** menu section in the left pane and click on the **Domain** menu.
 * Step 2. On the **Domain** page click **Register domain** button.
 * Step 3. Enter your domain name in the **Register domain** dialog and click **Register** button.
 * Step 4. Follow the instructions form the **Domain provisioning** dialog. At this step you will be asked to add CNAME record to the database of your DNS service Provider. See [How to Create a CNAME Record For Your Domain](#how-to-create-a-cname-record) for details.
 * Step 5. After registering CNAME record, click **I've added CNAME records** button. Domain verification and certificate provisioning will start at this time. Be patient, this process can take a while.
-* Step 6. If all went well, dialog will be closed, and you will see your domain name on the **Domain** page. Now you can use your domain name to access **ThingsBoard Cloud** Web UI and services.
+* Step 6. If all went well, dialog will be closed, and you will see your domain name on the **Domain** page. Now you can use your domain name to access **IoT Hub** Web UI and services.
 * Step 7. In case of any issues during domain provisioning you will see the dialog prompt with error details.
   In this case you should try to correct the issue (ex. correct invalid entered CNAME record) otherwise you can contact [support](/docs/contact-us/).
 
@@ -78,14 +78,14 @@ In order to use your own domain name to access **ThingsBoard Cloud** you must re
 
 To view a registered domain details click **Domain details** button on the **Domain** page.
 **Domain details** dialog displays information about registered domain CNAME record and issued **SSL certificate** details including current validity period (**Not before** and **Not after**).
-The certificate is valid for 90 days. Please note that **ThingsBoard Cloud** will automatically renew the certificate earlier than 30 days before it expires, no action is required from your part unless you change or delete the domain CNAME record.
+The certificate is valid for 90 days. Please note that **IoT Hub** will automatically renew the certificate earlier than 30 days before it expires, no action is required from your part unless you change or delete the domain CNAME record.
 
 {% include images-gallery.html imageCollection="domainDetails" %}
 
 ### Delete domain
 
 To delete a registered domain click **Delete** button on the **Domain** page. In the confirmation dialog, click **Yes** if you are sure you want to delete the domain.
-Once confirmed, the domain information and associated SSL certificate will be deleted and you will not be able to access **ThingsBoard Cloud** web interface and services using that domain. Please note that you can always re-register the same or a different domain using [Domain registration](#domain-registration) procedure.
+Once confirmed, the domain information and associated SSL certificate will be deleted and you will not be able to access **IoT Hub** web interface and services using that domain. Please note that you can always re-register the same or a different domain using [Domain registration](#domain-registration) procedure.
 
 {% include images-gallery.html imageCollection="deleteDomain" %}
 
@@ -123,9 +123,9 @@ The "dig" command in Linux is used to gather DNS information. It stands for Doma
 The output of "dig" command could vary duy to your domain setup.
 For example:
 ```bash
-dig thingsboard.io any
+dig iothub.magenta.at any
 
-; <<>> DiG 9.16.1-Ubuntu <<>> thingsboard.io any
+; <<>> DiG 9.16.1-Ubuntu <<>> iothub.magenta.at any
 ;; global options: +cmd
 ;; Got answer:
 ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 30457
@@ -134,10 +134,10 @@ dig thingsboard.io any
 ;; OPT PSEUDOSECTION:
 ; EDNS: version: 0, flags:; udp: 65494
 ;; QUESTION SECTION:
-;thingsboard.io.			IN	ANY
+;iothub.magenta.at.			IN	ANY
 
 ;; ANSWER SECTION:
-thingsboard.io.		3788	IN	HINFO	"RFC8482" ""
+iothub.magenta.at.		3788	IN	HINFO	"RFC8482" ""
 
 ;; Query time: 24 msec
 ;; SERVER: 127.0.0.53#53(127.0.0.53)
@@ -145,14 +145,14 @@ thingsboard.io.		3788	IN	HINFO	"RFC8482" ""
 ;; MSG SIZE  rcvd: 64
 ```
 
-This output shows that there are NO CNAME added to the thingsboard.io domain ("ANSWER SECTION" block).
+This output shows that there are NO CNAME added to the iothub.magenta.at domain ("ANSWER SECTION" block).
 
 Correct output should look like that:
 ```bash
 ...
 ;; ANSWER SECTION:
-thingsboard.io.		3788	IN	CNAME	cloud.thingsboard.io.
+iothub.magenta.at.		3788	IN	CNAME	cloud.iothub.magenta.at.
 ...
 ```
 
-If all the things are correct, but some issue still persists - please [Contact us](https://thingsboard.io/docs/contact-us/) for further support.
+If all the things are correct, but some issue still persists - please [Contact us](https://iothub.magenta.at/docs/contact-us/) for further support.

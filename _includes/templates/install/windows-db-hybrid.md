@@ -1,6 +1,6 @@
 {% capture hybrid-info %}
-ThingsBoard team recommends to use Hybrid database approach if you do plan to have 1M+ devices in production or high data ingestion rate (> 5000 msg/sec).
-In this case, ThingsBoard will be storing timeseries data in Cassandra while continue to use PostgreSQL for main entities (devices/assets/dashboards/customers).  
+IoT Hub team recommends to use Hybrid database approach if you do plan to have 1M+ devices in production or high data ingestion rate (> 5000 msg/sec).
+In this case, IoT Hub will be storing timeseries data in Cassandra while continue to use PostgreSQL for main entities (devices/assets/dashboards/customers).  
 {% endcapture %}
 {% include templates/info-banner.md content=hybrid-info %}
 
@@ -13,7 +13,7 @@ Download the installation file (PostgreSQL 11.7 or newer releases) [here](https:
 During PostgreSQL installation, you will be prompted for superuser (postgres) password.
 Don't forget this password. It will be used later. For simplicity, we will substitute it with "postgres".
 
-##### Create ThingsBoard Database
+##### Create IoT Hub Database
 
 Once installed, launch the "pgAdmin" software and login as superuser (postgres). 
 Open your server and create database "thingsboard" with owner "postgres".
@@ -57,7 +57,7 @@ Instructions listed below will help you to install Cassandra.
  
 - The primary interface into Cassandra is the CQL (Cassandra Query Language) shell utility, which can be used to execute CQL commands for the new Cassandra server.
 
-##### ThingsBoard Configuration
+##### IoT Hub Configuration
 
 Open the Notepad or other editor as administrator user (right click on the app icon and select "Run as administrator").  
 Open the following file for editing (select "All Files" instead of "Text Documents" in file choosing dialog, the encoding is UTF-8):
@@ -103,9 +103,9 @@ You can optionally tune parameters inside "cassandra" configuration block.
 ```yml
 # Cassandra driver configuration parameters
 cassandra:
-  # Thingsboard cluster name
-  cluster_name: "${CASSANDRA_CLUSTER_NAME:Thingsboard Cluster}"
-  # Thingsboard keyspace name
+  # IoT Hub cluster name
+  cluster_name: "${CASSANDRA_CLUSTER_NAME:IoT Hub Cluster}"
+  # IoT Hub keyspace name
   keyspace_name: "${CASSANDRA_KEYSPACE_NAME:thingsboard}"
   # Specify node list
   url: "${CASSANDRA_URL:127.0.0.1:9042}"

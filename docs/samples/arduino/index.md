@@ -1,7 +1,7 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: Arduino overview
-description: ThingsBoard IoT Platform hardware samples for Arduino devices.
+description: IoT Hub IoT Platform hardware samples for Arduino devices.
 
 ---
 

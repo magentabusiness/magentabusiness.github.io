@@ -1,5 +1,5 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: RPC Reply With data from Related Device
 description: RPC Reply With data from Related Device
 
@@ -170,7 +170,7 @@ For triggering RPC request, we need to:
 
 ![image](/images/user-guide/rule-engine-2-0/tutorials/rpc-reply/copy-token.png)
 
-- Make **POST** request to the Thingsboard URL - http://localhost:8080/api/v1/**$ACCESS_TOKEN**/rpc 
+- Make **POST** request to the IoT Hub URL - http://localhost:8080/api/v1/**$ACCESS_TOKEN**/rpc 
 with content type = **application/json** and payload <code>{"method": "getTemperature", "params":{}}</code>
 
 {% highlight bash%}
@@ -182,10 +182,10 @@ Responce:
 {"temperature":"52"}
 {% endhighlight %}
 
-It is expected result. **Controller A** sends RPC call to the Thingsboard with method **getTemperature**. 
+It is expected result. **Controller A** sends RPC call to the IoT Hub with method **getTemperature**. 
 Message was routed via configured Rule Chain and attribute of the related thermostat were fetched and returned in the responce.
 
-If we try to submit request with unknown method we will see message in the Thingsboard log file:
+If we try to submit request with unknown method we will see message in the IoT Hub log file:
 {% highlight bash %}
 curl -X POST -d '{"method": "UNKNOWN", "params":{}}' http://localhost:8080/api/v1/IAkHBb9N7kKD9ieLRMFN/rpc --header "Content-Type:application/json"
 {% endhighlight %}

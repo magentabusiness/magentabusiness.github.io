@@ -9,7 +9,7 @@ By default, you can set the expiration date as the date and time the request was
 To add more time, you should increase the value of the parameter **caffeine.specs.claimDevices.timeToLiveInMinutes** in thingsboard.yaml file.{% endcapture %}
 {% include templates/info-banner.md content=cache-living-time %}
 
-ThingsBoard server stores Claiming Information for the duration of the validity of the key. See diagram below.
+IoT Hub server stores Claiming Information for the duration of the validity of the key. See diagram below.
 
 ![image](/images/user-guide/claiming-devices/device-side-key-diagram.png)
 

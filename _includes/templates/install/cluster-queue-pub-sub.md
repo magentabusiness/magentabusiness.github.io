@@ -1,6 +1,6 @@
 {% include templates/install/queue-pub-sub-config.md %}
 
-Configure ThingsBoard environment file:
+Configure IoT Hub environment file:
 
 ```text
 sudo nano .env
@@ -14,7 +14,7 @@ TB_QUEUE_TYPE=pubsub
 ```
 {: .copy-code}
 
-Configure Pub/Sub environment file for ThingsBoard queue service:
+Configure Pub/Sub environment file for IoT Hub queue service:
 
 ```text
 sudo nano queue-pubsub.env

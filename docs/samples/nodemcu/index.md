@@ -1,7 +1,7 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: NodeMCU overview
-description: ThingsBoard IoT Platform hardware samples for NodeMCU devices.
+description: IoT Hub IoT Platform hardware samples for NodeMCU devices.
 
 ---
 

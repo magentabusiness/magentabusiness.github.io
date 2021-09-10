@@ -1,7 +1,7 @@
 ---
 layout: plain
-title: ThingsBoard Demo Server Privacy Policy
-description: ThingsBoard Demo Server Privacy Policy
+title: IoT Hub Demo Server Privacy Policy
+description: IoT Hub Demo Server Privacy Policy
 
 ---
 
@@ -18,7 +18,7 @@ Your privacy is important to us, and so is being transparent about how we collec
 - Opinions and other information submitted via our websites, surveys or other channels (for ex: LinkedIn, Twitter, FB & others)
 - We also may collect additional information that is related to you such as your computer’s operating system, browser, and your use of and activities on our websites
 - When registering, subscribing or ordering on our site, as appropriate, you may be asked to enter your: name, e-mail address, mailing address, phone number or credit card information. You may, however, visit our site anonymously.
-- The content you provide through our products: The Services include the Thingsboard Demo, Thingsboard PE Demo, platforms you use, where we collect and store content that you add to the service. This content includes any information about you that you may choose to include.
+- The content you provide through our products: The Services include the IoT Hub Demo, IoT Hub PE Demo, platforms you use, where we collect and store content that you add to the service. This content includes any information about you that you may choose to include.
 - Information you provide through our support channels: The Services also include customer support, where you may choose to submit information regarding a problem you are experiencing with a Service. Whether you designate yourself as a technical contact, open a support ticket, speak to one of our representatives directly or otherwise engage with our support team, you will be asked to provide contact information, a summary of the problem you are experiencing, and any other documentation, screenshots or information that would be helpful in resolving the issue.
 
 <p style="text-align: center; font-size: 1.17em; font-weight: bold;">How we use the information we collect</p>
@@ -35,7 +35,7 @@ How we use the information we collect depends in part on which Services you use,
 
 We generally retain information for so long as it is relevant to serve you. Data may persist in copies made for backup purposes.
 
-Thignsboard will respect your wishes not to receive marketing communications. You can change your marketing preferences at any time by contacting us at support@thingsboard.io
+Thignsboard will respect your wishes not to receive marketing communications. You can change your marketing preferences at any time by contacting us at support@iothub.magenta.at
 
 <p style="text-align: center; font-size: 1.17em; font-weight: bold;">How to delete your information?</p>
 
@@ -74,4 +74,4 @@ If we decide to change our privacy policy, we will post those changes on this pa
 
 <p style="text-align: center; font-size: 1.17em; font-weight: bold;">Contacting us</p>
 
-If there are any questions regarding this privacy policy you may contact us using the information available on the following [web page](https://thingsboard.io/company/).
+If there are any questions regarding this privacy policy you may contact us using the information available on the following [web page](https://iothub.magenta.at/company/).

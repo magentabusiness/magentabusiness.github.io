@@ -1,5 +1,5 @@
 
-# for ThingsBoard Cloud
+# for IoT Hub
 
 # Publish data as an object without timestamp (server-side timestamp will be used)
 mosquitto_pub -d -q 1 -h "thingsboard.cloud" -t "v1/devices/me/telemetry" -u "$ACCESS_TOKEN" -m "{"temperature":42}"
@@ -10,7 +10,7 @@ mosquitto_pub -d -q 1 -h "thingsboard.cloud" -t "v1/devices/me/telemetry" -u "$A
 # Publish data as an object with timestamp (telemetry timestamp will be used)  using data from file
 mosquitto_pub -d -q 1 -h "thingsboard.cloud" -t "v1/devices/me/telemetry" -u "$ACCESS_TOKEN" -f "telemetry-data-with-ts.json"
 
-# for local ThingsBoard
+# for local IoT Hub
 
 # Publish data as an object without timestamp (server-side timestamp will be used)
 mosquitto_pub -d -q 1 -h "127.0.0.1" -t "v1/devices/me/telemetry" -u "$ACCESS_TOKEN" -m "{"temperature":42}"

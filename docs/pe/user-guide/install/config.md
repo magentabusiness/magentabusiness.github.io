@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - vparomskiy
 title: Configuration properties
-description: ThingsBoard configuration properties and environment variables
+description: IoT Hub configuration properties and environment variables
 
 ---
 

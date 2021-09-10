@@ -1,7 +1,7 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: Temperature upload over MQTT using NodeMCU and DHT11 sensor
-description: ThingsBoard IoT Platform sample for temperature data upload over MQTT using NodeMCU and DHT11 sensor.
+description: IoT Hub IoT Platform sample for temperature data upload over MQTT using NodeMCU and DHT11 sensor.
 
 ---
 
@@ -12,10 +12,10 @@ description: ThingsBoard IoT Platform sample for temperature data upload over MQ
 {% include templates/what-is-thingsboard.md %}
 
 This sample application performs collection of temperature and humidity values produced by DHT11 sensor. 
-Collected data is pushed to ThingsBoard for storage and visualization.
-The purpose of this application is to demonstrate ThingsBoard [data collection API](/docs/user-guide/telemetry/) and [visualization capabilities](/docs/user-guide/visualization/).
+Collected data is pushed to IoT Hub for storage and visualization.
+The purpose of this application is to demonstrate IoT Hub [data collection API](/docs/user-guide/telemetry/) and [visualization capabilities](/docs/user-guide/visualization/).
 
-The DHT11 sensor is connected to [NodeMCU](https://en.wikipedia.org/wiki/NodeMCU). NodeMCU push data to ThingsBoard server via [MQTT](https://en.wikipedia.org/wiki/MQTT) protocol.
+The DHT11 sensor is connected to [NodeMCU](https://en.wikipedia.org/wiki/NodeMCU). NodeMCU push data to IoT Hub server via [MQTT](https://en.wikipedia.org/wiki/MQTT) protocol.
 Data is visualized using built-in customizable dashboard. The application that is running on NodeMCU is written using Lua scripting language which is quite simple and easy to understand.
 
 Once you complete this sample/tutorial, you will see your sensor data on the following dashboard.
@@ -111,14 +111,14 @@ As the result binary firmware located in the **~/samples/nodemcu/nodemcu-firmwar
 Our application consists of three *.lua* files:
 
  - config.lua - configuration file, where we define a custom configuration. 
-   You need to modify this file in order to setup your wifi network parameters and address of ThingsBoard server.
+   You need to modify this file in order to setup your wifi network parameters and address of IoT Hub server.
    - your wifi network SSID - name of the wifi network.
    - your wifi network password - password to the network.
-   - thingsboard server IP - host of your thingsboard installation. Use "demo.thingsboard.io" if you are using [live demo](https://demo.thingsboard.io/) server.
+   - thingsboard server IP - host of your thingsboard installation. Use "iothub.magenta.at" if you are using [live demo](https://iothub.magenta.at/) server.
    - thingsboard mqtt port - 1883 is the default value.
    - thingsboard access token - DHT11_DEMO_TOKEN is the default value that corresponds to pre-provisioned [demo account](/docs/samples/demo-account/#tenant-devices).
    
-   If you are using [live demo](https://demo.thingsboard.io/) server - [get the access token](/docs/user-guide/ui/devices/#manage-device-credentials) for pre-provisioned "DHT11 Demo Device".
+   If you are using [live demo](https://iothub.magenta.at/) server - [get the access token](/docs/user-guide/ui/devices/#manage-device-credentials) for pre-provisioned "DHT11 Demo Device".
  - dht11.lua - sending temperature and humidity every 10 seconds to thingsboard server via MQTT protocol.
  - init.lua - initalization file that contains 
 config.lua:
@@ -177,20 +177,20 @@ $ sudo ./luatool.py --port /dev/ttyUSB0 -b 115200 --delete init.lua
 
 ## Data visualization
 
-In order to simplify this guide, we have included "Temperature & Humidity Demo Dashboard" to the [demo data](/docs/samples/demo-account/) that is available in each ThingsBoard installation.
+In order to simplify this guide, we have included "Temperature & Humidity Demo Dashboard" to the [demo data](/docs/samples/demo-account/) that is available in each IoT Hub installation.
 You still can modify this dashboard: tune, add, delete widgets, etc.
 You can access this dashboard by logging in as a tenant administrator. Use
 
  - login: tenant@thingsboard.org
  - password: tenant
  
-in case of local ThingsBoard installation.
+in case of local IoT Hub installation.
  
 Once logged in, open **Dashboards->Temperature & Humidity Demo Dashboard** page. You should observe demo dashboard with live data from your device (similar to dashboard image in the introduction).
  
 ## See also
 
-Browse other [samples](/docs/samples) or explore guides related to main ThingsBoard features:
+Browse other [samples](/docs/samples) or explore guides related to main IoT Hub features:
 
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
  - [Telemetry data collection](/docs/user-guide/telemetry/) - how to collect telemetry data.

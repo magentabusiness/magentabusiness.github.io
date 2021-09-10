@@ -1,258 +1,258 @@
 - title: Getting started guides
-  subtitle: These guides provide quick overview of main ThingsBoard features. Designed to be completed in 15-30 minutes.
+  subtitle: These guides provide quick overview of main IoT Hub features. Designed to be completed in 15-30 minutes.
   id: GettingStartedGuides
   section:
-    - path: /docs/getting-started-guides/helloworld/
+    - path: /docs/getting-started-guides/helloworld-pe/
       title: Hello world
       subtitle: Learn how to collect IoT device data using MQTT, HTTP or CoAP and visualize it on a simple dashboard. Provides variety of sample scripts that you can run on your PC or laptop to simulate the device.
       keywords: mqtt http coap visualization helloworld
       video: true
       pe: false
-    - path: /docs/iot-video-tutorials/#working-with-users-devices-and-dashboards
-      title: End user IoT dashboards
-      subtitle: Learn how to perform basic operations over Devices, Customers, and Dashboards.
-      keywords: devices customers dashboards
-      video: true
-      pe: false
-    - path: /docs/iot-video-tutorials/#device-data-management-using-thingsboard
-      title: Device data management
-      subtitle: Learn how to perform basic operations over device attributes to implement practical device management use cases.
-      keywords: device management attributes
-      video: true
-      pe: false
-    - path: /docs/user-guide/rule-engine-2-0/re-getting-started/
+    # - path: /docs/iot-video-tutorials/#working-with-users-devices-and-dashboards
+    #   title: End user IoT dashboards
+    #   subtitle: Learn how to perform basic operations over Devices, Customers, and Dashboards.
+    #   keywords: devices customers dashboards
+    #   video: true
+    #   pe: false
+    # - path: /docs/iot-video-tutorials/#device-data-management-using-thingsboard
+    #   title: Device data management
+    #   subtitle: Learn how to perform basic operations over device attributes to implement practical device management use cases.
+    #   keywords: device management attributes
+    #   video: true
+    #   pe: false
+    - path: /docs/pe/user-guide/rule-engine-2-0/re-getting-started/
       title: Getting started with Rule Engine
-      subtitle: Learn about ThingsBoard rule engine and typical use cases you can implement. Review Hello World example and learn how-to enable filtering of incoming telemetry messages.
+      subtitle: Learn about IoT Hub rule engine and typical use cases you can implement. Review Hello World example and learn how-to enable filtering of incoming telemetry messages.
       keywords: device management attributes
       video: false
       pe: false
-- title: Installation guides
-  subtitle: Learn how to setup ThingsBoard on various available operating systems.
-  id: InstallationGuides
-  paaspage: "false"
-  section:
-    - path: /docs/user-guide/install/windows/
-      title: Installing ThingsBoard on Windows
-      subtitle: Learn how to install ThingsBoard platform and all third-party on Windows OS.
-      keywords: install windows
-      video: false
-      pe: false
-    - path: /docs/user-guide/install/linux/
-      title: Installing ThingsBoard on Linux
-      subtitle: Learn how to install ThingsBoard platform and all third-party on Ubuntu or CentOS.
-      keywords: install linux ubuntu centos
-      video: false
-      pe: false
-    - path: /docs/user-guide/install/rpi/
-      title: Installing ThingsBoard on Raspberry Pi 3
-      subtitle: Learn how to install ThingsBoard platform and all third-party on Raspberry Pi 3 Model B.
-      keywords: install linux rpi raspberry pi
-      video: false
-      pe: false
-    - path: /docs/user-guide/install/docker/
-      title: Installing ThingsBoard on Docker
-      subtitle: Learn how to install ThingsBoard platform on Docker.
-      keywords: install docker
-      video: false
-      pe: false
-    - path: /docs/user-guide/install/docker/
-      title: Installing ThingsBoard on Docker (Windows)
-      subtitle: Learn how to install ThingsBoard platform on Docker (Windows).
-      keywords: install docker windows
-      video: false
-      pe: false
-    - path: /docs/user-guide/install/upgrade-instructions/
-      title: Upgrade your ThingsBoard instance
-      subtitle: Learn how to upgrade ThingsBoard platform to a newer version.
-      keywords: install upgrade
-      video: false
-      pe: false
-    - path: /docs/user-guide/install/cluster-setup/
-      title: Cluster setup
-      subtitle: Learn how to setup ThingsBoard cluster.
-      keywords: install cluster
-      video: false
-      pe: false
-    - path: /docs/user-guide/install/aws/
-      title: AWS cluster setup
-      subtitle: Learn how to setup ThingsBoard cluster on AWS infrastructure.
-      keywords: install cluster aws
-      video: false
-      pe: false
-    - path: /docs/user-guide/install/cluster/docker-compose-setup/
-      title: Cluster setup with Docker Compose
-      subtitle: Learn how to setup ThingsBoard cluster with Docker Compose.
-      keywords: install cluster docker docker-compose
-      video: false
-      pe: false
-    - path: /docs/user-guide/install/cluster/minikube-cluster-setup
-      title: Cluster setup with Kubernetes using Minikube
-      subtitle: Learn how to setup ThingsBoard cluster with Kubernetes using Minikube.
-      keywords: install cluster kubernetes k8s minikube
-      video: false
-      pe: false
-    - path: /docs/user-guide/install/cluster/aws-cluster-setup
-      title: Cluster setup with Kubernetes and KubeOne on AWS cloud infrstructure
-      subtitle: Learn how to setup ThingsBoard cluster with Kubernetes on AWS cloud infrstructure.
-      keywords: install cluster kubernetes k8s aws cloud
-      video: false
-      pe: false
-    - path: /docs/user-guide/install/cluster/aws-eks-cluster-setup
-      title: Cluster setup with Kubernetes on AWS EKS cloud infrstructure
-      subtitle: Learn how to setup ThingsBoard cluster with Kubernetes on AWS cloud infrstructure.
-      keywords: install cluster kubernetes k8s aws cloud
-      video: false
-      pe: false
-    - path: /docs/user-guide/install/cluster/aws-self-hosted-setup
-      title: Self-hosted setup using AWS EC2 instance
-      subtitle: Learn how to setup ThingsBoard on AWS EC2 instance.
-      keywords: install ec2 aws cloud self-hosted
-      video: false
-      pe: false
-    - path: /docs/user-guide/install/cluster/gcp-self-hosted-setup
-      title: Self-hosted setup using GCP VM instance
-      subtitle: Learn how to setup ThingsBoard on GCP VM instance.
-      keywords: install gcp compute-engine cloud self-hosted
-      video: false
-      pe: false
-    - path: /docs/user-guide/install/cluster/openshift-cluster-setup
-      title: Cluster setup with Kubernetes using OpenShift
-      subtitle: Learn how to setup ThingsBoard cluster with Kubernetes using OpenShift.
-      keywords: install cluster kubernetes k8s openshift
-      video: false
-      pe: false
+# - title: Installation guides -DELETE
+#   subtitle: Learn how to setup IoT Hub on various available operating systems.
+#   id: InstallationGuides
+#   paaspage: "false"
+  # section:
+  #   - path: /docs/user-guide/install/windows/
+  #     title: Installing IoT Hub on Windows
+  #     subtitle: Learn how to install IoT Hub platform and all third-party on Windows OS.
+  #     keywords: install windows
+  #     video: false
+  #     pe: false
+  #   - path: /docs/user-guide/install/linux/
+  #     title: Installing IoT Hub on Linux
+  #     subtitle: Learn how to install IoT Hub platform and all third-party on Ubuntu or CentOS.
+  #     keywords: install linux ubuntu centos
+  #     video: false
+  #     pe: false
+  #   - path: /docs/user-guide/install/rpi/
+  #     title: Installing IoT Hub on Raspberry Pi 3
+  #     subtitle: Learn how to install IoT Hub platform and all third-party on Raspberry Pi 3 Model B.
+  #     keywords: install linux rpi raspberry pi
+  #     video: false
+  #     pe: false
+  #   - path: /docs/user-guide/install/docker/
+  #     title: Installing IoT Hub on Docker
+  #     subtitle: Learn how to install IoT Hub platform on Docker.
+  #     keywords: install docker
+  #     video: false
+  #     pe: false
+  #   - path: /docs/user-guide/install/docker/
+  #     title: Installing IoT Hub on Docker (Windows)
+  #     subtitle: Learn how to install IoT Hub platform on Docker (Windows).
+  #     keywords: install docker windows
+  #     video: false
+  #     pe: false
+  #   - path: /docs/user-guide/install/upgrade-instructions/
+  #     title: Upgrade your IoT Hub instance
+  #     subtitle: Learn how to upgrade IoT Hub platform to a newer version.
+  #     keywords: install upgrade
+  #     video: false
+  #     pe: false
+  #   - path: /docs/user-guide/install/cluster-setup/
+  #     title: Cluster setup
+  #     subtitle: Learn how to setup IoT Hub cluster.
+  #     keywords: install cluster
+  #     video: false
+  #     pe: false
+  #   - path: /docs/user-guide/install/aws/
+  #     title: AWS cluster setup
+  #     subtitle: Learn how to setup IoT Hub cluster on AWS infrastructure.
+  #     keywords: install cluster aws
+  #     video: false
+  #     pe: false
+  #   - path: /docs/user-guide/install/cluster/docker-compose-setup/
+  #     title: Cluster setup with Docker Compose
+  #     subtitle: Learn how to setup IoT Hub cluster with Docker Compose.
+  #     keywords: install cluster docker docker-compose
+  #     video: false
+  #     pe: false
+  #   - path: /docs/user-guide/install/cluster/minikube-cluster-setup
+  #     title: Cluster setup with Kubernetes using Minikube
+  #     subtitle: Learn how to setup IoT Hub cluster with Kubernetes using Minikube.
+  #     keywords: install cluster kubernetes k8s minikube
+  #     video: false
+  #     pe: false
+  #   - path: /docs/user-guide/install/cluster/aws-cluster-setup
+  #     title: Cluster setup with Kubernetes and KubeOne on AWS cloud infrstructure
+  #     subtitle: Learn how to setup IoT Hub cluster with Kubernetes on AWS cloud infrstructure.
+  #     keywords: install cluster kubernetes k8s aws cloud
+  #     video: false
+  #     pe: false
+  #   - path: /docs/user-guide/install/cluster/aws-eks-cluster-setup
+  #     title: Cluster setup with Kubernetes on AWS EKS cloud infrstructure
+  #     subtitle: Learn how to setup IoT Hub cluster with Kubernetes on AWS cloud infrstructure.
+  #     keywords: install cluster kubernetes k8s aws cloud
+  #     video: false
+  #     pe: false
+  #   - path: /docs/user-guide/install/cluster/aws-self-hosted-setup
+  #     title: Self-hosted setup using AWS EC2 instance
+  #     subtitle: Learn how to setup IoT Hub on AWS EC2 instance.
+  #     keywords: install ec2 aws cloud self-hosted
+  #     video: false
+  #     pe: false
+  #   - path: /docs/user-guide/install/cluster/gcp-self-hosted-setup
+  #     title: Self-hosted setup using GCP VM instance
+  #     subtitle: Learn how to setup IoT Hub on GCP VM instance.
+  #     keywords: install gcp compute-engine cloud self-hosted
+  #     video: false
+  #     pe: false
+  #   - path: /docs/user-guide/install/cluster/openshift-cluster-setup
+  #     title: Cluster setup with Kubernetes using OpenShift
+  #     subtitle: Learn how to setup IoT Hub cluster with Kubernetes using OpenShift.
+  #     keywords: install cluster kubernetes k8s openshift
+  #     video: false
+  #     pe: false
 - title: Connect your device
   subtitle: Learn how to connect devices based on your connectivity technology or solution.
   id: ConnectYourDevice
   section:
-    - path: /docs/reference/http-api/
-      title: Connect devices using ThingsBoard HTTP API
-      subtitle: Learn how to connect your devices using HTTP protocol and ThingsBoard built-in payload format.
+    - path: /docs/pe/reference/http-api/
+      title: Connect devices using IoT Hub HTTP API
+      subtitle: Learn how to connect your devices using HTTP protocol and IoT Hub built-in payload format.
       keywords: http connect
       pe: false
       video: false
-    - path: /docs/reference/mqtt-api/
-      title: Connect devices using ThingsBoard MQTT API
-      subtitle: Learn how to connect your devices using MQTT protocol and ThingsBoard built-in payload format.
+    - path: /docs/pe/reference/mqtt-api/
+      title: Connect devices using IoT Hub MQTT API
+      subtitle: Learn how to connect your devices using MQTT protocol and IoT Hub built-in payload format.
       keywords: mqtt connect
       pe: false
       video: false
-    - path: /docs/reference/lwm2m-api/
-      title: Connect devices using ThingsBoard LwM2M API
-      subtitle: Learn how to connect your devices using LwM2M protocol and ThingsBoard built-in payload format.
+    - path: /docs/pe/reference/lwm2m-api/
+      title: Connect devices using IoT Hub LwM2M API
+      subtitle: Learn how to connect your devices using LwM2M protocol and IoT Hub built-in payload format.
       keywords: lwm2m connect
       pe: false
       video: false
-    - path: /docs/reference/coap-api/
-      title: Connect devices using ThingsBoard CoAP API
-      subtitle: Learn how to connect your devices using CoAP protocol and ThingsBoard built-in payload format.
+    - path: /docs/pe/reference/coap-api/
+      title: Connect devices using IoT Hub CoAP API
+      subtitle: Learn how to connect your devices using CoAP protocol and IoT Hub built-in payload format.
       keywords: coap connect
       pe: false
       video: false
-    - path: /docs/iot-gateway/getting-started/
-      title: Connect devices through ThingsBoard IoT Gateway
-      subtitle: Learn how to deploy IoT Gateway in your local network and route messages from your devices to the cloud.
-      keywords: gateway connect
-      pe: false
-      video: false
+    # - path: /docs/pe/iot-gateway/getting-started/
+    #   title: Connect devices through IoT Hub IoT Gateway
+    #   subtitle: Learn how to deploy IoT Gateway in your local network and route messages from your devices to the cloud.
+    #   keywords: gateway connect
+    #   pe: false
+    #   video: false
     - path: /docs/user-guide/integrations/
-      title: ThingsBoard Integrations basics
-      subtitle: Learn about ThingsBoard Integrations feature and how you can use it to connect devices and apps that use custom payload formats.
+      title: IoT Hub Integrations basics
+      subtitle: Learn about IoT Hub Integrations feature and how you can use it to connect devices and apps that use custom payload formats.
       keywords:
       pe: false
       video: false
     - path: /docs/user-guide/integrations/#platform-integrations-vs-iot-gateway
-      title: ThingsBoard Integrations vs IoT Gateway
+      title: IoT Hub Integrations vs IoT Gateway
       subtitle: Learn the differences between the Platform Integrations and IoT Gateway.
       keywords:
       pe: false
       video: false
     - path: /docs/user-guide/integrations/http/
-      title: Connect devices with custom payload using ThingsBoard HTTP Integration
-      subtitle: Convert existing protocols and payload formats to ThingsBoard message format.
+      title: Connect devices with custom payload using IoT Hub HTTP Integration
+      subtitle: Convert existing protocols and payload formats to IoT Hub message format.
       keywords: http connect
       pe: true
       video: true
     - path: /docs/user-guide/integrations/mqtt/
-      title: Connect devices with custom payload using ThingsBoard MQTT Integration.
+      title: Connect devices with custom payload using IoT Hub MQTT Integration.
       subtitle: Connect to external brokers and consume MQTT data stream
       keywords: mqtt connect
       pe: true
       video: true
     - path: /docs/user-guide/integrations/sigfox/
-      title: Connect SigFox devices using TB PE Integration
-      subtitle: Learn how to route messages from Sigfox backend to ThingsBoard and decode binary device payloads.
+      title: Connect SigFox devices using IoT Hub Integration
+      subtitle: Learn how to route messages from Sigfox backend to IoT Hub and decode binary device payloads.
       keywords: sigfox connect
       pe: true
       video: true
     - path: /docs/user-guide/integrations/ttn/
       title: Connect LoRaWAN devices using TheThingsNetwork
-      subtitle: Learn how to route messages from TheThingsNetwork backend to ThingsBoard and vise-versa.
+      subtitle: Learn how to route messages from TheThingsNetwork backend to IoT Hub and vise-versa.
       keywords: ttn connect
       pe: true
       video: false
     - path: /docs/user-guide/integrations/opc-ua/
-      title: Connect OPC-UA servers to ThingsBoard
-      subtitle: Learn how to connect OPC-UA devices to ThingsBoard.
+      title: Connect OPC-UA servers to IoT Hub
+      subtitle: Learn how to connect OPC-UA devices to IoT Hub.
       keywords: opcua connect
       pe: true
       video: true
     - path: /docs/user-guide/integrations/thingpark/
       title: Connect LoRaWAN devices using Actility ThingPark
-      subtitle: Learn how to route messages from ThingPark to ThingsBoard and vise-versa.
+      subtitle: Learn how to route messages from ThingPark to IoT Hub and vise-versa.
       keywords:
       pe: true
       video: false
     - path: /docs/user-guide/integrations/aws-iot/
       title: Connect devices through AWS IoT
-      subtitle: Learn how to connect to AWS IoT broker, transform the incoming messages and generate the downlinks using ThingsBoard.
+      subtitle: Learn how to connect to AWS IoT broker, transform the incoming messages and generate the downlinks using IoT Hub.
       keywords:
       pe: true
       video: true
     - path: /docs/user-guide/integrations/aws-kinesis/
       title: Connect devices through AWS Kinesis
-      subtitle: Learn how to connect to AWS Kinesis stream, transform the incoming messages and generate the downlinks using ThingsBoard.
+      subtitle: Learn how to connect to AWS Kinesis stream, transform the incoming messages and generate the downlinks using IoT Hub.
       keywords:
       pe: true
       video: false
     - path: /docs/user-guide/integrations/ibm-watson-iot/
       title: Connect devices through IBM Watson IoT
-      subtitle: Learn how to connect to IBM Watson IoT broker, transform the incoming messages and generate the downlinks using ThingsBoard.
+      subtitle: Learn how to connect to IBM Watson IoT broker, transform the incoming messages and generate the downlinks using IoT Hub.
       keywords:
       pe: true
       video: true
     - path: /docs/user-guide/integrations/azure-event-hub/
       title: Connect devices through Azure Event Hub
-      subtitle: Learn how to connect to Azure Event Hub, transform the incoming messages and generate the downlinks using ThingsBoard.
+      subtitle: Learn how to connect to Azure Event Hub, transform the incoming messages and generate the downlinks using IoT Hub.
       keywords:
       pe: true
       video: true
     - path: /docs/user-guide/integrations/azure-iot-hub/
       title: Connect devices through Azure IoT Hub
-      subtitle: Learn how to connect to Azure IoT Hub and transform the incoming messages using ThingsBoard.
+      subtitle: Learn how to connect to Azure IoT Hub and transform the incoming messages using IoT Hub.
       keywords:
       pe: true
       video: false
     - path: /docs/user-guide/integrations/tcp/
       title: Devices uses TCP protocol
-      subtitle: How to connect to ThingsBoard TCP-server, transform the incoming messages and generate the downlinks using ThingsBoard.
+      subtitle: How to connect to IoT Hub TCP-server, transform the incoming messages and generate the downlinks using IoT Hub.
       keywords: Connect TCP devices
       pe: true
       video: true
     - path: /docs/user-guide/integrations/tcp/
       title: Devices uses UDP protocol
-      subtitle: How to connect to ThingsBoard UDP-server, transform the incoming messages and generate the downlinks using ThingsBoard.
+      subtitle: How to connect to IoT Hub UDP-server, transform the incoming messages and generate the downlinks using IoT Hub.
       keywords: Connect UDP devices
       pe: true
       video: true
-    - path: /docs/samples/tektelic/
-      title: Connect Tektelic LoRaWAN sensors using TEKTELIC KONA Core Network Server
-      subtitle: Learn how to route messages from TEKTELIC KONA Core Network Server to ThingsBoard.
-      keywords: Tektelic connect
-      pe: false
-      video: false
+    # - path: /docs/samples/tektelic/
+    #   title: Connect Tektelic LoRaWAN sensors using TEKTELIC KONA Core Network Server
+    #   subtitle: Learn how to route messages from TEKTELIC KONA Core Network Server to IoT Hub.
+    #   keywords: Tektelic connect
+    #   pe: false
+    #   video: false
 - title: Data visualization
-  subtitle: These guides contain instructions how to configure complex ThingsBoard dashboards
+  subtitle: These guides contain instructions how to configure complex IoT Hub dashboards
   id: DataVisualization
   section:
     - path: /docs/iot-video-tutorials/#dashboard-development-guide-part-1-of-3-visualizing-assets-data-using-maps-and-tables
@@ -298,7 +298,7 @@
       pe: false
       video: true
 - title: Data processing & actions
-  subtitle: Learn how to use ThingsBoard Rule Engine.
+  subtitle: Learn how to use IoT Hub Rule Engine.
   id: DataProcessing
   section:
     - path: /docs/user-guide/rule-engine-2-0/tutorials/validate-incoming-telemetry/
@@ -392,11 +392,11 @@
       subtitle: Calculate average temperature in the warehouse based on readings from multiple temperature sensors.
       keywords: average temperature analytics rule engine
       pe: true
-    - path: /docs/trendz/prediction/
-      title: Predict timeseries
-      subtitle: Build prediction model based on vibration of water pump
-      keywords: analytics forecast prediction
-      pe: false
+    # - path: /docs/trendz/prediction/
+    #   title: Predict timeseries
+    #   subtitle: Build prediction model based on vibration of water pump
+    #   keywords: analytics forecast prediction
+    #   pe: false
 #- title: Pushing data to external systems
 #  subtitle: lorem ipsum dolor
 #  section:
@@ -406,16 +406,16 @@
 #      keywords: key1 key2 key3
 #      pe: false
 - title: Hardware samples
-  subtitle: Learn how to connect various hardware platforms to ThingsBoard.
+  subtitle: Learn how to connect various hardware platforms to IoT Hub.
   id: HardwareSamples
   section:
     - path: /docs/samples/esp32/ota/
-      title: ESP32 OTA using ThingsBoard
-      subtitle: Learn how to make ESP32 OTA update using ThingsBoard custom widget, rule chain and dashboard
+      title: ESP32 OTA using IoT Hub
+      subtitle: Learn how to make ESP32 OTA update using IoT Hub custom widget, rule chain and dashboard
       pe: false
       video: true
     - path: /docs/samples/esp32/gpio-control-pico-kit-dht22-sensor/
-      title: ESP32 Pico Kit GPIO control and DHT22 sensor monitor using ThingsBoard Arduino SDK
+      title: ESP32 Pico Kit GPIO control and DHT22 sensor monitor using IoT Hub Arduino SDK
       subtitle: Contains wiring diagram, sketch and dashboard setup guide.
       pe: false
       video: false
@@ -433,7 +433,7 @@
       pe: false
       video: true
     - path: /docs/samples/esp8266/gpio/
-      title: ESP8266 GPIO control over MQTT using ThingsBoard
+      title: ESP8266 GPIO control over MQTT using IoT Hub
       subtitle: Contains wiring diagram, sketch, dashboard setup guide and demonstration video.
       pe: false
       video: true
@@ -443,12 +443,12 @@
       pe: false
       video: false
     - path: /docs/samples/raspberry/gpio/
-      title: Raspberry Pi GPIO control over MQTT using ThingsBoard
+      title: Raspberry Pi GPIO control over MQTT using IoT Hub
       subtitle: Contains wiring diagram, source code, dashboard setup guide and demonstration video.
       pe: false
       video: true
     - path: /docs/samples/raspberry/gpio-android-things/
-      title: Raspberry Pi GPIO control using Android Things and ThingsBoard
+      title: Raspberry Pi GPIO control using Android Things and IoT Hub
       subtitle: Contains wiring diagram, source code, dashboard setup guide and demonstration video.
       pe: false
       video: true
@@ -458,24 +458,24 @@
       pe: false
       video: true
     - path: /docs/samples/linkit-one/gps/
-      title: GPS data upload and visualization using LinkIt ONE and ThingsBoard
+      title: GPS data upload and visualization using LinkIt ONE and IoT Hub
       subtitle: Contains wiring diagram, sketch and dashboard setup guide.
       pe: false
       video: false
     - path: /docs/user-guide/integrations/sodaq/
-      title: Learn how to connect your SODAQ Universal Tracker to ThingsBoard
-      subtitle: Learn how to connect your SODAQ Universal Tracker to ThingsBoard via T-Mobile – IoT CDP Integration.
+      title: Learn how to connect your SODAQ Universal Tracker to IoT Hub
+      subtitle: Learn how to connect your SODAQ Universal Tracker to IoT Hub via T-Mobile – IoT CDP Integration.
       keywords: NB IoT, NB-IoT, T-Mobile, SODAQ, 5G
       pe: true
       video: false
     - path: /docs/user-guide/integrations/sodaq-udp
-      title: Learn how to connect your SODAQ Universal Tracker to ThingsBoard
-      subtitle: Learn how to connect your SODAQ Universal Tracker to ThingsBoard via UDP Integration.
+      title: Learn how to connect your SODAQ Universal Tracker to IoT Hub
+      subtitle: Learn how to connect your SODAQ Universal Tracker to IoT Hub via UDP Integration.
       keywords: NB IoT, NB-IoT, T-Mobile, SODAQ, 5G
       pe: true
       video: false
     - path: /docs/samples/ble/raspberry-esp32-xiaomi-sensor-htu21d
-      title: ThingsBoard BLE Demo with Raspberry PI, ESP32, Xiaomi MI and HTU21D sensors
+      title: IoT Hub BLE Demo with Raspberry PI, ESP32, Xiaomi MI and HTU21D sensors
       subtitle: Contains wiring diagram and dashboard setup guide.
       pe: false
       video: false
@@ -485,7 +485,7 @@
       pe: false
       video: false
 - title: Advanced features
-  subtitle: Learn about advanced ThingsBoard features
+  subtitle: Learn about advanced IoT Hub features
   id: AdvancedFeatures
   section:
     - path: /docs/user-guide/device-connectivity-status/
@@ -498,11 +498,11 @@
       subtitle: Learn how to track user actions in order to keep audit log.
       pe: false
       video: false
-    - path: /docs/user-guide/api-limits/
-      title: API limits
-      subtitle: Learn how to control API usage, by limiting number of requests from single host during single time unit (Minutes, Hours, etc.)
-      pe: false
-      video: false
+    # - path: /docs/user-guide/api-limits/
+    #   title: API limits
+    #   subtitle: Learn how to control API usage, by limiting number of requests from single host during single time unit (Minutes, Hours, etc.)
+    #   pe: false
+    #   video: false
     - path: /docs/user-guide/white-labeling/
       title: White-labeling
       subtitle: Learn how to configure your company or product logo and color scheme in 2 minutes with zero coding efforts.
@@ -543,24 +543,24 @@
     subtitle: Learn how to step-by-step setup OAuth with Azure Active Directory.
 
 - title: Contribution and Development
-  subtitle: Learn how to contribute to Thingsboard, customize & develop custom widgets and rule nodes
+  subtitle: Learn how to contribute to IoT Hub, customize & develop custom widgets and rule nodes
   id: Contribution
   section:
-    - path: /docs/user-guide/contribution/how-to-contribute/
-      title: How to Contribute
-      subtitle: "Learn how to contribute to Thingsboard"
-      pe: false
-      video: false
-    - path: /docs/user-guide/contribution/how-to-contribute-your-device-integration-guide/
-      title: How to contribute your device integration guide
-      subtitle: "Learn how to contribute to Thingsboard"
-      pe: false
-      video: false
-    - path: /docs/user-guide/contribution/rule-node-development/
-      title: Rule Node Development Guide
-      subtitle: "Learn how to customize and create custom rule nodes"
-      pe: false
-      video: false
+    # - path: /docs/user-guide/contribution/how-to-contribute/
+    #   title: How to Contribute
+    #   subtitle: "Learn how to contribute to IoT Hub"
+    #   pe: false
+    #   video: false
+    # - path: /docs/user-guide/contribution/how-to-contribute-your-device-integration-guide/
+    #   title: How to contribute your device integration guide
+    #   subtitle: "Learn how to contribute to IoT Hub"
+    #   pe: false
+    #   video: false
+    # - path: /docs/user-guide/contribution/rule-node-development/
+    #   title: Rule Node Development Guide
+    #   subtitle: "Learn how to customize and create custom rule nodes"
+    #   pe: false
+    #   video: false
     - path: /docs/user-guide/contribution/widgets-development/
       title: Widgets Development Guide
       subtitle: "Learn how to customize and create custom widgets"

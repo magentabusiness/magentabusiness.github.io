@@ -5,17 +5,17 @@
 
 ## Overview
 
-HTTP Integration allows converting existing protocols and payload formats to ThingsBoard message format and is useful in several deployment scenarios: 
+HTTP Integration allows converting existing protocols and payload formats to IoT Hub message format and is useful in several deployment scenarios: 
 
  - stream device and/or asset data from external system, IoT platform or connectivity provider back-end.
  - stream device and/or asset data from your custom application running in the cloud.
- - connect the existing device with custom HTTP based protocol to ThingsBoard.
+ - connect the existing device with custom HTTP based protocol to IoT Hub.
 
 ![image](/images/user-guide/integrations/http-integration.svg)
 
 ## Create Uplink Converter
 
-Before creating the integration, you need to create an Uplink converter in Data converters. Uplink is necessary in order to convert the incoming data from the device into the required format for displaying them in ThingsBoard. 
+Before creating the integration, you need to create an Uplink converter in Data converters. Uplink is necessary in order to convert the incoming data from the device into the required format for displaying them in IoT Hub. 
 Click on the “plus” and on “Create new converter”. To view the events, enable Debug. 
 In the function decoder field, specify a script to parse and transform data.
 
@@ -93,7 +93,7 @@ Once the Headers filter has been configured, it will also need to be specified i
 ## Send uplink message
 
 To send an uplink message, you need a HTTP endpoint URL from the integration.  
-Let`s go to the Integrations tab in ThingsBoard. Find your HTTP integration and click on it. There you can find the HTTP endpoint URL. Click on the icon to copy the url.
+Let`s go to the Integrations tab in IoT Hub. Find your HTTP integration and click on it. There you can find the HTTP endpoint URL. Click on the icon to copy the url.
 
 {% include images-gallery.html imageCollection="send-uplink" %}
 
@@ -118,7 +118,7 @@ Received data can be viewed in the Uplink converter. In the **“In”** and **�
 {% include images-gallery.html imageCollection="send-uplink-1" %}
 
 Use the Dashboards to work with data. Dashboards are a modern format for collecting and visualizing data sets. Visibility of data presentation is achieved through a variety of widgets.  
-ThingsBoard has examples of several types of dashboards that you can use. You can find them in **Solution templates** tab.
+IoT Hub has examples of several types of dashboards that you can use. You can find them in **Solution templates** tab.
 
 {% include images-gallery.html imageCollection="solution_templates" %}
 
@@ -181,7 +181,7 @@ Received data and data that was sent can be viewed in the downlink converter. In
 
 {% include images-gallery.html imageCollection="downlink-message" %}
 
-An example of a sent message and a response from ThingsBoard in the terminal:
+An example of a sent message and a response from IoT Hub in the terminal:
 
 {% include images-gallery.html imageCollection="downlink-terminal" %}
 

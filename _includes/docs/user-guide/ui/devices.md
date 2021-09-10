@@ -1,12 +1,12 @@
 
-ThingsBoard support following device management features using Web UI and [REST API](/docs/{{docsPrefix}}reference/rest-api/).
+IoT Hub support following device management features using Web UI and [REST API](/docs/{{docsPrefix}}reference/rest-api/).
 
 * TOC
 {:toc}
 
 ## Add and delete devices
 
-Tenant administrator is able to register new devices or delete them from ThingsBoard.
+Tenant administrator is able to register new devices or delete them from IoT Hub.
 
 ![image](/images/user-guide/ui/devices.png)
 

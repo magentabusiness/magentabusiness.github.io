@@ -1,5 +1,5 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: Weather reading using REST API calls
 description: REST API weather guide
 
@@ -17,7 +17,7 @@ This tutorial will show how to get weather data using REST API.
 Let's assume your need to know the current weather in the asset location. You may use the weather info for certain data 
 processing logic or just to track history and enable visualization of this info on the dashboard.
 
-In this tutorial we will configure ThingsBoard Rule Engine to automatically get weather information using REST API.
+In this tutorial we will configure IoT Hub Rule Engine to automatically get weather information using REST API.
  You can use this tutorial as a basis for more complex tasks. 
  
 
@@ -31,11 +31,11 @@ We assume you have completed the following guides and reviewed the articles list
 
 ## Adding the asset
   
-Add Asset entity in ThingsBoard. Its name is **Building A** and its type is **building**.
+Add Asset entity in IoT Hub. Its name is **Building A** and its type is **building**.
 
 ![image](/images/user-guide/rule-engine-2-0/tutorials/rest-api-weather/rest-api-weather-building.png)
 
-**Note**:If you have Professional Edition, you will need to add asset to customer using Customer Hierarchy the
+**Note**:If you have IoT Hub, you will need to add asset to customer using Customer Hierarchy the
 following way:  
 
 - Go to **Customers Hierarchy** -> **All** -> **(Current tenant)** -> **Customer groups** -> **(Your customer group)**

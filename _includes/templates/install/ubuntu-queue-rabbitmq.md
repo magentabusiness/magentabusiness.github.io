@@ -35,9 +35,9 @@ sudo rabbitmqctl set_permissions -p / PUT_YOUR_USER_NAME ".*" ".*" ".*"
 ```
 {: .copy-code}
 
-##### ThingsBoard Configuration
+##### IoT Hub Configuration
 
-Edit ThingsBoard configuration file
+Edit IoT Hub configuration file
 
 ```text
 sudo nano /etc/thingsboard/conf/thingsboard.conf

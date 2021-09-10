@@ -1,9 +1,9 @@
 * TOC
 {:toc}
 
-This guide will help you to get familiar with ThingsBoard configuration files and parameters. 
+This guide will help you to get familiar with IoT Hub configuration files and parameters. 
 
-Configuration files location depends on the ThingsBoard installation type. If ThingsBoard is installed as a **monolithic application**, 
+Configuration files location depends on the IoT Hub installation type. If IoT Hub is installed as a **monolithic application**, 
 you can find configuration files in the following directory:
 
 ```bash
@@ -11,13 +11,13 @@ Windows: YOUR_INSTALL_DIR/conf
 Linux: /usr/share/thingsboard/conf
 ```
 
-But if ThingsBoard is installed as a **microservice**, then each component of the platform will have separate configuration files.
+But if IoT Hub is installed as a **microservice**, then each component of the platform will have separate configuration files.
 
 In this guide all application properties will be divided by components where they are applied. **Note** that in case of **monolithic application**
 all application properties are located in the single file - **thingsboard.yml** and all environment variables are in **thingsboard.conf**
 
 
-#### ThingsBoard Core Settings
+#### IoT Hub Core Settings
 
 This is the main configuration file that contains configuration properties 
 for transports (HTTP, MQTT, CoAP), database (Cassandra, PostgreSQL, TimescaleDB), clustering (Zookeeper and gRPC), etc.
@@ -194,7 +194,7 @@ We will list only main configuration parameters below to avoid duplication of th
           <td>zk.enabled</td>
           <td>ZOOKEEPER_ENABLED</td>
           <td>false</td>
-          <td>Enable/disable zookeeper discovery service. Used for ThingsBoard cluster</td>
+          <td>Enable/disable zookeeper discovery service. Used for IoT Hub cluster</td>
       </tr>
       <tr>
           <td>zk.url</td>
@@ -265,7 +265,7 @@ We will list only main configuration parameters below to avoid duplication of th
       <tr>
           <td>security.jwt.tokenIssuer</td>
           <td>JWT_TOKEN_ISSUER</td>
-          <td>thingsboard.io</td>
+          <td>iothub.magenta.at</td>
           <td>User JWT Token issuer</td>
       </tr>
       <tr>
@@ -293,7 +293,7 @@ We will list only main configuration parameters below to avoid duplication of th
           <td>dashboard.max_datapoints_limit</td>
           <td>DASHBOARD_MAX_DATAPOINTS_LIMIT</td>
           <td>50000</td>
-          <td>Maximum allowed datapoints fetched by ThingsBoard UI widgets</td>
+          <td>Maximum allowed datapoints fetched by IoT Hub UI widgets</td>
       </tr>
       <tr>
           <td colspan="4"><span style="font-weight: bold; font-size: 24px;">Common database parameters</span></td>
@@ -308,16 +308,16 @@ We will list only main configuration parameters below to avoid duplication of th
           <td>database.entities.type</td>
           <td>DATABASE_ENTITIES_TYPE</td>
           <td>sql</td>
-          <td>Database type for ThingsBoard entities (assets, devices, customers, etc.). Allowed values - <b>cassandra</b> OR <b>sql</b></td>
+          <td>Database type for IoT Hub entities (assets, devices, customers, etc.). Allowed values - <b>cassandra</b> OR <b>sql</b></td>
       </tr>
       <tr>
           <td>database.ts.type</td>
           <td>DATABASE_TS_TYPE</td>
           <td>sql</td>
-          <td>Database type for ThingsBoard timeseries data. 
+          <td>Database type for IoT Hub timeseries data. 
           Allowed values - <b>cassandra</b>, <b>sql</b> OR <b>timescale</b>. For hybrid mode or for using PostgreSQL + TimescaleDB extension)
           this value should be <b>cassandra</b> or <b>timescale</b> in accordance.
-          Please, note that in these cases the database type for ThingsBoard entities should be <b>sql</b></td>
+          Please, note that in these cases the database type for IoT Hub entities should be <b>sql</b></td>
       </tr>
       <tr>
           <td colspan="4"><span style="font-weight: bold; font-size: 24px;">Cassandra database parameters</span></td>
@@ -325,14 +325,14 @@ We will list only main configuration parameters below to avoid duplication of th
       <tr>
           <td>cassandra.cluster_name</td>
           <td>CASSANDRA_CLUSTER_NAME</td>
-          <td>Thingsboard Cluster</td>
-          <td>Thingsboard Cassandra cluster name</td>
+          <td>IoT Hub Cluster</td>
+          <td>IoT Hub Cassandra cluster name</td>
       </tr>
       <tr>
           <td>cassandra.keyspace_name</td>
           <td>CASSANDRA_KEYSPACE_NAME</td>
           <td>thingsboard</td>
-          <td>Thingsboard keyspace name</td>
+          <td>IoT Hub keyspace name</td>
       </tr>
       <tr>
           <td>cassandra.url</td>
@@ -2081,7 +2081,7 @@ We will list only main configuration parameters below to avoid duplication of th
            <td>Interval in milliseconds to poll messages by Core microservices</td>
        </tr>
       <tr>
-           <td colspan="4"><span style="font-weight: bold; font-size: 24px;">ThingsBoard service parameters</span></td>
+           <td colspan="4"><span style="font-weight: bold; font-size: 24px;">IoT Hub service parameters</span></td>
       </tr>
        <tr>
            <td>service.type.</td>
@@ -2132,7 +2132,7 @@ We will list only main configuration parameters below to avoid duplication of th
           <td>zk.enabled</td>
           <td>ZOOKEEPER_ENABLED</td>
           <td>false</td>
-          <td>Enable/disable zookeeper discovery service. Used for ThingsBoard cluster</td>
+          <td>Enable/disable zookeeper discovery service. Used for IoT Hub cluster</td>
       </tr>
       <tr>
           <td>zk.url</td>
@@ -3029,7 +3029,7 @@ We will list only main configuration parameters below to avoid duplication of th
            <td>Interval in milliseconds to poll messages by Core microservices</td>
        </tr>
       <tr>
-           <td colspan="4"><span style="font-weight: bold; font-size: 24px;">ThingsBoard service parameters</span></td>
+           <td colspan="4"><span style="font-weight: bold; font-size: 24px;">IoT Hub service parameters</span></td>
       </tr>
        <tr>
            <td>service.type.</td>
@@ -3080,7 +3080,7 @@ We will list only main configuration parameters below to avoid duplication of th
           <td>zk.enabled</td>
           <td>ZOOKEEPER_ENABLED</td>
           <td>false</td>
-          <td>Enable/disable zookeeper discovery service. Used for ThingsBoard cluster</td>
+          <td>Enable/disable zookeeper discovery service. Used for IoT Hub cluster</td>
       </tr>
       <tr>
           <td>zk.url</td>
@@ -3899,7 +3899,7 @@ We will list only main configuration parameters below to avoid duplication of th
            <td>Interval in milliseconds to poll messages by Core microservices</td>
        </tr>
       <tr>
-           <td colspan="4"><span style="font-weight: bold; font-size: 24px;">ThingsBoard service parameters</span></td>
+           <td colspan="4"><span style="font-weight: bold; font-size: 24px;">IoT Hub service parameters</span></td>
       </tr>
        <tr>
            <td>service.type.</td>
@@ -3953,7 +3953,7 @@ We will list only main configuration parameters below to avoid duplication of th
           <td>zk.enabled</td>
           <td>ZOOKEEPER_ENABLED</td>
           <td>false</td>
-          <td>Enable/disable zookeeper discovery service. Used for ThingsBoard cluster</td>
+          <td>Enable/disable zookeeper discovery service. Used for IoT Hub cluster</td>
       </tr>
       <tr>
           <td>zk.url</td>
@@ -4784,7 +4784,7 @@ We will list only main configuration parameters below to avoid duplication of th
            <td>Interval in milliseconds to poll messages by Core microservices</td>
        </tr>
       <tr>
-           <td colspan="4"><span style="font-weight: bold; font-size: 24px;">ThingsBoard service parameters</span></td>
+           <td colspan="4"><span style="font-weight: bold; font-size: 24px;">IoT Hub service parameters</span></td>
       </tr>
        <tr>
            <td>service.type.</td>

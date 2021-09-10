@@ -1,7 +1,7 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: Getting Started
-description: Getting started with ThingsBoard
+description: Getting started with IoT Hub
 notitle: "true"
 ---
 
@@ -32,7 +32,7 @@ notitle: "true"
                     GETTING STARTED WITH
                 </div>
                 <div class="getting-started-product">
-                    Professional Edition
+                    IoT Hub
                 </div>
             </div>
         </div>

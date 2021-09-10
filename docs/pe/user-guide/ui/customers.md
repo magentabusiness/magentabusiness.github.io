@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - ashvayka
 title: Customers
-description: ThingsBoard Customers management
+description: IoT Hub Customers management
 customers-pe:
     0:
         image: /images/user-guide/ui/customers/pe/customer-pe.png

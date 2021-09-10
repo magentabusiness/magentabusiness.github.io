@@ -1,12 +1,12 @@
 ---
 layout: thingsboard-pe
-title: ThingsBoard Professional Edition
+title: IoT Hub
 description: 
 ---
 
 <section id="intro">
 	<main>
-		<h1>Advanced ThingsBoard IoT Platform distribution</h1>
+		<h1>Advanced IoT Hub IoT Platform distribution</h1>
 		<h1 class="clari">with value added features</h1>
 	</main>
 </section>
@@ -20,7 +20,7 @@ description:
 		    <div class="block">
                 <div class="feature-des">
                 <h2>White-labeling</h2>
-                <p>Rebrand ThingsBoard platform web interface with your company or product logo and color scheme in 2 minutes. No coding or service restart required. Allow your customers and their sub-customers to white-label their interface as well.</p>
+                <p>Rebrand IoT Hub platform web interface with your company or product logo and color scheme in 2 minutes. No coding or service restart required. Allow your customers and their sub-customers to white-label their interface as well.</p>
                 <a id="read-more-button" href="/docs/user-guide/white-labeling/">Read more<img class="arrow first" src="/images/pe/read-more-arrow.svg"><img class="arrow second" src="/images/pe/read-more-arrow.svg"><img class="arrow third" src="/images/pe/read-more-arrow.svg"></a>
                 </div>
                 <img class="preview" src="/images/pe/white-labeling.svg">
@@ -238,13 +238,13 @@ description:
         <div class="item">
             <img src="/images/pe/cloud-premises.svg">
             <h1>Flexible deployment options</h1>
-            <p>Deploy ThingsBoard platform in the cloud or on premises. Use commodity hardware to scale out horizontally by adding new nodes to your cluster. Single ThingsBoard server can support 10 000+ devices and 100M messages per hour, while simple cluster can support millions of devices and billions of messages.</p>
+            <p>Deploy IoT Hub platform in the cloud or on premises. Use commodity hardware to scale out horizontally by adding new nodes to your cluster. Single IoT Hub server can support 10 000+ devices and 100M messages per hour, while simple cluster can support millions of devices and billions of messages.</p>
         </div>
         <div class="divider"></div>
         <div class="item">
             <img src="/images/pe/pricing-models.svg">
             <h1>Simple and predictable pricing models</h1>
-            <p>Say "No!" to per message or per device pricing that turns to a monster bills in production system. ThingsBoard PE supports two simple and predictable pricing models depending on your product life-cycle stage.</p>
+            <p>Say "No!" to per message or per device pricing that turns to a monster bills in production system. IoT Hub supports two simple and predictable pricing models depending on your product life-cycle stage.</p>
         </div>
 	</main>
 </section>

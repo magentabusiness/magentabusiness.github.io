@@ -3,7 +3,7 @@
 
 ## Introduction
 
-All [IoT Dashboards](/docs/{{docsPrefix}}user-guide/dashboards/) are constructed using **ThingsBoard widgets** defined in the Widget Library.
+All [IoT Dashboards](/docs/{{docsPrefix}}user-guide/dashboards/) are constructed using **IoT Hub widgets** defined in the Widget Library.
 Each widget provides end-user functionality such as data visualization, remote device control, alarm management and display of static custom HTML content.
 
 ## Widget Types
@@ -113,7 +113,7 @@ justify-content: center;
 ## Widgets Library (Bundles)
 
 Widgets are grouped into widget bundles according to their purposes. There are System-level and Tenant-level Widgets bundles.
-Initial ThingsBoard installation comes with a basic set of system-level Widgets bundles.  
+Initial IoT Hub installation comes with a basic set of system-level Widgets bundles.  
 System level bundles can be managed by a **System administrator** and are available for use by any tenant in the system.
 Tenant level bundles can be managed by a **Tenant administrator** and are available for use only by this tenant and his customers. 
 You can always implement and add your widgets by following this [guide](/docs/{{docsPrefix}}user-guide/contribution/widgets-development/).
@@ -219,7 +219,7 @@ To add a new widgets bundle, you should:
 
 #### Widgets Bundle export
 
-You can export a widgets bundle in JSON format, and import it in the same or different ThingsBoard instance.
+You can export a widgets bundle in JSON format, and import it in the same or different IoT Hub instance.
 
 In order to export widgets bundle, you should:
 
@@ -233,7 +233,7 @@ Importing a widgets bundle is very similar to exporting it. To import the widget
 
 ## Widget Types export/import
 
-You can export a specific type of widget from a widget bundle in JSON format, and import it in the same or different ThingsBoard instance.
+You can export a specific type of widget from a widget bundle in JSON format, and import it in the same or different IoT Hub instance.
 
 #### Widget Type export
 

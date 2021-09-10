@@ -1,4 +1,4 @@
-The ThingsBoard **Guides** can help you to get familiar with ThingsBoard platform.
+The IoT Hub **Guides** can help you to get familiar with IoT Hub platform.
 
 #### Contents
 
@@ -7,7 +7,7 @@ The ThingsBoard **Guides** can help you to get familiar with ThingsBoard platfor
 
 {% unless docsPrefix == 'paas/' %}
 [**Installation guide**](/docs/{{docsPrefix}}user-guide/install/installation-options/)
-: Covers ThingsBoard platform installation in a single-node or cluster mode.
+: Covers IoT Hub platform installation in a single-node or cluster mode.
 {% endunless %}
 
 [**Working with device attributes**](/docs/{{docsPrefix}}user-guide/attributes/)
@@ -17,7 +17,7 @@ The ThingsBoard **Guides** can help you to get familiar with ThingsBoard platfor
 : Describes telemetry data collection feature and related use cases.
 
 [**Using RPC capabilities**](/docs/{{docsPrefix}}user-guide/rpc/)
-: Provides overview of ThingsBoard RPC functionality.
+: Provides overview of IoT Hub RPC functionality.
 
 [**Rule engine**](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/)
 : Describes rule engine features and capabilities.

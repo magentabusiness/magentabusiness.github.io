@@ -1,9 +1,9 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 assignees:
 - ashvayka
 title: Using RPC capabilities
-description: Remote control of IoT devices from the ThingsBoard IoT cloud using RPC feature
+description: Remote control of IoT devices from the IoT Hub IoT cloud using RPC feature
 
 rule-chain:
     0:

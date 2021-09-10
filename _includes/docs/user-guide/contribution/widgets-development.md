@@ -3,7 +3,7 @@
 
 ## Introduction
 
-**ThingsBoard widgets** are additional UI modules that easily integrate into any [IoT Dashboard](/docs/{{docsPrefix}}user-guide/dashboards/).  They provide end-user functions such as data visualization, remote device control, alarms management and display of static custom html content.
+**IoT Hub widgets** are additional UI modules that easily integrate into any [IoT Dashboard](/docs/{{docsPrefix}}user-guide/dashboards/).  They provide end-user functions such as data visualization, remote device control, alarms management and display of static custom html content.
 According to the provided features, each widget definition represents a specific [Widget Type](/docs/{{docsPrefix}}user-guide/ui/widget-library/#widget-types).
 
 ## Creating new widget definition
@@ -87,7 +87,7 @@ These settings are accessible from widget JavaScript code.
 
 This section is used to preview and test widget definitions.
 It is presented as a mini dashboard containing one widget instantiated from the current widget definition.
-It has mostly all functionality provided by usual ThingsBoard dashboard, with some limitations.
+It has mostly all functionality provided by usual IoT Hub dashboard, with some limitations.
 For example, "Function" can only be selected as datasource type in widget datasources section for debugging purposes.    
 
 ![image](/images/user-guide/contribution/widgets/widget-editor-preview.png)
@@ -322,7 +322,7 @@ Map describing available widget action sources ([WidgetActionSource](https://git
 ### Creating simple widgets 
 
 The tutorials below show how to create minimal widgets of each type.
-In order to minimize the amount of code, the Angular framework will be used, on which ThingsBoard UI is actually based.
+In order to minimize the amount of code, the Angular framework will be used, on which IoT Hub UI is actually based.
 By the way, you can always use pure JavaScript or jQuery API in your widget code.
 
 #### Latest Values widget
@@ -983,11 +983,11 @@ Please note that xAxis (time axis) is limited to current timewindow bounds obtai
 ### Using existing JavaScript code
 
 Another approach of creating widgets is to use existing bundled JavaScript code.
-In this case, you can create own TypeScript class or Angular component and bundle it into the ThingsBoard UI code.
+In this case, you can create own TypeScript class or Angular component and bundle it into the IoT Hub UI code.
 In order to make this code accessible within the widget, you need to register corresponding Angular module or inject TypeScript class to a global variable (for ex. window object).
-Some of the ThingsBoard widgets already use this approach. Take a look at the [polyfills.ts](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/polyfills.ts#L106)
+Some of the IoT Hub widgets already use this approach. Take a look at the [polyfills.ts](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/polyfills.ts#L106)
 or [widget-components.module.ts](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/modules/home/components/widget/widget-components.module.ts#L44).
-Here you can find how some bundled classes or components are registered for later use in ThingsBoard widgets.
+Here you can find how some bundled classes or components are registered for later use in IoT Hub widgets.
 For example "Timeseries - Flot" widget (from "Charts" Widgets Bundle) uses [**TbFlot**](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/modules/home/components/widget/lib/flot-widget.ts#L63) TypeScript class which is injected as window property inside **polyfills.ts**:
 
 ```typescript

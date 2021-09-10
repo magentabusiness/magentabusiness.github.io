@@ -2,13 +2,13 @@
 layout: docwithnav-pe
 assignees:
 - ashvayka
-title: Getting Started with ThingsBoard Professional Edition
-description: Getting started with ThingsBoard open-source IoT platform and simulated IoT devices
+title: Getting Started with IoT Hub
+description: Getting started with IoT Hub open-source IoT platform and simulated IoT devices
 redirect_from: "/docs/pe/getting-started-guides/helloworld/"
 step1:
     0:
         image: /images/helloworld/hello-world-pe-step-1-item-1.png
-        title: 'Login to your ThingsBoard instance and open Device Groups page.'
+        title: 'Login to your IoT Hub instance and open Device Groups page.'
     1:
         image: /images/helloworld/hello-world-pe-step-1-item-3.png
         title: 'Navigate to default Device group “ALL”.'

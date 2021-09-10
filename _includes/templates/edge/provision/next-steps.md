@@ -1,1 +1,1 @@
-Once ThingsBoard **Edge** provisioned on ThingsBoard server please follow [Installation Guide](/docs/edge/install/installation-options/) - this guide will help you to install ThingsBoard **Edge** and connect it to ThingsBoard server.
+Once IoT Hub **Edge** provisioned on IoT Hub server please follow [Installation Guide](/docs/edge/install/installation-options/) - this guide will help you to install IoT Hub **Edge** and connect it to IoT Hub server.

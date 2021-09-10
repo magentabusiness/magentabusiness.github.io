@@ -6,7 +6,7 @@
 
 ## Overview
 
-Azure IoT Hub Integration allows to stream data from AWS IoT Backend to ThingsBoard and converts device payloads to the ThingsBoard format.
+Azure IoT Hub Integration allows to stream data from AWS IoT Backend to IoT Hub and converts device payloads to the IoT Hub format.
  
   <object width="80%" data="/images/user-guide/integrations/azure/iot-hub-integration.svg"></object>
 
@@ -16,10 +16,10 @@ Azure IoT Hub Integration allows to stream data from AWS IoT Backend to ThingsBo
 
 - [Register a new device in the IoT hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal#register-a-new-device-in-the-iot-hub).
 
-## Integration with the Thingsboard
-We have done all necessary steps on the Azure IoT Hub side. Now we can start configuring the Thingsboard.
+## Integration with the IoT Hub
+We have done all necessary steps on the Azure IoT Hub side. Now we can start configuring the IoT Hub.
 
-##### Thingsboard Uplink Data Converter
+##### IoT Hub Uplink Data Converter
 
 First, we need to create Uplink Data converter that will be used for converting messages received from the Azure IoT Hub. The converter should transform incoming payload into the required message format.
 Message must contains **deviceName** and **deviceType**. Those fields are used for submitting data to the correct device. If a device was not found then new device will be created.
@@ -69,7 +69,7 @@ return result;
 
 ##### Azure IoT Hub Integration
 
-Next we will create Integration with Azure IoT Hub inside the Thingsboard. Open **Integrations** section and add new Integration with type
+Next we will create Integration with Azure IoT Hub inside the IoT Hub. Open **Integrations** section and add new Integration with type
 **Azure IoT Hub**
 
 - Name: IoT Hub
@@ -109,7 +109,7 @@ If **PEM** credentials type is selected, the following configuration should be p
 ## Validation
 
 ##### Validate Uplink Messages
-Lets verify our integration. First, lets put message into uplink stream, so Thingsboard will fetch this message. 
+Lets verify our integration. First, lets put message into uplink stream, so IoT Hub will fetch this message. 
 
 Open page with your Device and go to **Message to Device**.
 

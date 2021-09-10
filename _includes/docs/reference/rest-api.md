@@ -4,12 +4,12 @@
 
 ## Swagger UI
 
-ThingsBoard REST API may be explored using Swagger UI.
-You can explore REST API of the live-demo server using this **[Swagger UI link.](https://demo.thingsboard.io/swagger-ui.html)**
+IoT Hub REST API may be explored using Swagger UI.
+You can explore REST API of the live-demo server using this **[Swagger UI link.](https://iothub.magenta.at/swagger-ui.html)**
 
-To explore REST API provided by ThingsBoard Professional Edition please use the following **[Swagger UI link.](https://thingsboard.cloud/swagger-ui.html)**
+To explore REST API provided by IoT Hub please use the following **[Swagger UI link.](https://thingsboard.cloud/swagger-ui.html)**
 
-Once you will install ThingsBoard server you can open UI using the following URL:
+Once you will install IoT Hub server you can open UI using the following URL:
     
 ``` 
 http://YOUR_HOST:PORT/swagger-ui.html
@@ -17,7 +17,7 @@ http://YOUR_HOST:PORT/swagger-ui.html
 
 ## REST API Auth
 
-ThingsBoard uses JWT for request auth.
+IoT Hub uses JWT for request auth.
 You will need to populate "X-Authorization" header using "Authorize" button in the top-right corner of the Swagger UI.
 
  ![image](/images/reference/swagger-ui.png)
@@ -30,13 +30,13 @@ In case of local installation:
 
 In case of live-demo server:
  
- - replace **$THINGSBOARD_URL** with **demo.thingsboard.io**
+ - replace **$THINGSBOARD_URL** with **iothub.magenta.at**
  - replace **tenant@thingsboard.org** with your live-demo username (email)
  - replace **tenant** password with your live-demo password
 
 {% if docsPrefix == "pe/" or docsPrefix == "paas/" %}
 
-The easiest way to get your account is to use [ThingsBoard Cloud](https://thingsboard.cloud/signup) server.
+The easiest way to get your account is to use [IoT Hub](https://thingsboard.cloud/signup) server.
 
 {% else %}
 
@@ -54,5 +54,5 @@ B,response.json,json,resources/get-token-response.json,/docs/reference/resources
  
 ## Java REST API Client
 
-ThingsBoard team provides client library written in Java to simplify consumption of the REST API.
+IoT Hub team provides client library written in Java to simplify consumption of the REST API.
 Please see Java REST API Client [documentation page](/docs/{{docsPrefix}}reference/rest-client/) for more details.

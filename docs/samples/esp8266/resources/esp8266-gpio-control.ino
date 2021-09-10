@@ -13,7 +13,7 @@
 #define GPIO0_PIN 3
 #define GPIO2_PIN 5
 
-char thingsboardServer[] = "demo.thingsboard.io";
+char thingsboardServer[] = "iothub.magenta.at";
 
 WiFiClient wifiClient;
 
@@ -138,7 +138,7 @@ void reconnect() {
       }
       Serial.println("Connected to AP");
     }
-    Serial.print("Connecting to ThingsBoard node ...");
+    Serial.print("Connecting toIoT Hub node ...");
     // Attempt to connect (clientId, username, password)
     if ( client.connect("ESP8266 Device", TOKEN, NULL) ) {
       Serial.println( "[DONE]" );

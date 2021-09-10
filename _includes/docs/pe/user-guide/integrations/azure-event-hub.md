@@ -10,7 +10,7 @@
 
 ## Overview
 
-Azure Event Hub Integration allows to stream data from Azure Event Hub to ThingsBoard and converts device payloads to the ThingsBoard format.
+Azure Event Hub Integration allows to stream data from Azure Event Hub to IoT Hub and converts device payloads to the IoT Hub format.
 
  ![image](/images/user-guide/integrations/azure-event-hub-integration.svg)
  
@@ -46,7 +46,7 @@ First step done and now we go to create Device
 
 ## Create Uplink Converter
 
-Before creating the integration, you need to create an Uplink converter in Data converters. Uplink is necessary in order to convert the incoming data from the device into the required format for displaying them in ThingsBoard. Click on the “plus” and on “Create new converter”. To view the events, enable Debug. In the function decoder field, specify a script to parse and transform data.
+Before creating the integration, you need to create an Uplink converter in Data converters. Uplink is necessary in order to convert the incoming data from the device into the required format for displaying them in IoT Hub. Click on the “plus” and on “Create new converter”. To view the events, enable Debug. In the function decoder field, specify a script to parse and transform data.
 
 **NOTE** Although the Debug mode is very useful for development and troubleshooting, leaving it enabled in production mode may tremendously increase the disk space, used by the database, because all the debugging data is stored there. It is highly recommended to turn the Debug mode off when done debugging.
 
@@ -81,13 +81,13 @@ return result;
 ```
 
 
-## Create Integration in Thingsboard
+## Create Integration in IoT Hub
 
 At this time, we have own IoT hub with Device
 
 1) Now in Azure Portal you have to choose **Built-in endpoints** in menu and copy **Event Hub-compatible endpoint**
 
-2) Go to the Thingsboard and choose **Integrations** in menu
+2) Go to the IoT Hub and choose **Integrations** in menu
 
 3) Click on **'plus'** and in pop-up we have to enter Name, choose type **Azure Event Hub**, choose uplink converter and paste in field Connection String copied **Event Hub-compatible endpoint**
 
@@ -99,7 +99,7 @@ At this time, we have own IoT hub with Device
 
 ## Test it up!
 
-For now, we ready to test our integration. So we have to go to Rule Chain (tab in Thingsboard menu), choose one of your rule chains and do next steps:
+For now, we ready to test our integration. So we have to go to Rule Chain (tab in IoT Hub menu), choose one of your rule chains and do next steps:
 
 1) In field Search Nodes type 'gen' and find in the menu **generator**. Drag it on the Canvas. In pop-up specify **name** of Generator, **number of messages** and generate function, you can use our example. Next click 'Add' 
    
@@ -141,7 +141,7 @@ Looks nice if you see type 'Uplink' in 'Events' of your integration and message 
 
 Use the Dashboards to work with data. Dashboards are a modern format for collecting and visualizing data sets. Visibility of data presentation is achieved through a variety of widgets.
 
-ThingsBoard has examples of several types of dashboards that you can use. You can find them in **Solution templates** tab.
+IoT Hub has examples of several types of dashboards that you can use. You can find them in **Solution templates** tab.
 
 {% include images-gallery.html imageCollection="solution_templates" %}
 
@@ -175,12 +175,12 @@ return result;
 
 **Ok, downlink converter ready, integration ready, Let's test it:**
 
-1) After test of uplink, integration have created the device inside Thingsboard, and we need to know for which Rule Chain it connected.
-Just go to the Device groups in Thingsboard menu choose **All** and find the device with the name that we have used in the uplink.
+1) After test of uplink, integration have created the device inside IoT Hub, and we need to know for which Rule Chain it connected.
+Just go to the Device groups in IoT Hub menu choose **All** and find the device with the name that we have used in the uplink.
 
 {% include images-gallery.html imageCollection="device_groups_all" preview="false" %}
 
-2) Find the name of necessary rule chain in Rule Chain tabs of Thingsboard menu. 
+2) Find the name of necessary rule chain in Rule Chain tabs of IoT Hub menu. 
 
 3) In 'Search nodes' field type 'down' and choose in the menu **integration downlink**, drag it to the Canvas. In pop-up you need to specify the name of rule node and choose our integration
 

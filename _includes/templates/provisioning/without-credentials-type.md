@@ -1,6 +1,6 @@
 | **Parameter**             | **Example value**                            | **Description**                                                                |
 |:-|:-
-| *deviceName*              | **DEVICE_NAME**                              | Device name in ThingsBoard.                                                    |
+| *deviceName*              | **DEVICE_NAME**                              | Device name in IoT Hub.                                                    |
 | *provisionDeviceKey*      | **PUT_PROVISION_KEY_HERE**                   | Provisioning device key, you should take it from configured device profile.    |
 | *provisionDeviceSecret*   | **PUT_PROVISION_SECRET_HERE**                | Provisioning device secret, you should take it from configured device profile. | 
 |-
@@ -42,8 +42,8 @@ RESULT_CODES = {
     }
 
 
-THINGSBOARD_HOST = "thingsboard.cloud"  # ThingsBoard instance host
-THINGSBOARD_PORT = 1883  # ThingsBoard instance MQTT port
+THINGSBOARD_HOST = "thingsboard.cloud"  # IoT Hub instance host
+THINGSBOARD_PORT = 1883  # IoT Hub instance MQTT port
 
 PROVISION_DEVICE_KEY = "PUT_PROVISION_KEY_HERE"  # Provision device key, replace this value with your value from device profile.
 PROVISION_DEVICE_SECRET = "PUT_PROVISION_SECRET_HERE"  # Provision device secret, replace this value with your value from device profile.
@@ -70,17 +70,17 @@ class ProvisionClient(Client):
 
     def __on_connect(self, client, userdata, flags, rc):  # Callback for connect
         if rc == 0:
-            print("[Provisioning client] Connected to ThingsBoard ")
+            print("[Provisioning client] Connected to IoT Hub ")
             client.subscribe(self.PROVISION_RESPONSE_TOPIC)  # Subscribe to provisioning response topic
             provision_request = dumps(self.__provision_request)
             print("[Provisioning client] Sending provisioning request %s" % provision_request)
             client.publish(self.PROVISION_REQUEST_TOPIC, provision_request)  # Publishing provisioning request topic
         else:
-            print("[Provisioning client] Cannot connect to ThingsBoard!, result: %s" % RESULT_CODES[rc])
+            print("[Provisioning client] Cannot connect to IoT Hub!, result: %s" % RESULT_CODES[rc])
 
     def __on_message(self, client, userdata, msg):
         decoded_payload = msg.payload.decode("UTF-8")
-        print("[Provisioning client] Received data from ThingsBoard: %s" % decoded_payload)
+        print("[Provisioning client] Received data from IoT Hub: %s" % decoded_payload)
         decoded_message = loads(decoded_payload)
         provision_device_status = decoded_message.get("status")
         if provision_device_status == "SUCCESS":
@@ -90,7 +90,7 @@ class ProvisionClient(Client):
         self.disconnect()
 
     def provision(self):
-        print("[Provisioning client] Connecting to ThingsBoard (provisioning client)")
+        print("[Provisioning client] Connecting to IoT Hub (provisioning client)")
         self.__clean_credentials()
         self.connect(self._host, self._port, 60)
         self.loop_forever()
@@ -128,9 +128,9 @@ class ProvisionClient(Client):
 
 def on_tb_connected(client, userdata, flags, rc):  # Callback for connect with received credentials
     if rc == 0:
-        print("[ThingsBoard client] Connected to ThingsBoard with credentials: %s" % client._username)
+        print("[IoT Hub client] Connected to IoT Hub with credentials: %s" % client._username)
     else:
-        print("[ThingsBoard client] Cannot connect to ThingsBoard!, result: %s" % RESULT_CODES[rc])
+        print("[IoT Hub client] Cannot connect to IoT Hub!, result: %s" % RESULT_CODES[rc])
 
 
 if __name__ == '__main__':
@@ -168,7 +168,7 @@ if __name__ == '__main__':
 
 ### CoAP Example script
 
-To communicate with ThingsBoard we will use CoAPthon3 module, so we should install it: <br><br>
+To communicate with IoT Hub we will use CoAPthon3 module, so we should install it: <br><br>
 
 <b>pip3 install coapthon3 --user</b>
 

@@ -1,13 +1,13 @@
 ---
 layout: thingsboard-edge
-title: ThingsBoard Edge
+title: IoT Hub Edge
 description:
 ---
 
 <section id="intro">
 	<main>
-		<h1 class="intro_title">The <a href="/docs/edge/what-is-edge/">ThingsBoard Edge</a> is a ThingsBoard's software product for edge computing</h1>
-        <p class="labeling">It allows bringing data analysis and management to the edge, while seamlessly synchronizing with the cloud (ThingsBoard CE/PE).</p>
+		<h1 class="intro_title">The <a href="/docs/edge/what-is-edge/">IoT Hub Edge</a> is a IoT Hub's software product for edge computing</h1>
+        <p class="labeling">It allows bringing data analysis and management to the edge, while seamlessly synchronizing with the cloud (IoT Hub CE/PE).</p>
 	</main>
 </section>
 
@@ -35,7 +35,7 @@ description:
                 <img src="/images/edge/data-filtering.svg">
             </div>
             <div class="feature-des"><h2>Traffic filtering</h2>
-                <p>Filter data from devices on the ThingsBoard Edge service and push to cloud only subset of the data.</p>
+                <p>Filter data from devices on the IoT Hub Edge service and push to cloud only subset of the data.</p>
                 <a class="read-more-button" href="/docs/edge/what-is-edge/">Read more<img class="arrow first" src="/images/pe/read-more-arrow.svg"><img class="arrow second" src="/images/pe/read-more-arrow.svg"><img class="arrow third" src="/images/pe/read-more-arrow.svg"></a>
             </div>
         </div>
@@ -79,7 +79,7 @@ description:
         <div id="background">
             <div class="main3"></div><div class="small8"></div>
         </div>
-        <h3>More about ThingsBoard Edge strengths</h3>
+        <h3>More about IoT Hub Edge strengths</h3>
         <div class="cards row">
             <div class="col-lg-6">
                 <div class="block">

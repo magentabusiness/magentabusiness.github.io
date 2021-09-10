@@ -1,6 +1,6 @@
 {% capture postgresql-info %}
-ThingsBoard team recommends to use PostgreSQL for development and production environments with reasonable load (< 5000 msg/sec).
-Many cloud vendors support managed PostgreSQL servers which is a cost-effective solution for most of ThingsBoard instances.
+IoT Hub team recommends to use PostgreSQL for development and production environments with reasonable load (< 5000 msg/sec).
+Many cloud vendors support managed PostgreSQL servers which is a cost-effective solution for most of IoT Hub instances.
 {% endcapture %}
 {% include templates/info-banner.md content=postgresql-info %}
 
@@ -11,12 +11,12 @@ Download the installation file (PostgreSQL 11.7 or newer releases) [here](https:
 During PostgreSQL installation, you will be prompted for superuser (postgres) password.
 Don't forget this password. It will be used later. For simplicity, we will substitute it with "postgres".
 
-##### Create ThingsBoard Database
+##### Create IoT Hub Database
 
 Once installed, launch the "pgAdmin" software and login as superuser (postgres). 
 Open your server and create database "thingsboard" with owner "postgres".
 
-##### ThingsBoard Configuration
+##### IoT Hub Configuration
 
 In case you have specified the PostgreSQL superuser password as "postgres", you can skip this step. 
 

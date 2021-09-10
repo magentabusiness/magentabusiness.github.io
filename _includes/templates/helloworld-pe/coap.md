@@ -12,7 +12,7 @@ echo -n '{"temperature": 25}' | coap post coap://$THINGSBOARD_HOST/api/v1/$ACCES
 ```
 {: .copy-code}
 
-For example, $HOST_NAME reference ThingsBoard Cloud server, access token is ABC123:
+For example, $HOST_NAME reference IoT Hub server, access token is ABC123:
 
 ```bash
 echo -n '{"temperature": 25}' | coap post coap://coap.thingsboard.cloud/api/v1/ABC123/telemetry 

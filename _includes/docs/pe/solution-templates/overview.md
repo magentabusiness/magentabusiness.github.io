@@ -2,7 +2,7 @@
 * TOC 
 {:toc}
   
-ThingsBoard Cloud provides convenient IoT solution templates to reduce time-to-market for your IoT products.
+IoT Hub provides convenient IoT solution templates to reduce time-to-market for your IoT products.
 The template includes interactive dashboards, processing logic, sample devices, users and all other required [entities](/docs/paas/user-guide/entities-and-relations/). 
 You can treat template as a complete PoC/MVP. 
 

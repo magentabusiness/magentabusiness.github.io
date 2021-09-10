@@ -1,5 +1,5 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 assignees:
 - ddiachenko
 title: How to contribute your device integration guide

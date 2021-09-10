@@ -1,14 +1,14 @@
 ---
 layout: common
 title: Fleet tracking and fleet management
-description: Fleet tracking and fleet management with ThingsBoard IoT Platform
+description: Fleet tracking and fleet management with IoT Hub IoT Platform
 horizontaltoc: "true"
 
 ---
 
 ## Overview
 
-ThingsBoard platform provides out-of-the-box components and APIs to dramatically reduce time to market and your effort to develop
+IoT Hub platform provides out-of-the-box components and APIs to dramatically reduce time to market and your effort to develop
 fleet tracking solutions and gps vehicle tracking systems.
 Save up to 90% of development time for your fleet tracking project by utilizing following benefits:
 
@@ -23,12 +23,12 @@ The platform provides production ready server infrastructure to connect your sma
 
 The following interactive dashboard hosted on live demo server represents vehicle routes and state indicators visualization that may be embedded in your IoT fleet tracking project. See dashboard description below.
 
-<iframe class="demoDashboardFrame" src="https://demo.thingsboard.io/dashboard/83cbe060-0edc-11e7-942c-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0&source=docs" frameborder="0" width="100%"></iframe>
+<iframe class="demoDashboardFrame" src="https://iothub.magenta.at/dashboard/83cbe060-0edc-11e7-942c-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0&source=docs" frameborder="0" width="100%"></iframe>
 <div class="center" style="margin-bottom: 20px;">
-    <a target="_blank" href="https://demo.thingsboard.io/dashboard/3d0bf910-ee09-11e6-b619-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0&source=realtimeIotDashboards" class="button">Live demo</a>
+    <a target="_blank" href="https://iothub.magenta.at/dashboard/3d0bf910-ee09-11e6-b619-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0&source=realtimeIotDashboards" class="button">Live demo</a>
 </div>
 
-The attached dashboard demonstrates real-time data from vehicle sensors that is collected using ThingsBoard MQTT API. The data is stored in Cassandra DB on our demo server.
+The attached dashboard demonstrates real-time data from vehicle sensors that is collected using IoT Hub MQTT API. The data is stored in Cassandra DB on our demo server.
 
 We would like to highlight following features:
 
@@ -39,14 +39,14 @@ We would like to highlight following features:
 
 ## Fleet tracking solution overview
  
-The diagram below identifies data flow and integration points for typical fleet tracking solution that uses ThingsBoard platform to collect and analyze vehicle data.
+The diagram below identifies data flow and integration points for typical fleet tracking solution that uses IoT Hub platform to collect and analyze vehicle data.
 
 ![Fleet tracking solution diagram](/images/iot-use-cases/fleet-tracking.svg)
 
 You may notice that there are plenty of connectivity options for vehicle sensors: either direct connection to the cloud or through the IoT Gateway.
 Platform supports industry standard encryption algorithms (SSL) and device credentials types (X.509 certificates and access tokens).
 The collected data is stored in Cassandra - fault-tolerant and reliable NoSQL database.
-ThingsBoard Rule Engine allows you to forward incoming data to various analytics systems, such as Apache Spark or Hadoop using Kafka or other Message buses.
+IoT Hub Rule Engine allows you to forward incoming data to various analytics systems, such as Apache Spark or Hadoop using Kafka or other Message buses.
 
 ## Learn more
 

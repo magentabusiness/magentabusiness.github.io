@@ -23,7 +23,7 @@ docker-compose logs tb-core1 tb-core2 tb-rule-engine1 tb-rule-engine2 | grep ERR
 docker-compose logs -f tb-rule-engine1 tb-rule-engine2 > rule-engine.log
 ```
 
-**Note:** you can always log into the ThingsBoard container and view logs there:
+**Note:** you can always log into the IoT Hub container and view logs there:
 
 ```bash
 docker ps

@@ -1,6 +1,6 @@
 {% capture hybrid-info %}
-ThingsBoard team recommends using Timescale database only for companies that already use TimescaleDB in production.
-In this case, ThingsBoard will be storing timeseries data in TimescaleDB Hypertable while continue to use PostgreSQL for main entities (devices/assets/dashboards/customers).  
+IoT Hub team recommends using Timescale database only for companies that already use TimescaleDB in production.
+In this case, IoT Hub will be storing timeseries data in TimescaleDB Hypertable while continue to use PostgreSQL for main entities (devices/assets/dashboards/customers).  
 {% endcapture %}
 {% include templates/info-banner.md content=hybrid-info %}
 
@@ -11,7 +11,7 @@ Download the installation file (PostgreSQL 11.7 or newer releases) [here](https:
 During PostgreSQL installation, you will be prompted for superuser (postgres) password.
 Don't forget this password. It will be used later. For simplicity, we will substitute it with "postgres".
 
-##### Create ThingsBoard Database
+##### Create IoT Hub Database
 
 Once installed, launch the "pgAdmin" software and login as superuser (postgres). 
 Open your server and create database "thingsboard" with owner "postgres".
@@ -20,7 +20,7 @@ Open your server and create database "thingsboard" with owner "postgres".
 
 {% include templates/install/timescale-windows-install.md %}
 
-##### ThingsBoard Configuration
+##### IoT Hub Configuration
 
 Open the Notepad or other editor as administrator user (right click on the app icon and select "Run as administrator").  
 Open the following file for editing (select "All Files" instead of "Text Documents" in file choosing dialog, the encoding is UTF-8):

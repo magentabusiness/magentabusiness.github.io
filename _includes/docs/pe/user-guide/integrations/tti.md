@@ -11,7 +11,7 @@
 
 ## Overview
 TheThingsIndustries is LoRaWAN network designed for connecting your devices using LoRaWAN stack. 
-After integrating TheThingsIndustries with the ThingsBoard, you can connect, communicate, process and visualize data from devices in the ThingsBoard IoT platform.
+After integrating TheThingsIndustries with the IoT Hub, you can connect, communicate, process and visualize data from devices in the IoT Hub IoT platform.
 
 
 ## The Things Stack
@@ -28,10 +28,10 @@ The first step is to create an **application** in TheThingsIndustries console. G
 ##### Payload Decoder
 Our device submits data in binary format. We have 2 options where to decode this data:
 
-- **TheThingsIndustries decoder** - data will be decoded before entering the ThingsBoard
-- **ThingsBoard converters** - uplink/downlink converters will be used to decode data from binary format into JSON
+- **TheThingsIndustries decoder** - data will be decoded before entering the IoT Hub
+- **IoT Hub converters** - uplink/downlink converters will be used to decode data from binary format into JSON
 
-In this tutorial, we will make an initial transformation into JSON with TTI decoder and then use ThingsBoard converters for correct data processing.
+In this tutorial, we will make an initial transformation into JSON with TTI decoder and then use IoT Hub converters for correct data processing.
 In real life scenario, it is up to you where to decode/encode data, because it is possible to do this on any side.
 
 After application registered in TTI, go to **Payload formatters**, **Uplink** select decoder function. We will take the first byte as a temperature value from a device 
@@ -77,16 +77,16 @@ Fill the **AppSKey** by generation button.
 Press **Add end device** button.
 
 
-## Integration with the ThingsBoard
+## Integration with the IoT Hub
 
 We need to create Integration on The Things Industries, to do this open **Integrations** - **MQTT** and press **Generate new API key**. 
 Copy username and password we will need it later.
 
 ![image](/images/user-guide/integrations/tti/tti-integration.png)
 
-Now we can start configuring the ThingsBoard.
+Now we can start configuring the IoT Hub.
 
-##### ThingsBoard Uplink Data Converter
+##### IoT Hub Uplink Data Converter
 
 First, we need to create Uplink Data converter that will be used for receiving messaged from the TTI. The converter should transform incoming payload into the required message format.
 Message must contains **deviceName** and **deviceType**. Those fields are used for submitting data to the correct device. If a device was not found then new device will be created.
@@ -159,8 +159,8 @@ return result;
 ![image](/images/user-guide/integrations/tti/tb-uplink.png)
 
 
-##### ThingsBoard Downlink Data Converter
-For sending Downlink messages from the ThingsBoard to the device inside TTI, we need to define downlink Converter.
+##### IoT Hub Downlink Data Converter
+For sending Downlink messages from the IoT Hub to the device inside TTI, we need to define downlink Converter.
 In general, output from Downlink converter should have the following structure:
 {% highlight json %}
 {
@@ -204,7 +204,7 @@ This converter will take **version** field from the incoming message and add it 
 
 ##### TTI Integration
 
-Next we will create Integration with TheThingsIndustries inside the ThingsBoard. Open **Integrations** section and add new Integration with type
+Next we will create Integration with TheThingsIndustries inside the IoT Hub. Open **Integrations** section and add new Integration with type
 **TheThingsIndustries**
 
 - **Name**: *TTI Integration*
@@ -224,11 +224,11 @@ Next we will create Integration with TheThingsIndustries inside the ThingsBoard.
 ##### Validate Uplink Messages
 Lets verify our integration. 
 
-When device sends data, we can check it in the ThingsBoard, to do this:
+When device sends data, we can check it in the IoT Hub, to do this:
 
 Go to **Device Group** -> **All** -> **thermostat1** - you can see that 
 
-- new device was registered in the Thingsboard with name "thermostat1"
+- new device was registered in the IoT Hub with name "thermostat1"
 - In the **Latest Telemetry** section you will see that last submitted temperature = 2.
 
 ![image](/images/user-guide/integrations/tti/tb-device-telemetry.png)

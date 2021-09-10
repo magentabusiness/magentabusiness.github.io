@@ -1,7 +1,7 @@
 ---
 layout: pricing
 title: Pricing
-description: ThingsBoard Products Pricing
+description: IoT Hub Products Pricing
 defaultActivePricingSection: thingsboard-pe-options
 defaultActivateSelectProduct: true
 
@@ -11,7 +11,7 @@ defaultActivateSelectProduct: true
     <div class="pricing-header">
        <div class="pricing-hero">
         <div class="pricing-hero-content">
-            <h1>ThingsBoard Pricing</h1>
+            <h1>IoT Hub Pricing</h1>
         </div>
        </div>
        <nav id="inner-navigation" class="inner-navigation">
@@ -20,7 +20,7 @@ defaultActivateSelectProduct: true
                 <a href="javascript:void(0);" onClick="activatePricingSection('thingsboard-ce')">Community Edition</a>
             </li>
             <li id="menu-item-thingsboard-pe-options" class="menu-item tb-logo">
-                <a href="javascript:void(0);" onClick="activatePricingSection('thingsboard-pe-options', true)">Professional Edition</a>
+                <a href="javascript:void(0);" onClick="activatePricingSection('thingsboard-pe-options', true)">IoT Hub</a>
             </li>
             <li id="menu-item-trendz" class="menu-item trendz-logo">
                <a href="javascript:void(0);" onClick="activatePricingSection('trendz')">Trendz Analytics</a>
@@ -62,7 +62,7 @@ defaultActivateSelectProduct: true
                         <div class="pricing-square">
                             <h2>Maker</h2>
                             <div class="pricing-square-description">
-                                <p>Become familiar with ThingsBoard features</p>
+                                <p>Become familiar with IoT Hub features</p>
                             </div>
                             <h4 class="pricing-square-price mb-0">
                                 $10
@@ -221,7 +221,7 @@ defaultActivateSelectProduct: true
                     <div class="pricing-square">
                         <h2>Maker</h2>
                         <div class="pricing-square-description">
-                            <p>To become familiar with ThingsBoard PE features</p>
+                            <p>To become familiar with IoT Hub features</p>
                         </div>
                         <h4 class="pricing-square-price mb-0">
                             $10
@@ -336,7 +336,7 @@ defaultActivateSelectProduct: true
                     <div class="pricing-square">
                         <h2>Perpetual Fallback License</h2>
                         <div class="pricing-square-description" style="min-height: 50px;">
-                            <p>Use your ThingsBoard instance forever</p>
+                            <p>Use your IoT Hub instance forever</p>
                         </div>
                         <h4 class="pricing-square-price mb-0">
                             $2999
@@ -506,7 +506,7 @@ defaultActivateSelectProduct: true
                             </div>
                             <ul>
                                 <li class="pricing-square-item">Anomalies detection</li>
-                                <li class="pricing-square-item">One-click integration with ThingsBoard</li>
+                                <li class="pricing-square-item">One-click integration with IoT Hub</li>
                                 <li class="pricing-square-item">Self-service analytics</li>
                                 <li class="pricing-square-item">Data clear and filtering</li>
                                 <li class="pricing-square-item">Advanced visualizations</li>
@@ -651,7 +651,7 @@ defaultActivateSelectProduct: true
                     <div class="pricing-square">
                         <h2>Edge Perpetual Fallback License</h2>
                         <div class="pricing-square-description" style="min-height: 50px;">
-                            <p>Use your ThingsBoard Edge instance forever</p>
+                            <p>Use your IoT Hub Edge instance forever</p>
                         </div>
                         <h4 class="pricing-square-price mb-0">
                             Custom
@@ -682,7 +682,7 @@ defaultActivateSelectProduct: true
         <div class="item" data-tag="h4" data-item-id="what-is-pay-as-you-go" data-title="What is &quot;Pay-as-you-go&quot; license?">
             <div class="container">
                 <p>
-                    Pay-as-you-go license is based on different subscription plans and represents a typical SaaS model. Each plan is usually limited by the number of devices or assets that ThingsBoard instance will manage. The billing is being provided either monthly or yearly.
+                    Pay-as-you-go license is based on different subscription plans and represents a typical SaaS model. Each plan is usually limited by the number of devices or assets that IoT Hub instance will manage. The billing is being provided either monthly or yearly.
                     Your credit card will be charged once per billing period, at the beginning of the corresponding period.  
                 </p>    
             </div>    
@@ -694,11 +694,11 @@ defaultActivateSelectProduct: true
                     Whenever you purchase a perpetual fallback license you get one year of software updates included. 
                     You can purchase additional updates if required. 
                     Typical price for one year update package is within 40% of inital license cost.                    
-                    <br/><br/><b>Example 1</b>: Let's assume you purchased one license for ThingsBoard v2.4 in June 2019 and received an update to ThingsBoard v3.0 in May 2020.
-                    This means you can continue using this ThingsBoard v3.0 instance forever. You can also migrate to different hardware without issues.
-                    <br/><br/><b>Example 2</b>: Let's assume you purchased one license for ThingsBoard v2.4 in June 2019 and received an update to ThingsBoard v3.0 in May 2020.
-                    This means you can continue using this ThingsBoard v3.0 instance forever. Later, in August 2020 we released v3.1. 
-                    In order to get the v3.1 update, you will need to purchase an additional year of software updates for ThingsBoard PE which will cost 1199 USD. 
+                    <br/><br/><b>Example 1</b>: Let's assume you purchased one license for IoT Hub v2.4 in June 2019 and received an update to IoT Hub v3.0 in May 2020.
+                    This means you can continue using this IoT Hub v3.0 instance forever. You can also migrate to different hardware without issues.
+                    <br/><br/><b>Example 2</b>: Let's assume you purchased one license for IoT Hub v2.4 in June 2019 and received an update to IoT Hub v3.0 in May 2020.
+                    This means you can continue using this IoT Hub v3.0 instance forever. Later, in August 2020 we released v3.1. 
+                    In order to get the v3.1 update, you will need to purchase an additional year of software updates for IoT Hub which will cost 1199 USD. 
                     However, you can continue using v3.0 without updates.                    
                 </p>
             </div>    
@@ -706,7 +706,7 @@ defaultActivateSelectProduct: true
         <div class="item" data-tag="h4" data-item-id="can-i-migrate" data-title="Can I migrate from one subscription to another?">
             <div class="container">
                 <p>
-                    Yes. One of the greatest features of <a href="/products/license-server/">ThingsBoard License Server</a> is the ability to change subscription plans. 
+                    Yes. One of the greatest features of <a href="/products/license-server/">IoT Hub License Server</a> is the ability to change subscription plans. 
                     Now it is as simple as that. The flow is: Subscription details — Update subscription — Choose a plan. 
                     Also there is an Update subscription button in the action icons tray.   
                 </p>    
@@ -719,7 +719,7 @@ defaultActivateSelectProduct: true
                     For that purpose we made a possibility to Activate/Deactivate instance.
                     In order to migrate between servers customer must deactivate its instance, install the software on new server and then use already existing license secret.
                     Backup of all data from previos instance is necessary if customer wants to continue utilizing same environment after migration.
-                    Notice: license check mechanism won't allow using ThingsBoard Professional Edition on two or more servers simultaneously (unless you purchase two instances of the same subscription plan).         
+                    Notice: license check mechanism won't allow using IoT Hub on two or more servers simultaneously (unless you purchase two instances of the same subscription plan).         
                 </p>    
             </div>    
         </div>
@@ -733,7 +733,7 @@ defaultActivateSelectProduct: true
                 </p>    
             </div>    
         </div>
-        <div class="item" data-tag="h4" data-item-id="thingsboard-edge-discount" data-title="Can we have a discounted price for ThingsBoard Edges in case of bulk purchase?">
+        <div class="item" data-tag="h4" data-item-id="thingsboard-edge-discount" data-title="Can we have a discounted price for IoT Hub Edges in case of bulk purchase?">
             <div class="container">
                 <p>
                     We do understand that you may need multiple edge computing services. Price reduction starts from 10 licenses. Discount tiers are as follows: 10–50 Edges — 10%, 51–100 Edges — 12%, above 100 Edges — 15% off the license cost regardless the plan.
@@ -744,7 +744,7 @@ defaultActivateSelectProduct: true
         <div class="item" data-tag="h4" data-item-id="trial-enable" data-title="How can I enable free trial?">
             <div class="container">
                 <p>
-                    Customer may <a href="https://thingsboard.cloud/signup" target="blank">signup on ThingsBoard Professional Edition Cloud</a> and get 30 days of free trial on Maker plan. 
+                    Customer may <a href="https://thingsboard.cloud/signup" target="blank">signup on IoT Hub Cloud</a> and get 30 days of free trial on Maker plan. 
                     30 days of seamless experience and the newest features, except white-labeling!
                 </p>    
             </div>    
@@ -756,10 +756,10 @@ defaultActivateSelectProduct: true
                 </p>    
             </div>    
         </div>
-        <div class="item" data-tag="h4" data-item-id="trial-enable" data-title="If I want to be a re-seller of ThingsBoard, shall I have a discount?">
+        <div class="item" data-tag="h4" data-item-id="trial-enable" data-title="If I want to be a re-seller of IoT Hub, shall I have a discount?">
             <div class="container">
                 <p>
-                 We have clear and transparent conditions for partners. Send us a request via <a href="/docs/contact-us/" target="blank">contact us</a> and we will discuss with you all benefits of cooperation with ThingsBoard Inc.   
+                 We have clear and transparent conditions for partners. Send us a request via <a href="/docs/contact-us/" target="blank">contact us</a> and we will discuss with you all benefits of cooperation with IoT Hub Inc.   
                 </p>    
             </div>    
         </div>
@@ -774,24 +774,24 @@ defaultActivateSelectProduct: true
             <div class="container">
                 <p>
                 As part of evaluation process, we can give you 30 days of free trial. 
-                Please, send us your request on <a href="/docs/contact-us/?subject=ThingsBoard%20Products">Contact us</a>.      
+                Please, send us your request on <a href="/docs/contact-us/?subject=IoT Hub%20Products">Contact us</a>.      
                 </p>    
             </div>    
         </div>
-        <h3 id="section3">ThingsBoard Cloud</h3>
-        <div class="item" data-tag="h4" data-item-id="what-is-cloud" data-title="What is ThingsBoard Cloud?">
+        <h3 id="section3">IoT Hub</h3>
+        <div class="item" data-tag="h4" data-item-id="what-is-cloud" data-title="What is IoT Hub?">
             <div class="container">
                 <p>
-                ThingsBoard Cloud is a fully managed, scalable, and fault-tolerant platform for your IoT applications with combined subscription plans based on a monthly fee which already includes hosting costs.
+                IoT Hub is a fully managed, scalable, and fault-tolerant platform for your IoT applications with combined subscription plans based on a monthly fee which already includes hosting costs.
                 </p>  
             </div>    
         </div>
-        <div class="item" data-tag="h4" data-item-id="difference" data-title="What the difference between Pay-as-you-go option and ThingsBoard Cloud?">
+        <div class="item" data-tag="h4" data-item-id="difference" data-title="What the difference between Pay-as-you-go option and IoT Hub?">
             <div class="container">
                 <p>
-                Pay-as-you-go subscription plans include license fees only with no hosing services, which means that you have to deploy ThingsBoard on an external cloud (AWS, Azure, GCP, etc), or on the local server (On-premise). This means you have to pay separately for the infrastructure and manage ThingsBoard PE server.
-                ThingsBoard Cloud allows you to use ThingsBoard Professional Edition platform as a service on ThingsBoard enviroment.<br><br>
-                Example: Pay as you go Prototype subscription fee is $99 comparing to Prototype subscription on ThingsBoard cloud which is $149. ThingsBoard Cloud Prototype subscription price differs from the Prototype plan for the self-managed license by hosting fee which included in the Cloud subscription price
+                Pay-as-you-go subscription plans include license fees only with no hosing services, which means that you have to deploy IoT Hub on an external cloud (AWS, Azure, GCP, etc), or on the local server (On-premise). This means you have to pay separately for the infrastructure and manage IoT Hub server.
+                IoT Hub allows you to use IoT Hub platform as a service on IoT Hub enviroment.<br><br>
+                Example: Pay as you go Prototype subscription fee is $99 comparing to Prototype subscription on IoT Hub cloud which is $149. IoT Hub Prototype subscription price differs from the Prototype plan for the self-managed license by hosting fee which included in the Cloud subscription price
                 </p>  
             </div>    
         </div>
@@ -806,14 +806,14 @@ defaultActivateSelectProduct: true
                   <li>Priority support;</li>
                   <li>On-demand training and email consulting;</li>
                 </ul>
-                The price <b>per-device</b> starts from <b>USD 0.01</b> per month and is determined based on the data points each device generates. <a href="https://thingsboard.io/docs/contact-us/">Contact us</a> to get a precise quote for the custom Enterprise subscription.
+                The price <b>per-device</b> starts from <b>USD 0.01</b> per month and is determined based on the data points each device generates. <a href="https://iothub.magenta.at/docs/contact-us/">Contact us</a> to get a precise quote for the custom Enterprise subscription.
                 </p>  
             </div>    
         </div>
         <div class="item" data-tag="h4" data-item-id="api-limits" data-title="Is there any API Limits?">
             <div class="container">
                 <p>
-                Yes, ThingsBoard Cloud subscriptions have Entity, API and Rate limits. See subscription <a href="/products/paas/subscription/" target="blank">documentation</a> for more details.
+                Yes, IoT Hub subscriptions have Entity, API and Rate limits. See subscription <a href="/products/paas/subscription/" target="blank">documentation</a> for more details.
                 </p>  
             </div>    
         </div>
@@ -821,7 +821,7 @@ defaultActivateSelectProduct: true
             <div class="container">
                 <p>
                 Data point is a key-value pair that your device telemetry messages contain. For example, the message <i>{"temperature":42, "humidity": 60}</i> contains two data points.  
-                Each ThingsBoard Cloud subscription plan has a maximum number of data points that can be sent from all your devices per month. 
+                Each IoT Hub subscription plan has a maximum number of data points that can be sent from all your devices per month. 
                 There are other <a href="/products/paas/subscription/" target ="blank">important parameters</a> of the subscription.
                 </p>  
             </div>    
@@ -829,8 +829,8 @@ defaultActivateSelectProduct: true
         <div class="item" data-tag="h4" data-item-id="white-labeling" data-title="What is a white-labeling?">
             <div class="container">
                 <p>
-               ThingsBoard web interface allows you to configure your company or product logo and color scheme in 2 minutes with zero coding efforts and no service restart required. 
-               See feature <a href="/docs/user-guide/white-labeling/" target ="blank">documentation</a> for more details. ThingsBoard Cloud extends white-labeling feature with ability to configure own domain name easily. But currently it is not possible to connect third-party SMTP servers, notifications will be sent from our system. We plan to add this ability in future releases.
+               IoT Hub web interface allows you to configure your company or product logo and color scheme in 2 minutes with zero coding efforts and no service restart required. 
+               See feature <a href="/docs/user-guide/white-labeling/" target ="blank">documentation</a> for more details. IoT Hub extends white-labeling feature with ability to configure own domain name easily. But currently it is not possible to connect third-party SMTP servers, notifications will be sent from our system. We plan to add this ability in future releases.
                See <a href="/products/paas/domains/" target ="blank">managing domain</a> for more details.
                 </p>  
             </div>    
@@ -839,23 +839,23 @@ defaultActivateSelectProduct: true
         <div class="item" data-tag="h4" data-item-id="community-support" data-title="What does community support mean?">
             <div class="container">
                 <p>
-                Community support is free-of-charge option. It is a volonteering initiative, provided by our team and other ThingsBoard contributors. 
-                Please, be aware that support services is one of ThingsBoard Inc. business fields. 
-                Although our engineers successfully handle community support requests in their free time, this doesn't mean any obligation for ThingsBoard Inc.
+                Community support is free-of-charge option. It is a volonteering initiative, provided by our team and other IoT Hub contributors. 
+                Please, be aware that support services is one of IoT Hub Inc. business fields. 
+                Although our engineers successfully handle community support requests in their free time, this doesn't mean any obligation for IoT Hub Inc.
                 We encourage you to <a href="/docs/">read documentation</a>, subscribe to our <a href="https://www.youtube.com/c/thingsboard" target ="blank">YouTube channel</a> where we host <a href="https://www.youtube.com/watch?v=M0CaascgDmg&list=PLYEKB_XwLCZJ6T8RPLTjRwMw0eoabpEKO" target="blank">the free Education course</a> and most demanded tutorials, samples and guides.
                 </p>
-                <p>Customer may also rely on answers from ThingsBoard <a href="https://github.com/thingsboard/thingsboard/issues" target="blank">community on GitHub</a> (issues page), send their queries to <a href="https://groups.google.com/forum/#!forum/thingsboard" target="blank">Q&A forum</a> and start <a href="http://stackoverflow.com/questions/tagged/thingsboard" target="blank">Stack Overflow</a> themes.   
+                <p>Customer may also rely on answers from IoT Hub <a href="https://github.com/thingsboard/thingsboard/issues" target="blank">community on GitHub</a> (issues page), send their queries to <a href="https://groups.google.com/forum/#!forum/thingsboard" target="blank">Q&A forum</a> and start <a href="http://stackoverflow.com/questions/tagged/thingsboard" target="blank">Stack Overflow</a> themes.   
                 </p>    
             </div>    
         </div>
         <div class="item" data-tag="h4" data-item-id="professional-support" data-title="What support plans do you have?">
             <div class="container">
                 <p>
-                We provide support bundles which contain server issues and application development tips. Please review ThingsBoard professional <a href="/docs/services/support/" target="blank">support plans</a>. Also we will add ability to buy support plan from <a href="https://license.thingsboard.io/">License portal</a>.
+                We provide support bundles which contain server issues and application development tips. Please review IoT Hub professional <a href="/docs/services/support/" target="blank">support plans</a>. Also we will add ability to buy support plan from <a href="https://license.iothub.magenta.at/">License portal</a>.
                 </p>    
             </div>    
         </div>
-        <div class="item" data-tag="h4" data-item-id="optional-support" data-title="What does this optional support for ThingsBoard Edge mean?">
+        <div class="item" data-tag="h4" data-item-id="optional-support" data-title="What does this optional support for IoT Hub Edge mean?">
             <div class="container">
                 <p>
                 It means, that Edge support is not bundled to the license. For now we provide basic support for customers with more than 25 edge licenses of any type.
@@ -882,11 +882,11 @@ defaultActivateSelectProduct: true
                 <p><b>Delivery Policy</b></p>
                 <p>
                 The software is available for download and installation from our website. 
-                See <a href="https://thingsboard.io/docs/user-guide/install/pe/installation-options/">Installation Guides</a> for more details.
+                See <a href="https://iothub.magenta.at/docs/user-guide/install/pe/installation-options/">Installation Guides</a> for more details.
                 In order to activate the software you will need to obtain the license key. Instruction how to obtain and use the license key is provided in the installation guide. 
                 See <a href="https://www.youtube.com/watch?v=dK-QDFGxWek">How-to get pay-as-you-go subscription</a> 
                 or <a href="https://www.youtube.com/watch?v=GPe0lHolWek">How-to get perpetual license</a> for more details. 
-                Please <a href="https://thingsboard.io/docs/contact-us/">contact us</a> if you have any questions or require support.
+                Please <a href="https://iothub.magenta.at/docs/contact-us/">contact us</a> if you have any questions or require support.
                 </p>
                <p></p>
             </div>    

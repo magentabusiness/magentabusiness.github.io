@@ -1,7 +1,7 @@
 ---
-layout: docwithnav
-title: ESP32 OTA using ThingsBoard
-description: ThingsBoard IoT Platform sample for ESP32 OTA update using ThingsBoard
+layout: docwithnav-pe
+title: ESP32 OTA using IoT Hub
+description: IoT Hub IoT Platform sample for ESP32 OTA update using IoT Hub
 hidetoc: "true"
 ---
 
@@ -11,7 +11,7 @@ hidetoc: "true"
 ## Introduction
 {% include templates/what-is-thingsboard.md %}
 [ESP32](https://www.espressif.com/en/products/hardware/esp32/overview) is a series of low-cost, low-power SOC microcontrollers with integrated self-contained Wi-Fi and dual-mode Bluetooth.  
-This sample application allow you to deliver a new firmware images to EPS32 with using ThingsBoard and OTA.
+This sample application allow you to deliver a new firmware images to EPS32 with using IoT Hub and OTA.
 
 ## Video tutorial
 
@@ -33,10 +33,10 @@ See video tutorial below for this sample with additional detailed demonstration 
 - Any development board with ESP32-PICO-D4 chip.  
   For this sample we were using [ESP32-PICO-KIT mini development board](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/get-started-pico-kit.html#overview)  
     <img src="/images/samples/esp32/ota/esp32_board.png" width="400"/>
-- Account in ThingsBoard application. You can use your own instance or [ThingsBoard Cloud](https://thingsboard.cloud)  
+- Account in IoT Hub application. You can use your own instance or [IoT Hub](https://thingsboard.cloud)  
   We need to say that this sample works well with both CE and PE, but we use PE cloud since it has more features and in the next sample we will show how to do mass firmware updates for multiple devices simultaneously.
 
-## ThingsBoard configuration
+## IoT Hub configuration
 1. Create a new device, name it as *ESP32* and set it's type as *ESP32_OTA*.  
 The specified device type will be used later in the rule chains and in the dashboard.
 
@@ -44,7 +44,7 @@ The specified device type will be used later in the rule chains and in the dashb
 
 2. Add the new rule chain that will update the device's server attribute *fwStateIsSynced*.  
 The attribute type is boolean and it will be used to show on the dashboard is firmware synced or not.  
-Download, import [Check is ESP32 firmware synced](/docs/samples/esp32/resources/check_is_esp32_firmware_synced.json) rule chain into ThingsBoard and save it:
+Download, import [Check is ESP32 firmware synced](/docs/samples/esp32/resources/check_is_esp32_firmware_synced.json) rule chain into IoT Hub and save it:
 
     <img data-gifffer="/images/samples/esp32/ota/import_rule_chain.gif" width="1000"/>
 
@@ -66,8 +66,8 @@ To the added node should be connected two links:
     - After the user save the new OTA configuration in the widget.  
     The new value of firmware version passes through *Attributes Updated* link in the rule chain as server attribute *lastTargetFwVer*.
 
-4. Download and import [OTA widgets (ThingsBoard v3.x)](/docs/samples/esp32/resources/ota_widgets_v2.json) or [OTA widgets (ThingsBoard v2.x)](/docs/samples/esp32/resources/ota_widgets.json) widgets group to Widgets Library to allow specifying of firmware URL and version and send OTA configuration to ESP32.
-5. Download and import [OTA for ESP32 (ThingsBoard v3.x)](/docs/samples/esp32/resources/ota_for_esp32_v2.json) or [OTA for ESP32 (ThingsBoard v2.x)](/docs/samples/esp32/resources/ota_for_esp32.json) dashboard to Dashboards Group. The dashboard has the alias *ESP32_OTA_alias* for the devices with type *ESP32_OTA*.  
+4. Download and import [OTA widgets (IoT Hub v3.x)](/docs/samples/esp32/resources/ota_widgets_v2.json) or [OTA widgets (IoT Hub v2.x)](/docs/samples/esp32/resources/ota_widgets.json) widgets group to Widgets Library to allow specifying of firmware URL and version and send OTA configuration to ESP32.
+5. Download and import [OTA for ESP32 (IoT Hub v3.x)](/docs/samples/esp32/resources/ota_for_esp32_v2.json) or [OTA for ESP32 (IoT Hub v2.x)](/docs/samples/esp32/resources/ota_for_esp32.json) dashboard to Dashboards Group. The dashboard has the alias *ESP32_OTA_alias* for the devices with type *ESP32_OTA*.  
 It allows to show on the dashboard a list of ESP32 with OTA support and the current firmware state (synced or not synced) for every device in the list.  
 User can change and update OTA config of any ESP32 form the list by clicking 'Select OTA configuration' control in the last column.  
 
@@ -76,18 +76,18 @@ User can change and update OTA config of any ESP32 form the list by clicking 'Se
     Because of only one device with type *EPS32_OTA* was created, the table contain only one row. If a new device with type *ESP32_OTA* is added, then it will appear in the dashboard's entity table automatically.
    
 ## Configure and flash firmware for ESP32 factory partition
-1. Clone the sample's sources from [ESP32 OTA](https://github.com/thingsboard/esp32-ota) ThingsBoard repository.
+1. Clone the sample's sources from [ESP32 OTA](https://github.com/thingsboard/esp32-ota) IoT Hub repository.
 2. Go to the directory with the cloned project and configure MQTT broker address, Wi-Fi credentials, etc.   
 Open the terminal and execute next command: 
     ```bash
     make menuconfig
     ```
-    In the opened menu select *ThingsBoard OTA configuration* sub-menu and enter the valid parameters to the fields:
+    In the opened menu select *IoT Hub OTA configuration* sub-menu and enter the valid parameters to the fields:
     -  *WiFi SSID* - login of your WiFi access point
     -  *WiFi Password* - password of your WiFi access point
-    -  *MQTT broker URL* - ThingsBoard MQTT endpoint
-    -  *MQTT broker port* - ThingsBoard MQTT port
-    -  *MQTT access token* - device's access token in ThingsBoard
+    -  *MQTT broker URL* - IoT Hub MQTT endpoint
+    -  *MQTT broker port* - IoT Hub MQTT port
+    -  *MQTT access token* - device's access token in IoT Hub
 
     <img src="/images/samples/esp32/ota/framework_config.png" width="600"/>
 
@@ -124,7 +124,7 @@ Go to the [root sample directory](https://github.com/thingsboard/esp32-ota) and 
     ```bash
     make flash monitor
     ```
-    If compilation and flashing were successful and ESP32 connected to ThingsBoard, the next log messages are printed:  
+    If compilation and flashing were successful and ESP32 connected to IoT Hub, the next log messages are printed:  
 
     <img src="/images/samples/esp32/ota/monitor_output_after_flashing.png" width="600"/>
 
@@ -140,16 +140,16 @@ Go to the [root sample directory](https://github.com/thingsboard/esp32-ota) and 
     2. The application checks does the flash memory contain the Wi-Fi credentials.
     Because the compiled image was flashed to the *factory* partition and the flash memory was erased, the Wi-Fi credential entered in *menuconfig* are persisted to the flash memory and will be used further.
     3. The application is trying to connect to the provided Wi-Fi access point. 
-    4. After the connection to Wi-Fi access point was established, the application checks does the flash memory contain MQTT URL, port and ThingsBoard access token.  
+    4. After the connection to Wi-Fi access point was established, the application checks does the flash memory contain MQTT URL, port and IoT Hub access token.  
     Because the application was flashed to the *factory* partition and the flash memory was erased, MQTT client parameters (URL, port and access token) entered in *menuconfig* are persisted to the flash memory and will be used further. 
-    5. The application is trying to connect to ThingsBoard over MQTT. 
-    6. After the connection was established, the application fetching shared attributes *targetFwUrl* and *targetFwVer* from ThingsBoard.  
-    It allows to cover the case when EPS32 was powered off or lose the connection with ThingsBoard but the shared attributes were update that time. 
+    5. The application is trying to connect to IoT Hub over MQTT. 
+    6. After the connection was established, the application fetching shared attributes *targetFwUrl* and *targetFwVer* from IoT Hub.  
+    It allows to cover the case when EPS32 was powered off or lose the connection with IoT Hub but the shared attributes were update that time. 
     OTA started only if the shared attributes values aren't empty and *targetFwVer* isn't equal to the hardcoded application's firmware version.  
-    Because any shared attributes were not created in ThingsBoard yet (they will be created through the widget later), for now OTA procedure is skipped.
-    7. The application started to execute a custom task (for example send some telemetry or attributes data to ThingsBoard) and waits for the update of the shared attributes *targetFwUrl* and *targetFwVer* to perform OTA. 
+    Because any shared attributes were not created in IoT Hub yet (they will be created through the widget later), for now OTA procedure is skipped.
+    7. The application started to execute a custom task (for example send some telemetry or attributes data to IoT Hub) and waits for the update of the shared attributes *targetFwUrl* and *targetFwVer* to perform OTA. 
 
-## Performing OTA from ThingsBoard
+## Performing OTA from IoT Hub
 Go to the *OTA for ESP32* dashboard and press *Select OTA configuration* for the device. In opened dashboard enter the next parameters in *OTA control* widget:
   - *Target firmware version* - expected firmware version which is hardcoded in the new firmware image, *v1.2*
   - *Firmware server URL* - link to the new firmware image, *https://raw.githubusercontent.com/thingsboard/esp32-ota/master/firmware/example-v1.2.bin*
@@ -164,9 +164,9 @@ The sample's [firmware](https://github.com/thingsboard/esp32-ota/tree/master/fir
   - [example-v1.2.bin](https://raw.githubusercontent.com/thingsboard/esp32-ota/master/firmware/example-v1.2.bin) - value of *FIRMWARE_VERSION* in [main.h](https://github.com/thingsboard/esp32-ota/blob/master/main/main.h) equals to *v1.2*.  
   *counter* variable in [main_application_task](https://github.com/thingsboard/esp32-ota/blob/master/main/main.c) has value *2*.
 
-After the firmware version and URL were updated on the *OTA control* widget, ThingsBoard sends a MQTT message with the shared attributes to *v1/devices/me/attributes* MQTT topic.  
+After the firmware version and URL were updated on the *OTA control* widget, IoT Hub sends a MQTT message with the shared attributes to *v1/devices/me/attributes* MQTT topic.  
 Because of the ESP32 is subscribed to this MQTT topic, as soon as the update message is received it is parsed and the firmware versions are compared.  
-If the value of *FIRMWARE_VERSION* defined in [main.h](https://github.com/thingsboard/esp32-ota/blob/master/main/main.h) isn't equal to the firmware version received from ThingsBoard, OTA update process will started and *monitor* utility outputs the next logs:
+If the value of *FIRMWARE_VERSION* defined in [main.h](https://github.com/thingsboard/esp32-ota/blob/master/main/main.h) isn't equal to the firmware version received from IoT Hub, OTA update process will started and *monitor* utility outputs the next logs:
 
   <img src="/images/samples/esp32/ota/shared_attributes_updated.png" width="600"/>
 
@@ -175,7 +175,7 @@ The application's flow is the next:
   - shows the warning that firmware versions are different and the difference between them
   - if a server's certificate is valid and an image was downloaded successfully from the provided URL then OTA process starts (*Starting OTA...* message is printed)
   - during OTA process all other tasks could be executed with some delays.  
-    For example, the application sends a telemetry data (in this sample it is the current value of *counter* variable) to ThingsBoard with not determined period.  
+    For example, the application sends a telemetry data (in this sample it is the current value of *counter* variable) to IoT Hub with not determined period.  
     If OTA process was finished successfully, ESP32 will be rebooted and after the start the next logs will be shown:  
 
   <img src="/images/samples/esp32/ota/ota_finished_successfully.png" width="600"/>
@@ -183,7 +183,7 @@ The application's flow is the next:
 Let's review the logs differences in comparison when the firmware was flashed to *factory* partition:
   - running partition now is *ota_0*, not *factory* 
   - Wi-Fi credentials were loaded from the flash memory, the credentials entered in *menuconfig* utility weren't used
-  - MQTT access token for ThingsBoard also was loaded from the flash memory
+  - MQTT access token for IoT Hub also was loaded from the flash memory
   - after the shared attributes were fetched, the new OTA process isn't started because firmware versions are equal
   - the application is waiting for the next update of the shared attributes and a new downloaded image will be written to *ota_1* partition this time.  
 
@@ -195,7 +195,7 @@ After this OTA update *counter* periodically changes its value to 0 or to 1, in 
 
 ## See also
 
-Browse other [samples](/docs/samples) or explore guides related to main ThingsBoard features:
+Browse other [samples](/docs/samples) or explore guides related to main IoT Hub features:
 
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
  - [Telemetry data collection](/docs/user-guide/telemetry/) - how to collect telemetry data.
@@ -203,7 +203,7 @@ Browse other [samples](/docs/samples) or explore guides related to main ThingsBo
  - [Rule Engine](/docs/user-guide/rule-engine/) - how to use rule engine to analyze data from devices.
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
 
-Don't hesitate to star ThingsBoard on **[github](https://github.com/thingsboard/thingsboard)** to help us spread the word.
+Don't hesitate to star IoT Hub on **[github](https://github.com/thingsboard/thingsboard)** to help us spread the word.
 If you have any questions about this sample - post it on the **[issues](https://github.com/thingsboard/esp32-ota/issues)**.
 
 {% include socials.html %}

@@ -3,7 +3,7 @@ layout: docwithnav-paas
 assignees:
 - ashvayka
 title: Devices
-description: ThingsBoard IoT Device management
+description: IoT Hub IoT Device management
 device-pe:
     0:
         image: /images/user-guide/ui/devices/pe/device-pe.png
@@ -64,7 +64,7 @@ device-details-7-pe:
 device-details-8-pe:
     0:
         image: /images/user-guide/ui/devices/pe/device-details-8-pe.png
-        title: 'ThingsBoard provides the ability to track user actions in order to keep an audit log. It is possible to log user actions related to main entities: assets, devices, dashboard, rules, etc.'
+        title: 'IoT Hub provides the ability to track user actions in order to keep an audit log. It is possible to log user actions related to main entities: assets, devices, dashboard, rules, etc.'
 
 device-delete-pe:
     0:

@@ -10,7 +10,7 @@
 CoAP protocol is UDP based, but similar to HTTP it uses request-response model. 
 CoAP observes [option](https://tools.ietf.org/html/rfc7641) allows to subscribe to resources and receive notifications on resource change.
 
-ThingsBoard server nodes act as a CoAP Server that supports both regular and observe requests.
+IoT Hub server nodes act as a CoAP Server that supports both regular and observe requests.
 
 ##### Client libraries setup
 
@@ -41,7 +41,7 @@ Using custom binary format or some serialization framework is also possible. See
 
 ## Telemetry upload API
 
-In order to publish telemetry data to ThingsBoard server node, send POST request to the following URL:
+In order to publish telemetry data to IoT Hub server node, send POST request to the following URL:
  
 ```shell
 coap://host/api/v1/$ACCESS_TOKEN/telemetry
@@ -81,7 +81,7 @@ D,telemetry-data-with-ts.json,json,resources/telemetry-data-with-ts.json,/docs/r
  
 ## Attributes API
 
-ThingsBoard attributes API allows devices to
+IoT Hub attributes API allows devices to
 
 * Upload [client-side](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types) device attributes to the server.
 * Request [client-side](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types) and [shared](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types) device attributes from the server.
@@ -89,7 +89,7 @@ ThingsBoard attributes API allows devices to
  
 ##### Publish attribute update to the server
 
-In order to publish client-side device attributes to ThingsBoard server node, send POST request to the following URL:
+In order to publish client-side device attributes to IoT Hub server node, send POST request to the following URL:
 
 ```shell
 coap://host/api/v1/$ACCESS_TOKEN/attributes
@@ -102,7 +102,7 @@ B,new-attributes-values.json,json,resources/new-attributes-values.json,/docs/ref
 
 ##### Request attribute values from the server
 
-In order to request client-side or shared device attributes to ThingsBoard server node, send GET request to the following URL:
+In order to request client-side or shared device attributes to IoT Hub server node, send GET request to the following URL:
 
 ```shell
 coap://host/api/v1/$ACCESS_TOKEN/attributes?clientKeys=attribute1,attribute2&sharedKeys=shared1,shared2

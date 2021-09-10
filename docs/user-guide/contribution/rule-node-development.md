@@ -1,5 +1,5 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: Rule Node Development Guide
 description: Create custom Rule nodes
 

@@ -1,6 +1,6 @@
 {% include templates/install/queue-aws-sqs-config.md %}
 
-##### ThingsBoard Configuration
+##### IoT Hub Configuration
 
 Open the Notepad or other editor as administrator user (right click on the app icon and select "Run as administrator").  
 Open the following file for editing (select "All Files" instead of "Text Documents" in file choosing dialog, the encoding is UTF-8):

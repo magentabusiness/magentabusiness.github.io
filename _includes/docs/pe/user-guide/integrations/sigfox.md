@@ -2,7 +2,7 @@
 
 ## Overview
 
-Sigfox Integration allows to stream data from Sigfox Backend to ThingsBoard and converts binary device payloads to the ThingsBoard format.
+Sigfox Integration allows to stream data from Sigfox Backend to IoT Hub and converts binary device payloads to the IoT Hub format.
 
  ![image](/images/user-guide/integrations/sigfox-integration.svg)
  

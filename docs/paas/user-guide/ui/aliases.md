@@ -3,7 +3,7 @@ layout: docwithnav-paas
 asiconees:
 - yefimov-andrey
 title: Aliases
-description: ThingsBoard Aliases
+description: IoT Hub Aliases
 
 single-alias:
  0:

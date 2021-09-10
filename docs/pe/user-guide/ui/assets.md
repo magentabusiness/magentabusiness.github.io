@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - ikulikov
 title: Assets
-description: Thingsboard IoT Asset management
+description: IoT Hub IoT Asset management
 asset-intro-pe:
     0:
         image: /images/user-guide/ui/assets/pe/asset-pe.png

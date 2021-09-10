@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-ThingsBoard Rule Engine is a highly customizable and configurable system for complex event processing. 
+IoT Hub Rule Engine is a highly customizable and configurable system for complex event processing. 
 With rule engine you are able to filter, enrich and transform incoming messages originated by IoT devices and related assets. 
 You are also able to trigger various actions, for example, notifications or communication with external systems.
   
@@ -264,14 +264,14 @@ List of the predefined Message Types is presented in the following table:
       <tr>
           <td>ADDED_TO_ENTITY_GROUP</td>
           <td><b>Added to Group</b></td>
-          <td>Event produced when entity was added to <a href="/docs/{{docsPrefix}}user-guide/groups/">Entity Group</a>. This Message Type is specific to <a href="/products/thingsboard-pe/">ThingsBoard PE</a>.</td>
+          <td>Event produced when entity was added to <a href="/docs/{{docsPrefix}}user-guide/groups/">Entity Group</a>. This Message Type is specific to <a href="/products/thingsboard-pe/">IoT Hub PE</a>.</td>
           <td><b>userName</b> - name of the user who performed assignment operation,<br><b>userId</b> - the user Id,<br><b>addedToEntityGroupName</b> - entity group name,<br><b>addedToEntityGroupId</b> - Id of entity group</td>
           <td>empty json payload</td>
       </tr>
       <tr>
           <td>REMOVED_FROM_ENTITY_GROUP</td>
           <td><b>Removed from Group</b></td>
-          <td>Event produced when entity was removed from <a href="/docs/{{docsPrefix}}user-guide/groups/">Entity Group</a>. This Message Type is specific to <a href="/products/thingsboard-pe/">ThingsBoard PE</a>.</td>
+          <td>Event produced when entity was removed from <a href="/docs/{{docsPrefix}}user-guide/groups/">Entity Group</a>. This Message Type is specific to <a href="/products/thingsboard-pe/">IoT Hub PE</a>.</td>
           <td><b>userName</b> - name of the user who performed unassignment operation,<br><b>userId</b> - the user Id,<br><b>removedFromEntityGroupName</b> - entity group name,<br><b>removedFromEntityGroupId</b> - Id of entity group</td>
           <td>empty json payload</td>
       </tr>
@@ -374,7 +374,7 @@ After pressing **Test** output will be returned in right **Output** section.
 
 ## Rule Engine Statistics
 
-ThingsBoard Team have prepared the "default" dashboard for Rule Engine statistics. 
+IoT Hub Team have prepared the "default" dashboard for Rule Engine statistics. 
 This dashboard is automatically loaded for each tenant. 
 You may access it by navigating to "Api Usage"->"View statistics" (see screen below).
 
@@ -388,7 +388,7 @@ You may notice insights about errors in processing and what causes them on the d
 
 ## Debugging
 
-ThingsBoard provides ability to review incoming and outgoing messages for each Rule Node.
+IoT Hub provides ability to review incoming and outgoing messages for each Rule Node.
 To enable debug, user need to ensure that "Debug mode" checkbox is selected in the main configuration window 
 (see first image in the [Configuration](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#configuration) section). 
 
@@ -399,7 +399,7 @@ See image below for a sample debug messages view:
 
 ## Import/Export
 
-You are able to export your rule chain to JSON format and import it to the same or another ThingsBoard instance.
+You are able to export your rule chain to JSON format and import it to the same or another IoT Hub instance.
 
 In order to export rule chain, you should navigate to the **Rule Chains** page and click on the export button located on the particular rule chain card.
  
@@ -415,7 +415,7 @@ To learn more about internals of the rule engine, see [architecture](/docs/{{doc
 
 {% assign feature = "Custom Rule Engine REST API calls" %}{% include templates/pe-feature-banner.md %}
 
-ThingsBoard provides API to send custom REST API calls to the rule engine, process the payload of the request and return result of the processing in response body. 
+IoT Hub provides API to send custom REST API calls to the rule engine, process the payload of the request and return result of the processing in response body. 
 This is useful for a number of use cases. For example:
  
  - extend existing REST API of the platform with custom API calls;
@@ -430,7 +430,7 @@ Note: the entity id you have specified in the call will be the originator of Rul
 
 ## Tutorials
 
-ThingsBoard authors have prepared several tutorials to help you get started with designing rule chains by example:
+IoT Hub authors have prepared several tutorials to help you get started with designing rule chains by example:
 
   * [**Transform incoming messages from device**](/docs/user-guide/rule-engine-2-0/tutorials/transform-incoming-telemetry/) 
   * [**Transform incoming messages using previous messages from device**](/docs/user-guide/rule-engine-2-0/tutorials/transform-telemetry-using-previous-record/) 
@@ -444,7 +444,7 @@ See more tutorials [here](/docs/{{docsPrefix}}guides/).
 
 ## Troubleshooting
 
-If you are using Kafka queue for processing messages, ThingsBoard provides the ability to monitor if the rate of pushing messages to the Kafka is faster than rate of consuming and processing them (in such case you will have a growing latency for message processing).
+If you are using Kafka queue for processing messages, IoT Hub provides the ability to monitor if the rate of pushing messages to the Kafka is faster than rate of consuming and processing them (in such case you will have a growing latency for message processing).
 To enable this functionality, you need to ensure that Kafka consumer-stats are enabled (see <b>queue.kafka.consumer-stats</b> section of the [Configuration properties](/docs/{{docsPrefix}}user-guide/install/config/#thingsboard-core-settings))
 
 Once Kafka consumer-stats are enabled, you will see logs (see [Troubleshooting](/docs/user-guide/troubleshooting/#logs)) about offset lag for consumer groups (there are consumer-group logs for tb-core, tb-rule-engine and all transport services).

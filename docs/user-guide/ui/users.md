@@ -1,9 +1,9 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 assignees:
 - ashvayka
 title: Users
-description: ThingsBoard Users management
+description: IoT Hub Users management
 
 ---
 

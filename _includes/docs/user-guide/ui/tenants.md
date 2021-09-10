@@ -2,8 +2,8 @@
 * TOC
 {:toc}
 
-ThingsBoard support [Multitenancy](https://en.wikipedia.org/wiki/Multitenancy) out-of-the-box.
-You can treat ThingsBoard tenant as a separate business-entity: individual or organization who owns or produce devices.
+IoT Hub support [Multitenancy](https://en.wikipedia.org/wiki/Multitenancy) out-of-the-box.
+You can treat IoT Hub tenant as a separate business-entity: individual or organization who owns or produce devices.
 
 **System administrator** is able to create tenant entities.
 

@@ -87,7 +87,7 @@ body {
 }
 
 .filter .filter-content .actions .check-box:hover {
-	background-color: #2A7DEC;
+	background-color: #e20074;
 	color: #fff;
 	border: unset;
 }
@@ -102,7 +102,7 @@ body {
 }
 
 .filter .filter-content .actions .checked {
-	background-color: #2A7DEC;
+	background-color: #e20074;
 	color: #fff;
 	border: unset;
 	padding-left: 40px;
@@ -217,7 +217,7 @@ body {
 }
 
 .partner-box div.links a {
-	color: #2A7DEC;
+	color: #e20074;
 	font-weight: 500;
 	font-size: 18px;
 	position: relative;

@@ -1,5 +1,5 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: Alarms based on sensor readings
 description: Triggering email alarms based on IoT sensor readings and configurable thresholds
 
@@ -33,7 +33,7 @@ Let's create a Device and provision certain server-side attributes: ZoneId and Z
 
 #### Step 1. Create Device
 
-Navigate to [devices](https://demo.thingsboard.io/devices) page and click on big red "+" button. Populate device name and description and click "Add" button.
+Navigate to [devices](https://iothub.magenta.at/devices) page and click on big red "+" button. Populate device name and description and click "Add" button.
 
 ![image](/images/samples/alarms/add-device.png)
 
@@ -52,7 +52,7 @@ Click on the highlighted "+" button. Add two attributes "ZoneId" and "ZoneType" 
 
 #### Step 3. Create "Server Room Monitoring" Rule
 
-Navigate to [rules](https://demo.thingsboard.io/rules) page and click on big red "+" button. Populate rule name and description first.
+Navigate to [rules](https://iothub.magenta.at/rules) page and click on big red "+" button. Populate rule name and description first.
 
 ![image](/images/samples/alarms/add-rule.png)
 
@@ -135,7 +135,7 @@ Once a rule is saved successfully, don't forget to activate it by clicking on "A
 Let's check our configuration by publishing some telemetry data. We will use access token from the device that we have created in the [first step](#step1-create-device).
  
 ```shell
-mosquitto_pub -d -h "demo.thingsboard.io" -t "v1/devices/me/telemetry" -u "$YOUR_ACCESS_TOKEN" -m "{'temperature':42, 'humidity':74}"
+mosquitto_pub -d -h "iothub.magenta.at" -t "v1/devices/me/telemetry" -u "$YOUR_ACCESS_TOKEN" -m "{'temperature':42, 'humidity':74}"
 ```
 
 ## Troubleshooting

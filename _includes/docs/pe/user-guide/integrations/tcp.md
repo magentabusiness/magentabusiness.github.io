@@ -10,7 +10,7 @@
 
 ## Overview
 
-TCP Integration allows to stream data from devices which use a TCP transport protocol to ThingsBoard and converts payloads of these devices into the ThingsBoard format.
+TCP Integration allows to stream data from devices which use a TCP transport protocol to IoT Hub and converts payloads of these devices into the IoT Hub format.
 
 
 **Please note** TCP Integration can be started only as [Remote Integration](/docs/{{peDocsPrefix}}user-guide/integrations/remote-integrations). It could be started on the same machine, where TB instance is running, or you can start in on another machine, that has access over the network to the TB instance.
@@ -25,8 +25,8 @@ Please review the integration diagram to learn more.
 
 In this tutorial, we will use:
 
- - ThingsBoard Professional Edition instance — [thingsboard.cloud](https://thingsboard.cloud);
- - TCP Integration, running externally and connected to the cloud ThingsBoard PE instance;
+ - IoT Hub instance — [thingsboard.cloud](https://thingsboard.cloud);
+ - TCP Integration, running externally and connected to the cloud IoT Hub instance;
  - **echo** command which intended to display a line of text, and will redirect it's output to **netcat** (**nc**) utility;
  - **netcat** (**nc**) utility to establish TCP connections, receive data from there and transfer them;    
 
@@ -112,11 +112,11 @@ The **“Out”** field displays messages to device:
 
 {% include images-gallery.html imageCollection="events_out" %}
 
-An example of a sent message and a response from ThingsBoard in the terminal:
+An example of a sent message and a response from IoT Hub in the terminal:
 
 {% include images-gallery.html imageCollection="terminal" %}
 
-This command will send the Uplink message to the ThingsBoard and will wait for Downlink message for 60 seconds if the message exists. 
+This command will send the Uplink message to the IoT Hub and will wait for Downlink message for 60 seconds if the message exists. 
 To learn how to send Uplink message, please [read here](/docs/{{peDocsPrefix}}user-guide/integrations/tcp/?tcpintegrationsenduplink=text&tcpintegrationhandlerconfiguration=text&tcpintegartionuplinkpayload=json#send-uplink-message)
 
 ### TCP Integration Setup
@@ -157,7 +157,7 @@ Please use **Integration key** and **Integration secret** from the above section
 
 ### Send Uplink message
 
-Once ThingsBoard TCP Integration has been created, the TCP server starts, and then it waits for data from the devices.
+Once IoT Hub TCP Integration has been created, the TCP server starts, and then it waits for data from the devices.
 
 Choose device payload type to send uplink message
 

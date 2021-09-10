@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe
 title: Dart API Client
-description: ThingsBoard PE API client library for Dart developers
+description: Thingsboard API client library for Dart developers
 
 ---
  * TOC
@@ -9,17 +9,17 @@ description: ThingsBoard PE API client library for Dart developers
 
 ## Overview
 
-[Dart ThingsBoard PE API Client](https://pub.dev/packages/thingsboard_pe_client) package is a [Dart](https://dart.dev/) library
-providing model objects and services to communicate with ThingsBoard PE platform using [RESTful APIs](/docs/pe/reference/rest-api/) and WebSocket protocol.
-With Dart Client you can programmatically access ThingsBoard PE API to manage [entities](/docs/pe/user-guide/entities-and-relations/),
+[Dart Thingsboard API Client](https://pub.dev/packages/thingsboard_pe_client) package is a [Dart](https://dart.dev/) library
+providing model objects and services to communicate with Thingsboard platform using [RESTful APIs](/docs/pe/reference/rest-api/) and WebSocket protocol.
+With Dart Client you can programmatically access Thingsboard API to manage [entities](/docs/pe/user-guide/entities-and-relations/),
 query [telemetry data](/docs/pe/user-guide/telemetry/) and get real-time updates via [WebSocket API](/docs/pe/user-guide/telemetry/#websocket-api).
-The Dart ThingsBoard PE API Client is also a part of ThingsBoard PE Mobile Application.
+The Dart Thingsboard API Client is also a part of Thingsboard Mobile Application.
 
-The version of the Dart ThingsBoard PE API Client depends on the version of the platform that you are using.
+The version of the Dart Thingsboard API Client depends on the version of the platform that you are using.
 
-## Installing Dart ThingsBoard API Client (Professional Edition)
+## Installing Dart Thingsboard API Client (Thingsboard)
 
-To use Dart ThingsBoard PE API Client package in your Dart/Flutter project run this command:
+To use Dart Thingsboard API Client package in your Dart/Flutter project run this command:
 
 With Dart:
 
@@ -54,18 +54,18 @@ import 'package:thingsboard_pe_client/thingsboard_client.dart';
 
 ### Basic Usage
 
-The next sample code shows how to instantiate ThingsBoard Client, perform login and get user details of current logged in user.
+The next sample code shows how to instantiate Thingsboard Client, perform login and get user details of current logged in user.
 
 ```dart
 import 'package:thingsboard_pe_client/thingsboard_client.dart';
 
-// ThingsBoard REST API URL
+// Thingsboard REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
+    // Create instance of Thingsboard API Client
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
@@ -98,13 +98,13 @@ The following sample code shows how to get allowed permissions of current logged
 ```dart
 import 'package:thingsboard_pe_client/thingsboard_client.dart';
 
-// ThingsBoard REST API URL
+// Thingsboard REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
+    // Create instance of Thingsboard API Client
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
@@ -137,13 +137,13 @@ The following sample code shows how to fetch user devices via page link.
 ```dart
 import 'package:thingsboard_pe_client/thingsboard_client.dart';
 
-// ThingsBoard REST API URL
+// Thingsboard REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
+    // Create instance of Thingsboard API Client
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
@@ -175,13 +175,13 @@ The following sample code shows how to fetch user dashboards via page link.
 ```dart
 import 'package:thingsboard_pe_client/thingsboard_client.dart';
 
-// ThingsBoard REST API URL
+// Thingsboard REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
+    // Create instance of Thingsboard API Client
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
@@ -213,13 +213,13 @@ The following sample code shows how to fetch entity groups.
 ```dart
 import 'package:thingsboard_pe_client/thingsboard_client.dart';
 
-// ThingsBoard REST API URL
+// Thingsboard REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
+    // Create instance of Thingsboard API Client
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
@@ -258,13 +258,13 @@ The following sample code shows how to use Entity Data Query API to count total 
 ```dart
 import 'package:thingsboard_pe_client/thingsboard_client.dart';
 
-// ThingsBoard REST API URL
+// Thingsboard REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
+    // Create instance of Thingsboard API Client
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
@@ -326,13 +326,13 @@ The following sample code shows how to use Entity Data Query API to get all acti
 ```dart
 import 'package:thingsboard_pe_client/thingsboard_client.dart';
 
-// ThingsBoard REST API URL
+// Thingsboard REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
+    // Create instance of Thingsboard API Client
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
@@ -405,13 +405,13 @@ The following sample code demonstrates basic concepts of device management API (
 ```dart
 import 'package:thingsboard_pe_client/thingsboard_client.dart';
 
-// ThingsBoard REST API URL
+// Thingsboard REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
+    // Create instance of Thingsboard API Client
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
@@ -470,13 +470,13 @@ import 'dart:math';
 
 import 'package:thingsboard_pe_client/thingsboard_client.dart';
 
-// ThingsBoard REST API URL
+// Thingsboard REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
+    // Create instance of Thingsboard API Client
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
@@ -580,6 +580,6 @@ void main() async {
 
 #### More examples
 
-You can find more examples to learn how to use Dart ThingsBoard PE API Client **[here](https://github.com/thingsboard/dart_thingsboard_pe_client/tree/master/example)**.
+You can find more examples to learn how to use Dart Thingsboard API Client **[here](https://github.com/thingsboard/dart_thingsboard_pe_client/tree/master/example)**.
 
 

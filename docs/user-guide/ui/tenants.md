@@ -1,9 +1,9 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 assignees:
 - ashvayka
 title: Tenants
-description: ThingsBoard Tenants management
+description: IoT Hub Tenants management
 
 ---
 

@@ -10,8 +10,8 @@
 
 ## Introduction
 
-It is possible to execute any ThingsBoard Integration remotely from main ThingsBoard instance.
-This guide contains step-by-step instructions how to launch ThingsBoard integration remotely.
+It is possible to execute any IoT Hub Integration remotely from main IoT Hub instance.
+This guide contains step-by-step instructions how to launch IoT Hub integration remotely.
 For example, we will launch MQTT integration that connects to the local MQTT Broker and pushes data to 
 [thingsboard.cloud](https://thingsboard.cloud/signup).  
 
@@ -19,10 +19,10 @@ See [deployment options](/docs/{{peDocsPrefix}}user-guide/integrations/#deployme
 
 ## Prerequisites
 
-We assume you already have a tenant administrator account on your own ThingsBoard PE v2.4.1+ instance or
+We assume you already have a tenant administrator account on your own IoT Hub v2.4.1+ instance or
 [thingsboard.cloud](https://thingsboard.cloud/signup).  
 
-## ThingsBoard configuration steps
+## IoT Hub configuration steps
 
 ### Step 1. Create default Uplink and Downlink Converters
 
@@ -49,7 +49,7 @@ Let's copy-paste the integration key and secret from the integration details.
 
 ### Choose your platform and install
 
-One can install ThingsBoard Integration via Docker, Debian or RPM packages.
+One can install IoT Hub Integration via Docker, Debian or RPM packages.
 Please use one of the next steps.
 
  * [Docker on Linux or Mac OS](#docker-on-linuxmac)
@@ -162,7 +162,7 @@ TCP/UDP<br/> Integration<br/>%,%tcpudp%,%templates/install/integration/tcpudp-rh
 
 ## Remote integration configuration
 
-Remote integration configuration is done via ThingsBoard UI and there is no specific steps.
+Remote integration configuration is done via IoT Hub UI and there is no specific steps.
 Explore guides and video tutorials related to specific integrations:
 
  - [HTTP](/docs/{{peDocsPrefix}}user-guide/integrations/http/)

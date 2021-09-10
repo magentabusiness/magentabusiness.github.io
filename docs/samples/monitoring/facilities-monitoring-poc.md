@@ -1,7 +1,7 @@
 ---
-layout: docwithnav
-title: Facilities monitoring system prototype using ThingsBoard
-description: Facilities monitoring system prototype using IoT Devices and ThingsBoard
+layout: docwithnav-pe
+title: Facilities monitoring system prototype using IoT Hub
+description: Facilities monitoring system prototype using IoT Devices and IoT Hub
 ---
 
 {% include templates/old-guide-notice.md %}
@@ -31,7 +31,7 @@ The total cost of each device that includes sensor and connectivity module is ap
 
 ## Server-side infrastructure
 
-The server-side part of the solution will be based on the ThingsBoard IoT platform which is 100% open-source and can be deployed both in the cloud, on premises or even on Raspberry Pi 3. The collected data is stored in Cassandra database due to built-in fault-tolerance and scalability. We have recently launched Live Demo instance to simplify  the getting-started process, so we will use this instance in the tutorial.
+The server-side part of the solution will be based on the IoT Hub IoT platform which is 100% open-source and can be deployed both in the cloud, on premises or even on Raspberry Pi 3. The collected data is stored in Cassandra database due to built-in fault-tolerance and scalability. We have recently launched Live Demo instance to simplify  the getting-started process, so we will use this instance in the tutorial.
 
 ## Development and Configuration steps
 
@@ -128,11 +128,11 @@ This dashboard shows last minute of sensor readings that are reported each secon
 
 In order to demonstrate this PoC in action you need to do two simple steps:
 
- - [Sign-up](https://demo.thingsboard.io/signup) or [login](https://demo.thingsboard.io) to the live demo instance and save your login and password.
+ - [Sign-up](https://iothub.magenta.at/signup) or [login](https://iothub.magenta.at) to the live demo instance and save your login and password.
  - Download and launch device emulator using this [link](https://github.com/thingsboard/samples/releases/download/v1.0-tfm/facilities-monitoring.jar). 
 
 ```shell
-java -jar facilities-monitoring.jar demo.thingsboard.io
+java -jar facilities-monitoring.jar iothub.magenta.at
 ```
 
 Once started, the emulator will ask you for your live demo login and password. This information will be used to get the JWT token and execute REST API calls in order to:
@@ -145,7 +145,7 @@ Once started, the emulator will ask you for your live demo login and password. T
 
 This prototype was written by two engineers literally in one day. Most of the time was spent on the client-side code (Lua script for real device and emulator). The server-side part of the prototype has zero coding and was all about configuration of the rules, plugins, and dashboards.
 
-This demonstrates how easy is to prototype and build IoT solutions using [ThingsBoard](http://thingsboard.io). Of course, there is a certain learning curve that you need to pass, but we hope that this article and other [docs](http://thingsboard.io/docs/) will help you to do this.
+This demonstrates how easy is to prototype and build IoT solutions using [IoT Hub](http://iothub.magenta.at). Of course, there is a certain learning curve that you need to pass, but we hope that this article and other [docs](http://iothub.magenta.at/docs/) will help you to do this.
 
 If you found this article interesting, please leave your feedback, questions or feature requests in the comments section and “star” our project on the [github](https://github.com/thingsboard/thingsboard) in order to stay tuned for new releases and tutorials.
 
@@ -158,6 +158,6 @@ If you found this article interesting, please leave your feedback, questions or 
     - [Temperature upload over MQTT using Arduino UNO, ESP8266 and DHT22 sensor](/docs/samples/arduino/temperature/)
     - [Temperature upload over MQTT using NodeMCU and DHT11 sensor](/docs/samples/nodemcu/temperature/)
  
- - [ThingsBoard github page](https://github.com/thingsboard/thingsboard)
+ - [IoT Hub github page](https://github.com/thingsboard/thingsboard)
  - [Emulator source code](https://github.com/thingsboard/samples)
  - [Emulator binary](https://github.com/thingsboard/samples/releases/download/v1.0-tfm/facilities-monitoring.jar)

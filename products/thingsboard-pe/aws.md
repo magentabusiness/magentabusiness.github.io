@@ -1,11 +1,11 @@
 ---
 layout: pe-aws
-title: ThingsBoard Professional Edition on AWS Marketplace
+title: IoT Hub on AWS Marketplace
 description: 
 redirect_to: "/pricing/"
 ---
 
-# ThingsBoard Professional Edition on AWS Marketplace
+# IoT Hub on AWS Marketplace
 
 <br/>
 <br/>
@@ -156,7 +156,7 @@ redirect_to: "/pricing/"
     <div class="item" data-tag="h4" data-item-id="what-does-free-trial-mean" data-title="How can I enable free trial?">
         <div class="container">
             <p>
-                We recommend to use ThingsBoard Professional Edition Live Demo for the seamless experience and the newest features from the latest source code! 
+                We recommend to use IoT Hub Live Demo for the seamless experience and the newest features from the latest source code! 
                 Note that this is a shared environment with hardware and software limitations introduced to host multiple trial tenants on the same server instance(s).  
             </p>    
         </div>    
@@ -169,7 +169,7 @@ redirect_to: "/pricing/"
             </p>    
         </div>    
     </div>
-    <div class="item" data-tag="h4" data-item-id="what-is-the-total-cost-of-ownership-tco-for-my-tb-pe-instance" data-title="What is the Total Cost of Ownership (TCO) for my TB PE instance? ">
+    <div class="item" data-tag="h4" data-item-id="what-is-the-total-cost-of-ownership-tco-for-my-tb-pe-instance" data-title="What is the Total Cost of Ownership (TCO) for my IoT Hub instance? ">
         <div class="container">
             <p>The typical total cost of ownership consists of:</p>
             <ul>
@@ -177,15 +177,15 @@ redirect_to: "/pricing/"
                 <li>AWS EC2 instance price - we believe <a href="https://www.ec2instances.info/">ec2instances.info</a> is a convenient resource to compare prices.</li>
                 <li>Additional EC2 costs for network traffic, disk space and other optional services (Cloud Watch or similar)</li>
             </ul>            
-            <p>Example A: The price for TB PE Maker instance based on t2.micro with 20 GB disk will cost approximately $20.5 per month:</p>            
+            <p>Example A: The price for IoT Hub Maker instance based on t2.micro with 20 GB disk will cost approximately $20.5 per month:</p>            
             <ul>
-                <li>$10.08 for 720 hours of TB PE Maker license fee</li>
+                <li>$10.08 for 720 hours of IoT Hub Maker license fee</li>
                 <li>$8.468 for 1 month of t2.micro usage</li>
                 <li>$2.0 for 20 GB of EBS volume per month</li>
             </ul>             
-            <p>Example B: The price for TB PE Prototype instance based on t2.medium with 100 GB disk will cost approximately $143.862 per month:</p>            
+            <p>Example B: The price for IoT Hub Prototype instance based on t2.medium with 100 GB disk will cost approximately $143.862 per month:</p>            
             <ul>
-                <li>$99.99 for 720 hours of TB PE Maker license fee</li>
+                <li>$99.99 for 720 hours of IoT Hub Maker license fee</li>
                 <li>$33.872 for 1 month of t2.medium usage</li>
                 <li>$10.0 for 100 GB of EBS volume per month</li>
             </ul>
@@ -195,26 +195,26 @@ redirect_to: "/pricing/"
     <div class="item" data-tag="h4" data-item-id="what-saving-options-are-available" data-title="What saving options are available?">
         <div class="container">
             <p>
-                Save up to 18% on a yearly TB PE AWS marketplace license or deploy TB PE on premises for additional savings. Additional AWS EC2 infrastructure savings are available for reserved EC2 instances. See <a href="https://aws.amazon.com/marketplace/help/buyer-annual-subscription">AWS FAQ</a> for more details.
+                Save up to 18% on a yearly IoT Hub AWS marketplace license or deploy IoT Hub on premises for additional savings. Additional AWS EC2 infrastructure savings are available for reserved EC2 instances. See <a href="https://aws.amazon.com/marketplace/help/buyer-annual-subscription">AWS FAQ</a> for more details.
             </p>    
         </div>    
     </div>
     <h3 id="installation--configuration">Installation &amp; Configuration</h3>
-    <div class="item" data-tag="h4" data-item-id="how-do-i-install-tb-pe-on-aws" data-title="How to install TB PE on AWS Marketplace?">
+    <div class="item" data-tag="h4" data-item-id="how-do-i-install-tb-pe-on-aws" data-title="How to install IoT Hub on AWS Marketplace?">
         <div class="container">
             <p>
                 See <a href="/docs/user-guide/install/aws-marketplace-pe/">official documentation page</a> for more details.
             </p>    
         </div>    
     </div>
-    <div class="item" data-tag="h4" data-item-id="how-do-i-ssh-tb-pe-on-aws" data-title="How to connect to my new TB PE instance using SSH?">
+    <div class="item" data-tag="h4" data-item-id="how-do-i-ssh-tb-pe-on-aws" data-title="How to connect to my new IoT Hub instance using SSH?">
         <div class="container">
             <p>
                 See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html">official documentation page</a> for more details.
             </p>    
         </div>    
     </div>
-    <div class="item" data-tag="h4" data-item-id="how-do-i-putty-tb-pe-on-aws" data-title="How to connect to my new TB PE instance using PuTTY?">
+    <div class="item" data-tag="h4" data-item-id="how-do-i-putty-tb-pe-on-aws" data-title="How to connect to my new IoT Hub instance using PuTTY?">
         <div class="container">
             <p>
                 See <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html">official documentation page</a> for more details.
@@ -236,7 +236,7 @@ redirect_to: "/pricing/"
             </p>    
         </div>    
     </div>
-    <div class="item" data-tag="h4" data-item-id="how-do-i-configure-tb-pe-on-aws" data-title="How do I configure my TB PE instance?">
+    <div class="item" data-tag="h4" data-item-id="how-do-i-configure-tb-pe-on-aws" data-title="How do I configure my IoT Hub instance?">
         <div class="container">
             <p>
                 See <a href="/docs/user-guide/install/config/">official documentation page</a> for more details.
@@ -244,7 +244,7 @@ redirect_to: "/pricing/"
         </div>    
     </div>    
     <h3 id="upgrades--data migration">Upgrades & Data Migration</h3>
-    <div class="item" data-tag="h4" data-item-id="how-do-i-upgrade-tb" data-title="How do I get software updates for my TB PE instance?">
+    <div class="item" data-tag="h4" data-item-id="how-do-i-upgrade-tb" data-title="How do I get software updates for my IoT Hub instance?">
         <div class="container">
             <p>
                 You will receive an email notification about new software versions once it becomes available. This email notification will contain a link to  
@@ -255,8 +255,8 @@ redirect_to: "/pricing/"
     <div class="item" data-tag="h4" data-item-id="how-do-i-backup-db" data-title="How do I backup my database?">
         <div class="container">
             <p>
-                Depending on your instance type and configuration, ThingsBoard may store data in SQL or NoSQL databases. 
-                ThingsBoard may also store data using hybrid database mode. 
+                Depending on your instance type and configuration, IoT Hub may store data in SQL or NoSQL databases. 
+                IoT Hub may also store data using hybrid database mode. 
                 Please review <a href="/docs/reference/#sql-vs-nosql-vs-hybrid-database-approach">architecture docs</a> for more info on available database types.
                 Once you figure out the database type(s) you are using in your instance, you can review official <a href="https://www.postgresql.org/docs/9.1/backup.html">PostgreSQL</a> 
                 or <a href="https://docs.datastax.com/en/cassandra/3.0/cassandra/operations/opsBackupRestore.html">Cassandra</a> documentation. 
@@ -275,16 +275,16 @@ redirect_to: "/pricing/"
                 &nbsp;&nbsp;&nbsp;&nbsp;4) ensure everything is working as expected<br/>
                 &nbsp;&nbsp;&nbsp;&nbsp;5) cancel old subscription if needed<br/><br/>
                 However, if you plan to upgrade from PostgreSQL to Cassandra this may become a challenge. 
-                ThingsBoard team is planning to have a tool for this purpose but the release is scheduled for the end of 2019. 
+                IoT Hub team is planning to have a tool for this purpose but the release is scheduled for the end of 2019. 
                 So, we recommend to maintain the same database type or consider a hybrid database approach.  
             </p>    
         </div>    
     </div>                    
     <h3 id="troubleshooting--support">Troubleshooting &amp; Support</h3>
-    <div class="item" data-tag="h4" data-item-id="how-do-i-find-logs-tb" data-title="Where is my ThingsBoard instance logs?">
+    <div class="item" data-tag="h4" data-item-id="how-do-i-find-logs-tb" data-title="Where is my IoT Hub instance logs?">
         <div class="container">
             <p>
-                ThingsBoard logs are stored in the <i>/var/log/thingsboard</i> folder. 
+                IoT Hub logs are stored in the <i>/var/log/thingsboard</i> folder. 
                 See <a href="/docs/user-guide/install/config/#logging">configuration page</a> to find out how to configure logging levels.
             </p>    
         </div>    
@@ -293,16 +293,16 @@ redirect_to: "/pricing/"
         <div class="container">
             <p>
                 Available community resources are listed below:<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/thingsboard/thingsboard/issues">GitHub issues page</a> - Our GitHub issues page contains a lot of Q&A and discussions about ThingsBoard.<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/thingsboard/thingsboard/issues">GitHub issues page</a> - Our GitHub issues page contains a lot of Q&A and discussions about IoT Hub.<br/>
                 &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://groups.google.com/forum/#!forum/thingsboard">Q&A forum</a> - Our user forum is a great place to go for community support.<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;<a href="http://stackoverflow.com/questions/tagged/thingsboard">Stack Overflow</a> - The ThingsBoard team will also monitor posts tagged thingsboard. 
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="http://stackoverflow.com/questions/tagged/thingsboard">Stack Overflow</a> - The IoT Hub team will also monitor posts tagged thingsboard. 
             </p>    
         </div>    
     </div>
     <div class="item" data-tag="h4" data-item-id="how-do-i-get-free-help-tb" data-title="How do I get professional support?">
         <div class="container">
             <p>
-                Please review ThingsBoard professional <a href="/docs/services/support/">support plans</a> and <a href="/docs/contact-us/">contact us</a>. 
+                Please review IoT Hub professional <a href="/docs/services/support/">support plans</a> and <a href="/docs/contact-us/">contact us</a>. 
             </p>    
         </div>    
     </div>                            

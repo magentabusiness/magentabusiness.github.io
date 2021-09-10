@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe
-title: ThingsBoard Professional Edition Documentation
-description: ThingsBoard Professional Edition documentation - learn about the platform and get your IoT projects running on ThingsBoard
+title: IoT Hub Documentation
+description: IoT Hub documentation - learn about the platform and get your IoT projects running on IoT Hub
 ---
 
 {% assign docsPrefix = "pe/" %}

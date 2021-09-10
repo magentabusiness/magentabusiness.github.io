@@ -29,7 +29,7 @@ sudo systemctl restart postgresql-12.service
 ```
 {: .copy-code}
 
-Connect to the database to create ThingsBoard Edge DB:
+Connect to the database to create IoT Hub Edge DB:
 
 ```bash
 psql -U postgres -d postgres -h 127.0.0.1 -W

@@ -1,6 +1,6 @@
 ---
 layout: thingsboard-paas
-title: ThingsBoard Cloud
+title: IoT Hub
 description: 
 ---
 
@@ -9,9 +9,9 @@ description:
 </div>
 <section id="intro">
 	<main>
-		<h1 class="intro_title"><a href="what-is-thingsboard-cloud/">ThingsBoard Cloud</a> is a fully managed, scalable and fault-tolerant platform for your IoT applications</h1>
+		<h1 class="intro_title"><a href="what-is-thingsboard-cloud/">IoT Hub</a> is a fully managed, scalable and fault-tolerant platform for your IoT applications</h1>
 		<div id="labeling"> 
-        <p>ThingsBoard Cloud is for everyone who would like to use ThingsBoard Professional Edition but don’t want to host their own instance of the platform.</p>
+        <p>IoT Hub is for everyone who would like to use IoT Hub but don’t want to host their own instance of the platform.</p>
 		</div>
         <div id="cards" class="row">
             <div class="col-lg-6">
@@ -23,7 +23,7 @@ description:
             <div class="col-lg-6">
                 <div><img src="/images/paas/advanced-features.svg">
                 <h1>Advanced features</h1>
-                <p>Platform supports all <a href="/products/thingsboard-pe/">Professional Edition</a> features and advanced <a href="/products/paas/domains/">domain management</a>.</p>
+                <p>Platform supports all <a href="/products/thingsboard-pe/">IoT Hub</a> features and advanced <a href="/products/paas/domains/">domain management</a>.</p>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -35,7 +35,7 @@ description:
             <div class="col-lg-6">
                 <div><img src="/images/paas/high-availability.svg">
                 <h1>High availability</h1>
-                <p>ThingsBoard Cloud uses microservices architecture and is deployed in multiple availability zones.</p>
+                <p>IoT Hub uses microservices architecture and is deployed in multiple availability zones.</p>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -163,6 +163,6 @@ description:
 <section id="bottom">
 <main>
 <a href="/pricing/" class="try-paas">Get it now</a><br><br><br><br>
-<a href="/products/paas/privacy-policy/" >ThingsBoard Cloud Privacy policy</a>
+<a href="/products/paas/privacy-policy/" >IoT Hub Privacy policy</a>
 </main>
 </section>

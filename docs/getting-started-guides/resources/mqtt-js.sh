@@ -1,7 +1,7 @@
 #!/bin/sh
 
-# Set ThingsBoard host to "demo.thingsboard.io" or "localhost"
-export THINGSBOARD_HOST=demo.thingsboard.io
+# Set IoT Hub host to "iothub.magenta.at" or "localhost"
+export THINGSBOARD_HOST=iothub.magenta.at
 
 # Replace YOUR_ACCESS_TOKEN with one from Device details panel.
 export ACCESS_TOKEN=YOUR_ACCESS_TOKEN

@@ -9,7 +9,7 @@
 [MQTT](https://en.wikipedia.org/wiki/MQTT) is a lightweight publish-subscribe messaging protocol which probably makes it the most suitable for various IoT devices. 
 You can find more information about MQTT [here](http://mqtt.org/).
 
-ThingsBoard server nodes act as an MQTT Broker that supports QoS levels 0 (at most once) and 1 (at least once) and a set of [configurable](/docs/{{docsPrefix}}user-guide/device-profiles/#mqtt-device-topic-filters) topics.
+IoT Hub server nodes act as an MQTT Broker that supports QoS levels 0 (at most once) and 1 (at least once) and a set of [configurable](/docs/{{docsPrefix}}user-guide/device-profiles/#mqtt-device-topic-filters) topics.
 
 ##### Client libraries setup
 
@@ -24,7 +24,7 @@ The alternative option is to use [Basic MQTT Credentials](/docs/{{docsPrefix}}us
 
 Possible return codes and their reasons during connect sequence:
 
-* **0x00 Connected** - Successfully connected to ThingsBoard MQTT server.
+* **0x00 Connected** - Successfully connected to IoT Hub MQTT server.
 * **0x04 Connection Refused, bad user name or password** - Username is empty.
 * **0x05 Connection Refused, not authorized** - Username contains invalid **$ACCESS_TOKEN**. 
 
@@ -37,7 +37,7 @@ Using custom binary format or some serialization framework is also possible. See
 
 ## Telemetry upload API
 
-In order to publish telemetry data to ThingsBoard server node, send PUBLISH message to the following topic:
+In order to publish telemetry data to IoT Hub server node, send PUBLISH message to the following topic:
  
 ```shell
 v1/devices/me/telemetry
@@ -78,7 +78,7 @@ E,telemetry-data-with-ts.json,json,resources/telemetry-data-with-ts.json,/docs/r
  
 ## Attributes API
 
-ThingsBoard attributes API allows devices to
+IoT Hub attributes API allows devices to
 
 * Upload [client-side](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types) device attributes to the server.
 * Request [client-side](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types) and [shared](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types) device attributes from the server.
@@ -86,7 +86,7 @@ ThingsBoard attributes API allows devices to
  
 ##### Publish attribute update to the server
 
-In order to publish client-side device attributes to ThingsBoard server node, send PUBLISH message to the following topic:
+In order to publish client-side device attributes to IoT Hub server node, send PUBLISH message to the following topic:
 
 ```shell
 v1/devices/me/attributes
@@ -101,7 +101,7 @@ C,new-attributes-values.json,json,resources/new-attributes-values.json,/docs/ref
 
 ##### Request attribute values from the server
 
-In order to request client-side or shared device attributes to ThingsBoard server node, send PUBLISH message to the following topic:
+In order to request client-side or shared device attributes to IoT Hub server node, send PUBLISH message to the following topic:
 
 ```shell
 v1/devices/me/attributes/request/$request_id
@@ -247,7 +247,7 @@ The supported data format is:
   
 ## Firmware API 
 
-When ThingsBoard initiates an MQTT device firmware update, it sets the fw_title, fw_version, fw_checksum, fw_checksum_algorithm shared attributes.
+When IoT Hub initiates an MQTT device firmware update, it sets the fw_title, fw_version, fw_checksum, fw_checksum_algorithm shared attributes.
 To receive the shared attribute updates, the device has to subscribe to 
 
 ```bash

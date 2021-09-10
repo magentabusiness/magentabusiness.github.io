@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-## What is ThingsBoard Rule Engine?
+## What is IoT Hub Rule Engine?
 Rule Engine is an easy to use framework for building event-based workflows. There are 3 main components:
 
 - **Message** - any incoming event. It can be an incoming data from devices, device life-cycle event, REST API event, RPC request, etc.
@@ -10,7 +10,7 @@ Rule Engine is an easy to use framework for building event-based workflows. Ther
 
 
 ## Typical Use Cases 
-ThingsBoard Rule Engine is a highly customizable framework for complex event processing. Here are some common use cases that one can configure via ThingsBoard Rule Chains:
+IoT Hub Rule Engine is a highly customizable framework for complex event processing. Here are some common use cases that one can configure via IoT Hub Rule Chains:
 
 - Data validation and modification for incoming telemetry or attributes before saving to the database.
 - Copy telemetry or attributes from devices to related assets so you can aggregate telemetry. For example data from multiple devices can be aggregated
@@ -25,13 +25,13 @@ in related Asset.
 - Integrate with external pipelines like Kafka, Spark, AWS services, etc.
 
 ## Hello-World Example
-Let’s assume your device is using DHT22 sensor to collect and push temperature to the ThingsBoard. 
+Let’s assume your device is using DHT22 sensor to collect and push temperature to the IoT Hub. 
 DHT22 sensor can measure temperature from -40°C to +80°C.
 
-In this tutorial we will configure ThingsBoard Rule Engine to store all temperature within -40 to 80°C range and log all other readings to the system log.
+In this tutorial we will configure IoT Hub Rule Engine to store all temperature within -40 to 80°C range and log all other readings to the system log.
 
 #### Adding temperature validation node
-In Thingsboard UI go to **Rule Chains** section and open **Root Rule Chain**.
+In IoT Hub UI go to **Rule Chains** section and open **Root Rule Chain**.
 
 ![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/initial-root-chain.png)
 
@@ -69,7 +69,7 @@ Also, we will connect **Script Filter** node with **Log Other** node using **Fal
 Press Save button to apply changes.
 
 #### Validate results
-For validating results we will need to create Device and submit telemetry to the Thingsboard. So go to **Devices** section and create new Device:
+For validating results we will need to create Device and submit telemetry to the IoT Hub. So go to **Devices** section and create new Device:
 
 ![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/create-device.png)
 
@@ -100,7 +100,7 @@ curl -v -X POST -d '{"temperature":24}' http://localhost:8080/api/v1/$ACCESS_TOK
 
 ## See Also:
 
-You can use the next links for learning more about Thingsboard Rule Engine:
+You can use the next links for learning more about IoT Hub Rule Engine:
 
 - [Rule Engine Overview](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/)
 - [Rule Engine Architecture](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/architecture/)

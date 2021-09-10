@@ -16,7 +16,7 @@
 - Once "Create Droplets" page is loaded, select "Ubuntu 18.04 x64" as your image (see image below).
 - Choose your plan. For beginners we would like to recommend 2CPUs and 4GB of RAM plan. 
 
-  Note: Advanced ThingsBoard users may choose the plan that suites their workload best. 
+  Note: Advanced IoT Hub users may choose the plan that suites their workload best. 
     
 ![image](/images/user-guide/install/digital-ocean-pe/choose-plan.png)
 

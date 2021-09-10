@@ -11,7 +11,7 @@
 
 ## Overview
 
-OPC UA Integration allows you to stream data from the OPC UA server to ThingsBoard and converts the device payloads to the ThingsBoard format.
+OPC UA Integration allows you to stream data from the OPC UA server to IoT Hub and converts the device payloads to the IoT Hub format.
 
 ![image](/images/user-guide/integrations/opc-ua-integration.svg)
 
@@ -28,7 +28,7 @@ See video tutorial below for step-by-step instruction how to setup OPC-UA Integr
 
 ### OPC-UA Integration Tutorial
 
-In this tutorial, we will configure the integration between ThingsBoard and OPC-UA
+In this tutorial, we will configure the integration between IoT Hub and OPC-UA
 to get the Airconditioners data from the [OPC UA C++ Demo Server](https://www.unified-automation.com/downloads/opc-ua-servers/file/download/details/opc-ua-c-demo-server-v161-windows.html)
 and allow the user to switch on/off any Airconditioner using the Integration downlink feature.
 
@@ -42,7 +42,7 @@ and allow the user to switch on/off any Airconditioner using the Integration dow
 
 - Launch the **UaCPPServer**. The console dialog will open showing the server endpoints URLs.
 
-#### ThingsBoard setup
+#### IoT Hub setup
 
 ##### Uplink Data Converter
 
@@ -123,7 +123,7 @@ return result;
 
 ##### Downlink Data Converter
 
-For sending Downlink messages from the Thingsboard to the OPC UA node, we need to define a
+For sending Downlink messages from the IoT Hub to the OPC UA node, we need to define a
 downlink Converter.
 
  In general, the output from a Downlink converter should have the following structure:
@@ -185,7 +185,7 @@ Destination node is detected using the **deviceName** field of the incoming mess
 
 ##### OPC-UA Integration
 
-Next, we will create Integration with OPC UA server inside the ThingsBoard.
+Next, we will create Integration with OPC UA server inside the IoT Hub.
 Open the **Integrations** section and add a new Integration with a type **OPC-UA**
 
 - Name: OPC-UA Airconditioners

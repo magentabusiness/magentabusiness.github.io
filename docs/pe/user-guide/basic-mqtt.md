@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - vsosliuk
 title: Basic MQTT authentication
-description: ThingsBoard MQTT based authentication.
+description: IoT Hub MQTT based authentication.
 options:
     0:
         image: /images/user-guide/basic-mqtt/client-id.png  

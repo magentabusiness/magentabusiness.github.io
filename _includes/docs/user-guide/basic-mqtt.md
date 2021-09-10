@@ -1,5 +1,5 @@
 
-MQTT Based Authentication is available for devices that connect using MQTT. Once the device is created in ThingsBoard, the default access token is generated. 
+MQTT Based Authentication is available for devices that connect using MQTT. Once the device is created in IoT Hub, the default access token is generated. 
 You may change the credential type if your device profile is configured to use [mqtt transport type](/docs/{{docsPrefix}}user-guide/device-profiles/#transport-configuration).
 In order to connect the device to a server using Basic MQTT credentials, the client must specify the client id and/or username and password. 
 

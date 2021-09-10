@@ -1,5 +1,5 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: Transform telemetry using previous record
 description: Transform telemetry using previous record
 

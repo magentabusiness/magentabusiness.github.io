@@ -14,9 +14,9 @@
 
 
 **Page to Update:**
-http://thingsboard.io/...
+http://iothub.magenta.at/...
 
 <!--Optional Information (remove the comment tags around information you would like to include)-->
-<!--ThingsBoard Version:-->
+<!--IoT Hub Version:-->
 
 <!--Additional Information:-->

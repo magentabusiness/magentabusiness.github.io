@@ -109,7 +109,7 @@ This is especially helpful during exporting a widget when you need to exclude a 
 
 **Since 3.2.2,** you can choose under what conditions widget with a specific data key column can be exported. 
 There are three options: always, only if column visible (you can change the visibility in [default column visibility](/docs/{{docsPrefix}}user-guide/ui/advanced-data-key-configuration/#14-default-column-visibility))
-and never. This feature is only available in the Professional Edition.
+and never. This feature is only available in the IoT Hub.
 
 {% include images-gallery.html imageCollection="column-export" %}
 

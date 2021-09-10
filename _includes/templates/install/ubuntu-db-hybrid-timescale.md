@@ -1,6 +1,6 @@
 {% capture hybrid-timescale-info %}
-ThingsBoard team recommends using Timescale database only for companies that already use TimescaleDB in production.
-In this case, ThingsBoard will be storing timeseries data in TimescaleDB Hypertable while continue to use PostgreSQL for main entities (devices/assets/dashboards/customers).  
+IoT Hub team recommends using Timescale database only for companies that already use TimescaleDB in production.
+In this case, IoT Hub will be storing timeseries data in TimescaleDB Hypertable while continue to use PostgreSQL for main entities (devices/assets/dashboards/customers).  
 {% endcapture %}
 {% include templates/info-banner.md content=hybrid-timescale-info %}
 
@@ -14,9 +14,9 @@ In this case, ThingsBoard will be storing timeseries data in TimescaleDB Hyperta
 
 {% include templates/install/timescale-ubuntu-install.md %}
 
-##### ThingsBoard Configuration
+##### IoT Hub Configuration
 
-Edit ThingsBoard configuration file 
+Edit IoT Hub configuration file 
 
 ```bash
 sudo nano /etc/thingsboard/conf/thingsboard.conf

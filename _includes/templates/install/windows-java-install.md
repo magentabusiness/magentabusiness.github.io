@@ -1,4 +1,4 @@
-ThingsBoard service is running on Java 11. Follow this instructions to install OpenJDK 11.
+IoT Hub service is running on Java 11. Follow this instructions to install OpenJDK 11.
 
  * Visit [Open JDK Download Page](https://adoptopenjdk.net/index.html) to download latest **OpenJDK 11 (LTS)** MSI package.
  * Run the downloaded MSI package and follow the instructions. 

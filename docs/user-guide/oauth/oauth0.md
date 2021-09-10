@@ -1,5 +1,5 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: OAuth 2.0 Support
 description: OAuth 2.0 Support
 
@@ -9,7 +9,7 @@ description: OAuth 2.0 Support
 {:toc}
 
 ## Overview
-ThingsBoard allows you to provide Single Sign On functionality for your customers and automatically create tenants, customers or subcustomers using external user management platforms, that supports **OAuth 2.0 protocol**.  
+IoT Hub allows you to provide Single Sign On functionality for your customers and automatically create tenants, customers or subcustomers using external user management platforms, that supports **OAuth 2.0 protocol**.  
 This guide is only for the **OAuth0 OAuth**. 
 ## Scenario description
 
@@ -50,8 +50,8 @@ The **redirect URI** needs to be specified in the next format:
     http://domain:port/login/oauth2/code/
 ```
 
-Where under the domain, please, specify the current **domain** of yours and for the **port** please specify the port to have an HTTP access to the ThingsBoard instance of yours.   
-For the example reasons, the domain of my is the localhost, and the port is being the default ThingsBoard installation port 80.  
+Where under the domain, please, specify the current **domain** of yours and for the **port** please specify the port to have an HTTP access to the IoT Hub instance of yours.   
+For the example reasons, the domain of my is the localhost, and the port is being the default IoT Hub installation port 80.  
 
 ![image](/images/user-guide/oauth-2-support/oauth0/Application-Details-2.png)
 
@@ -59,7 +59,7 @@ So that we have received three values which are required to be inserted for the 
 
 In the example of ours those equals: 
 ```bash
-clientName=ThingsBoard
+clientName=IoT Hub
 clientId=XXXXXXXX
 clientSecret=YYYYYYYY
 ```
@@ -99,7 +99,7 @@ security:
      ...
      oauth2:
          # Enable/disable OAuth 2 login functionality
-         # For details please refer to https://thingsboard.io/docs/user-guide/oauth-2-support/
+         # For details please refer to https://iothub.magenta.at/docs/user-guide/oauth-2-support/
          enabled: "${SECURITY_OAUTH2_ENABLED:true}"
          # Redirect URL where access code from external user management system will be processed
          loginProcessingUrl: "${SECURITY_OAUTH2_LOGIN_PROCESSING_URL:/login/oauth2/code/}"
@@ -110,7 +110,7 @@ security:
              loginButtonLabel: "${SECURITY_OAUTH2_DEFAULT_LOGIN_BUTTON_LABEL:Auth0}"
              # Icon that going to be show on login button. Material design icon ID (https://material.angularjs.org/latest/api/directive/mdIcon)
              loginButtonIcon: "${SECURITY_OAUTH2_DEFAULT_LOGIN_BUTTON_ICON:}"
-             clientName: "${SECURITY_OAUTH2_DEFAULT_CLIENT_NAME:ThingsBoard}"
+             clientName: "${SECURITY_OAUTH2_DEFAULT_CLIENT_NAME:IoT Hub}"
              clientId: "${SECURITY_OAUTH2_DEFAULT_CLIENT_ID:XXXXXXXX}"
              clientSecret: "${SECURITY_OAUTH2_DEFAULT_CLIENT_SECRET:YYYYYYYY}"
              accessTokenUri: "${SECURITY_OAUTH2_DEFAULT_ACCESS_TOKEN_URI:https://tbsupport.eu.auth0.com/oauth/token}"
@@ -127,7 +127,7 @@ security:
              mapperConfig:
                # Allows to create user if it not exists
                allowUserCreation: "${SECURITY_OAUTH2_DEFAULT_MAPPER_ALLOW_USER_CREATION:true}"
-               # Allows user to setup ThingsBoard internal password and login over default Login window
+               # Allows user to setup IoT Hub internal password and login over default Login window
                activateUser: "${SECURITY_OAUTH2_DEFAULT_MAPPER_ACTIVATE_USER:false}"
                # Mapper type of converter from external user into internal - 'basic' or 'custom'
                type: "${SECURITY_OAUTH2_DEFAULT_MAPPER_TYPE:basic}"
@@ -155,8 +155,8 @@ security:
 ```
 
 
-After all the changes being applied, please, make sure to have the ThingsBoard restart.
-The ThingsBoard restart can be invoked with the next command on the Linux Server: 
+After all the changes being applied, please, make sure to have the IoT Hub restart.
+The IoT Hub restart can be invoked with the next command on the Linux Server: 
 ```bash
 $ sudo service thingsboard restart
 ```  

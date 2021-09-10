@@ -1,6 +1,6 @@
 
-Device credentials are used in order to connect to the ThingsBoard server by applications that are running on the device.
-ThingsBoard is designed to support different device credentials. There are two supported credentials types at the moment:
+Device credentials are used in order to connect to the IoT Hub server by applications that are running on the device.
+IoT Hub is designed to support different device credentials. There are two supported credentials types at the moment:
 
  - [**Access Tokens**](/docs/{{docsPrefix}}user-guide/access-token/) - general purpose credentials that are suitable for wide range of devices. 
  Access Token based authentication may be used in not encrypted or one-way SSL mode.
@@ -17,7 +17,7 @@ ThingsBoard is designed to support different device credentials. There are two s
 Device credentials need to be provisioned to corresponding device entity on the server. 
 There are multiple ways to do this:
 
- - **Automatically**, using ThingsBoard [REST API](/docs/{{docsPrefix}}reference/rest-api/). For example during manufacturing, QA or purchase order fulfilment.
- - **Manually**, using ThingsBoard [Web UI](/docs/{{docsPrefix}}user-guide/ui/devices/#manage-device-credentials). For example for development purposes, or by system administrator.
+ - **Automatically**, using IoT Hub [REST API](/docs/{{docsPrefix}}reference/rest-api/). For example during manufacturing, QA or purchase order fulfilment.
+ - **Manually**, using IoT Hub [Web UI](/docs/{{docsPrefix}}user-guide/ui/devices/#manage-device-credentials). For example for development purposes, or by system administrator.
 
 

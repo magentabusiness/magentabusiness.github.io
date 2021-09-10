@@ -1,5 +1,5 @@
 // This sketch demonstrates connecting and sending telemetry
-// using ThingsBoard SDK and GSM modem, such as SIM808
+// usingIoT Hub SDK and GSM modem, such as SIM808
 //
 // Hardware:
 //  - Arduino Uno
@@ -27,10 +27,10 @@ const char apn[]  = "internet";
 const char user[] = "";
 const char pass[] = "";
 
-// See https://thingsboard.io/docs/getting-started-guides/helloworld/
+// See https://iothub.magenta.at/docs/getting-started-guides/helloworld/
 // to understand how to obtain an access token
 #define TOKEN               "YOUR_ACCESS_TOKEN"
-#define THINGSBOARD_SERVER  "demo.thingsboard.io"
+#define THINGSBOARD_SERVER  "iothub.magenta.at"
 #define THINGSBOARD_PORT    80
 
 // Baud rate for debug serial
@@ -54,7 +54,7 @@ SoftwareSerial serialGsm(7, 8); // RX, TX pins for communicating with modem
 // Initialize GSM client
 TinyGsmClient client(modem);
 
-// Initialize ThingsBoard instance
+// InitializeIoT Hub instance
 ThingsBoardHttp tb(client, TOKEN, THINGSBOARD_SERVER, THINGSBOARD_PORT);
 
 // Set to true, if modem is connected
@@ -119,8 +119,8 @@ void loop() {
     Serial.println(" OK");
   }
 
-  // Uploads new telemetry to ThingsBoard using HTTP.
-  // See https://thingsboard.io/docs/reference/http-api/#telemetry-upload-api
+  // Uploads new telemetry toIoT Hub using HTTP.
+  // See https://iothub.magenta.at/docs/reference/http-api/#telemetry-upload-api
   // for more details
 
   Serial.println("Sending temperature data...");

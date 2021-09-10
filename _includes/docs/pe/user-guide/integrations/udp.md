@@ -10,7 +10,7 @@
 
 ## Overview
 
-UDP Integration allows to stream data from devices which use a UDP protocol to ThingsBoard and converts payloads of these devices into the ThingsBoard format.
+UDP Integration allows to stream data from devices which use a UDP protocol to IoT Hub and converts payloads of these devices into the IoT Hub format.
 
 
 **Please note** UDP Integration can be started only as [Remote Integration](/docs/{{peDocsPrefix}}user-guide/integrations/remote-integrations). It could be started on the same machine, where TB instance is running, or you can start in on another machine, that has access over the network to the TB instance.
@@ -25,8 +25,8 @@ Please review the integration diagram to learn more.
 
 In this tutorial, we will use:
 
-- ThingsBoard Professional Edition instance — [thingsboard.cloud](https://thingsboard.cloud);
-- UDP Integration, running externally and connected to the cloud ThingsBoard PE instance;
+- IoT Hub instance — [thingsboard.cloud](https://thingsboard.cloud);
+- UDP Integration, running externally and connected to the cloud IoT Hub instance;
 - **echo** command which intended to display a line of text, and will redirect it's output to **netcat** (**nc**) utility;
 - **netcat** (**nc**) utility to establish UDP connections, receive data from there and transfer them;
 
@@ -120,7 +120,7 @@ Please use **Integration key** and **Integration secret** from the above section
 
 ### Send Uplink message
 
-Once ThingsBoard UDP Integration has been created, the UDP server starts, and then it waits for data from the devices.
+Once IoT Hub UDP Integration has been created, the UDP server starts, and then it waits for data from the devices.
 
 Choose device payload type to send uplink message
 

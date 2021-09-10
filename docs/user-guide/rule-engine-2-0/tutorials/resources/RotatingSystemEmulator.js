@@ -1,12 +1,12 @@
 var mqtt = require('mqtt');
 
 // Don't forget to update accessToken constant with your device access token
-const thingsboardHost = "demo.thingsboard.io";
+const thingsboardHost = "iothub.magenta.at";
 const ACCESS_TOKEN = "jSuvzrURCbw7q4LGtygc";
 const minDirection = 0, maxDirection = 360;
 
 
-// Initialization of mqtt client using Thingsboard host and device access token
+// Initialization of mqtt client using IoT Hub host and device access token
 console.log('Connecting to: %s using access token: %s', thingsboardHost, ACCESS_TOKEN);
 var client  = mqtt.connect('mqtt://'+ thingsboardHost, { username: ACCESS_TOKEN });
 
@@ -34,7 +34,7 @@ client.on('message', function (topic, message) {
 
 });
 
-// Triggers when client is successfully connected to the Thingsboard server
+// Triggers when client is successfully connected to the IoT Hub server
 client.on('connect', function () {
     console.log('Client connected!');
     client.subscribe('v1/devices/me/rpc/request/+');

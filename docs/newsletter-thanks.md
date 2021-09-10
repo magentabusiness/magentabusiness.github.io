@@ -1,7 +1,7 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: Thank you!
 
 ---
 
-Thank you for your interest in ThingsBoard! Have a great day!
+Thank you for your interest in IoT Hub! Have a great day!

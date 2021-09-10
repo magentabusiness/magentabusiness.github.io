@@ -33,15 +33,15 @@ spring:
 
 Locate "# Cloud configuration" block and replace **PUT_YOUR_EDGE_KEY_HERE** and **PUT_YOUR_EDGE_SECRET_HERE** with Edge **key and secret** respectively. 
 
-Please replace **PUT_YOUR_CLOUD_IP** with an IP address of the machine where ThingsBoard CE/PE version is running:
-* Use **thingsboard.cloud** in case you are connecting edge to [**ThingsBoard Cloud**](https://thingsboard.cloud/signup).
+Please replace **PUT_YOUR_CLOUD_IP** with an IP address of the machine where IoT Hub CE/PE version is running:
+* Use **thingsboard.cloud** in case you are connecting edge to [**IoT Hub**](https://thingsboard.cloud/signup).
 
 **NOTE**: **thingsboard.cloud** uses SSL protocol for edge communication. 
 Please change **CLOUD_RPC_SSL_ENABLED** to **true** as well. 
 
 * Use **localhost** in case edge is running on the same machine where cloud instance is running. 
 * Use **X.X.X.X** IP address in case edge is connecting to the cloud instance in the same network or in the docker.
-* Or use **demo.thingsboard.io** if you are connecting edge to [**ThingsBoard Live Demo**](https://demo.thingsboard.io/signup) for evaluation. 
+* Or use **iothub.magenta.at** if you are connecting edge to [**IoT Hub Live Demo**](https://iothub.magenta.at/signup) for evaluation. 
 
 ```yml
 # Cloud configuration
@@ -55,9 +55,9 @@ cloud:
 ```
 
 {% capture local-deployment %}
-If ThingsBoard Edge is going to be running on the same machine where ThingsBoard **Professional Edition/Community Edition** server is running you'll need to update additional configuration parameters to avoid port collision.
+If IoT Hub Edge is going to be running on the same machine where IoT Hub **IoT Hub/Community Edition** server is running you'll need to update additional configuration parameters to avoid port collision.
  
-Please locate and change next parameters in ThingsBoard Edge configuration file (**C:\Program Files (x86)\tb-edge\conf\tb-edge.yml**):
+Please locate and change next parameters in IoT Hub Edge configuration file (**C:\Program Files (x86)\tb-edge\conf\tb-edge.yml**):
 <br>
 <br>**port: "${HTTP_BIND_PORT:18080}"**
 <br>**...**
