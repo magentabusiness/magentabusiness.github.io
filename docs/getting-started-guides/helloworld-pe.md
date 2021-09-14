@@ -102,22 +102,25 @@ step34:
         image: /images/helloworld/hello-world-pe-step-34-item-3-magenta.png 
         title: 'Click "Create new widget" icon.'
     3:
-        image: /images/helloworld/hello-world-pe-step-34-item-4.png 
-        title: 'Select "Charts" bundle. Scroll down and click on the "Timeseries - Flot" chart widget.'        
+        image: /images/helloworld/hello-world-pe-step-34-item-4-magenta.png 
+        title: 'Select "Charts" bundle.' 
     4:
-        image: /images/helloworld/hello-world-pe-step-34-item-5.png  
-        title: 'Click "Add datasource" button.'
+        image: /images/helloworld/hello-world-pe-step-34-item-4_1-magenta.png 
+        title: 'Select "Timeseries Line Chart" widget.'        
     5:
-        image: /images/helloworld/hello-world-pe-step-34-item-6.png 
-        title: 'Select "MyDevice" Alias. Select "temperature" key. Click "Add".'
+        image: /images/helloworld/hello-world-pe-step-34-item-5-magenta.png  
+        title: 'Click "Add datasource" button.'
     6:
-        image: /images/helloworld/hello-world-pe-step-34-item-7.png
-        title: 'Drag and Drop you widget to desired space. Resize the widget. Apply changes.'
+        image: /images/helloworld/hello-world-pe-step-34-item-6-magenta.png
+        title: 'Select "MyDevice" Alias. Select "temperature" key. Click "Add".'
     7:
-        image: /images/helloworld/hello-world-pe-step-34-item-8.png  
-        title: 'Publish different telemetry values multiple times Step 2. Note that the widget displays only one minute of data by default.'
+        image: /images/helloworld/hello-world-pe-step-34-item-7-magenta.png
+        title: 'Drag and Drop you widget to desired space. Resize the widget. Apply changes.'
     8:
-        image: /images/helloworld/hello-world-pe-step-34-item-9.png  
+        image: /images/helloworld/hello-world-pe-step-34-item-8-magenta.png  
+        title: 'Publish different telemetry values multiple times Step 2. Note that the widget displays only one minute of data by default.'
+    9:
+        image: /images/helloworld/hello-world-pe-step-34-item-9-magenta.png  
         title: 'Enter Edit mode. Open time selection window. Change the interval and aggregation function. Update the time window and apply changes.'
 
 step35:
