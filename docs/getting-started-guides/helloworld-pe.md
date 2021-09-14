@@ -7,94 +7,99 @@ description: Getting started with IoT Hub open-source IoT platform and simulated
 redirect_from: "/docs/pe/getting-started-guides/helloworld/"
 step1:
     0:
-        image: /images/helloworld/hello-world-pe-step-1-item-1.png
-        title: 'Login to your IoT Hub instance and open Device Groups page.'
-    1:
-        image: /images/helloworld/hello-world-pe-step-1-item-3.png
-        title: 'Navigate to default Device group “ALL”.'
+        image: /images/helloworld/hello-world-pe-step-1-item-1-magenta.png
+        title: 'Login to your IoT Hub instance and open Device Groups(1) page, <br>
+        Navigate to default Deivce Group "ALL"(2), <br>
+        Click on the "+" icon in the top right corner of the table and then select "Add Device"(3).'
+    # 1:
+    #     image: /images/helloworld/hello-world-pe-step-1-item-3.png
+    #     title: 'Navigate to default Device group “ALL”.'
+    # 2:
+    #     image: /images/helloworld/hello-world-pe-step-1-item-2.png 
+    #     title: 'Click on the "+" icon in the top right corner of the table and then select "Add Device".'
     2:
-        image: /images/helloworld/hello-world-pe-step-1-item-2.png 
-        title: 'Click on the "+" icon in the top right corner of the table and then select "Add Device".'
-    3:
-        image: /images/helloworld/hello-world-pe-step-1-item-4.png
+        image: /images/helloworld/hello-world-pe-step-1-item-4-magenta.png
         title: 'Input device name. For example, "My New Device". No other changes are required at this time. Click "Add" to add the device.'
-    4:
-        image: /images/helloworld/hello-world-pe-step-1-item-5.png
+    3:
+        image: /images/helloworld/hello-world-pe-step-1-item-5-magenta.png
         title: 'Now your device should be listed first, since the table sorts devices using the time of the creation by default. '
         
 step2:
     0:
-        image: /images/helloworld/hello-world-pe-step-2-item-1.png
+        image: /images/helloworld/hello-world-pe-step-2-item-1-magenta.png
         title: 'Click on the device row in the table to open device details;'
     1:
-        image: /images/helloworld/hello-world-pe-step-2-item-2.png
+        image: /images/helloworld/hello-world-pe-step-2-item-2-magenta.png
         title: 'Click "Copy access token". Token will be copied to your clipboard. Save it to a safe place.'
 
 step3:
     0:
-        image: /images/helloworld/hello-world-pe-step-2-item-1.png 
+        image: /images/helloworld/hello-world-pe-step-2-item-1-magenta.png 
         title: 'Click on the device row in the table to open device details;'
     1:
-        image: /images/helloworld/hello-world-pe-step-2-item-4.png
+        image: /images/helloworld/hello-world-pe-step-2-item-4-magenta.png
         title: 'Navigate to the telemetry tab.'
         
 step31:
     0:
-        image: /images/helloworld/hello-world-pe-step-31-item-1.png
+        image: /images/helloworld/hello-world-pe-step-31-item-1-magenta.png
         title: 'Open Dashboard Groups page. Open default dashboard group “All”. Click on the "+" icon in the top right corner to create a new dashboard.'
     1:
-        image: /images/helloworld/hello-world-pe-step-31-item-2.png
+        image: /images/helloworld/hello-world-pe-step-31-item-2-magenta.png
         title: 'Input dashboard name. For example, "My New Dashboard". Click "Add" to add the dashboard.'
     2:
-        image: /images/helloworld/hello-world-pe-step-31-item-3.png
+        image: /images/helloworld/hello-world-pe-step-31-item-3-magenta.png
         title: 'Now your dashboard should be listed first, since the table sorts dashboards using the time of the creation by default. Click on the "Open dashboard" icon.'
         
 step32:
     0:
-        image: /images/helloworld/hello-world-pe-step-32-item-1.png 
+        image: /images/helloworld/hello-world-pe-step-32-item-1-magenta.png 
         title: 'Enter edit mode. Click on the pencil button in the bottom right corner.'
     1:
-        image: /images/helloworld/hello-world-pe-step-32-item-2.png  
+        image: /images/helloworld/hello-world-pe-step-32-item-2-magenta.png  
         title: 'Click "Entity Aliases" icon in the top right part of the screen. You will see an empty list of Entity aliases.'
     2:
-        image: /images/helloworld/hello-world-pe-step-32-item-3.png  
+        image: /images/helloworld/hello-world-pe-step-32-item-3-magenta.png  
         title: 'Click "Add alias".'
     3:
-        image: /images/helloworld/hello-world-pe-step-32-item-4.png  
+        image: /images/helloworld/hello-world-pe-step-32-item-4-magenta.png  
         title: 'Input alias name, for example "MyDevice". Select "Single entity" Filter type. Select "Device" as Type and type "My New" to enable autocomplete. Choose your device from the auto-complete and click on the needed device.'        
     4:
-        image: /images/helloworld/hello-world-pe-step-32-item-5.png  
+        image: /images/helloworld/hello-world-pe-step-32-item-5-magenta.png  
         title: 'Click "Add" and then "Save".'        
     5:
-        image: /images/helloworld/hello-world-pe-step-32-item-6.png  
+        image: /images/helloworld/hello-world-pe-step-32-item-6-magenta.png  
         title: 'Finally, Click "Apply changes" in the dashboard editor to save the changes. Then you should enter edit mode again.'
 
 step33:
     0:
-        image: /images/helloworld/hello-world-pe-step-33-item-1.png
+        image: /images/helloworld/hello-world-pe-step-33-item-1-magenta.png
         title: 'Enter edit mode. Click on the "Add new widget" button. '
     1:
-        image: /images/helloworld/hello-world-pe-step-33-item-2.png
-        title: 'Select "Cards" widget bundle. Select "Latest values" tab. Click on the header of the Entities widget. The "Add Widget" window will appear.'
+        image: /images/helloworld/hello-world-pe-step-33-item-2-magenta.png
+        title: 'Select "Cards" widget bundle.'
     2:
-        image: /images/helloworld/hello-world-pe-step-33-item-3.png
-        title: 'Click "Add" to add the data source. Widget may have multiple data sources, but we will use only one in this case.'
+        image: /images/helloworld/hello-world-pe-step-33-item-2_1-magenta.png
+        title: 'Select "Entities table - Latest values" widget. '
     3:
-        image: /images/helloworld/hello-world-pe-step-33-item-4.png 
-        title: 'Select "MyDevice" entity alias. Then click on the input field to the right. The auto-complete with available data points will appear. Select "temperature" data point and click "Add".'        
+        image: /images/helloworld/hello-world-pe-step-33-item-3-magenta.png
+        title: 'Click "Add" to add the data source. Widget may have multiple data sources, but we will use only one in this case.'
     4:
-        image: /images/helloworld/hello-world-pe-step-33-item-5.png
+        image: /images/helloworld/hello-world-pe-step-33-item-4-magenta.png 
+        title: 'Select "MyDevice" entity alias. Then click on the input field to the right. The auto-complete with available data points will appear. Select "temperature" data point and click "Add".'        
+    5:
+        image: /images/helloworld/hello-world-pe-step-33-item-5-magenta.png
         title: 'Resize the widget to make it a little bigger. Just drag the bottom right corner of the widget. You can also play with the advanced settings if you want to edit the widget.'
         
 step34:
     0:
-        image: /images/helloworld/hello-world-pe-step-34-item-1.png 
+        image: /images/helloworld/hello-world-pe-step-34-item-1-magenta.png 
         title: 'Enter Edit mode.'
     1:
-        image: /images/helloworld/hello-world-pe-step-34-item-2.png 
+        image: /images/helloworld/hello-world-pe-step-34-item-2-magenta.png 
         title: 'Click "Add new widget" icon in the bottom right corner of the screen.'
     2:
-        image: /images/helloworld/hello-world-pe-step-34-item-3.png 
+        image: /images/helloworld/hello-world-pe-step-34-item-3-magenta.png 
         title: 'Click "Create new widget" icon.'
     3:
         image: /images/helloworld/hello-world-pe-step-34-item-4.png 

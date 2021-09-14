@@ -163,17 +163,17 @@ You may optionally configure the dashboard to appear just after the user login t
 
 {% assign currentGuide = "GettingStartedGuides" %}{% include templates/multi-project-guides-banner.md %}
 
-## IoT Hub white-labeling guide
+<!-- ## IoT Hub white-labeling guide
 
  <div id="video">  
      <div id="video_wrapper">
          <iframe src="https://www.youtube.com/embed/VSNZWl1NjWU" frameborder="0" allowfullscreen></iframe>
      </div>
  </div>
- <p></p>
+ <p></p> -->
 
 
-## Your feedback
+<!-- ## Your feedback
 
 Don't hesitate to star IoT Hub on **[github](https://github.com/thingsboard/thingsboard)** to help us spread the word.
-If you have some questions about this sample - post it on the **[forum](https://groups.google.com/forum/#!forum/thingsboard)**.
+If you have some questions about this sample - post it on the **[forum](https://groups.google.com/forum/#!forum/thingsboard)**. -->

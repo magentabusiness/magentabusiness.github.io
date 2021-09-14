@@ -21,26 +21,25 @@ If you are using older version of Windows OS, you may find official installation
 
 <br/>
 
-This command works for Windows, Ubuntu and macOS, assuming the cURL tool is already installed. Replace $HOST_NAME and $ACCESS_TOKEN with corresponding values.
+This command works for Windows, Ubuntu and macOS, assuming the cURL tool is already installed. 
+
+**Access via public Internet** 
+For example, access token is ABC123: 
 
 ```bash
-curl -v -X POST -d "{\"temperature\": 25}" $HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
+curl -v -X POST -d "{\"temperature\": 25}" https://device.iothub.magenta.at/api/v1/ABC123/telemetry --header "Content-Type:application/json" 
 ```
 {: .copy-code}
 
-For example, $HOST_NAME reference IoT Hub server, access token is ABC123:
+**Direct connected Device (with IoT Hub SIM-Card)** 
+For example, access token is ABC123: 
 
 ```bash
-curl -v -X POST -d "{\"temperature\": 25}" https://thingsboard.cloud/api/v1/ABC123/telemetry --header "Content-Type:application/json" 
+curl -v -X POST -d "{\"temperature\": 25}" http://172.31.64.64/api/v1/ABC123/telemetry --header "Content-Type:application/json" 
 ```
 {: .copy-code}
 
-For example, $HOST_NAME reference your local installation, access token is ABC123:
 
-```bash
-curl -v -X POST -d "{\"temperature\": 25}" http://localhost:8080/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
-```
-{: .copy-code}
 
 <br/>
 <br/>
