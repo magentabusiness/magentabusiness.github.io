@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: docwithnav-pe
 title: Electricity Three Phase Smart Meter "Smartico E307” telemetry upload
 description: IoT Hub IoT Platform sample for electricity data upload over MQTT using Smart Meter "Smartico E307”.
@@ -167,4 +167,4 @@ Browse other [samples](/docs/samples) or explore guides related to main IoT Hub 
 
 ## Next steps
 
-{% assign currentGuide = "HardwareSamples" %}{% include templates/guides-banner.md %}
+{% assign currentGuide = "HardwareSamples" %}{% include templates/guides-banner.md %} -->
