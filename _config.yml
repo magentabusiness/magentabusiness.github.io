@@ -80,3 +80,5 @@ release:
   ce_full_ver: 3.3.0
   pe_ver: 3.3pe
   pe_full_ver: 3.3.0PE
+
+theme: jekyll-theme-tactile
