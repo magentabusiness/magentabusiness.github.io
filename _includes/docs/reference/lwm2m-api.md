@@ -83,11 +83,11 @@ Now you are ready to turn on the device and observe the incoming telemetry.
 Let's launch the test client:
 
 ```bash
-./lwm2mclient -h lwm2m.thingsboard.cloud -n UniqueEndpointName -p 5685 -c
+./lwm2mclient -h lwm2m.iothub.magenta.at -n UniqueEndpointName -p 5685 -c
 ```
 
 Where
-* 'lwm2m.thingsboard.cloud' is the host name of the LwM2M server;
+* 'lwm2m.iothub.magenta.at' is the host name of the LwM2M server;
 * '5685' is the port of LwM2M server;
 * 'UniqueEndpointName' is the unique name of your endpoint. Please replace this with IMEI or other unique ID.
 

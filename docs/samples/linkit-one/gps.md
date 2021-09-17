@@ -9,7 +9,7 @@ description: IoT Hub IoT Platform sample for GPS data upload and visualization u
 {:toc}
 
 ## Introduction
-{% include templates/what-is-thingsboard.md %}
+{% include templates/what-is-iothub.md %}
 
 This sample application shows the capability to track GPS location of LinkIt ONE device and perform further visualization on the map. 
 It performs collection of latitude and longitude values produced by GPS module. 

@@ -2,7 +2,7 @@ The IoT Hub **Guides** can help you to get familiar with IoT Hub platform.
 
 #### Contents
 
-[**Getting Started**](/docs/{{docsPrefix}}getting-started-guides/what-is-thingsboard/)
+[**Getting Started**](/docs/{{docsPrefix}}getting-started-guides/what-is-iothub/)
 : Provides overview of the platform functionality and classical Hello World guide.
 
 {% unless docsPrefix == 'paas/' %}

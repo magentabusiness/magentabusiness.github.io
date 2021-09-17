@@ -7,7 +7,7 @@
 IoT Hub REST API may be explored using Swagger UI.
 You can explore REST API of the live-demo server using this **[Swagger UI link.](https://iothub.magenta.at/swagger-ui.html)**
 
-To explore REST API provided by IoT Hub please use the following **[Swagger UI link.](https://thingsboard.cloud/swagger-ui.html)**
+To explore REST API provided by IoT Hub please use the following **[Swagger UI link.](https://iothub.magenta.at/swagger-ui.html)**
 
 Once you will install IoT Hub server you can open UI using the following URL:
     
@@ -36,7 +36,7 @@ In case of live-demo server:
 
 {% if docsPrefix == "pe/" or docsPrefix == "paas/" %}
 
-The easiest way to get your account is to use [IoT Hub](https://thingsboard.cloud/signup) server.
+The easiest way to get your account is to use [IoT Hub](https://iothub.magenta.at/signup) server.
 
 {% else %}
 

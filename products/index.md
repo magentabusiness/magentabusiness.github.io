@@ -16,7 +16,7 @@ notitle: "true"
             Learn more
         </div>
     </a>
-    <a href="/docs/getting-started-guides/what-is-thingsboard/" class="card thingsboard-ce">
+    <a href="/docs/getting-started-guides/what-is-iothub/" class="card thingsboard-ce">
         <div class="card-title">
             <span class="title-text">IoT Hub<br/>Community Edition</span>
         </div>

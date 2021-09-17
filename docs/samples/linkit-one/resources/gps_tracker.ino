@@ -13,7 +13,7 @@
 
 gpsSentenceInfoStruct gpsInfo;
 
-char thingsboardServer[] = "YOUR_THINGSBOARD_HOST_OR_IP";
+char thingsboardServer[] = "device.iothub.magenta.at";
 
 LWiFiClient wifiClient;
 

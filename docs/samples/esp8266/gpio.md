@@ -9,7 +9,7 @@ description: IoT Hub IoT Platform sample for ESP8266 GPIO control over MQTT
 {:toc}
 
 ## Introduction
-{% include templates/what-is-thingsboard.md %}
+{% include templates/what-is-iothub.md %}
 
 This sample application will allow you to control GPIO of your ESP8266 device using IoT Hub web UI. We will observe GPIO control using LEDs connected to the pins.
 The purpose of this application is to demonstrate IoT Hub [RPC capabilities](/docs/user-guide/rpc/).

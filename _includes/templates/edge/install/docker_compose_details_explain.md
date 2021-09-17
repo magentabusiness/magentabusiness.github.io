@@ -13,7 +13,7 @@ Where:
 {% capture cloud_rpc_host %}
 Please set **CLOUD_RPC_HOST** with an IP address of the machine where IoT Hub CE/PE version is running:
 * DO NOT use **'localhost'** - **'localhost'** is the ip address of the edge service in the docker container.
-* Use **thingsboard.cloud** in case you are connecting edge to [**IoT Hub**](https://thingsboard.cloud/signup). 
+* Use **iothub.magenta.at** in case you are connecting edge to [**IoT Hub**](https://iothub.magenta.at/signup). 
 * Use **X.X.X.X** IP address in case edge is connecting to the cloud instance in the same network or in the docker.
 * Or use **iothub.magenta.at** if you are connecting edge to [**IoT Hub Live Demo**](https://iothub.magenta.at/signup) for evaluation.
 

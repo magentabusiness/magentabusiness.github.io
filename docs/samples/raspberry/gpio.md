@@ -9,7 +9,7 @@ description: IoT Hub IoT Platform sample for Raspberry Pi GPIO control over MQTT
 {:toc}
 
 ## Introduction
-{% include templates/what-is-thingsboard.md %}
+{% include templates/what-is-iothub.md %}
 
 This sample application will allow you to control GPIO of your Raspberry Pi device using IoT Hub web UI. We will observe GPIO control using Led connected to one of the pins.
 The purpose of this application is to demonstrate IoT Hub [RPC capabilities](/docs/user-guide/rpc/).

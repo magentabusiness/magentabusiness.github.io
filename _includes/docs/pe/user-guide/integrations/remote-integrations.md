@@ -13,14 +13,14 @@
 It is possible to execute any IoT Hub Integration remotely from main IoT Hub instance.
 This guide contains step-by-step instructions how to launch IoT Hub integration remotely.
 For example, we will launch MQTT integration that connects to the local MQTT Broker and pushes data to 
-[thingsboard.cloud](https://thingsboard.cloud/signup).  
+[iothub.magenta.at](https://iothub.magenta.at/signup).  
 
 See [deployment options](/docs/{{peDocsPrefix}}user-guide/integrations/#deployment-options) for more general information.
 
 ## Prerequisites
 
 We assume you already have a tenant administrator account on your own IoT Hub v2.4.1+ instance or
-[thingsboard.cloud](https://thingsboard.cloud/signup).  
+[iothub.magenta.at](https://iothub.magenta.at/signup).  
 
 ## IoT Hub configuration steps
 

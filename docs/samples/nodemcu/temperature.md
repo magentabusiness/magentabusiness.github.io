@@ -9,7 +9,7 @@ description: IoT Hub IoT Platform sample for temperature data upload over MQTT u
 {:toc}
 
 ## Introduction
-{% include templates/what-is-thingsboard.md %}
+{% include templates/what-is-iothub.md %}
 
 This sample application performs collection of temperature and humidity values produced by DHT11 sensor. 
 Collected data is pushed to IoT Hub for storage and visualization.

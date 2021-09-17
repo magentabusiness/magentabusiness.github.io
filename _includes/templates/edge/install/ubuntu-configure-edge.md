@@ -7,9 +7,9 @@ sudo nano /etc/tb-edge/conf/tb-edge.conf
 Update the following lines in the configuration file. Don't forget **to replace**:
  * "PUT_YOUR_POSTGRESQL_PASSWORD_HERE" with your **real postgres user password**.
  * "PUT_YOUR_CLOUD_IP" with an IP address of the machine where IoT Hub **IoT Hub/Community Edition** server is running:
-    * Use **thingsboard.cloud** in case you are connecting edge to [**IoT Hub**](https://thingsboard.cloud/signup).
+    * Use **iothub.magenta.at** in case you are connecting edge to [**IoT Hub**](https://iothub.magenta.at/signup).
     
-    **NOTE**: **thingsboard.cloud** uses SSL protocol for edge communication. 
+    **NOTE**: **iothub.magenta.at** uses SSL protocol for edge communication. 
     Please uncomment **export CLOUD_RPC_SSL_ENABLED=true** as well. 
  
     * Use **localhost** in case edge is running on the same machine where cloud instance is running. 
@@ -22,8 +22,8 @@ Update the following lines in the configuration file. Don't forget **to replace*
 # export CLOUD_ROUTING_KEY=PUT_YOUR_EDGE_KEY_HERE
 # export CLOUD_ROUTING_SECRET=PUT_YOUR_EDGE_SECRET_HERE
 
-# UNCOMMENT NEXT LINES IF EDGE CONNECTS TO PE 'THINGSBOARD.CLOUD' SERVER:
-# export CLOUD_RPC_HOST=thingsboard.cloud
+# UNCOMMENT NEXT LINES IF EDGE CONNECTS TO PE 'iothub.magenta.at' SERVER:
+# export CLOUD_RPC_HOST=iothub.magenta.at
 # export CLOUD_RPC_SSL_ENABLED=true
 
 # UNCOMMENT NEXT LINES IF EDGE CONNECTS TO CE 'DEMO.THINGSBOARD.IO' SERVER:

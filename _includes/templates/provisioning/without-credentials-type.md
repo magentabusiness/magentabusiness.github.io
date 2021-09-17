@@ -42,7 +42,7 @@ RESULT_CODES = {
     }
 
 
-THINGSBOARD_HOST = "thingsboard.cloud"  # IoT Hub instance host
+THINGSBOARD_HOST = "iothub.magenta.at"  # IoT Hub instance host
 THINGSBOARD_PORT = 1883  # IoT Hub instance MQTT port
 
 PROVISION_DEVICE_KEY = "PUT_PROVISION_KEY_HERE"  # Provision device key, replace this value with your value from device profile.

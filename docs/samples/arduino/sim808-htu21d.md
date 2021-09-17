@@ -10,7 +10,7 @@ description: IoT Hub IoT Platform sample for humidity and temperature data uploa
 
 ## Introduction
 
-{% include templates/what-is-thingsboard.md %}
+{% include templates/what-is-iothub.md %}
 
 This sample application performs collection of humidity and temperature values produced by [HTU21D sensor](https://www.sparkfun.com/products/13763) and further visualization on the real-time web dashboard.
 Collected data is pushed via HTTP to IoT Hub server for storage and visualization.

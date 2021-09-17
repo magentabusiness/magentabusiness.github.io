@@ -2,7 +2,7 @@
 # for IoT Hub
 
 # Subscribe to attribute updates
-coap get -o coap://coap.thingsboard.cloud/api/v1/$ACCESS_TOKEN/attributes
+coap get -o coap://coap-device.iothub.magenta.at/api/v1/$ACCESS_TOKEN/attributes
 
 # for local IoT Hub
 

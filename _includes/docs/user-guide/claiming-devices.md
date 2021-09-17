@@ -71,7 +71,7 @@ See the following for more details regarding the above steps.
 In order to reclaim the device, you can send DELETE request to the following URL (Don't forget to replace device name with the correct name):
 
 ```shell
-curl -X DELETE https://thingsboard.cloud/api/customer/device/$DEVICE_NAME/claim
+curl -X DELETE https://iothub.magenta.at/api/customer/device/$DEVICE_NAME/claim
 ```
 {: .copy-code}
 
@@ -131,8 +131,8 @@ def collect_required_data():
     print("\n\n", "="*80, sep="")
     print(" "*20, "IoT Hub basic device claiming example script.", sep="")
     print("="*80, "\n\n", sep="")
-    host = input("Please write your IoT Hub host or leave it blank to use default (thingsboard.cloud): ")
-    config["host"] = host if host else "thingsboard.cloud"
+    host = input("Please write your IoT Hub host or leave it blank to use default (iothub.magenta.at): ")
+    config["host"] = host if host else "iothub.magenta.at"
     token = ""
     while not token:
         token = input("Please write accessToken for device: ")

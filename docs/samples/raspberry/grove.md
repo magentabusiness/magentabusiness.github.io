@@ -13,8 +13,8 @@ description: IoT Hub IoT Platform sample for Raspberry Pi Grove Base Hat connect
 
 IoT Hub Community Edition is an open-source server-side platform that allows you to monitor and control IoT devices. 
 It is free for both personal and commercial usage and you can deploy it anywhere. 
-If you are not familiar with the platform yet, we recommend to review [what is thingsboard page](/docs/getting-started-guides/what-is-thingsboard/) and [getting started guide](/docs/getting-started-guides/helloworld/) at first and then proceed with this tutorial.
-Within this guide we use [thingsboard.cloud](https://thingsboard.cloud).
+If you are not familiar with the platform yet, we recommend to review [what is thingsboard page](/docs/getting-started-guides/what-is-iothub/) and [getting started guide](/docs/getting-started-guides/helloworld/) at first and then proceed with this tutorial.
+Within this guide we use [iothub.magenta.at](https://iothub.magenta.at).
 
 This sample application will allow you to collect information from sensors and control Servo, Led of your Raspberry Pi device with Grove Base Hat PCB using IoT Hub web UI. The purpose of this application is to demonstrate IoT Hub and Grove Base Hat PCB integrations.
 
@@ -38,7 +38,7 @@ At the end we will get the following result:
 
 ## Prerequisites
 
-For the purpose of this tutorial you need IoT Hub server up and running. Within this guide we use [thingsboard.cloud](https://thingsboard.cloud)
+For the purpose of this tutorial you need IoT Hub server up and running. Within this guide we use [iothub.magenta.at](https://iothub.magenta.at)
 
 
 Hardware and pinouts:
@@ -135,7 +135,7 @@ Also we need say to IoT Hub that we want to connect this device and get the devi
 <br> 
 
 
-After this you need to replace the THINGSBOARD_HOST and ACCESS_TOKEN in the script below, with your values. In case you use Live demo, populate <b>thingsboard.cloud</b> as THINGSBOARD_HOST
+After this you need to replace the THINGSBOARD_HOST and ACCESS_TOKEN in the script below, with your values. In case you use Live demo, populate <b>iothub.magenta.at</b> as THINGSBOARD_HOST
 
 ```python
 import logging

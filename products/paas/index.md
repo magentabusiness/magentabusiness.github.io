@@ -9,7 +9,7 @@ description:
 </div>
 <section id="intro">
 	<main>
-		<h1 class="intro_title"><a href="what-is-thingsboard-cloud/">IoT Hub</a> is a fully managed, scalable and fault-tolerant platform for your IoT applications</h1>
+		<h1 class="intro_title"><a href="what-is-iothub-cloud/">IoT Hub</a> is a fully managed, scalable and fault-tolerant platform for your IoT applications</h1>
 		<div id="labeling"> 
         <p>IoT Hub is for everyone who would like to use IoT Hub but don’t want to host their own instance of the platform.</p>
 		</div>

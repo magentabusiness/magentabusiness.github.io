@@ -14,7 +14,7 @@
 #define DHTPIN 4
 #define DHTTYPE DHT22
 
-char thingsboardServer[] = "YOUR_THINGSBOARD_HOST_OR_IP";
+char thingsboardServer[] = "device.iothub.magenta.at";
 
 // Initialize the Ethernet client object
 WiFiEspClient espClient;

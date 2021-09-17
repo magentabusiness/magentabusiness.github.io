@@ -8,7 +8,7 @@ One-way SSL authentication is a standard authentication mode, where your client 
 In order to run one-way MQTT SSL, the server certificate chain should be signed by authorized CA or client must import the self-signed server certificate (.cer or .pem) to its trust store. 
 Otherwise, a connection will fail with the 'Unknown CA' error.
 
-The python based client example below demonstrates how to connect to [IoT Hub](https://thingsboard.cloud/signup) or to any other IoT Hub MQTT server.
+The python based client example below demonstrates how to connect to [IoT Hub](https://iothub.magenta.at/signup) or to any other IoT Hub MQTT server.
 Assuming you plan to use IoT Hub, you should download the certificate chain using this [link](/docs/{{docsPrefix}}user-guide/resources/mqtt-over-ssl/tb-cloud-chain.pem) (certificate expires on 15.09.25) 
 and store it to your working directory as "tb-cloud-chain.pem".
 
@@ -29,7 +29,7 @@ wget https://iothub.magenta.at/docs/{{docsPrefix}}user-guide/resources/mqtt-over
 ```
 {: .copy-code}
 
-Put certificate(s) that you have downloaded/created into the same folder with the example script. The script will automatically use "tb-cloud-chain.pem" if you use default IoT Hub host (thingsboard.cloud) 
+Put certificate(s) that you have downloaded/created into the same folder with the example script. The script will automatically use "tb-cloud-chain.pem" if you use default IoT Hub host (iothub.magenta.at) 
 
 **Note** Script uses **8883** mqtt port and requires paho mqtt library that you can install using the following command: **pip3 install paho-mqtt**
  

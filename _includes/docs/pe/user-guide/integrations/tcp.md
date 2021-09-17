@@ -25,7 +25,7 @@ Please review the integration diagram to learn more.
 
 In this tutorial, we will use:
 
- - IoT Hub instance — [thingsboard.cloud](https://thingsboard.cloud);
+ - IoT Hub instance — [iothub.magenta.at](https://iothub.magenta.at);
  - TCP Integration, running externally and connected to the cloud IoT Hub instance;
  - **echo** command which intended to display a line of text, and will redirect it's output to **netcat** (**nc**) utility;
  - **netcat** (**nc**) utility to establish TCP connections, receive data from there and transfer them;    

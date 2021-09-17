@@ -6,7 +6,7 @@
 <p>The IoT Hub documentation can help you to start with IoT Hub, learn about the platform and get your IoT projects running on IoT Hub.</p>
 {% endif %}
 
-<a style="margin: 10px 10px 10px 0;" href="/docs/{{docsPrefix}}getting-started-guides/what-is-thingsboard/" class="button">IoT Hub Overview</a>
+<a style="margin: 10px 10px 10px 0;" href="/docs/{{docsPrefix}}getting-started-guides/what-is-iothub/" class="button">IoT Hub Overview</a>
 <a style="margin: 10px;" href="/docs/{{docsPrefix}}getting-started-guides/helloworld/" class="button">Getting started</a>
 <a style="margin: 10px;" href="/docs/{{docsPrefix}}guides/" class="button">&nbsp;&nbsp;&nbsp;Guides&nbsp;&nbsp;&nbsp;</a>
 

@@ -9,7 +9,7 @@ description: IoT Hub IoT Platform sample for temperature data upload over MQTT u
 {:toc}
 
 ## Introduction
-{% include templates/what-is-thingsboard.md %}
+{% include templates/what-is-iothub.md %}
 
 This sample application performs collection of temperature and humidity values produced by [DHT22 sensor](https://www.adafruit.com/product/385) and further visualization on the real-time web dashboard.
 Collected data is pushed via MQTT to IoT Hub server for storage and visualization.

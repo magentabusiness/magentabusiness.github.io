@@ -16,7 +16,7 @@ Execute the following command to run the integration:
 
 ```bash
 docker run -it -v ~/.tb-pe-aws-integration-logs:/var/log/tb-aws-integration \
--e "RPC_HOST=thingsboard.cloud" -e "RPC_PORT=9090" \
+-e "RPC_HOST=iothub.magenta.at" -e "RPC_PORT=9090" \
 -e "INTEGRATION_ROUTING_KEY=YOUR_ROUTING_KEY"  -e "INTEGRATION_SECRET=YOUR_SECRET" \
 --name my-tb-pe-aws-integration --restart always thingsboard/tb-pe-aws-integration:{{ site.release.pe_full_ver }}
 ```
@@ -24,7 +24,7 @@ docker run -it -v ~/.tb-pe-aws-integration-logs:/var/log/tb-aws-integration \
 
 Where: 
     
-- `thingsboard.cloud` - is the host name of your IoT Hub instance;
+- `iothub.magenta.at` - is the host name of your IoT Hub instance;
 - `9090` - is the port of your IoT Hub instance. It is configured in thingsboard.yml using INTEGRATIONS_RPC_PORT env variable;    
 - `YOUR_ROUTING_KEY` - placeholder for your integration routing key obtained on [Step 3](/docs/user-guide/integrations/remote-integrations/#step-3-save-remote-integration-credentials);
 - `YOUR_SECRET` - placeholder for your integration secret obtained on [Step 3](/docs/user-guide/integrations/remote-integrations/#step-3-save-remote-integration-credentials);

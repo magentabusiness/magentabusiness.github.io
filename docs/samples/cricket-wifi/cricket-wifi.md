@@ -69,7 +69,7 @@ Now we can go back again to Cricket's Config panel and complete the configuratio
 <br/>
 A complete URL, which we are going to use to send data to IoT Hub should look like this:
 <br/>
-**https://thingsboard.cloud/api/v1/**ADD YOUR TOKEN HERE**/telemetry**
+**https://iothub.magenta.at/api/v1/**ADD YOUR TOKEN HERE**/telemetry**
 <br/>
 <br/>
 We also define the following payload format:

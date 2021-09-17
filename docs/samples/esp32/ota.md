@@ -9,7 +9,7 @@ hidetoc: "true"
 {:toc}
 
 ## Introduction
-{% include templates/what-is-thingsboard.md %}
+{% include templates/what-is-iothub.md %}
 [ESP32](https://www.espressif.com/en/products/hardware/esp32/overview) is a series of low-cost, low-power SOC microcontrollers with integrated self-contained Wi-Fi and dual-mode Bluetooth.  
 This sample application allow you to deliver a new firmware images to EPS32 with using IoT Hub and OTA.
 
@@ -33,7 +33,7 @@ See video tutorial below for this sample with additional detailed demonstration 
 - Any development board with ESP32-PICO-D4 chip.  
   For this sample we were using [ESP32-PICO-KIT mini development board](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/get-started-pico-kit.html#overview)  
     <img src="/images/samples/esp32/ota/esp32_board.png" width="400"/>
-- Account in IoT Hub application. You can use your own instance or [IoT Hub](https://thingsboard.cloud)  
+- Account in IoT Hub application. You can use your own instance or [IoT Hub](https://iothub.magenta.at)  
   We need to say that this sample works well with both CE and PE, but we use PE cloud since it has more features and in the next sample we will show how to do mass firmware updates for multiple devices simultaneously.
 
 ## IoT Hub configuration

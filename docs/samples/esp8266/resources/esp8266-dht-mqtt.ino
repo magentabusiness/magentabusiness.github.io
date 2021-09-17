@@ -11,7 +11,7 @@
 #define DHTPIN 2
 #define DHTTYPE DHT22
 
-char thingsboardServer[] = "YOUR_THINGSBOARD_HOST_OR_IP";
+char thingsboardServer[] = "device.iothub.magenta.at";
 
 WiFiClient wifiClient;
 

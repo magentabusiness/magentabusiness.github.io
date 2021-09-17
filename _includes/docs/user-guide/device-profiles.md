@@ -4,11 +4,11 @@
 
 ## Overview
 
-Since IoT Hub 3.2, the Tenant administrator is able to configure common settings for multiple devices using Device Profiles. 
+A Tenant administrator is able to configure common settings for multiple devices using Device Profiles. 
 Each Device has one and only profile at a single point in time. 
 
-Experienced IoT Hub users can notice that the device type has been deprecated in favor of the Device Profile. 
-The update script will automatically create Device Profiles based on unique Device Types and assign them to the appropriate devices.  
+<!-- Experienced IoT Hub users can notice that the device type has been deprecated in favor of the Device Profile. 
+The update script will automatically create Device Profiles based on unique Device Types and assign them to the appropriate devices.   -->
 
 Let's take a look at the settings available in the device profile one by one.
  
@@ -20,7 +20,7 @@ By default, the [Root Rule Chain](/docs/{{docsPrefix}}user-guide/rule-engine-2-0
 However, the more different device types you have, the more complex your Root Rule Chain may become. 
 Many platform users create their Root Rule Chain for the sole purpose of sending messages to specific rule chains depending on the device type. 
 
-To avoid this painful and mundane activity, since IoT Hub 3.2, you can specify a custom root Rule Chain for your devices.
+To avoid this painful and mundane activity, you can specify a custom root Rule Chain for your devices.
 The new Rule Chain will receive all telemetry, device activity(Active/Inactive), and device lifecycle(Created/Updated/Deleted) events.
 This setting is available in the Device Profile wizard and in the Device Profile details.  
 
@@ -35,15 +35,16 @@ For example, you might want to isolate data processing for Fire Alarm/Smoke Dete
 This way, even if your system has a peak load produced by millions of water meters, whenever the Fire Alarm is reported, it will be processed without delay.
 Separation of the queues also allows you to customize different [submit](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#queue-submit-strategy) and [processing](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#queue-processing-strategy) strategies.
 
-This setting is available in the Device Profile wizard and Device Profile details.{% unless docsPrefix == 'paas/' %}
+This setting is available in the Device Profile wizard and Device Profile details.
+<!-- {% unless docsPrefix == 'paas/' %}
 **Please note** that if you choose to use a custom queue name, you should configure it in the [thingsboard.yml](/docs/{{docsPrefix}}user-guide/install/config/#thingsboard-core-settings) file before you using it.
-{% endunless %}
+{% endunless %} -->
 
 {% include images-gallery.html imageCollection="queueNameSetting" %}
 
 ### Transport configuration
 
-Since IoT Hub 3.2, the platform supports two transport types: Default and MQTT. 
+The platform supports two transport types: Default and MQTT. 
 
 #### Default transport type
 
@@ -108,7 +109,7 @@ However, it is also possible to send data via [Protocol Buffers](https://develop
 
 Protocol Buffers, or Protobuf, is a language- and a platform-neutral way of serializing structured data. It is convenient to minimize the size of transmitted data.  
 
-At the moment of writing (IoT Hub 3.2.2), platform supports customizable proto schemas for [telemetry upload](/docs/{{docsPrefix}}reference/coap-api/#telemetry-upload-api) 
+At the moment of writing (IoT Hub 3.3.2), platform supports customizable proto schemas for [telemetry upload](/docs/{{docsPrefix}}reference/coap-api/#telemetry-upload-api) 
 and [attribute upload](/docs/{{docsPrefix}}reference/coap-api/#publish-attribute-update-to-the-server). 
 We plan to the add ability to define a schema for downlink messages (RPC calls and attribute updates) in future releases.  
 
@@ -119,7 +120,7 @@ IoT Hub parses the protobuf structures dynamically, that is why, it does not sup
 
 ##### CoAP device type: Efento NB-IoT
 
-At the moment of writing (IoT Hub 3.2.2), platform supports integration with next Efento NB-IoT sensors: 
+At the moment of writing (IoT Hub 3.3.2), platform supports integration with next Efento NB-IoT sensors: 
 
  - temperature,
  - humidity,

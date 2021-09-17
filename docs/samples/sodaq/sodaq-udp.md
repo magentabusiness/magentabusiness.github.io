@@ -9,7 +9,7 @@ hidetoc: "true"
 {% assign feature = "Platform Integrations" %}{% include templates/pe-feature-banner.md %}
 
 This guide contains step-by-step instruction how to to connect your SODAQ NB-IoT boards to IoT Hub  through the T-Mobile NB IoT network. 
-We will use free IoT Hub demo server [thingsboard.cloud](https://thingsboard.cloud/signup) in this guide. 
+We will use free IoT Hub demo server [iothub.magenta.at](https://iothub.magenta.at/signup) in this guide. 
 This guide will be useful for anyone who wants to connect their SODAQ NB-IoT boards or other hardware to T-Mobile NB IoT network.   
 
 * TOC
@@ -19,7 +19,7 @@ This guide will be useful for anyone who wants to connect their SODAQ NB-IoT boa
 
 We assume you have at least one of SODAQ NB-IoT Trackers in your lab that is already connected to your T-Mobile IoT network. 
 We also assume you already have a IoT Hub server or free demo account. 
-Otherwise you can register for a 30-days free demo account here: [thingsboard.cloud](https://thingsboard.cloud/signup).
+Otherwise you can register for a 30-days free demo account here: [iothub.magenta.at](https://iothub.magenta.at/signup).
 
 We expect you have a very basic knowledge about IoT Hub. Otherwise we do recommend to complete the following guides: 
 - [Getting Started](/docs/getting-started-guides/helloworld/) guide.

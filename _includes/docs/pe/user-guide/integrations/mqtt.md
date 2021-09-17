@@ -29,7 +29,7 @@ Also you may follow this guide, which discloses MQTT Integration to provide devi
 
 In this tutorial, we will use:
 
- - IoT Hub instance — [thingsboard.cloud](https://thingsboard.cloud);
+ - IoT Hub instance — [iothub.magenta.at](https://iothub.magenta.at);
  - MQTT broker, accessible by IoT Hub instance — broker.hivemq.com (port 1883);
  - mosquitto_pub and mosquitto_sub MQTT clients to send and receive messages;   
  - an advanced [device simulator](/docs/user-guide/integrations/resources/mqtt-client.py) for RPC simulation example.

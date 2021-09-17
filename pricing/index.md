@@ -69,7 +69,7 @@ defaultActivateSelectProduct: true
                                 <span>/&nbsp;month</span>
                             </h4>
                             <div class="row justify-content-center">
-                                <a class="btn-blue btn-pricing" href="https://thingsboard.cloud/signup">
+                                <a class="btn-blue btn-pricing" href="https://iothub.magenta.at/signup">
                                     Start Free
                                 </a>
                             </div>
@@ -92,7 +92,7 @@ defaultActivateSelectProduct: true
                                 <span>/&nbsp;month</span>
                             </h4>
                             <div class="row justify-content-center">
-                                <a class="btn-blue btn-pricing" href="https://thingsboard.cloud/signup">
+                                <a class="btn-blue btn-pricing" href="https://iothub.magenta.at/signup">
                                     Get Started
                                 </a>
                             </div>
@@ -116,7 +116,7 @@ defaultActivateSelectProduct: true
                                 <span>/&nbsp;month</span>
                             </h4>
                             <div class="row justify-content-center">
-                                <a class="btn-blue btn-pricing" href="https://thingsboard.cloud/signup">
+                                <a class="btn-blue btn-pricing" href="https://iothub.magenta.at/signup">
                                     Get Started
                                 </a>
                             </div>
@@ -744,7 +744,7 @@ defaultActivateSelectProduct: true
         <div class="item" data-tag="h4" data-item-id="trial-enable" data-title="How can I enable free trial?">
             <div class="container">
                 <p>
-                    Customer may <a href="https://thingsboard.cloud/signup" target="blank">signup on IoT Hub Cloud</a> and get 30 days of free trial on Maker plan. 
+                    Customer may <a href="https://iothub.magenta.at/signup" target="blank">signup on IoT Hub Cloud</a> and get 30 days of free trial on Maker plan. 
                     30 days of seamless experience and the newest features, except white-labeling!
                 </p>    
             </div>    

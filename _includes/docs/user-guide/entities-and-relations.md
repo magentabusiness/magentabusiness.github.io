@@ -7,8 +7,8 @@
 IoT Hub provides the user interface and REST APIs to provision and manage multiple entity types and their relations in your IoT application.
 Supported entities are:
 
- - **[Tenants](/docs/{{docsPrefix}}user-guide/ui/tenants/)** - you can treat the tenant as a separate business-entity: it's an individual or an organization who owns or produce devices and assets;
- Tenant may have multiple tenant administrator users and millions of customers, devices and assets;
+ <!-- - **[Tenants](/docs/{{docsPrefix}}user-guide/ui/tenants/)** - you can treat the tenant as a separate business-entity: it's an individual or an organization who owns or produce devices and assets;
+ Tenant may have multiple tenant administrator users and millions of customers, devices and assets; -->
  - **[Customers](/docs/{{docsPrefix}}user-guide/ui/customers/)** - the customer is also a separate business-entity: individual or organization who purchase or uses tenant devices and/or assets;
  Customer may have multiple users and millions of devices and/or assets;
  - **[Users](/docs/{{docsPrefix}}user-guide/ui/users/)** - users are able to browse dashboards and manage entities;
@@ -28,7 +28,7 @@ Each entity supports:
 
 Some entities support profiles:
 
-  - **[Tenant Profiles](/docs/{{docsPrefix}}user-guide/tenant-profiles/)** - contains common settings for multiple tenants: entity, API and rate limits, etc. Each Tenant has the one and only profile at a single point in time.
+  <!-- - **[Tenant Profiles](/docs/{{docsPrefix}}user-guide/tenant-profiles/)** - contains common settings for multiple tenants: entity, API and rate limits, etc. Each Tenant has the one and only profile at a single point in time. -->
   - **[Device Profiles](/docs/{{docsPrefix}}user-guide/device-profiles/)** - contains common settings for multiple devices: processing and transport configuration, etc. Each Device has the one and only profile at a single point in time.
 
 {% if docsPrefix == "pe/" %}
@@ -68,7 +68,7 @@ The following diagram explains how those entities are configured and stored in I
 
 
 See ["add and delete assets"](/docs/pe/user-guide/ui/assets/#add-and-delete-assets) and ["manage asset relations"](/docs/pe/user-guide/ui/assets/#manage-asset-relations)
-to learn how to configure this entities via Administration UI. You may also use [REST API](/docs/reference/rest-client/) to create entities and relations programmatically.
+to learn how to configure this entities via Administration UI. You may also use [REST API](/docs/pe/reference/rest-client/) to create entities and relations programmatically.
 
 ## Next steps
 
@@ -93,4 +93,4 @@ You are welcome to learn how to do it here:
 
 **Design your dashboard**
 
-Please [import](/docs/{{docsPrefix}}user-guide/ui/dashboards/#dashboard-import) the following [**dashboard**](/docs/{{docsPrefix}}user-guide/resources/region_fields_dashboard.json) that demonstrates Map, Alarm, Entity Table and Charts widgets.
+Please [import](/docs/{{docsPrefix}}user-guide/dashboards/#import-dashboard) the following [**dashboard**](/docs/{{docsPrefix}}user-guide/resources/region_fields_dashboard.json) that demonstrates Map, Alarm, Entity Table and Charts widgets.

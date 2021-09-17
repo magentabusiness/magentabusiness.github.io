@@ -7,4 +7,4 @@ description: IoT Hub key features and advantages for the rapid development of Io
 ---
 
 {% assign docsPrefix = "paas/" %}
-{% include docs/getting-started-guides/what-is-thingsboard.md %}
+{% include docs/getting-started-guides/what-is-iothub.md %}

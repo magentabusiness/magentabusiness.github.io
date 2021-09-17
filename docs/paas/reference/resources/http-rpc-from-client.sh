@@ -2,7 +2,7 @@
 # for IoT Hub
 
 # Send HTTP attributes request
-curl -X POST -d @rpc-client-request.json https://thingsboard.cloud/api/v1/$ACCESS_TOKEN/rpc --header "Content-Type:application/json"
+curl -X POST -d @rpc-client-request.json https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/rpc --header "Content-Type:application/json"
 
 # for local IoT Hub
 

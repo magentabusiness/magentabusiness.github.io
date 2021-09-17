@@ -10,7 +10,7 @@ hidetoc: "true"
 
 ## Introduction
 
-{% include templates/what-is-thingsboard.md %}
+{% include templates/what-is-iothub.md %}
 
 This sample demo performs collection of temperature and humidity values produced by BLE broadcasting devices and further visualization on the real-time web dashboard. In this example we use [HTU21D](https://www.sparkfun.com/products/13763) connected to [ESP32](https://espressif.com/en/products/hardware/esp32/overview) and  [Xiaomi Smart Temperature & Humidity Sensor](https://www.amazon.com/Xiaomi-Bluetooth-Temperature-Sensitive-Thermometer/dp/B07B9SJJZJ). The purpose of this application is to demonstrate IoT Hub  [data collection API](/docs/user-guide/telemetry/) , [visualization capabilities](/docs/user-guide/visualization/), [gateway API](/docs/iot-gateway/what-is-iot-gateway/) and the capabilities of [Bluetooth Low Energy](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy) protocol, which you can use with both custom and mass-produce devices.
 

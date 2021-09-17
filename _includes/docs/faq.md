@@ -6,18 +6,18 @@
 
 IoT Hub is an open-source server-side platform that allows you to monitor and control your IoT devices.
 It is free for both personal and commercial usage and you can deploy it anywhere. 
-If this is your first experience with the platform we recommend to review [what-is-thingsboard](/docs/{{docsPrefix}}getting-started-guides/what-is-thingsboard/) 
+If this is your first experience with the platform we recommend to review [what-is-iothub](/docs/{{docsPrefix}}getting-started-guides/what-is-iothub/) 
 and [getting started guide](/docs/{{docsPrefix}}getting-started-guides/helloworld/).
 You can find more information on the dedicated page.
 
-## How do I get started?
+<!-- ## How do I get started?
 
 {% if docsPrefix == 'paas/' %}
 We recommend to follow the [getting started guide](/docs/{{docsPrefix}}getting-started-guides/helloworld/).
 {% else %}
 We recommend to [install](/docs/{{docsPrefix}}user-guide/install/installation-options/) IoT Hub locally on your laptop or PC using Docker
 and follow the [getting started guide](/docs/{{docsPrefix}}getting-started-guides/helloworld/).
-{% endif %}
+{% endif %} -->
 
 ## What can I do with IoT Hub?
 
@@ -25,7 +25,7 @@ IoT Hub provides out-of-the-box IoT solution that will enable server-side infras
 You can find more information by browsing [guides](/docs/{{docsPrefix}}user-guide/) and [hardware samples](/docs/{{docsPrefix}}guides/#AnchorIDHardwareSamples)
 
 {% unless docsPrefix == 'paas/' %}
-## Where can I host IoT Hub?
+<!-- ## Where can I host IoT Hub?
 
 You can host IoT Hub in the cloud, on-premises or locally on your laptop, PC or even Raspberry Pi. We recommend to get started with Docker installation
   
@@ -33,7 +33,7 @@ You can host IoT Hub in the cloud, on-premises or locally on your laptop, PC or 
   - [Windows](/docs/{{docsPrefix}}user-guide/install/docker-windows/)
 
 You can also take a look at [cluster setup](/docs/{{docsPrefix}}user-guide/install/cluster-setup/) guide.
-{% endunless %}
+{% endunless %} -->
 
 ## How to connect my device?
 
@@ -59,7 +59,7 @@ You can use MQTT (over SSL) or HTTPS protocols for transport encryption.
 
 Each device has unique access token credentials that is used to setup connection. Credentials type is pluggable, so X.509 certificates support is coming soon.
 
-## How much devices can IoT Hub support?
+<!-- ## How much devices can IoT Hub support?
 
 IoT Hub platform is horizontally scalable. Each server node in the cluster is unique.
 Scalability is achieved using [consistent-hashing](https://dzone.com/articles/simple-magic-consistent) load balancing algorithm between the cluster nodes.
@@ -75,8 +75,8 @@ The data is stored in [Cassandra](http://cassandra.apache.org/) database. Cassan
 ## What license type does IoT Hub use?
 
 IoT Hub is licensed under [Apache 2.0 License](https://en.wikipedia.org/wiki/Apache_License#Version_2.0).
-It is free for both personal and commercial usage and you can deploy it anywhere.
+It is free for both personal and commercial usage and you can deploy it anywhere. -->
 
-## How to get support?
+<!-- ## How to get support?
 
-You can use troubleshooting instructions and community resources or [contact us](/docs/contact-us) and learn more about [services](/docs/services/) we provide.
+You can use troubleshooting instructions and community resources or [contact us](/docs/contact-us) and learn more about [services](/docs/services/) we provide. -->

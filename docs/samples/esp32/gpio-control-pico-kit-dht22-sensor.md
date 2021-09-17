@@ -10,7 +10,7 @@ hidetoc: "true"
 
 ## Introduction
 
-{% include templates/what-is-thingsboard.md %}
+{% include templates/what-is-iothub.md %}
 
 [ESP32](https://www.espressif.com/en/products/hardware/esp32/overview) is a series of low-cost, low-power system-on-a-chip microcontrollers with integrated self-contained Wi-Fi and dual-mode Bluetooth. ESP32 is a successor of ESP8266 chip.
 

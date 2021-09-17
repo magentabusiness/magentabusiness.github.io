@@ -41,7 +41,7 @@ Server-side attributes are the ones that you may configure via Administration UI
 The device firmware can't access the server-side attribute.
 
 {:refdef: style="text-align: center;"}
-![image](/images/user-guide/server-side-attributes.svg)
+![image](/images/user-guide/server-side-attributes-magenta.svg)
 {: refdef}
 
 Let's assume you would like to build a building monitoring solution and review few examples:
@@ -67,12 +67,12 @@ Use [REST API](/docs/{{docsPrefix}}reference/rest-api/) documentation to get the
 Send POST request with JSON representation of the attribute to the following URL: 
 
 ```text
-https://$YOUR_THINGSBOARD_HOST/api/plugins/telemetry/$ENTITY_TYPE/$ENTITY_ID/SERVER_SCOPE
+https://$api.iothub.magenta.at/api/plugins/telemetry/$ENTITY_TYPE/$ENTITY_ID/SERVER_SCOPE
 ```
 
 The example below creates attribute with the name "newAttributeName" and value "newAttributeValue" for device with ID 'ad17c410-914c-11eb-af0c-d5862211a5f6' and IoT Hub server:
 ```shell
-curl -v 'https://thingsboard.cloud/api/plugins/telemetry/DEVICE/ad17c410-914c-11eb-af0c-d5862211a5f6/SERVER_SCOPE' \
+curl -v 'https://iothub.magenta.at/api/plugins/telemetry/DEVICE/ad17c410-914c-11eb-af0c-d5862211a5f6/SERVER_SCOPE' \
 -H 'x-authorization: Bearer $YOUR_JWT_TOKEN_HERE' \
 -H 'content-type: application/json' \
 --data-raw '{"newAttributeName":"newAttributeValue"}'
@@ -82,7 +82,7 @@ curl -v 'https://thingsboard.cloud/api/plugins/telemetry/DEVICE/ad17c410-914c-11
 Similar, you can fetch all server-side attributes using the following command:
 
 ```shell
-curl -v -X GET 'https://thingsboard.cloud/api/plugins/telemetry/DEVICE/ad17c410-914c-11eb-af0c-d5862211a5f6/values/attributes/SERVER_SCOPE' \
+curl -v -X GET 'https://iothub.magenta.at/api/plugins/telemetry/DEVICE/ad17c410-914c-11eb-af0c-d5862211a5f6/values/attributes/SERVER_SCOPE' \
   -H 'x-authorization: Bearer $YOUR_JWT_TOKEN_HERE' \
   -H 'content-type: application/json' 
 ```
@@ -112,7 +112,7 @@ The devices which communicate over MQTT or other bi-directional communication pr
 The devices which communicate over HTTP or other request-response communication protocols may periodically request the value of shared attribute.
 
 {:refdef: style="text-align: center;"}
-![image](/images/user-guide/shared-attributes.svg)
+![image](/images/user-guide/shared-attributes-magenta.svg)
 {: refdef}
 
 The most common use case of shared attributes is to store device settings.
@@ -136,12 +136,12 @@ Use [REST API](/docs/{{docsPrefix}}reference/rest-api/) documentation to get the
 Send POST request with JSON representation of the attribute to the following URL:
 
 ```text
-https://$YOUR_THINGSBOARD_HOST/api/plugins/telemetry/$ENTITY_TYPE/$ENTITY_ID/SHARED_SCOPE
+https://$api.iothub.magenta.at/api/plugins/telemetry/$ENTITY_TYPE/$ENTITY_ID/SHARED_SCOPE
 ```
 
 The example below creates attribute with the name "newAttributeName" and value "newAttributeValue" for device with ID 'ad17c410-914c-11eb-af0c-d5862211a5f6' and IoT Hub server:
 ```shell
-curl -v 'https://thingsboard.cloud/api/plugins/telemetry/DEVICE/ad17c410-914c-11eb-af0c-d5862211a5f6/SHARED_SCOPE' \
+curl -v 'https://iothub.magenta.at/api/plugins/telemetry/DEVICE/ad17c410-914c-11eb-af0c-d5862211a5f6/SHARED_SCOPE' \
 -H 'x-authorization: Bearer $YOUR_JWT_TOKEN_HERE' \
 -H 'content-type: application/json' \
 --data-raw '{"newAttributeName":"newAttributeValue"}'
@@ -151,7 +151,7 @@ curl -v 'https://thingsboard.cloud/api/plugins/telemetry/DEVICE/ad17c410-914c-11
 Similar, you can fetch all shared attributes using the following command:
 
 ```shell
-curl -v -X GET 'https://thingsboard.cloud/api/plugins/telemetry/DEVICE/ad17c410-914c-11eb-af0c-d5862211a5f6/values/attributes/SHARED_SCOPE' \
+curl -v -X GET 'https://iothub.magenta.at/api/plugins/telemetry/DEVICE/ad17c410-914c-11eb-af0c-d5862211a5f6/values/attributes/SHARED_SCOPE' \
   -H 'x-authorization: Bearer $YOUR_JWT_TOKEN_HERE' \
   -H 'content-type: application/json' \
 ```
@@ -190,7 +190,7 @@ It is similar to [shared attributes](/docs/{{docsPrefix}}user-guide/attributes/#
 The device firmware/application may send the value of the attributes from device to the platform.
 
 {:refdef: style="text-align: center;"}
-![image](/images/user-guide/client-side-attributes.svg)
+![image](/images/user-guide/client-side-attributes-magenta.svg)
 {: refdef}
 
 The most common use case of client attributes is to report device state.
@@ -210,14 +210,14 @@ Use [REST API](/docs/{{docsPrefix}}reference/rest-api/) documentation to get the
 Send GET request to the following URL:
 
 ```text
-https://$YOUR_THINGSBOARD_HOST/api/plugins/telemetry/$ENTITY_TYPE/$ENTITY_ID/CLIENT_SCOPE
+https://$api.iothub.magenta.at/api/plugins/telemetry/$ENTITY_TYPE/$ENTITY_ID/CLIENT_SCOPE
 ```
 {: .copy-code}
 
 The example below gets all attributes for device with ID 'ad17c410-914c-11eb-af0c-d5862211a5f6' and IoT Hub server:
 
 ```shell
-curl -v -X GET 'https://thingsboard.cloud/api/plugins/telemetry/DEVICE/ad17c410-914c-11eb-af0c-d5862211a5f6/values/attributes/CLIENT_SCOPE' \
+curl -v -X GET 'https://iothub.magenta.at/api/plugins/telemetry/DEVICE/ad17c410-914c-11eb-af0c-d5862211a5f6/values/attributes/CLIENT_SCOPE' \
   -H 'x-authorization: Bearer $YOUR_JWT_TOKEN_HERE' \
   -H 'content-type: application/json' \
 ```

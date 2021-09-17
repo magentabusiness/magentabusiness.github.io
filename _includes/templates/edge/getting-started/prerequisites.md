@@ -15,7 +15,7 @@ Once IoT Hub **Edge** provisioned on {{currentIoT HubVersion}} server please fol
 
 {% if currentIoT HubVersion == "IoT Hub" %}
 {% capture contenttogglespec %}
-Cloud<br/><small>Connect edge to https://thingsboard.cloud</small>%,%ce%,%templates/edge/pe-cloud.md%br%
+Cloud<br/><small>Connect edge to https://iothub.magenta.at</small>%,%ce%,%templates/edge/pe-cloud.md%br%
 On-premise server<br/><small>Connect edge to on-premise instance</small>%,%pe%,%templates/edge/on-premise-cloud.md{% endcapture %}
 {% include content-toggle.html content-toggle-id="cloudType" toggle-spec=contenttogglespec %}
 {% endif %}
