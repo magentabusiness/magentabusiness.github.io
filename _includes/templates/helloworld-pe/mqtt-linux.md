@@ -12,25 +12,34 @@ brew install mosquitto-clients
 ```
 {: .copy-code}
 
+**Access via public Internet**  
 
-Replace $HOST_NAME and $ACCESS_TOKEN with corresponding values.
+Replace $ACCESS_TOKEN with corresponding values.
 
 ```bash
-mosquitto_pub -d -q 1 -h "$HOST_NAME" -p "1883" -t "v1/devices/me/telemetry" -u "$ACCESS_TOKEN" -m {"temperature":25}
+mosquitto_pub -d -q 1 -h "iothub.magenta.at" -p "8883" -t "v1/devices/me/telemetry" -u "$ACCESS_TOKEN" -m {"temperature":25} --capath /etc/ssl/certs
 ```
 {: .copy-code}
 
-For example, $HOST_NAME reference IoT Hub server, access token is ABC123:
+For access token is ABC123:
 
 ```bash
-mosquitto_pub -d -q 1 -h "iothub.magenta.at" -p "1883" -t "v1/devices/me/telemetry" -u "ABC123" -m {"temperature":25} 
+mosquitto_pub -d -q 1 -h "iothub.magenta.at" -p "8883" -t "v1/devices/me/telemetry" -u "ABC123" -m {"temperature":25} --capath /etc/ssl/certs
 ```
 {: .copy-code}
 
-For example, $HOST_NAME reference your local installation, access token is ABC123:
+**Direct connected Device (with IoT Hub SIM-Card)**  
+Replace $ACCESS_TOKEN with corresponding values.
 
 ```bash
-mosquitto_pub -d -q 1 -h "localhost" -p "1883" -t "v1/devices/me/telemetry" -u "ABC123" -m {"temperature":25}
+mosquitto_pub -d -q 1 -h "172.31.64.64" -p "1883" -t "v1/devices/me/telemetry" -u "$ACCESS_TOKEN" -m {"temperature":25}  
+```
+{: .copy-code}
+
+For access token is ABC123:
+
+```bash
+mosquitto_pub -d -q 1 -h "172.31.64.64" -p "1883" -t "v1/devices/me/telemetry" -u "ABC123" -m {"temperature":25}  
 ```
 {: .copy-code}
 
@@ -44,7 +53,7 @@ Client mosqpub|xxx received PUBACK (Mid: 1)
 Client mosqpub|xxx sending DISCONNECT
 ```
 
-**Note:** Since IoT Hub 3.2, you are able to use basic MQTT credentials (combination of client id, user name and password ) 
+**Note:** You are able to use basic MQTT credentials (combination of client id, user name and password ) 
 and customize **topic names** and **payload type** using Device Profile. See more info [here](/docs/user-guide/device-profiles/#mqtt-transport-type).
 
 <br/>

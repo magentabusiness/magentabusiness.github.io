@@ -303,10 +303,10 @@ step75:
         
 mqttWindows:
     0:
-        image: /images/helloworld/hello-world-pe-step-3-item-1.png
+        image: /images/helloworld/hello-world-pe-step-3-item-1-magenta.png
         title: 'Create new MQTT Client with the properties listed in screenshots below.' 
     1:
-        image: /images/helloworld/hello-world-pe-step-3-item-2.png
+        image: /images/helloworld/hello-world-pe-step-3-item-2-magenta.png
         title: 'Populate the topic name and payload. Make sure the payload is a valid JSON document. Click "Publish" button.'
                            
 ---

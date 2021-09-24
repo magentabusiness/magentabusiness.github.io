@@ -6,9 +6,31 @@
 <p>The IoT Hub documentation can help you to start with IoT Hub, learn about the platform and get your IoT projects running on IoT Hub.</p>
 {% endif %}
 
+
+**Service:**    
+Haben Sie Fragen zu Ihren Zugangsdaten, Verrechnung, SIM-Karten oder Vertrag,   
+kontaktieren Sie bitte unser Service Team:  
+
+**Servicezeiten:**    
+Ihr Kontakt zum "M2M Service Team" von Magenta:   
+E-Mail: [service4iot@magenta.at](mailto:service4iot@magenta.at)    
+Internationale Telefonnummer +43 1 79585 1385   
+
+**Geschäftszeiten:**    
+Montag bis Donnerstag 08:00 Uhr bis 17:00 Uhr   
+Freitag 08:00 Uhr bis 16:00 Uhr  
+
+Haben Sie Fragen zum IoT-Hub (Protokollen, Devices, Dashbaords...), benutzen Sie   
+die Quickstartguides und die Hilfe unter [https://docs.iothub.magenta.at](https://docs.iothub.magenta.at)  
+
+<!-- Email: iothub@magenta.at   -->
+
+
 <a style="margin: 10px 10px 10px 0;" href="/docs/{{docsPrefix}}getting-started-guides/what-is-iothub/" class="button">IoT Hub Overview</a>
 <a style="margin: 10px;" href="/docs/{{docsPrefix}}getting-started-guides/helloworld/" class="button">Getting started</a>
 <a style="margin: 10px;" href="/docs/{{docsPrefix}}guides/" class="button">&nbsp;&nbsp;&nbsp;Guides&nbsp;&nbsp;&nbsp;</a>
+
+
 
 {% if docsPrefix == 'pe/' %}
 <h2 id="features">IoT Hub Features</h2>
