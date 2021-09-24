@@ -14,7 +14,7 @@ kontaktieren Sie bitte unser Service Team:
 **Servicezeiten:**    
 Ihr Kontakt zum "M2M Service Team" von Magenta:   
 E-Mail: [service4iot@magenta.at](mailto:service4iot@magenta.at)    
-Internationale Telefonnummer +43 1 79585 1385   
+<!-- Internationale Telefonnummer +43 1 79585 1385    -->
 
 **Geschäftszeiten:**    
 Montag bis Donnerstag 08:00 Uhr bis 17:00 Uhr   
