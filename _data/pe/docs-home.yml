@@ -205,15 +205,15 @@ toc:
         path: /docs/pe/user-guide/ui/advanced-data-key-configuration/
 - title: Contribution Guide
   section:
-    - title: How to contribute your device integration guide
-      path: /docs/pe/user-guide/contribution/how-to-contribute-your-device-integration-guide/
-    - title: Rule Node development
-      path: /docs/pe/user-guide/contribution/rule-node-development/
-    - title: Widgets development (IoT Hub v3.x)
+    # - title: How to contribute your device integration guide
+    #   path: /docs/pe/user-guide/contribution/how-to-contribute-your-device-integration-guide/
+    # - title: Rule Node development
+    #   path: /docs/pe/user-guide/contribution/rule-node-development/
+    - title: Widgets development 
       path: /docs/pe/user-guide/contribution/widgets-development/
-- title: Troubleshooting
-  path: /docs/pe/user-guide/troubleshooting/
-- title: Release Notes
-  path: /docs/pe/reference/releases/
-- title: Roadmap
-  path: /docs/pe/reference/roadmap/
+# - title: Troubleshooting
+#   path: /docs/pe/user-guide/troubleshooting/
+# - title: Release Notes
+#   path: /docs/pe/reference/releases/
+# - title: Roadmap
+#   path: /docs/pe/reference/roadmap/

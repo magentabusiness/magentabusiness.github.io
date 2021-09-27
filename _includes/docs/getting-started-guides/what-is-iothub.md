@@ -1,5 +1,5 @@
 
-IoT Hub is an open-source IoT platform that enables rapid development, management, and scaling of IoT projects. 
+IoT Hub is an IoT platform that enables rapid development, management, and scaling of IoT projects. 
 Our goal is to provide the out-of-the-box IoT cloud or on-premises solution that will enable server-side infrastructure for your IoT applications. 
 
 #### Features
@@ -18,8 +18,8 @@ With IoT Hub, you are able to:
  
 See [**IoT Hub features list**](/docs/{{docsPrefix}}#features) for more features and useful links to the specific feature documentation. 
 
-<object width="80%" data="/images/reference/thingsboard-architecture.svg"></object>
-
+<!-- <object width="80%" data="/images/reference/thingsboard-architecture.svg"></object> -->
+<!-- 
 #### Architecture
 
 IoT Hub is designed to be:
@@ -29,13 +29,13 @@ IoT Hub is designed to be:
 * **robust and efficient**: a single server node can handle tens or even hundreds of thousands of devices, depending on the use-case. 
 IoT Hub cluster can handle millions of devices.
 * **customizable**: adding new functionality is easy with customizable widgets and rule engine nodes.
-* **durable**: never lose your data.
+* **durable**: never lose your data. -->
 
 {% if docsPrefix != "paas/" %}
 
-See [**IoT Hub Architecture**](/docs/{{docsPrefix}}reference) for more details.
+<!-- See [**IoT Hub Architecture**](/docs/{{docsPrefix}}reference) for more details. -->
 
-{% endif %}
+{% endif %} 
 
 #### Ready to get started?
 

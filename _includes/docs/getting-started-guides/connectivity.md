@@ -30,9 +30,9 @@ See [What is IoT Gateway?](/docs/iot-gateway/what-is-iot-gateway/) for more info
 
 #### LoRaWAN
 
-It is possible to integrate ChirpStack network server with IoT Hub Community Edition using this [guide](https://www.chirpstack.io/application-server/integrations/thingsboard/).
+<!-- It is possible to integrate ChirpStack network server with IoT Hub Community Edition using this [guide](https://www.chirpstack.io/application-server/integrations/thingsboard/). -->
 
-[IoT Hub PE](/products/thingsboard-pe/) supports ChirpStack and many other network servers via [Integrations](/docs/{{peDocsPrefix}}user-guide/integrations/).
+IoT Hub supports ChirpStack and many other network servers via [Integrations](/docs/{{peDocsPrefix}}user-guide/integrations/).
 For example: [TheThingsNetwork](/docs/{{peDocsPrefix}}user-guide/integrations/ttn/), [TheThingsIndustries](/docs/{{peDocsPrefix}}user-guide/integrations/tti/),
 [LORIOT](/docs/{{peDocsPrefix}}user-guide/integrations/loriot/),
 [Actility ThingPark](/docs/{{peDocsPrefix}}user-guide/integrations/thingpark/) or any other network server that supports the [webhooks](/docs/{{peDocsPrefix}}user-guide/integrations/http/) or [mqtt](/docs/{{peDocsPrefix}}user-guide/integrations/mqtt/).
@@ -40,9 +40,9 @@ Big advantage of IoT Hub integrations is the ability to define custom [data conv
 
 #### Sigfox
 
-[IoT Hub PE](/products/thingsboard-pe/) supports Sigfox [integration](/docs/{{peDocsPrefix}}user-guide/integrations/sigfox/) out-of-the-box.
+IoT Hub supports Sigfox [integration](/docs/{{peDocsPrefix}}user-guide/integrations/sigfox/) out-of-the-box.
 
 #### NB IoT and other protocols
 
-[IoT Hub PE](/products/thingsboard-pe/) supports many [Integrations](/docs/{{peDocsPrefix}}user-guide/integrations/) that cover most of the devices on the market.
+IoT Hub supports many [Integrations](/docs/{{peDocsPrefix}}user-guide/integrations/) that cover most of the devices on the market.
 Please [contact us](/docs/contact-us/) if you need help to connect your device.

@@ -10,8 +10,7 @@
 **Service:**    
 Haben Sie Fragen zu Ihren Zugangsdaten, Verrechnung, SIM-Karten oder Vertrag,   
 kontaktieren Sie bitte unser Service Team:  
-
-**Servicezeiten:**    
+  
 Ihr Kontakt zum "M2M Service Team" von Magenta:   
 E-Mail: [service4iot@magenta.at](mailto:service4iot@magenta.at)    
 <!-- Internationale Telefonnummer +43 1 79585 1385    -->
@@ -25,10 +24,13 @@ die Quickstartguides und die Hilfe unter [https://docs.iothub.magenta.at](https:
 
 <!-- Email: iothub@magenta.at   -->
 
+<!-- [How to connect your Device (APN, Protocol Endpoints)](/docs/pe/getting-started-guides/connectivity/) -->
 
-<a style="margin: 10px 10px 10px 0;" href="/docs/{{docsPrefix}}getting-started-guides/what-is-iothub/" class="button">IoT Hub Overview</a>
-<a style="margin: 10px;" href="/docs/{{docsPrefix}}getting-started-guides/helloworld/" class="button">Getting started</a>
+
+<!-- <a style="margin: 10px 10px 10px 0;" href="/docs/{{docsPrefix}}getting-started-guides/what-is-iothub/" class="button">IoT Hub Overview</a> -->
+<a style="margin: 10px 10px 10px 0;" href="/docs/{{docsPrefix}}getting-started-guides/helloworld/" class="button">Getting started</a>
 <a style="margin: 10px;" href="/docs/{{docsPrefix}}guides/" class="button">&nbsp;&nbsp;&nbsp;Guides&nbsp;&nbsp;&nbsp;</a>
+<a style="margin: 10px;" href="/docs/{{docsPrefix}}getting-started-guides/connectivity/" class="button">&nbsp;&nbsp;&nbsp;How to connect your Device&nbsp;&nbsp;&nbsp;</a>
 
 
 

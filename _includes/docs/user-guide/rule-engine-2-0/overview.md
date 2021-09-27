@@ -264,14 +264,14 @@ List of the predefined Message Types is presented in the following table:
       <tr>
           <td>ADDED_TO_ENTITY_GROUP</td>
           <td><b>Added to Group</b></td>
-          <td>Event produced when entity was added to <a href="/docs/{{docsPrefix}}user-guide/groups/">Entity Group</a>. This Message Type is specific to <a href="/products/thingsboard-pe/">IoT Hub PE</a>.</td>
+          <td>Event produced when entity was added to <a href="/docs/{{docsPrefix}}user-guide/groups/">Entity Group</a>. This Message Type is specific to <a href="/products/thingsboard-pe/">IoT Hub</a>.</td>
           <td><b>userName</b> - name of the user who performed assignment operation,<br><b>userId</b> - the user Id,<br><b>addedToEntityGroupName</b> - entity group name,<br><b>addedToEntityGroupId</b> - Id of entity group</td>
           <td>empty json payload</td>
       </tr>
       <tr>
           <td>REMOVED_FROM_ENTITY_GROUP</td>
           <td><b>Removed from Group</b></td>
-          <td>Event produced when entity was removed from <a href="/docs/{{docsPrefix}}user-guide/groups/">Entity Group</a>. This Message Type is specific to <a href="/products/thingsboard-pe/">IoT Hub PE</a>.</td>
+          <td>Event produced when entity was removed from <a href="/docs/{{docsPrefix}}user-guide/groups/">Entity Group</a>. This Message Type is specific to <a href="/products/thingsboard-pe/">IoT Hub</a>.</td>
           <td><b>userName</b> - name of the user who performed unassignment operation,<br><b>userId</b> - the user Id,<br><b>removedFromEntityGroupName</b> - entity group name,<br><b>removedFromEntityGroupId</b> - Id of entity group</td>
           <td>empty json payload</td>
       </tr>

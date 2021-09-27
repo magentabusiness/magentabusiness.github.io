@@ -14,7 +14,7 @@ that are defined based on the [subscription plan](/products/paas/subscription/).
 
 With **IoT Hub** you get the following benefits:
 
- - **Advanced features.** Platform supports all [IoT Hub](/products/thingsboard-pe/) features and advanced [domain management](/products/paas/domains/).
+ - **Advanced features.** Platform supports all IoT Hub features and advanced [domain management](/products/paas/domains/).
  - **Improved time to market.** Save time on maintenance of the platform or configuration of the features.   
  - **Reduced costs.** The cost of the cluster infrastructure is shared between the users of the platform.
  - **High availability.** IoT Hub uses microservices architecture and is deployed in multiple availability zones.

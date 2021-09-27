@@ -11,7 +11,7 @@ HTTP Integration allows converting existing protocols and payload formats to IoT
  - stream device and/or asset data from your custom application running in the cloud.
  - connect the existing device with custom HTTP based protocol to IoT Hub.
 
-![image](/images/user-guide/integrations/http-integration.svg)
+![image](/images/user-guide/integrations/http-integration-magenta.svg)
 
 ## Create Uplink Converter
 

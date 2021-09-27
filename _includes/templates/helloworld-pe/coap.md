@@ -2,7 +2,23 @@ Install coap-cli. Assuming you have Node.js and NPM installed on your Windows/Li
 
 
 **Access via public Internet**   
-Work in progress...
+Install CoAP Client
+```bash
+sudo apt install autoconf automake libtool libssl-dev
+git clone https://github.com/obgm/libcoap --recursive
+cd libcoap/
+./autogen.sh 
+./configure --with-openssl --disable-doxygen --disable-manpages --disable-shared
+make
+sudo make install
+``` 
+Send telemetry data
+```bash
+
+coap-client   -m post coaps://coap.iothub.magenta.at/api/v1/KsgfJm1emwUMrvJRgTDG/telemetry -e '{"temperature":25}'
+
+``` 
+{: .copy-code}
 
 
 **Direct connected Device (with IoT Hub SIM-Card)**  

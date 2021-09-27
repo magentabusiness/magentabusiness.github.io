@@ -148,7 +148,7 @@ In this case value of **deviceName** can be referenced as <code>${deviceName}</c
 
 Additionally this node can prepare email attachments if incoming message metadata contains **attachments** field with reference to files stored in DataBase. 
 
-**NOTE**: This is part of [File Storage](/docs/{{docsPrefix}}user-guide/file-storage/) feature supported by [IoT Hub](/products/thingsboard-pe/).
+**NOTE**: This is part of [File Storage](/docs/{{docsPrefix}}user-guide/file-storage/) feature supported by IoT Hub.
 
 <br/>
 

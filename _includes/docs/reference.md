@@ -22,7 +22,7 @@ The diagram below shows key system components and interfaces they provide. Let's
 
 
 **IoT Hub Transports**
- 
+{% assign docsPrefix = "pe/" %} 
 IoT Hub provides [MQTT](/docs/{{docsPrefix}}reference/mqtt-api/), [HTTP](/docs/{{docsPrefix}}reference/http-api/), [CoAP](/docs/{{docsPrefix}}reference/coap-api/) and [LwM2M](/docs/{{docsPrefix}}reference/lwm2m-api/) based APIs that are available for your device applications/firmware. 
 Each of the protocol APIs are provided by a separate server component and is part of IoT Hub "Transport Layer". 
 MQTT Transport also provides [Gateway APIs](/docs/{{docsPrefix}}reference/gateway-mqtt-api/) to be used by gateways that represent multiple connected devices and/or sensors.
@@ -76,20 +76,20 @@ IoT Hub uses following topics:
  * **tb_core**: to push messages from Transport or Rule Engine to IoT Hub Core. Messages include session lifecycle events, attribute and RPC subscriptions, etc.
  * **tb_rule_engine**: to push messages from Transport or IoT Hub Core to Rule Engine. Messages include incoming telemetry, device states, entity lifecycle events, etc.
  
-**Note:** All topic properties including names and number of partitions are [configurable](/docs/{{docsPrefix}}user-guide/install/config/) via thingsboard.yml or environment variables. 
-We plan to enable configuration via UI in IoT Hub 2.6 and/or 3.1. 
+<!-- **Note:** All topic properties including names and number of partitions are [configurable](/docs/{{docsPrefix}}user-guide/install/config/) via thingsboard.yml or environment variables. 
+We plan to enable configuration via UI in IoT Hub 2.6 and/or 3.1.  -->
 
-**Note:** Starting version 2.5 we have switched from using [gRPC](https://grpc.io/) to  [Message Queues](/docs/{{docsPrefix}}reference/#message-queues-are-awesome)
+<!-- **Note:** Starting version 2.5 we have switched from using [gRPC](https://grpc.io/) to  [Message Queues](/docs/{{docsPrefix}}reference/#message-queues-are-awesome)
 for all communication between IoT Hub components. 
-The main idea was to sacrifice small performance/latency penalties in favor of persistent and reliable message delivery and automatic load balancing.  
+The main idea was to sacrifice small performance/latency penalties in favor of persistent and reliable message delivery and automatic load balancing.   -->
 
-## On-premise vs cloud deployments
+<!-- ## On-premise vs cloud deployments
 
 IoT Hub supports both on-premise and cloud deployments. 
 With more then 5000 IoT Hub servers running all over the world, IoT Hub is running in production on AWS, Azure, GCE and private data centers.
-It is possible to launch IoT Hub in the private network with no internet access at all.
+It is possible to launch IoT Hub in the private network with no internet access at all. -->
 
-## Standalone vs cluster mode
+<!-- ## Standalone vs cluster mode
 
 Platform is designed to be horizontally scalable and supports automatic discovery of new IoT Hub servers (nodes). 
 All IoT Hub nodes inside cluster are identical and are sharing the load. 
@@ -143,9 +143,9 @@ database:
     type: "${DATABASE_TS_TYPE:sql}" # cassandra, sql, or timescale (for hybrid mode, DATABASE_TS_TYPE value should be cassandra, or timescale)
 
 # note: timescale works only with postgreSQL database for DATABASE_ENTITIES_TYPE.
-```
+``` -->
 
 ## Programming languages and third-party
 
 IoT Hub back-end is written in Java, but we also have some micro-services based on Node.js. IoT Hub front-end is a SPA based on Angular 9 framework. 
-See [monolithic](/docs/{{docsPrefix}}reference/monolithic) and [microservices](/docs/{{docsPrefix}}reference/monolithic) pages for more details about third-party components used.  
+<!-- See [monolithic](/docs/{{docsPrefix}}reference/monolithic) and [microservices](/docs/{{docsPrefix}}reference/monolithic) pages for more details about third-party components used.   -->
