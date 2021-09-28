@@ -329,7 +329,7 @@ notitle: "true"
             </fieldset>
         </form>
     </div>
-    <p class="questions">Questions about deployment options? <a href="/docs/contact-us/" target="_blank">Contact us</a>.</p>
+    <p class="questions">Questions about deployment options? <a href="https://www.magenta.at/business/iot/kontakt" target="_blank">Contact us</a>.</p>
 </section>      
 
 <script type="text/javascript" src="https://static.mailerlite.com/js/w/webforms.min.js?v3772b61f1ec61c541c401d4eadfdd02f"></script>

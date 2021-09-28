@@ -54,4 +54,4 @@ IoT Hub Rule Engine allows to forward incoming data to various analytics systems
 <a style="margin: 10px;" href="/industries/smart-energy/" class="button">Customers feedback</a>
 <a style="margin: 10px;" href="/docs/#platform-features" class="button">Platform features</a>
 <a style="margin: 10px;" href="/docs/reference/" class="button">Architecture</a>
-<a style="margin: 10px;" href="/docs/contact-us/" class="button">Contact us</a>
+<a style="margin: 10px;" href="https://www.magenta.at/business/iot/kontakt" class="button">Contact us</a>

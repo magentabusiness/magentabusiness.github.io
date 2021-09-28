@@ -1,6 +1,6 @@
 {% capture connectivityContent %}
 IoT Hub provides a lot of device connectivity options. The diagram below is designed to provide a visual overview of existing options and help you to choose the correct option for your devices. 
-In case you have not found out how to connect your device using the diagram or something is not clear, please [contact us](/docs/contact-us/) and help us to improve this guide.
+In case you have not found out how to connect your device using the diagram or something is not clear, please [contact us](https://www.magenta.at/business/iot/kontakt) and help us to improve this guide.
 {% endcapture %}
 {% include templates/info-banner.md content=connectivityContent %}
 
@@ -45,4 +45,4 @@ IoT Hub supports Sigfox [integration](/docs/{{peDocsPrefix}}user-guide/integrati
 #### NB IoT and other protocols
 
 IoT Hub supports many [Integrations](/docs/{{peDocsPrefix}}user-guide/integrations/) that cover most of the devices on the market.
-Please [contact us](/docs/contact-us/) if you need help to connect your device.
+Please [contact us](https://www.magenta.at/business/iot/kontakt) if you need help to connect your device.

@@ -139,7 +139,7 @@ defaultActivateSelectProduct: true
                                 Custom <span data-faq-id="calculate" data-faq-link-size="70%"></span>
                             </h4>
                             <div class="row justify-content-center">
-                                <a class="btn-blue btn-pricing" href="/docs/contact-us/">
+                                <a class="btn-blue btn-pricing" href="https://www.magenta.at/business/iot/kontakt">
                                     Contact Us
                                 </a>
                             </div>
@@ -657,7 +657,7 @@ defaultActivateSelectProduct: true
                             Custom
                         </h4>
                         <div class="row justify-content-center">
-                            <a class="btn-blue btn-pricing" href="/docs/contact-us/">
+                            <a class="btn-blue btn-pricing" href="https://www.magenta.at/business/iot/kontakt">
                                 Contact Us
                             </a>
                         </div>
@@ -759,7 +759,7 @@ defaultActivateSelectProduct: true
         <div class="item" data-tag="h4" data-item-id="trial-enable" data-title="If I want to be a re-seller of IoT Hub, shall I have a discount?">
             <div class="container">
                 <p>
-                 We have clear and transparent conditions for partners. Send us a request via <a href="/docs/contact-us/" target="blank">contact us</a> and we will discuss with you all benefits of cooperation with IoT Hub Inc.   
+                 We have clear and transparent conditions for partners. Send us a request via <a href="https://www.magenta.at/business/iot/kontakt" target="blank">contact us</a> and we will discuss with you all benefits of cooperation with IoT Hub Inc.   
                 </p>    
             </div>    
         </div>
@@ -774,7 +774,7 @@ defaultActivateSelectProduct: true
             <div class="container">
                 <p>
                 As part of evaluation process, we can give you 30 days of free trial. 
-                Please, send us your request on <a href="/docs/contact-us/?subject=IoT Hub%20Products">Contact us</a>.      
+                Please, send us your request on <a href="https://www.magenta.at/business/iot/kontakt?subject=IoT Hub%20Products">Contact us</a>.      
                 </p>    
             </div>    
         </div>
@@ -806,7 +806,7 @@ defaultActivateSelectProduct: true
                   <li>Priority support;</li>
                   <li>On-demand training and email consulting;</li>
                 </ul>
-                The price <b>per-device</b> starts from <b>USD 0.01</b> per month and is determined based on the data points each device generates. <a href="https://iothub.magenta.at/docs/contact-us/">Contact us</a> to get a precise quote for the custom Enterprise subscription.
+                The price <b>per-device</b> starts from <b>USD 0.01</b> per month and is determined based on the data points each device generates. <a href="https://iothub.magenta.athttps://www.magenta.at/business/iot/kontakt">Contact us</a> to get a precise quote for the custom Enterprise subscription.
                 </p>  
             </div>    
         </div>
@@ -886,7 +886,7 @@ defaultActivateSelectProduct: true
                 In order to activate the software you will need to obtain the license key. Instruction how to obtain and use the license key is provided in the installation guide. 
                 See <a href="https://www.youtube.com/watch?v=dK-QDFGxWek">How-to get pay-as-you-go subscription</a> 
                 or <a href="https://www.youtube.com/watch?v=GPe0lHolWek">How-to get perpetual license</a> for more details. 
-                Please <a href="https://iothub.magenta.at/docs/contact-us/">contact us</a> if you have any questions or require support.
+                Please <a href="https://iothub.magenta.athttps://www.magenta.at/business/iot/kontakt">contact us</a> if you have any questions or require support.
                 </p>
                <p></p>
             </div>    

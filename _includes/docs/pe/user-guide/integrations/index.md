@@ -327,7 +327,7 @@ We plan to provide specific integrations for different platforms, and also for d
 We plan to collect and maintain data converters for most popular devices on the market to simplify integration path even more. 
 Please note that you can share your converters with community and send them to us to make part of official IoT Hub distributive.   
 
-[Contact us](/docs/contact-us/) to suggest missing feature for your use case.
+[Contact us](https://www.magenta.at/business/iot/kontakt) to suggest missing feature for your use case.
 
 ### See Also
 

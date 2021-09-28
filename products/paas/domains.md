@@ -25,7 +25,7 @@ registerDomain:
         title: 'Step 6. If all went well, dialog will be closed, and you will see your domain name on the <span style="background-color: #fff; color: #000; padding: 0 10px;"><b>Domain</b></span> page. Now you can use your domain name to access <b>IoT Hub</b> Web UI and services.'
     6:
         image: /images/cloud/register-domain-step-7.png
-        title: 'Step 7. In case of any issues during domain provisioning you will see the dialog prompt with error details. In this case you should try to correct the issue (ex. correct invalid entered CNAME record) otherwise you can contact <a href="/docs/contact-us/" target="_blank">support</a>.'
+        title: 'Step 7. In case of any issues during domain provisioning you will see the dialog prompt with error details. In this case you should try to correct the issue (ex. correct invalid entered CNAME record) otherwise you can contact <a href="https://www.magenta.at/business/iot/kontakt" target="_blank">support</a>.'
 domainDetails:
     0:
         image: /images/cloud/domain-details-step-1.png
@@ -70,7 +70,7 @@ In order to use your own domain name to access **IoT Hub** you must register it 
 * Step 5. After registering CNAME record, click **I've added CNAME records** button. Domain verification and certificate provisioning will start at this time. Be patient, this process can take a while.
 * Step 6. If all went well, dialog will be closed, and you will see your domain name on the **Domain** page. Now you can use your domain name to access **IoT Hub** Web UI and services.
 * Step 7. In case of any issues during domain provisioning you will see the dialog prompt with error details.
-  In this case you should try to correct the issue (ex. correct invalid entered CNAME record) otherwise you can contact [support](/docs/contact-us/).
+  In this case you should try to correct the issue (ex. correct invalid entered CNAME record) otherwise you can contact [support](https://www.magenta.at/business/iot/kontakt).
 
 {% include images-gallery.html imageCollection="registerDomain" %}
 
@@ -155,4 +155,4 @@ iothub.magenta.at.		3788	IN	CNAME	cloud.iothub.magenta.at.
 ...
 ```
 
-If all the things are correct, but some issue still persists - please [Contact us](https://iothub.magenta.at/docs/contact-us/) for further support.
+If all the things are correct, but some issue still persists - please [Contact us](https://iothub.magenta.athttps://www.magenta.at/business/iot/kontakt) for further support.

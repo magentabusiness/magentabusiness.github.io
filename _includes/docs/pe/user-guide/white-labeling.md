@@ -11,7 +11,7 @@ The following configuration options are available:
   - Allow Tenant administrator to enable/disable white-labeling for each customer;
   - Allow Tenant administrator to configure custom translation of system components and end-user dashboard elements. 
 
-[Contact us](/docs/contact-us/) to suggest missing feature for your use case.
+[Contact us](https://www.magenta.at/business/iot/kontakt) to suggest missing feature for your use case.
 
 See video tutorial below for step-by-step instruction how to use this feature.
 

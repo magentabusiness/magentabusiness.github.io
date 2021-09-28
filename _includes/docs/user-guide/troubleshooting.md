@@ -264,4 +264,4 @@ For OAuth2 configuration click [here](/docs/{{docsPrefix}}user-guide/oauth-2-sup
 
 If your problem isn't answered by any of the guides above, feel free to contact IoT Hub team.
 
-<a class="button" href="/docs/contact-us/">Contact us</a>
+<a class="button" href="https://www.magenta.at/business/iot/kontakt">Contact us</a>

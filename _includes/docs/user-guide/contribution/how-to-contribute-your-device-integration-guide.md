@@ -104,4 +104,4 @@ Where:
 
 ## Optional steps
 
-You may notify us about your Pull Request (with Pull Request #) via [Contact us](/docs/contact-us/) form or in any other way.
+You may notify us about your Pull Request (with Pull Request #) via [Contact us](https://www.magenta.at/business/iot/kontakt) form or in any other way.

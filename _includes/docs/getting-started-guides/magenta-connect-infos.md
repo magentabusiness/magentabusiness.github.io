@@ -7,7 +7,7 @@
 | ------------|---------------| ------------------------|
 | E/// DCP    | myiot.tma.iot | NB-IoT,LTE-M,2G,3G,4G   |
 | DT WBC      | myiot.m2m.at  | NB-IoT,LTE-M,2G,3G,4G   |
-| TMA         | myiot.m2m.at  | 2G,3G,4G                |
+| TMA         | myiot.m2m.at  | LTE-M,2G,3G,4G                |
 
 #### Protocol Endpoints  
 

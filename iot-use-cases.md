@@ -10,7 +10,7 @@ Being robust, scalable and user friendly, IoT Hub IoT platform supports various 
 
 Some of the industry use cases where IoT Hub is being successfully utilized are listed below. Each use case is equipped with PoC dashboard and reference solution architecture.
 
-Should you have any comments or questions please feel free to [Contact US](/docs/contact-us/).
+Should you have any comments or questions please feel free to [Contact US](https://www.magenta.at/business/iot/kontakt).
 
 <a style="margin: 10px;" href="/smart-metering/" class="button">Smart metering</a>
 <a style="margin: 10px;" href="/smart-energy/" class="button">Smart energy</a>
