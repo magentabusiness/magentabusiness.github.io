@@ -12,10 +12,11 @@ cd libcoap/
 make
 sudo make install
 ``` 
-Send telemetry data
+Send telemetry data  
+Replace $ACCESS_TOKEN with corresponding values.
 ```bash
 
-coap-client   -m post coaps://coap.iothub.magenta.at/api/v1/KsgfJm1emwUMrvJRgTDG/telemetry -e '{"temperature":25}'
+coap-client   -m post coaps://coap.iothub.magenta.at/api/v1/$ACCESS_TOKEN/telemetry -e '{"temperature":25}'
 
 ``` 
 {: .copy-code}

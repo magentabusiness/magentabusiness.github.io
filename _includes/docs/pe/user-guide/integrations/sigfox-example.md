@@ -94,7 +94,7 @@ Integration should look like this:
       </tr>
       <tr>
           <td>Base URl</td>
-          <td>http://iothub.magenta.at</td>
+          <td>https://iothub.magenta.at</td>
       </tr>
       <tr>
           <td>Enable secrurity</td>

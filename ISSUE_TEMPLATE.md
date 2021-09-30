@@ -14,7 +14,7 @@
 
 
 **Page to Update:**
-http://iothub.magenta.at/...
+https://iothub.magenta.at/...
 
 <!--Optional Information (remove the comment tags around information you would like to include)-->
 <!--IoT Hub Version:-->

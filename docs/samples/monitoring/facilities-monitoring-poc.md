@@ -145,7 +145,7 @@ Once started, the emulator will ask you for your live demo login and password. T
 
 This prototype was written by two engineers literally in one day. Most of the time was spent on the client-side code (Lua script for real device and emulator). The server-side part of the prototype has zero coding and was all about configuration of the rules, plugins, and dashboards.
 
-This demonstrates how easy is to prototype and build IoT solutions using [IoT Hub](http://iothub.magenta.at). Of course, there is a certain learning curve that you need to pass, but we hope that this article and other [docs](http://iothub.magenta.at/docs/) will help you to do this.
+This demonstrates how easy is to prototype and build IoT solutions using [IoT Hub](https://iothub.magenta.at). Of course, there is a certain learning curve that you need to pass, but we hope that this article and other [docs](https://iothub.magenta.at/docs/) will help you to do this.
 
 If you found this article interesting, please leave your feedback, questions or feature requests in the comments section and “star” our project on the [github](https://github.com/thingsboard/thingsboard) in order to stay tuned for new releases and tutorials.
 
