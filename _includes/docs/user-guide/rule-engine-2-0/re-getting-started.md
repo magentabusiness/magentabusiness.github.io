@@ -30,10 +30,10 @@ DHT22 sensor can measure temperature from -40°C to +80°C.
 
 In this tutorial we will configure IoT Hub Rule Engine to store all temperature within -40 to 80°C range and log all other readings to the system log.
 
-#### Adding temperature validation node
+#### Adding temperature validation node 
 In IoT Hub UI go to **Rule Chains** section and open **Root Rule Chain**.
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/initial-root-chain.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/initial-root-chain-magenta.png)
 
 Drag and Drop **Script Filter** rule node to the chain. Node configuration window will be opened. We will use this script for data validation:
 
@@ -42,7 +42,7 @@ return typeof msg.temperature === 'undefined'
         || (msg.temperature >= -40 && msg.temperature <= 80);
 {% endhighlight %}
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/script-config.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/script-config-magenta.png)
 
 If temperature property not defined or temperature is valid - script will return **True**, otherwise it will return **False**.
 If script returns **True** incoming message will be routed to the next nodes that are connected with **True** relation.
@@ -54,7 +54,7 @@ relation between **Message Type Switch** node and **Save Telemetry** node:
   
 And connect **Message Type Switch** node with **Script Filter** node using **Post Telemetry** relation:
    
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/realtion-window.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/realtion-window-magenta.png)
 
 ![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/connect-script.png)
 
@@ -66,36 +66,37 @@ Also, we will connect **Script Filter** node with **Log Other** node using **Fal
 
 ![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/false-log.png)
 
-Press Save button to apply changes.
+**Press Save button to apply changes.**
 
 #### Validate results
-For validating results we will need to create Device and submit telemetry to the IoT Hub. So go to **Devices** section and create new Device:
+For validating results we will need to create Device and submit telemetry to the IoT Hub. 
+So go to **Devices** section and create new Device:
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/create-device.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/create-device-magenta.png)
 
 For posting device telemetry we will use [Rest API](/docs/{{docsPrefix}}reference/http-api/#telemetry-upload-api). To do this this we will need to
 copy device access token from the device **Thermostat Home**. 
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/copy-access-token.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/copy-access-token-magenta.png)
 
 Lets post temperature = 99. We will see that telemetry **was not** added in Device **Latest Telemetry** section:
 
 {% highlight bash %}
-curl -v -X POST -d '{"temperature":99}' http://localhost:8080/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
+curl -v -X POST -d '{"temperature":99}' https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
 {% endhighlight %}
 
 ***you need to replace $ACCESS_TOKEN with actual device token**
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/empty-telemetry.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/empty-telemetry-magenta.png)
 
 
 Lets post temperature = 24. We will see that telemetry was saved successfully.
 
 {% highlight bash %}
-curl -v -X POST -d '{"temperature":24}' http://localhost:8080/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
+curl -v -X POST -d '{"temperature":24}' https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
 {% endhighlight %}
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/saved-ok.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/saved-ok-magenta.png)
 
 
 ## See Also:
