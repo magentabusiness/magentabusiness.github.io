@@ -1,9 +1,9 @@
 {% if currentGuide != "GettingStartedGuide" %}
 - [**Getting started guide**](/docs/trendz/getting-started/) - These guide provide quick overview of main Trendz features.
 {% endif %}
-{% if currentGuide != "InstallationOptions" %}
+<!-- {% if currentGuide != "InstallationOptions" %}
 - [**Installation guides**](/docs/trendz/install/installation-options/) - Learn how to setup IoT Hub on various available operating systems.
-{% endif %}
+{% endif %} -->
 {% if currentGuide != "CalculatedFields" %}
 - [**Calculated Fields**](/docs/trendz/calculated-fields) - Learn about Calculated fields and how to use them.
 {% endif %}

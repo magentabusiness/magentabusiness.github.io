@@ -33,7 +33,7 @@ kramdown:
       line_numbers: true
       start_line: 1
 baseurl:
-incremental: false
+incremental: true
 
 exclude:
   - .idea
@@ -81,4 +81,4 @@ release:
   pe_ver: 3.3pe
   pe_full_ver: 3.3.0PE
 
-theme: jekyll-theme-tactile
+

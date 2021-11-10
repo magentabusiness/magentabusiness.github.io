@@ -1,4 +1,4 @@
-<div class="info-banner">
+<div class="info-banner" style="display:none">
     <img src="/images/doc-info-icon.svg"/>
     <div>
       {% if include.title %}

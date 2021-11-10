@@ -123,7 +123,7 @@ The following sample code shows how to get allowed permissions of current logged
 
 ```python
 import logging
-# Importing models and REST client class from Professional Edition version
+# Importing models and REST client class from IoT Hub version
 from tb_rest_client.rest_client_pe import *
 from tb_rest_client.rest import ApiException
 
@@ -157,7 +157,7 @@ The following sample code shows how to fetch user dashboards via page link.
 ```python
 import logging
 from json import load
-# Importing models and REST client class from Professional Edition version
+# Importing models and REST client class from IoT Hub version
 from tb_rest_client.rest_client_pe import *
 from tb_rest_client.rest import ApiException
 
