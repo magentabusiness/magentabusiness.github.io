@@ -102,60 +102,60 @@ alarmСonditionsWithRepeating2:
         
 alarmСonditionsClear:
     0:
-        image: /images/user-guide/device-profile/alarm-example-4-step-1-pe.png  
+        image: /images/user-guide/device-profile/alarm-example-4-step-1-pe-magenta.png  
         title: 'Step 1. Open the device profile and toggle edit mode. Click the "Add clear condition" button.'
     1:
-        image: /images/user-guide/device-profile/alarm-example-4-step-2-pe.png
+        image: /images/user-guide/device-profile/alarm-example-4-step-2-pe-magenta.png
         title: 'Step 2. Click on the red "+" sign.'
     2:
-        image: /images/user-guide/device-profile/alarm-example-4-step-3-pe.png
+        image: /images/user-guide/device-profile/alarm-example-4-step-3-pe-magenta.png
         title: 'Step 3. Add Key Filter.'
     3:
-        image: /images/user-guide/device-profile/alarm-example-4-step-4-pe.png
+        image: /images/user-guide/device-profile/alarm-example-4-step-4-pe-magenta.png
         title: 'Step 4. Finally, apply changes.'
  
 alarmСonditionsSchedule:
     0:
-        image: /images/user-guide/device-profile/alarm-example-5-step-1-pe.png  
+        image: /images/user-guide/device-profile/alarm-example-5-step-1-pe-magenta.png  
         title: 'Step 1. Edit the schedule of the alarm rule.'
     1:
-        image: /images/user-guide/device-profile/alarm-example-5-step-2-pe.png
+        image: /images/user-guide/device-profile/alarm-example-5-step-2-pe-magenta.png
         title: 'Step 2. Select timezone, days, time interval, and click "Save".'
     2:
-        image: /images/user-guide/device-profile/alarm-example-5-step-3-pe.png
+        image: /images/user-guide/device-profile/alarm-example-5-step-3-pe-magenta.png
         title: 'Step 3. Finally, apply changes.'
         
 alarmСonditionsAdvanced:
     0:
-        image: /images/user-guide/device-profile/alarm-example-6-step-1-pe.png  
+        image: /images/user-guide/device-profile/alarm-example-6-step-1-pe-magenta.png  
         title: 'Step 1. Modify the temperature key filter and change the value type to dynamic.'
     1:
-        image: /images/user-guide/device-profile/alarm-example-6-step-2-pe.png
+        image: /images/user-guide/device-profile/alarm-example-6-step-2-pe-magenta.png
         title: 'Step 2. Select a dynamic source type and input the *temperatureAlarmThreshold*, then click "Update". You may optionally check "Inherit from owner". Inheritance allows to take the threshold value from customer if it is not set on the device level. If the attribute value is not set on both device and customer levels, rule will take the value from the tenant attributes.'
     2:
-        image: /images/user-guide/device-profile/alarm-example-6-step-3-pe.png
+        image: /images/user-guide/device-profile/alarm-example-6-step-3-pe-magenta.png
         title: 'Step 3. Add another key filter for the *temperatureAlarmFlag*, then click "Add".'
     3:
-        image: /images/user-guide/device-profile/alarm-example-6-step-4-pe.png
+        image: /images/user-guide/device-profile/alarm-example-6-step-4-pe-magenta.png
         title: 'Step 4. Finally, click "Save" and apply changes.'
     4:
-        image: /images/user-guide/device-profile/alarm-example-6-step-5-pe.png
+        image: /images/user-guide/device-profile/alarm-example-6-step-5-pe-magenta.png
         title: 'Step 5. Provision device attributes either manually or via the script.'
 
 alarmСonstantFilters:
     0:
-        image: /images/user-guide/device-profile/alarm-example-7-step-1-pe.png  
+        image: /images/user-guide/device-profile/alarm-example-7-step-1-pe-magenta.png  
         title: 'Choose constant type and value and compare it with the value of the tenant or customer attribute.'
 
 ruleNode:
     0:
-        image: /images/user-guide/device-profile/device-profile-rule-node-pe.png 
+        image: /images/user-guide/device-profile/device-profile-rule-node-pe-magenta.png 
     1:
-        image: /images/user-guide/device-profile/device-profile-rule-node-2-pe.png
+        image: /images/user-guide/device-profile/device-profile-rule-node-2-pe-magenta.png
         
 notifications:
     0:
-        image: /images/user-guide/device-profile/device-profile-notifications-pe.png           
+        image: /images/user-guide/device-profile/device-profile-notifications-pe-magenta.png           
 ---
 
 {% assign docsPrefix = "pe/" %}
