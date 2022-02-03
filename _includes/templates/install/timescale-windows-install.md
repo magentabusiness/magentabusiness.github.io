@@ -7,3 +7,4 @@ After package installation, you need to create TimescaleDB extension in your IoT
 ```bash 
 CREATE EXTENSION IF NOT EXISTS timescaledb;
 ```
+{: .copy-code}

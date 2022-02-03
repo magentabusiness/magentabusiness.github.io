@@ -427,6 +427,12 @@ header
             &.trendz-lnk:hover .sub-text h1
               color: #2696F3
 
+            &.mobile-lnk:hover .sub-text h1
+              color: #305680
+
+            &.mobile-pe-lnk:hover .sub-text h1
+              color: #1F8B4D
+
             &:last-child
               margin-bottom: 0
 
@@ -1473,6 +1479,15 @@ section
     content: "\f059"
     position: absolute
     transform: translate(15%, -100%)
+
+td.item.item-pe, p.item.item-pe
+  &::after
+    content: "PE"
+    font-size: 12px
+    font-weight: bold
+    color: $blue
+    transform: translate(5px, -10px)
+    display: inline-block
 
 .pi-accordion
   .container

@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-paas
 assignees:
-- vsosliuk
+- ashvayka
 title: Device authentication options
 description: IoT Hub IoT Device authentication options.
 

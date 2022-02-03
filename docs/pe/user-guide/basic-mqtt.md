@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe
 assignees:
-- vsosliuk
+- ashvayka
 title: Basic MQTT authentication
 description: IoT Hub MQTT based authentication.
 options:

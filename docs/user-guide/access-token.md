@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe
 assignees:
-- vsosliuk
+- ashvayka
 title: Access Token based authentication
 description: IoT Hub Access Token based authentication.
 

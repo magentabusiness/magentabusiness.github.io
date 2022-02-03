@@ -12,7 +12,23 @@ brew install mosquitto-clients
 ```
 {: .copy-code}
 
-**Access via public Internet**  
+{% if docsPrefix == 'paas/' %}
+
+Replace $ACCESS_TOKEN with corresponding values.
+
+```bash
+mosquitto_pub -d -q 1 -h "mqtt.thingsboard.cloud" -p "1883" -t "v1/devices/me/telemetry" -u "$ACCESS_TOKEN" -m {"temperature":25}
+```
+{: .copy-code}
+
+For example, access token is ABC123:
+
+```bash
+mosquitto_pub -d -q 1 -h "mqtt.thingsboard.cloud" -p "1883" -t "v1/devices/me/telemetry" -u "ABC123" -m {"temperature":25} 
+```
+{: .copy-code}
+
+{% else %}
 
 Replace $ACCESS_TOKEN with corresponding values.
 
@@ -24,7 +40,7 @@ mosquitto_pub -d -q 1 -h "iothub.magenta.at" -p "8883" -t "v1/devices/me/telemet
 For access token is ABC123:
 
 ```bash
-mosquitto_pub -d -q 1 -h "iothub.magenta.at" -p "8883" -t "v1/devices/me/telemetry" -u "ABC123" -m {"temperature":25} --capath /etc/ssl/certs
+mosquitto_pub -d -q 1 -h "mqtt.thingsboard.cloud" -p "1883" -t "v1/devices/me/telemetry" -u "ABC123" -m {"temperature":25} 
 ```
 {: .copy-code}
 
@@ -43,6 +59,8 @@ mosquitto_pub -d -q 1 -h "172.31.64.64" -p "1883" -t "v1/devices/me/telemetry" -
 ```
 {: .copy-code}
 
+{% endif %}
+
 Successful output should look similar to this one:
 
 ```text
@@ -58,4 +76,3 @@ and customize **topic names** and **payload type** using Device Profile. See mor
 
 <br/>
 <br/>
-  

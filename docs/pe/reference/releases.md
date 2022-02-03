@@ -8,6 +8,99 @@ description: IoT Hub architecture
 * TOC
 {:toc}
 
+## v3.3.3 (January 27, 2022)
+
+Everything from [TB CE v3.3.3](https://github.com/thingsboard/thingsboard/releases/tag/v3.3.3) with the following improvements.
+
+Main features:
+
+
+* Core & Rule Engine:
+  * Added 'Propagation Entity Types' parameter to 'Alarm Count' rule node;
+  * Added 'Queue Name' parameter to aggregation rule nodes;
+  * Added REST_API_RULE_ENGINE_CALL to the audit logs;
+  * Additional alarm read permission checks;
+* UI:
+  * Added entity details page support;
+  * Added persistent page link for scheduler events page;
+  * CSS variables support for the white-labeling feature;
+  * Added ability for tenant administrators to ignore the white-labeling settings configured on a system level;
+  * Validation to maximum length of the group names;
+  * "Delete" button in Self-registration form;
+* Integrations:
+  * Additional automatic tests for remote integrations;
+  * Custom domain support for LORIOT integration;
+  * API Version to TTI integration;
+* Build scripts:
+  * Docker images check for ARM64;
+  * K8S scripts moved to separate repository;
+  * Log4j -> Slf4j annotation due to typo;
+* Edge:
+  * Added missing labels for assigned-to-edge/unassigned-from-edge;
+  * Send notification event in case change owner of edge to edge session;
+  * Improved integration tests;
+
+Bug fixes:
+
+* Core & Rule Engine:
+  * Fix in deprecated alarm count query;
+  * Fix sending RPC response from integration downlink rule node
+  * Use correct service id in rest api call reply method to send messages to correct services;
+* Integrations:
+  * Fix reconnect for OPC UA integration;
+  * Update converter details autocomplete;
+* UI:
+  * Multiple fixes to self-registration form;
+  * Fixed ability to create entity groups with white spaces instead of names;
+  * Fixed show edit button in default dashboard without fullscreen mode;
+  * Fixed close details after create/update/delete permission;
+  * Fixed display of Audit Logs for Device Profile;
+
+## v3.3.2 (November 11, 2021)
+
+Everything from [TB CE v3.3.2](https://github.com/thingsboard/thingsboard/releases/tag/v3.3.2) with the following improvements.
+
+Main features:
+
+* Core:
+  * Entity search API for system administrator; 
+* REST API documentation: 
+  * Describe PE entities and methods;
+* Help pages for user-defined JS functions:
+  * Uplink and Downlink converter documentation;
+  * Ability to configure the external help url using white-labeling parameters;
+* Rule Engine:
+  * Added ability to get parent customer details in customer details node
+  * Ignore emails api usage when using external mail sender;
+* UI: 
+  * Added "Terms Of Use" for Self Registration;
+  * Added the ability to set the background for login page by Advanced CSS 
+  * Added Role, Integration, Converter, Group and Scheduler max length fields validation;
+  * Added disable export (for notification) in Api Usage dashboard; 
+* Integrations: 
+  * Support binary data consumption for HTTP/CoAP/MQTT integrations;
+  * UDP integration improvements. Support PUT in HTTP/CoAP integrations;  
+  * Support of device and asset labels;
+  * Optimize error logging; 
+
+Bug fixes:
+
+* Core:
+  * Fixed RBAC for Resource and OTA updates;
+* Integrations:
+  * Service bus Queue: 'maxMessages' fix;
+  * Fixed incorrectly displayed Downlink URL after save in the LORIOT integration;
+* UI: 
+  * Fixed RBAC to create/write edges;
+  * Fixed entity-group-autocomplete;
+  * Fixed custom css dialog close button;
+  * Fixed customersHierarchy after updated entity group didn't save new settings group in jsTree;
+  * Fixed noDataDisplayMessage in scheduler/blob widgets;
+  * Fixed RBAC disabled select on relations and permissions tabs
+  * Fixed RBAC for rule chains details tabs;
+  * Fixed missing icon, after update icon package;  
+  * Minor fixes to Edge Downlinks table;
+
 ## v3.3.1 (September 3, 2021)
 
 Everything from [TB CE v3.3.1](https://github.com/thingsboard/thingsboard/releases/tag/v3.3.1) with the following improvements.

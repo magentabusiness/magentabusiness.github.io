@@ -17,24 +17,30 @@
   getStarted: /docs/pe/getting-started-guides/helloworld/
   docsPrefix: /docs/pe/
 #- title: Community Edition
-#  fulltitle: IoT Hub Community Edition
-#  description: IoT Hub Documentation
+#  fulltitle: ThingsBoard Community Edition
+#  description: ThingsBoard Documentation
 #  tag: ce
 #  icon: /images/thingsboard-cm-icon.svg
 #  path: /docs/
 #  guides: /docs/guides/
 #  getStarted: /docs/getting-started-guides/helloworld/
 #  docsPrefix: /docs/
+#- title: Edge
+#  fulltitle: ThingsBoard Edge
+#  description: ThingsBoard Documentation
+#  tag: edge
+#  icon: /images/thingsboard-e-icon.svg
+#  path: /docs/edge/
 #- title: IoT Gateway
-#  fulltitle: IoT Hub IoT Gateway
-#  description: IoT Hub Documentation
+#  fulltitle: ThingsBoard IoT Gateway
+#  description: ThingsBoard Documentation
 #  tag: gw
 #  icon: /images/gateway-icon.svg
 #  path: /docs/iot-gateway/
 #  getStarted: /docs/iot-gateway/getting-started/
 #- title: License Server
-#  fulltitle: IoT Hub License Server
-#  description: IoT Hub Documentation
+#  fulltitle: ThingsBoard License Server
+#  description: ThingsBoard Documentation
 #  tag: license
 #  icon: /images/license-icon.svg
 #  path: /products/license-server/
@@ -45,3 +51,19 @@
 #  icon: /images/trendz-icon.svg
 #  path: /docs/trendz/
 #  getStarted: /docs/trendz/getting-started/
+#- title: Mobile Application
+#  fulltitle: ThingsBoard Mobile Application
+#  description: Mobile Application Documentation
+#  tag: mobile
+#  icon: /images/tb-mobile-icon.svg
+#  path: /docs/mobile/
+#  docsPrefix: /docs/mobile/
+#  getStarted: /docs/mobile/getting-started/
+#- title: PE Mobile Application
+#  fulltitle: ThingsBoard PE Mobile Application
+#  description: PE Mobile Application Documentation
+#  tag: mobile-pe
+#  icon: /images/tb-pe-mobile-icon.svg
+#  path: /docs/pe/mobile/
+#  docsPrefix: /docs/pe/mobile/
+#  getStarted: /docs/pe/mobile/getting-started/

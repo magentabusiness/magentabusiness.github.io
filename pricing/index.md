@@ -58,7 +58,7 @@ defaultActivateSelectProduct: true
         <div class="pricing-div">
             <div class="pricing-section pricing-cloud active">
                <div class="row justify-content-center">
-                    <div class="col-md-6 col-lg-6 col-xl-4 col-gt-xl mb-4">
+                    <div class="col-md-6 col-lg-6 col-gt-xl mb-4">
                         <div class="pricing-square">
                             <h2>Maker</h2>
                             <div class="pricing-square-description">
@@ -66,7 +66,7 @@ defaultActivateSelectProduct: true
                             </div>
                             <h4 class="pricing-square-price mb-0">
                                 $10
-                                <span>/&nbsp;month</span>
+                                <span>/month</span>
                             </h4>
                             <div class="row justify-content-center">
                                 <a class="btn-blue btn-pricing" href="https://iothub.magenta.at/signup">
@@ -81,7 +81,7 @@ defaultActivateSelectProduct: true
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-4 col-gt-xl mb-4">
+                    <div class="col-md-6 col-lg-6 col-gt-xl mb-4">
                         <div class="pricing-square">
                             <h2>Prototype</h2>
                             <div class="pricing-square-description">
@@ -89,7 +89,7 @@ defaultActivateSelectProduct: true
                             </div>
                             <h4 class="pricing-square-price mb-0">
                                 $149
-                                <span>/&nbsp;month</span>
+                                <span>/month</span>
                             </h4>
                             <div class="row justify-content-center">
                                 <a class="btn-blue btn-pricing" href="https://iothub.magenta.at/signup">
@@ -105,7 +105,7 @@ defaultActivateSelectProduct: true
                             <div class="pricing-square-item" data-faq-id="white-labeling"><b>White-labeling</b></div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-4 col-gt-xl mb-4">
+                    <div class="col-md-6 col-lg-6 col-gt-xl mb-4">
                         <div class="pricing-square">
                             <h2>Startup</h2>
                             <div class="pricing-square-description">
@@ -113,7 +113,7 @@ defaultActivateSelectProduct: true
                             </div>
                             <h4 class="pricing-square-price mb-0">
                                 $399
-                                <span>/&nbsp;month</span>
+                                <span>/month</span>
                             </h4>
                             <div class="row justify-content-center">
                                 <a class="btn-blue btn-pricing" href="https://iothub.magenta.at/signup">
@@ -129,7 +129,31 @@ defaultActivateSelectProduct: true
                             <div class="pricing-square-item" data-faq-id="white-labeling"><b>White-labeling</b></div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-4 col-gt-xl mb-4">
+                    <div class="col-md-6 col-lg-6 col-gt-xl mb-4">
+                        <div class="pricing-square">
+                            <h2>Business</h2>
+                            <div class="pricing-square-description">
+                                <p>For for the fast grown, defined long term projects</p>
+                            </div>
+                            <h4 class="pricing-square-price mb-0">
+                                $749
+                                <span>/month</span>
+                            </h4>
+                            <div class="row justify-content-center">
+                                <a class="btn-blue btn-pricing" href="https://thingsboard.cloud/signup">
+                                    Get Started
+                                </a>
+                            </div>
+                            <div class="pricing-square-item">Up to 1000 Devices</div>
+                            <div class="pricing-square-item">Up to 1000 Assets</div>
+                            <div class="pricing-square-item">1 billion <span data-faq-id="data-points">data points</span><br/> per month</div>
+                            <div class="pricing-square-item" data-faq-id="subscription-support">
+                                Email support
+                            </div>
+                            <div class="pricing-square-item" data-faq-id="white-labeling"><b>White-labeling</b></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-gt-xl mb-4">
                         <div class="pricing-square">
                             <h2>Enterprise</h2>
                             <div class="pricing-square-description">
@@ -225,7 +249,7 @@ defaultActivateSelectProduct: true
                         </div>
                         <h4 class="pricing-square-price mb-0">
                             $10
-                            <span>/&nbsp;month</span>
+                            <span>/month</span>
                         </h4>
                         <div class="row justify-content-center">
                             <button class="btn-blue btn-pricing" 
@@ -252,7 +276,7 @@ defaultActivateSelectProduct: true
                         </div>
                         <h4 class="pricing-square-price mb-0">
                             $99
-                            <span>/&nbsp;month</span>
+                            <span>/month</span>
                         </h4>
                         <div class="row justify-content-center">
                             <button class="btn-blue btn-pricing" 
@@ -280,7 +304,7 @@ defaultActivateSelectProduct: true
                         </div>
                         <h4 class="pricing-square-price mb-0">
                             $199
-                            <span>/&nbsp;month</span>
+                            <span>/month</span>
                         </h4>
                         <div class="row justify-content-center">
                             <button class="btn-blue btn-pricing" 
@@ -308,7 +332,7 @@ defaultActivateSelectProduct: true
                         </div>
                         <h4 class="pricing-square-price mb-0">
                             $500
-                            <span>/&nbsp;month</span>
+                            <span>/month</span>
                         </h4>
                         <div class="row justify-content-center">
                             <button class="btn-blue btn-pricing" 
@@ -399,7 +423,7 @@ defaultActivateSelectProduct: true
                             </div>
                             <h4 class="pricing-square-price mb-0">
                                 $175
-                                <span>/&nbsp;month</span>
+                                <span>/month</span>
                             </h4>
                             <div class="row justify-content-center">
                                 <button class="btn-blue btn-pricing" 
@@ -407,7 +431,7 @@ defaultActivateSelectProduct: true
                                     false,
                                     '31307df0-11f6-11ea-951e-b77b877a367b',
                                     '2985f1a0-7afd-11ea-951e-b77b877a367b',
-                                    'Trendz Analytics Prototype', 'XRNUGX2NAJ', false)">
+                                    'Trendz Analytics Prototype', '1QIJULP7GB', false)">
                                     Try 30 days for free
                                 </button>
                             </div>
@@ -433,7 +457,7 @@ defaultActivateSelectProduct: true
                             </div>
                             <h4 class="pricing-square-price mb-0">
                                 $200
-                                <span>/&nbsp;month</span>
+                                <span>/month</span>
                             </h4>
                             <div class="row justify-content-center">
                                 <button class="btn-blue btn-pricing" 
@@ -441,7 +465,7 @@ defaultActivateSelectProduct: true
                                     false,
                                     '31307df0-11f6-11ea-951e-b77b877a367b',
                                     '018b7520-7afe-11ea-951e-b77b877a367b',
-                                    'Trendz Analytics StartUp', 'XRNUGX2NAJ', false)">
+                                    'Trendz Analytics StartUp', '1QIJULP7GB', false)">
                                     Try 30 days for free
                                 </button>
                             </div>
@@ -467,7 +491,7 @@ defaultActivateSelectProduct: true
                             </div>
                             <h4 class="pricing-square-price mb-0">
                                 $350
-                                <span>/&nbsp;month</span>
+                                <span>/month</span>
                             </h4>
                             <div class="row justify-content-center">
                                 <button class="btn-blue btn-pricing" 
@@ -475,7 +499,7 @@ defaultActivateSelectProduct: true
                                     false,
                                     '31307df0-11f6-11ea-951e-b77b877a367b',
                                     '6e3bb4f0-7afe-11ea-951e-b77b877a367b',
-                                    'Trendz Analytics Business', 'XRNUGX2NAJ', false)">
+                                    'Trendz Analytics Business', '1QIJULP7GB', false)">
                                     Try 30 days for free
                                 </button>
                             </div>
@@ -561,7 +585,7 @@ defaultActivateSelectProduct: true
                         </div>
                         <h4 class="pricing-square-price mb-0">
                             $19
-                            <span>/&nbsp;month</span>
+                            <span>/month</span>
                         </h4>
                         <div class="row justify-content-center">
                             <button class="btn-blue btn-pricing" 
@@ -591,7 +615,7 @@ defaultActivateSelectProduct: true
                         </div>
                         <h4 class="pricing-square-price mb-0">
                             $29
-                            <span>/&nbsp;month</span>
+                            <span>/month</span>
                         </h4>
                         <div class="row justify-content-center">
                             <button class="btn-blue btn-pricing"
@@ -621,7 +645,7 @@ defaultActivateSelectProduct: true
                         </div>
                         <h4 class="pricing-square-price mb-0">
                             $39
-                            <span>/&nbsp;month</span>
+                            <span>/month</span>
                         </h4>
                         <div class="row justify-content-center">
                             <button class="btn-blue btn-pricing"
