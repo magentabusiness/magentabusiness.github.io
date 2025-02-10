@@ -7,4 +7,5 @@ description: IoT Hub  X.509 Certificate based authentication for IoT devices and
 
 ---
 
+{% include get-hosts-name.html %}
 {% include docs/user-guide/certificates.md %}

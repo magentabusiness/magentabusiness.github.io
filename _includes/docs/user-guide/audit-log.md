@@ -5,21 +5,21 @@ It is possible to log user actions related to main entities: assets, devices, da
 
 Tenant Administrator is able to review audit logs that belong to corresponding tenant account. The administrator is able to setup date range and executes a full-text search for fetched entities.
 
-![image](/images/user-guide/ui/audit-log.png)
+![image](https://img.thingsboard.io/user-guide/ui/audit-log.png)
 
 The "details" button allows reviewing low-level details of the logged action.
 
-![image](/images/user-guide/ui/audit-log-details.png)
+![image](https://img.thingsboard.io/user-guide/ui/audit-log-details.png)
 
 ### REST API
 
 It is possible to fetch audit logs via [REST API](https://iothub.magenta.at/swagger-ui.html#/audit-log-controller). 
 There are several API calls that allow to fetch entities related to particular user, entity, customer or fetch all records using page links.  
 
-{% unless docsPrefix == "paas/" %}
+{% unless docsPrefix contains "paas/" %}
 ### General configuration
 
-System administrator is able to configure audit log levels using [thingsboard.yml](/docs/{{docsPrefix}}user-guide/install/config/). You can find sample configuration below:
+System administrator is able to configure audit log levels using [thingsboard.yml](/docs/user-guide/install/{{docsPrefix}}config/). You can find sample configuration below:
 
 ```yaml
 # Audit log parameters
@@ -71,7 +71,7 @@ The configuration parameters are well documented inline.
     host: "${AUDIT_LOG_SINK_HOST:localhost}"
     port: "${AUDIT_LOG_SINK_POST:9200}"
     user_name: "${AUDIT_LOG_SINK_USER_NAME:}"
-    password: "${AUDIT_LOG_SINK_PASSWORD:}"      
+    password: "${AUDIT_LOG_SINK_PASSWORD:}"
 ```
 {% endunless %}
 

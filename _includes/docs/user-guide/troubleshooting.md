@@ -9,7 +9,7 @@ Here we will describe different possible scenarios of what may go wrong.
 No Message Processing%,%no-message-processing%,%templates/troubleshooting/scenarios/no-message-processing.md%br%
 Growing Latency For Messages%,%growing-latency%,%templates/troubleshooting/scenarios/growing-latency.md{% endcapture %}
 
-{% include content-toggle.html content-toggle-id="scenario" toggle-spec=contenttogglespecscenario %}
+{% include content-toggle.liquid content-toggle-id="scenario" toggle-spec=contenttogglespecscenario %}
 
 ## Troubleshooting instruments and tips
 
@@ -59,7 +59,7 @@ After this you can find the following messages in your [logs](#logs):
 **Note:** This can be used only if Redis is selected as a cache.
 
 It is possible that the data inside the cache somehow got corrupted. Regardless of the reason, it is always safe to clear cache, IoT Hub will just refill it at the runtime.
-To clear Redis cache you need to log into the server/container/pod with Redis on it and call <code>redis-cli FLUSHALL</code> command.
+To clear Redis cache you need to log into the server/container/pod with Redis on it and call <code>redis-cli FLUSHALL</code> command. To clear the cache in Redis Sentinel mode, access the master container and execute the cache-clearing command.
 
 So if you are struggling with identifying the reason of some problem, you can safely clear Redis cache to make sure it isn't the reason of the issue.
 
@@ -81,7 +81,7 @@ Standalone Deployment%,%standalone%,%templates/troubleshooting/logs/view-logs/st
 Docker-Compose Deployment%,%docker-compose%,%templates/troubleshooting/logs/view-logs/docker-compose-view-logs.md%br%
 Kubernetes Deployment%,%kubernetes%,%templates/troubleshooting/logs/view-logs/kubernetes-view-logs.md{% endcapture %}
 
-{% include content-toggle.html content-toggle-id="deploymentType" toggle-spec=contenttogglespecdeploymenttype %}
+{% include content-toggle.liquid content-toggle-id="deploymentType" toggle-spec=contenttogglespecdeploymenttype %}
 
 
 ### Enable certain logs
@@ -134,12 +134,12 @@ To enable/disable logging for some part of the system you need to add proper <co
 
 Different deployment tools provide different ways to update logs:
 
-{% capture contenttogglespecdeploymenttype %}
+{% capture contenttogglespecdeploymenttype2 %}
 Standalone Deployment%,%standalone%,%templates/troubleshooting/logs/enable-logs/standalone-enable-logs.md%br%
 Docker-Compose Deployment%,%docker-compose%,%templates/troubleshooting/logs/enable-logs/docker-compose-enable-logs.md%br%
 Kubernetes Deployment%,%kubernetes%,%templates/troubleshooting/logs/enable-logs/kubernetes-enable-logs.md{% endcapture %}
 
-{% include content-toggle.html content-toggle-id="deploymentType" toggle-spec=contenttogglespecdeploymenttype %}
+{% include content-toggle.liquid content-toggle-id="deploymentType" toggle-spec=contenttogglespecdeploymenttype2 %}
 
 
 ## Metrics
@@ -249,12 +249,12 @@ For OAuth2 configuration click [here](/docs/{{docsPrefix}}user-guide/oauth-2-sup
 
 <section id="talkToUs">
     <div id="gettingHelp">
-        <a href="https://gitter.im/thingsboard/chat">
-            <h1>Community chat</h1>
+        <a href="https://app.gitter.im/#/room/#thingsboard_chat:gitter.im">
+            <span class="phrase-heading">Community chat</span>
             <p>Our Gitter channel is the best way to contact our engineers and share your ideas with them.</p>
         </a>
         <a href="https://groups.google.com/forum/#!forum/thingsboard">
-            <h1>Q&A forum</h1>
+            <span class="phrase-heading">Q&A forum</span>
             <p>Our user forum is a great place to go for community support.</p>
         </a>
         <a href="http://stackoverflow.com/questions/tagged/thingsboard">

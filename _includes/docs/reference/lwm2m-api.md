@@ -10,15 +10,23 @@ We assume you have completed the general [Getting Started](/docs/{{docsPrefix}}g
 
 [LwM2M](https://en.wikipedia.org/wiki/OMA_LWM2M) is a device management protocol designed for constrained devices and the demands of a machine-to-machine (M2M) environment.
 You can find more information about LwM2M [here](https://omaspecworks.org/what-is-oma-specworks/iot/lightweight-m2m-LWM2M/).
-Key advantage of the LwM2M protocol is a rich library of data structures that is called [LwM2M Object and Resource Registry](http://www.openmobilealliance.org/wp/OMNA/LwM2M/LwM2MRegistry.html).
+Key advantage of the LwM2M protocol is a rich library of data structures that is called [LwM2M Object and Resource Registry](https://technical.openmobilealliance.org/OMNA/LwM2M/LwM2MRegistry.html).
 The up-to-date list of available objects is available inside [this](https://github.com/OpenMobileAlliance/lwm2m-registry) Github repository.
 
 The registry allows efficient serialization/deserialization of telemetry.
 LwM2M Protocol defines process of device registration, configuration, management and firmware/software updates.
 
-IoT Hub implements both LwM2M server and bootstrap server that supports plain UDP and DTLS (secure transport over UDP).
-IoT Hub allows you to provision own LwM2M models (objects and resources) and [map](/docs/{{docsPrefix}}reference/lwm2m-api/#step-2-define-lwm2m-device-profile) those objects to IoT Hub telemetry and attributes.
-The platform also supports typical [LwM2M commands](/docs/{{docsPrefix}}reference/lwm2m-api/#rpc-commands) using RPC calls.
+The LwM2M device supplies the list of LwM2M Objects it supports during registration.
+The LwM2M Object has an ID, version and one or multiple instances. Each LwM2M Object instance has multiple resources.
+
+The LwM2M resource is a key concept that represents some data you may get or write to device. 
+For example, Resource "3.0.2" always represents the device serial number. Where "3" is the Object id, "0" is the Object instance and "2" is the resource id.
+
+Each resource has the following main properties:
+
+* Name - human readable name of the resource
+* Type - data type: String, Integer, etc.
+* Operations - R (read), RW (read-write), E (execute), etc.
 
 ## Getting started
 
@@ -26,9 +34,10 @@ This part of documentation covers provisioning of your first LwM2M device in IoT
 
 ### Step 1. Upload LwM2M models
 
-{% unless docsPrefix == 'paas/' %}
+{% unless docsPrefix contains 'paas/' %}
 System administrator is able to upload LwM2M models using "Resource library" UI located in the "System settings" menu.
 One may upload multiple files at once. We recommend you to download list of available models from official [github](https://github.com/OpenMobileAlliance/lwm2m-registry) repo and import all of them.
+Note that LwM2M models are versioned, and make sure to upload those that match the LwM2M object versions provided by your devices.
 
 {% include images-gallery.html imageCollection="upload-models" showListImageTitles="true" %}
 
@@ -43,14 +52,21 @@ One may upload multiple files at once. We recommend you to download list of avai
 
 Once you upload the LwM2M models, you are ready to use them to define the device profile.
 See general device profile [documentation](/docs/{{docsPrefix}}user-guide/device-profiles/) for more info about device profiles.
+
+##### Step 2.1 Create the LwM2M profile.
+
 The important step is to chose LwM2M Transport type on the "Transport configuration" step.
 The Transport Configuration allows us to define list of the LwM2M Objects that your devices supports.
 
 {% include images-gallery.html imageCollection="device-profile" showListImageTitles="true" %}
 
+##### Step 2.2 Choose LwM2M objects.
+
 Let's define a profile that supports Device Object (id: 3), Connectivity (id: 4), Firmware Update (id: 5) and Location monitoring (id: 6):
 
 {% include images-gallery.html imageCollection="device-objects" showListImageTitles="true" %}
+
+##### Step 2.3 Configure the mapping
 
 You may notice that Device Object supports Manufacturer, model, and serial numbers. Let’s configure IoT Hub to fetch
 those data when device connects and store it as IoT Hub attributes.
@@ -63,7 +79,7 @@ You may also define conditions for reporting specific resource via LwM2M attribu
 Note: if you un-check all items from the Object(Telemetry, Attributes, Observe) - this object will not be displayed in the
 device profile.
 
-Transport Configuration also allows you to define [bootstrap](/docs/{{docsPrefix}}reference/lwm2m-api/#bootstrap) and [other](#other-settings) settings.
+Transport Configuration also allows you to define bootstrap and other settings.
 
 ### Step 3. Define LwM2M device credentials
 
@@ -103,6 +119,91 @@ The LwM2M transport implementation also stores the logs of communication with th
 
 {% include images-gallery.html imageCollection="wakaama-terminal" showListImageTitles="true" %}
 
+## IoT Hub LwM2M support
+
+IoT Hub implements both LwM2M server and bootstrap server that supports plain UDP and DTLS (secure transport over UDP).
+As a platform user, you are able to provision and define the mapping between the LwM2M resources and IoT Hub device [attributes](/docs/{{docsPrefix}}user-guide/attributes/) and [time series data](/docs/{{docsPrefix}}user-guide/telemetry/).
+The mapping is configured in the corresponding device profile. We will use some screenshots of the LwM2M device profile below to explain the basics. 
+See the [Getting Started](#getting-started) guide for a step-by-step instruction to create the device profile.
+
+#### Read LwM2M resources to IoT Hub attributes
+
+You may configure device profile to read and observe certain LwM2M Resource. 
+The values of the resource may be stored as the device [attributes](/docs/{{docsPrefix}}user-guide/attributes/). 
+To do this, select the "Attribute" checkbox for the corresponding Resource. You may optionally change the auto-generated key name, defining the attribute name in IoT Hub.
+For example, let's configure the platform to read the LwM2M Resource */3/0/2* (Device Serial Number) and store it as an attribute *serialNumber* in IoT Hub:
+
+![image](https://img.thingsboard.io/lwm2m/attributes-ce.png)
+
+IoT Hub will read the attribute value during device registration (LwM2M "Register" operation) or during registration update (LwM2M "Update" operation).
+
+**Note:** 
+
+We may optionally issue the "Observe" operation to make sure we subscribe to the updates of the LwM2M resource.
+To do this, select the "Observe" checkbox for the corresponding Resource. Let's configure IoT Hub to monitor the LwM2M Resource */3/0/15* (Timezone) and store it as the *timezone* attribute:
+
+![image](https://img.thingsboard.io/lwm2m/attributes-observe-ce.png)
+
+Using the above configuration, we will make sure that the attribute *timezone* will always contain the latest value of the *Timezone* resource.
+
+#### Write LwM2M resource via IoT Hub attributes update
+
+IoT Hub [Shared Attributes](/docs/{{docsPrefix}}user-guide/attributes/#shared-attributes) are used to deliver the configuration updates to the device.
+You may change the shared attribute in multiple ways - via administration UI, dashboard widget, REST API, or rule engine node. 
+Once you change the shared attribute, IoT Hub will search for the mapping between the attribute key and LwM2M resource.
+If the resource is marked as an attribute, platform will send the LwM2M Write operation to the LwM2M client device.
+
+See the *Timezone* example from the [read attributes](#read-lwm2m-resources-to-thingsboard-attributes)
+
+#### Read LwM2M resources to time series data
+
+You may configure device profile to read and observe certain LwM2M Resource. The values of the resource may be stored as the device [time series data](/docs/{{docsPrefix}}user-guide/telemetry/).
+To do this, select the "Telemetry" checkbox for the corresponding Resource. You may optionally change the auto-generated key name, defining the telemetry key in IoT Hub.
+For example, let's configure the platform to read the LwM2M Resources: */3/0/7* (Power Source Voltage), */3/0/8* (Power Source Current), */3/0/9* (Battery Level), and */3/0/10* (Memory Free),
+and to store them as time series data in IoT Hub:
+
+![image](https://img.thingsboard.io/lwm2m/time-series-ce.png)
+
+#### Execute LwM2M operation using the IoT Hub RPC command
+
+IoT Hub supports on-demand LwM2M operations using RPC(Remote Procedure Call) feature. We also use "command" to device instead of RPC for simplicity. 
+You can send the command using REST API, dashboard widget, rule engine, or custom script.
+See the structure of the command is documented [here](/docs/{{docsPrefix}}user-guide/rpc/#server-side-rpc). 
+
+Key properties of the command are *method* and *params*. 
+The *method* defines the LwM2M operation and is one of the following: 
+
+* [Execute](#execute-operation) - used by the LwM2M Server to initiate some action;
+* [Read](#read-operation) - access the value of a Resource;
+* [Discover](#discover-operation) - discover LwM2M Resources available on an Objects or Object Instances;
+* [WriteUpdate](#write-operation) - change the value of a Resource;
+* [WriteAttributes](#write-attributes-operation) - change attribute of the Resource;
+* [ReadComposite](#read-composite-operation) - selectively read any combination of Objects;
+* [WriteComposite](#write-composite-operation) - change the values of a number of different Resources across different Instances of one or more Objects;
+* [Delete](#delete-operation) - delete an Object Instance within the LwM2M Client;
+* [Observe](#observe-operation) - initiates an observation request for changes of a specific Resource;
+* [ObserveCancel](#cancel-observation-operation) - ends an observation relationship that was previously created with an “Observe” operation;
+* [ObserveCancelAll](#cancel-all-observations-operation) - IoT Hub-specific operation and allows to cancel all observations on the device at once;
+* [ObserveReadAll](#read-all-observations-operation) - IoT Hub-specific operation and allows to get all observations that are set on the device;
+* [DiscoverAll](#discover-all-operation) - IoT Hub-specific operation and allows to get the object and resources hierarchy, instantiated on the client.
+
+The *params* is typically a JSON that defines the resource id or multiple resources ids. 
+For example, to reboot the device one should execute the resource */3/0/4* (Reboot).
+
+So, the following RPC command need to be sent to IoT Hub:
+
+```json
+{
+   "method": "Execute",
+   "params": {"id": "/3/0/4"}
+}
+```
+{: .copy-code}
+
+We have prepared a simple dashboard with the ability to execute commands to device (*/3/0/4* Reboot) and update device attributes (*/3/0/15* Timezone). 
+You may import the dashboard from [gist](https://gist.github.com/ashvayka/2374b1b6ebd8be5dca3d5252dee4c212#file-lwm2m_operations-json), once you complete the "Getting started" guide below. 
+Don't forget to change the dashboard [alias](/docs/{{docsPrefix}}user-guide/dashboards/#entity-aliases). 
+
 ## RPC Commands
 
 LwM2M transport supports [RPC](/docs/{{docsPrefix}}user-guide/rpc/) commands that reflect subset of
@@ -126,7 +227,29 @@ Where:
 * 'ObjectInstance' Indicates the Object Instance to read.
 * 'ResourceID' Indicates the Resource to read.
 
-Example:
+Example of plain RPC call example for REST API: 
+
+```json
+{
+   "method": "Read",
+   "params": {"id": "/3/0/9"}
+}
+```
+{: .copy-code}
+
+or
+
+```json
+{
+   "method": "Read",
+   "params": {"key": "batteryLevel"}
+}
+```
+{: .copy-code}
+
+
+Example of corresponding input in the debug terminal:
+
 ```ruby
 Read {"id":"/3/0/9"}
 ```
@@ -134,7 +257,8 @@ Read {"id":"/3/0/9"}
 
 Key is a custom user-friendly name, assigned to a certain attribute:
 
-Example:
+Example for RPC debug terminal:
+
 ```ruby
 Read {"key":"batteryLevel"}
 ```
@@ -161,6 +285,18 @@ The "Read" operation is used to access the value of a Resource, a Resource Insta
 an Object Instance or all the Object Instances of an Object.
 
 <b> Example: Read the value of the resource by ID</b>
+
+Example of plain RPC call example for REST API: 
+
+```json
+{
+   "method": "Read",
+   "params": {"id": "/3/0/9"}
+}
+```
+{: .copy-code}
+
+Example of corresponding input in the debug terminal:
 
 ```ruby
 # Request:
@@ -231,7 +367,20 @@ This operation can be used to discover which Resources are instantiated in a giv
 is a list of application/link-format CoRE Links [RFC6690](https://datatracker.ietf.org/doc/html/rfc6690) for each targeted Object, Object Instance, or Resource, along
 with their assigned or attached Attributes including the Object Version attribute if required.
 
-<b> Example: Discover resources attached to an object </b>
+Example of corresponding input in the debug terminal:
+
+RPC call example for REST API: 
+
+```json
+{
+   "method": "Discover",
+   "params": {"id": "/3"}
+}
+```
+{: .copy-code}
+
+
+Example of corresponding input in the debug terminal:
 
 ```ruby
 # Request:
@@ -304,6 +453,19 @@ Replace: replaces the Object Instance or the Resource(s) with the new value prov
 Partial Update: updates Resources provided in the new value and leaves other existing Resources unchanged. When the Resource is a Multiple-Instance Resource, the existing array of Resource Instances is updated meaning some Instances may be created or overwritten to the condition the LwM2M Client authorizes such operations. Deleting via Partial Update is not possible.
 
 <b> Example: WriteUpdate Single ObjectInstance resource</b>
+
+RPC call example for REST API: 
+
+```json
+{
+   "method": "WriteUpdate",
+   "params": {"id":"/3/0","value":{"14":"+5","15":"Kiyv/Europe"}}
+}
+```
+{: .copy-code}
+
+
+Example of corresponding input in the debug terminal:
 
 ```ruby
 # Request:
@@ -384,11 +546,24 @@ WriteReplace {"id": "/19_1.1/0/0","value": {"0":"00ad456797", "25":"25ad456700"}
 ### Write-Attributes Operation
 
 Only Attributes from the NOTIFICATION class MAY be changed in using the "Write-Attributes" operation.
-[Object and Resource attributes](http://localhost:4000/docs/reference/lwm2m-api/#object-and-resource-attributes) section provides explanation on the Attributes supported by the "Write-Attributes" operation: 
+[Object and Resource attributes](/docs/{{docsPrefix}}reference/lwm2m-api/#object-and-resource-attributes) section provides explanation on the Attributes supported by the "Write-Attributes" operation: 
 Minimum Period, Maximum Period, Greater Than, Less Than, Step.
 The operation permits multiple Attributes to be modified within the same operation.
 
 <b> Example: Write multiple attributes </b>
+
+RPC call example for REST API: 
+
+```json
+{
+   "method": "WriteAttributes",
+   "params": {"id":"/19/0/0","attributes":{"pmax":120, "pmin":10}}
+}
+```
+{: .copy-code}
+
+
+Example of corresponding input in the debug terminal:
 
 ```ruby
 # Request:
@@ -400,6 +575,7 @@ WriteAttributes {"id":"/19/0/0","attributes":{"pmax":120, "pmin":10}}
 {: .copy-code}
 
 ### Read-Composite Operation
+
 The LwM2M Client MAY support the "Read-Composite" operation.
 The "Read-Composite" operation can be used by the LwM2M Server to selectively read any combination of Objects,
 Object Instance(s), Resources, and/or Resource Instances of different or same Objects in a single request. The list of
@@ -408,6 +584,19 @@ fields. The Read-Composite operation is treated as non-atomic and handled as bes
 of the requested resources do not have a valid value to return, they will not be included in the response. 
 
 <b> Example: Read multiple Objects </b>
+
+RPC call example for REST API: 
+
+```json
+{
+   "method": "ReadComposite",
+   "params": {"ids":["/3/0/9", "/1_1.2"]}
+}
+```
+{: .copy-code}
+
+
+Example of corresponding input in the debug terminal:
 
 ```ruby
 # Request:
@@ -479,6 +668,19 @@ and that the Server has write access to those Objects and Resources.
 
 <b> Example: WriteComposite to multiple Objects </b>
 
+RPC call example for REST API: 
+
+```json
+{
+   "method": "WriteComposite",
+   "params": {"nodes":{"/3/0/14":"+04", "/1/0/2":100, "/5/0/1":"coap://localhost:5685"}}
+}
+```
+{: .copy-code}
+
+
+Example of corresponding input in the debug terminal:
+
 ```ruby
 # Request:
 WriteComposite {"nodes":{"/3/0/14":"+04", "/1/0/2":100, "/5/0/1":"coap://localhost:5685"}}
@@ -509,6 +711,19 @@ The "Execute" operation is used by the LwM2M Server to initiate some action, and
 
 <b> Example: Execute resource</b>
 
+RPC call example for REST API: 
+
+```json
+{
+   "method": "Execute",
+   "params": {"id":"5/0/2"}
+}
+```
+{: .copy-code}
+
+
+Example of corresponding input in the debug terminal:
+
 ```ruby
 # Request:
 Execute {"id":"5/0/2"}
@@ -519,6 +734,7 @@ Execute {"id":"5/0/2"}
 {: .copy-code}
 
 ### Delete Operation
+
 The "Delete" operation is used for LwM2M Server to delete an Object Instance within the LwM2M Client.
 The Object Instance that is deleted in the LwM2M Client by the LwM2M Server MUST be an Object Instance that is
 announced by the LwM2M Client to the LwM2M Server using the "Register" and "Update" operations of the Client
@@ -528,6 +744,19 @@ The only exception concerns the single Instance of the mandatory Device Object (
 any Delete operation.
 
 <b> Example: Delete an Object Instance</b>
+
+RPC call example for REST API: 
+
+```json
+{
+   "method": "Delete",
+   "params": {"id":"/19/1"}
+}
+```
+{: .copy-code}
+
+
+Example of corresponding input in the debug terminal:
 
 ```ruby
 # Request:
@@ -539,12 +768,26 @@ Delete {"id":"/19/1"}
 {: .copy-code}
 
 ### Observe Operation
+
 The LwM2M Server initiates an observation request for changes of a specific Resource, Resources within an Object
 Instance or for all the Object Instances of an Object within the LwM2M Client.
-Related parameters for "Observe" operation are described in [Notification attributes](http://localhost:4000/docs/reference/lwm2m-api/#object-and-resource-attributes) Write-Attributes Operation and those
+Related parameters for "Observe" operation are described in [Notification attributes](/docs/{{docsPrefix}}reference/lwm2m-api/#object-and-resource-attributes) Write-Attributes Operation and those
 parameters are configured by "Write-Attributes" operation.
 
 <b> Example: Observe resource</b>
+
+RPC call example for REST API: 
+
+```json
+{
+   "method": "Observe",
+   "params": {"id":"/3/0/9"}
+}
+```
+{: .copy-code}
+
+
+Example of corresponding input in the debug terminal:
 
 ```ruby
 # Request:
@@ -581,10 +824,24 @@ type=INTEGER], 11=LwM2mMultipleResource [id=11, values={0=LwM2mResourceInstance 
 </details>
 
 ### Cancel Observation Operation
+
 The "Cancel Observation" operation is sent from the LwM2M Server to the LwM2M Client to end an observation
 relationship that was previously created with an "Observe" operation
 
 <b> Example: Cancel Observation for resource by ID</b>
+
+RPC call example for REST API: 
+
+```json
+{
+   "method": "ObserveCancel",
+   "params": {"id":"/5/0/7"}
+}
+```
+{: .copy-code}
+
+
+Example of corresponding input in the debug terminal:
 
 ```ruby
 # Request:
@@ -615,6 +872,19 @@ on the device at once
 
 <b> Example: Cancel All Observations</b>
 
+RPC call example for REST API: 
+
+```json
+{
+   "method": "ObserveCancelAll",
+   "params": {}
+}
+```
+{: .copy-code}
+
+
+Example of corresponding input in the debug terminal:
+
 ```ruby
 # Request:
 ObserveCancelAll
@@ -626,10 +896,23 @@ ObserveCancelAll
 
 
 ### Read All Observations Operation
-The "Read All Observations" operation is IoT Hub-specific operation and allows to get all observations 
+The "Read All Observations" operation is IoT Hub-specific operation and allows to get all observations
 that are set on the device.
 
 <b> Example: Read All Observations</b>
+
+RPC call example for REST API: 
+
+```json
+{
+   "method": "ObserveReadAll",
+   "params": {}
+}
+```
+{: .copy-code}
+
+
+Example of corresponding input in the debug terminal:
 
 ```ruby
 # Request:
@@ -649,6 +932,20 @@ This command is very useful for device setting up and troubleshooting, as it all
 versions.
 
 <b> Example: Discover all resources </b>
+
+
+RPC call example for REST API: 
+
+```json
+{
+   "method": "DiscoverAll",
+   "params": {}
+}
+```
+{: .copy-code}
+
+
+Example of corresponding input in the debug terminal:
 
 ```ruby
 # Request:
@@ -762,7 +1059,7 @@ actions on the LwM2M Client (e.g., Notifications).
 Attributes attached to Objects, Object Instances, Resources are respectively named O-Attribute, OI-Attribute, R-Attribute.
 
 These Attributes MAY be carried in the message payload of Registration and Discover operations; they also MAY be
-updated - when writable - through the [Write-Attributes](http://localhost:4000/docs/reference/lwm2m-api/#write-attributes-operation) operation.
+updated - when writable - through the [Write-Attributes](/docs/{{docsPrefix}}reference/lwm2m-api/#write-attributes-operation) operation.
 
 There are two types of attributes:
 
@@ -934,7 +1231,22 @@ openssl ec -in scertServer.pem -pubout -outform DER -out spubk.der
 ```
 {: .copy-code}
 
-Please note that script us using the default password for "lwm2mserver.jks" file.
+Please note that script us using the default password for "lwm2mserver.jks" file. If you are going to use another password,
+please also update it in ["thingsboard.yml"](https://docs.iothub.magenta.at/docs/pe/user-guide/install/config/) configuration file:
+
+```ruby
+...
+lwm2m:
+    ...
+    server:
+      ...
+      security:
+        ...
+        key_alias: "${LWM2M_SERVER_KEY_ALIAS:server}"
+        key_password: "${LWM2M_SERVER_KEY_PASSWORD:server_ks_password}"
+        ...
+
+```
 
 {:start="4"}
 4. To run the script, use following commands:

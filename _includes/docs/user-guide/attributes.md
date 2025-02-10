@@ -1,6 +1,8 @@
 
 * TOC
 {:toc}
+## Assigning custom attributes to entities and attributes managing
+
 
 IoT Hub provides the ability to assign custom attributes to your entities and manage these attributes.
 Those attributes are stored in the database and may be used for data visualization and data processing.
@@ -178,7 +180,7 @@ As an alternative to curl, you may use [Java](/docs/{{docsPrefix}}reference/rest
 - subscribe to *shared* attribute updates from the server: [MQTT API](/docs/{{docsPrefix}}reference/mqtt-api/#subscribe-to-attribute-updates-from-the-server), [CoAP API](/docs/{{docsPrefix}}reference/coap-api/#subscribe-to-attribute-updates-from-the-server), [HTTP API](/docs/{{docsPrefix}}reference/http-api/#subscribe-to-attribute-updates-from-the-server), [LwM2M API](/docs/{{docsPrefix}}reference/lwm2m-api/#attributes-api);.
 
 {% capture missed_updates %}
-If device went offline, it may miss the important attribute update notification. <br/> We recommend to subscribe to attribute updates on application startup and request latest values of the attributes after each connect or reconnect.
+If device went offline, it may miss the important attribute update notification. <br> We recommend to subscribe to attribute updates on application startup and request latest values of the attributes after each connect or reconnect.
 
 {% endcapture %}
 {% include templates/info-banner.md content=missed_updates %}
@@ -252,7 +254,7 @@ Changes to the attributes initiated by the user are recorded in the [audit logs]
 
 Telemetry Controller provides the following REST API to fetch entity data:
 
-![image](/images/user-guide/telemetry-service/rest-api.png)
+![image](https://img.thingsboard.io/user-guide/telemetry-service/rest-api.png)
 
 {% capture api_note %}
 **NOTE:** The API listed above is available via Swagger UI. Please review the general [REST API](/docs/{{docsPrefix}}reference/rest-api/) documentation for more details.
@@ -294,11 +296,11 @@ Then, use [action](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/action-nodes/)
 Use [enrichment](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/enrichment-nodes/) rule nodes to enrich incoming telemetry message with attributes of the device, related asset, customer or tenant.
 This is extremely powerful technique that allows to modify processing logic and parameters based on settings stored in the attributes. 
 
-{% unless docsPrefix == "paas/" %}
+{% unless docsPrefix contains "paas/" %}
 
 ## Performance enhancement
 
-You can achieve higher performance with Attributes Cache enabled (see <b>cache.attributes.enabled</b> property of the [Configuration properties](/docs/{{docsPrefix}}user-guide/install/config/#thingsboard-core-settings)) 
+You can achieve higher performance with Attributes Cache enabled (see <b>cache.attributes.enabled</b> property of the [Configuration properties](/docs/user-guide/install/{{docsPrefix}}config/#thingsboard-core-settings)) 
 
 Having attributes cache enabled IoT Hub will load the specific attribute from the database only once, all subsequent requests to the attribute will be loaded from the faster cache connection.
 

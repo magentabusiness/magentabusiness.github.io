@@ -16,7 +16,7 @@ export TB_QUEUE_TYPE=kafka
 export TB_QUEUE_KAFKA_USE_CONFLUENT_CLOUD=true
 export TB_KAFKA_SERVERS=localhost:9092
 export TB_QUEUE_KAFKA_REPLICATION_FACTOR=3
-export TB_QUEUE_KAFKA_CONFLUENT_SASL_JAAS_CONFIG=org.apache.kafka.common.security.plain.PlainLoginModule required username="CLUSTER_API_KEY" password="CLUSTER_API_SECRET";}
+export TB_QUEUE_KAFKA_CONFLUENT_SASL_JAAS_CONFIG='org.apache.kafka.common.security.plain.PlainLoginModule required username="CLUSTER_API_KEY" password="CLUSTER_API_SECRET";'
 
 # These params affect the number of requests per second from each partitions per each queue.
 # Number of requests to particular Message Queue is calculated based on the formula:
@@ -33,19 +33,18 @@ export TB_QUEUE_KAFKA_CONFLUENT_SASL_JAAS_CONFIG=org.apache.kafka.common.securit
 # Number of requests per second = 44 * 1000 / 25 = 1760 requests
 
 # Based on the use case, you can compromise latency and decrease number of partitions/requests to the queue, if the message load is low.
+# By UI set the parameters - interval (1000) and partitions (1) for Rule Engine queues.
 # Sample parameters to fit into 10 requests per second on a "monolith" deployment: 
 
 export TB_QUEUE_CORE_POLL_INTERVAL_MS=1000
 export TB_QUEUE_CORE_PARTITIONS=2
 export TB_QUEUE_RULE_ENGINE_POLL_INTERVAL_MS=1000
-export TB_QUEUE_RE_MAIN_POLL_INTERVAL_MS=1000
-export TB_QUEUE_RE_MAIN_PARTITIONS=2
-export TB_QUEUE_RE_HP_POLL_INTERVAL_MS=1000
-export TB_QUEUE_RE_HP_PARTITIONS=1
-export TB_QUEUE_RE_SQ_POLL_INTERVAL_MS=1000
-export TB_QUEUE_RE_SQ_PARTITIONS=1
 export TB_QUEUE_TRANSPORT_REQUEST_POLL_INTERVAL_MS=1000
 export TB_QUEUE_TRANSPORT_RESPONSE_POLL_INTERVAL_MS=1000
 export TB_QUEUE_TRANSPORT_NOTIFICATIONS_POLL_INTERVAL_MS=1000
+export TB_QUEUE_VC_INTERVAL_MS=1000
+export TB_QUEUE_VC_PARTITIONS=1
 ```
 {: .copy-code}
+
+You can update default Rule Engine queues configuration using UI. More about ThingsBoard Rule Engine queues see in [documentation](/docs/{{docsPrefix}}user-guide/rule-engine-2-5/queues/).

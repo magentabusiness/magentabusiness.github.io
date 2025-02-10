@@ -76,11 +76,11 @@ This scenario requires both IoT Hub platform and PostgreSQL database deployment 
 The HAProxy load balancer is also installed on the same server and acts as a reverse proxy and optionally TLS termination proxy.
 See diagram below.
 
-<object width="80%" data="/images/reference/deployment/single.svg"></object>
+<object width="80%" data="https://img.thingsboard.io/reference/deployment/single.svg"></object>
 
 **Pros**:
 
-* Very simple setup, literally: 10 minutes to deploy using [our installation guides](/docs/{{docsPrefix}}user-guide/install/installation-options/).
+* Very simple setup, literally: 10 minutes to deploy using [our installation guides](/docs/user-guide/install/{{docsPrefix}}installation-options/).
 * Easy to maintain and update the software instance.
 
 **Cons**:
@@ -122,10 +122,10 @@ If you would like to minimize resources spent for the database maintenance, we r
 
 This deployment scenario rather similar to scenario A, but requires fully-managed database deployed on a separate server(s). 
 IoT Hub customers successfully utilize [AWS RDS](https://aws.amazon.com/rds/postgresql/), [Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/services/postgresql/) and
-[Google Cloud SQL](https://cloud.google.com/sql/docs/{{docsPrefix}}postgres/) to minimize efforts on database setup, backups and support.
+[Google Cloud SQL](https://cloud.google.com/sql/docs/postgres/) to minimize efforts on database setup, backups and support.
 See diagram below.
 
-<object width="80%" data="/images/reference/deployment/standalone.svg"></object>
+<object width="80%" data="https://img.thingsboard.io/reference/deployment/standalone.svg"></object>
 
 **Pros**:
 
@@ -164,7 +164,7 @@ Adding [Premium support](/docs/services/support/) package results in ~1000 USD p
 
 IoT Hub supports Microservices architecture (MSA) to perform scalable deployments for millions of devices. See [platform architecture](/docs/{{docsPrefix}}reference/msa/) for more details, please. With MSA deployments, system administrator can flexibly tune number of transport, rule-engine, web-ui and JavaScript executor microservices to optimize the cluster according to the current load.
 
-IoT Hub uses [Kafka](https://kafka.apache.org/) as a main message queue and streaming solution, [Redis](https://redis.io/) as a distributed cache and [Cassandra](http://cassandra.apache.org/) as a highly available, scalable and fast NoSQL database. 
+IoT Hub uses [Kafka](https://kafka.apache.org/) as a main message queue and streaming solution, [Redis](https://redis.io/) as a distributed cache and [Cassandra](https://cassandra.apache.org/) as a highly available, scalable and fast NoSQL database.
 Note that Cassandra usage is optional and is recommended in case of high telemetry data rate (more then 20,000 data points per second)
 In other cases PostgreSQL based deployment is sufficient.
 
@@ -205,7 +205,7 @@ The following Kubernetes cluster is sufficient to support this use case:
 - Amazon RDS for PostgreSQL based on "db.m5.large" Multi-AZ deployment. Estimate: 220 USD/month.
 - 1TB Multi-AZ deployment storage. The price is 230 USD/month. 
 
-<object width="100%" data="/images/reference/deployment/smart-meter-cluster.svg"></object>
+<object width="100%" data="https://img.thingsboard.io/reference/deployment/smart-meter-cluster.svg"></object>
 
 Hence, approximate infrastructure cost is ~1,770 USD/month or 0.00177 USD/month per device.
 
@@ -237,7 +237,7 @@ The following Kubernetes cluster is sufficient to support this use case:
 - Amazon RDS for PostgreSQL based on "db.m5.large" Multi-AZ deployment. Estimate: 220 USD/month. 
 - 100TB of deployment storage. The price: 10,000 USD/month. 
 
-<object width="100%" data="/images/reference/deployment/smart-tracker-cluster.svg"></object>
+<object width="100%" data="https://img.thingsboard.io/reference/deployment/smart-tracker-cluster.svg"></object>
 
 Thus approximate infrastructure cost is ~13,790 USD/month or 0.0138 USD/month per device.
 15 IoT Hub perpetual licenses (below v3.0) cost 44,985 USD (including optional updates and basic support within initial year of usage). 17,985 USD is the respective pricing for the subsequent years of software updates + basic support.

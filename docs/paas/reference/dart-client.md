@@ -6,4 +6,5 @@ description: ThingsBoard PE API client library for Dart developers
 ---
  
 {% assign docsPrefix = "paas/" %}
-{% include docs/pe/reference/python-rest-client.md %}
+{% include get-hosts-name.html docsPrefix=docsPrefix %}
+{% include docs/pe/reference/dart-client.md %}

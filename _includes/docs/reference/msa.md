@@ -7,7 +7,7 @@ This article consist of high level diagram, description of data flow between var
 
 ## Architecture diagram
 
- <object width="80%" data="/images/reference/msa-architecture.svg"></object> 
+ <object width="80%" data="https://img.thingsboard.io/reference/msa-architecture.svg"></object> 
   
 ## Transport Microservices
 
@@ -25,7 +25,7 @@ Each of the transport servers listed above communicates with the main IoT Hub No
 [Apache Kafka](https://kafka.apache.org) is a distributed, reliable and scalable persistent message queue and streaming platform.
 
 The messages that are sent to Kafka are serialized using [protocol buffers](https://developers.google.com/protocol-buffers/) 
-with the messages definition available [here](https://github.com/thingsboard/thingsboard/blob/master/common/transport/transport-api/src/main/proto/transport.proto).
+with the messages definition available [here](https://github.com/thingsboard/thingsboard/blob/master/common/proto/src/main/proto/transport.proto).
 
 **Note**: Starting v2.5, IoT Hub is going to support alternative queue implementation: Amazon DynamoDB. See [roadmap](/docs/{{docsPrefix}}reference/roadmap) for more details.
  
@@ -250,7 +250,7 @@ and corresponding [documentation](https://github.com/thingsboard/thingsboard/blo
 TODO: 2.5  
 
 {% highlight yaml %}
-version: '2.2'
+version: '3.0'
 
 services:
   zookeeper:
@@ -278,7 +278,8 @@ services:
   tb-js-executor:
     restart: always
     image: "${DOCKER_REPO}/${JS_EXECUTOR_DOCKER_NAME}:${TB_VERSION}"
-    scale: 20
+    deploy:
+      replicas: 20
     env_file:
       - tb-js-executor.env
     depends_on:

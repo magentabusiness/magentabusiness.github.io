@@ -1,6 +1,6 @@
 
-Device credentials are used in order to connect to the ThingsBoard server by applications that are running on the device.
-ThingsBoard is designed to support different device credentials. There are three supported credentials types at the moment:
+Device credentials are used in order to connect to the IoT Hub server by applications that are running on the device.
+IoT Hub is designed to support different device credentials. There are three supported credentials types at the moment:
 
  - [**Access Tokens**](/docs/{{docsPrefix}}user-guide/access-token/) - general purpose credentials that are suitable for wide range of devices. 
  Access Token based authentication may be used in not encrypted, one-way SSL mode or DTLS accessToken mode.
@@ -14,10 +14,10 @@ ThingsBoard is designed to support different device credentials. There are three
    - **Advantages:** high level of security using the encrypted network connection and public key infrastructure.
    - **Disadvantages:** not supported by some resource constrained devices. Affects battery and CPU usage.
 
-Device credentials need to be provisioned to corresponding device entity on the server. 
-There are multiple ways to do this:
+Device credentials need to be provisioned to corresponding device entity on the server. There are multiple ways to do this:
 
- - **Automatically**, using IoT Hub [REST API](/docs/{{docsPrefix}}reference/rest-api/). For example during manufacturing, QA or purchase order fulfilment.
+ - **Automatically**, using [X.509 Certificate chain](/docs/{{docsPrefix}}user-guide/certificates/) or [device provisioning](/docs/{{docsPrefix}}user-guide/device-provisioning/). Allows devices to automatically provision themselves in IoT Hub.
+ - **Via Script**, using IoT Hub [REST API](/docs/{{docsPrefix}}reference/rest-api/). For example during manufacturing, QA or purchase order fulfilment.
  - **Manually**, using IoT Hub [Web UI](/docs/{{docsPrefix}}user-guide/ui/devices/#manage-device-credentials). For example for development purposes, or by system administrator.
 
 

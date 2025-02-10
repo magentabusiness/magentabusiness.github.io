@@ -1,3 +1,4 @@
+- bigheader: Getting started guides
 - title: Getting started guides
   subtitle: These guides provide quick overview of main IoT Hub features. Designed to be completed in 15-30 minutes.
   id: GettingStartedGuides
@@ -20,7 +21,13 @@
     #   keywords: device management attributes
     #   video: true
     #   pe: false
-    - path: /docs/pe/user-guide/rule-engine-2-0/re-getting-started/
+    - path: /docs/user-guide/dashboards/
+      title: Working with IoT dashboards
+      subtitle: Learn how to perform basic operations over Dashboards.
+      keywords: dashboards
+      video: false
+      pe: false
+    - path: /docs/user-guide/rule-engine-2-0/re-getting-started/
       title: Getting started with Rule Engine
       subtitle: Learn about IoT Hub rule engine and typical use cases you can implement. Review Hello World example and learn how-to enable filtering of incoming telemetry messages.
       keywords: device management attributes
@@ -115,6 +122,34 @@
 #      keywords: install cluster kubernetes k8s openshift
 #      video: false
 #      pe: false
+#- title: Advanced guides for working with the main features of ThingsBoard
+#  subtitle: These guides contain instructions how to configure complex ThingsBoard dashboard.
+#  id: AdvancedGettingStartedGuides
+#  section:
+#    - path: /docs/pe/user-guide/advanced-guides-for-working-with-dashboard/advanced-dashboard-guide-lesson-1/
+#      title: Lesson 1. Visualizing assets data using OpenStreet Map and Entities table widgets
+#      subtitle: "Explore this guide to learn how to: create assets and devices and define their relationships; add server attributes; develop a new dashboard; visualize data using the ”Entities table” and ”OpenStreet Map” widgets."
+#      keywords: asset device server attribute visualization dashboard Entities table OpenStreet Map widget helloworld
+#      video: false
+#      pe: true
+#    - path: /docs/pe/user-guide/advanced-guides-for-working-with-dashboard/advanced-dashboard-guide-lesson-2/
+#      title: Lesson 2. Dashboard states, widget actions, and Image Map widget
+#      subtitle: "Explore this guide to learn how to: add and configure new dashboard states, create different aliases, visualize devices data on the ”Image Map” widget, and set up actions in various widgets to navigate between states."
+#      keywords: Line chart aliases attribute Image Map Auto fill layout height actions telemetry analog gauges digital gauge data helloworld
+#      video: false
+#      pe: true
+#    - path: /docs/pe/user-guide/advanced-guides-for-working-with-dashboard/advanced-dashboard-guide-lesson-3/
+#      title: Lesson 3. Charts and card widgets
+#      subtitle: "Explore this guide to learn how to: add separate states for each device, simulate telemetry data for the devices using the Rule Engine, and display them using card and chart widgets."
+#      keywords: Line chart aliases attribute Image Map actions telemetry analog gauges digital gauge data helloworld
+#      video: false
+#      pe: true
+#    - path: /docs/pe/user-guide/advanced-guides-for-working-with-dashboard/advanced-dashboard-guide-lesson-4/
+#      title: Lesson 4. Adding customers & sharing or changing ownership of assets.
+#      subtitle: "Explore this guide to learn how to: grant access to the dashboard by assigning ownership or shared access to specific entities (such as devices, assets, etc.) to different clients; create customer and customer users."
+#      keywords: customer user share change owner helloworld
+#      video: false
+#      pe: true
 - title: Connect your device
   subtitle: Learn how to connect devices based on your connectivity technology or solution.
   id: ConnectYourDevice
@@ -134,6 +169,15 @@
     - path: /docs/pe/reference/lwm2m-api/
       title: Connect devices using IoT Hub LwM2M API
       subtitle: Learn how to connect your devices using LwM2M protocol and IoT Hub built-in payload format.
+    - path: /docs/reference/mqtt-sparkplug-api/
+      title: Connect devices using  ThingsBoard MQTT Sparkplug API
+      subtitle: Learn how to connect your devices using MQTT Sparkplug protocol and ThingsBoard built-in payload format.
+      keywords: sparkplug connect
+      pe: false
+      video: false
+    - path: /docs/reference/lwm2m-api/
+      title: Connect devices using ThingsBoard LwM2M API
+      subtitle: Learn how to connect your devices using LwM2M protocol and ThingsBoard built-in payload format.
       keywords: lwm2m connect
       pe: false
       video: false
@@ -173,6 +217,12 @@
       keywords: mqtt connect
       pe: true
       video: true
+    - path: /docs/user-guide/integrations/kafka/
+      title: Connect devices with custom payload using ThingsBoard Kafka Integration.
+      subtitle: Connect to external brokers and consume Kafka data stream
+      keywords: kafka connect
+      pe: true
+      video: true
     - path: /docs/user-guide/integrations/sigfox/
       title: Connect SigFox devices using IoT Hub Integration
       subtitle: Learn how to route messages from Sigfox backend to IoT Hub and decode binary device payloads.
@@ -180,8 +230,8 @@
       pe: true
       video: true
     - path: /docs/user-guide/integrations/ttn/
-      title: Connect LoRaWAN devices using TheThingsNetwork
-      subtitle: Learn how to route messages from TheThingsNetwork backend to IoT Hub and vise-versa.
+      title: Connect LoRaWAN devices using TheThingsStack
+      subtitle: Learn how to route messages from TheThingsStack backend to ThingsBoard and vise-versa.
       keywords: ttn connect
       pe: true
       video: false
@@ -233,7 +283,7 @@
       keywords: Connect TCP devices
       pe: true
       video: true
-    - path: /docs/user-guide/integrations/tcp/
+    - path: /docs/user-guide/integrations/udp/
       title: Devices uses UDP protocol
       subtitle: How to connect to IoT Hub UDP-server, transform the incoming messages and generate the downlinks using IoT Hub.
       keywords: Connect UDP devices
@@ -292,7 +342,70 @@
 #       keywords: 
 #       pe: false
 #       video: true
-
+#    - path: /docs/samples/tektelic/
+#      title: Connect Tektelic LoRaWAN sensors using TEKTELIC KONA Core Network Server
+#      subtitle: Learn how to route messages from TEKTELIC KONA Core Network Server to ThingsBoard.
+#      keywords: Tektelic connect
+#      pe: false
+#      video: false
+#    - path: /docs/user-guide/integrations/tuya/
+#      title: Connect smart devices through Tuya Smart
+#      subtitle: Learn how to connect smart devices using Tuya Smart to ThingsBoard.
+#      keywords:
+#      pe: true
+#      video: false
+#    - path: /docs/samples/sia-connect/
+#      title: Connect OPC-UA devices through SIA Connect
+#      subtitle: Learn how to connect OPC-UA devices using the SIA Connect to the ThingsBoard.
+#      keywords:
+#      pe: true
+#      video: false
+- title: Data visualization
+  subtitle: These guides contain instructions how to configure complex ThingsBoard dashboards
+  id: DataVisualization
+  section:
+    - path: /docs/iot-video-tutorials/#dashboard-development-guide-part-1-of-3-visualizing-assets-data-using-maps-and-tables
+      title: Visualizing assets data using Maps and Tables
+      subtitle: "Learn how to: create assets and devices and define their relationships; add the server attributes and create a new dashboard; visualize data from the asset attributes using “Entities Table” and “Map” widgets."
+      keywords:
+      pe: false
+      video: true
+    - path: /docs/iot-video-tutorials/#dashboard-development-guide-part-2-of-3-dashboard-states-aliases-and-widget-actions
+      title: Dashboard states, aliases and widget actions
+      subtitle: "Learn how to: add and configure new dashboard states; create various aliases; visualize the attributes data using the Image Map widget; create actions in different widgets in order to navigate between states; visualize the telemetry data using Analogue and Digital gauges and the Timeseries widget."
+      keywords:
+      pe: false
+      video: true
+    - path: /docs/iot-video-tutorials/#dashboard-development-guide-part-3-of-3-remote-device-control-and-alarm-management
+      title: Remote device control and alarm management
+      subtitle: "Learn how to: add and use the Knob Control widget; create alarm rules; handle alarms using the Alarms widget; make a dashboard public."
+      keywords:
+      pe: false
+      video: true
+    - path: /docs/iot-video-tutorials/#widget-configuration-guide-part-1-of-3-basic-settings
+      title: Basic widget settings
+      subtitle: "Learn how to: change widget title, background, colors, fonts, shadows, etc."
+      keywords:
+      pe: false
+      video: true
+    - path: /docs/iot-video-tutorials/#widget-configuration-guide-part-2-of-3-latest-values-map-widget
+      title: Latest Values Map widget
+      subtitle: "Learn how to create Map widget, based on latitude and longitude, and customize the Map widget layout and properties."
+      keywords:
+      pe: false
+      video: true
+    - path: /docs/iot-video-tutorials/#widget-configuration-guide-part-3-of-3-time-series-map-widget
+      title: Time Series Map widget
+      subtitle: "Learn how to display your devices with the latest telemetry data on the Time Series Map widget and modify the widget properties."
+      keywords:
+      pe: false
+      video: true
+    - path: /docs/user-guide/ui/trip-animation-widget
+      title: Trip Animation widget
+      subtitle: "Learn how to display your devices with the latest telemetry data on the Trip Animation widget and modify the widget properties."
+      keywords: 
+      pe: false
+      video: true
 - title: Data processing & actions
   subtitle: Learn how to use IoT Hub Rule Engine.
   id: DataProcessing

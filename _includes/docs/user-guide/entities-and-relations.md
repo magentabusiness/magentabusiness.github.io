@@ -30,6 +30,7 @@ Some entities support profiles:
 
   <!-- - **[Tenant Profiles](/docs/{{docsPrefix}}user-guide/tenant-profiles/)** - contains common settings for multiple tenants: entity, API and rate limits, etc. Each Tenant has the one and only profile at a single point in time. -->
   - **[Device Profiles](/docs/{{docsPrefix}}user-guide/device-profiles/)** - contains common settings for multiple devices: processing and transport configuration, etc. Each Device has the one and only profile at a single point in time.
+  - **[Asset Profiles](/docs/{{docsPrefix}}user-guide/asset-profiles/)** - contains common settings for multiple assets: processing configuration, etc. Each Asset has the one and only profile at a single point in time.
 
 {% if docsPrefix == "pe/" %}
 **[Entity Groups](/docs/pe/user-guide/groups/)**:
@@ -64,7 +65,7 @@ Let’s also assume we want to support multiple fields with hundreds of sensors.
 
 The following diagram explains how those entities are configured and stored in IoT Hub:
 
-![image](/images/user-guide/entities-and-relations.svg)
+![image](https://img.thingsboard.io/user-guide/entities-and-relations.svg)
 
 
 See ["add and delete assets"](/docs/pe/user-guide/ui/assets/#add-and-delete-assets) and ["manage asset relations"](/docs/pe/user-guide/ui/assets/#manage-asset-relations)

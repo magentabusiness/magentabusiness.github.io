@@ -1,11 +1,11 @@
 {% include docs/user-guide/rule-engine-2-0/ce-action-nodes.md %}
 
 {% assign peDocsPrefix = '' %}
-{% if docsPrefix == 'paas/' %}
+{% if docsPrefix contains 'paas/' %}
 {% assign peDocsPrefix = docsPrefix %}
 {% endif %}
 
-# Add To Group Node
+## Add To Group Node
 
 {% assign feature = "PE Action Nodes" %}{% include templates/pe-feature-banner.md %}
 
@@ -17,7 +17,7 @@
    </thead>
 </table> 
 
-![image](/images/user-guide/rule-engine-2-0/pe/nodes/action-add-to-group.png)
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/pe/nodes/action-add-to-group.png)
 
 Adds Message Originator Entity to [Entity Group](/docs/{{peDocsPrefix}}user-guide/groups/).
 
@@ -28,7 +28,7 @@ Will create new Entity Group if it doesn't exist and **Create new group if not e
 
 Configuration:
 
-![image](/images/user-guide/rule-engine-2-0/pe/nodes/action-add-to-group-config.png)
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/pe/nodes/action-add-to-group-config.png)
 
 - **Group name pattern** - can be set direct group name or pattern can be used, that will be resolved to the real group name using Message metadata.
 - **Create new group if not exists** - if checked will create new entity group if it doesn't exist.
@@ -41,9 +41,9 @@ Message will be routed via **Failure** chain in the following cases:
 
 In other cases Message will be routed via **Success** chain.
 
-<br/>
+<br>
 
-# Remove From Group Node
+## Remove From Group Node
 
 {% assign feature = "PE Action Nodes" %}{% include templates/pe-feature-banner.md %}
 
@@ -55,7 +55,7 @@ In other cases Message will be routed via **Success** chain.
    </thead>
 </table> 
 
-![image](/images/user-guide/rule-engine-2-0/pe/nodes/action-remove-from-group.png)
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/pe/nodes/action-remove-from-group.png)
 
 Removes Message Originator Entity from [Entity Group](/docs/{{peDocsPrefix}}user-guide/groups/).
 
@@ -65,7 +65,7 @@ Finds target Entity Group by group name pattern and then removes Originator Enti
 
 Configuration:
 
-![image](/images/user-guide/rule-engine-2-0/pe/nodes/action-remove-from-group-config.png)
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/pe/nodes/action-remove-from-group-config.png)
 
 - **Group name pattern** - can be set direct group name or pattern can be used, that will be resolved to the real group name using Message metadata.
 - **Groups cache expiration time** - specifies maximum time interval is seconds allowed to store found entity group records. 0 value means that records will never expire.
@@ -77,9 +77,9 @@ Message will be routed via **Failure** chain in the following cases:
 
 In other cases Message will be routed via **Success** chain.
 
-<br/>
+<br>
 
-# Generate Report Node
+## Generate Report Node
 
 {% assign feature = "PE Action Nodes" %}{% include templates/pe-feature-banner.md %}
 
@@ -91,7 +91,7 @@ In other cases Message will be routed via **Success** chain.
    </thead>
 </table> 
 
-![image](/images/user-guide/rule-engine-2-0/pe/nodes/action-generate-report.png)
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/pe/nodes/action-generate-report.png)
 
 Generates report files by capturing target dashboard with specific configuration.
 
@@ -109,7 +109,7 @@ used by [**Send Email Node**](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/ext
 
 Configuration:
 
-![image](/images/user-guide/rule-engine-2-0/pe/nodes/action-generate-report-config.png)
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/pe/nodes/action-generate-report-config.png)
 
 - **Use system reports server** - if set, [Reports Server](/docs/{{peDocsPrefix}}user-guide/reporting/#reports-server) endpoint URL will be taken from system configuration (**thingsboard.yml**).
 - **Reports server endpoint URL** - endpoint URL of [Reports Server](/docs/{{peDocsPrefix}}user-guide/reporting/#reports-server).
@@ -118,8 +118,8 @@ Configuration:
 - **Dashboard** - dashboard that will be used for report generation.
 - **Dashboard state parameter value** - used to specify target dashboard state for report generation. Can be set automatically by clicking on right most button of the field and invoking **Select dashboard state** dialog.
 - **Timezone** - timezone in which target dashboard will be presented in report.
-- **Use dashboard timewindow** - if set, timewindow configured in the target dashboard will be used during report generation.
-- **Timewindow** - specific dashboard timewindow that will be used during report generation.
+- **Use dashboard time window** - if set, time window configured in the target dashboard will be used during report generation.
+- **Time window** - specific dashboard time window that will be used during report generation.
 - **Report name pattern** - file name pattern of generated report, can contain date-time pattern in form of `%d{date-time pattern}`. See [SimpleDateFormat](https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html) documentation for date-time pattern details.
 - **Report type** - report file type, can be *PDF \| PNG \| JPEG*.
 - **Use current user credentials** - if set, credentials of user created this report configuration will be used to open dashboard UI during report generation.
@@ -135,9 +135,9 @@ Message will be routed via **Failure** chain in the following cases:
 
 In other cases Message will be routed via **Success** chain.
 
-<br/>
+<br>
 
-# Integration Downlink Node
+## Integration Downlink Node
 
 {% assign feature = "PE Action Nodes" %}{% include templates/pe-feature-banner.md %}
 
@@ -149,7 +149,7 @@ In other cases Message will be routed via **Success** chain.
    </thead>
 </table> 
 
-![image](/images/user-guide/rule-engine-2-0/pe/nodes/action-integration-downlink.png)
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/pe/nodes/action-integration-downlink.png)
 
 Forwards Message to selected [Integration](/docs/{{peDocsPrefix}}user-guide/integrations/) as downlink message.
 
@@ -157,39 +157,15 @@ Message will be pushed to the selected integration downlink queue.
 
 Configuration:
 
-![image](/images/user-guide/rule-engine-2-0/pe/nodes/action-integration-downlink-config.png)
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/pe/nodes/action-integration-downlink-config.png)
 
 - **Integration** - target Integration for downlink message processing.
 
 **Failure** chain is used if Message push to Integration will fail, otherwise **Success** chain.
 
-<br/>
+<br>
 
-# REST Call Reply Node
-
-{% assign feature = "PE Action Nodes" %}{% include templates/pe-feature-banner.md %}
-
-<table  style="width:250px;">
-   <thead>
-     <tr>
-	 <td style="text-align: center"><strong><em>Since TB Version 2.1</em></strong></td>
-     </tr>
-   </thead>
-</table> 
-
-![image](/images/user-guide/rule-engine-2-0/pe/nodes/action-rest-call-reply.png)
-
-Sends reply to REST API call that was originally sent to rule engine.
-
-Expects messages with any message type. Forwards incoming message as a reply to REST API call sent to rule engine.
-
-Configuration:
-
-![image](/images/user-guide/rule-engine-2-0/pe/nodes/action-rest-call-reply-config.png)
-
-<br/>
-
-# Change Owner Node
+## Change Owner Node
 
 {% assign feature = "PE Action Nodes" %}{% include templates/pe-feature-banner.md %}
 
@@ -201,17 +177,17 @@ Configuration:
    </thead>
 </table> 
 
-![image](/images/user-guide/rule-engine-2-0/pe/nodes/action-change-owner-node.png)
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/pe/nodes/action-change-owner-node.png)
 
 Changes Owner of the Originator entity to the selected Owner by type:
 
 - Tenant
 
-![image](/images/user-guide/rule-engine-2-0/pe/nodes/action-change-owner-node-tenent-config.png)
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/pe/nodes/action-change-owner-node-tenent-config.png)
 
 - Customer
 
-![image](/images/user-guide/rule-engine-2-0/pe/nodes/action-change-owner-node-customer-config.png)
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/pe/nodes/action-change-owner-node-customer-config.png)
 
 Rule node finds target Owner by owner name pattern and then change the owner of the originator entity.
 
@@ -221,4 +197,4 @@ Rule node finds target Owner by owner name pattern and then change the owner of 
 
 If an entity already belongs to this owner or entity owner is successfully changed - Message sent via **Success** chain, otherwise, **Failure** chain will be used.
 
-<br/>
+<br>

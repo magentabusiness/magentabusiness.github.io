@@ -15,7 +15,8 @@ toc:
     path: /docs/user-guide/tenant-profiles/
   - title: Device Profiles
     path: /docs/user-guide/device-profiles/
-    new: true
+  - title: Asset Profiles
+    path: /docs/user-guide/asset-profiles/
   - title: Attributes
     path: /docs/user-guide/attributes/
   - title: Time-series data
@@ -26,25 +27,47 @@ toc:
     path: /docs/user-guide/rpc/
   - title: OTA updates
     path: /docs/user-guide/ota-updates/
-    new: true
+  - title: Notification center
+    path: /docs/user-guide/notifications/
 - title: Dashboards
   section:
   - title: Overview
     path: /docs/user-guide/dashboards/
+  - title: Layouts
+    path: /docs/user-guide/ui/layouts/
   - title: Aliases
     path: /docs/user-guide/ui/aliases/
-  - title: Widget Actions
-    path: /docs/user-guide/ui/widget-actions/
-  - title: Widgets Library
-    path: /docs/user-guide/ui/widget-library/
+  - title: SCADA
+    new: true
+    section:
+      - title: Overview
+        path: /docs/user-guide/scada/
+      - title: SCADA symbols development guide
+        path: /docs/user-guide/scada/scada-symbols-dev-guide/
+  - title: Widgets
+    section:
+      - title: Overview
+        path: /docs/user-guide/widgets/
+      - title: Widget Actions
+        path: /docs/user-guide/ui/widget-actions/
+      - title: Widgets Library
+        path: /docs/user-guide/ui/widget-library/
+      - title: Chart widgets
+        path: /docs/user-guide/ui/chart-widget/
+      - title: Entities Table widget
+        path: /docs/user-guide/ui/entity-table-widget/
+      - title: Trip Animation widget
+        path: /docs/user-guide/ui/trip-animation-widget/
+      - title: Advanced data key configuration
+        path: /docs/user-guide/ui/advanced-data-key-configuration/
 - title: Rule engine
   section:
     - title: Getting Started
       path: /docs/user-guide/rule-engine-2-0/re-getting-started/
     - title: Overview
       path: /docs/user-guide/rule-engine-2-0/overview/
-    - title: Architecture
-      path: /docs/user-guide/rule-engine-2-0/architecture/
+    - title: Queues
+      path: /docs/user-guide/rule-engine-2-5/queues/
     - title: Nodes
       section:
         - title: Filter Nodes
@@ -68,19 +91,65 @@ toc:
           path: /docs/pe/user-guide/rule-engine-2-0/action-nodes/
         - title: Analytics Nodes
           path: /docs/pe/user-guide/rule-engine-2-0/analytics-nodes/
+    - title: Data processing & actions
+      section:
+        - title: Validate incoming telemetry
+          path: /docs/user-guide/rule-engine-2-0/tutorials/validate-incoming-telemetry/
+        - title: Telemetry delta calculation
+          path: /docs/user-guide/rule-engine-2-0/tutorials/telemetry-delta-validation/
+        - title: Data function based on telemetry from 2 devices
+          path: /docs/user-guide/rule-engine-2-0/tutorials/function-based-on-telemetry-from-two-devices/
+        - title: Transform incoming telemetry
+          path: /docs/user-guide/rule-engine-2-0/tutorials/transform-incoming-telemetry/
+        - title: Transform telemetry using previous record
+          path: /docs/user-guide/rule-engine-2-0/tutorials/transform-telemetry-using-previous-record/
+        - title: Create and Clear Alarms
+          path: /docs/user-guide/rule-engine-2-0/tutorials/create-clear-alarms/
+        - title: Working with Alarm details
+          path: /docs/user-guide/rule-engine-2-0/tutorials/create-clear-alarms-with-details/
+        - title: Send email on alarm
+          path: /docs/user-guide/rule-engine-2-0/tutorials/send-email/
+        - title: Send email to Customer
+          path: /docs/user-guide/rule-engine-2-0/tutorials/send-email-to-customer/
+        - title: Notifications and Alarms on your smartphone using Telegram Bot
+          path: /docs/user-guide/rule-engine-2-0/tutorials/integration-with-telegram-bot/
+        - title: Create Alarm when the Device is offline
+          path: /docs/user-guide/rule-engine-2-0/tutorials/create-inactivity-alarm/
+        - title: Check Relation between Entities
+          path: /docs/user-guide/rule-engine-2-0/tutorials/check-relation-tutorial/
+        - title: Send RPC Request to the Related Device
+          path: /docs/user-guide/rule-engine-2-0/tutorials/rpc-request-tutorial/
+        - title: Weather reading using REST API calls
+          path: /docs/user-guide/rule-engine-2-0/tutorials/get-weather-using-rest-api-call/
+        - title: Add & remove devices to group dynamically
+          path: /docs/user-guide/rule-engine-2-0/tutorials/add-devices-to-group/
+          pe: true
+        - title: Send data to external MQTT brokers
+          path: /docs/user-guide/integrations/send-data-external-mqtt-brokers/
+          pe: true
+        - title: Using queues for synchronization
+          path: /docs/user-guide/rule-engine-2-5/tutorials/queues-for-synchronization/
+        - title: Using queues for message reprocessing
+          path: /docs/user-guide/rule-engine-2-5/tutorials/queues-for-message-reprocessing/
     - title: Custom Rule Nodes
       path: /docs/user-guide/contribution/rule-node-development/
-- title: White-labeling
+    - title: Templatization
+      path: /docs/user-guide/templatization/
+      new: true
+- title: White labeling
   pe: true
   section:
     - title: Overview
       path: /docs/pe/user-guide/white-labeling/
     # - title: Self-registration
     #   path: /docs/pe/user-guide/self-registration/
-    - title: Custom Translations
+    - title: Mail templates
+      path: /docs/pe/user-guide/mail-templates/
+    - title: Custom translation
       path: /docs/pe/user-guide/custom-translation/
-    - title: Custom Menu
+    - title: Custom menu
       path: /docs/pe/user-guide/custom-menu/
+      new: true
 - title: Integrations
   pe: true
   section:
@@ -94,14 +163,18 @@ toc:
     path: /docs/user-guide/integrations/mqtt/
   - title: CoAP
     path: /docs/user-guide/integrations/coap/
+  - title: Kafka
+    path: /docs/user-guide/integrations/kafka/
   - title: OPC-UA
     path: /docs/user-guide/integrations/opc-ua/
   - title: Actility ThingPark
     path: /docs/user-guide/integrations/thingpark/
-  - title: TheThingsNetwork
+  - title: TheThingsStack
     path: /docs/user-guide/integrations/ttn/
   - title: TheThingsIndustries
     path: /docs/user-guide/integrations/tti/
+  - title: KPN Things
+    path: /docs/user-guide/integrations/kpn-things/
   - title: LORIOT
     path: /docs/user-guide/integrations/loriot/
   - title: ChirpStack
@@ -114,6 +187,8 @@ toc:
     path: /docs/user-guide/integrations/ibm-watson-iot/
   - title: Azure Event Hub
     path: /docs/user-guide/integrations/azure-event-hub/
+  - title: Azure Service Bus
+    path: /docs/user-guide/integrations/azure-service-bus/
   - title: Azure IoT Hub
     path: /docs/user-guide/integrations/azure-iot-hub/
   - title: TCP
@@ -124,6 +199,11 @@ toc:
     path: /docs/user-guide/integrations/sigfox/
   - title: Ocean Connect
     path: /docs/user-guide/integrations/ocean-connect/
+  - title: Tuya
+    path: /docs/user-guide/integrations/tuya/
+  - title: Particle
+    path: /docs/user-guide/integrations/particle/
+    new: true
   - title: Custom Integration development guide
     path: /docs/user-guide/integrations/custom/
   - title: Notifications and Alarms on your smartphone using Telegram Bot
@@ -132,23 +212,39 @@ toc:
   section:
   - title: Kafka Streams
     path: /docs/samples/analytics/kafka-streams/
+- title: Mobile center
+  new: true
+  section:
+    - title: Overview
+      path: /docs/mobile-center/mobile-center/
+    - title: Applications
+      path: /docs/mobile-center/applications/
+    - title: Mobile application QR code
+      path: /docs/user-guide/ui/mobile-qr-code/
 - title: Other Features
   section:
+    - title: Edge Computing
+      path: /docs/user-guide/edge-computing/
     - title: Device Connectivity Status
       path: /docs/user-guide/device-connectivity-status/
     - title: Claiming Devices
       path: /docs/user-guide/claiming-devices/
     - title: Device provisioning
       path: /docs/user-guide/device-provisioning/
+    - title: Image gallery
+      path: /docs/user-guide/image-gallery/
       new: true
     - title: Entity Views
       path: /docs/user-guide/entity-views/
     - title: API Limits
       path: /docs/user-guide/api-limits/
+    - title: Advanced filters
+      path: /docs/user-guide/advanced-filters/
+    - title: Version control
+      path: /docs/user-guide/version-control/
     - title: PSM and eDRX Support
       path: /docs/user-guide/psm/
     - title: Bulk Provisioning
-      new: true
       path: /docs/user-guide/bulk-provisioning/
     - title: Entity Groups
       path: /docs/pe/user-guide/groups/
@@ -165,16 +261,26 @@ toc:
     - title: File Storage
       path: /docs/pe/user-guide/file-storage/
       pe: true
+    - title: ThingsBoard Expression Language (TBEL)
+      path: /docs/user-guide/tbel/
+      new: true
 - title: Security
   section:
+    - title: Security settings
+      path: /docs/user-guide/ui/security-settings/
     - title: Enable HTTPS
       path: /docs/user-guide/ssl/http-over-ssl/
     - title: Audit Log
       path: /docs/user-guide/audit-log/
     - title: Advanced RBAC for IoT
       path: /docs/pe/user-guide/rbac/
-    - title: OAuth 2 Support
+      pe: true
+    - title: Two-factor authentication
+      path: /docs/user-guide/two-factor-authentication/
+    - title: OAuth 2.0
       path: /docs/user-guide/oauth-2-support/
+    - title: Domains
+      path: /docs/domains/
     - title: HTTP Transport
       section:
         - title: HTTP over SSL
@@ -219,24 +325,21 @@ toc:
     path: /docs/user-guide/ui/devices/
   - title: Rule Chains
     path: /docs/user-guide/ui/rule-chains/
-  - title: Widgets
-    section:
-    - title: Chart widgets
-      path: /docs/user-guide/ui/chart-widget/
-      new: true
-    - title: Entity Table widget
-      path: /docs/user-guide/ui/entity-table-widget/
-      new: true
-    - title: Trip Animation widget
-      path: /docs/user-guide/ui/trip-animation-widget/
-    - title: Advanced data key configuration
-      path: /docs/user-guide/ui/advanced-data-key-configuration/
   - title: Dashboards
     path: /docs/user-guide/ui/dashboards/
+  - title: Entity Groups
+    path: /docs/pe/user-guide/groups/
+    pe: true
   - title: SMS Provider Settings
     path: /docs/user-guide/ui/sms-provider-settings/
+  - title: Slack Settings
+    path: /docs/user-guide/ui/slack-settings/
+  - title: Microsoft Teams Settings
+    path: /docs/user-guide/ui/microsoft-teams-settings/
   - title: Mail Settings
     path: /docs/user-guide/ui/mail-settings/
+  - title: JWT Security Settings
+    path: /docs/user-guide/ui/jwt-security-settings/
 - title: Contribution Guide
   section:
     - title: How to contribute

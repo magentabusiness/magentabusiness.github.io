@@ -1,4 +1,3 @@
-
 # for IoT Hub
 
 # Publish client-side attributes update

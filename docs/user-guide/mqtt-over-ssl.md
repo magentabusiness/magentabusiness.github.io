@@ -7,4 +7,5 @@ description: Launching IoT Hub with secure MQTT protocol to connect your IoT dev
 
 ---
 
+{% include get-hosts-name.html %}
 {% include docs/user-guide/ssl/mqtt-over-ssl.md %}

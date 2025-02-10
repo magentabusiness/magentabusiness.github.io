@@ -9,9 +9,8 @@ The alternative option is to install IoT Hub using [Installation Guide](/docs/us
 ```
 mkdir -p ~/.mytb-data && sudo chown -R 799:799 ~/.mytb-data
 mkdir -p ~/.mytb-logs && sudo chown -R 799:799 ~/.mytb-logs
-docker run -it -p 9090:9090 -p 7070:7070 -p 1883:1883 -p 5683-5688:5683-5688/udp -v ~/.mytb-data:/data \
+docker run -it -p 8080:9090 -p 7070:7070 -p 1883:1883 -p 5683-5688:5683-5688/udp -v ~/.mytb-data:/data \
 -v ~/.mytb-logs:/var/log/thingsboard --name mytb --restart always thingsboard/tb-postgres
-
 ``` 
 {: .copy-code}
 

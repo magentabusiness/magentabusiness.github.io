@@ -1,12 +1,13 @@
-## PR Checklist
+## PR description
 
-- [ ] No broken links found using link-checker.
+The documentation updated for ...
 
-## Linkchecker
+## Link checker
 
-Use the following command to check the broken links. Don't forget to substitute YOUR_IP with the internal IP address of your machine. 
+The links will be checked by the build agent automatically once you create or update your PR.
+
+You can use the following command to check the broken links locally.
 
 ```bash
-docker run linkchecker/linkchecker http://YOUR_IP:4000/
+docker run --rm -it --network=host --name=linkchecker ghcr.io/linkchecker/linkchecker --check-extern --no-warnings http://0.0.0.0:4000/
 ```
-

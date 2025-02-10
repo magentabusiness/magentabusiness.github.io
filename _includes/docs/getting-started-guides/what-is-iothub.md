@@ -18,11 +18,14 @@ With IoT Hub, you are able to:
  
 See [**IoT Hub features list**](/docs/{{docsPrefix}}#features) for more features and useful links to the specific feature documentation. 
 
-{% if docsPrefix == null %}
-<object width="100%" data="/images/reference/thingsboard-architecture.svg"></object>
-{% endif %}
-{% if (docsPrefix == "pe/") or (docsPrefix == "paas/") %}
-<object width="100%" data="/images/reference/thingsboard-architecture-pe.svg"></object>
+{% if docsPrefix == 'pe/' %}
+<object width="100%" data="https://img.thingsboard.io/reference/thingsboard-architecture-pe.svg"></object>
+{% elsif docsPrefix == 'paas/' %}
+<object width="100%" data="https://img.thingsboard.io/reference/thingsboard-architecture-paas.svg"></object>
+{% elsif docsPrefix == 'paas/eu/' %}
+<object width="100%" data="https://img.thingsboard.io/reference/thingsboard-architecture-paas-eu.svg"></object>
+{% else %}
+<object width="100%" data="https://img.thingsboard.io/reference/thingsboard-architecture.svg"></object>
 {% endif %}
 
 <!-- <object width="80%" data="/images/reference/thingsboard-architecture.svg"></object> -->
@@ -38,7 +41,7 @@ IoT Hub cluster can handle millions of devices.
 * **customizable**: adding new functionality is easy with customizable widgets and rule engine nodes.
 * **durable**: never lose your data. -->
 
-{% if docsPrefix != "paas/" %}
+{% unless docsPrefix contains "paas/" %}
 
 <!-- See [**IoT Hub Architecture**](/docs/{{docsPrefix}}reference) for more details. -->
 

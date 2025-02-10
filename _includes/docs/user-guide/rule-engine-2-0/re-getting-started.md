@@ -25,7 +25,7 @@ in related Asset.
 - Integrate with external pipelines like Kafka, Spark, AWS services, etc.
 
 ## Hello-World Example
-Let’s assume your device is using DHT22 sensor to collect and push temperature to the IoT Hub. 
+Let’s assume your device is using DHT22 sensor to collect and push temperature to the IoT Hub.
 DHT22 sensor can measure temperature from -40°C to +80°C.
 
 In this tutorial we will configure IoT Hub Rule Engine to store all temperature within -40 to 80°C range and log all other readings to the system log.
@@ -33,16 +33,22 @@ In this tutorial we will configure IoT Hub Rule Engine to store all temperature 
 #### Adding temperature validation node 
 In IoT Hub UI go to **Rule Chains** section and open **Root Rule Chain**.
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/initial-root-chain-magenta.png)
+{% if docsPrefix == null %}
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/getting-started/initial-root-chain-ce.png)
+{% endif %}
+{% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/getting-started/initial-root-chain-pe.png)
+{% endif %}
 
-Drag and Drop **Script Filter** rule node to the chain. Node configuration window will be opened. We will use this script for data validation:
+Drag and Drop **Script Filter** rule node to the chain. Node configuration window will be opened. 
 
-{% highlight javascript %}
-return typeof msg.temperature === 'undefined' 
-        || (msg.temperature >= -40 && msg.temperature <= 80);
-{% endhighlight %}
+{% include templates/tbel-vs-js.md %}
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/script-config-magenta.png)
+{% capture scriptfunctionfilterconfig %}
+TBEL<small>Recommended</small>%,%accessToken%,%templates/rule-engine/getting-started/script-function-filter-tbel.md%br%
+JavaScript<small></small>%,%anonymous%,%templates/rule-engine/getting-started/script-function-filter-java.md{% endcapture %}
+
+{% include content-toggle.liquid content-toggle-id="scriptfunctionfilterconfig" toggle-spec=scriptfunctionfilterconfig %}
 
 If temperature property not defined or temperature is valid - script will return **True**, otherwise it will return **False**.
 If script returns **True** incoming message will be routed to the next nodes that are connected with **True** relation.
@@ -50,21 +56,47 @@ If script returns **True** incoming message will be routed to the next nodes tha
 Now we want that all **telemetry requests** pass through this validation script. We need to remove the existing **Post Telemetry** 
 relation between **Message Type Switch** node and **Save Telemetry** node:
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/remove-relation.png)
-  
-And connect **Message Type Switch** node with **Script Filter** node using **Post Telemetry** relation:
-   
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/realtion-window-magenta.png)
+{% if docsPrefix == null %}
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/getting-started/remove-relation-ce.png)
+{% endif %}
+{% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/getting-started/remove-relation-pe.png)
+{% endif %}
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/connect-script.png)
+And connect **Message Type Switch** node with **Script Filter** node using **Post Telemetry** relation:
+
+{% if docsPrefix == null %}
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/getting-started/realtion-window-ce.png)
+{% endif %}
+{% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/getting-started/realtion-window-pe.png)
+{% endif %}
+
+{% if docsPrefix == null %}
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/getting-started/connect-script-ce.png)
+{% endif %}
+{% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/getting-started/connect-script-pe.png)
+{% endif %}
+
 
 Next, we need to connect **Script Filter** node with **Save Telemetry** node using **True** relation. So all valid telemetry will be saved:
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/script-to-save.png)
+{% if docsPrefix == null %}
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/getting-started/script-to-save-ce.png)
+{% endif %}
+{% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/getting-started/script-to-save-pe.png)
+{% endif %}
 
 Also, we will connect **Script Filter** node with **Log Other** node using **False** relation. So that all not valid telemetry will be logged in the system log:
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/false-log.png)
+{% if docsPrefix == null %}
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/getting-started/false-log-ce.png)
+{% endif %}
+{% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/getting-started/false-log-pe.png)
+{% endif %}
 
 **Press Save button to apply changes.**
 
@@ -72,39 +104,116 @@ Also, we will connect **Script Filter** node with **Log Other** node using **Fal
 For validating results we will need to create Device and submit telemetry to the IoT Hub. 
 So go to **Devices** section and create new Device:
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/create-device-magenta.png)
+{% if docsPrefix == null %}
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/getting-started/create-device-ce.png)
+{% endif %}
+{% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/getting-started/create-device-pe.png)
+{% endif %}
 
 For posting device telemetry we will use [Rest API](/docs/{{docsPrefix}}reference/http-api/#telemetry-upload-api). To do this this we will need to
-copy device access token from the device **Thermostat Home**. 
+copy device access token from the device **DHT22**. 
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/copy-access-token-magenta.png)
+{% if docsPrefix == null %}
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/getting-started/copy-access-token-ce.png)
+{% endif %}
+{% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/getting-started/copy-access-token-pe.png)
+{% endif %}
 
-Lets post temperature = 99. We will see that telemetry **was not** added in Device **Latest Telemetry** section:
+<br>
+Use terminal for will send a message with temperature readings  = 99. Replace **$ACCESS_TOKEN** with actual device token.
 
-{% highlight bash %}
+{% if docsPrefix == null %}
+```bash
 curl -v -X POST -d '{"temperature":99}' https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
-{% endhighlight %}
+```
+{: .copy-code}
 
-***you need to replace $ACCESS_TOKEN with actual device token**
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/getting-started/terminal-demo-2.png)
+{% endif %}
+{% if docsPrefix == "pe/" %}
+```bash
+curl -v -X POST -d '{"temperature":99}' http://localhost:8080/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
+```
+{: .copy-code}
 
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/getting-started/terminal-localhost-2.png)
+{% endif %}
+{% if docsPrefix contains "paas/" %}
+```bash
+curl -v -X POST -d '{"temperature":99}' {{httpsUrl}}/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
+```
+{: .copy-code}
+
+<<<<<<< HEAD
 ![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/empty-telemetry-magenta.png)
+=======
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/getting-started/terminal-cloud-2.png)
+{% endif %}
+>>>>>>> ad368c0ed5d3799cf901e3e0c5e84bf8564eb1c6
 
+We will see that telemetry **was not** added in Device **Latest Telemetry** section:
 
-Lets post temperature = 24. We will see that telemetry was saved successfully.
+{% if docsPrefix == null %}
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/getting-started/empty-telemetry-ce.png)
+{% endif %}
+{% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/getting-started/empty-telemetry-pe.png)
+{% endif %}
 
+<<<<<<< HEAD
 {% highlight bash %}
 curl -v -X POST -d '{"temperature":24}' https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
 {% endhighlight %}
 
 ![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/saved-ok-magenta.png)
+=======
+<br>
+
+Now send a message with temperature readings = 24.
+
+{% if docsPrefix == null %}
+```bash
+curl -v -X POST -d '{"temperature":24}' https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
+```
+{: .copy-code}
+
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/getting-started/terminal-demo-1.png)
+{% endif %}
+{% if docsPrefix == "pe/" %}
+```bash
+curl -v -X POST -d '{"temperature":24}' http://localhost:8080/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
+```
+{: .copy-code}
+
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/getting-started/terminal-localhost-1.png)
+{% endif %}
+{% if docsPrefix contains "paas/" %}
+```bash
+curl -v -X POST -d '{"temperature":24}' {{httpsUrl}}/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
+```
+{: .copy-code}
+
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/getting-started/terminal-cloud-1.png)
+{% endif %}
+
+We will see that telemetry was saved successfully.
+
+{% if docsPrefix == null %}
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/getting-started/saved-ok-ce.png)
+{% endif %}
+{% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/getting-started/saved-ok-pe.png)
+{% endif %}
+>>>>>>> ad368c0ed5d3799cf901e3e0c5e84bf8564eb1c6
 
 
-## See Also:
+## See Also
 
 You can use the next links for learning more about IoT Hub Rule Engine:
 
 - [Rule Engine Overview](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/)
-- [Rule Engine Architecture](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/architecture/)
 - [Debug Node Execution](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#debugging)
 - [Validate incoming telemetry](/docs/user-guide/rule-engine-2-0/tutorials/validate-incoming-telemetry/)
 - [Transform incoming telemetry](/docs/user-guide/rule-engine-2-0/tutorials/transform-incoming-telemetry/)
@@ -117,8 +226,8 @@ You can use the next links for learning more about IoT Hub Rule Engine:
 - [Add & remove devices to group dynamically](/docs/user-guide/rule-engine-2-0/tutorials/add-devices-to-group/)
 - [Aggregate incoming data stream](/docs/user-guide/rule-engine-2-0/tutorials/aggregate-incoming-data-stream/)
 
-<br/>
-<br/>
+<br>
+<br>
 
 ## Next steps
 

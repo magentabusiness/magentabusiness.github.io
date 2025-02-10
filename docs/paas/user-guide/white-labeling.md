@@ -1,33 +1,54 @@
 ---
 layout: docwithnav-paas
-title: White-labeling
+title: White labeling
 description:
+
+white-labeling-default:
+    0:
+        image: https://img.thingsboard.io/user-guide/white-labeling/white-labeling-default.png
+        title: 'To configure your company or product logo and color scheme, go to the "White labeling" page.'
+
+white-labeling-custom:
+    0:
+        image: https://img.thingsboard.io/user-guide/white-labeling/white-labeling-custom.png
+        title: 'The final look of the customized user interface.'
+
+advanced-css-1:
+    0:
+        image: https://img.thingsboard.io/user-guide/white-labeling/white-labeling-advanced-css-1.png
+        title: 'Click on the "Advanced CSS" button;'
+    1:
+        image: https://img.thingsboard.io/user-guide/white-labeling/white-labeling-advanced-css-2.png
+        title: 'Paste the CSS code with the style for the user interface into the "Advanced CSS" pop-up window and click "Save". Then save all changes;'
+    2:
+        image: https://img.thingsboard.io/user-guide/white-labeling/white-labeling-advanced-css-3.png
+        title: 'As you can see icons color changed to purple.'
+
+advanced-css-2:
+    0:
+        image: https://img.thingsboard.io/user-guide/white-labeling/white-labeling-advanced-css-4.png
+        title: 'Paste the CSS-code into the "Advanced CSS" window. Do not delete the previously added CSS code to keep the previous color scheme. Save all changes;'
+    1:
+        image: https://img.thingsboard.io/user-guide/white-labeling/white-labeling-advanced-css-5.png
+        title: 'Added a gradient to the left menu color scheme.'
+
+customize-login-page:
+    0:
+        image: https://img.thingsboard.io/user-guide/white-labeling/login-tab-1-paas.png
+        title: 'Enter the registered domain name. It is recommended to prevent usage of hostnames from headers of the request. Enter a custom application title, replace the default website icon and logo with your own;'
+    1:
+        image: https://img.thingsboard.io/user-guide/white-labeling/login-tab-2-paas.png
+        title: 'Define the primary and accent color palettes, and set the page background color. Once done, save the changes.'
+
+verify-result-customize-login-page:
+    0:
+        image: https://img.thingsboard.io/user-guide/white-labeling/login-tab-3.png
+        title: 'Now, use your custom domain name to access the ThingsBoard web interface login page and verify the result of your configuration.'
+
 ---
 
 {% assign docsPrefix = "paas/" %}
+{% include get-hosts-name.html docsPrefix=docsPrefix %}
+{% include docs/pe/user-guide/white-labeling.md %}
 
-IoT Hub web interface allows you to configure your company or product logo and color scheme in 2 minutes with zero coding efforts and no service restart required.
-The following configuration options are available:
-
-- Configure color scheme, icon and favicon on System Administrator level;
-- Tenant and Customer Administrator UI inherits configuration changes by default;
-- Tenant and Customer Administrators are able to set up their own white-labeling configuration;
-- System and Tenant Administrator are able to set up custom email templates to interact with the users;
-- Allow Tenant administrator to enable/disable white-labeling for each customer;
-- Allow Tenant administrator to configure custom translation of system components and end-user dashboard elements.
-
-[Contact us](https://www.magenta.at/business/iot/kontakt) to suggest missing feature for your use case.
-
-See video tutorial below for step-by-step instruction how to use this feature.
-
-<br/>
-<div id="video">  
-    <div id="video_wrapper">
-        <iframe src="https://www.youtube.com/embed/VSNZWl1NjWU" frameborder="0" allowfullscreen></iframe>
-    </div>
-</div> 
-
-## Next steps
-
-{% assign currentGuide = "AdvancedFeatures" %}{% include templates/multi-project-guides-banner.md %}
-
+[faq.md](..%2Ffaq.md)

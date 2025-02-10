@@ -1,5 +1,5 @@
 {% assign peDocsPrefix = '' %}
-{% if docsPrefix == 'paas/' %}
+{% if docsPrefix contains 'paas/' %}
 {% assign peDocsPrefix = docsPrefix %}
 {% endif %}
 
@@ -8,46 +8,60 @@
 * TOC
 {:toc}
 
-## Introduction
+Remote Integrations allow reliable data streaming from multiple devices in the local area network (LAN) to the IoT Hub platform in the cloud. 
+They are helpful if you have, for example, a local MQTT broker or OPC-UA server with no external IP address and is not reachable from where your IoT Hub platform is installed. 
+The remote integration initiates a connection to these servers, pulls the data, stores it locally, and then streams it to the IoT Hub instance.
 
-It is possible to execute any IoT Hub Integration remotely from main IoT Hub instance.
-This guide contains step-by-step instructions how to launch IoT Hub integration remotely.
-For example, we will launch MQTT integration that connects to the local MQTT Broker and pushes data to 
-[iothub.magenta.at](https://iothub.magenta.at/signup).  
+Although this approach requires some additional steps in the deployment process, it allows integration with servers and devices deployed in the LAN. A separate integration process improves isolation level and performance.
 
-See [deployment options](/docs/{{peDocsPrefix}}user-guide/integrations/#deployment-options) for more general information.
+The remote integration approach enables tenants to launch plain [TCP](/docs/user-guide/integrations/tcp/) and [UDP](/docs/user-guide/integrations/udp/) integrations. Those two integrations are unique because they start a server that binds to a specific port. 
+Since IoT Hub is a multi-tenant environment, we can't launch TCP and UDP integrations as part of the core service due to possible port collisions between tenants. 
+That is why we propose each tenant to launch a TCP/UDP integration as a remote one. The same applies to any custom integration that the tenant creates.
 
-## Prerequisites
+![image](https://img.thingsboard.io/user-guide/integrations/remote/remote-integrations-overview.png)
 
-We assume you already have a tenant administrator account on your own IoT Hub v3.3.1+ instance or
-[iothub.magenta.at](https://iothub.magenta.at/signup).
+It is possible to execute any IoT Hub Integration separately from the IoT Hub instance.
 
-## IoT Hub configuration steps
+This guide contains step-by-step instructions on how to launch MQTT remote integration that connects to the local MQTT Broker and pushes data to https://iothub.magenta.at.
 
-### Step 1. Create default Uplink and Downlink Converters
+You can find additional information about the IoT Hub Platform integrations feature [here](/docs/{{peDocsPrefix}}user-guide/integrations/).
 
-Let's create dummy uplink and downlink converters and will set them to work in debug mode.
-While running in debug mode, those converters will record all incoming events. 
-This will help us to tune the converters once we start receiving the data.
+## IoT Hub configuration
 
-![image](/images/user-guide/integrations/remote/default-converters.gif)  
+We assume you already have a tenant administrator account on your own [IoT Hub](https://iothub.magenta.at).
 
-### Step 2. Create Remote Integration 
+### Create remote integration in IoT Hub
 
-Let's create remote integration that will connect to the local broker using port 1883 and subscribe to all topics. 
-Notice that we enable "Debug" and "Execute remotely".   
+Let's create remote integration in IoT Hub that will connect to the local broker using port 1883 and subscribe to all topics.
 
-![image](/images/user-guide/integrations/remote/mqtt-integration.gif)
+- Go to the "**Integrations center**" section -> "**Integrations**" page and click "plus" icon to add a new integration. Name it "**MQTT remote integration**", select type "**MQTT**";
 
-### Step 3. Save Remote Integration credentials.
+![image](https://img.thingsboard.io/user-guide/integrations/remote/remote-integration-1-paas.png)
 
-Let's copy-paste the integration key and secret from the integration details.
+- The next step is to add a default uplink converter. The new converter will contain necessary code to convert incoming data. Click "**Next**";
 
-![image](/images/user-guide/integrations/remote/copy-integration-credentials.gif)
+![image](https://img.thingsboard.io/user-guide/integrations/remote/remote-integration-2-paas.png)
 
-## Remote integration installation steps
+- You can create a new downlink converter at the step of adding a downlink converter. But for now, leave the "Downlink data converter" field empty. Click "**Skip**";
 
-### Choose your platform and install
+![image](https://img.thingsboard.io/user-guide/integrations/remote/remote-integration-3-paas.png)
+
+- Specify **host**: "**{{hostName}}**" and **port**: "**1883**" at the connection step;
+- Subscribe to all **topics**;
+- You can also select an MQTT **QoS** level. We use MQTT QoS level 0 (At most once) by default;
+- Copy and save the "**Integration key**" and "**Integration secret**". We will use this values later;
+
+![image](https://img.thingsboard.io/user-guide/integrations/remote/remote-integration-4-paas.png)
+
+- Go to the **advanced settings**. It is better to uncheck the "**Clean session**" parameter. Many brokers do not support sticky sessions, so will silently close the connection if you try to connect with this option enabled;
+- Click the "**Add**" button to create the integration.
+
+![image](https://img.thingsboard.io/user-guide/integrations/remote/remote-integration-5-paas.png)
+
+<br>
+Now let's proceed to the steps for installation remote integration.
+
+## Choose your platform and install
 
 One can install IoT Hub Integration via Docker, Debian or RPM packages.
 Please use one of the next steps.
@@ -63,68 +77,45 @@ Please use one of the next steps.
 
 - **Choose Integration to install**
 
-
 {% capture contenttogglespec %}
-HTTP Integrations<br/><small>(HTTP, Sigfox, ThingPark, OceanConnect and <br/> T-Mobile IoT CDP)</small>%,%http%,%templates/install/integration/http-docker.md%br%
-MQTT Integrations<br/><small>(MQTT, AWS IoT, IBM Watson, The Things Network)</small>%,%mqtt%,%templates/install/integration/mqtt-docker.md%br%
-AWS SQS<br/> Integration<br/>%,%aws%,%templates/install/integration/aws-docker.md%br%
-Azure Event Hub<br/>Integration<br/>%,%azure%,%templates/install/integration/azure-docker.md%br%
-OPC UA<br/> Integration<br/>%,%opcua%,%templates/install/integration/opcua-docker.md%br%
-TCP/UDP<br/> Integration<br/>%,%tcpudp%,%templates/install/integration/tcpudp-docker.md%br%
-CoAP<br/> Integration<br/>%,%coap%,%templates/install/integration/coap-docker.md{% endcapture %}
+HTTP Integrations<br><small>(HTTP, Sigfox, ThingPark, OceanConnect and <br> T-Mobile IoT CDP)</small>%,%http%,%templates/install/integration/http-docker.md%br%
+MQTT Integrations<br><small>(MQTT, AWS IoT, IBM Watson, The Things Network)</small>%,%mqtt%,%templates/install/integration/mqtt-docker.md%br%
+AWS SQS<br> Integration<br>%,%aws%,%templates/install/integration/aws-docker.md%br%
+Azure Event Hub<br>Integration<br>%,%azure%,%templates/install/integration/azure-docker.md%br%
+OPC UA<br> Integration<br>%,%opcua%,%templates/install/integration/opcua-docker.md%br%
+TCP/UDP<br> Integration<br>%,%tcpudp%,%templates/install/integration/tcpudp-docker.md%br%
+CoAP<br> Integration<br>%,%coap%,%templates/install/integration/coap-docker.md{% endcapture %}
 
-{% include content-toggle.html content-toggle-id="remoteintegrationdockerinstall" toggle-spec=contenttogglespec %}
-
+{% include content-toggle.liquid content-toggle-id="remoteintegrationdockerinstall" toggle-spec=contenttogglespec %}
 
 {% include templates/install/integration/advanced-config-docker.md %} 
 
-
 - **Troubleshooting**
 
-
-**Note** If you observe errors related to DNS issues, for example
-
-```bash
-127.0.1.1:53: cannot unmarshal DNS message
-```
-{: .copy-code}
-
-You may configure your system to use Google public DNS servers. 
-See corresponding [Linux](https://developers.google.com/speed/public-dns/docs/using#linux) and [Mac OS](https://developers.google.com/speed/public-dns/docs/using#mac_os) instructions.
+{% include templates/troubleshooting/dns-issues.md %}
 
 ### Docker on Windows
 
-- **[Install Docker Toolbox for Windows](https://docs.docker.com/toolbox/toolbox_install_windows/)**
+- **[Install Docker Toolbox for Windows](https://docker-docs.uclv.cu/toolbox/toolbox_install_windows/)**
 
 - **Choose Integration to install**
 
-
 {% capture contenttogglespecwin %}
-HTTP Integrations<br/><small>(HTTP, Sigfox, ThingPark, OceanConnect and <br/> T-Mobile IoT CDP)</small>%,%http%,%templates/install/integration/http-docker-windows.md%br%
-MQTT Integrations<br/><small>(MQTT, AWS IoT, IBM Watson, The Things Network)</small>%,%mqtt%,%templates/install/integration/mqtt-docker-windows.md%br%
-AWS SQS<br/> Integration<br/>%,%aws%,%templates/install/integration/aws-docker-windows.md%br%
-Azure Event Hub<br/>Integration<br/>%,%azure%,%templates/install/integration/azure-docker-windows.md%br%
-OPC UA<br/> Integration<br/>%,%opcua%,%templates/install/integration/opcua-docker-windows.md%br%
-TCP/UDP<br/> Integration<br/>%,%tcpudp%,%templates/install/integration/tcpudp-docker-windows.md%br%
-CoAP<br/> Integration<br/>%,%coap%,%templates/install/integration/coap-docker-windows.md{% endcapture %}
+HTTP Integrations<br><small>(HTTP, Sigfox, ThingPark, OceanConnect and <br> T-Mobile IoT CDP)</small>%,%http%,%templates/install/integration/http-docker-windows.md%br%
+MQTT Integrations<br><small>(MQTT, AWS IoT, IBM Watson, The Things Network)</small>%,%mqtt%,%templates/install/integration/mqtt-docker-windows.md%br%
+AWS SQS<br> Integration<br>%,%aws%,%templates/install/integration/aws-docker-windows.md%br%
+Azure Event Hub<br>Integration<br>%,%azure%,%templates/install/integration/azure-docker-windows.md%br%
+OPC UA<br> Integration<br>%,%opcua%,%templates/install/integration/opcua-docker-windows.md%br%
+TCP/UDP<br> Integration<br>%,%tcpudp%,%templates/install/integration/tcpudp-docker-windows.md%br%
+CoAP<br> Integration<br>%,%coap%,%templates/install/integration/coap-docker-windows.md{% endcapture %}
 
-{% include content-toggle.html content-toggle-id="remoteintegrationdockerinstallwin" toggle-spec=contenttogglespecwin %}
-
+{% include content-toggle.liquid content-toggle-id="remoteintegrationdockerinstallwin" toggle-spec=contenttogglespecwin %}
 
 {% include templates/install/integration/advanced-config-docker.md %} 
 
-
 - **Troubleshooting**
 
-
-**Note** If you observe errors related to DNS issues, for example
-
-```bash
-127.0.1.1:53: cannot unmarshal DNS message
-```
-
-You may configure your system to use [Google public DNS servers](https://developers.google.com/speed/public-dns/docs/using#windows)
-
+{% include templates/troubleshooting/dns-issues-windows.md %}
 
 ### Ubuntu Server
 
@@ -135,15 +126,15 @@ You may configure your system to use [Google public DNS servers](https://develop
  - **Choose Integration package to install**
  
 {% capture ubuntuinstallspec %}
-HTTP Integrations<br/><small>(HTTP, Sigfox, ThingPark, OceanConnect and <br/> T-Mobile IoT CDP)</small>%,%http%,%templates/install/integration/http-ubuntu.md%br%
-MQTT Integrations<br/><small>(MQTT, AWS IoT, IBM Watson, The Things Network)</small>%,%mqtt%,%templates/install/integration/mqtt-ubuntu.md%br%
-AWS SQS<br/> Integration<br/>%,%aws%,%templates/install/integration/aws-ubuntu.md%br%
-Azure Event Hub<br/>Integration<br/>%,%azure%,%templates/install/integration/azure-ubuntu.md%br%
-OPC UA<br/> Integration<br/>%,%opcua%,%templates/install/integration/opcua-ubuntu.md%br%
-TCP/UDP<br/> Integration<br/>%,%tcpudp%,%templates/install/integration/tcpudp-ubuntu.md%br%
-CoAP<br/> Integration<br/>%,%coap%,%templates/install/integration/coap-ubuntu.md{% endcapture %}
+HTTP Integrations<br><small>(HTTP, Sigfox, ThingPark, OceanConnect and <br> T-Mobile IoT CDP)</small>%,%http%,%templates/install/integration/http-ubuntu.md%br%
+MQTT Integrations<br><small>(MQTT, AWS IoT, IBM Watson, The Things Network)</small>%,%mqtt%,%templates/install/integration/mqtt-ubuntu.md%br%
+AWS SQS<br> Integration<br>%,%aws%,%templates/install/integration/aws-ubuntu.md%br%
+Azure Event Hub<br>Integration<br>%,%azure%,%templates/install/integration/azure-ubuntu.md%br%
+OPC UA<br> Integration<br>%,%opcua%,%templates/install/integration/opcua-ubuntu.md%br%
+TCP/UDP<br> Integration<br>%,%tcpudp%,%templates/install/integration/tcpudp-ubuntu.md%br%
+CoAP<br> Integration<br>%,%coap%,%templates/install/integration/coap-ubuntu.md{% endcapture %}
 
-{% include content-toggle.html content-toggle-id="remoteintegrationinstallubuntu" toggle-spec=ubuntuinstallspec %} 
+{% include content-toggle.liquid content-toggle-id="remoteintegrationinstallubuntu" toggle-spec=ubuntuinstallspec %} 
 
 ### CentOS/RHEL Server
 
@@ -154,14 +145,15 @@ CoAP<br/> Integration<br/>%,%coap%,%templates/install/integration/coap-ubuntu.md
  - **Choose Integration package to install**
  
 {% capture rhelinstallspec %}
-HTTP Integrations<br/><small>(HTTP, Sigfox, ThingPark, OceanConnect and <br/> T-Mobile IoT CDP)</small>%,%http%,%templates/install/integration/http-rhel.md%br%
-MQTT Integrations<br/><small>(MQTT, AWS IoT, IBM Watson, The Things Network)</small>%,%mqtt%,%templates/install/integration/mqtt-rhel.md%br%
-AWS SQS<br/> Integration<br/>%,%aws%,%templates/install/integration/aws-rhel.md%br%
-Azure Event Hub<br/>Integration<br/>%,%azure%,%templates/install/integration/azure-rhel.md%br%
-OPC UA<br/> Integration<br/>%,%opcua%,%templates/install/integration/opcua-rhel.md%br%
-TCP/UDP<br/> Integration<br/>%,%tcpudp%,%templates/install/integration/tcpudp-rhel.md{% endcapture %}
+HTTP Integrations<br><small>(HTTP, Sigfox, ThingPark, OceanConnect and <br> T-Mobile IoT CDP)</small>%,%http%,%templates/install/integration/http-rhel.md%br%
+MQTT Integrations<br><small>(MQTT, AWS IoT, IBM Watson, The Things Network)</small>%,%mqtt%,%templates/install/integration/mqtt-rhel.md%br%
+AWS SQS<br> Integration<br>%,%aws%,%templates/install/integration/aws-rhel.md%br%
+Azure Event Hub<br>Integration<br>%,%azure%,%templates/install/integration/azure-rhel.md%br%
+OPC UA<br> Integration<br>%,%opcua%,%templates/install/integration/opcua-rhel.md%br%
+TCP/UDP<br> Integration<br>%,%tcpudp%,%templates/install/integration/tcpudp-rhel.md%br%
+CoAP<br> Integration<br>%,%coap%,%templates/install/integration/coap-rhel.md{% endcapture %}
 
-{% include content-toggle.html content-toggle-id="remoteintegrationinstallrhel" toggle-spec=rhelinstallspec %} 
+{% include content-toggle.liquid content-toggle-id="remoteintegrationinstallrhel" toggle-spec=rhelinstallspec %} 
 
 ## Remote integration configuration
 
@@ -170,19 +162,27 @@ Explore guides and video tutorials related to specific integrations:
 
  - [HTTP](/docs/{{peDocsPrefix}}user-guide/integrations/http/)
  - [MQTT](/docs/{{peDocsPrefix}}user-guide/integrations/mqtt/)
+ - [CoAP](/docs/{{peDocsPrefix}}user-guide/integrations/coap/)
+ - [Kafka](/docs/{{peDocsPrefix}}user-guide/integrations/kafka/)
+ - [OPC-UA](/docs/{{peDocsPrefix}}user-guide/integrations/opc-ua/)
+ - [Actility ThingPark](/docs/{{peDocsPrefix}}user-guide/integrations/thingpark/)
+ - [TheThingsStack](/docs/{{peDocsPrefix}}user-guide/integrations/ttn/)
+ - [TheThingsIndustries](/docs/{{peDocsPrefix}}user-guide/integrations/tti/)
+ - [KPN Things](/docs/{{peDocsPrefix}}user-guide/integrations/kpn-things/)
+ - [LORIOT](/docs/{{peDocsPrefix}}user-guide/integrations/loriot/)
+ - [ChirpStack](/docs/{{peDocsPrefix}}user-guide/integrations/chirpstack/)
  - [AWS IoT](/docs/{{peDocsPrefix}}user-guide/integrations/aws-iot/)
+ - [AWS Kinesis](/docs/{{peDocsPrefix}}user-guide/integrations/aws-kinesis/)
  - [IBM Watson IoT](/docs/{{peDocsPrefix}}user-guide/integrations/ibm-watson-iot/)
  - [Azure Event Hub](/docs/{{peDocsPrefix}}user-guide/integrations/azure-event-hub/)
- - [Actility ThingPark](/docs/{{peDocsPrefix}}user-guide/integrations/thingpark/)
+ - [Azure Service Bus](/docs/{{peDocsPrefix}}user-guide/integrations/azure-service-bus/)
+ - [Azure IoT Hub](/docs/{{peDocsPrefix}}user-guide/integrations/azure-iot-hub/)
  - [SigFox](/docs/{{peDocsPrefix}}user-guide/integrations/sigfox/)
  - [OceanConnect](/docs/{{peDocsPrefix}}user-guide/integrations/ocean-connect/)
- - [TheThingsNetwork](/docs/{{peDocsPrefix}}user-guide/integrations/ttn/)
- - [OPC-UA](/docs/{{peDocsPrefix}}user-guide/integrations/opc-ua/)
  - [TCP](/docs/{{peDocsPrefix}}user-guide/integrations/tcp/)
  - [UDP](/docs/{{peDocsPrefix}}user-guide/integrations/udp/)
- - [CoAP](/docs/{{peDocsPrefix}}user-guide/integrations/coap/)
+ - [Tuya](/docs/{{peDocsPrefix}}user-guide/integrations/tuya/)
  - [Custom](/docs/{{peDocsPrefix}}user-guide/integrations/custom/)
-
   
 ## Remote integration troubleshooting
 
@@ -191,7 +191,3 @@ Please review the log files. Their location is specific to the platform and inst
 ## Next steps
 
 {% assign currentGuide = "ConnectYourDevice" %}{% include templates/multi-project-guides-banner.md %}
-
-
-
-

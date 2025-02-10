@@ -5,7 +5,7 @@ description: IoT Hub Terms of Use
 
 ---
 
-<br />
+<br>
 <p style="text-align: center; font-size: 1.5em; font-weight: bold;">TERMS OF USE</p>
 
 <h2>PLEASE READ THESE TERMS AND CONDITIONS</h2> 
@@ -119,7 +119,7 @@ description: IoT Hub Terms of Use
 <p> <b>8. Notice and Procedure for Making Claims of Copyright Infringement</b> </p> 
 <p>8.1 If you believe that your work has been copied in a way that constitutes copyright infringement, you may provide written notice to IoT Hub, Inc. (in English only) to the address, as follows:
 <br><br><i>Legal Counsel</i>
-<br>42 Broadway Suite 12-400, New York, 10004 NY, USA
+<br>110 Duane Street, Suite 1C, New York, 10007 NY, USA
 </p> 
 
 <br>

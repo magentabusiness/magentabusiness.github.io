@@ -10,9 +10,6 @@
 {% if currentGuide != "States" %}
 - [**States**](/docs/trendz/states) - Learn how to define and analyse states for assets based on raw telemetry.
 {% endif %}
-{% if currentGuide != "GroupAndAggregateData" %}
-- [**Group and Aggregate data**](/docs/trendz/data-grouping-aggregation) - Learn how to group and aggregate data in Trendz.
-{% endif %}
 {% if currentGuide != "Prediction" %}
 - [**Prediction**](/docs/trendz/prediction) - Learn how to make forecasts and predict telemetry behavior.
 {% endif %}
@@ -25,4 +22,4 @@
 {% if currentGuide != "EmbedVisualizations" %}
 - [**Share and embed Visualizations**](/docs/trendz/embed-visuals) - Learn how to add Trendz visualizations on IoT Hub dashboard or 3rd party web pages.
 {% endif %}  
-<br/>
+<br>

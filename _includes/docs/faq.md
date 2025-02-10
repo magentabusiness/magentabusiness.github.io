@@ -12,10 +12,14 @@ You can find more information on the dedicated page.
 
 <!-- ## How do I get started?
 
-{% if docsPrefix == 'paas/' %}
+{% if docsPrefix contains 'paas/' %}
 We recommend to follow the [getting started guide](/docs/{{docsPrefix}}getting-started-guides/helloworld/).
 {% else %}
+<<<<<<< HEAD
 We recommend to [install](/docs/{{docsPrefix}}user-guide/install/installation-options/) IoT Hub locally on your laptop or PC using Docker
+=======
+We recommend to [install](/docs/user-guide/install/{{docsPrefix}}installation-options/) ThingsBoard locally on your laptop or PC using Docker
+>>>>>>> ad368c0ed5d3799cf901e3e0c5e84bf8564eb1c6
 and follow the [getting started guide](/docs/{{docsPrefix}}getting-started-guides/helloworld/).
 {% endif %} -->
 
@@ -29,11 +33,11 @@ You can find more information by browsing [guides](/docs/{{docsPrefix}}user-guid
 
 You can host IoT Hub in the cloud, on-premises or locally on your laptop, PC or even Raspberry Pi. We recommend to get started with Docker installation
   
-  - [Linux & Mac OS](/docs/{{docsPrefix}}user-guide/install/docker/) 
-  - [Windows](/docs/{{docsPrefix}}user-guide/install/docker-windows/)
+  - [Linux & Mac OS](/docs/user-guide/install/{{docsPrefix}}docker/) 
+  - [Windows](/docs/user-guide/install/{{docsPrefix}}docker-windows/)
 
-You can also take a look at [cluster setup](/docs/{{docsPrefix}}user-guide/install/cluster-setup/) guide.
-{% endunless %} -->
+You can also take a look at [cluster setup](/docs/user-guide/install/{{docsPrefix}}cluster-setup/) guide.
+{% endunless %}
 
 ## How to connect my device?
 
@@ -62,15 +66,16 @@ Each device has unique access token credentials that is used to setup connection
 <!-- ## How much devices can IoT Hub support?
 
 IoT Hub platform is horizontally scalable. Each server node in the cluster is unique.
-Scalability is achieved using [consistent-hashing](https://dzone.com/articles/simple-magic-consistent) load balancing algorithm between the cluster nodes.
+Scalability is achieved using [consistent-hashing](https://en.wikipedia.org/wiki/Consistent_hashing) load balancing algorithm between the cluster nodes.
+
 Actual performance depends on usage scenario of connected devices.
-{% unless docsPrefix == 'paas/' %}
+{% unless docsPrefix contains 'paas/' %}
 For example, small commodity hardware cluster can support [several millions](/docs/{{docsPrefix}}reference/iot-platform-deployment-scenarios/#1-million-smart-meters-tco) of devices connected over MQTT.
 {% endunless %}
   
 ## Where does IoT Hub store data?
 
-The data is stored in [Cassandra](http://cassandra.apache.org/) database. Cassandra suites well for storage and querying of time-series data and provides high availability and fault-tolerance.
+The data is stored in [Cassandra](https://cassandra.apache.org/) database. Cassandra suites well for storage and querying of time-series data and provides high availability and fault-tolerance.
  
 ## What license type does IoT Hub use?
 

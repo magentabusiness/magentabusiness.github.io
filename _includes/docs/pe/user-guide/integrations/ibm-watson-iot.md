@@ -4,13 +4,13 @@
 
 IBM Watson IoT Integration allows to stream data from IBM Watson IoT to IoT Hub and converts device payloads to the IoT Hub format.
 
- ![image](/images/user-guide/integrations/ibm-watson-integration.svg)
+ ![image](https://img.thingsboard.io/user-guide/integrations/ibm-watson-integration.svg)
  
 ## Video tutorial
  
 See video tutorial below for step-by-step instruction how to setup IBM Watson IoT Integration.
 
-<br/>
+<br>
 <div id="video">  
  <div id="video_wrapper">
      <iframe src="https://www.youtube.com/embed/eqSObPW2P1g" frameborder="0" allowfullscreen></iframe>

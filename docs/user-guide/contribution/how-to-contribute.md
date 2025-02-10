@@ -47,20 +47,16 @@ mvn clean install -DskipTests
 A build will generate all the *protobuf* files in the *application* module that are needed for the correct compilation in your *IDE*.
 
 Next, import the project into your favorite *IDE* as **Maven** project. 
-See separate instructions for [**IDEA**](https://www.jetbrains.com/help/idea/2016.3/importing-project-from-maven-model.html) and [**Eclipse**](http://javapapers.com/java/import-maven-project-into-eclipse/).   
+See separate instructions for [**IDEA**](https://www.jetbrains.com/help/idea/2016.3/importing-project-from-maven-model.html) and [**Eclipse**](https://www.baeldung.com/maven-import-eclipse).   
 
 **NOTE:** If you are using Eclipse, after the maven project is imported to the IDE, We recommend you to disable Maven Project builder on **ui-ngx** project. This will improve the Eclipse performance *a lot*, because it will avoid Eclipse Maven builder from digging in node_modules directory (which is unnecessary and only causes Eclipse to hang). To do this, right-click on **ui-ngx** project, go to **Properties -> Builders**, and then uncheck the **Maven Project Builder** checkbox and then click **Ok**.
 
 #### Database
 
-By default, IoT Hub uses embedded HSQLDB instance which is very convenient for evaluation or development purposes. 
-  
-Alternatively, you can configure your platform to use either hybrid mode - PostgreSQL for entities data and scalable Cassandra DB cluster for timeseries data or PostgreSQL for both. 
-If you prefer to use an SQL database, we recommend PostgreSQL.
+By default IoT Hub uses PostgreSQL database to store entities and timeseries data.
+Alternatively, you can configure your platform to use hybrid mode - PostgreSQL for entities data and scalable Cassandra DB cluster for timeseries data. 
 
-##### [Optional] SQL Database: PostgreSQL
-
-{% include templates/install/optional-db.md %}
+##### SQL Database: PostgreSQL
 
 Please use [this link](https://wiki.postgresql.org/wiki/Detailed_installation_guides) for the PostgreSQL installation instructions.
 
@@ -76,23 +72,11 @@ Please refer to appropriate section where you find instructions on how to instal
  - [Cassandra installation on **Linux**](/docs/user-guide/install/linux/#cassandra)
  - [Cassandra installation on **Windows**](/docs/user-guide/install/windows/#cassandra)
 
-##### [Optional] Configure IoT Hub to use external database
- 
-{% include templates/install/optional-db.md %} 
- 
 Edit IoT Hub configuration file: 
 
 ```text
 /application/src/main/resources/thingsboard.yml
 ```
-
-{% include templates/disable-hsqldb.md %} 
-
-For **PostgreSQL**:
-
-{% include templates/enable-postgresql.md %} 
-
-For **Cassandra DB**:
 
 Locate and set database type configuration parameters to 'cassandra'.
  
@@ -103,7 +87,7 @@ database:
 ```
 
 **NOTE:** If your Cassandra server is installed on the remote machine or it is bind to custom interface/port, you need to specify it in thingsboard.yml as well.
-Please, tefer to the [**configuration guide**](/docs/user-guide/install/config/) for the detailed description of **thingsboard.yml** file and what properties are used for cassandra connection configuration.
+Please, refer to the [**configuration guide**](/docs/user-guide/install/config/) for the detailed description of **thingsboard.yml** file and what properties are used for cassandra connection configuration.
 
 After the thingsboard.yml file was updated, please rebuild the application module so that the updated thingsboard.yml gets populated to the target directory:
 
@@ -201,7 +185,7 @@ If there are some conflicts because new stuff has arrived into IoT Hub master br
 
 Sign up contribution license agreement (CLA) and verify that remote build has been successful. The CLA is signed automatically using the github CLA bot.
  
- ![image](/images/user-guide/pr_cla.png)
+ ![image](https://img.thingsboard.io/user-guide/pr_cla.png)
 
 Be patient, pull request may take several days to review.
 

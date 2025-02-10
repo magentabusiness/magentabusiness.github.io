@@ -28,9 +28,7 @@ Click on the **"plus"** and on **"Create new converter".**
 To view the events, enable **Debug.** In the function decoder field, specify a script to parse
 and transform data. 
 
-**NOTE** Although the Debug mode is very useful for development and troubleshooting, leaving it enabled in production mode may tremendously increase the disk space, used by the database, because all the debugging data is stored there. It is highly recommended to turn the Debug mode off when done debugging.
-
-{% include images-gallery.html imageCollection="uplink" %}
+{% assign feature = "integrations" %}{% include templates/debug-mode.md %}
 
 Let's review sample uplink message from LORIOT:
 
@@ -67,8 +65,13 @@ temperature: stringToInt(payloadJson.data.substring(0,2)),
 humidity: stringToInt(payloadJson.data.substring(2,4))
 ```
 
+{% include templates/tbel-vs-js.md %}
 
+{% capture loriotuplinkconverterconfig %}
+TBEL<small>Recommended</small>%,%accessToken%,%templates/integration/loriot/loriot-uplink-converter-config-tbel.md%br%
+JavaScript<small></small>%,%anonymous%,%templates/integration/loriot/loriot-uplink-converter-config-java.md{% endcapture %}
 
+<<<<<<< HEAD
 **Example for the Uplink converter:**
 
 ```javascript
@@ -131,6 +134,9 @@ Copy the configuration example for the converter (or your own configuration) and
 
 {% include images-gallery.html imageCollection="uplink_edit" %}
 
+=======
+{% include content-toggle.liquid content-toggle-id="loriotuplinkconverterconfig" toggle-spec=loriotuplinkconverterconfig %}
+>>>>>>> ad368c0ed5d3799cf901e3e0c5e84bf8564eb1c6
 
 ## Create Integration
 
@@ -143,14 +149,13 @@ In order for data to be transferred from LORIOT to IoT Hub, you need to configur
 
 <div style="font-size: 20px; margin-bottom: 8px; font-weight: bold;">Configuration the Output options</div>
 
-
 We can create Output with LORIOT or in integration by enabling the **Create Loriot Application output** option or specifying the “Basic” credential.
 
 {% capture authorizationTypes %}
-LORIOT Account<br/><small>Recommended</small>%,%loriot-account%,%templates/integration/loriot/loriot-account-authorization-type.md%br%
-Basic Credential<br/>%,%basic-credential%,%templates/integration/loriot/thingsboard-basic-credentials.md{% endcapture %}
+LORIOT Account<br><small>Recommended</small>%,%loriot-account%,%templates/integration/loriot/loriot-account-authorization-type.md%br%
+Basic Credential<br>%,%basic-credential%,%templates/integration/loriot/thingsboard-basic-credentials.md{% endcapture %}
 
-{% include content-toggle.html content-toggle-id="loriotAuthorizationTypes" toggle-spec=authorizationTypes %}
+{% include content-toggle.liquid content-toggle-id="loriotAuthorizationTypes" toggle-spec=authorizationTypes %}
 
 <div style="font-size: 20px; margin-bottom: 8px; font-weight: bold;">Enable security option</div>
 
@@ -162,13 +167,16 @@ Also need to specify this in LORIOT:
 
 {% include images-gallery.html imageCollection="custom_authorization" %}
 
-Once the Headers filter has been configured, it will also need to be specified in the uplink message as follows. Replace $VALUE with corresponding value.
+Once the Headers filter has been configured, it will also need to be specified in the uplink message as follows. 
 
 ```
--H “Authorization:$VALUE”
+-H "authorization:secret"
 ```
+{: .copy-code}
 
-## Send test Uplink message
+{% include images-gallery.html imageCollection="uplink-message" %}
+
+## Send Uplink message
 
 It may be useful to "emulate" the message from device using console instead of the LORIOT server. To send an uplink message, you need a **HTTP endpoint URL** from the integration, **port** and **EUI** from LORIOT. 
 
@@ -189,16 +197,12 @@ curl -v -X POST -d "{\"EUI\":\"$YOUR_EUI_DEVICE\",\"deviceType\":\"temperature-s
 ```
 {: .copy-code}
 
-{% include images-gallery.html imageCollection="terminal" %}
-
 With the **enable security** option: replace $YOUR_EUI_DEVICE, $YOUR_HTTP_ENDPOINT_URL and $VALUE with corresponding values. 
 
 ```bash
-curl -v -X POST -d "{\"EUI\":\"$YOUR_EUI_DEVICE\",\"deviceType\":\"temperature-sensor\",\"data\":\"2A3F\",\"port\":1,\"cmd\":\"rx\",\"dr\":\"SF12 BW125 4/5\",\"snr\":1.2,\"ack\":\"false\",\"freq\":868500000,\"fcnt\":1,\"rssi\":-130,\"ts\":1613745998000}" $YOUR_HTTP_ENDPOINT_URL -H "Content-Type:application/json" -H “Authorization:$VALUE”
+curl -v -X POST -d "{\"EUI\":\"$YOUR_EUI_DEVICE\",\"deviceType\":\"temperature-sensor\",\"data\":\"2A3F\",\"port\":1,\"cmd\":\"rx\",\"dr\":\"SF12 BW125 4/5\",\"snr\":1.2,\"ack\":\"false\",\"freq\":868500000,\"fcnt\":1,\"rssi\":-130,\"ts\":1613745998000}" $YOUR_HTTP_ENDPOINT_URL -H "Content-Type:application/json" -H "$VALUE"
 ```
 {: .copy-code}
-
-{% include images-gallery.html imageCollection="terminal_1" %}
 
 The created device with data can be seen in the section **Device groups -> All**
 
@@ -217,58 +221,16 @@ IoT Hub has examples of several types of dashboards that you can use. You can fi
 How to work with dashboards [read here](/docs/{{docsPrefix}}user-guide/dashboards/)
 
 
-
 ## Advanced Usage: Create Downlink Converter
 
 Create Downlink in **Data converters.** To see events - enable **Debug.**
 
-{% include images-gallery.html imageCollection="create_downlink" %}
+{% include templates/tbel-vs-js.md %}
 
-
-You can customize the downlink according to your configuration. Let's consider an example where we send an attribute update message. So we should change code in the downlink encoder function under
-line `//downlink data input`
-
-```
-data: msg.firmware
-```
-
-Also, indicate the required parameters in the metadata:
-
-```
-metadata: {
-  "EUI": "$Device_EUI",
-  "port": 1
-}
-```
-Example for downlink converter:
-
-```javascript
-// Encode downlink data from incoming Rule Engine message
-// msg - JSON message payload downlink message json
-// msgType - type of message, for ex. 'ATTRIBUTES_UPDATED', 'POST_TELEMETRY_REQUEST', etc.
-// metadata - list of key-value pairs with additional data about the message
-// integrationMetadata - list of key-value pairs with additional data defined in Integration executing this converter
-// Result object with encoded downlink payload
-var result = {
-    // downlink data content type: JSON, TEXT or BINARY (base64 format)
-    contentType: "TEXT",
-    // downlink data
-    data: msg.firmware,
-    // Optional metadata object presented in key/value format
-    metadata: {
-            "EUI": "BE7A000000000552",
-            "port": 1
-    }
-};
-return result;
-
-``` 
-{: .copy-code}
-
-where **EUI** is device EUI and is taken from the device in LORIOT. 
-A **port** can be from 1 to 223
-
-{% include images-gallery.html imageCollection="downlink" %}
+{% capture loriotdownlinkconverterconfig %}
+TBEL<small>Recommended</small>%,%accessToken%,%templates/integration/loriot/loriot-downlink-converter-config-tbel.md%br%
+JavaScript<small></small>%,%anonymous%,%templates/integration/loriot/loriot-downlink-converter-config-java.md{% endcapture %}
+{% include content-toggle.liquid content-toggle-id="loriotdownlinkconverterconfig" toggle-spec=loriotdownlinkconverterconfig %}
 
 Get EUI in LORIOT in the Devices section, where the devices have already been created:
 

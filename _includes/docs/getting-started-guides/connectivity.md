@@ -4,18 +4,32 @@ In case you have not found out how to connect your device using the diagram or s
 {% endcapture %}
 {% include templates/info-banner.md content=connectivityContent %}
 
-<object width="100%" style="max-width: max-content;" data="/images/connectivity.svg"></object>
-
 {% assign peDocsPrefix = '' %}
-{% if docsPrefix == 'paas/' %}
+{% if docsPrefix contains 'paas/' %}
 {% assign peDocsPrefix = docsPrefix %}
 {% endif %}
+
+{% if docsPrefix == 'pe/' %}
+  <object width="100%" style="max-width: max-content;" data="https://img.thingsboard.io/connectivity-pe.svg"></object>
+{% elsif docsPrefix == 'paas/' %}
+  <object width="100%" style="max-width: max-content;" data="https://img.thingsboard.io/connectivity-paas.svg"></object>
+{% elsif docsPrefix == 'paas/eu/' %}
+  <object width="100%" style="max-width: max-content;" data="https://img.thingsboard.io/connectivity-paas-eu.svg"></object>
+{% else %}
+  <object width="100%" style="max-width: max-content;" data="https://img.thingsboard.io/connectivity.svg"></object>
+{% endif %}
+
+
+#### Connecting well-known devices
+
+You can check the [Devices library](/docs/{{docsPrefix}}devices-library) section to explore how to connect widely used devices to ThingsBoard.
 
 #### Built-in transport protocols
 
 The built-in transport protocol implementations are applicable for devices that communicate over those protocols and are able to connect directly to IoT Hub.
 
 - [MQTT API reference](/docs/{{docsPrefix}}reference/mqtt-api)
+- [MQTT Sparkplug API reference](/docs/{{docsPrefix}}reference/mqtt-sparkplug-api)
 - [CoAP API reference](/docs/{{docsPrefix}}reference/coap-api)
 - [HTTP API reference](/docs/{{docsPrefix}}reference/http-api)
 - [LwM2M API reference](/docs/{{docsPrefix}}reference/lwm2m-api)

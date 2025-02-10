@@ -13,7 +13,7 @@ Useful if you don't want to reprocess the failed messages.
 For example, the rule chain below will reprocess the failed messages only for important messages. 
 Failure of unimportant message will be simply ignored. 
 
-![image](/images/user-guide/rule-engine-2-0/nodes/acknowledge-failed.png)
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/nodes/acknowledge-failed.png)
 
 **Note:** We recommend the "acknowledge" rule node to be the last in the processing chain.
 Theoretically, you may add other rule nodes after the "acknowledge" one. However, this may cause the OOM errors. 
@@ -21,11 +21,11 @@ For example, subsequent rule nodes may process messages slowly. Unprocessed mess
 
 ##### Checkpoint Node
 
-Publish a copy of the message to the selected [rule engine queue](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#rule-engine-queue).
+Publish a copy of the message to the selected [rule engine queue](/docs/{{docsPrefix}}user-guide/rule-engine-2-5/queues/).
 The original message is marked as successfully processed once the target queue acknowledge publish of the copied message. 
 
 Useful if you want to mark message as high priority or process messages sequentially grouped by originator of the message. 
-See [default queues](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#default-queues) or define your own [queue](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#rule-engine-queue). 
+See [default queues](/docs/{{docsPrefix}}user-guide/rule-engine-2-5/queues/#default-queues) or define your own [queue](/docs/{{docsPrefix}}user-guide/rule-engine-2-5/queues/). 
 
 ##### Rule Chain Node
 
@@ -43,14 +43,14 @@ The output node enables reuse of the rule chains and extraction of the processin
 
 For example, you may create a rule chain that validates the incoming message, and process valid and invalid messages separately.
 
-![image](/images/user-guide/rule-engine-2-0/nodes/rule-chain-node-main.png)
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/nodes/rule-chain-node-main.png)
 
 The logic of message validation may be reused in other rule chains. For this purpose, we extract it in a separate rule chain.
 
-![image](/images/user-guide/rule-engine-2-0/nodes/rule-chain-node-inner.png)
+![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/nodes/rule-chain-node-inner.png)
 
 Notice the "Output" nodes we use in validation rule chain. 
-The names of the output nodes should match the outgoing [relations](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#rule-node-relation) of the "rule chain node" in the main rule chain.
+The names of the output nodes should match the outgoing [relations](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#rule-node-connection) of the "rule chain node" in the main rule chain.
 
 ##### Output Node
 
@@ -63,6 +63,6 @@ The names of the output nodes should match the outgoing [relations](/docs/{{docs
 </table> 
 
 Used in combination with the [rule chain node](#rule-chain-node). Allows to publish result of the message processing to the caller rule chain. 
-The output rule node name corresponds to the [relation](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#rule-node-relation) type of the output message,
+The output rule node name corresponds to the [relation](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#rule-node-connection) type of the output message,
 and it is used to forward messages to other rule nodes in the caller rule chain.
 See [rule chain node](#rule-chain-node) documentation for example.

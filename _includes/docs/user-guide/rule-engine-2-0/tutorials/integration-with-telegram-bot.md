@@ -60,11 +60,11 @@ There are several ways to get the Chat ID:
  
     - in the private chat; 
     
-       ![image](/images/gateway/telegram-bot/private-msg-to-bot.png)    
+       ![image](https://img.thingsboard.io/gateway/telegram-bot/private-msg-to-bot.png)    
     
     - in the group where your Bot was added as a member.
     
-       ![image](/images/gateway/telegram-bot/msg-to-bot-in-chat.png)    
+       ![image](https://img.thingsboard.io/gateway/telegram-bot/msg-to-bot-in-chat.png)    
       
     <br> where **IoT Hub_Bot** is name of the Telegram bot.
 
@@ -84,11 +84,11 @@ From the outcoming data you can find field **'id'**. This is the so-called chat_
 
  - First option:
 
-![image](/images/gateway/telegram-bot/first-option.png)
+![image](https://img.thingsboard.io/gateway/telegram-bot/first-option.png)
 
  - Second option:
 
-![image](/images/gateway/telegram-bot/second-option.png)
+![image](https://img.thingsboard.io/gateway/telegram-bot/second-option.png)
 
 After that, you can start to configure Rule engine to use Rest API Call extension.
 
@@ -98,21 +98,21 @@ In this tutorial, we used Rule Chains from [create & clear alarms](/docs/user-gu
 We modified Rule Chain **Create & Clear Alarms** by adding nodes that was described above in the section [Message flow](#message-flow)<br>
  and renamed this rule chain to: **Create/Clear Alarms & send notifications to Telegram**.
 
-<br/>The following screenshots show how the above Rule Chains should look like:
+<br>The following screenshots show how the above Rule Chains should look like:
  
   - **Create/Clear Alarms & send notifications to Telegram:**
 
-![image](/images/gateway/telegram-bot/send-to-telegram-chain.png)
+![image](https://img.thingsboard.io/gateway/telegram-bot/send-to-telegram-chain.png)
 
  - **Root Rule Chain:**
 
-![image](/images/gateway/telegram-bot/root-rule-chain.png)
+![image](https://img.thingsboard.io/gateway/telegram-bot/root-rule-chain.png)
 
-<br/> 
+<br> 
 
 
 The following section shows you how to modify this rule chain from scratch.
-<br/> 
+<br> 
 
 ### Modify **Create/Clear Alarm & Send Email**
 
@@ -146,7 +146,7 @@ In this rule chain, you will create 2 nodes as it will be explained in the follo
       
 - Enter the Name field as **New telegram message**.  
   
-![image](/images/gateway/telegram-bot/transform-script.png)
+![image](https://img.thingsboard.io/gateway/telegram-bot/transform-script.png)
    
 ##### Node B: **REST API Call**
 - Add the **REST API Call** node and connect it to the **Transform Script** node with a relation type **Success**.
@@ -156,7 +156,7 @@ In this rule chain, you will create 2 nodes as it will be explained in the follo
   
 - Fill in the fields with the input data shown in the following table: 
   
-  <table style="width: 25%">
+  <table>
     <thead>
         <tr>
             <td><b>Field</b></td><td><b>Input Data</b></td>
@@ -186,7 +186,7 @@ In this rule chain, you will create 2 nodes as it will be explained in the follo
      </tbody>
   </table>
      
-![image](/images/gateway/telegram-bot/rest-api-telegram-node.png)
+![image](https://img.thingsboard.io/gateway/telegram-bot/rest-api-telegram-node.png)
 
 
 ## Post telemetry and verify
@@ -194,7 +194,7 @@ In this rule chain, you will create 2 nodes as it will be explained in the follo
 For posting device telemetry we will use the Rest APIs, [Telemetry upload APIs](/docs/{{docsPrefix}}reference/http-api/#telemetry-upload-api). For this we will need to
 copy device access token from then device **Thermostat Home**. 
 
-![image](/images/gateway/telegram-bot/copy-token.png)
+![image](https://img.thingsboard.io/gateway/telegram-bot/copy-token.png)
 
 
 Lets post temperature = 99. Alarm should be created:
@@ -211,12 +211,12 @@ Finally, we can see that the message was received with the correct values:
 
 - first option:
 
-![image](/images/gateway/telegram-bot/msg-received-first-way.png)
+![image](https://img.thingsboard.io/gateway/telegram-bot/msg-received-first-way.png)
 
 
 - second option: 
 
-![image](/images/gateway/telegram-bot/msg-received-second-way.png)
+![image](https://img.thingsboard.io/gateway/telegram-bot/msg-received-second-way.png)
 
 
 Also, you can:
@@ -229,7 +229,7 @@ Also, you can:
 
 Please refer to the links under the **See Also** section to see how to do this.
   
-<br/>
+<br>
 
 ## See Also
 

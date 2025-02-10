@@ -39,8 +39,5 @@ function decodeToJson(payload) {
 
 return result;
 
-``` 
-
-The purpose of the decoder function is to parse the incoming data and metadata to a format that IoT Hub can consume. 
-**deviceName** and **deviceType** are required, while **attributes** and **telemetry** are optional.
-**attributes** and **telemetry** are flat key-value objects. Nested objects are not supported.
+```
+{: .copy-code}

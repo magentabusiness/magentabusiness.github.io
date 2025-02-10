@@ -1,0 +1,1 @@
+![image](https://img.thingsboard.io/gateway/mqtt-connector/requests-mapping-advanced-1-ce.png)

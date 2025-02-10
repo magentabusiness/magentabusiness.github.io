@@ -15,7 +15,7 @@ If you have enough knowledge then go through further steps. Ensure that you alre
 * [Step 3] Open [thingsboard.github.io](https://github.com/thingsboard/thingsboard.github.io) documentation (site) repository.
 * [Step 4] Fork a repo(refer to [Fork a repo](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) guide) of the [thingsboard.github.io](https://github.com/thingsboard/thingsboard.github.io) project.
 
-  ![image](/images/user-guide/fork_button.jpg)
+  ![image](https://img.thingsboard.io/user-guide/fork_button.jpg)
 
 Whe-e! Starting now you have a copy of our website in your private GitHub repository.
 
@@ -37,7 +37,7 @@ Install Ruby 2.2 or higher. If you're on Ubuntu 20.04.1 LTS, run these commands:
 	sudo gem install jekyll bundler
 
 * If you're on a Mac, follow [these instructions](https://gorails.com/setup/osx/).
-* If you're on a Windows machine you can use the [Ruby Installer](http://rubyinstaller.org/downloads/). During the installation make sure to check the option for *Add Ruby executables to your PATH*.
+* If you're on a Windows machine you can use the [Ruby Installer](https://rubyinstaller.org/downloads/). During the installation make sure to check the option for *Add Ruby executables to your PATH*.
 
 Clone our site:
 
@@ -57,7 +57,7 @@ or execute the below script from the project root directory:
 
     ./restart.sh
 
-Your copy of the site will then be viewable at: [http://localhost:4000](http://localhost:4000)
+Your copy of the site will then be viewable at: **http://localhost:4000**
 (or wherever Jekyll tells you).
 
 ## Integration guide pattern
@@ -67,10 +67,10 @@ Use this [Sample](/docs/samples/sample/sample) as a base for your guide. This pa
 Once you open the .md file perform further necessary steps
 
 * [Step 1] Add new directories to the website structure "/docs/samples/YOUR_INTEGRATION_NAME/".
-* [Step 2] Add new directories to the website structure "/images/samples/YOUR_INTEGRATION_NAME/".
+* [Step 2] Add new directories to the website structure "https://img.thingsboard.io/samples/YOUR_INTEGRATION_NAME/".
 * [Step 3] Create a "YOUR_INTEGRATION_NAME.md" file using the [Sample](/docs/samples/sample/sample) as a base in your newly created directory from [Step 1].
-* [Step 4] Store all of your images for your guide in a path "/images/samples/YOUR_INTEGRATION_NAME/".
-* [Step 5] Add your company logo to path "/images/partners/".
+* [Step 4] Store all of your images for your guide in a path "https://img.thingsboard.io/samples/YOUR_INTEGRATION_NAME/".
+* [Step 5] Add your company logo to path "https://img.thingsboard.io/partners/".
 * [Step 6] Add your visit-card to "partners.json" which is located via path "/_includes/" & insert name of your company logo file ([Step 5]) into the "logo" in code bellow.  
 
         {

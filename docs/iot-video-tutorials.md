@@ -13,7 +13,7 @@ Non-video tutorials are available on the [Samples](/docs/samples/) page.
 
 <br>
 
-# Data Modeling
+## Data Modeling
 
 #### Getting started guide
 
@@ -77,7 +77,7 @@ You will learn how to:
     </div>
 </div><br>
 
-# Device Connection Demos
+## Device Connection Demos
 
 #### Temperature upload from ESP8266 and DHT22 using IoT Hub
 
@@ -137,7 +137,7 @@ Related Links:<br>
 <a href="https://blog.iothub.magenta.at/2017/01/raspberry-pi-gpio-control-using-android.html">Raspberry Pi GPIO control using Android Things and IoT Hub tutorial documentation
 
 
-# Visualization
+## Visualization
 
 #### Dashboard development guide, Part 1 of 3: Visualizing Assets data using Maps and Tables
 
@@ -244,7 +244,11 @@ You will learn how to:
     </div>
 </div><br>
 
+<<<<<<< HEAD
 # IoT Hub  Features 
+=======
+## ThingsBoard Professional Edition (PE) Features 
+>>>>>>> ad368c0ed5d3799cf901e3e0c5e84bf8564eb1c6
 
 #### IoT Hub: White Labeling Guide
 IoT Hub web interface allows you to configure your company or product logo and color scheme in 2 minutes with zero coding efforts and no service restart required. 

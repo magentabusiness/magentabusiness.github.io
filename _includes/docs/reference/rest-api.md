@@ -4,10 +4,19 @@
 
 ## Interactive Documentation
 
-IoT Hub REST API may be explored using Swagger UI.
-You can explore REST API of the live-demo server using this **[Swagger UI link.](https://iothub.magenta.at/swagger-ui.html)**
+{% if docsPrefix contains "paas/" or docsPrefix == "pe/"  %}
+IoT Hub REST API interactive documentation is available via Swagger UI. For example, you may browse IoT Hub API documentation using the **[Swagger UI link](https://iothub.magenta.at/swagger-ui.html)**.
+{% else %}
+IoT Hub REST API interactive documentation is available via Swagger UI. For example, you may browse IoT Hub API documentation using the **[Swagger UI link](https://iothub.magenta.at/swagger-ui.html)**.
+{% endif %}
 
-To explore REST API provided by IoT Hub please use the following **[Swagger UI link.](https://iothub.magenta.at/swagger-ui.html)**
+{% if docsPrefix contains "paas/" %}
+{% else %}
+Once you will install IoT Hub server you can open an interactive documentation using the following URL:
+    
+``` 
+http://YOUR_HOST:PORT/swagger-ui.html
+```
 
 
 Documentation page will automatically use your credentials, if you have previously authorized on the main login page. 
@@ -15,7 +24,7 @@ You may use “Authorize” button in the top right corner of the documentation 
 
 {% include images-gallery.html imageCollection="swagger-ui" %}
 
-{% if docsPrefix == "pe/" or docsPrefix == "paas/" %}
+{% if docsPrefix == "pe/" or docsPrefix contains "paas/" %}
 
 The easiest way to get your account is to use [IoT Hub](https://iothub.magenta.at/signup) server.
 
@@ -31,11 +40,20 @@ IoT Hub uses [JWT](https://jwt.io/) tokens for representing claims securely betw
 When you login to the platform, your username and password is exchanged to the pair of tokens. 
 
 
+{% if docsPrefix contains "paas/" %}
 The main token is short-lived token you should use to perform the API calls. The refresh token is used to get new main token once it is expired.
 Default expiration time values are 2.5 hours and 1 week respectively.
 
 See sample command below to get the token for user "your_user@company.com" and password "secret":
 
+{% else %}
+The main token is short-lived token you should use to perform the API calls. The refresh token is used to get new main token once it is expired.
+The expiration time of main and refresh tokens is [configurable](/docs/user-guide/install/{{docsPrefix}}config/) in system settings 
+via JWT_TOKEN_EXPIRATION_TIME and JWT_REFRESH_TOKEN_EXPIRATION_TIME parameters. Default expiration time values are 2.5 hours and 1 week respectively.
+
+See sample command below to get the token for user "tenant@thingsboard.org", password "tenant" and server "THINGSBOARD_URL":
+
+{% endif %}
 {% capture tabspec %}token
 A,get-token.sh,shell,resources/get-token.sh,/docs/reference/resources/get-token.sh
 B,response.json,json,resources/get-token-response.json,/docs/reference/resources/get-token-response.json{% endcapture %}

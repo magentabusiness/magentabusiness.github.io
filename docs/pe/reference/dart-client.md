@@ -1,9 +1,10 @@
 ---
 layout: docwithnav-pe
 title: Dart API Client
-description: Thingsboard API client library for Dart developers
+description: IoT Hub API client library for Dart developers
 
 ---
 
 {% assign docsPrefix = "pe/" %}
-{% include docs/pe/reference/python-rest-client.md %}
+{% include get-hosts-name.html docsPrefix=docsPrefix %}
+{% include docs/pe/reference/dart-client.md %}

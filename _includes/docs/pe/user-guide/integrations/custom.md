@@ -1,5 +1,5 @@
 {% assign peDocsPrefix = '' %}
-{% if docsPrefix == 'paas/' %}
+{% if docsPrefix contains 'paas/' %}
 {% assign peDocsPrefix = docsPrefix %}
 {% endif %}
 
@@ -33,7 +33,7 @@ Before setting up a custom integration, you need to create an Uplink and a Downl
 
 Let's create uplink converter.
 
-![image](/images/user-guide/integrations/remote/custom-converter.gif)
+![image](https://img.thingsboard.io/user-guide/integrations/remote/custom-converter.gif)
 
 **NOTE**: Although the Debug mode is very useful for development and troubleshooting, leaving it enabled in production mode may tremendously increase the disk space, used by the database, because all the debugging data is stored there. 
 It is highly recommended to turn the Debug mode off when done debugging. 
@@ -90,7 +90,7 @@ In case you have another use case, please refer to the following [instructions](
  
 Let's create custom integration. 
 
-![image](/images/user-guide/integrations/remote/custom-integration.gif)
+![image](https://img.thingsboard.io/user-guide/integrations/remote/custom-integration.gif)
 
 Notice that **Execute remotely** is enabled automatically when we choose **Custom** type and we enable **Debug mode**.
 
@@ -147,7 +147,7 @@ Once the [client emulator](https://github.com/thingsboard/remote-integration-exa
 , it will start sending auto-generated data to IoT Hub in the following format: **“25,40,94”**. 
 The Integration will pass the incoming message as-is to the [uplink converter](/docs/{{peDocsPrefix}}user-guide/integrations/custom/#uplink-converter) and push data to IoT Hub.
 
-**Note:** starting from ThingsBoard version 3.3.1 a new required configuration property was added to tb-remote-integration.yml:
+**Note:** starting from IoT Hub version 3.3.1 a new required configuration property was added to tb-remote-integration.yml:
 
 ```yml
 service:

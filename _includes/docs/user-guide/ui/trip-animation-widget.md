@@ -1,288 +1,322 @@
-
-{% assign feature = "Platform Integrations" %}
+{% if docsPrefix == null %}
+{% assign NEW_DEVICE = "[create a new device](/docs/getting-started-guides/helloworld/#step-1-provision-device)" %}
+{% assign YOUR_HOST = "[download the script](/docs/user-guide/resources/timeseries-map-bus-ce.js)" %}
+{% assign EMULATOR = "device-emulator-ce.png" %}
+{% assign TERMINAL = "timeseries-map-bus-ce.js" %}
+{% endif %}
+{% if docsPrefix == "pe/" %}
+{% assign NEW_DEVICE = "[create a new device](/docs/getting-started-guides/helloworld-pe/#step-1-provision-device)" %}
+{% assign YOUR_HOST = "[download the script](/docs/user-guide/resources/timeseries-map-bus-pe.js)" %}
+{% assign EMULATOR = "device-emulator-pe.png" %}
+{% assign TERMINAL = "timeseries-map-bus-pe.js" %}
+{% endif %}
+{% if docsPrefix contains "paas/" %}
+{% assign NEW_DEVICE = "[create a new device](/docs/paas/getting-started-guides/helloworld/#step-1-provision-device)" %}
+{% assign YOUR_HOST = "[download the script](/docs/user-guide/resources/timeseries-map-bus-cloud.js)" %}
+{% assign EMULATOR = "device-emulator-paas.png" %}
+{% assign TERMINAL = "timeseries-map-bus-cloud.js" %}
+{% endif %}
 
 * TOC
 {:toc}
 
-## Overview
+In this guide, we will explore the functionalities of the Trip animation widget.
+This widget can be useful for various use cases, but primarily it can be used for tracking, analyzing, and visualizing the movement of different entities in realtime.
 
-In this example, we'll study trip animation widget functionality. 
+## Prerequisites
 
-This widget might be useful for different use cases, but mainly it might be used for a Tracking in a realtime, researching movement of the entities and visualizing it.
+Firstly, you need a device from which telemetry will be collected. You can use any device you have that provides coordinates (longitude and latitude) as telemetry in realtime.
+Longitude and latitude are the key data for map visualization, allowing you to view the data on a widget in the dashboard you selected.
 
-This guide was written for [cloud](https://iothub.magenta.at), so some steps will be a little different from Community Edition. 
+For this guide, we will {{NEW_DEVICE}}{:target="_blank"} called **Tracker1**, which receives longitude, latitude, speed, circle radius, status, and polygon coordinates as telemetry using an emulator written in JavaScript.
 
-It's capable of all further versions.
+{% include images-gallery.html imageCollection="adding-device" %}
 
-## Setting up Trip Animation Widget
+To receive telemetry and further visualize it on the dashboard {{YOUR_HOST}}{:target="_blank"} and execute it using the following command:
 
-Firstly you need to create a device from which will collect telemetry.
+```bash
+node {{TERMINAL}} $ACCESSTOKEN
+```
+{: .copy-code}
 
-Also, you may use any device you have with a coordinates telemetry (longitude and latitude). 
+Where **$ACCESSTOKEN** is the access token for your device, which is located in the device details.
 
-This can be any device which receives its coordinates in a realtime. 
+![image](https://img.thingsboard.io/user-guide/ui/widgets/trip-animation-widget/{{EMULATOR}})
 
-Our device receives its longitude, latitude, speed, status, and coordinates of polygon. 
+Emulator is compatible with Node.js version 12 or higher.
 
-Longitude and latitude are the key data for map visualization so that you'll see it on a widget at the dashboard which you chose.
+## Setting up Trip Animation widget
 
-In our example, we use an [emulator](/docs/{{docsPrefix}}user-guide/resources/timeseries-map-bus.js)
- written in javascript to receive telemetry and visualize it on the dashboard. 
+Since our goal is to track the movement of our entity (Tracker1) moved over a certain period, we need to create a dashboard where the telemetry from this device will be visualized.
+We can use an existing one or create a new dashboard. In our example, we create a new dashboard called "My New Dashboard".
 
-### Creating a dashboard
+{% include images-gallery.html imageCollection="create-dashboard-1" showListImageTitles="true" %}
 
-We need to create a dashboard where our telemetry will be visualized. It might be useful if your goal is to track how your entity moved in a specific period. 
+Now let's add the "Trip Animation" widget to the dashboard:
 
-We can use an existing one or create a new dashboard for our new use case. 
+{% include images-gallery.html imageCollection="create-dashboard-2" showListImageTitles="true" %}
 
-In our example, we create a new dashboard called “Dashboard1” for our guide reasons. 
+Now, we can observe the movement of our device over the last minute. Press the "Start" button.
+We can also speed up the movement of our cursor by 5, 10, or 25 times so that we can check its route much faster.
 
-### Adding widget
-
-Now we will open our empty dashboard and edit it. 
-
-![image](/images/user-guide/ui/widgets/trip-animation-widget/1.png)
-
-Now we have an empty dashboard. Let's fill it with some content.
-
-![image](/images/user-guide/ui/widgets/trip-animation-widget/2.png)
-
-Firstly we need to create an **alias** to specify entity from which we’ll receive telemetry data. 
-
-Our entity in this guide will be **“Tracker1”** device which we created previously. We’ll give **“GeoData1”** name to our alias. 
-
-![image](/images/user-guide/ui/widgets/trip-animation-widget/3.png)
-
-Now we go for adding a widget!
-
-![image](/images/user-guide/ui/widgets/trip-animation-widget/4.png)
-
-Trip animation widget is located in Maps bundle 
-
-![image](/images/user-guide/ui/widgets/trip-animation-widget/5.png)
-
-In our widget we add **coordinates**, **latitude**, **longitude**, speed and status from our alias **“GeoData1”** as our parameters. 
-
-They have the same labels as their keys are. Secondly, we create a widget on which we will visualize our telemetry. 
-
-We use **Trip Animation Widget** in our guide. It’s located in **Maps Bundle, Time series tab**. 
-
-Also, we’ll go for “Use dashboard timewindow” so that we’ll make it easier to synchronise our data. 
-
-![image](/images/user-guide/ui/widgets/trip-animation-widget/6.png)
-
-In addition to this, we’ll use last minute received data to visualize and change aggregation function to None, because we don’t need to guess possible data value for the next time period, we receive data in realtime without any errors.
-
-![image](/images/user-guide/ui/widgets/trip-animation-widget/8.png)
-
-Finally, we turn on our emulator (link on it you may find below, in "Device emulator" section).
-
-![image](/images/user-guide/ui/widgets/trip-animation-widget/9.png)
-
-### Widget is ready
-
-Now we can take a look at how our device is being moving for the last minute in a realtime. 
-
-We also can speed up our timeline cursor up to 1,5,10,25 times so that we can make a check on its routing much faster. 
-
-Don’t forget to press the “Start” button. 
-
-![image](/images/user-guide/ui/widgets/trip-animation-widget/3.gif)
+{% include images-gallery.html imageCollection="create-dashboard-3" %}
 
 ## Customization
 
-### Settings tab
+Now that we've added the Trip Animation widget to our dashboard and configured its data source, let's move on to adjusting the settings to explore its key features.
+All further actions will be performed in the widget settings window on the "Appearance" tab. To do this, enter widget editing mode and navigate to the "Appearance" tab.
 
-Now, when we got the basics of what our widget can provide, let us go for editing its settings to make it more functional and eye-catching. Firstly we go to settings, there we can specify:
+{% include images-gallery.html imageCollection="appearance-tab" %}
 
-* Title of widget, its style
+Now let's proceed directly to reviewing each item on the "Appearance" tab in the Trip Animation widget settings.
 
-* Title icon, icon colour, icon size in a px 
+#### Data settings
 
-* Title tooltip Show/Hide 
+In the "Data settings" section you can add a special symbol that will be displayed next to the entity values. Additionally, you can set the number of digits to be displayed after the floating point number, and an alternative message when there is no data to display.
 
-* Enable/disable drop shadow 
+{% include images-gallery.html imageCollection="data-settings" %}
 
-* Enable/disable fullscreen mode for widget
+#### Map provider settings
 
-* Change widget style 
+Choose a map provider from the list or use custom provider.
 
-* Enable/disable data export 
+{% include images-gallery.html imageCollection="map-provider" %}
 
-* Background color, text color, padding, margin
+#### Trip animation settings
 
-* Specify mobile settings
+Here, you specify the names of the data keys containing the coordinates of your entity. By default, these are "latitude" and "longitude".
+You also specify the normalization data step in milliseconds. By default, this value is set to 1000.
 
+{% include images-gallery.html imageCollection="latitude-longitude-key-name" %}
 
-Let's see how it works.
+##### Tooltip
 
-![image](/images/user-guide/ui/widgets/trip-animation-widget/4.gif)
+Make use of this feature to display a tooltip. You can also customize the tooltip to better match your style by changing the background and font colors, as well as adjusting its opacity.
+Alternatively, take advantage of the tooltip function to provide more dynamic content. In our example, the tooltip displays the entity's speed, offering a quick and informative glance at its current pace.
 
-### Advanced tab
+{% include images-gallery.html imageCollection="advanced-settings-tooltip" %}
 
-In a settings tab, we can specify unique parametres for Trip animation widget for functionality that only it can provide. We have:
-
-![image](/images/user-guide/ui/widgets/trip-animation-widget/15.png)
-
-* Map provider 
-
-![image](/images/user-guide/ui/widgets/trip-animation-widget/16.png)
-
-* Normalization data step (ms) 
-
-* Latitude & Longitude key names - you can specify name based on which widget will be updated. It uses data based on the label of the data. So that you may specify label “data-1” for the longitude key value and get longitude from the alias after we edit longitude key name as “data-1”. 
-
-![image](/images/user-guide/ui/widgets/trip-animation-widget/7.gif)
-
-* Widget label, or specify label function (you may change data contained in a widget label based on data, dsData, dsIndex)
-
-![image](/images/user-guide/ui/widgets/trip-animation-widget/5.gif)
- 
-Label function:
+The tooltip function used in the example:
 ```javascript
-var speed = dsData['speed'];
-var res;
-if (speed > 55) {
-    res = "Too Fast"
-} else {
-    res = "Everything is OK"
-}
-return res;
-
-```
-
-* Show/Hide Tooltip, its color, its font color,the opacity of tooltip and tooltip text or use tooltip function (you may change data contained in a tooltip based on data, dsData, dsIndex)
-
-![image](/images/user-guide/ui/widgets/trip-animation-widget/6.gif)
-
-Tooltip function:
-```javascript
-var speed = dsData['speed'];
+var speed = data['speed'];
 var res;
 if (speed > 0) {
-    res = "${entityName} <b>Speed:</b> " + String(speed)
+    res = "${entityName}</br><b>Speed:</b> " + String(speed)
 } else {
-    res = "On The stop"
+    res = "${entityName}</br><b>Status: On The stop</b>"
 }
 return res;
-
 ```
+{: .copy-code}
 
-* Path color or specify path color function (you may change data contained in a tooltip based on data, dsData, dsIndex) - the color of the marker moves 
+#### Markers settings
 
-![image](/images/user-guide/ui/widgets/trip-animation-widget/26.png)
+Set the initial rotation angle of the marker (in degrees).
 
-Path color function:
+{% include images-gallery.html imageCollection="advanced-settings-additional-rotation-angle-for-marker" %}
+
+##### Label function
+
+Show or hide the entity's label. You can also change the label text or utilize a label function for more dynamic information. 
+For example, the label could display the movement status of the entity, providing a quick and clear understanding of its current state.
+
+{% include images-gallery.html imageCollection="advanced-settings-label" %}
+
+The label function used in the example:
 ```javascript
-var speed = dsData['speed'];
+var speed = data['speed'];
 var res;
-if (speed > 50) {
+if (speed > 55) {
+    res = "${entityName}</br>Status: Too Fast"
+} else {
+    res = "${entityName}</br>Status: Everything is OK"
+}
+return res;
+```
+{: .copy-code}
+
+##### Marker function
+
+You can specify the following parameters to configure the marker:
+
+* Add custom marker image and set its size;
+
+{% include images-gallery.html imageCollection="advanced-settings-marker-image" %}
+
+* Use marker image function. For example, you can visually represent the speed of your vehicles in real-time by uploading several marker images, and they will change depending on the speed of the bus.
+
+{% include images-gallery.html imageCollection="advanced-settings-marker-image-function" %}
+
+The marker image function used in the example:
+```javascript
+var speed = data['speed'];
+var res = {
+    url: images[0],
+    size: 40
+}
+if (speed < 55) {
+    res.url = images[0];
+} else {
+    res.url = images[1];
+}
+return res;
+```
+{: .copy-code}
+
+#### Path settings
+
+You have the option to choose the path color or use the path color function. For example, the path color can change with increasing or decreasing speed, providing an intuitive visual cue about the pace at which the object is moving.
+
+{% include images-gallery.html imageCollection="advanced-settings-path-color-function" %}
+
+The path color function used in the example:
+```javascript
+var speed = data['speed'];
+var res;
+if (speed > 55) {
     res = "red"
 } else {
     res = "green"
 }
 return res;
 ```
+{: .copy-code}
 
-* Path decorator, its size in px, end/beginning offset, decorator repeater, stroke weight and stroke opacity
+##### Path decorator
 
-![image](/images/user-guide/ui/widgets/trip-animation-widget/27.png)
+Set the path decorator symbol, its color, end/start offset, repeatability, and size in pixels.
 
-#### Polygon options
+{% include images-gallery.html imageCollection="advanced-settings-path-decorator" %}
 
-What’s a polygon? It’s a plane figure that’s described by a finite number of dots. We use polygon which is based on coordinates that are specified within the device we use, but you can use any other entity. 
+#### Points settings
 
-You may mark your assets and any other entities with a polygon option. For the polygon, we can specify the next settings. Polygon coordinates are being received in a format:
+The points represent telemetry data updates, allowing you to check each one individually. 
+
+{% include images-gallery.html imageCollection="advanced-settings-points-settings" %}
+
+You have the option to specify the color and size (in pixels) of the points to match your preferences or use a color point function.
+This function allows you to visually track changes in data based on incoming telemetry from your entity.
+
+{% include images-gallery.html imageCollection="advanced-settings-point-color-function" %}
+
+The points color function used in the example:
+```javascript
+var speed = data['speed'];
+var res;
+if (speed > 55) {
+    res = "red"
+} else {
+    res = "green"
+}
+return res;
+```
+{: .copy-code}
+
+The "Point as an anchor" feature allows you to navigate through data points based on a condition specified in the function. This makes it easier to sift through information according to specific criteria.
+
+{% include images-gallery.html imageCollection="advanced-settings-anchor-function" %}
+
+The point as anchor function used in the example:
+```javascript
+var speed = data['speed'];
+if (speed > 55) {
+    return true;
+} else {
+    return false;
+}
+```
+{: .copy-code}
+
+#### Polygon settings
+
+What’s a polygon? It’s a plane figure that’s described by a finite number of dots. You may mark your assets and any other entities with a polygon option.
+We use polygon which is based on coordinates that are specified within the device we use, but you can use any other entity.
+
+To add a polygon to the Trip Animation map widget, you need to: 
+- Have a device that transmits the coordinates of the polygon as telemetry data. Polygon coordinates are being received in a format:
 
 ```
-[[1CoordinateLatitude,1CoordinateLatitude],[2CoordinateLatitude,2CoordinateLatitude]...[nCoordinateLatitude,nCoordinateLatitude]]
+[[1CoordinateLatitude,1Coordinatelongitude],[2CoordinateLatitude,2Coordinatelongitude]...[nCoordinateLatitude,nCoordinatelongitude]]
 ``` 
 
 where **n** - number of coordinates which polygon is described by.
 
-* Show/Hide polygon
+Polygon coordinates in our example:
 
-* Polygon tooltip text or polygon tooltip function (you may change data contained in a polygon tooltip based on data, dsData, dsIndex) 
-
-* Polygon color, opacity
-
-* Polygon border color, opacity, weight 
-
-* Polygon color function  (you may change polygon color based on data, dsData, dsIndex)
-
-![image](/images/user-guide/ui/widgets/trip-animation-widget/28.png)
-
-#### Points options
-
-The next option is a show points option. Points are a telemetry data updates so that you can check each. For the points next options are available.
-
-* Show/Hide points
-
-* Point color
-
-* Point size px
-
-* Use point as an anchor, point as an anchor function (you may change data contained in a polygon tooltip based on data, dsData, dsIndex)
-
-* Independent point tooltip
-
-* Auto-close point popup 
-
-![image](/images/user-guide/ui/widgets/trip-animation-widget/2.gif)
-
-#### Marker options
-
-In addition to all of this, there are some settings for the marker and you can specify next settings for it:
-
-* Color for default marker
-
-* Custom marker image 
-
-* Custom marker image size px 
-
-* Set additional rotation angle for marker
-
-* Marker image function (you may change marker image, marker image color based on data, dsData, dsIndex)
-
-* Specify other possible marker images, which can be used in a marker image function
-
-![image](/images/user-guide/ui/widgets/trip-animation-widget/1.gif)
-
-Marker image function:
-```javascript
-var speed = dsData['speed'];
-var res;
-if (speed > 55) {
-    res = images[0];
-} else {
-    res = images[1];
-}
-return res;
 ```
+[[37.770835,-122.510163],[37.771586,-122.495633],[37.772773,-122.471776],[37.773354,-122.461562],[37.774558,-122.454910],[37.767407,-122.454612],[37.766195,-122.466924],[37.765866,-122.477787],[37.764699,-122.509657]]
+``` 
 
-## Video tutorial 
+- Add a polygon data key to the "Timeseries data keys" field of the "Trip Animation" widget;
+- Turn on "Show polygon" option and add polygon key to the "Polygon key name" field of the "Polygon settings" section.
+
+{% include images-gallery.html imageCollection="advanced-settings-polygon-settings-1" %}
+
+<br>
+The following settings are available for the polygon:
+
+* Check the "Enable polygon edit" checkbox to add a polygon editing menu to the map. With these tools, you can add a new polygon, move points of an existing polygon, move the entire polygon, cut the polygon area, or delete the polygon directly on the map widget.
+
+{% include images-gallery.html imageCollection="advanced-settings-polygon-settings-2" %}
+
+* Show or hide the label on the polygon. Change the text of the label or specify a function for the label to dynamically display data based on conditions you determined.
  
-We also recommend you to review this video tutorial.
+{% include images-gallery.html imageCollection="advanced-settings-polygon-settings-3" %}
 
-  
-<div id="video">  
-    <div id="video_wrapper">
-        <iframe src="https://www.youtube.com/embed/qWCmDjca-T8" frameborder="0" allowfullscreen></iframe>
-    </div>
-</div>
+* Show/hide the polygon tooltip. You have the option to change the text within the tooltip or specify a function for the tooltip. It allows you to dynamically change specific information based on conditions you specify, making your tooltip more informative.
 
+{% include images-gallery.html imageCollection="advanced-settings-polygon-settings-4" %}
 
-## Device emulator
- 
-[Emulator](/docs/{{docsPrefix}}user-guide/resources/timeseries-map-bus.js)
+* Change the color of the polygon or adjust the opacity of the polygon to suit your specific needs. Additionally, you have the option to specify a polygon color function, allowing the color to dynamically change based on conditions you specify.
 
-In order to execute script go for a command line:
-```bash
-node timeseries-map-bus.js $ACCESSTOKEN
+{% include images-gallery.html imageCollection="advanced-settings-polygon-settings-5" %}
+
+* Customize the appearance of your polygon by changing the stroke color, adjusting its opacity, and modifying the weight to better suit your visual needs. You can also set up a polygon stroke color function. This allows the stroke color to change automatically based on certain conditions or data, adding interactivity to your visualization.
+
+{% include images-gallery.html imageCollection="advanced-settings-polygon-settings-6" %}
+
+#### Circle settings
+
+Circle is a plane figure, boundary points of which are always the same distance away from a fixed central point. You may mark your assets and any other entities with a circle option.
+We use circle which is based on coordinates that are specified within the device we use, but you can use any other entity.
+
+To add a circle to the Trip Animation map widget, you need to:
+- Have a device that transmits the coordinates of the circle as telemetry data. Circle coordinates are being received in a format:
+
 ```
-Where **$ACCESSTOKEN** is your **Device** **access token**.
+{"latitude":Coordinatelatitude, "longitude":Coordinatelongitude, "radius":radius}
+``` 
 
-**$ACCESSTOKEN** is located in a **Device details**. 
-![image](/images/user-guide/ui/widgets/trip-animation-widget/34.png)
+Circle coordinates in our example:
 
-Emulator is capable with Node.js v8.10.0
+```
+{"latitude":37.770460000, "longitude":-122.510870000, "radius":700}
+``` 
+
+- Add a circle data key to the "Timeseries data keys" field of the "Trip Animation" widget;
+- Turn on "Show circle" option and specify circle key to the "Circle key name" field of the "Circle settings" section.
+
+{% include images-gallery.html imageCollection="advanced-settings-circle-settings-1" %}
+
+<br>
+The following settings are available for the circle:
+
+* Check the "Enable circle edit" checkbox to add a circle editing menu to the map. With these tools, you can add a new circle, modify the radius, move, or delete the circle directly on the map widget.
+
+{% include images-gallery.html imageCollection="advanced-settings-circle-settings-2" %}
+
+* Show or hide the label on the circle. Change the text of the label or specify a function for the label to dynamically display data based on specific conditions.
+
+{% include images-gallery.html imageCollection="advanced-settings-circle-settings-3" %}
+
+* Show/hide the circle tooltip. You have the option to change the text within the tooltip or specify a function for the tooltip. It allows you to dynamically change specific information based on the circle's incoming data, making your tooltip more informative.
+
+{% include images-gallery.html imageCollection="advanced-settings-circle-settings-4" %}
+
+* Change the color of the circle or adjust the opacity of the circle to suit your specific needs. Additionally, you have the option to specify a circle color function, allowing the color to dynamically change based on certain conditions.
+
+{% include images-gallery.html imageCollection="advanced-settings-circle-settings-5" %}
+
+* Customize the appearance of your circle by changing the stroke color, adjusting its opacity, and modifying the weight to better suit your visual needs. You can also set up a circle stroke color function. This allows the stroke color to change automatically based on certain conditions or data, adding interactivity to your visualization.
+
+{% include images-gallery.html imageCollection="advanced-settings-circle-settings-6" %}

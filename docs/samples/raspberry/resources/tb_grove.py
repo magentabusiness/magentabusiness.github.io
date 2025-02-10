@@ -18,8 +18,8 @@ logging.basicConfig(level=logging.INFO,
 
 log = logging.getLogger(__name__)
 
-thingsboard_server = 'THINGSBOARD_HOST'
-access_token = 'ACCESS_TOKEN'
+THINGSBOARD_SERVER = 'THINGSBOARD_HOST'
+ACCESS_TOKEN = 'ACCESS_TOKEN'
 
 
 def main():
@@ -27,7 +27,7 @@ def main():
     # Grove - Servo connected to PWM port
     servo = GroveServo(12)
     servo_angle = 90
-    
+
     # Grove - mini PIR motion pir_sensor connected to port D5
     pir_sensor = GroveMiniPIRMotionSensor(5)
 
@@ -48,7 +48,7 @@ def main():
     dht_sensor = DHT('11', 22)
 
     # Callback for server RPC requests (Used for control servo and led blink)
-    def on_server_side_rpc_request(request_id, request_body):
+    def on_server_side_rpc_request(client, request_id, request_body):
         log.info('received rpc: {}, {}'.format(request_id, request_body))
         if request_body['method'] == 'getLedState':
             client.send_rpc_reply(request_id, light_state)
@@ -62,7 +62,7 @@ def main():
             client.send_rpc_reply(request_id, servo_angle)
 
     # Connecting to IoT Hub
-    client = TBDeviceMqttClient(thingsboard_server, access_token)
+    client = TBDeviceMqttClient(THINGSBOARD_SERVER, username=ACCESS_TOKEN)
     client.set_server_side_rpc_request_handler(on_server_side_rpc_request)
     client.connect()
 

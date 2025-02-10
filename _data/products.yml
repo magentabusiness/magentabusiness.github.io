@@ -67,3 +67,67 @@
 #  path: /docs/pe/mobile/
 #  docsPrefix: /docs/pe/mobile/
 #  getStarted: /docs/pe/mobile/getting-started/
+#- title: Cloud
+#  fulltitle: ThingsBoard Cloud
+#  description: ThingsBoard Documentation
+#  tag: paas
+#  icon: https://img.thingsboard.io/thingsboard-c-icon.svg
+#  path: /docs/paas/
+#  guides: /docs/paas/guides/
+#  getStarted: /docs/paas/getting-started-guides/helloworld/
+#  docsPrefix: /docs/paas/
+#- title: Edge
+#  fulltitle: ThingsBoard Edge
+#  description: ThingsBoard Edge Documentation
+#  tag: edge
+#  icon: https://img.thingsboard.io/thingsboard-e-icon.svg
+#  path: /docs/edge/
+#- title: PE Edge
+#  fulltitle: ThingsBoard PE Edge
+#  description: ThingsBoard PE Edge Documentation
+#  tag: edge-pe
+#  icon: https://img.thingsboard.io/thingsboard-e-icon.svg
+#  path: /docs/pe/edge/
+#- title: IoT Gateway
+#  fulltitle: ThingsBoard IoT Gateway
+#  description: ThingsBoard Documentation
+#  tag: gw
+#  icon: https://img.thingsboard.io/gateway-icon.svg
+#  path: /docs/iot-gateway/
+#  getStarted: /docs/iot-gateway/getting-started/
+#- title: License Server
+#  fulltitle: ThingsBoard License Server
+#  description: ThingsBoard Documentation
+#  tag: license
+#  icon: https://img.thingsboard.io/license-icon.svg
+#  path: /products/license-server/
+#- title: Trendz Analytics
+#  fulltitle: Trendz Analytics
+#  description: Trendz Documentation
+#  tag: trendz
+#  icon: https://img.thingsboard.io/trendz-icon.svg
+#  path: /docs/trendz/
+#  getStarted: /docs/trendz/getting-started/
+#- title: Mobile Application
+#  fulltitle: ThingsBoard Mobile Application
+#  description: Mobile Application Documentation
+#  tag: mobile
+#  icon: https://img.thingsboard.io/tb-mobile-icon.svg
+#  path: /docs/mobile/
+#  docsPrefix: /docs/mobile/
+#  getStarted: /docs/mobile/getting-started/
+#- title: PE Mobile Application
+#  fulltitle: ThingsBoard PE Mobile Application
+#  description: PE Mobile Application Documentation
+#  tag: mobile-pe
+#  icon: https://img.thingsboard.io/tb-pe-mobile-icon.svg
+#  path: /docs/pe/mobile/
+#  docsPrefix: /docs/pe/mobile/
+#  getStarted: /docs/pe/mobile/getting-started/
+#- title: MQTT Broker
+#  fulltitle: MQTT Broker
+#  description: MQTT Broker Documentation
+#  tag: mqtt-broker
+#  icon: https://img.thingsboard.io/tbmq-icon.svg
+#  path: /docs/mqtt-broker/
+#  getStarted: /docs/mqtt-broker/getting-started/

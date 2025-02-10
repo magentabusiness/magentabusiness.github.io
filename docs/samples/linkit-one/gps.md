@@ -16,14 +16,14 @@ It performs collection of latitude and longitude values produced by GPS module.
 Collected data is pushed to IoT Hub for storage and visualization.
 The purpose of this application is to demonstrate IoT Hub data collection API and visualization capabilities.
 
-The GPS module is a built-in module of [LinkIt ONE](http://wiki.seeed.cc/LinkIt_ONE/). 
+The GPS module is a built-in module of [LinkIt ONE](https://wiki.seeedstudio.com/LinkIt_ONE/). 
 LinkIt ONE pushes data to IoT Hub server via MQTT protocol by using [PubSubClient](https://github.com/knolleary/pubsubclient) library for Arduino.
 Data is visualized using the map widget which is a part of a customizable dashboard. 
 The application that is running on LinkIt ONE is written using Arduino SDK which is quite simple and easy to understand.
 
 Once you complete this sample/tutorial, you will see your device GPS and battery data on the following dashboard.
 
-![image](/images/samples/linkit-one/gps/dashboard.png)
+![image](https://img.thingsboard.io/samples/linkit-one/gps/dashboard.png)
 
 {% include templates/prerequisites.md %}
 
@@ -48,13 +48,13 @@ Open IoT Hub Web UI (http://localhost:8080) in browser and login as tenant admin
  
 Go to "Devices" section. Click "+" button and create a device with the name "LinkIt One Demo Device". 
 
-![image](/images/samples/linkit-one/gps/device.png)
+![image](https://img.thingsboard.io/samples/linkit-one/gps/device.png)
 
 Once device created, open its details and click "Manage credentials".
 
 Copy auto-generated access token from the "Access token" field. Please save this device token. It will be referred to later as **$ACCESS_TOKEN**.
 
-![image](/images/samples/linkit-one/gps/credentials.png)
+![image](https://img.thingsboard.io/samples/linkit-one/gps/credentials.png)
 
 
 Click "Copy Device ID" in device details to copy your device id to the clipboard.
@@ -70,10 +70,8 @@ Use import/export [**instructions**](/docs/user-guide/ui/dashboards/#dashboard-i
 If you already familiar with basics of LinkIt One programming using Arduino IDE you can skip the following step and proceed with step 2.
 
 ### Step 1. LinkIt ONE and Arduino IDE setup.
-In order to start programming LinkIt One device, you will need Arduino IDE installed and all related libraries. Please follow this [guide](http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit/get-started/windows_os_stream/install/index.gsp) in order to install the Arduino IDE and LinkIt One SDK:
 
-It's recommended to update your firmware by following [this guide](http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit/get-started/windows_os_stream/update_firmware/index.gsp).
-To try your first LinkIt One sample, please follow [this guide](http://labs.mediatek.com/site/global/developer_tools/mediatek_linkit/get-started/windows_os_stream/configure/index.gsp).
+In order to start programming LinkIt One device, you will need Arduino IDE installed and all related libraries. Please follow this [guide](https://github.com/MediaTek-Labs) in order to install the Arduino IDE and LinkIt One SDK:
 
 ### Step 2. PubSubClient library installation.
 
@@ -115,7 +113,7 @@ in case of local IoT Hub installation.
 Go to **"Devices"** section and locate **"LinkIt One Demo Device"**, open device details and switch to **"Attributes"** tab. 
 If all is configured correctly you should be able to see *"latitude"*, *"longitude"* and battery status attributes and their latest values in the table.
 
-![image](/images/samples/linkit-one/gps/attributes.png)
+![image](https://img.thingsboard.io/samples/linkit-one/gps/attributes.png)
 
 After, open **"Dashboards"** section then locate and open **"LinkIt One GPS Tracking Demo Dashboard"**. 
 As a result, you will see the map widget with a pointer indicating your device location and a battery level widget (similar to dashboard image in the introduction).
