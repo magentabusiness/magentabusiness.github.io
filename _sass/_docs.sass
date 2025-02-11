@@ -1,46 +1,46 @@
 #docs
   &.ce
-    --tb-main-color: #305680
+    --tb-main-color: #e20074
     --tb-main-background: rgba(48, 86, 128, 0.08)
     --tb-main-color-filter: invert(29%) sepia(61%) saturate(478%) hue-rotate(171deg) brightness(94%) contrast(93%)
   &.pe
-    --tb-main-color: #1F8B4D
+    --tb-main-color: #e20074
     --tb-main-background: rgba(31, 139, 77, 0.08)
     --tb-main-color-filter: invert(25%) sepia(43%) saturate(5965%) hue-rotate(143deg) brightness(97%) contrast(76%)
   &.paas
-    --tb-main-color: #2A7DEC
+    --tb-main-color: #e20074
     --tb-main-background: rgba(42, 125, 236, 0.08)
     --tb-main-color-filter: invert(37%) sepia(84%) saturate(891%) hue-rotate(184deg) brightness(105%) contrast(88%)
   &.edge
-    --tb-main-color: #2260a7
+    --tb-main-color: #e20074
     --tb-main-background: rgba(34, 96, 167, 0.08)
     --tb-main-color-filter: invert(27%) sepia(97%) saturate(823%) hue-rotate(184deg) brightness(95%) contrast(90%)
   &.edge-pe
-    --tb-main-color: #009688
+    --tb-main-color: #e20074
     --tb-main-background: rgba(0, 150, 136, 0.08)
     --tb-main-color-filter: invert(42%) sepia(85%) saturate(4933%) hue-rotate(156deg) brightness(96%) contrast(102%)
   &.gw
-    --tb-main-color: #7A4DC3
+    --tb-main-color: #e20074
     --tb-main-background: rgba(122, 77, 195, 0.08)
     --tb-main-color-filter: invert(43%) sepia(48%) saturate(952%) hue-rotate(223deg) brightness(78%) contrast(96%)
   &.license
-    --tb-main-color: #1F8B4D
+    --tb-main-color: #e20074
     --tb-main-background: rgba(31, 139, 77, 0.08)
     --tb-main-color-filter: invert(25%) sepia(43%) saturate(5965%) hue-rotate(143deg) brightness(97%) contrast(76%)
   &.trendz
-    --tb-main-color: #2696F3
+    --tb-main-color: #e20074
     --tb-main-background: rgba(42, 125, 236, 0.08)
     --tb-main-color-filter: invert(62%) sepia(61%) saturate(4424%) hue-rotate(184deg) brightness(94%) contrast(102%)
   &.mobile
-    --tb-main-color: #305680
+    --tb-main-color: #e20074
     --tb-main-background: rgba(48, 86, 128, 0.08)
     --tb-main-color-filter: invert(29%) sepia(61%) saturate(478%) hue-rotate(171deg) brightness(94%) contrast(93%)
   &.mobile-pe
-    --tb-main-color: #1F8B4D
+    --tb-main-color: #e20074
     --tb-main-background: rgba(31, 139, 77, 0.08)
     --tb-main-color-filter: invert(25%) sepia(43%) saturate(5965%) hue-rotate(143deg) brightness(97%) contrast(76%)
   &.mqtt-broker
-    --tb-main-color: #1F8B4D
+    --tb-main-color: #e20074
     --tb-main-background: rgba(31, 139, 77, 0.08)
     --tb-main-color-filter: invert(25%) sepia(43%) saturate(5965%) hue-rotate(143deg) brightness(97%) contrast(76%)
 
@@ -101,7 +101,7 @@
 
 #docs
   header
-    box-shadow: none
+    box-shadow: 0 1px 0 #ebebeb
     .logo-burger
       .support-ukraine, .logo
         @media screen and (max-width: 1280px)
@@ -114,15 +114,10 @@
     left: 0
     right: 0
     z-index: 7888
-    height: 60px
+    height: 74px
     box-shadow: 0 0 20px rgba(0, 0, 0, .1), 0 0 40px rgba(0, 0, 0, .1)
     #hero-content
       height: 100%
-    @media screen and (min-width: 1281px)
-      box-shadow: none
-      padding-left: 296px
-    @media screen and (min-width: 1600px)
-      padding-left: 362px
   &.flip-nav
     #hero
       transition-duration: 0.3s
@@ -448,10 +443,10 @@
       color: #75767C
       line-height: 24px
       &:hover
-        color: #2a7dec
+        color: #e20074
     a.item > .title
       &:hover
-        color: #2a7dec
+        color: #e20074
     div.item > .title
       padding-left: 38px
       &:before
@@ -462,7 +457,7 @@
         display: block
         position: absolute
         left: 18px
-        top: 7.5px
+        top: 12px
         transform: rotate(0deg)
         transition: transform 0.3s
         border: none
@@ -472,7 +467,7 @@
         font-weight: 500
         color: #212529
         &:hover
-          color: #2a7dec
+          color: #e20074
         &:before
           transform: rotate(90deg)
 
@@ -655,36 +650,31 @@ a.feature-card
 
 .products-selector
   position: fixed
-  height: 60px
-  top: 10px
+  height: 80px
+  top: 0
   left: 20px
   width: calc(100% - 100px)
   display: flex
   flex-direction: row
   align-items: center
-  z-index: 8000
+  z-index: 10001
   @media screen and (min-width: 769px)
     width: 270px
   @media screen and (min-width: 870px)
     width: 348px
   @media screen and (min-width: 1281px)
     width: 270px
-    top: 80px
   @media screen and (min-width: 1601px)
     width: 338px
-  @media screen and (max-width: 1280px)
-    z-index: 10001
 
   .product-info
     display: flex
     flex-direction: column
     width: 316px
     height: 44px
-    padding-left: 16px
     flex: 1
     justify-content: center
     border-radius: 8px
-    background: var(--tb-main-background)
     @media screen and (max-width: 769px)
       width: 270px
     @media screen and (min-width: 769px)
@@ -696,13 +686,11 @@ a.feature-card
     @media screen and (min-width: 1601px)
       width: 338px
     .product-title
-      font-size: 18px
-      font-weight: 500
+      font-size: 16px
+      font-weight: 600
       line-height: 24px
       position: relative
-      color: var(--tb-main-color)
-      @media screen and (max-width: 1024px)
-        font-size: 16px
+      color: #212529
       &::after
         content: "\f054"
         font-family: 'Font Awesome 5 Free'

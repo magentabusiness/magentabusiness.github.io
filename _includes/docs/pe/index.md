@@ -177,142 +177,142 @@ die Quickstartguides und die Hilfe unter [https://docs.iothub.magenta.at](https:
             <div class="row mt-4">
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/http/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/http.svg" alt="HTTP logo icon"><span>HTTP</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/http.svg" alt="HTTP logo icon"><span>HTTP</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/opc-ua/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/opc-ua.svg" alt="OPC-UA logo icon"><span>OPC-UA</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/opc-ua.svg" alt="OPC-UA logo icon"><span>OPC-UA</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/mqtt/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/mqtt.svg" alt="MQTT logo icon"><span>MQTT</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/mqtt.svg" alt="MQTT logo icon"><span>MQTT</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/sigfox/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/sigfox.svg" alt="SigFox logo icon"><span>SigFox</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/sigfox.svg" alt="SigFox logo icon"><span>SigFox</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/tcp/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/tcp.svg" alt="TCP logo icon"><span>TCP</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/tcp.svg" alt="TCP logo icon"><span>TCP</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/azure-event-hub/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/azure-event-hub.svg" alt="Azure Event Hub logo icon"><span>Azure Event Hub</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/azure-event-hub.svg" alt="Azure Event Hub logo icon"><span>Azure Event Hub</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/azure-iot-hub/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/azure-iot-hub.svg" alt="Azure IoT Hub logo icon"><span>Azure IoT Hub</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/azure-iot-hub.svg" alt="Azure IoT Hub logo icon"><span>Azure IoT Hub</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/coap/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/coap.svg" alt="CoAP logo icon"><span>CoAP</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/coap.svg" alt="CoAP logo icon"><span>CoAP</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/thingpark/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/thingpark.svg" alt="Thing Park logo icon"><span>ThingPark</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/thingpark.svg" alt="Thing Park logo icon"><span>ThingPark</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/ttn/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/ttn.svg" alt="The Things Stack Community logo icon"><span>TheThingsStackCommunity</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/ttn.svg" alt="The Things Stack Community logo icon"><span>TheThingsStackCommunity</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/tti/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/things-stack-industries.svg" alt="The Things Stack Industries logo icon"><span>TheThingsStackIndustries</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/things-stack-industries.svg" alt="The Things Stack Industries logo icon"><span>TheThingsStackIndustries</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/chirpstack/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/chirpstack.svg" alt="Chirp Stack logo icon"><span>ChirpStack</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/chirpstack.svg" alt="Chirp Stack logo icon"><span>ChirpStack</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/apache-pulsar.svg" alt="Apache Pulsar logo icon"><span>Apache Pulsar</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/apache-pulsar.svg" alt="Apache Pulsar logo icon"><span>Apache Pulsar</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/aws-iot/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/aws-iot.svg" alt="AWS IoT logo icon"><span>AWS IoT</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/aws-iot.svg" alt="AWS IoT logo icon"><span>AWS IoT</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/aws-kinesis/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/aws-kinesis.svg" alt="AWS Kinesis logo icon"><span>AWS Kinesis</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/aws-kinesis.svg" alt="AWS Kinesis logo icon"><span>AWS Kinesis</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/aws-sqs.svg" alt="AWS SQS logo icon"><span>AWS SQS</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/aws-sqs.svg" alt="AWS SQS logo icon"><span>AWS SQS</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/custom.svg" alt="Custom properties icon"><span>Custom</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/custom.svg" alt="Custom properties icon"><span>Custom</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/ibm-watson-iot/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/ibm-watson-iot.svg" alt="IBM Watson IoT"><span>IBM Watson IoT</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/ibm-watson-iot.svg" alt="IBM Watson IoT"><span>IBM Watson IoT</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/kafka/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/kafka.svg" alt="Kafka"><span>Kafka</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/kafka.svg" alt="Kafka"><span>Kafka</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/loriot/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/loriot.svg" alt="Loriot"><span>Loriot</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/loriot.svg" alt="Loriot"><span>Loriot</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/ocean-connect/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/ocean-connect.svg" alt="Ocean Connect"><span>Ocean Connect</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/ocean-connect.svg" alt="Ocean Connect"><span>Ocean Connect</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/pub-sub.svg" alt="Pub/Sub"><span>Pub-Sub</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/pub-sub.svg" alt="Pub/Sub"><span>Pub-Sub</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/rabbitmq.svg" alt="RabbitMQ"><span>RabbitMQ</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/rabbitmq.svg" alt="RabbitMQ"><span>RabbitMQ</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/thingpark/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/thingpark.svg" alt="ThingPark"><span>Thing Park</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/thingpark.svg" alt="ThingPark"><span>Thing Park</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/thingpark-enterprise.svg" alt="Thing Park Enterprise logo icon"><span>ThingParkEnterprise</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/thingpark-enterprise.svg" alt="Thing Park Enterprise logo icon"><span>ThingParkEnterprise</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/udp/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/udp.svg" alt="UDP logo icon"><span>UDP</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/udp.svg" alt="UDP logo icon"><span>UDP</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/iotcreators.com.svg" alt="T-Mobile – IoT CDP logo icon"><span>iotcreators.com (T-Mobile – IoT CDP)</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/iotcreators.com.svg" alt="T-Mobile – IoT CDP logo icon"><span>iotcreators.com (T-Mobile – IoT CDP)</span></div>
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
                     <a class="feature-card inner" href="/docs/{{peDocsPrefix}}user-guide/integrations/tuya/">
-                        <div class="feature-title"><img class="integration-logo" src="https://img.thingsboard.io/feature-logo/integration/tuya.svg" alt="Tuya logo icon"><span>Tuya</span></div>
+                        <div class="feature-title"><img class="integration-logo" src="/images/feature-logo/integration/tuya.svg" alt="Tuya logo icon"><span>Tuya</span></div>
                     </a>
                 </div>
             </div>
