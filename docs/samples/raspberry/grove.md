@@ -28,7 +28,7 @@ At the end we will get the following result:
 <br>
 <br>
 
-<img src="https://img.thingsboard.io/samples/raspberry/grove/grove-image.gif" alt="grove image">
+<img src="/images/samples/raspberry/grove/grove-image.gif" alt="grove image">
 
 
 </div>
@@ -62,7 +62,7 @@ In our case we connect following modules:
 <br>
 
 
-![image](https://img.thingsboard.io/samples/raspberry/grove/raspberry-grove-base-hat.jpg)
+![image](/images/samples/raspberry/grove/raspberry-grove-base-hat.jpg)
 
 
 <br>
@@ -129,7 +129,7 @@ Also we need say to IoT Hub that we want to connect this device and get the devi
 <br>
 
 
-![image](https://img.thingsboard.io/samples/raspberry/grove/create-access-token.gif)
+![image](/images/samples/raspberry/grove/create-access-token.gif)
 
 
 <br>
@@ -313,7 +313,7 @@ The results of script running - you can see on the dashboard.
 <br>
 
 
-![image](https://img.thingsboard.io/samples/raspberry/grove/dashboard.png)
+![image](/images/samples/raspberry/grove/dashboard.png)
 
 <br>
 

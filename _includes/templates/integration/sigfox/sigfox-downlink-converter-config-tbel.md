@@ -21,4 +21,4 @@ return result;
 ```
 {: .copy-code}
 
-![image](https://img.thingsboard.io/user-guide/integrations/sigfox/sigfox-create-downlink-converter-tbel-1-pe.png)
+![image](/images/user-guide/integrations/sigfox/sigfox-create-downlink-converter-tbel-1-pe.png)

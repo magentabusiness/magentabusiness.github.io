@@ -8,40 +8,25 @@ hidetoc: "true"
 
 {% assign feature = "Platform Integrations" %}{% include templates/pe-feature-banner.md %}
 
-<<<<<<< HEAD
 This guide contains step-by-step instruction how to to connect your SODAQ NB-IoT boards to IoT Hub  through the T-Mobile NB IoT network. 
 We will use free IoT Hub demo server [iothub.magenta.at](https://iothub.magenta.at/signup) in this guide. 
-This guide will be useful for anyone who wants to connect their SODAQ NB-IoT boards or other hardware to T-Mobile NB IoT network.   
-=======
-This guide contains step-by-step instruction how to to connect your SODAQ NB-IoT boards to ThingsBoard Professional Edition (PE) through the T-Mobile NB IoT network.
-We will use free ThingsBoard PE demo server [thingsboard.cloud](https://thingsboard.cloud/signup) in this guide.
 This guide will be useful for anyone who wants to connect their SODAQ NB-IoT boards or other hardware to T-Mobile NB IoT network.
->>>>>>> ad368c0ed5d3799cf901e3e0c5e84bf8564eb1c6
 
 * TOC
 {:toc}
 
 ## Prerequisites
 
-<<<<<<< HEAD
 We assume you have at least one of SODAQ NB-IoT Trackers in your lab that is already connected to your T-Mobile IoT network. 
 We also assume you already have a IoT Hub server or free demo account. 
 Otherwise you can register for a 30-days free demo account here: [iothub.magenta.at](https://iothub.magenta.at/signup).
 
-We expect you have a very basic knowledge about IoT Hub. Otherwise we do recommend to complete the following guides: 
-=======
-We assume you have at least one of SODAQ NB-IoT Trackers in your lab that is already connected to your T-Mobile IoT network.
-We also assume you already have a ThingsBoard PE server or free demo account.
-Otherwise you can register for a 30-days free demo account here: [thingsboard.cloud](https://thingsboard.cloud/signup).
-
-We expect you have a very basic knowledge about ThingsBoard. Otherwise we do recommend to complete the following guides:
->>>>>>> ad368c0ed5d3799cf901e3e0c5e84bf8564eb1c6
+We expect you have a very basic knowledge about IoT Hub. Otherwise we do recommend to complete the following guides:
 - [Getting Started](/docs/getting-started-guides/helloworld/) guide.
 - [Platform Integrations](/docs/user-guide/integrations/) guide.
 
 ## Integration overview
 
-<<<<<<< HEAD
 IoT Hub Platform Integrations feature allows to push data from various platforms and connectivity solutions to IoT Hub. 
 We will use "UDP" platform integration to consume data from T-Mobile NB IoT Network and automatically register devices in IoT Hub.
 Besides configuring the integration, we will also setup IoT Hub to decode incoming data, store it in the database, visualize on the dashboard and generate alarms based on configurable thresholds.
@@ -50,16 +35,6 @@ Besides configuring the integration, we will also setup IoT Hub to decode incomi
 
 In order to create an [Integration](/docs/user-guide/integrations), we should create the [Uplink Data Converter](/docs/user-guide/integrations/#uplink-data-converter) first. 
 The converter will decode incoming telemetry payload data from T-Mobile NB IoT that contains in encoded hex string to human readable, simplified IoT Hub data format.
-=======
-ThingsBoard Platform Integrations feature allows to push data from various platforms and connectivity solutions to ThingsBoard.
-We will use "UDP" platform integration to consume data from T-Mobile NB IoT Network and automatically register devices in ThingsBoard.
-Besides configuring the integration, we will also setup ThingsBoard to decode incoming data, store it in the database, visualize on the dashboard and generate alarms based on configurable thresholds.
-
-## Step 1. Data Converter configuration
-
-In order to create an [Integration](/docs/user-guide/integrations), we should create the [Uplink Data Converter](/docs/user-guide/integrations/#uplink-data-converter) first.
-The converter will decode incoming telemetry payload data from T-Mobile NB IoT that contains in encoded hex string to human readable, simplified ThingsBoard data format.
->>>>>>> ad368c0ed5d3799cf901e3e0c5e84bf8564eb1c6
 
  - Input data from T-Mobile NB IoT Platform is a byte sequence and after converting them to a hexadecimal string-type look like this:
 
@@ -242,7 +217,7 @@ Few things to notice:
 - Import following json file: [**SODAQ UDP Uplink Data Converter**](/docs/user-guide/resources/sodaq/sodaq_udp_uplink_data_converter.json) (left click on the link and then 'Ctrl+S' to download)
 as described on the following screencast:
 
-<img data-gifffer="https://img.thingsboard.io/user-guide/integrations/sodaq/import-udp-converter_updated.gif" alt="import udp converter updated">
+<img data-gifffer="/images/user-guide/integrations/sodaq/import-udp-converter_updated.gif" alt="import udp converter updated">
 
 ## Step 2. Integration configuration
 
@@ -251,7 +226,7 @@ as described on the following screencast:
   Please, note that you should copy **Integration key** and **Integration secret** as described in the [**UDP Integration Setup**](/docs/user-guide/integrations/udp/#udp-integration-setup) guide.
 
 
-<img data-gifffer="https://img.thingsboard.io/user-guide/integrations/sodaq/create-udp-integration.gif" alt="create udp integration">
+<img data-gifffer="/images/user-guide/integrations/sodaq/create-udp-integration.gif" alt="create udp integration">
 
 - Fill in the fields with the input data shown in the following table:
 
@@ -324,7 +299,7 @@ Navigate to Integration Debug Events and check that data real arrives and is pro
 
 Device with name **357518080211964** should be created.
 
-<img data-gifffer="https://img.thingsboard.io/user-guide/integrations/sodaq/validate-udp-integration.gif" alt="validate udp integration">
+<img data-gifffer="/images/user-guide/integrations/sodaq/validate-udp-integration.gif" alt="validate udp integration">
 
 ## Next steps
 

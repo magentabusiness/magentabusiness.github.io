@@ -17,18 +17,11 @@ docker run -it -v tb-pe-mqtt-integration-logs:/var/log/tb-mqtt-integration `
 {: .copy-code}
 
 Where: 
-    
-<<<<<<< HEAD
+
 - `iothub.magenta.at` - is the host name of your IoT Hub instance;
 - `9090` - is the port of your IoT Hub instance. It is configured in thingsboard.yml using INTEGRATIONS_RPC_PORT env variable;    
-- `YOUR_ROUTING_KEY` - placeholder for your integration routing key obtained on [Step 3](/docs/user-guide/integrations/remote-integrations/#step-3-save-remote-integration-credentials);
-- `YOUR_SECRET` - placeholder for your integration secret obtained on [Step 3](/docs/user-guide/integrations/remote-integrations/#step-3-save-remote-integration-credentials);
-=======
-- `thingsboard.cloud` - is the host name of your ThingsBoard PE instance;
-- `9090` - is the port of your ThingsBoard PE instance. It is configured in thingsboard.yml using INTEGRATIONS_RPC_PORT env variable;    
-- `YOUR_ROUTING_KEY` - placeholder for your **integration key** obtained on [create remote integration in ThingsBoard](#create-remote-integration-in-thingsboard);
-- `YOUR_SECRET` - placeholder for your **integration secret** obtained on [create remote integration in ThingsBoard](#create-remote-integration-in-thingsboard);
->>>>>>> ad368c0ed5d3799cf901e3e0c5e84bf8564eb1c6
+- `YOUR_ROUTING_KEY` - placeholder for your **integration key** obtained on [create remote integration in IoT Hub](#create-remote-integration-in-thingsboard);
+- `YOUR_SECRET` - placeholder for your **integration secret** obtained on [create remote integration in IoT Hub](#create-remote-integration-in-thingsboard);
 - `docker run`              - run this container;
 - `-it`                     - attach a terminal session with current IoT Hub process output;
 - `-v tb-pe-mqtt-integration-logs:/var/log/tb-mqtt-integration`   - mounts the host's dir `~/.tb-pe-mqtt-integration-logs` to IoT Hub logs directory;

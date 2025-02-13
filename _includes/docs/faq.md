@@ -15,11 +15,7 @@ You can find more information on the dedicated page.
 {% if docsPrefix contains 'paas/' %}
 We recommend to follow the [getting started guide](/docs/{{docsPrefix}}getting-started-guides/helloworld/).
 {% else %}
-<<<<<<< HEAD
-We recommend to [install](/docs/{{docsPrefix}}user-guide/install/installation-options/) IoT Hub locally on your laptop or PC using Docker
-=======
-We recommend to [install](/docs/user-guide/install/{{docsPrefix}}installation-options/) ThingsBoard locally on your laptop or PC using Docker
->>>>>>> ad368c0ed5d3799cf901e3e0c5e84bf8564eb1c6
+We recommend to [install](/docs/user-guide/install/{{docsPrefix}}installation-options/) IoT Hub locally on your laptop or PC using Docker
 and follow the [getting started guide](/docs/{{docsPrefix}}getting-started-guides/helloworld/).
 {% endif %} -->
 

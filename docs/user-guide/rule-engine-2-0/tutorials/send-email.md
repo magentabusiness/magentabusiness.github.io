@@ -54,11 +54,11 @@ We modified Rule Chain **Create & Clear Alarms** by adding nodes that was descri
 
   - **Create/Clear Alarm & Send Email:**
 
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/email v2/send-email-chain.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/email v2/send-email-chain.png)
 
  - **Root Rule Chain:**
 
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/email v2/root-rule-chain.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/email v2/root-rule-chain.png)
 
 <br>
 
@@ -84,7 +84,7 @@ In this rule chain, you will create 3 nodes as it will be explained in the follo
 
 - Enter the Name field as **Add temperature to metadata**.
 
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/email v2/transform-script.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/email v2/transform-script.png)
 
 #### Node B: **To Email**
 - Add the **To Email** node and connect it to the **Create Alarm** node with a relation type **Created**.
@@ -123,7 +123,7 @@ In this rule chain, you will create 3 nodes as it will be explained in the follo
      </tbody>
   </table>
 
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/email v2/to-email.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/email v2/to-email.png)
 
 #### Node C: **Send Email**
 - Add the **Send Email** node and connect it to the **To Email** node with a relation type **Success**. <br>
@@ -142,7 +142,7 @@ The instructions of how to configure these settings will be explained in the sec
 
 <br>
 
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/email v2/send-email.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/email v2/send-email.png)
 
 <br>
 
@@ -166,7 +166,7 @@ If you have permission to log in to IoT Hub, with using system administrator acc
 
 - Go to **System Settings** -> **Outgoing Mail**  and configure **Outgoing Mail Settings** as described in the following screenshot:
 
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/email v2/test-email.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/email v2/test-email.png)
 
  - Verify that you configure SMTP, by press button **Send Test Email**<br>
 
@@ -182,7 +182,7 @@ If you can't access to the account of the System administrator you could configu
 For posting device telemetry we will use the Rest APIs, [Telemetry upload APIs](/docs/reference/http-api/#telemetry-upload-api). For this we will need to
 copy device access token from then device **Thermostat Home**.
 
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/email v2/copy-token.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/email v2/copy-token.png)
 
 
 Lets post temperature = 180. Alarm should be created:
@@ -198,7 +198,7 @@ You should understand that message won't be sent to the email when the alarm was
 Finally we can see that email was received with correct values. (Please check your spam folder if you did not receive any email) 
 
 
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/email v2/mail-received.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/email v2/mail-received.png)
 
 
 Also, you can see the more information about how to:

@@ -1,16 +1,8 @@
 Use the instructions listed below to download, install, setup and run mosquitto_pub in Windows:
 
-<<<<<<< HEAD
-Please install any MQTT-Client in this guide we use MQTT-Explorer.    
-Install [MQTT-Explorer](http://mqtt-explorer.com). 
-Use the instructions listed below:
- 
-{% include images-gallery.html imageCollection="mqttWindows" showListImageTitles="true" %}
-=======
 1. Download and Install Eclipse Mosquitto. Visit [Mosquitto's official download page](https://mosquitto.org/download/) and choose the appropriate Windows installer (32-bit or 64-bit depending on your system).
 2. Once downloaded, run the installer and follow the instructions. This will install Mosquitto on your Windows machine. By default, Mosquitto is installed in 'C:\Program Files\mosquitto';
 3. Update the System's "Path" variable. The executables 'mosquitto_pub.exe' and 'mosquitto_sub.exe' are located in the directory where you installed the Mosquitto. You need to add this directory to your system's "Path" environment variable so that Windows can find these executables regardless of the current directory.
->>>>>>> ad368c0ed5d3799cf901e3e0c5e84bf8564eb1c6
 
 To add the Mosquitto directory to the "Path" variable, follow these steps: 
 

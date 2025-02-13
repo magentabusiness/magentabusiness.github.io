@@ -40,8 +40,8 @@ return result;
 {: .copy-code}
 
 {% if docsPrefix == "pe/" %}
-![image](https://img.thingsboard.io/user-guide/integrations/coap/coap-uplink-converter-json-java-pe.png)
+![image](/images/user-guide/integrations/coap/coap-uplink-converter-json-java-pe.png)
 {% endif %}
 {% if docsPrefix contains "paas/" %}
-![image](https://img.thingsboard.io/user-guide/integrations/coap/coap-uplink-converter-json-java-paas.png)
+![image](/images/user-guide/integrations/coap/coap-uplink-converter-json-java-paas.png)
 {% endif %}

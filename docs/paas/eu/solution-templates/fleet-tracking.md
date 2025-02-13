@@ -4,11 +4,11 @@ title: Fleet tracking template
 description: Fleet tracking template overview
 solution-highlights:
     0:
-        image: https://img.thingsboard.io/solutions/fleet_tracking/fleet-tracking-1.png
+        image: /images/solutions/fleet_tracking/fleet-tracking-1.png
     1:
-        image: https://img.thingsboard.io/solutions/fleet_tracking/fleet-tracking-2.png
+        image: /images/solutions/fleet_tracking/fleet-tracking-2.png
     2:
-        image: https://img.thingsboard.io/solutions/fleet_tracking/fleet-tracking-3.png
+        image: /images/solutions/fleet_tracking/fleet-tracking-3.png
 
 ---
 

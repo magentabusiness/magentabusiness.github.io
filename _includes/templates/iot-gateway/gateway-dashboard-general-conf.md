@@ -1,4 +1,4 @@
-![](https://img.thingsboard.io/gateway/dashboard/gateway-dashboard-general-conf.png)
+![](/images/gateway/dashboard/gateway-dashboard-general-conf.png)
 
 General - this tab contains the main settings, namely:
 - Remote Configuration - enables remote configuration and management of the gateway;

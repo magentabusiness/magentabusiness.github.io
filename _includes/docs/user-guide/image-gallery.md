@@ -9,10 +9,10 @@ This is an important resource for improving the visual appeal and functionality 
 Users can easily upload, organize, and select images to customize their interface and user experience, ensuring an integrity and branded look across the platform.
 
 {% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}
-![image](https://img.thingsboard.io/user-guide/image-gallery/image-gallery-pe.png)
+![image](/images/user-guide/image-gallery/image-gallery-pe.png)
 {% endif %}
 {% if docsPrefix == null %}
-![image](https://img.thingsboard.io/user-guide/image-gallery/image-gallery-ce.png)
+![image](/images/user-guide/image-gallery/image-gallery-ce.png)
 {% endif %}
 
 {% unless docsPrefix contains 'paas/' %}

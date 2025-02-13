@@ -33,7 +33,7 @@ install-solution-template:
 
 remove-solution-template:
     0:
-        image: https://img.thingsboard.io/solution-templates/solution-templates-src-delete.png
+        image: /images/solution-templates/solution-templates-src-delete.png
 
 ---
 

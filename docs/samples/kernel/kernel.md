@@ -73,7 +73,7 @@ To connect the PLC KERNEL device you need to get the device credentials first. I
 
 * [Step 2.3] Open "LogicPaint".
 <br>
-<img src="https://img.thingsboard.io/samples/kernel/LogicPaint 000.jpg" width="1000" alt="LogicPaint 0">
+<img src="/images/samples/kernel/LogicPaint 000.jpg" width="1000" alt="LogicPaint 0">
 <br>
 <br>
 
@@ -83,31 +83,31 @@ To connect the PLC KERNEL device you need to get the device credentials first. I
 
 * [Step 2.5] Open menu “File” >> “Show Ethernet Port Configuration”.
 <br>
-<img src="https://img.thingsboard.io/samples/kernel/LogicPaint 001.png" width="1000" alt="LogicPaint 1">
+<img src="/images/samples/kernel/LogicPaint 001.png" width="1000" alt="LogicPaint 1">
 <br>
 <br>
 
 * [Step 2.6] Press the button “MQTT Configuration” :
 <br>
-<img src="https://img.thingsboard.io/samples/kernel/LogicPaint 002.png" width="1000" alt="LogicPaint 2">
+<img src="/images/samples/kernel/LogicPaint 002.png" width="1000" alt="LogicPaint 2">
 <br>
 <br>
 
 * [Step 2.7] Paste the copied access token into the indicated box :
 <br>
-<img src="https://img.thingsboard.io/samples/kernel/LogicPaint 003.png" width="1000" alt="LogicPaint 3">
+<img src="/images/samples/kernel/LogicPaint 003.png" width="1000" alt="LogicPaint 3">
 <br>
 <br>
 
 * [Step 2.8] Enter the following fields :
 <br>
-<img src="https://img.thingsboard.io/samples/kernel/Table 000.png" width="1000" alt="Table 0">
+<img src="/images/samples/kernel/Table 000.png" width="1000" alt="Table 0">
 <br>
 <br>
 
 * [Step 2.9] Add a slot for each value that needs to be monitored :
 <br>
-<img src="https://img.thingsboard.io/samples/kernel/Table 001.png" width="1000" alt="Table 1">
+<img src="/images/samples/kernel/Table 001.png" width="1000" alt="Table 1">
 <br>
 <br>
 

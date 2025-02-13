@@ -5,10 +5,10 @@ The main token is the short-lived token you should use to perform the API calls.
 To customize JWT, log in to ThingsBoard as a System Administrator.
 
 {% if docsPrefix == null %}
-![image](https://img.thingsboard.io/user-guide/ui/jwt/jwt-provider-settings-step-1-ce.png)
+![image](/images/user-guide/ui/jwt/jwt-provider-settings-step-1-ce.png)
 {% endif %}
 {% if docsPrefix == "pe/" %}
-![image](https://img.thingsboard.io/user-guide/ui/jwt/jwt-provider-settings-step-1-pe.png)
+![image](/images/user-guide/ui/jwt/jwt-provider-settings-step-1-pe.png)
 {% endif %}
 
 You can customize the following JWT options:

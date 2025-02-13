@@ -1,4 +1,4 @@
-![image](https://img.thingsboard.io/user-guide/integrations/uplink-converter-example-java.png)
+![image](/images/user-guide/integrations/uplink-converter-example-java.png)
 
 The full source code of javascript function used in converter:
 

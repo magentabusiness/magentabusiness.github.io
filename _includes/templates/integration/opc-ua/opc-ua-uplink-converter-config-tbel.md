@@ -36,4 +36,4 @@ return result;
 ```
 {: .copy-code}
 
-![image](https://img.thingsboard.io/user-guide/integrations/opc-ua/opc-ua-uplink-converter-tbel.png)
+![image](/images/user-guide/integrations/opc-ua/opc-ua-uplink-converter-tbel.png)

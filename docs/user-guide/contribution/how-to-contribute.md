@@ -185,7 +185,7 @@ If there are some conflicts because new stuff has arrived into IoT Hub master br
 
 Sign up contribution license agreement (CLA) and verify that remote build has been successful. The CLA is signed automatically using the github CLA bot.
  
- ![image](https://img.thingsboard.io/user-guide/pr_cla.png)
+ ![image](/images/user-guide/pr_cla.png)
 
 Be patient, pull request may take several days to review.
 

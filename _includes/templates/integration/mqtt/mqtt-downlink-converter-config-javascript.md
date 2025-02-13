@@ -41,4 +41,4 @@ return result;
 {: .copy-code}
 
 
-![image](https://img.thingsboard.io/user-guide/integrations/mqtt/mqtt-integration-add-downlink-converter-java-1-pe.png)
+![image](/images/user-guide/integrations/mqtt/mqtt-integration-add-downlink-converter-java-1-pe.png)

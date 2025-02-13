@@ -1,4 +1,4 @@
-![](https://img.thingsboard.io/gateway/dashboard/gateway-dashboard-statistics-conf.png)
+![](/images/gateway/dashboard/gateway-dashboard-statistics-conf.png)
 
 Statistics - in this tab you can configure general statistics, as well as custom statistics:
 - Statistics - enable/disable;

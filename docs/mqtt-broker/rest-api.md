@@ -5,10 +5,10 @@ description: Administration REST API
 
 broker-swagger-ui:
     0:
-        image: https://img.thingsboard.io/mqtt-broker/api/swagger.png
+        image: /images/mqtt-broker/api/swagger.png
         title: 'Swagger UI. Click on "Authorize" button to proceed'
     1:
-        image: https://img.thingsboard.io/mqtt-broker/api/swagger-auth.png
+        image: /images/mqtt-broker/api/swagger-auth.png
         title: 'Enter username and password to authorize'
 
 ---

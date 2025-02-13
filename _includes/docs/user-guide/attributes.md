@@ -254,7 +254,7 @@ Changes to the attributes initiated by the user are recorded in the [audit logs]
 
 Telemetry Controller provides the following REST API to fetch entity data:
 
-![image](https://img.thingsboard.io/user-guide/telemetry-service/rest-api.png)
+![image](/images/user-guide/telemetry-service/rest-api.png)
 
 {% capture api_note %}
 **NOTE:** The API listed above is available via Swagger UI. Please review the general [REST API](/docs/{{docsPrefix}}reference/rest-api/) documentation for more details.

@@ -157,7 +157,7 @@ has already been created, then click on the “pencil” icon to edit it.
 
 - Go to **Integrations** section and click **Add new integration** button. Name it **"AWS IoT Integration"**, select type **AWS IoT**.
 
-![image](https://img.thingsboard.io/user-guide/integrations/aws-iot/aws-iot-add-integration-1-pe.png)
+![image](/images/user-guide/integrations/aws-iot/aws-iot-add-integration-1-pe.png)
 
 {% capture allowCreateDevice %}
 Note that if the “Allow create devices or assets” checkbox is unchecked, when sending a message to IoT Hub
@@ -167,11 +167,11 @@ with any parameters of the device (or asset), if such a device (asset) does not 
 
 - The next steps is to add the recently created **Uplink** converter.
 
-![image](https://img.thingsboard.io/user-guide/integrations/aws-iot/aws-iot-add-integration-2-pe.png)
+![image](/images/user-guide/integrations/aws-iot/aws-iot-add-integration-2-pe.png)
 
 - For now, leave the "Downlink data converter" field blank.
 
-![image](https://img.thingsboard.io/user-guide/integrations/aws-iot/aws-iot-add-integration-3-pe.png)
+![image](/images/user-guide/integrations/aws-iot/aws-iot-add-integration-3-pe.png)
 
 - Enter AWS IoT Endpoint. You can find it in your [AWS account](https://aws.amazon.com/iot/) if you go to **Settings** - **Device data endpoint**.
 
@@ -179,13 +179,13 @@ with any parameters of the device (or asset), if such a device (asset) does not 
 
 - Download the previously generated certificates and key.
 
-![image](https://img.thingsboard.io/user-guide/integrations/aws-iot/aws-iot-add-integration-4-pe.png)
+![image](/images/user-guide/integrations/aws-iot/aws-iot-add-integration-4-pe.png)
 
 - Add a Topic Filter **tb/aws/iot/#**. You can also select QoS level. We use QoS level 0 (At most once) by default.
 
 - Click **Add** to create an integration.
 
-![image](https://img.thingsboard.io/user-guide/integrations/aws-iot/aws-iot-add-integration-5-pe.png)
+![image](/images/user-guide/integrations/aws-iot/aws-iot-add-integration-5-pe.png)
 
 ### Send Uplink message
 

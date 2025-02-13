@@ -23,25 +23,6 @@ If you are using older version of Windows OS, you may find official installation
 
 This command works for Windows, Ubuntu and macOS, assuming the cURL tool is already installed. 
 
-<<<<<<< HEAD
-**Access via public Internet**  
-For example, access token is ABC123: 
-
-```bash
-curl -v -X POST -d "{\"temperature\": 25}" https://iothub.magenta.at/api/v1/ABC123/telemetry --header "Content-Type:application/json" 
-```
-{: .copy-code}
-
-**Direct connected Device (with IoT Hub SIM-Card)**  
-For example, access token is ABC123: 
-
-```bash
-curl -v -X POST -d "{\"temperature\": 25}" http://172.31.64.64/api/v1/ABC123/telemetry --header "Content-Type:application/json" 
-```
-{: .copy-code}
-
-
-=======
 {% if docsPrefix contains 'paas/' %}
 
 Replace $ACCESS_TOKEN with corresponding value.
@@ -66,7 +47,6 @@ Replace $THINGSBOARD_HOST_NAME_AND_PORT and $ACCESS_TOKEN with corresponding val
 curl -v -X POST -d "{\"temperature\": 25}" http://$THINGSBOARD_HOST_NAME_AND_PORT/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
 ```
 {: .copy-code}
->>>>>>> ad368c0ed5d3799cf901e3e0c5e84bf8564eb1c6
 
 For example, $THINGSBOARD_HOST_NAME_AND_PORT reference your local installation, port is 8080, $ACCESS_TOKEN is ABC123:
 

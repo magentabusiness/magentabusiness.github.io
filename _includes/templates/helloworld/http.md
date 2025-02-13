@@ -33,11 +33,7 @@ curl -v -X POST -d "{\"temperature\": 25}" $THINGSBOARD_HOST_NAME_AND_PORT/api/v
 For example, $THINGSBOARD_HOST_NAME_AND_PORT reference live demo server, $ACCESS_TOKEN is ABC123:
 
 ```bash
-<<<<<<< HEAD
-curl -v -X POST -d "{\"temperature\": 25}" https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json" 
-=======
-curl -v -X POST -d "{\"temperature\": 25}" https://demo.thingsboard.io/api/v1/ABC123/telemetry --header "Content-Type:application/json"
->>>>>>> ad368c0ed5d3799cf901e3e0c5e84bf8564eb1c6
+curl -v -X POST -d "{\"temperature\": 25}" https://iothub.magenta.at/api/v1/ABC123/telemetry --header "Content-Type:application/json" 
 ```
 {: .copy-code}
 

@@ -10,15 +10,15 @@ According to the provided features, each widget definition represents a specific
 
 In order to create a new widget definition, navigate to "Widget Library" and open existing "Widgets Bundle" or create a new one.  In the "Widgets Bundle" view, click the “+” button at the top-right part of the screen and then click the "Create new widget" button.
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/create-new-widget-type.png)
+![image](/images/user-guide/contribution/widgets/create-new-widget-type.png)
 
 "Select widget type" window should appear with select options corresponding to the [widget type](/docs/{{docsPrefix}}user-guide/ui/widget-library/#widget-types) you intend to develop.
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/select-widget-type.png)
+![image](/images/user-guide/contribution/widgets/select-widget-type.png)
 
 After that, the pre-populated "Widget Editor" page will open with starter widget template according to previously selected widget type.
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/widget-editor.png)
+![image](/images/user-guide/contribution/widgets/widget-editor.png)
 
 ### Widget Editor overview
 
@@ -32,7 +32,7 @@ It consists of [top toolbar](#widget-editor-toolbar) and four main sections:
 
 #### Widget Editor Toolbar
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/widget-editor-toolbar.png)
+![image](/images/user-guide/contribution/widgets/widget-editor-toolbar.png)
 
 Widget Editor Toolbar consists of the following items:
 
@@ -50,21 +50,21 @@ This section consists of three tabs:
 
 The first **Resources** tab is used to specify external JavaScript/CSS resources used by the widget.
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/widget-editor-resources.png)
+![image](/images/user-guide/contribution/widgets/widget-editor-resources.png)
 
 Second **HTML** tab contains the widget's HTML code *(Note: some widgets create HTML content dynamically, thus their initial HTML content can be empty).*
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/widget-editor-html.png)
+![image](/images/user-guide/contribution/widgets/widget-editor-html.png)
 
 Third **CSS** tab contains widget specific CSS style definitions. 
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/widget-editor-css.png)
+![image](/images/user-guide/contribution/widgets/widget-editor-css.png)
 
 #### JavaScript section
 
 This section contains all widget related JavaScript code according to the [Widget API](#basic-widget-api).  
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/widget-editor-javascript.png)
+![image](/images/user-guide/contribution/widgets/widget-editor-javascript.png)
 
 #### Settings schema section
 
@@ -74,14 +74,14 @@ The first tab, **Settings schema**, is used to specify the JSON schema of widget
 This generated UI form is displayed in the **Advanced** mode in the **Appearance** tab of widget settings. 
 The Settings Object serialized by this schema, is used to store specific widget settings and is accessible from the widget's JavaScript code.
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/widget-editor-settings-schema.png)
+![image](/images/user-guide/contribution/widgets/widget-editor-settings-schema.png)
  
 The second tab, **Data key settings schema**, is used to specify JSON schema of data key settings for automatically generating a UI form using the react-schema-form [builder](http://networknt.github.io/react-schema-form/). 
 This generated UI form is displayed in **Advanced** tab of the **Data key configuration** dialog.
 The Settings Object serialized by this schema is used to store specific settings for each data key of the datasource defined in the widget. 
 These settings are accessible from widget's JavaScript code.
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/widget-editor-datakey-settings-schema.png)
+![image](/images/user-guide/contribution/widgets/widget-editor-datakey-settings-schema.png)
 
 The third tab, **Latest data key settings schema**, is used to specify JSON schema of the latest data key for automatically generating a UI form using the react-schema-form [builder](http://networknt.github.io/react-schema-form/).
 The **Latest data key settings schema** is available only for **Time series** widgets.
@@ -89,12 +89,12 @@ This generated UI form is displayed in **Advanced** tab of the **Data key config
 The Settings Object serialized by this schema is used to store specific settings for each data key of the datasource defined in the widget.
 These settings are accessible from widget JavaScript code.
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/widget-editor-latest-datakey-setting-schema.png)
+![image](/images/user-guide/contribution/widgets/widget-editor-latest-datakey-setting-schema.png)
 
 Starting from v3.4, auto-generated advanced widget settings JSON forms are replaced with [Angular components](https://github.com/thingsboard/thingsboard/pull/6545).
 When creating new settings schemas for custom widgets, don't forget to remove components from **Widget Settings** tab.
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/widget-editor-widget-settings-selectors.png)
+![image](/images/user-guide/contribution/widgets/widget-editor-widget-settings-selectors.png)
 
 Here is the basic example of the **settings schema**:
 
@@ -143,7 +143,7 @@ Here is the basic example of the **settings schema**:
 
 Here is the result of applying **settings schema**, will be visible in **Appearance** tab of the widget settings:
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/widget-editor-schema-example.png)
+![image](/images/user-guide/contribution/widgets/widget-editor-schema-example.png)
 
 
 The **schema** property supports types such as **Number**, **Boolean**, **String** and **Object**.
@@ -262,7 +262,7 @@ Here is the complex example of the custom **settings schema**:
 
 The result of applying custom **settings schema** to the widget:
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/widget-editor-appearence-example.png)
+![image](/images/user-guide/contribution/widgets/widget-editor-appearence-example.png)
 
 
 #### Widget preview section
@@ -272,7 +272,7 @@ It is presented as a mini dashboard containing one widget instantiated from the 
 It has mostly all functionality provided by usual IoT Hub dashboard, with some limitations.
 For example, "Function" can only be selected as datasource type in widget datasources section for debugging purposes.    
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/widget-editor-preview.png)
+![image](/images/user-guide/contribution/widgets/widget-editor-preview.png)
 
 ### Basic widget API
 
@@ -508,7 +508,7 @@ The Broadcast Service ([BroadcastService](https://github.com/thingsboard/thingsb
 
 For example, consider sending data from Widget 1 to Widget 2.
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/broadcast-service-start.png) 
+![image](/images/user-guide/contribution/widgets/broadcast-service-start.png) 
 
 In Widget 1 you must send data using broadcast(...) function:
 ```
@@ -540,7 +540,7 @@ self.onInit = function() {
 
 as a result on Widget 2 you can see your data:
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/broadcast-service-finish.png) 
+![image](/images/user-guide/contribution/widgets/broadcast-service-finish.png) 
 
 #### Type parameters object
 
@@ -607,7 +607,7 @@ The **Widget Editor** will open, pre-populated with the content of the default *
 
  - Click the **Run** button on the **Widget Editor Toolbar** in order to see the result in **Widget preview** section.
  
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/latest-values-widget-sample.png) 
+![image](/images/user-guide/contribution/widgets/latest-values-widget-sample.png) 
 
 In this example, the **data** property of [subscription](#subscription-object) is assigned to the **$scope** and becomes accessible within the HTML template.
 Inside the HTML, a special [***ngFor**](https://angular.io/api/common/NgForOf) structural angular directive is used in order to iterate over available dataKeys & datapoints then render latest values with their corresponding timestamps. 
@@ -683,7 +683,7 @@ self.onDataUpdated = function() {
 
  - Click the **Run** button on the **Widget Editor Toolbar** in order to see the result in **Widget preview** section.
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/timeseries-widget-sample.png) 
+![image](/images/user-guide/contribution/widgets/timeseries-widget-sample.png) 
 
 In this example, the [subscription](#subscription-object) **datasources** and **data** properties are assigned to **$scope** and become accessible within the HTML template.
 The **$scope.datasourceData** property is introduced to map datasource specific dataKeys data by datasource index for flexible access within the HTML template.
@@ -802,7 +802,7 @@ self.onInit = function() {
  - Click the **Run** button on the **Widget Editor Toolbar** in order to see the result in **Widget preview** section. 
  - Click dashboard edit button on the preview section to change the size of the resulting widget. Then click dashboard apply button. The final widget should look like the image below.
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/control-widget-sample.png)
+![image](/images/user-guide/contribution/widgets/control-widget-sample.png)
 
  - Click the **Save** button on the **Widget Editor Toolbar** to save widget type.
 
@@ -817,7 +817,7 @@ To test how this widget performs RPC commands, we will need to place it in a das
  - Navigate to **Dashboards** and create a new dashboard with some name, for ex. "My first control dashboard". Open this dashboard.
  - Click dashboard "edit" button. In the dashboard edit mode, click the "Entity aliases" button located on the dashboard toolbar.
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/dashboard-toolbar-entity-aliases.png)
+![image](/images/user-guide/contribution/widgets/dashboard-toolbar-entity-aliases.png)
 
  - Inside **Entity aliases** popup click "Add alias".
  - Fill "Alias name" field, for ex. "My RPC Device Alias".
@@ -825,12 +825,12 @@ To test how this widget performs RPC commands, we will need to place it in a das
  - Choose "Device" in "Type" field.
  - Select your device in "Entity list" field. In this example "My RPC Device".
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/add-rpc-device-alias.png)
+![image](/images/user-guide/contribution/widgets/add-rpc-device-alias.png)
 
  - Click "Add" and then "Save" in **Entity aliases**.
  - Click dashboard "+" button then click "Create new widget" button.
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/dashboard-create-new-widget-button.png)
+![image](/images/user-guide/contribution/widgets/dashboard-create-new-widget-button.png)
 
  - Then select **Widget Bundle** where your RPC widget was saved. Select "Control widget" tab.
  - Click your widget. In this example, "My first control widget".
@@ -840,7 +840,7 @@ To test how this widget performs RPC commands, we will need to place it in a das
  - Fill **RPC params** field with RPC params. For ex. "{ param1: "value1" }".
  - Click **Send RPC command** button. You should see the following response in the widget.
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/control-widget-sample-response-one-way.png)
+![image](/images/user-guide/contribution/widgets/control-widget-sample-response-one-way.png)
 
   The following output should be printed in the device console:
 
@@ -854,18 +854,18 @@ In order to test "Two way" RPC command mode, we need to change the corresponding
  - Click dashboard "edit" button. In dashboard edit mode, click **Edit widget** button located in the header of Control widget.
  - In the widget details, view select "Advanced" tab and uncheck "Is One Way Command" checkbox.
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/control-widget-sample-settings.png)
+![image](/images/user-guide/contribution/widgets/control-widget-sample-settings.png)
 
  - Click **Apply changes** button on the widget details header. Close details and click dashboard **Apply changes** button.
  - Fill widget fields with RPC method name and params like in previous steps.
  Click **Send RPC command** button. You should see the following response in the widget.
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/control-widget-sample-response-two-way.png)
+![image](/images/user-guide/contribution/widgets/control-widget-sample-response-two-way.png)
 
   - stop **mqtt-js-rpc-from-server.sh** script.
  Click **Send RPC command** button. You should see the following response in the widget.
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/control-widget-sample-response-timeout.png)
+![image](/images/user-guide/contribution/widgets/control-widget-sample-response-timeout.png)
 
 In this example, **controlApi** is used to send RPC commands. Additionally, custom widget settings were introduced in order to configure RPC command mode and RPC request timeout.
 The response from the device is handled by **commandObservable**.  It has success and failed callbacks with corresponding response, or rejection objects containing information about request execution result.
@@ -992,7 +992,7 @@ self.onDataUpdated = function() {
 
  - Click the **Run** button on the **Widget Editor Toolbar** in order to see the result in **Widget preview** section.
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/alarm-widget-sample.png)
+![image](/images/user-guide/contribution/widgets/alarm-widget-sample.png)
 
 In this example, the **alarmSource** and **alarms** properties of [subscription](#subscription-object) are assigned to **$scope** and become accessible within HTML template.
 Inside the HTML, a special [***ngFor**](https://angular.io/api/common/NgForOf) structural angular directive is used in order to iterate over available alarm **dataKeys** of **alarmSource** and render corresponding columns.
@@ -1056,7 +1056,7 @@ self.onInit = function() {
 
  - Click the **Run** button on the **Widget Editor Toolbar** to see the resulting **Widget preview** section.
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/static-widget-sample.png)
+![image](/images/user-guide/contribution/widgets/static-widget-sample.png)
 
 This is just a static HTML widget.  There is no subscription data and no special widget API was used.
 Only custom **showAlert** function was implemented showing an alert with the content of **alertContent** property of widget settings.
@@ -1638,7 +1638,7 @@ self.onInit = function() {
 
 As a result, will be created subscription to count devices in the system and count active devices (**the widget is illustrative**):
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/count-subscription.png)
+![image](/images/user-guide/contribution/widgets/count-subscription.png)
 
 
 ##### Subscription for attributes/telemetry
@@ -1717,7 +1717,7 @@ self.onInit = function() {
 ```
 As a result a subscription to the **temperature** and **active** keys will be created **only** for active devices (**the widget is illustrative**):
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/attributes-telemetry-subscription.png)
+![image](/images/user-guide/contribution/widgets/attributes-telemetry-subscription.png)
 
 ##### Subscription with PageLink
 Let's create a custom subscription to the latest **temperature** key value that **greatest** 30 with two entities on the page:
@@ -1808,7 +1808,7 @@ function subscribeForPaginatedData(pageLink) {
 ```
 As a result, a subscription to the **temperature** and **active** keys will be created using PageLink (**the widget is illustrative**):
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/page-link-subscription.png)
+![image](/images/user-guide/contribution/widgets/page-link-subscription.png)
 
 ##### Subscription for telemetry time series
 
@@ -1890,7 +1890,7 @@ function subscribeForPaginatedData(pageLink) {
 
 As a result, will be created subscription to the **temperature** telemetry time-series (**the widget is illustrative**):
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/timeseries-subscrition.png)
+![image](/images/user-guide/contribution/widgets/timeseries-subscrition.png)
 
 
 ##### Subscription for alarms
@@ -1973,7 +1973,7 @@ self.onInit = function() {
 ```
 As a result, a subscription to the thermostat's alarms will be created (**the widget is illustrative**):
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/alarm-subscription.png)
+![image](/images/user-guide/contribution/widgets/alarm-subscription.png)
 
 ##### Subscription with post-processing
 
@@ -2002,7 +2002,7 @@ First of all, we need to create a custom setting schema that will contain user's
    ]
  }
 ```
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/post-processing-function.png)
+![image](/images/user-guide/contribution/widgets/post-processing-function.png)
 
 Now let's create a custom subscription. For clarity, we will add two fields: one contains the original value and the second one contains the processed value:
 ```javascript
@@ -2081,8 +2081,8 @@ Now let's create a custom subscription. For clarity, we will add two fields: one
     );
 ```
 The subscription is ready now let's convert weight telemetry from kilograms into grams:
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/post-processing-function-example.png)
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/post-processing-subscription.png)
+![image](/images/user-guide/contribution/widgets/post-processing-function-example.png)
+![image](/images/user-guide/contribution/widgets/post-processing-subscription.png)
 
 As you can see, despite subscribing to the same key twice, the output shows different values because one of them was additionally transformed using the post-processing function.
 
@@ -2092,7 +2092,7 @@ As you can see, despite subscribing to the same key twice, the output shows diff
 ### Empty web report
 Sometimes, while working with reports, you may encounter the following problem:
 Heavy widgets may not load in time before the web report begins to be generated. As a result, the report will be empty(because, at the time of creation, data is not present on the dashboard):
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/web-report-error.png)
+![image](/images/user-guide/contribution/widgets/web-report-error.png)
 
 To resolve this problem report service contains a special feature that allows us to inform it that the widget was loaded.
 
@@ -2178,7 +2178,7 @@ self.onDataUpdated = function() {
 
  - Click the **Run** button on the **Widget Editor Toolbar** in order to see the result in **Widget preview** section.
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/external-js-widget-sample.png)
+![image](/images/user-guide/contribution/widgets/external-js-widget-sample.png)
 
 In this example, the external JS library API was used that becomes available after injecting the corresponding URL in **Resources** section.
 The value displayed was obtained from [subscription](#subscription-object) **data** property for the first dataKey. 
@@ -2277,7 +2277,7 @@ self.onDataUpdated = function() {
 
  - Click the **Run** button on the **Widget Editor Toolbar** in order to see the result in **Widget preview** section.
 
-![image](https://img.thingsboard.io/user-guide/contribution/widgets/external-js-timeseries-widget-sample.png)
+![image](/images/user-guide/contribution/widgets/external-js-timeseries-widget-sample.png)
 
 In this example, the external JS library API was used that becomes available after injecting the corresponding URL in **Resources** section.
 Initially chart datasets prepared using configured dataKeys from **data** property of **ctx**.

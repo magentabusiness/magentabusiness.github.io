@@ -45,21 +45,21 @@ We assume you have completed the following guides and reviewed the articles list
 
 First of all, we need to create Customer and assign device to customer. The following screenshots show you how to do this:
 
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/email/create-customer.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/email/create-customer.png)
 
 <br>
 
 Customer created. Now we need to assign device **Thermostat Home**(the creation of which was described in the [Create & clear alarms](/docs/user-guide/rule-engine-2-0/tutorials/create-clear-alarms/#adding-the-device) tutorial) to the customer.<br> Go to **Manage devices** on Customer page and select our device
 
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/email/manage-devices.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/email/manage-devices.png)
 <br>
 
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/email/assign-device.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/email/assign-device.png)
 <br>
 
 Next our customer should have **server scope** attribute **email**. Note that email will be sent to this email, so write your email for testing.
 
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/email/customer-email.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/email/customer-email.png)
 
 <br>
 
@@ -68,7 +68,7 @@ Also we need add server scope attribute - **address** to our device **Thermostat
 
 Go to **Devices** -> **Thermostat Home** -> **Attributes** -> **Server attributes** and press **+** button to add **address**
 
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/email/add-address.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/email/add-address.png)
 
 <br>
 
@@ -97,11 +97,11 @@ We modified Rule Chain **Create/Clear Alarm & Send Email** by adding nodes that 
 
   - **Create/Clear Alarm & Send Email to Customer:**
 
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/email/send-email-to-customer-chain.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/email/send-email-to-customer-chain.png)
 
  - **Root Rule Chain:**
 
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/email/root-rule-chain.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/email/root-rule-chain.png)
 
 <br>
 
@@ -148,7 +148,7 @@ In this rule chain, you will add 2 nodes and modify 1 node as it will be explain
  </table>
 
 
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/email/get-customer-email.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/email/get-customer-email.png)
 
 #### Node B: **Originator attributes**
 - Add the **Originator attributes** node and pastes it between the nodes: **Customer attributes** and **Create alarm** with a relation type **Success**.<br>
@@ -176,7 +176,7 @@ In this rule chain, you will add 2 nodes and modify 1 node as it will be explain
  </table>
 
 
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/email/get-device-address.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/email/get-device-address.png)
 
 #### Node C: **To Email**
 - Modify the **To Email** node. For this, we need change some fields in details of this node, namely:
@@ -206,14 +206,14 @@ In this rule chain, you will add 2 nodes and modify 1 node as it will be explain
    </tbody>
  </table>
 
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/email/modify-to-email.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/email/modify-to-email.png)
 
 
 ## Post telemetry and verify
 For posting device telemetry we will use the Rest APIs, [Telemetry upload APIs](/docs/reference/http-api/#telemetry-upload-api). For this we will need to
 copy device access token from then device **Thermostat Home**.
 
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/email v2/copy-token.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/email v2/copy-token.png)
 
 
 Lets post temperature = 99. Mail should be sent:
@@ -229,7 +229,7 @@ You should understand that message won't be sent to the email when the alarm was
 Finally we can see that email was received with correct values. (Please check your spam folder if you did not receive any email)
 
 
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/email/mail-received.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/email/mail-received.png)
 
 
 Also, you can see the more information about how to:

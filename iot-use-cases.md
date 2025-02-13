@@ -8,7 +8,7 @@ notitle: "true"
 
 # IoT Use Cases
 
-Being robust, scalable and user-friendly, IoT Hub IoT platform supports various IoT use cases by providing flexible and powerful out-of-the-box features to cut down time to market of your connected products and smart solutions. The platform is device-agnostic, so you can feed and analyze telemetry data from any sensor, connected device or application. ThingsBoard comprehensive features and rich platform APIs allow you to save time and resources on routine IoT tasks and concentrate on specific features of your IoT solution.
+Being robust, scalable and user-friendly, IoT Hub IoT platform supports various IoT use cases by providing flexible and powerful out-of-the-box features to cut down time to market of your connected products and smart solutions. The platform is device-agnostic, so you can feed and analyze telemetry data from any sensor, connected device or application. IoT Hub comprehensive features and rich platform APIs allow you to save time and resources on routine IoT tasks and concentrate on specific features of your IoT solution.
 
 Some of the industry use cases where IoT Hub is being successfully utilized are listed below. Each use case is equipped with PoC dashboard and reference solution architecture.
 
@@ -64,7 +64,7 @@ Should you have any comments or questions please feel free to [Contact US](https
         <div class="dashboard-item">
             <div class="item-description">
                 <h2>Environment Monitoring</h2>
-                <p>Monitor and analyze indoor and outdoor environments using a wide range of sensors. ThingsBoard supports data acquisition using modern connectivity technologies and protocols: NB IoT, LoRaWAN, SigFox, MQTT, CoAP, HTTP, LwM2M, and others.</p>
+                <p>Monitor and analyze indoor and outdoor environments using a wide range of sensors. IoT Hub supports data acquisition using modern connectivity technologies and protocols: NB IoT, LoRaWAN, SigFox, MQTT, CoAP, HTTP, LwM2M, and others.</p>
                 <a class="read-more-button" href="/use-cases/environment-monitoring/">Environment Monitoring use case<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="More information about Environment Monitoring arrow"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt=""><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt=""></a>
             </div>
             <div class="item-image-container">
@@ -85,7 +85,7 @@ Should you have any comments or questions please feel free to [Contact US](https
         <div class="dashboard-item">
             <div class="item-description">
                 <h2>Smart Office</h2>
-                <p>Ensure employee health and safety to boost organization productivity. Optimize resource consumption by monitoring and control of the office indoor climate. ThingsBoard provides rich data visualization, powerful processing engine, remote control and OTA updates capabilities.</p>
+                <p>Ensure employee health and safety to boost organization productivity. Optimize resource consumption by monitoring and control of the office indoor climate. IoT Hub provides rich data visualization, powerful processing engine, remote control and OTA updates capabilities.</p>
                 <a class="read-more-button" href="/use-cases/smart-office/">Smart Office use case<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="More information about Smart Office arrow"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt=""><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt=""></a>
             </div>
             <div class="item-image-container">
@@ -106,7 +106,7 @@ Should you have any comments or questions please feel free to [Contact US](https
         <div class="dashboard-item">
             <div class="item-description">
                 <h2>Water Metering</h2>
-                <p>Enable water consumption data collection, analysis and fraud detection using ThingsBoard. Use interactive dashboards that allow administrators and end-users to browse the state of the water meters and aggregated water consumption statistics. Enable alarms over SMS and email and integrate with external billing systems.</p>
+                <p>Enable water consumption data collection, analysis and fraud detection using IoT Hub. Use interactive dashboards that allow administrators and end-users to browse the state of the water meters and aggregated water consumption statistics. Enable alarms over SMS and email and integrate with external billing systems.</p>
                 <a class="read-more-button" href="/use-cases/water-metering/">Water Metering use case<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="More information about Water Metering arrow"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt=""><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt=""></a>
             </div>
             <div class="item-image-container">
@@ -127,7 +127,7 @@ Should you have any comments or questions please feel free to [Contact US](https
         <div class="dashboard-item">
             <div class="item-description">
                 <h2>Smart Retail</h2>
-                <p>Control quality of food storage by monitoring chillers and freezers. Ensure availability of the goods using smart shelves. Ensure safety using motion detection and fire alarms. ThingsBoard provides a solution template to monitor supermarket assets, browse historical data and generate alarms based on user-defined thresholds.</p>
+                <p>Control quality of food storage by monitoring chillers and freezers. Ensure availability of the goods using smart shelves. Ensure safety using motion detection and fire alarms. IoT Hub provides a solution template to monitor supermarket assets, browse historical data and generate alarms based on user-defined thresholds.</p>
                 <a class="read-more-button" href="/use-cases/smart-retail/">Smart Retail use case<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="More information about Smart Retail arrow"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt=""><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt=""></a>
             </div>
             <div class="item-image-container">
@@ -148,7 +148,7 @@ Should you have any comments or questions please feel free to [Contact US](https
         <div class="dashboard-item">
             <div class="item-description">
                 <h2>Smart Farming</h2>
-                <p>Collect important indicators for your agricultural production such as soil conditions or facilities state via IoT sensors and visualize them using end-user customizable dashboards provided by ThingsBoard platform.</p>
+                <p>Collect important indicators for your agricultural production such as soil conditions or facilities state via IoT sensors and visualize them using end-user customizable dashboards provided by IoT Hub platform.</p>
                 <a class="read-more-button" href="/smart-farming/">Smart Farming use case<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="More information about Smart farming arrow"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt=""><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt=""></a>
             </div>
             <div class="item-image-container">
@@ -169,7 +169,7 @@ Should you have any comments or questions please feel free to [Contact US](https
         <div class="dashboard-item">
             <div class="item-description">
                 <h2>Fleet Tracking</h2>
-                <p>ThingsBoard platform allows to track vehicles state and alerts via various sensors, plot vehicle routes in real-time and browse their sensors reading history at the same time using customizable high quality widgets and dashboards.</p>
+                <p>IoT Hub platform allows to track vehicles state and alerts via various sensors, plot vehicle routes in real-time and browse their sensors reading history at the same time using customizable high quality widgets and dashboards.</p>
                 <a class="read-more-button" href="/fleet-tracking/">Fleet Tracking use case<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="More information about Fleet tracking arrow"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt=""><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt=""></a>
             </div>
             <div class="item-image-container">
@@ -295,7 +295,7 @@ Should you have any comments or questions please feel free to [Contact US](https
         <div class="dashboard-item">
             <div class="item-description">
                 <h2>Tank Level Monitoring</h2>
-                <p>The ThingsBoard platform simplifies tank level management for your business. Control the placement of fuel tanks, monitor information about a specific tank, and control all alarms related to the remaining fuel level, temperature, and battery level.</p>
+                <p>The IoT Hub platform simplifies tank level management for your business. Control the placement of fuel tanks, monitor information about a specific tank, and control all alarms related to the remaining fuel level, temperature, and battery level.</p>
                 <a class="read-more-button" href="/use-cases/tank-level-monitoring/">More information<img class="arrow first" src="/images/pe/read-more-arrow.svg"><img class="arrow second" src="/images/pe/read-more-arrow.svg"><img class="arrow third" src="/images/pe/read-more-arrow.svg"></a>
             </div>
             <div class="item-image-container">

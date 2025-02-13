@@ -32,12 +32,12 @@
     var videoSection = document.querySelector('#hero.light-text');
 
     if (isMobile) {
-        videoSection.setAttribute('style', 'background: center no-repeat url(https://img.thingsboard.io/tbmq-cover.webp)');
+        videoSection.setAttribute('style', 'background: center no-repeat url(/images/tbmq-cover.webp)');
     } else {
         videoSection.setAttribute('data-vide-bg', `mp4: https://video.thingsboard.io/tbmq-cover.mp4,
                                                     webm: https://video.thingsboard.io/tbmq-cover.webm,
                                                     ogv: https://video.thingsboard.io/tbmq-cover.ogv,
-                                                    poster: https://img.thingsboard.io/tbmq-cover.webp`);
+                                                    poster: /images/tbmq-cover.webp`);
         videoSection.setAttribute('data-vide-options', 'bgColor: #000000, loop: true, muted: true, posterType: webp');
     }
 </script>

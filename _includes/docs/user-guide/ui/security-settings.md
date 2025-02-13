@@ -5,10 +5,10 @@ To log into ThingsBoard, the user uses a username and password. You can enhance 
 To customize security settings, log in to ThingsBoard as a System administrator.
 
 {% if docsPrefix == null %}
-![image](https://img.thingsboard.io/user-guide/ui/security-settings/security-settings-1-ce.png)
+![image](/images/user-guide/ui/security-settings/security-settings-1-ce.png)
 {% endif %}
 {% if docsPrefix == "pe/" %}
-![image](https://img.thingsboard.io/user-guide/ui/security-settings/security-settings-1-pe.png)
+![image](/images/user-guide/ui/security-settings/security-settings-1-pe.png)
 {% endif %}
 
 ## General policy

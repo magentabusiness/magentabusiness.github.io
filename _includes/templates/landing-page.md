@@ -100,15 +100,15 @@ cards:
   description:
 - card:
   title: Guestbook + Redis
-  image: https://img.thingsboard.io/docs/redis.svg
+  image: /images/docs/redis.svg
   description:
 - card:
   title: Cloud Native Cassandra
-  image: https://img.thingsboard.io/docs/cassandra.svg
+  image: /images/docs/cassandra.svg
   description:
 - card:
   title: WordPress + MySQL
-  image: https://img.thingsboard.io/docs/wordpress.svg
+  image: /images/docs/wordpress.svg
   description:
 ---
 ```

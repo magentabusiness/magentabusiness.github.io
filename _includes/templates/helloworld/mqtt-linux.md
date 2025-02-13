@@ -23,11 +23,7 @@ mosquitto_pub -d -q 1 -h "$THINGSBOARD_HOST_NAME" -p "1883" -t "v1/devices/me/te
 For example, $THINGSBOARD_HOST_NAME reference live demo server, $ACCESS_TOKEN is ABC123:
 
 ```bash
-<<<<<<< HEAD
 mosquitto_pub -d -q 1 -h "iothub.magenta.at" -p "1883" -t "v1/devices/me/telemetry" -u "ABC123" -m {"temperature":25} 
-=======
-mosquitto_pub -d -q 1 -h "demo.thingsboard.io" -p "1883" -t "v1/devices/me/telemetry" -u "ABC123" -m {"temperature":25}
->>>>>>> ad368c0ed5d3799cf901e3e0c5e84bf8564eb1c6
 ```
 {: .copy-code}
 
@@ -48,12 +44,8 @@ Client mosqpub|xxx received PUBACK (Mid: 1)
 Client mosqpub|xxx sending DISCONNECT
 ```
 
-<<<<<<< HEAD
-**Note:** Since IoT Hub 3.2, you are able to use basic MQTT credentials (combination of client id, user name and password ) 
-=======
 {% capture difference %}
-**Note:** Since ThingsBoard 3.2, you are able to use basic MQTT credentials (combination of client id, username and password)
->>>>>>> ad368c0ed5d3799cf901e3e0c5e84bf8564eb1c6
+**Note:** Since IoT Hub 3.2, you are able to use basic MQTT credentials (combination of client id, username and password )
 and customize **topic names** and **payload type** using Device Profile. See more info [here](/docs/user-guide/device-profiles/#mqtt-transport-type).
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}

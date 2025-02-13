@@ -31,7 +31,7 @@ We assume you have completed the following guides and reviewed the articles list
   
 We will operate with Temperature sensor device that has name "Sensor A" and type "DHT22".
 
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/groups/add-device.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/groups/add-device.png)
 
 ## Message Flow
 
@@ -39,7 +39,7 @@ In this section, we explain the purpose of each node in this tutorial.
 
 ### Root rule chain
 
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/groups/root-rule-chain.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/groups/root-rule-chain.png)
 
   * **Node A**: Rule Chain node
   
@@ -47,14 +47,14 @@ In this section, we explain the purpose of each node in this tutorial.
 
 ### New "Add device to group" rule chain
 
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/groups/rule-chain.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/groups/rule-chain.png)
 
   * **Node B**: Script filter node
   
     * Checks that the incoming message from device contains temperature readings
     * If message from device contains temperature readings it is forwarded to Node C
     
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/groups/has-temperature-node.png)    
+![image](/images/user-guide/rule-engine-2-0/tutorials/groups/has-temperature-node.png)    
      
   * **Node C**: Script filter node
   
@@ -62,7 +62,7 @@ In this section, we explain the purpose of each node in this tutorial.
     * If temperature > 50°C message is forwarded to Node D
     * If temperature <= 50°C message is forwarded to Node E
     
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/groups/high-temperature-node.png)    
+![image](/images/user-guide/rule-engine-2-0/tutorials/groups/high-temperature-node.png)    
     
   * **Node D**: Add to Group node
       
@@ -70,14 +70,14 @@ In this section, we explain the purpose of each node in this tutorial.
     * Constructs group name by substituting deviceType metadata value
     * Automatically creates device group if needed
     
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/groups/add-group-node.png)    
+![image](/images/user-guide/rule-engine-2-0/tutorials/groups/add-group-node.png)    
       
   * **Node E**: Remove from Group node
       
     * Removes device from the group
     * Constructs group name by substituting deviceType metadata value
     
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/groups/remove-group-node.png)    
+![image](/images/user-guide/rule-engine-2-0/tutorials/groups/remove-group-node.png)    
      
 
 ## Configuring the Rule Chain
@@ -89,7 +89,7 @@ Please note that all nodes have debug enabled. This affects performance. Create 
 
 [Publish](/docs/getting-started-guides/helloworld/#pushing-data-from-the-device) temperature readings on behalf of the new device and observe new group automatically created: 
 
-![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/groups/results.png)   
+![image](/images/user-guide/rule-engine-2-0/tutorials/groups/results.png)   
 
 ## Next steps
 

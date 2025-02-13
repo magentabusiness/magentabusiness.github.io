@@ -26,7 +26,7 @@ There are three reserved parameters names: Name, Type and Label that have a pred
 
 Upload a CSV file to the system.
 
-<img data-gifffer="https://img.thingsboard.io/user-guide/bull-provisioning/bulk-provision-step-1.gif" alt="bulk provision step 1">
+<img data-gifffer="/images/user-guide/bull-provisioning/bulk-provision-step-1.gif" alt="bulk provision step 1">
 
 ### Step 2: Import configuration
 
@@ -42,7 +42,7 @@ For the uploaded file you need to configure the following parameters::
 
 At this step, you need to define a match between the columns of the downloaded file and the type of data in the IoT Hub platform. You can also set/change the default name for attribute/telemetry key. 
 
-<img data-gifffer="https://img.thingsboard.io/user-guide/bull-provisioning/bulk-provision-step-3.gif" alt="bulk provision step 3">
+<img data-gifffer="/images/user-guide/bull-provisioning/bulk-provision-step-3.gif" alt="bulk provision step 3">
 
 ### Step 4: Creating new entities
 
@@ -52,7 +52,7 @@ Processing input data.
 
 The result of the query execution: the number of created/updated entities and the number of errors that occurred during execution.
 
-<img data-gifffer="https://img.thingsboard.io/user-guide/bull-provisioning/bulk-provision-step-5.gif" alt="bulk provision step 5">
+<img data-gifffer="/images/user-guide/bull-provisioning/bulk-provision-step-5.gif" alt="bulk provision step 5">
 
 
 ## Use case
@@ -72,7 +72,7 @@ Go to **Devices** -> **Import device**
 
 Upload sample file: **test-import-device.csv**
 
-![image](https://img.thingsboard.io/user-guide/bull-provisioning/import-device-select-file.png)
+![image](/images/user-guide/bull-provisioning/import-device-select-file.png)
 
 ####  Import configuration
 
@@ -89,7 +89,7 @@ Since the **First line contains column names** checkbox has been set on the prev
 Let’s change some of the attributes. Change the column type in the third row to **Timeseries** and set the attribute/telemetry key value, for example, **Temperature**.<br>
 The last row in the following table is responsible for the token so change **Server attribute** to **Access token**. <br><br>
 
-![image](https://img.thingsboard.io/user-guide/bull-provisioning/import-device-column-type.png)<br>
+![image](/images/user-guide/bull-provisioning/import-device-column-type.png)<br>
 **Note:** such column types as Name, Type and Access token can be selected only for one row.
 
 ####  Import finished
@@ -97,4 +97,4 @@ The last row in the following table is responsible for the token so change **Ser
 After the creation process was completed, some statistics information will be shown.<br/>
 On the following example, we can see that 8 devices were created successfully, and an error occurred while creating 2 devices. The reason is that Device 1, Device 2 and Device 3 have the same token in the given sample file. IoT Hub system prohibits that.
 
-![image](https://img.thingsboard.io/user-guide/bull-provisioning/import-device-info-created.png)<br>
+![image](/images/user-guide/bull-provisioning/import-device-info-created.png)<br>

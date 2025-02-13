@@ -244,11 +244,7 @@ You will learn how to:
     </div>
 </div><br>
 
-<<<<<<< HEAD
-# IoT Hub  Features 
-=======
-## ThingsBoard Professional Edition (PE) Features 
->>>>>>> ad368c0ed5d3799cf901e3e0c5e84bf8564eb1c6
+# IoT Hub  Features
 
 #### IoT Hub: White Labeling Guide
 IoT Hub web interface allows you to configure your company or product logo and color scheme in 2 minutes with zero coding efforts and no service restart required. 
