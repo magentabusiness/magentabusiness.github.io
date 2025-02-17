@@ -1,5 +1,5 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: PSM and eDRX support
 description: PSM and eDRX support
 

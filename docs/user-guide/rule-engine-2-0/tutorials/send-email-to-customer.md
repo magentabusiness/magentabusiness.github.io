@@ -1,5 +1,5 @@
 ---
-layout: docwithnav
+layout: docwithnav-pe
 title: Send email to Customer
 description: Send Email Workflow
 
@@ -14,8 +14,6 @@ This tutorial is to show you how to send an email to the customer using the Rule
 **Note:** this tutorial is based on the [send email on alarm](/docs/user-guide/rule-engine-2-0/tutorials/send-email/#use-case) tutorial and it's use case. We will reuse the rule chains from the above-mentioned tutorial and will add a few more rule nodes to send email to the customer of the assigned device.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
-
-## Use case
 
 <br>
 

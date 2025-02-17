@@ -83,7 +83,6 @@ toc:
         - title: Flow Nodes
           path: /docs/user-guide/rule-engine-2-0/flow-nodes/
     - title: PE Nodes
-      pe: true
       section:
         - title: Transformation Nodes
           path: /docs/pe/user-guide/rule-engine-2-0/transformation-nodes/
@@ -123,10 +122,8 @@ toc:
           path: /docs/user-guide/rule-engine-2-0/tutorials/get-weather-using-rest-api-call/
         - title: Add & remove devices to group dynamically
           path: /docs/user-guide/rule-engine-2-0/tutorials/add-devices-to-group/
-          pe: true
         - title: Send data to external MQTT brokers
           path: /docs/user-guide/integrations/send-data-external-mqtt-brokers/
-          pe: true
         - title: Using queues for synchronization
           path: /docs/user-guide/rule-engine-2-5/tutorials/queues-for-synchronization/
         - title: Using queues for message reprocessing
@@ -137,7 +134,6 @@ toc:
       path: /docs/user-guide/templatization/
       new: true
 - title: White labeling
-  pe: true
   section:
     - title: Overview
       path: /docs/pe/user-guide/white-labeling/
@@ -151,7 +147,6 @@ toc:
       path: /docs/pe/user-guide/custom-menu/
       new: true
 - title: Integrations
-  pe: true
   section:
   - title: Overview
     path: /docs/user-guide/integrations/
@@ -212,19 +207,8 @@ toc:
   section:
   - title: Kafka Streams
     path: /docs/samples/analytics/kafka-streams/
-- title: Mobile center
-  new: true
-  section:
-    - title: Overview
-      path: /docs/mobile-center/mobile-center/
-    - title: Applications
-      path: /docs/mobile-center/applications/
-    - title: Mobile application QR code
-      path: /docs/user-guide/ui/mobile-qr-code/
 - title: Other Features
   section:
-    - title: Edge Computing
-      path: /docs/user-guide/edge-computing/
     - title: Device Connectivity Status
       path: /docs/user-guide/device-connectivity-status/
     - title: Claiming Devices
@@ -248,19 +232,14 @@ toc:
       path: /docs/user-guide/bulk-provisioning/
     - title: Entity Groups
       path: /docs/pe/user-guide/groups/
-      pe: true
     - title: Scheduler
       path: /docs/pe/user-guide/scheduler/
-      pe: true
     - title: Reporting
       path: /docs/pe/user-guide/reporting/
-      pe: true
     - title: CSV/XLS data export
       path: /docs/pe/user-guide/csv-xls-data-export/
-      pe: true
     - title: File Storage
       path: /docs/pe/user-guide/file-storage/
-      pe: true
     - title: ThingsBoard Expression Language (TBEL)
       path: /docs/user-guide/tbel/
       new: true
@@ -274,7 +253,6 @@ toc:
       path: /docs/user-guide/audit-log/
     - title: Advanced RBAC for IoT
       path: /docs/pe/user-guide/rbac/
-      pe: true
     - title: Two-factor authentication
       path: /docs/user-guide/two-factor-authentication/
     - title: OAuth 2.0
@@ -329,7 +307,6 @@ toc:
     path: /docs/user-guide/ui/dashboards/
   - title: Entity Groups
     path: /docs/pe/user-guide/groups/
-    pe: true
   - title: SMS Provider Settings
     path: /docs/user-guide/ui/sms-provider-settings/
   - title: Slack Settings
