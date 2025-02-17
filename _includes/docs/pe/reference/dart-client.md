@@ -4,17 +4,17 @@
 
 ## Overview
 
-[Dart ThingsBoard PE API Client](https://pub.dev/packages/thingsboard_pe_client) package is a [Dart](https://dart.dev/) library
-providing model objects and services to communicate with ThingsBoard PE platform using [RESTful APIs](/docs/{{docsPrefix}}reference/rest-api/) and WebSocket protocol.
-With Dart Client you can programmatically access ThingsBoard PE API to manage [entities](/docs/{{docsPrefix}}user-guide/entities-and-relations/),
+[Dart IoT Hub API Client](https://pub.dev/packages/thingsboard_pe_client) package is a [Dart](https://dart.dev/) library
+providing model objects and services to communicate with IoT Hub platform using [RESTful APIs](/docs/{{docsPrefix}}reference/rest-api/) and WebSocket protocol.
+With Dart Client you can programmatically access IoT Hub API to manage [entities](/docs/{{docsPrefix}}user-guide/entities-and-relations/),
 query [telemetry data](/docs/{{docsPrefix}}user-guide/telemetry/) and get real-time updates via [WebSocket API](/docs/{{docsPrefix}}user-guide/telemetry/#websocket-api).
-The Dart ThingsBoard PE API Client is also a part of ThingsBoard PE Mobile Application.
+The Dart IoT Hub API Client is also a part of IoT Hub Mobile Application.
 
-The version of the Dart ThingsBoard PE API Client depends on the version of the platform that you are using.
+The version of the Dart IoT Hub API Client depends on the version of the platform that you are using.
 
 ## Installing Dart ThingsBoard API Client (Professional Edition)
 
-To use Dart ThingsBoard PE API Client package in your Dart/Flutter project run this command:
+To use Dart IoT Hub API Client package in your Dart/Flutter project run this command:
 
 With Dart:
 
@@ -575,6 +575,6 @@ void main() async {
 
 #### More examples
 
-You can find more examples to learn how to use Dart ThingsBoard PE API Client **[here](https://github.com/thingsboard/dart_thingsboard_pe_client/tree/master/example)**.
+You can find more examples to learn how to use Dart IoT Hub API Client **[here](https://github.com/thingsboard/dart_thingsboard_pe_client/tree/master/example)**.
 
 
