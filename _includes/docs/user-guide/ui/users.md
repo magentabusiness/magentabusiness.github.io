@@ -4,7 +4,7 @@
 
 ## User overview
 
-There are three levels of roles on the ThingsBoard platform. It is possible to create a user on each level.
+There are three levels of roles on the IoT Hub platform. It is possible to create a user on each level.
 
 
 These roles are as follows:
@@ -18,7 +18,7 @@ These roles are as follows:
 {% capture difference %}
 **Important:**
 <br>
-In Thingsboard Professional Edition, the Customer can create other customer users and subcustomers.
+In IoT Hub, the Customer can create other customer users and subcustomers.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -41,7 +41,7 @@ The system administrator can also add the name and description optionally. After
 
    ![image](/images/user-guide/ui/users/ce/user-activation-link.png)
 
-4. If you selected send **activation mail option,** then you need to check your email box and find the message about the Thingsboard account activation. 
+4. If you selected send **activation mail option,** then you need to check your email box and find the message about the IoT Hub account activation. 
 Click Activate Your Account, and follow the easy password-creating process.
 
    ![image](/images/user-guide/ui/users/ce/account-activation-email.png)
@@ -49,7 +49,7 @@ Click Activate Your Account, and follow the easy password-creating process.
 {% capture difference %}
 **NOTE:**
 <br>
-To receive an email from ThingsBoard, you should set up a mail server at the system administrator level in advance.
+To receive an email from IoT Hub, you should set up a mail server at the system administrator level in advance.
 Check out the [mail settings](/docs/{{docsPrefix}}user-guide/ui/mail-settings) instructions.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
@@ -65,7 +65,7 @@ They are as follows:
 
 3) **Resend activation** will resend the account activation email to the user's email box.
 
-4) **Login as Tenant administrator** opens the Thingsboard platform from the Tenant administrator UI. 
+4) **Login as Tenant administrator** opens the IoT Hub platform from the Tenant administrator UI. 
 
 5) The System Administrator can also **delete** the Tenant administrator from the tenants' users list.
 
@@ -107,7 +107,7 @@ They are as follows:
 
 3) **Resend activation** will resend the account activation email to the user's email box. 
 
-4) **Login as a Customer user** lets the Tenant administrator open the Thingsboard platform from the user UI. 
+4) **Login as a Customer user** lets the Tenant administrator open the IoT Hub platform from the user UI. 
 
 5) The Tenant Administrator can also **delete the Customer user** from the customers’ list.
 

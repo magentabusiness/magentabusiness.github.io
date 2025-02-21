@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
-title: Connecting a Senquip telemetry device to the ThingsBoard
-description: Configuration of a Senquip telemetry device to enable it to send telemetry data to the ThingsBoard.
+title: Connecting a Senquip telemetry device to the IoT Hub
+description: Configuration of a Senquip telemetry device to enable it to send telemetry data to the IoT Hub.
 
 ---
 
@@ -9,12 +9,12 @@ description: Configuration of a Senquip telemetry device to enable it to send te
 {:toc}
 
 ## Introduction
-ThingsBoard is a sevice management, data collection, processing and visualization platform for IoT solutions.  If this is your first experience with the platform we recommend to review  [what-is-thingsboard](/docs/getting-started-guides/what-is-thingsboard/) page and [getting-started](/docs/getting-started-guides/helloworld/) guide.
+IoT Hub is a sevice management, data collection, processing and visualization platform for IoT solutions.  If this is your first experience with the platform we recommend to review  [what-is-iothub](/docs/getting-started-guides/what-is-iothub/) page and [getting-started](/docs/getting-started-guides/helloworld/) guide.
 
 
-Senquip manufactures programmable telemetry devices such as the [ORB-C1](https://www.senquip.com) that connects to any industrial sensor or system. Senquip devices can maintain connection with a third-party endpoint (via UDP, HTTP and MQTT), and the [Senquip Portal](https://portal.senquip.com) at the same time. This allows for configuration changes and firmware updates to be made from the [Senquip Portal](https://portal.senquip.com) whilst sending measured data to the ThingsBoard.
+Senquip manufactures programmable telemetry devices such as the [ORB-C1](https://www.senquip.com) that connects to any industrial sensor or system. Senquip devices can maintain connection with a third-party endpoint (via UDP, HTTP and MQTT), and the [Senquip Portal](https://portal.senquip.com) at the same time. This allows for configuration changes and firmware updates to be made from the [Senquip Portal](https://portal.senquip.com) whilst sending measured data to the IoT Hub.
 
-Senquip devices can connect to MODBUS, CAN Bus, current, voltage, frequency and many other sensor types.  In this example, location, temperature, and CAN-bus data will be sent from a Senquip ORB-C1 to the ThingsBoard using MQTT.
+Senquip devices can connect to MODBUS, CAN Bus, current, voltage, frequency and many other sensor types.  In this example, location, temperature, and CAN-bus data will be sent from a Senquip ORB-C1 to the IoT Hub using MQTT.
 
 Here is an image of a real life install using this data.
 
@@ -65,24 +65,24 @@ The General settings should now look like this.
 
 ![image](/images/samples/senquip/general.jpg)
 
-### Configuring the ThingsBoard endpoint
+### Configuring the IoT Hub endpoint
 
-Senquip devices can send to the Senquip Portal and a second endpoint at the same time.  In this example, the ThingsBoard will be confirgured as the second endpoint, using MQTT as the transport.
+Senquip devices can send to the Senquip Portal and a second endpoint at the same time.  In this example, the IoT Hub will be confirgured as the second endpoint, using MQTT as the transport.
 
 * [Step 1] Enable the MQTT endpoint (Setup/Endpoint/MQTT = Enabled).
 * [Step 2] Set the broker address (Setup/Endpoint/MQTT/Broker Address = "thingsboard.cloud:1883").
 * [Step 3] Set the client address, we will use the unique device ID "AYCAN24V1" (Setup/Endpoint/MQTT/Client ID = "AYCAN24V1").
 * [Step 4] Set the data topic (Setup/Endpoint/MQTT/Data Topic = "v1/devices/me/telemetry").
-* [Step 5] Select a username to be used on the ThingsBoard, we have chosen "Senquip" (Setup/Endpoint/MQTT/Username = "Senquip").
+* [Step 5] Select a username to be used on the IoT Hub, we have chosen "Senquip" (Setup/Endpoint/MQTT/Username = "Senquip").
 * [Step 6] Select a password to be associated with the username, we have chosen "SenquipPassword", we suggest you choose smething more secure (Setup/Endpoint/MQTT/Password = "SenquipPassword").
 
 The Endpoint settings should now look like this.
 
 ![image](/images/samples/senquip/mqtt.jpg)
 
-## Thingsboard configuration
+## IoT Hub configuration
 
-It will be assumed that the user has an account on the [ThingsBoard Cloud](https://thingsboard.cloud/).  All device configuration described in the steps below will be performed using the [ThingsBoard Cloud](https://thingsboard.cloud/).
+It will be assumed that the user has an account on the [IoT Hub](https://iothub.magenta.at).  All device configuration described in the steps below will be performed using the [IoT Hub](https://iothub.magenta.at/).
 
 ### Create a new device
 
@@ -115,7 +115,7 @@ Senquip devices send data in [JSON](https://en.wikipedia.org/wiki/JSON) format a
 
 Each measurement in the JSON packet has a key and a value.  For instance, GPS latitude has the key "gps_lat" and a value of "-32.70245".  In this example, 5 CAN messages are being received, each with an identifier and value and so the CAN data in the JSON packet is nested with 5 individual CAN identifiers and values.
 
-By selecting the device that we have just added to the ThingsBoard and pressing "Latest Telemetry", we can see the telemetry arriving on the ThingsBoard.  Notice how the ThingsBoard has automatically recognised the data in the JSON packet and has converted it into a table of keys and values.  Notice also how the CAN data has been inserted as 5 rows of CAN identifiers and values.
+By selecting the device that we have just added to the IoT Hub and pressing "Latest Telemetry", we can see the telemetry arriving on the IoT Hub.  Notice how the IoT Hub has automatically recognised the data in the JSON packet and has converted it into a table of keys and values.  Notice also how the CAN data has been inserted as 5 rows of CAN identifiers and values.
 
 ![image](/images/samples/senquip/telemetry.jpg)
 

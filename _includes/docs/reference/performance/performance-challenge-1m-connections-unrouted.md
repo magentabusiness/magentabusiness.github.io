@@ -45,7 +45,7 @@ fs.file-max = 1048576
 
 ### m6a.2xlarge (8 vCPUs AMD EPYC 3rd, 32 GiB, EBS GP3) + Cassandra - 500k devices, 5k msg/sec, 15k tps
 
-Architecture is 1 Thingsboard server + 20 client instances each supply 25k devices (500k in total).
+Architecture is 1 IoT Hub server + 20 client instances each supply 25k devices (500k in total).
 
 500k devices connected
 
@@ -65,14 +65,14 @@ Almost handle, but it's hard to handle 10k mps rate with 500k devices without fu
 
 ### m6a.4xlarge (16 vCPUs AMD EPYC 3rd, 64 GiB, EBS GP3) + Cassandra - 1Million devices, 5k msg/sec, 15k tps
 
-Architecture is 1 Thingsboard server + 32 clients instances each supply 31250 devices (1 million in total).
+Architecture is 1 IoT Hub server + 32 clients instances each supply 31250 devices (1 million in total).
 
 Prepare the instance `pt01` example. See the particular scripts that manages many instances at once
 
 ```bash
 ssh tb2 <<'ENDSSH'
 set +x
-#optional. replace with your Thingsboard instance ip
+#optional. replace with your IoT Hub instance ip
 #echo '52.50.5.45 thingsboard' | sudo tee -a /etc/hosts
 #extend the local port range up to 64500 
 cat /proc/sys/net/ipv4/ip_local_port_range
@@ -309,7 +309,7 @@ Here the results for 1M devices!
 ![](/images/reference/performance-aws-instances/method/m6a-4xlarge/500k-10k-30k/aws-storage-monitoring.png)
 
 Conclusion:
-1. We did it! Thingsboard has been demonstrated the code and design quality.
+1. We did it! IoT Hub has been demonstrated the code and design quality.
 2. It is too risky to go production with monolith with more than 100k devices on a single node.
 3. Never do such experiments on the production environment.
 4. This case helps to discover the bottlenecks and further improve performance.

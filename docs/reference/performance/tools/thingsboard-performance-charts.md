@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
-title: Thingsboard performance charts
-description: Thingsboard performance charts
+title: IoT Hub performance charts
+description: IoT Hub performance charts
 
 ---
 

@@ -1,8 +1,8 @@
 * TOC
 {:toc}
 
-To log into ThingsBoard, the user uses a username and password. You can enhance the security of your account by updating your security settings.
-To customize security settings, log in to ThingsBoard as a System administrator.
+To log into IoT Hub, the user uses a username and password. You can enhance the security of your account by updating your security settings.
+To customize security settings, log in to IoT Hub as a System administrator.
 
 {% if docsPrefix == null %}
 ![image](/images/user-guide/ui/security-settings/security-settings-1-ce.png)
@@ -18,7 +18,7 @@ You can also specify an email address to send a notification to in case the user
 
 ## Password policy
 
-The password policy sets the rules that passwords for the ThingsBoard must meet. You can specify the following options:
+The password policy sets the rules that passwords for the IoT Hub must meet. You can specify the following options:
 
 - **Minimum password length** - the parameter determines the minimum number of characters in the password. Minimum password length should be in a range from 6 to 50;
 
@@ -32,7 +32,7 @@ The password policy sets the rules that passwords for the ThingsBoard must meet.
 
 - **Minimum number of special characters** - specify the minimum number of special characters in the password;
 
-- **Password expiration period in days** - force expiration of the password. After the password expires, ThingsBoard will require the user to change it. This ensures users regularly update their passwords;
+- **Password expiration period in days** - force expiration of the password. After the password expires, IoT Hub will require the user to change it. This ensures users regularly update their passwords;
 
 - **Password reuse frequency in days** - disallow to use the same password for the defined number of days;
 

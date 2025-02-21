@@ -24,7 +24,7 @@ Please review the integration diagram to learn more.
 In this tutorial, we will use:
 
 {% if docsPrefix == "pe/" %}
- - The instance of [IoT Hub](https://thingsboard.io/docs/user-guide/install/pe/installation-options/){:target="_blank"} installed locally;
+ - The instance of [IoT Hub](/docs/user-guide/install/pe/installation-options/){:target="_blank"} installed locally;
 {% endif %}
  - TCP Integration, running externally and connected to the cloud IoT Hub instance;
  - **echo** command which intended to display a line of text, and will redirect it's output to **netcat** (**nc**) utility;

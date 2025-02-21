@@ -48,10 +48,6 @@ The following interactive dashboard hosted on live demo server represents smart 
 
 {% include carousel.liquid nonActiveItemsVisibility = true overlay = false collectionMap = 'use-cases' collectionKey = 'smart-metering' %}
 
-<div class="center" style="margin-bottom: 64px;">
-    <a id="UseCases_SmartMetering_ViewLiveDemo" target="_blank" href="" class="button gtm_button">View live demo</a>
-</div>
-
 The live dashboard displays real-time data from several smart meters and thermostats collected using IoT Hub MQTT API. 
 Collected data is processed via the rule engine to raise alarms on certain thresholds.
 The main dashboard displays multiple districts and enables user to drill down from a district to the building and apartment levels. 
@@ -115,15 +111,6 @@ You may export the dashboard from our live demo server and import it to your IoT
                 <div>
                     <a class="title" href="/docs/user-guide/dashboards/">Data visualization</a>
                     <p>Visualize collected data using rich interactive dashboards. Develop multi-state interactive dashboards with zero coding efforts and built-in charts, gauges, maps, tables, and control widgets. Customize every dashboard aspect using advanced widget settings or even custom widget bundles. Low latency updates are possible with embedded web-sockets support.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-6">
-            <div class="block">
-                <object data="/images/phone-icon.svg"></object>
-                <div>
-                    <a class="title" href="/docs/mobile/">Mobile application</a>
-                    <p>Build your own IoT mobile application with minimum coding efforts using IoT Hub Mobile Application, an open-source project based on Flutter. Leverage a built-in set of mobile actions to take a photo, scan QR code, update location, and more directly within the dashboard.</p>
                 </div>
             </div>
         </div>

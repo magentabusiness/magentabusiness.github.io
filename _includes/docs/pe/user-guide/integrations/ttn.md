@@ -128,7 +128,7 @@ return result;
 
 
 ##### IoT Hub Downlink Data Converter
-For sending Downlink messages from Thingsboard to the device inside TTN, we need to define a Downlink Converter.
+For sending Downlink messages from IoT Hub to the device inside TTN, we need to define a Downlink Converter.
 In general, the output from the Downlink Converter should have the following structure:
 {% highlight json %}
 {
@@ -171,7 +171,7 @@ This converter will take the **version** field from the incoming message and add
 
 ##### TTN Integration
 
-Next we will create the integration with TheThingsNetwork inside Thingsboard. Open **Integrations** section and add new Integration with type
+Next we will create the integration with TheThingsNetwork inside IoT Hub. Open **Integrations** section and add new Integration with type
 **TheThingsNetwork**
 
 - Name: ttn_integration
@@ -192,9 +192,9 @@ Our device will publish temperature **0F** (15). So enter **0F** into the payloa
 
 ![image](/images/user-guide/integrations/ttn/ttn-send-payload.png)
 
-In Thingsboard go to **Device Group** -> **All** -> **thermostat_a** - here you can see that 
+In IoT Hub go to **Device Group** -> **All** -> **thermostat_a** - here you can see that 
 
-- a new device was registered in Thingsboard
+- a new device was registered in IoT Hub
 - in the **Latest Telemetry** section you will see that the last submitted temperature equals 15.
 
 ![image](/images/user-guide/integrations/ttn/tb-device-telemetry.png)

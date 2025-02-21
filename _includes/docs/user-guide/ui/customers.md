@@ -8,14 +8,14 @@ A customer can be a separate business-entity: an individual, or an organization 
 A Customer can also be a division within the tenant organization.
 
 A customer user belongs to the customer and has read permissions to view dashboards and other entities assigned by the tenant administrator.
-In Thingsboard Community Edition a customer user cannot create their own customers, users, or subcustomers.
+In IoT Hub Community Edition a customer user cannot create their own customers, users, or subcustomers.
 
 {% capture difference %}
 **Important:**
 <br>
-In **Thingsboard Professional Edition** customer user can create other customers, users and subcustomers.
-To try this functionality, use the [ThingsBoard Cloud](https://{{hostName}}/signup) server.
-The alternative option is to install ThingsBoard locally using this [installation guide](/docs/user-guide/install/pe/installation-options/)
+In **IoT Hub** customer user can create other customers, users and subcustomers.
+To try this functionality, use the [IoT Hub](https://{{hostName}}/signup) server.
+The alternative option is to install IoT Hub locally using this [installation guide](/docs/user-guide/install/pe/installation-options/)
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 

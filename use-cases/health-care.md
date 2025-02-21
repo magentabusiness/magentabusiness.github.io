@@ -14,15 +14,12 @@ notitle: "true"
     <div class="about-text">
         <div class="short">
             <div class="block">
-                <p class="text">ThingsBoard is an IoT platform with all the tools needed to build a comprehensive healthcare monitoring and management solution with ease. ThingsBoard provides an extensive range of built-in features as well as flexible customization options.</p>
-            </div>
-            <div class="demo-button">
-                <a id="UseCases_HealthCare_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/f8e77210-8fa8-11ef-90c1-0b39f28da380?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>
+                <p class="text">IoT Hub is an IoT platform with all the tools needed to build a comprehensive healthcare monitoring and management solution with ease. IoT Hub provides an extensive range of built-in features as well as flexible customization options.</p>
             </div>
         </div>
         <div class="long">
-            <p>Healthcare monitoring systems are designed to track patient health metrics in real time and immediately notify medical professionals of critical changes. ThingsBoard, as a robust IoT platform, provides all the necessary tools for collecting, processing, and visualizing data from devices that use protocols like BLE or LoRaWAN gateways, enabling seamless integration and support for flexible solutions.</p>
-            <p>Our Smart Assisted Living solution powered by ThingsBoard provides real-time monitoring and management of residents' health in assisted living facilities. Using ThingsBoard’s powerful IoT capabilities, this solution integrates connected devices, data analytics, and automated alerts to create a seamless experience for caregivers and administrators, ensuring timely responses and a higher quality of care.</p>
+            <p>Healthcare monitoring systems are designed to track patient health metrics in real time and immediately notify medical professionals of critical changes. IoT Hub, as a robust IoT platform, provides all the necessary tools for collecting, processing, and visualizing data from devices that use protocols like BLE or LoRaWAN gateways, enabling seamless integration and support for flexible solutions.</p>
+            <p>Our Smart Assisted Living solution powered by IoT Hub provides real-time monitoring and management of residents' health in assisted living facilities. Using IoT Hub’s powerful IoT capabilities, this solution integrates connected devices, data analytics, and automated alerts to create a seamless experience for caregivers and administrators, ensuring timely responses and a higher quality of care.</p>
         </div>
     </div>
 </section>
@@ -255,53 +252,48 @@ notitle: "true"
 <section class="summary">
     <h1>Summary</h1>
     <div>
-        <p>This Smart Assisted Living Solution on ThingsBoard provides a comprehensive approach to resident and facility management, with robust monitoring capabilities, intuitive zoning and device management, and customizable alerts for both health and environmental conditions. The solution empowers caregivers and administrators to respond quickly, keep environments safe, and provide the highest standard of care for residents.</p>
+        <p>This Smart Assisted Living Solution on IoT Hub provides a comprehensive approach to resident and facility management, with robust monitoring capabilities, intuitive zoning and device management, and customizable alerts for both health and environmental conditions. The solution empowers caregivers and administrators to respond quickly, keep environments safe, and provide the highest standard of care for residents.</p>
         <img src="/images/usecases/health-care/summary.svg" alt="Text summary icon">
     </div>
 </section>
 
 <section class="advantages">
-    <h1>ThingsBoard advantages</h1>
+    <h1>IoT Hub advantages</h1>
     <div class="advantages-block">
         <div class="advantage">
             <div><img src="/images/usecases/scada/security.svg" alt="Security"></div>
             <a class="title" href="/docs/pe/user-guide/ssl/http-over-ssl/">Security</a>
-            <p>ThingsBoard supports industry-standard encryption algorithms like RSA and ECDSA to ensure the data is secure during transfer via TLS(TCP) and DTLS (UDP).</p>
+            <p>IoT Hub supports industry-standard encryption algorithms like RSA and ECDSA to ensure the data is secure during transfer via TLS(TCP) and DTLS (UDP).</p>
         </div>
         <div class="advantage">
             <div><img src="/images/usecases/scada/data-visualization.svg" alt="Data visualization"></div>
             <a class="title" href="/docs/user-guide/dashboards/">Data visualization</a>
-            <p>Visualize your data effortlessly with ThingsBoard’s rich, interactive dashboards. Create multi-state, real-time dashboards using built-in widgets like charts, gauges, maps, and tables—no coding required. Customize layouts or develop custom widgets for complete flexibility. WebSocket support ensures low-latency updates.</p>
+            <p>Visualize your data effortlessly with IoT Hub’s rich, interactive dashboards. Create multi-state, real-time dashboards using built-in widgets like charts, gauges, maps, and tables—no coding required. Customize layouts or develop custom widgets for complete flexibility. WebSocket support ensures low-latency updates.</p>
         </div>
         <div class="advantage">
             <div><img src="/images/usecases/scada/connectivity.svg" alt="Connectivity"></div>
             <a class="title" href="/docs/getting-started-guides/connectivity/">Connectivity</a>
-            <p>Connect devices directly to ThingsBoard using protocols like HTTP, CoAP, MQTT, LwM2M, SNMP, LoRaWAN, and NB-IoT. For local networks, ThingsBoard Gateway bridges the cloud via Modbus, BLE, BACnet, OPC-UA, and more. Advanced protocol translation and offline data buffering ensure reliable communication even in challenging conditions.</p>
+            <p>Connect devices directly to IoT Hub using protocols like HTTP, CoAP, MQTT, LwM2M, SNMP, LoRaWAN, and NB-IoT. For local networks, IoT Hub Gateway bridges the cloud via Modbus, BLE, BACnet, OPC-UA, and more. Advanced protocol translation and offline data buffering ensure reliable communication even in challenging conditions.</p>
         </div>
         <div class="advantage scale">
             <div><img src="/images/usecases/scada/scalability.svg" alt="Scalability and high availability"></div>
             <a class="title" href="/docs/reference/msa/">Scalability and high availability</a>
-            <p>ThingsBoard supports high-availability deployments on cloud and on-premises data centers using K8S or bare-metal deployments. Platform components are horizontally scalable. ThingsBoard has production deployments supporting more then 18 000 vehicles and 500 000 devices connected.</p>
+            <p>IoT Hub supports high-availability deployments on cloud and on-premises data centers using K8S or bare-metal deployments. Platform components are horizontally scalable. IoT Hub has production deployments supporting more then 18 000 vehicles and 500 000 devices connected.</p>
         </div>
         <div class="advantage data">
             <div><img src="/images/usecases/scada/data-processing.svg" alt="Data processing"></div>
             <a class="title" href="/docs/pe/user-guide/rule-engine-2-0/overview/">Data processing</a>
-            <p>ThingsBoard allows you to define application logic with drag-n-drop rule chain designer. The Rule Engine is a robust and scalable processing framework that leverages industry-standard message queue implementations like Apache Kafka or AWS SQS to ensure data durability and guarantee data processing. You are free to process data with the Rule engine or push it to further processing in external systems.</p>
+            <p>IoT Hub allows you to define application logic with drag-n-drop rule chain designer. The Rule Engine is a robust and scalable processing framework that leverages industry-standard message queue implementations like Apache Kafka or AWS SQS to ensure data durability and guarantee data processing. You are free to process data with the Rule engine or push it to further processing in external systems.</p>
         </div>
         <div class="advantage">
             <div><img src="/images/usecases/scada/multi-tenancy.svg" alt="Multi-tenancy"></div>
             <a class="title" href="/docs/user-guide/entities-and-relations/">Multi-tenancy</a>
-            <p>ThingsBoard provides UI and API to manage tenants, customers, users, devices, and assets. Single tenant may have multiple tenant administrators and millions of devices and customers. It also offers out-of-the-box support of OTA updates for your smart meters.</p>
+            <p>IoT Hub provides UI and API to manage tenants, customers, users, devices, and assets. Single tenant may have multiple tenant administrators and millions of devices and customers. It also offers out-of-the-box support of OTA updates for your smart meters.</p>
         </div>
         <div class="advantage">
             <div><img src="/images/usecases/scada/lorawan-sigfox.svg" alt="LoRaWAN and SigFox support"></div>
             <a class="title" href="/docs/user-guide/integrations/">LoRaWAN & SigFox support</a>
             <p>Connect LoRaWAN devices via integrations with standard network servers like TTN, LORIOT, ChirpStack, Actility, etc. Connect SigFox devices via integrations with the SigFox backend.</p>
-        </div>
-        <div class="advantage">
-            <div><img src="/images/usecases/scada/mobile.svg" alt="Mobile application"></div>
-            <a class="title" href="/docs/mobile/">Mobile application</a>
-            <p>Build your own IoT mobile application with minimum coding efforts using ThingsBoard Mobile Application, an open-source project based on Flutter. Leverage a built-in set of mobile actions to take a photo, scan QR code, update location, and more directly within the dashboard.</p>
         </div>
     </div>
 </section>
@@ -380,10 +372,6 @@ notitle: "true"
                 <div class="image-background"></div>
                 <div class="image-background"></div>
                 <div class=image>${getImage(0)}</div>
-            </div>
-            <div class="buttons-block">
-                <a id="UseCases_HealthCare_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/f8e77210-8fa8-11ef-90c1-0b39f28da380?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>
-                <a id="UseCases_HealthCare_ContactUs" target="_blank" href="https://thingsboard.io/docs/contact-us/" class="button contact-us gtm_button">Contact us</a>
             </div>`;
     
             return block;

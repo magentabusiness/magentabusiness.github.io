@@ -1,7 +1,7 @@
 ---
 layout: pricing
 title: Support plans
-description: ThingsBoard professional support plans for IoT projects, cloud infrastructure support
+description: IoT Hub professional support plans for IoT projects, cloud infrastructure support
 defaultActivePricingSection: thingsboard-pe
 
 ---
@@ -10,7 +10,7 @@ defaultActivePricingSection: thingsboard-pe
     <div class="pricing-header">
        <div class="pricing-hero">
         <div class="pricing-hero-content">
-            <h1>ThingsBoard support options</h1>
+            <h1>IoT Hub support options</h1>
         </div>
        </div>
        <nav id="inner-navigation" class="inner-navigation">
@@ -39,14 +39,14 @@ defaultActivePricingSection: thingsboard-pe
                         <div class="pricing-square">
                             <h2>Community support</h2>
                             <div class="pricing-square-description">
-                                <p> <strong>Community</strong> <strong>support</strong> is free-of-charge option. It is a volonteering initiative, provided by our team. Please, be aware that support is one of ThingsBoard Inc. business fields. Although our engineers (as many of our customers know) successfully handle user's requests in their free time. Community support doesn't mean any obligation for ThingsBoard Inc. We encourage you to:<br>
+                                <p> <strong>Community</strong> <strong>support</strong> is free-of-charge option. It is a volonteering initiative, provided by our team. Please, be aware that support is one of IoT Hub Inc. business fields. Although our engineers (as many of our customers know) successfully handle user's requests in their free time. Community support doesn't mean any obligation for IoT Hub Inc. We encourage you to:<br>
                                <a href="/docs/">read documentation</a>;<br>
                                subscribe to our <a href="https://www.youtube.com/c/thingsboard" target ="blank">YouTube channel</a>.<br>
                                and time fater time took an eye on <a href="https://www.youtube.com/watch?v=M0CaascgDmg&list=PLYEKB_XwLCZJ6T8RPLTjRwMw0eoabpEKO" target="blank">the free Education course</a> updates.
                                 </p>
                                 <p>So, most demanded tutorials, samples and guides are available 24/7
                                 </p>
-                                <p>Customer may also rely on answers from ThingsBoard <a href="https://github.com/thingsboard/thingsboard/issues" target="blank">community on GitHub</a> (issues page), send their queries to <a href="https://groups.google.com/forum/#!forum/thingsboard" target="blank">Q&A forum</a> and start <a href="https://stackoverflow.com/questions/tagged/thingsboard" target="blank">Stack Overflow</a> themes.
+                                <p>Customer may also rely on answers from IoT Hub <a href="https://github.com/thingsboard/thingsboard/issues" target="blank">community on GitHub</a> (issues page), send their queries to <a href="https://groups.google.com/forum/#!forum/thingsboard" target="blank">Q&A forum</a> and start <a href="https://stackoverflow.com/questions/tagged/thingsboard" target="blank">Stack Overflow</a> themes.
                                 </p>  
                                 <div class="row justify-content-center">
                                     <a id="Serv_Support_CS_HelpMe" class="btn-blue btn-pricing gtm_button" href="/docs/contact-us/">

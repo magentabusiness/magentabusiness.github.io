@@ -2,8 +2,8 @@
 layout: docwithnav-pe
 assignees:
 - ashvayka
-title: ThingsBoard Professional Edition cluster setup with Docker Compose guide
-description: ThingsBoard Professional Edition cluster setup with Docker Compose guide
+title: IoT Hub cluster setup with Docker Compose guide
+description: IoT Hub cluster setup with Docker Compose guide
 redirect_from: "/docs/user-guide/install/pe/docker-cassandra/"  
 
 ---
@@ -13,12 +13,12 @@ redirect_from: "/docs/user-guide/install/pe/docker-cassandra/"
 
 {% assign docsPrefix = "pe/" %}
 
-This guide will help you to setup ThingsBoard in cluster mode with Docker Compose. 
+This guide will help you to setup IoT Hub in cluster mode with Docker Compose. 
 For this purpose, we will use docker container images available on [Docker Hub](https://hub.docker.com/search?q=thingsboard&type=image&image_filter=store).
 
 ## Prerequisites
 
-ThingsBoard Microservices are running in dockerized environment.
+IoT Hub Microservices are running in dockerized environment.
 Before starting please make sure Docker Engine and Docker Compose are installed in your system. 
 
 {% include templates/install/docker-install.md %}
@@ -30,11 +30,11 @@ Please note that for the deployment of Rule Engine as a separate service, an add
 
 {% include templates/install/docker-install-note.md %}
 
-## Step 1. Pull ThingsBoard PE Images
+## Step 1. Pull IoT Hub Images
 
 {% include templates/install/dockerhub/pull.md %}
 
-## Step 2. Clone ThingsBoard PE Docker Compose scripts
+## Step 2. Clone IoT Hub Docker Compose scripts
 
 ```bash
 git clone -b release-{{ site.release.ce_ver }} https://github.com/thingsboard/thingsboard-pe-docker-compose.git tb-pe-docker-compose --depth 1
@@ -48,9 +48,9 @@ We assume you have already chosen your subscription plan or decided to purchase 
 If not, please navigate to [pricing](/pricing/) page to select the best license option for your case and get your license. 
 See [How-to get pay-as-you-go subscription](https://www.youtube.com/watch?v=dK-QDFGxWek){:target="_blank"} or [How-to get perpetual license](https://www.youtube.com/watch?v=GPe0lHolWek){:target="_blank"} for more details.
 
-**IMPORTANT NOTE:** if you decide to use an [advanced deployment type](/docs/user-guide/install/pe/cluster/docker-compose-setup/#step-6-configure-deployment-type), make sure you have purchased a license key for at least four instances of ThingsBoard PE. 
+**IMPORTANT NOTE:** if you decide to use an [advanced deployment type](/docs/user-guide/install/pe/cluster/docker-compose-setup/#step-6-configure-deployment-type), make sure you have purchased a license key for at least four instances of IoT Hub. 
 Otherwise, you need to modify the local copy of [docker-compose.yml](https://github.com/thingsboard/thingsboard-pe-docker-compose/blob/master/advanced/docker-compose.yml)) 
-to use the number of ThingsBoard instances that you've purchased.
+to use the number of IoT Hub instances that you've purchased.
 We will reference the license key you have obtained during this step as PUT_YOUR_LICENSE_SECRET_HERE later in this guide.
 
 
@@ -64,31 +64,31 @@ nano tb-node.env
 and put the license secret parameter instead of "PUT_YOUR_LICENSE_SECRET_HERE":
 
 ```bash
-# ThingsBoard server configuration
+# IoT Hub server configuration
 ...
 TB_LICENSE_SECRET=PUT_YOUR_LICENSE_SECRET_HERE
 ```
 
 ## Step 5. Configure deployment type
 
-Starting ThingsBoard v2.2, it is possible to install ThingsBoard cluster using new microservices architecture and docker containers. 
+Starting IoT Hub v2.2, it is possible to install IoT Hub cluster using new microservices architecture and docker containers. 
 See [**microservices**](/docs/reference/msa/) architecture page for more details.
 
 The docker compose scripts support three deployment modes. In order to set the deployment mode, change the value of `TB_SETUP` variable in `.env` file to one of the following:
 
-- `basic` **(recommended, set by default)** - ThingsBoard Core and Rule Engine are launched inside one JVM (requires only one license).
+- `basic` **(recommended, set by default)** - IoT Hub Core and Rule Engine are launched inside one JVM (requires only one license).
   MQTT, CoAP and HTTP transports are launched in separate containers.
-- `monolith` - ThingsBoard Core and Rule Engine are launched inside one JVM (requires only one license). 
+- `monolith` - IoT Hub Core and Rule Engine are launched inside one JVM (requires only one license). 
   MQTT, CoAP and HTTP transports are also launched in the same JVM to minimize memory footprint and server requirements.
-- `advanced`- ThingsBoard Core and Rule Engine are launched in separate containers and are replicated one JVM (requires 4 licenses).  
+- `advanced`- IoT Hub Core and Rule Engine are launched in separate containers and are replicated one JVM (requires 4 licenses).  
   
 All deployment modes support separate JS executors, Redis, and different [queues](/docs/user-guide/install/pe/cluster/docker-compose-setup/#step-8-choose-thingsboard-queue-service).
 
-## Step 6. Configure ThingsBoard database
+## Step 6. Configure IoT Hub database
 
 {% include templates/install/configure-db-docker-compose.md %}
 
-## Step 7. Choose ThingsBoard queue service 
+## Step 7. Choose IoT Hub queue service 
 
 {% include templates/install/install-queue-docker-compose.md %}
 

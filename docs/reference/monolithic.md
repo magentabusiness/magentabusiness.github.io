@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
-title: ThingsBoard Monolithic architecture
-description: ThingsBoard architecture
+title: IoT Hub Monolithic architecture
+description: IoT Hub architecture
 
 ---
 

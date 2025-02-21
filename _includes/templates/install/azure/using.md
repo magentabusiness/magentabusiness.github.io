@@ -1,4 +1,4 @@
-Now you can open ThingsBoard web interface in your browser using IP address of the load balancer.
+Now you can open IoT Hub web interface in your browser using IP address of the load balancer.
 
 You can see DNS name (the `ADDRESS` column) of the HTTP load-balancer using command:
 ```
@@ -35,7 +35,7 @@ If you installed database with demo data (using `--loadDemo` flag) you can also 
 - **Tenant Administrator**: tenant@thingsboard.org / tenant
 - **Customer User**: customer@thingsboard.org / customer
 
-In case of any issues you can examine service logs for errors. For example to see ThingsBoard node logs execute the following command:
+In case of any issues you can examine service logs for errors. For example to see IoT Hub node logs execute the following command:
 
 ```
 kubectl logs -f tb-node-0

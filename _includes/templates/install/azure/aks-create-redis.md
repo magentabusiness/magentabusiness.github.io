@@ -1,4 +1,4 @@
-You’ll need to set up Azure Cache for Redis. ThingsBoard uses cache to improve performance and avoid frequent DB reads.
+You’ll need to set up Azure Cache for Redis. IoT Hub uses cache to improve performance and avoid frequent DB reads.
 
 You can do this via this [guide](https://docs.microsoft.com/en-us/azure/azure-cache-for-redis/quickstart-create-redis)
 

@@ -11,7 +11,7 @@
 * TOC 
 {:toc}
 
-The ThingsBoard Notification center is a comprehensive tool for sending, managing, and automating notifications within the platform. It allows for a variety of notification methods, including web, email, mobile application, SMS, and integrations with Slack and Microsoft Teams. 
+The IoT Hub Notification center is a comprehensive tool for sending, managing, and automating notifications within the platform. It allows for a variety of notification methods, including web, email, SMS, and integrations with Slack and Microsoft Teams. 
 Users can manually send notifications, automate them through REST API, or set triggers based on events within the system. Users may also schedule delivery of the notification for a particular time.
 
 The Notification center is accessible through the sidebar menu and includes options for [sending notifications](#send-notification), viewing [inbox](#inbox) and [sent](#sent) messages, [managing recipients](#recipients), [creating templates](#templates), and [setting up rules](#rules) for automated notifications.
@@ -27,16 +27,23 @@ Let's look at each of the key components of the notification center below.
 
 ## Notification delivery methods
 
-ThingsBoard offers several notification delivery methods to keep you and your customers promptly informed about any events in your IoT solution:
+IoT Hub offers several notification delivery methods to keep you and your customers promptly informed about any events in your IoT solution:
 
-- **Web**. Receive notifications directly within the ThingsBoard web interface. This is perfect for users who are always logged in.
+- **Web**. Receive notifications directly within the IoT Hub web interface. This is perfect for users who are always logged in.
+
+<!-- 
 - **Mobile app**. Receive instant push notifications directly to your smartphone through the [{{mobilePrefix}}]({{mobileUrl}}). Stay informed about all events in your IoT solution, even when you're on the go.<br>
-To use this notification delivery method, you first need to configure the {{mobilePrefix}} and make some settings in the "Mobile settings" section on the ThingsBoard platform itself.
+To use this notification delivery method, you first need to configure the {{mobilePrefix}} and make some settings in the "Mobile settings" section on the IoT Hub platform itself.
 These steps are detailed in this [documentation]({{mobileGuide}}).
-- **SMS**. The ThingsBoard supports notification delivery via SMS to mobile devices, providing the ability to deliver important information even in the absence of internet access. {% if docsPrefix == 'pe/' %}To send SMS notifications, you need to set up an [SMS provider](/docs/{{docsPrefix}}user-guide/ui/sms-provider-settings/). Use the system administrator's configuration or set the settings at your level.{% endif %}{% if docsPrefix == null %}To send notifications via SMS, a system administrator should set up the [SMS provider](/docs/{{docsPrefix}}user-guide/ui/sms-provider-settings/) properly.{% endif %}
+-->
+
+- **SMS**. The IoT Hub supports notification delivery via SMS to mobile devices, providing the ability to deliver important information even in the absence of internet access. {% if docsPrefix == 'pe/' %}To send SMS notifications, you need to set up an [SMS provider](/docs/{{docsPrefix}}user-guide/ui/sms-provider-settings/). Use the system administrator's configuration or set the settings at your level.{% endif %}{% if docsPrefix == null %}To send notifications via SMS, a system administrator should set up the [SMS provider](/docs/{{docsPrefix}}user-guide/ui/sms-provider-settings/) properly.{% endif %}
+
 - **Email**. Receive notifications directly in your email inbox. Perfect for users who prefer to stay informed through their email accounts. {% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}To send email notifications, you must configure an [outgoing mail server](/docs/{{docsPrefix}}user-guide/ui/mail-settings/). Use the system administrator's configuration or set the settings at your level.{% endif %}{% if docsPrefix == null %}To send notifications via email, a system administrator should configure an [outgoing mail server](/docs/{{docsPrefix}}user-guide/ui/mail-settings/) properly.{% endif %}
-- **Slack**. Integrate Slack with ThingsBoard to send notifications as messages to individual users or channels within your Slack workspace. To use this method of notification delivery, you first need to configure the Slack settings in ThingsBoard using [this guide](/docs/{{docsPrefix}}user-guide/ui/slack-settings/).
-- **Microsoft Teams**. Integration of Microsoft Teams with ThingsBoard allows for delivering notifications in the form of messages to specific channels in your Microsoft Teams environment. To use this method a tenant administrator must get **webhook URL** for a needed Microsoft Teams channel using this [guide](/docs/{{docsPrefix}}user-guide/ui/microsoft-teams-settings/).
+
+- **Slack**. Integrate Slack with IoT Hub to send notifications as messages to individual users or channels within your Slack workspace. To use this method of notification delivery, you first need to configure the Slack settings in IoT Hub using [this guide](/docs/{{docsPrefix}}user-guide/ui/slack-settings/).
+
+- **Microsoft Teams**. Integration of Microsoft Teams with IoT Hub allows for delivering notifications in the form of messages to specific channels in your Microsoft Teams environment. To use this method a tenant administrator must get **webhook URL** for a needed Microsoft Teams channel using this [guide](/docs/{{docsPrefix}}user-guide/ui/microsoft-teams-settings/).
 
 ## Send notification
 
@@ -80,14 +87,14 @@ Recipients can be added based on their roles, individual user accounts, predefin
 
 {% include images-gallery.html imageCollection="notification-center-recipients" %}
 
-For delivering notifications through the mobile app, SMS, and email, basic configuration requirements, which we previously covered in the [Notification delivery methods](#notification-delivery-methods) section, apply.
-For delivering notifications through the ThingsBoard platform, Microsoft Teams, and Slack, you'll additionally need to specify the exact destination for your notification at the recipient adding stage.
+For delivering notifications through the SMS, and email, basic configuration requirements, which we previously covered in the [Notification delivery methods](#notification-delivery-methods) section, apply.
+For delivering notifications through the IoT Hub platform, Microsoft Teams, and Slack, you'll additionally need to specify the exact destination for your notification at the recipient adding stage.
 
 Depending on the type of recipient you choose, the setup process will vary. Therefore, we will take a closer look at each option individually:
 
-#### ThingsBoard platform users
+#### IoT Hub platform users
 
-To add recipient from the ThingsBoard user list, follow these steps:
+To add recipient from the IoT Hub user list, follow these steps:
 
  - Click the "Add recipients" button in the upper right corner of the "Recipients" tab;
  - A new window will pop up. Here, type in the name of the notification recipient(s);
@@ -141,11 +148,11 @@ For *Tenant administrator*:
 
 #### Slack
 
-Send ThingsBoard notifications as Slack messages to a public or private channel, or direct message.
+Send IoT Hub notifications as Slack messages to a public or private channel, or direct message.
 
 {% capture difference %}
 **Please note:**
-first, you need to configure the Slack settings in ThingsBoard using [this guide](/docs/{{docsPrefix}}user-guide/ui/slack-settings/).
+first, you need to configure the Slack settings in IoT Hub using [this guide](/docs/{{docsPrefix}}user-guide/ui/slack-settings/).
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -160,7 +167,7 @@ first, you need to configure the Slack settings in ThingsBoard using [this guide
 
 #### Microsoft Teams
 
-Send ThingsBoard notifications as messages to your Microsoft Teams channel.
+Send IoT Hub notifications as messages to your Microsoft Teams channel.
 
 {% capture difference %}
 **Please note:**
@@ -225,7 +232,7 @@ Available template parameters:
 
 Let's consider an example with the following event: maintenance work for the server is scheduled for tomorrow.
 
-The notification in ThingsBoard may look like this:
+The notification in IoT Hub may look like this:
 
 {% if docsPrefix == "pe/" or docsPrefix contains "paas/" %}
 ![image](/images/user-guide/notifications/templates/templates-general-pe.png)
@@ -251,14 +258,14 @@ Available template parameters contain all parameters available for the [General]
 {% if docsPrefix == "pe/" or docsPrefix contains "paas/" %}
 Let's consider an example with the following event: A new alarm with the type 'High Temperature' has been created for the device 'Compressor NM-56'.
 
-The notification in ThingsBoard may look like this:
+The notification in IoT Hub may look like this:
 
 ![image](/images/user-guide/notifications/templates/templates-alarms-pe.png)
 {% endif %}
 {% if docsPrefix == null %}
 Let's consider an example with the following event: A new alarm with the type "High Temperature" has been created for the device 'Compressor BJ-66'.
 
-The notification in ThingsBoard may look like this:
+The notification in IoT Hub may look like this:
 
 ![image](/images/user-guide/notifications/templates/templates-alarms-ce.png)
 {% endif %}
@@ -277,14 +284,14 @@ Available template parameters contain all parameters available for the [General]
 {% if docsPrefix == "pe/" or docsPrefix contains "paas/" %}
 Let's consider an example with the following event: the device 'Compressor MN-56' became inactive.
 
-The notification in ThingsBoard may look like this:
+The notification in IoT Hub may look like this:
 
 ![image](/images/user-guide/notifications/templates/templates-device-activity-pe.png)
 {% endif %}
 {% if docsPrefix == null %}
 Let's consider an example with the following event: the device 'Compressor BJ-66' became inactive.
 
-The notification in ThingsBoard may look like this:
+The notification in IoT Hub may look like this:
 
 ![image](/images/user-guide/notifications/templates/templates-device-activity-ce.png)
 {% endif %}
@@ -305,7 +312,7 @@ Available template parameters contain all parameters available for the [General]
 
 Let's consider an example with the following event: user johndoe@thingsboard.io added new device 'Compressor AO-99'.
 
-The notification in ThingsBoard may look like this:
+The notification in IoT Hub may look like this:
 
 {% if docsPrefix == "pe/" or docsPrefix contains "paas/" %}
 ![image](/images/user-guide/notifications/templates/templates-entity-action-pe.png)
@@ -327,7 +334,7 @@ Available template parameters contain all parameters available for the [Alarm](#
 
 Let's consider an example with the following event: John Doe left a comment for Jane regarding the 'High Temperature' alarm of the device 'Compressor RK-25'.
 
-The notification in ThingsBoard may look like this:
+The notification in IoT Hub may look like this:
 
 {% if docsPrefix == "pe/" or docsPrefix contains "paas/" %}
 ![image](/images/user-guide/notifications/templates/templates-alarm-comment-pe.png)
@@ -352,7 +359,7 @@ Available template parameters contain all parameters available for the [Alarm](#
 
 Let's consider an example with the following event: johndoe@thingsboard.io assigned the 'High Temperature' alarm of the device 'Compressor BJ-66' to janesmith@thingsboard.io.
 
-The notification in ThingsBoard may look like this:
+The notification in IoT Hub may look like this:
 
 {% if docsPrefix == "pe/" or docsPrefix contains "paas/" %}
 ![image](/images/user-guide/notifications/templates/templates-alarm-assignment-pe.png)
@@ -378,7 +385,7 @@ Available template parameters contain all parameters available for the [General]
 
 Let's consider an example with the following event: the "Kafka" rule node misconfigured.
 
-The notification in ThingsBoard may look like this:
+The notification in IoT Hub may look like this:
 
 {% if docsPrefix == "pe/" or docsPrefix contains "paas/" %}
 ![image](/images/user-guide/notifications/templates/templates-rule-engine-lifecycle-event-pe.png)
@@ -404,7 +411,7 @@ Available template parameters contain all parameters available for the [General]
 
 Let's consider an example with the following event: the incoming message to the ‘send notification’ rule node contains data about the temperature value in Building 1.
 
-The notification in ThingsBoard may look like this:
+The notification in IoT Hub may look like this:
 
 {% if docsPrefix == "pe/" or docsPrefix contains "paas/" %}
 ![image](/images/user-guide/notifications/templates/tempalates-rule-node-pe.png)
@@ -428,14 +435,14 @@ Available template parameters contain all parameters available for the [General]
 
 Let's consider an example with the following event: failed to start MQTT Integration.
 
-The notification in ThingsBoard may look like this:
+The notification in IoT Hub may look like this:
 
 ![image](/images/user-guide/notifications/templates/templates-integration-lifecycle-event-pe.png) 
 {% endif %}
  
 #### Edge connection
 
-The Edge connection template is used to send notifications about changes in the connection status between ThingsBoard and the Edge.
+The Edge connection template is used to send notifications about changes in the connection status between IoT Hub and the Edge.
 
 Available template parameters:
 
@@ -443,9 +450,9 @@ Available template parameters:
 * *edgeName* - the name of the edge;
 * *eventType* - the string representation of the connectivity status: connected or disconnected.
 
-Let's consider an example with the following event: ThingsBoard connected to Edge.
+Let's consider an example with the following event: IoT Hub connected to Edge.
 
-The notification in ThingsBoard may look like this:
+The notification in IoT Hub may look like this:
 
 {% if docsPrefix == "pe/" or docsPrefix contains "paas/" %}
 ![image](/images/user-guide/notifications/templates/templates-edge-connection-pe.png)
@@ -456,7 +463,7 @@ The notification in ThingsBoard may look like this:
 
 #### Edge communication failure
 
-The Edge communication failure template is used to send notifications about ThingsBoard connection failures with the Edge.
+The Edge communication failure template is used to send notifications about IoT Hub connection failures with the Edge.
 
 Available template parameters:
 
@@ -464,9 +471,9 @@ Available template parameters:
 * *edgeName* - the name of the edge;
 * *failureMsg* - the string representation of the failure, occurred on the Edge.
 
-Let's consider an example with the following event: failed to connect ThingsBoard to Edge.
+Let's consider an example with the following event: failed to connect IoT Hub to Edge.
 
-The notification in ThingsBoard may look like this:
+The notification in IoT Hub may look like this:
 
 {% if docsPrefix == "pe/" or docsPrefix contains "paas/" %}
 ![image](/images/user-guide/notifications/templates/templates-edge-communication-failure-pe.png)
@@ -491,14 +498,14 @@ Available template parameters contain all parameters available for the [General]
 {% if docsPrefix == "pe/" %}
 Let's consider an example with the following event: the tenant created 800 devices with the max allowed number is 1000.
 
-The notification in ThingsBoard may look like this:
+The notification in IoT Hub may look like this:
 
 ![image](/images/user-guide/notifications/templates/templates-entities-limit-pe.png)
 {% endif %}
 {% if docsPrefix == null %}
 Let's consider an example with the following event: the tenant created 400 devices with the max allowed number is 500.
 
-The notification in ThingsBoard may look like this:
+The notification in IoT Hub may look like this:
 
 ![image](/images/user-guide/notifications/templates/templates-entities-limit-ce.png)
 {% endif %}
@@ -518,7 +525,7 @@ Available template parameters contain all parameters available for the [General]
 
 Let's consider an example with the following event: the tenant's devices have sent 8000 messages out of 10000.
 
-The notification in ThingsBoard may look like this:
+The notification in IoT Hub may look like this:
 
 {% if docsPrefix == "pe/" %}
 ![image](/images/user-guide/notifications/templates/templates-api-usage-limit-pe.png)
@@ -529,7 +536,7 @@ The notification in ThingsBoard may look like this:
 
 #### New platform version
 
-This template is intended to notify tenants about the release of a new version of the ThingsBoard platform. Only the system administrator can use this template.
+This template is intended to notify tenants about the release of a new version of the IoT Hub platform. Only the system administrator can use this template.
 Available template parameters contain all parameters available for the [General](#general) template, plus:
 
   * *latestVersion* - the latest platform version available;
@@ -540,7 +547,7 @@ Available template parameters contain all parameters available for the [General]
 
 Let's consider an example with the following event: a new 3.6.3 version is released but currently deployed version is 3.6.2.
 
-The notification in ThingsBoard may look like this:
+The notification in IoT Hub may look like this:
 
 {% if docsPrefix == "pe/" %}
 ![image](/images/user-guide/notifications/templates/templates-new-platform-version-pe.png)
@@ -563,7 +570,7 @@ Available template parameters contain all parameters available for the [General]
 
 Let's consider an example with the following event: a customer 'Jane Smith' exceeded rate limit for per-customer REST API requests.
 
-The notification in ThingsBoard may look like this:
+The notification in IoT Hub may look like this:
 
 {% if docsPrefix == "pe/" %}
 ![image](/images/user-guide/notifications/templates/templates-exceeded-rate-limits-pe.png)
@@ -907,7 +914,7 @@ See [API usage limit](#api-usage-limit) template for a list of the available tem
 
 #### New platform version
 
-The system administrator can use the "New platform version" rule to notify tenants and system administrators about the release of a new version of the ThingsBoard platform.
+The system administrator can use the "New platform version" rule to notify tenants and system administrators about the release of a new version of the IoT Hub platform.
 
 To create a new platform version rule, follow these steps:
 
@@ -922,11 +929,11 @@ To create a new platform version rule, follow these steps:
 
 *Default rule*
 
-The default rule 'New platform version' will notify affected tenant administrators and system administrators when a new version of the ThingsBoard platform is released.
+The default rule 'New platform version' will notify affected tenant administrators and system administrators when a new version of the IoT Hub platform is released.
 
 Template subject: `New version ${latestVersion} is available`
 
-Template message: `Current version is ${currentVersion}. You can upgrade your ThingsBoard instance to version ${latestVersion}.`
+Template message: `Current version is ${currentVersion}. You can upgrade your IoT Hub instance to version ${latestVersion}.`
 
 See [New platform version](#new-platform-version) template for a list of the available template parameters.
 

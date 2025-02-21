@@ -2,7 +2,7 @@
 layout: common
 title: Services
 notitle: "true"
-description: ThingsBoard support plans, services and training sessions
+description: IoT Hub support plans, services and training sessions
 
 ---
 

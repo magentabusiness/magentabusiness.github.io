@@ -33,7 +33,7 @@ Provisioning response example:
 
 #### Sample script
 
-To communicate with ThingsBoard we will use asyncio and aiocoap modules, so we should install it:
+To communicate with IoT Hub we will use asyncio and aiocoap modules, so we should install it:
 
 ```bash
 pip3 install asyncio aiocoap --user

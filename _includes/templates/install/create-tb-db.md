@@ -5,7 +5,7 @@ psql -U postgres -d postgres -h 127.0.0.1 -W
 ```
 {: .copy-code}
 
-Create the ThingsBoard database named "thingsboard" :
+Create the IoT Hub database named "thingsboard" :
 ```bash
 CREATE DATABASE thingsboard;
 ```

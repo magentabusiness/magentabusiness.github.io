@@ -320,7 +320,7 @@ A client can be considered as an application or service that requests user authe
 - Go to the "Clients" page in the left-hand menu, and click the "Create client" button;
 - Enter "thingsboard" as the client ID. Leave the client type as "OpenID Connect". Click "Next";
 - Turn on "Client authentication" option. Confirm that "Standard flow" is enabled. Click "Next";
-- In the "Login settings" section, add the ThingsBoard redirect URI to the "Authorized Redirect URIs" section using the format:
+- In the "Login settings" section, add the IoT Hub redirect URI to the "Authorized Redirect URIs" section using the format:
 
 ```
 http://localhost:8080/login/oauth2/code/
@@ -344,7 +344,7 @@ As a fully-compliant OpenID Connect Provider implementation, Keycloak exposes a 
 
 Go to the "Realm settings" page. Scroll down and locate the link to "OpenID Endpoint Configuration", then click on it.
 A new window with OpenID Endpoint Configuration will open. Check the "Pretty-print" option to make the data view more user-friendly.
-Here you found "Access token URI," "Authorization URI," "JSON Web Key URI," and "User info URI," which are necessary for configuring the OAuth 2.0 client in ThingsBoard.
+Here you found "Access token URI," "Authorization URI," "JSON Web Key URI," and "User info URI," which are necessary for configuring the OAuth 2.0 client in IoT Hub.
 You can find a description of the available endpoints [here](https://www.keycloak.org/securing-apps/oidc-layers){:target="_blank"}.
 
 {% include images-gallery.html imageCollection="endpoint-configuration" %}
@@ -373,11 +373,11 @@ The password has been successfully.
 
 {% include images-gallery.html imageCollection="create-password" %}
 
-### Configuring Keycloak as an OAuth 2.0 authentication provider in ThingsBoard
+### Configuring Keycloak as an OAuth 2.0 authentication provider in IoT Hub
 
-To configure OAuth 2.0 authentication in ThingsBoard via Keycloak, follow the steps below:
+To configure OAuth 2.0 authentication in IoT Hub via Keycloak, follow the steps below:
 
-- Login to your ThingsBoard instance;
+- Login to your IoT Hub instance;
 - Go to the "OAuth 2.0" page of the "Security" section;
 - Navigate to the "OAuth 2.0 clients" tab, and click "plus";
 - Enter "Keycloak" as the title. 
@@ -410,7 +410,7 @@ A new OAuth 2.0 client has been added.
 Now, add a new domain by following these steps:
 
 - Go to the "Domains" tab of the "OAuth 2.0" page, and click the "plus" icon;
-- Enter your domain name or IP address of your ThingsBoard instance;
+- Enter your domain name or IP address of your IoT Hub instance;
 - Specify "Keycloak" as the OAuth 2.0 client;
 - Click "Add" again to confirm the addition of the domain.
 
@@ -420,7 +420,7 @@ A new domain has been added.
 
 ### Sign in
 
-Go to the ThingsBoard login screen. You will see an additional option, "Login with Keycloak". Click this button. A window will open prompting you to sign in to your Keycloak account. Enter your Keycloak credentials, and click "Sign In". You are now logged into ThingsBoard using Keycloak authorization credentials.
+Go to the IoT Hub login screen. You will see an additional option, "Login with Keycloak". Click this button. A window will open prompting you to sign in to your Keycloak account. Enter your Keycloak credentials, and click "Sign In". You are now logged into IoT Hub using Keycloak authorization credentials.
 
 {% include images-gallery.html imageCollection="login-with-keycloak-1" %}
 
@@ -430,9 +430,9 @@ Go to the "Users" page. There you will find the new user is associated with the 
 {% include images-gallery.html imageCollection="login-with-keycloak-2" %}
 {% endif %}
 
-## Mapping of the external user into ThingsBoard internal user structure
+## Mapping of the external user into IoT Hub internal user structure
 
-Mapping of the external user info object into ThingsBoard user can be achieved using the [Basic](#basic-mapper), [Custom](#custom-mapper), GitHub, and Apple mappers. 
+Mapping of the external user info object into IoT Hub user can be achieved using the [Basic](#basic-mapper), [Custom](#custom-mapper), GitHub, and Apple mappers. 
 
 ### Basic mapper
 
@@ -444,14 +444,14 @@ To use a basic mapper, set mapper type "Basic".
 
 Here are the details of other properties:
 
-- **Allow user creation**. If this option is **enable**, then in case, the user account does not exist in the ThingsBoard yet, it will be created.
-If this option is **disable**, the user will get access denied error, in case, he tries to log in with an external OAuth 2.0 provider, but there is no user on ThingsBoard with those credentials.
+- **Allow user creation**. If this option is **enable**, then in case, the user account does not exist in the IoT Hub yet, it will be created.
+If this option is **disable**, the user will get access denied error, in case, he tries to log in with an external OAuth 2.0 provider, but there is no user on IoT Hub with those credentials.
  
-- **Email attribute key**. This is the key to the attributes from the external OAuth 2.0 user info that is going to be used as ThingsBoard user email property.
+- **Email attribute key**. This is the key to the attributes from the external OAuth 2.0 user info that is going to be used as IoT Hub user email property.
   
-- **First name attribute key**. - This is the key to the attributes from the external OAuth 2.0 user info that is going to be used as ThingsBoard user first name property.
+- **First name attribute key**. - This is the key to the attributes from the external OAuth 2.0 user info that is going to be used as IoT Hub user first name property.
     
-- **Last name attribute key**. - This is the key to the attributes from the external OAuth 2.0 user info that is going to be used as ThingsBoard user surname property.
+- **Last name attribute key**. - This is the key to the attributes from the external OAuth 2.0 user info that is going to be used as IoT Hub user surname property.
 
 - **Tenant name strategy**. - this option specifies which tenant is going to be chosen for creating the user. A basic mapper provides three possible options strategy for a generating Tenant name from an external user info object - *domain*, *email*, or *custom*:
      - **DOMAIN** - the name of the Tenant will be extracted as the domain from the email of the user;
@@ -497,7 +497,7 @@ If groups don't exist, this group will be created automatically.
 
 {% capture difference %}
 **Please note:**
-The **Parent customer name pattern** and **User groups name pattern** configurations available only in [ThingsBoard Professional Edition](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
+The **Parent customer name pattern** and **User groups name pattern** configurations available only in [IoT Hub](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -507,8 +507,8 @@ The **Parent customer name pattern** and **User groups name pattern** configurat
 
 If the basic mapper functionality doesn't cover your business needs, with the help of the custom mapper you are able to add an implementation that fits your specific goals.
 
-A custom mapper designed as a separate microservice that is running nearby the ThingsBoard core microservice.
-ThingsBoard forwards all mapping requests to this microservice and expects as a response ThingsBoard OAuth 2.0 user object.
+A custom mapper designed as a separate microservice that is running nearby the IoT Hub core microservice.
+IoT Hub forwards all mapping requests to this microservice and expects as a response IoT Hub OAuth 2.0 user object.
 
 Please refer to this [base implementation](https://github.com/thingsboard/custom-oauth2-mapper){:target="_blank"} as a starting point for your custom mapper.
 

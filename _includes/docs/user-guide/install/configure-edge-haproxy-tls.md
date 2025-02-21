@@ -1,4 +1,4 @@
-ThingsBoard supports securing the connection between the platform and edge instances by running the gRPC connection over TLS/SSL.
+IoT Hub supports securing the connection between the platform and edge instances by running the gRPC connection over TLS/SSL.
 
 We will use HAProxy as the termination point for the TLS connection between the edges and the platform.
 
@@ -15,7 +15,7 @@ EOL'
 ```
 {: .copy-code}
 
-To apply the changes, the ThingsBoard platform must be restarted:
+To apply the changes, the IoT Hub platform must be restarted:
 
 ```bash
 sudo systemctl restart thingsboard

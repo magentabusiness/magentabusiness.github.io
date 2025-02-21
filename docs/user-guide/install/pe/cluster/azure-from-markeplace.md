@@ -1,13 +1,13 @@
 ---
 layout: docwithnav-pe
-title: Installing ThingsBoard PE from Azure Marketplace
-description: Installing ThingsBoard PE from Azure Marketplace
+title: Installing IoT Hub from Azure Marketplace
+description: Installing IoT Hub from Azure Marketplace
 
 ---
 
-This guide describes how to install ThingsBoard Professional Edition from Azure Marketplace. 
+This guide describes how to install IoT Hub from Azure Marketplace. 
 Using this guide you will install [BYOL](https://docs.microsoft.com/en-us/azure/marketplace/marketplace-faq-publisher-guide#pricing-and-payment) version of the product.
-Basically, you get the license directly from ThingsBoard, Inc, but purchase corresponding server instances and infrastructure from Azure.
+Basically, you get the license directly from IoT Hub, Inc, but purchase corresponding server instances and infrastructure from Azure.
 
 * TOC
 {:toc}
@@ -16,9 +16,9 @@ Basically, you get the license directly from ThingsBoard, Inc, but purchase corr
 
 - Active [Microsoft Azure](https://azure.microsoft.com){:target="_blank"} account.
 
-### Step 1. Subscribe to ThingsBoard PE BYOL
+### Step 1. Subscribe to IoT Hub BYOL
 
-Open [ThingsBoard Professional Edition BYOL](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/things-board.tb-pe-byol) product page from Azure Marketplace.
+Open [IoT Hub BYOL](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/things-board.tb-pe-byol) product page from Azure Marketplace.
 
 - Click the **GET IT NOW** button
 
@@ -96,10 +96,10 @@ We will use it in our next steps.
 
 ### Step 4. Obtain your license secret
 
-In order to activate your ThingsBoard instance you will need to get the license secret. 
-ThingsBoard Licenses are managed by [ThingsBoard License Portal](https://license.thingsboard.io/signup).   
+In order to activate your IoT Hub instance you will need to get the license secret.
+IoT Hub Licenses are managed by [IoT Hub License Portal](https://license.thingsboard.io/signup).   
 
-Please register on [ThingsBoard License Portal](https://license.thingsboard.io/signup) to get your license. 
+Please register on [IoT Hub License Portal](https://license.thingsboard.io/signup) to get your license. 
 See [How-to get pay-as-you-go subscription](https://www.youtube.com/watch?v=dK-QDFGxWek){:target="_blank"} or [How-to get perpetual license](https://www.youtube.com/watch?v=GPe0lHolWek){:target="_blank"} for more details.
  
 Please save your license secret to a safe place. We will use them later in this guide.
@@ -108,7 +108,7 @@ Please save your license secret to a safe place. We will use them later in this 
 
 Once you get the license secret, you should put it to the thingsboard configuration file. 
 
-#### Step 5.1. Connect to your Thingsboard Instance over SSH
+#### Step 5.1. Connect to your IoT Hub Instance over SSH
 
 Please use the [official Azure guide](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows) on how to connect to Azure VM using SSH keys. 
 
@@ -126,7 +126,7 @@ sudo nano /etc/thingsboard/conf/thingsboard.conf
 Locate the following configuration block:
 
 ```bash
-# License secret obtained from ThingsBoard License Portal (https://license.thingsboard.io)
+# License secret obtained from IoT Hub License Portal (https://license.thingsboard.io)
 # UNCOMMENT NEXT LINE AND PUT YOUR LICENSE SECRET:
 # export TB_LICENSE_SECRET=
 ```
@@ -134,14 +134,14 @@ Locate the following configuration block:
 and put your license secret. Please don't forget to uncomment the export statement. See example below: 
 
 ```bash
-# License secret obtained from ThingsBoard License Portal (https://license.thingsboard.io)
+# License secret obtained from IoT Hub License Portal (https://license.thingsboard.io)
 # UNCOMMENT NEXT LINE AND PUT YOUR LICENSE SECRET:
 export TB_LICENSE_SECRET=YOUR_LICENSE_SECRET_HERE
 ```
 
-### Step 6. Launch ThingsBoard service
+### Step 6. Launch IoT Hub service
 
-Execute the following command to start ThingsBoard:
+Execute the following command to start IoT Hub:
 
 ```bash
 sudo service thingsboard start
@@ -152,7 +152,7 @@ sudo service thingsboard start
 Please allow up to 120 seconds for the Web UI to start. This is applicable only for slow machines with 1-2 CPUs or 1-2 GB RAM.{% endcapture %}
 {% include templates/info-banner.md content=90-sec-ui %}
 
-### Step 7. Connect to Thingsboard UI
+### Step 7. Connect to IoT Hub UI
 
 Now you can open this link in your browser:
 

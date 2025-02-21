@@ -1,8 +1,8 @@
 * TOC
 {:toc}
 
-This guide will help you to get familiar with ThingsBoard configuration files and parameters. We **recommend** to
-configure ThingsBoard using environment variables. This way you do not need to merge the configuration files when new
+This guide will help you to get familiar with IoT Hub configuration files and parameters. We **recommend** to
+configure IoT Hub using environment variables. This way you do not need to merge the configuration files when new
 platform release arrives. List of available configuration parameters and corresponding environment variables is
 located {% if docsPrefix == null %}[here](/docs/user-guide/install/config/){% endif %}{% if docsPrefix == "pe/" %}[here](/docs/user-guide/install/pe/config/){% endif %}.
 
@@ -10,7 +10,7 @@ located {% if docsPrefix == null %}[here](/docs/user-guide/install/config/){% en
 
 #### Monolithic deployment on Linux
 
-If ThingsBoard is installed on **Linux** as a **monolithic application**, you may specify the environment variables in
+If IoT Hub is installed on **Linux** as a **monolithic application**, you may specify the environment variables in
 the thingsboard.conf file:
 
 ```bash
@@ -26,7 +26,7 @@ export HTTP_BIND_PORT=8081
 
 #### Monolithic deployment on Windows
 
-If ThingsBoard is installed on **Windows** as a **monolithic application**, you may specify the environment variables in
+If IoT Hub is installed on **Windows** as a **monolithic application**, you may specify the environment variables in
 the thingsboard.yml file located in the following directory:
 
 ```bash
@@ -47,14 +47,14 @@ In this case, *'HTTP_BIND_ADDRESS'* is environment variable name and *'0.0.0.0'*
 
 #### Docker based deployment
 
-If ThingsBoard is installed in a docker compose environment, you may edit the scripts and add environment variables for
+If IoT Hub is installed in a docker compose environment, you may edit the scripts and add environment variables for
 the corresponding containers.
 See [docker documentation](https://docs.docker.com/compose/environment-variables/#/the-envfile-configuration-option) for
 more details.
 
 #### K8S based deployment
 
-If ThingsBoard is installed in a K8S environment, you may edit the scripts and add environment variables for the
+If IoT Hub is installed in a K8S environment, you may edit the scripts and add environment variables for the
 corresponding deployments/stateful sets.
 See [K8S documentation](https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/)
 for more details.

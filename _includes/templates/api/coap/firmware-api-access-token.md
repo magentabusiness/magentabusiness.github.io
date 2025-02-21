@@ -18,7 +18,7 @@ Where
 If you use live demo server, the command will look like this:
 
 ```shell
-coap get coap://demo.thingsboard.io/api/v1/$ACCESS_TOKEN/firmware?title=$TITLE&version=$VERSION
+coap get coap://iothub.magenta.at/api/v1/$ACCESS_TOKEN/firmware?title=$TITLE&version=$VERSION
 ```
 {: .copy-code}
 

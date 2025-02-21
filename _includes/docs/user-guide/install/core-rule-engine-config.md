@@ -537,13 +537,13 @@
 			<td>database.ts.type</td>
 			<td>DATABASE_TS_TYPE</td>
 			<td>sql</td>
-			<td> cassandra or sql. timescale option is deprecated and will no longer be supported in ThingsBoard 4.0</td>
+			<td> cassandra or sql. timescale option is deprecated and will no longer be supported in IoT Hub 4.0</td>
 		</tr>
 		<tr>
 			<td>database.ts_latest.type</td>
 			<td>DATABASE_TS_LATEST_TYPE</td>
 			<td>sql</td>
-			<td> cassandra or sql. timescale option is deprecated and will no longer be supported in ThingsBoard 4.0</td>
+			<td> cassandra or sql. timescale option is deprecated and will no longer be supported in IoT Hub 4.0</td>
 		</tr>
 	</tbody>
 </table>
@@ -5377,7 +5377,7 @@
 	</tbody>
 </table>
 
-
+<!--
 ####  Mobile application settings for Thingsboard mobile application
 
 <table>
@@ -5407,3 +5407,4 @@
 		</tr>
 	</tbody>
 </table>
+-->

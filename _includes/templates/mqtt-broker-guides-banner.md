@@ -14,5 +14,5 @@
 - [**MQTT client type guide**](/docs/mqtt-broker/user-guide/mqtt-client-type/) - Learn about TBMQ client types.
 {% endif %}
 {% if currentGuide != "TBIntegrationGuide" %}
-- [**Integration with ThingsBoard**](/docs/mqtt-broker/user-guide/integrations/how-to-connect-thingsboard-to-tbmq/) - Learn about how to integrate TBMQ with ThingsBoard.
+- [**Integration with IoT Hub**](/docs/mqtt-broker/user-guide/integrations/how-to-connect-thingsboard-to-tbmq/) - Learn about how to integrate TBMQ with IoT Hub.
 {% endif %}

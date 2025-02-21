@@ -1,7 +1,7 @@
 ---
 layout: use-case
 title: SCADA
-description: SCADA ThingsBoard IoT Platform
+description: SCADA IoT Hub IoT Platform
 notitle: "true"
 
 ---
@@ -16,13 +16,10 @@ notitle: "true"
             <div class="block">
                 <p class="text">SCADA systems are generally divided into two types: Traditional, which focuses on basic monitoring and control, and High-Performance, emphasizing streamlined interfaces, faster decision-making, and enhanced operational efficiency.</p>
             </div>
-            <div class="demo-button">
-                <a id="UseCases_SCADA_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/231a5800-ce96-11ef-852e-bd51c2b30fde?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>
-            </div>
         </div>
         <div class="long">
-            <p>The main advantage of SCADA (Supervisory Control and Data Acquisition) systems is their ability to monitor production processes in real time and respond quickly to deviations. ThingsBoard provides comprehensive tools to collect, process, and visualize data from SCADA components, such as PLCs (Programmable Logic Controllers) and RCUs (Remote Control Units), enabling seamless integration with various industrial processes.</p>
-            <p>To illustrate the flexibility of ThingsBoard's SCADA integration, we have developed the Swimming Pool Management System template. This solution demonstrates how SCADA symbols—such as valves, motors, filters and tanks—can be utilized to create simple yet powerful process control systems. It enables any production process to be visualized on a dashboard, allowing for real-time monitoring of equipment operation and timely detection of alarm signals. The template is designed to accommodate both Traditional and High-Performance SCADA systems.</p>
+            <p>The main advantage of SCADA (Supervisory Control and Data Acquisition) systems is their ability to monitor production processes in real time and respond quickly to deviations. IoT Hub provides comprehensive tools to collect, process, and visualize data from SCADA components, such as PLCs (Programmable Logic Controllers) and RCUs (Remote Control Units), enabling seamless integration with various industrial processes.</p>
+            <p>To illustrate the flexibility of IoT Hub's SCADA integration, we have developed the Swimming Pool Management System template. This solution demonstrates how SCADA symbols—such as valves, motors, filters and tanks—can be utilized to create simple yet powerful process control systems. It enables any production process to be visualized on a dashboard, allowing for real-time monitoring of equipment operation and timely detection of alarm signals. The template is designed to accommodate both Traditional and High-Performance SCADA systems.</p>
         </div>
     </div>
 </section>
@@ -111,27 +108,27 @@ notitle: "true"
     <div class="scada-solution-structure-cards">
         <div class="scada-solution-structure-card">
             <h2>PLCs and RTUs</h2>
-            <p>Seamlessly integrate your SCADA system with PLCs and RTUs using ThingsBoard integrations and IoT Gateway. Support for Modbus, OPC-UA, BACnet, and other popular protocols ensures reliable real-time data collection and control.</p>
+            <p>Seamlessly integrate your SCADA system with PLCs and RTUs using IoT Hub integrations and IoT Gateway. Support for Modbus, OPC-UA, BACnet, and other popular protocols ensures reliable real-time data collection and control.</p>
         </div>
         <div class="scada-solution-structure-card">
             <h2>IoT gateway</h2>
-            <p>ThingsBoard’s IoT Gateway bridges the gap between legacy SCADA devices and modern IoT platforms. It ensures data reliability with built-in local data storage during network outages and supports efficient protocol conversion, secure data transmission, and centralized device management.</p>
+            <p>IoT Hub’s IoT Gateway bridges the gap between legacy SCADA devices and modern IoT platforms. It ensures data reliability with built-in local data storage during network outages and supports efficient protocol conversion, secure data transmission, and centralized device management.</p>
         </div>
         <div class="scada-solution-structure-card">
             <h2>Data processing</h2>
-            <p>Unlock actionable insights with ThingsBoard’s robust data processing tools. Perform real-time transformations, apply complex rules, and automate workflows with built-in rule chains and scriptable integrations.</p>
+            <p>Unlock actionable insights with IoT Hub’s robust data processing tools. Perform real-time transformations, apply complex rules, and automate workflows with built-in rule chains and scriptable integrations.</p>
         </div>
         <div class="scada-solution-structure-card">
             <h2>Alarm system</h2>
-            <p>Enhance operational awareness with ThingsBoard’s advanced alarm system. Manage incident workflows with features like alarm acknowledgment, clearing, commenting, and configurable escalation rules.</p>
+            <p>Enhance operational awareness with IoT Hub’s advanced alarm system. Manage incident workflows with features like alarm acknowledgment, clearing, commenting, and configurable escalation rules.</p>
         </div>
         <div class="scada-solution-structure-card">
             <h2>Notification system</h2>
-            <p>Stay informed with ThingsBoard’s flexible notification system, delivering alerts via email, SMS, Slack, or custom webhooks. Automate critical notifications based on configurable conditions and thresholds.</p>
+            <p>Stay informed with IoT Hub’s flexible notification system, delivering alerts via email, SMS, Slack, or custom webhooks. Automate critical notifications based on configurable conditions and thresholds.</p>
         </div>
         <div class="scada-solution-structure-card">
             <h2>IoT dashboards</h2>
-            <p>Visualize your SCADA data with ThingsBoard’s real-time IoT dashboards. Design interactive views using SCADA symbols, customizable widgets, and dynamic updates to monitor and control processes seamlessly.</p>
+            <p>Visualize your SCADA data with IoT Hub’s real-time IoT dashboards. Design interactive views using SCADA symbols, customizable widgets, and dynamic updates to monitor and control processes seamlessly.</p>
         </div>
     </div>
 </section>
@@ -291,7 +288,7 @@ notitle: "true"
                         <h2>Gateway</h2>
                     </div>
                     <div class="expansion-content">
-                        <p>An essential component of this solution is the Gateway, which integrates all devices using an emulator. To simulate the entire swimming pool system, a Modbus emulator is employed, combining 14 individual devices. These devices operate as a unified system, communicating seamlessly via the Modbus protocol. For real-time monitoring of device data received from Modbus servers, the ThingsBoard IoT Gateway dashboard provides a clear view of the status and data from all connected devices, allowing operators to monitor and manage the system effortlessly.</p>
+                        <p>An essential component of this solution is the Gateway, which integrates all devices using an emulator. To simulate the entire swimming pool system, a Modbus emulator is employed, combining 14 individual devices. These devices operate as a unified system, communicating seamlessly via the Modbus protocol. For real-time monitoring of device data received from Modbus servers, the IoT Hub IoT Gateway dashboard provides a clear view of the status and data from all connected devices, allowing operators to monitor and manage the system effortlessly.</p>
                     </div>
                 </div>
             </div>
@@ -345,7 +342,7 @@ notitle: "true"
                         <h2>Gateway</h2>
                     </div>
                     <div class="expansion-content">
-                        <p>An essential component of this solution is the Gateway, which integrates all devices using an emulator. To simulate the entire swimming pool system, a Modbus emulator is employed, combining 14 individual devices. These devices operate as a unified system, communicating seamlessly via the Modbus protocol. For real-time monitoring of device data received from Modbus servers, the ThingsBoard IoT Gateway dashboard provides a clear view of the status and data from all connected devices, allowing operators to monitor and manage the system effortlessly.</p>
+                        <p>An essential component of this solution is the Gateway, which integrates all devices using an emulator. To simulate the entire swimming pool system, a Modbus emulator is employed, combining 14 individual devices. These devices operate as a unified system, communicating seamlessly via the Modbus protocol. For real-time monitoring of device data received from Modbus servers, the IoT Hub IoT Gateway dashboard provides a clear view of the status and data from all connected devices, allowing operators to monitor and manage the system effortlessly.</p>
                     </div>
                 </div>
             </div>
@@ -428,47 +425,42 @@ notitle: "true"
 </section>
 
 <section class="advantages">
-    <h1>ThingsBoard advantages</h1>
+    <h1>IoT Hub advantages</h1>
     <div class="advantages-block">
         <div class="advantage">
             <div><img src="/images/usecases/scada/security.svg" alt="Security"></div>
             <a class="title" href="/docs/pe/user-guide/ssl/http-over-ssl/">Security</a>
-            <p>ThingsBoard supports industry-standard encryption algorithms like RSA and ECDSA to ensure the data is secure during transfer via TLS(TCP) and DTLS (UDP).</p>
+            <p>IoT Hub supports industry-standard encryption algorithms like RSA and ECDSA to ensure the data is secure during transfer via TLS(TCP) and DTLS (UDP).</p>
         </div>
         <div class="advantage">
             <div><img src="/images/usecases/scada/data-visualization.svg" alt="Data visualization"></div>
             <a class="title" href="/docs/user-guide/dashboards/">Data visualization</a>
-            <p>Visualize your data effortlessly with ThingsBoard’s rich, interactive dashboards. Create multi-state, real-time dashboards using built-in widgets like charts, gauges, maps, and tables—no coding required. Customize layouts or develop custom widgets for complete flexibility. WebSocket support ensures low-latency updates.</p>
+            <p>Visualize your data effortlessly with IoT Hub’s rich, interactive dashboards. Create multi-state, real-time dashboards using built-in widgets like charts, gauges, maps, and tables—no coding required. Customize layouts or develop custom widgets for complete flexibility. WebSocket support ensures low-latency updates.</p>
         </div>
         <div class="advantage">
             <div><img src="/images/usecases/scada/connectivity.svg" alt="Connectivity"></div>
             <a class="title" href="/docs/getting-started-guides/connectivity/">Connectivity</a>
-            <p>Connect devices directly to ThingsBoard using protocols like HTTP, CoAP, MQTT, LwM2M, SNMP, LoRaWAN, and NB-IoT. For local networks, ThingsBoard Gateway bridges the cloud via Modbus, BLE, BACnet, OPC-UA, and more. Advanced protocol translation and offline data buffering ensure reliable communication even in challenging conditions.</p>
+            <p>Connect devices directly to IoT Hub using protocols like HTTP, CoAP, MQTT, LwM2M, SNMP, LoRaWAN, and NB-IoT. For local networks, IoT Hub Gateway bridges the cloud via Modbus, BLE, BACnet, OPC-UA, and more. Advanced protocol translation and offline data buffering ensure reliable communication even in challenging conditions.</p>
         </div>
         <div class="advantage scale">
             <div><img src="/images/usecases/scada/scalability.svg" alt="Scalability and high availability"></div>
             <a class="title" href="/docs/reference/msa/">Scalability and high availability</a>
-            <p>ThingsBoard supports high-availability deployments on cloud and on-premises data centers using K8S or bare-metal deployments. Platform components are horizontally scalable. ThingsBoard has production deployments supporting more then 18 000 vehicles and 500 000 devices connected.</p>
+            <p>IoT Hub supports high-availability deployments on cloud and on-premises data centers using K8S or bare-metal deployments. Platform components are horizontally scalable. IoT Hub has production deployments supporting more then 18 000 vehicles and 500 000 devices connected.</p>
         </div>
         <div class="advantage data">
             <div><img src="/images/usecases/scada/data-processing.svg" alt="Data processing"></div>
             <a class="title" href="/docs/pe/user-guide/rule-engine-2-0/overview/">Data processing</a>
-            <p>ThingsBoard allows you to define application logic with drag-n-drop rule chain designer. The Rule Engine is a robust and scalable processing framework that leverages industry-standard message queue implementations like Apache Kafka or AWS SQS to ensure data durability and guarantee data processing. You are free to process data with the Rule engine or push it to further processing in external systems.</p>
+            <p>IoT Hub allows you to define application logic with drag-n-drop rule chain designer. The Rule Engine is a robust and scalable processing framework that leverages industry-standard message queue implementations like Apache Kafka or AWS SQS to ensure data durability and guarantee data processing. You are free to process data with the Rule engine or push it to further processing in external systems.</p>
         </div>
         <div class="advantage">
             <div><img src="/images/usecases/scada/multi-tenancy.svg" alt="Multi-tenancy"></div>
             <a class="title" href="/docs/user-guide/entities-and-relations/">Multi-tenancy</a>
-            <p>ThingsBoard provides UI and API to manage tenants, customers, users, devices, and assets. Single tenant may have multiple tenant administrators and millions of devices and customers. It also offers out-of-the-box support of OTA updates for your smart meters.</p>
+            <p>IoT Hub provides UI and API to manage tenants, customers, users, devices, and assets. Single tenant may have multiple tenant administrators and millions of devices and customers. It also offers out-of-the-box support of OTA updates for your smart meters.</p>
         </div>
         <div class="advantage">
             <div><img src="/images/usecases/scada/lorawan-sigfox.svg" alt="LoRaWAN and SigFox support"></div>
             <a class="title" href="/docs/user-guide/integrations/">LoRaWAN & SigFox support</a>
             <p>Connect LoRaWAN devices via integrations with standard network servers like TTN, LORIOT, ChirpStack, Actility, etc. Connect SigFox devices via integrations with the SigFox backend.</p>
-        </div>
-        <div class="advantage">
-            <div><img src="/images/usecases/scada/mobile.svg" alt="Mobile application"></div>
-            <a class="title" href="/docs/mobile/">Mobile application</a>
-            <p>Build your own IoT mobile application with minimum coding efforts using ThingsBoard Mobile Application, an open-source project based on Flutter. Leverage a built-in set of mobile actions to take a photo, scan QR code, update location, and more directly within the dashboard.</p>
         </div>
     </div>
 </section>
@@ -560,10 +552,6 @@ notitle: "true"
                 <div class="image-background"></div>
                 <div class="image-background"></div>
                 <div class=image>${getImage(0, mode)}</div>
-            </div>
-            <div class="buttons-block">
-                <a id="UseCases_SCADA_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/231a5800-ce96-11ef-852e-bd51c2b30fde?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>
-                <a id="UseCases_SCADA_ContactUs" target="_blank" href="https://thingsboard.io/docs/contact-us/" class="button contact-us gtm_button">Contact us</a>
             </div>`;
     
             return block;

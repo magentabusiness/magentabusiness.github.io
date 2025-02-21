@@ -1,4 +1,4 @@
-#### ThingsBoard service parameters
+#### IoT Hub service parameters
 
 <table>
     <thead>
@@ -22,7 +22,7 @@
     </tbody>
 </table>
 
-#### ThingsBoard metrics parameters
+#### IoT Hub metrics parameters
 
 <table>
     <thead>
@@ -40,7 +40,7 @@
     </tbody>
 </table>
 
-#### ThingsBoard management parameters
+#### IoT Hub management parameters
 
 <table>
     <thead>

@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - stitenko
 title: Security settings
-description: ThingsBoard IoT platform security settings
+description: IoT Hub IoT platform security settings
 
 ---
 

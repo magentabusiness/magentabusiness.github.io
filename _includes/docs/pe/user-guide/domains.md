@@ -1,23 +1,6 @@
-{% if docsPrefix == null %}
-{% assign THINGSBOARD_WITH_URL = "[ThingsBoard CE](/docs/user-guide/install/installation-options/)" %}
+{% assign THINGSBOARD_WITH_URL = "[IoT Hub](/docs/user-guide/install/pe/installation-options/)" %}
 {% assign THINGSBOARD_HOST = "IP address" %}
-{% assign THINGSBOARD_URL = "ThingsBoard" %}
-{% endif %}
-{% if docsPrefix == "pe/" %}
-{% assign THINGSBOARD_WITH_URL = "[ThingsBoard PE](/docs/user-guide/install/pe/installation-options/)" %}
-{% assign THINGSBOARD_HOST = "IP address" %}
-{% assign THINGSBOARD_URL = "ThingsBoard" %}
-{% endif %}
-{% if docsPrefix == "paas/" %}
-{% assign THINGSBOARD_WITH_URL = "[ThingsBoard Cloud](https://thingsboard.cloud/signup)" %}
-{% assign THINGSBOARD_HOST = "thingsboard.cloud" %}
-{% assign THINGSBOARD_URL = "ThingsBoard Cloud" %}
-{% endif %}
-{% if docsPrefix == "paas/eu/" %}
-{% assign THINGSBOARD_WITH_URL = "[EU ThingsBoard Cloud](https://eu.thingsboard.cloud/signup)" %}
-{% assign THINGSBOARD_HOST = "eu.thingsboard.cloud" %}
-{% assign THINGSBOARD_URL = "EU ThingsBoard Cloud" %}
-{% endif %}
+{% assign THINGSBOARD_URL = "IoT Hub" %}
 
 * TOC
 {:toc}
@@ -25,7 +8,7 @@
 {{THINGSBOARD_WITH_URL}}{:target="_blank"} allows registering your custom domain to have the required host name for user’s access, links, etc.
 {% unless docsPrefix == 'pe/' and docsPrefix == null %}When you register valid domain, the {{THINGSBOARD_URL}} automatically requests the SSL certificate from [Let's Encrypt](https://letsencrypt.org/){:target="_blank"} for the latter and manages further certificate renewals.
 After domain registration, your tenant and application(s) will be accessible via your domain name using a secure (HTTPS) connection.
-Like Web UI all other ThingsBoard Cloud services such as MQTT/HTTP/CoAP transports or HTTP integrations will be accessible via your custom domain name.{% endunless %}
+Like Web UI all other IoT Hub Cloud services such as MQTT/HTTP/CoAP transports or HTTP integrations will be accessible via your custom domain name.{% endunless %}
 
 ## Domain registration
 
@@ -152,4 +135,4 @@ If all the things are correct, but some issue still persists - please [contact u
 {% assign feature = "White labeling" %}{% include templates/pe-feature-banner.md %}
 {% endif %}
 
-Learn how to customize ThingsBoard login page and user interface, configure your company or product logo, and adjust the color scheme, navigate to the [White labeling](/docs/{{docsPrefix}}user-guide/white-labeling/){:target="_blank"} section.
+Learn how to customize IoT Hub login page and user interface, configure your company or product logo, and adjust the color scheme, navigate to the [White labeling](/docs/{{docsPrefix}}user-guide/white-labeling/){:target="_blank"} section.

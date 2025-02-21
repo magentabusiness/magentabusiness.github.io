@@ -250,7 +250,7 @@ open-url-2:
         title: 'After saving the changes, you can see an icon in the upper right part of the widget. Click this icon;'
     1:
         image: /images/user-guide/ui/widgets/actions/guide/types/open-url-6-pe.png
-        title: 'You will be transferred to the URL specified in the action. In our case, it&#39;s the "Working with ThingsBoard widgets" documentation page.'
+        title: 'You will be transferred to the URL specified in the action. In our case, it&#39;s the "Working with IoT Hub widgets" documentation page.'
 
 action-cell-button-1:
     0:

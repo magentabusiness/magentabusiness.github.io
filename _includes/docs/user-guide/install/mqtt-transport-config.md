@@ -612,7 +612,7 @@
 			<td>queue.type</td>
 			<td>TB_QUEUE_TYPE</td>
 			<td>kafka</td>
-			<td> kafka (Apache Kafka). The following queue types are deprecated and will no longer be supported in ThingsBoard 4.0:
+			<td> kafka (Apache Kafka). The following queue types are deprecated and will no longer be supported in IoT Hub 4.0:
  aws-sqs (AWS SQS), pubsub (PubSub), service-bus (Azure Service Bus), rabbitmq (RabbitMQ)</td>
 		</tr>
 		<tr>

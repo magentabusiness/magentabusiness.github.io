@@ -5,21 +5,21 @@
 {% include templates/since.md %}
 
 [SCADA](https://en.wikipedia.org/wiki/SCADA) (Supervisory Control and Data Acquisition) refers to an architecture used to monitor and control various machines and manufacturing processes. 
-In this system, ThingsBoard serves as the supervisory computer element, gathering data from various PLCs (Programmable Logic Controllers) and RTUs (Remote Terminal Units), 
+In this system, IoT Hub serves as the supervisory computer element, gathering data from various PLCs (Programmable Logic Controllers) and RTUs (Remote Terminal Units), 
 often with the assistance of the [IoT Gateway](/docs/iot-gateway/what-is-iot-gateway/){:target="_blank"} software or physical gateway devices. 
-Additionally, ThingsBoard offers robust [alarm](/docs/{{docsPrefix}}user-guide/alarms/){:target="_blank"} and [notification](/docs/{{docsPrefix}}user-guide/notifications/){:target="_blank"} systems, which are essential components of any IoT system.
+Additionally, IoT Hub offers robust [alarm](/docs/{{docsPrefix}}user-guide/alarms/){:target="_blank"} and [notification](/docs/{{docsPrefix}}user-guide/notifications/){:target="_blank"} systems, which are essential components of any IoT system.
 
-Starting from release 3.8.0, ThingsBoard introduces support for SCADA-like HMI dashboards, which we will cover in this documentation.
+Starting from release 3.8.0, IoT Hub introduces support for SCADA-like HMI dashboards, which we will cover in this documentation.
 
 ## SCADA dashboard layout
 
-A SCADA dashboard in ThingsBoard provides all the functionalities of a typical platform [Dashboard](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"} with a specialized SCADA [layout](/docs/{{docsPrefix}}user-guide/dashboards/#layouts){:target="_blank"}, 
+A SCADA dashboard in IoT Hub provides all the functionalities of a typical platform [Dashboard](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"} with a specialized SCADA [layout](/docs/{{docsPrefix}}user-guide/dashboards/#layouts){:target="_blank"}, 
 designed to facilitate the creation of SCADA HMIs (Human-Machine Interfaces).
 
 The SCADA dashboard typically consists of special scalable widgets known as SCADA symbols. 
 Each symbol can represent the state of a physical object such as a valve, pump, motor, tank, or pipe. 
 Users can also interact with these widgets to send commands to the physical objects, such as turning a pump on and off, or opening and closing a valve. 
-Additionally, you can combine SCADA widgets with over 500 existing ThingsBoard [widgets](/docs/{{docsPrefix}}user-guide/widgets/){:target="_blank"} on the same dashboard.
+Additionally, you can combine SCADA widgets with over 500 existing IoT Hub [widgets](/docs/{{docsPrefix}}user-guide/widgets/){:target="_blank"} on the same dashboard.
 
 Here are some key features of the SCADA layout:
 
@@ -81,20 +81,20 @@ Below is a [sample dashboard](/docs/user-guide/resources/multi-state-scada-dashb
 
 ## SCADA symbol
 
-ThingsBoard SCADA symbols are based on [SVG](https://en.wikipedia.org/wiki/SVG){:target="_blank"} (Scalable Vector Graphics) files. 
-The use of vector graphics ensures that SCADA symbols scale seamlessly to any screen size. 
-ThingsBoard's engineers have extended the SVG format to make these symbols interactive.
+IoT Hub SCADA symbols are based on [SVG](https://en.wikipedia.org/wiki/SVG){:target="_blank"} (Scalable Vector Graphics) files. 
+The use of vector graphics ensures that SCADA symbols scale seamlessly to any screen size.
+IoT Hub's engineers have extended the SVG format to make these symbols interactive.
 Specifically, we define how the SVG object changes based on the properties configured by the user or the data received from the device.
 We also define clickable areas of the SVG object, allowing users to configure actions that can be triggered once the symbol is added to the dashboard. 
 
 {% capture difference %}
-In ThingsBoard version 3.9, in addition to traditional SCADA symbols, high-performance SCADA symbols have been introduced.
+In IoT Hub version 3.9, in addition to traditional SCADA symbols, high-performance SCADA symbols have been introduced.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
-High-performance SCADA symbols in ThingsBoard are optimized graphical elements used to display information about the status of processes and equipment in SCADA systems created on the ThingsBoard platform. They are designed to enhance the efficiency of information perception and speed up decision-making by the operator.
+High-performance SCADA symbols in IoT Hub are optimized graphical elements used to display information about the status of processes and equipment in SCADA systems created on the IoT Hub platform. They are designed to enhance the efficiency of information perception and speed up decision-making by the operator.
 
-Key features of High-performance SCADA symbols in ThingsBoard:
+Key features of High-performance SCADA symbols in IoT Hub:
 
 - Simplified Design: Minimalist symbols that exclude unnecessary decorative elements. Priority is given to informativeness and readability.
 - Color Coding: Main states (normal) are typically represented by neutral colors (e.g., gray). Critical states (emergencies, errors) are highlighted with bright colors such as red or yellow.

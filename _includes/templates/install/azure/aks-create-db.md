@@ -1,9 +1,9 @@
-You’ll need to set up PostgreSQL on Azure. ThingsBoard will use it as a main database to store devices, dashboards, rule chains and device telemetry.
+You’ll need to set up PostgreSQL on Azure. IoT Hub will use it as a main database to store devices, dashboards, rule chains and device telemetry.
 
 You may follow [this](https://docs.microsoft.com/en-us/azure/postgresql/flexible-server/quickstart-create-server-portal) guide, but take into account the following requirements:
    * Keep your postgresql password in a safe place. We will refer to it later in this guide using YOUR_RDS_PASSWORD;
    * Make sure your Azure Database for PostgreSQL version is latest 16.x;
-   * Make sure your Azure Database for PostgreSQL instance is accessible from the ThingsBoard cluster;
+   * Make sure your Azure Database for PostgreSQL instance is accessible from the IoT Hub cluster;
    * Make sure you use “thingsboard” as initial database name;
     
 and recomendations:

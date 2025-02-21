@@ -3,7 +3,7 @@
 * TOC 
 {:toc}
 
-The ChirpStack open-source LoRaWAN Network Server stack provides open-source components for LoRaWAN networks. After integrating ChirpStack with ThingsBoard, you can connect, communicate, process and visualize data from devices in the ThingsBoard IoT platform.
+The ChirpStack open-source LoRaWAN Network Server stack provides open-source components for LoRaWAN networks. After integrating ChirpStack with IoT Hub, you can connect, communicate, process and visualize data from devices in the IoT Hub IoT platform.
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ Go to the "Integrations" page of the "Integrations center" section. Click "plus"
 <br>
 **2. Uplink data converter**. 
 
-Uplink is necessary in order to convert the incoming data from the device into the required format for displaying them in the ThingsBoard.
+Uplink is necessary in order to convert the incoming data from the device into the required format for displaying them in the IoT Hub.
 Click on the "plus" and on "Create new converter". To view the events, use "Debug mode".
 
 In the function decoder field, specify a script to parse and transform data. For our example, use the default decoder function (or use your own configuration) when adding the integration. Then, click "Next";
@@ -65,7 +65,7 @@ Finally, click "Add" button to complete adding the ChirpStack integration.
 
 ## Configure integration on your ChirpStack application
 
-In order for data to be transferred from ChirpStack to ThingsBoard, you need to configure an integration in your ChirpStack application.
+In order for data to be transferred from ChirpStack to IoT Hub, you need to configure an integration in your ChirpStack application.
 
 To create integration on ChirpStack Network server stack, we need to do the following steps:
 
@@ -73,7 +73,7 @@ To create integration on ChirpStack Network server stack, we need to do the foll
 - Named it and click "Submit" button;
 - Application created. Now, navigate to the "Integrations" tab;
 - Find and add a HTTP integration by clicking "+" icon;
-- Fill in the field with the "HTTP endpoint URL" previously copied from the ChirpStack integration in the ThingsBoard. Then, click "Submit" button.
+- Fill in the field with the "HTTP endpoint URL" previously copied from the ChirpStack integration in the IoT Hub. Then, click "Submit" button.
 
 HTTP integration created.
 
@@ -81,7 +81,7 @@ HTTP integration created.
 
 ## Processing uplink message
 
-When your device sends an uplink message, a new device will appear in the ThingsBoard user interface.
+When your device sends an uplink message, a new device will appear in the IoT Hub user interface.
 
 {% include images-gallery.html imageCollection="device" %}
 
@@ -95,13 +95,13 @@ Received data can be viewed in the uplink converter. In the "In" and "Out" block
 
 <br>
 Use the [Dashboards](/docs/{{docsPrefix}}user-guide/dashboards/) to work with data. Dashboards are a modern format for collecting and visualizing data sets. Visibility of data presentation is achieved through a variety of widgets.  
-ThingsBoard has examples of several types of dashboards that you can use. Learn more about **Solution templates** [here](/docs/{{docsPrefix}}solution-templates/overview/).
+IoT Hub has examples of several types of dashboards that you can use. Learn more about **Solution templates** [here](/docs/{{docsPrefix}}solution-templates/overview/).
 
 {% include images-gallery.html imageCollection="solution-templates" %}
 
 ## Advanced usage: downlink
 
-For sending downlink messages from the Thingsboard to the device, we need to define a downlink converter. You can customize the downlink according to your configuration.  
+For sending downlink messages from the IoT Hub to the device, we need to define a downlink converter. You can customize the downlink according to your configuration.  
 
 ### Add downlink converter
 

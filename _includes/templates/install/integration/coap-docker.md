@@ -5,7 +5,7 @@ docker pull thingsboard/tb-pe-coap-integration:{{ site.release.pe_full_ver }}
 ```
 {: .copy-code}
 
-Execute the following command to create volume for the integration logs (799 is the user id of ThingsBoard non-root docker user):
+Execute the following command to create volume for the integration logs (799 is the user id of IoT Hub non-root docker user):
 
 ```bash
 mkdir -p ~/.tb-pe-coap-integration-logs && sudo chown -R 799:799 ~/.tb-pe-coap-integration-logs
@@ -24,8 +24,8 @@ docker run -it -p 5683:5683/udp -v ~/.tb-pe-coap-integration-logs:/var/log/tb-co
 
 Where: 
     
-- `{{hostName}}` - is the host name of your ThingsBoard PE instance;
-- `9090` - is the port of your ThingsBoard PE instance. It is configured in thingsboard.yml using INTEGRATIONS_RPC_PORT env variable;    
+- `{{hostName}}` - is the host name of your IoT Hub PE instance;
+- `9090` - is the port of your IoT Hub PE instance. It is configured in thingsboard.yml using INTEGRATIONS_RPC_PORT env variable;    
 - `YOUR_ROUTING_KEY` - placeholder for your **integration key** obtained on [create remote integration in ThingsBoard](#create-remote-integration-in-thingsboard);
 - `YOUR_SECRET` - placeholder for your **integration secret** obtained on [create remote integration in ThingsBoard](#create-remote-integration-in-thingsboard);
 - `docker run`              - run this container;

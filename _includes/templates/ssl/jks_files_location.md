@@ -1,5 +1,5 @@
 {% capture jks_files_location %}
-**Make sure the certificate files are reachable by ThingsBoard process:**
+**Make sure the certificate files are reachable by IoT Hub process:**
 
 * Linux: use */etc/thingsboard/conf* folder. Make sure the files have same permissions as *thingsboard.conf*; Use relative file path, e.g. *keystore.p12*;
 * Docker Compose: mount or use existing volume to */config* folder of the container; Use full file path, e.g. */config/keystore.p12*;

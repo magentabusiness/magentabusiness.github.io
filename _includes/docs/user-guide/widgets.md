@@ -3,14 +3,14 @@
 
 ## Prerequisites
 
-Before proceeding with this guide, it's recommended that you follow [Getting Started](/docs/{{docsPrefix}}getting-started-guides/helloworld/) guide to become familiar with ThingsBoard dashboards and widgets. This will enhance your learning experience and understanding of the concepts presented here.
+Before proceeding with this guide, it's recommended that you follow [Getting Started](/docs/{{docsPrefix}}getting-started-guides/helloworld/) guide to become familiar with IoT Hub dashboards and widgets. This will enhance your learning experience and understanding of the concepts presented here.
 
 ## Introduction
 
-All IoT dashboards are constructed using ThingsBoard widgets.
+All IoT dashboards are constructed using IoT Hub widgets.
 
 A widget is an element that displays a specific type of information or functionality on a dashboard. 
-Widgets are used to display data and visualize information obtained from devices connected to the ThingsBoard platform, remote device control, alarms management, and display static custom HTML content.
+Widgets are used to display data and visualize information obtained from devices connected to the IoT Hub platform, remote device control, alarms management, and display static custom HTML content.
 
 ### Widget types
 
@@ -151,7 +151,7 @@ Data key definition consists of type (time series, attribute of entity field) an
 
 The list of available attribute keys is basically a list of all client, server and shared [attributes](/docs/{{docsPrefix}}user-guide/attributes/) of your device or other entity.
 
-The list of available time series keys depends on what time series data your devices [report](/docs/{{docsPrefix}}user-guide/telemetry/#device-telemetry-upload-api) to ThingsBoard
+The list of available time series keys depends on what time series data your devices [report](/docs/{{docsPrefix}}user-guide/telemetry/#device-telemetry-upload-api) to IoT Hub
 or what time series data you have saved via rule engine or [REST API](/docs/{{docsPrefix}}reference/rest-api/).
 
 The list of entity fields depends on the entity type and may extend in the future:
@@ -173,7 +173,7 @@ To add a time series or attribute key to the data source, click on the data keys
 {% include images-gallery.html imageCollection="add-data-key" %}
 
 Let's assume you don't have the required time series or attribute key in the database yet.
-In such a case, you can still add a key to the data source, and the widget will start displaying the data as soon as the device will send it to ThingsBoard.
+In such a case, you can still add a key to the data source, and the widget will start displaying the data as soon as the device will send it to IoT Hub.
 To do this, click on the data key row, then enter the name and select the type of the future key: Attributes, Entity field, or Timeseries.
 
 {% include images-gallery.html imageCollection="add-key-in-the-future" %}
@@ -203,7 +203,7 @@ Let's look at the basic data key settings an example of the "Entities table" wid
 {% capture difference %}
 **Please note:** 
 <br>
-There are four types of keys: Attributes, Time Series, Entity Field and Alarm Field (only for Alarm widget). To correctly display data, change the key name to the existing key name of the same type. If you don’t have the required time series or attribute key in the database yet, you can still add a key to the data source. The widget will start displaying the data as soon as the device will send it to ThingsBoard.
+There are four types of keys: Attributes, Time Series, Entity Field and Alarm Field (only for Alarm widget). To correctly display data, change the key name to the existing key name of the same type. If you don’t have the required time series or attribute key in the database yet, you can still add a key to the data source. The widget will start displaying the data as soon as the device will send it to IoT Hub.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -232,7 +232,7 @@ key in the '**Latest values**' widgets, the time window control will appear. You
 key individually, which you want to display and at the same time do not need to store it in the database. The time window
 configuration is limited to the real-time intervals (**Current Hour/Day/Month**) and '**History**' time intervals. The real-time
 intervals like 'last 30 minutes' or 'last 24 hours' are not supported for performance reasons. If you need to store the
-aggregation as telemetry, follow for more details at [the link](https://thingsboard.io/docs/pe/user-guide/rule-engine-2-0/analytics-nodes/).
+aggregation as telemetry, follow for more details at [the link](/docs/pe/user-guide/rule-engine-2-0/analytics-nodes/).
 
 {% include images-gallery.html imageCollection="data-key-configuration-aggregation" %}
 

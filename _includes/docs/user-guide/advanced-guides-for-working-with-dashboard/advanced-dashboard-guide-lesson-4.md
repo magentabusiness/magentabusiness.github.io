@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-One of the most important ThingsBoard features is the ability to create end-user dashboards.
+One of the most important IoT Hub features is the ability to create end-user dashboards.
 Each end user will only see their own devices and data, enjoying all the benefits of working with their personalized dashboard. They will not see devices or any other data belonging to other customers.
 As an administrator, you will always retain the access to edit and modify your dashboard. 
 

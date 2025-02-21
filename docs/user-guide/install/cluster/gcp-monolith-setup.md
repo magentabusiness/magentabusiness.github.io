@@ -3,20 +3,20 @@ layout: docwithnav
 assignees:
 - ashvayka
 title: Monolith setup using GCP infrastructure
-description: ThingsBoard IoT platform monolith setup with Kubernetes in GKE
+description: IoT Hub IoT platform monolith setup with Kubernetes in GKE
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to set up ThingsBoard in monolith mode in GKE. 
+This guide will help you to set up IoT Hub in monolith mode in GKE. 
 
 ## Prerequisites
 
 {% include templates/install/gcp/gke-prerequisites.md %}
 
-## Step 1. Clone ThingsBoard CE K8S scripts repository
+## Step 1. Clone IoT Hub K8S scripts repository
 
 Clone the repository and change the working directory to GCP scripts.
 

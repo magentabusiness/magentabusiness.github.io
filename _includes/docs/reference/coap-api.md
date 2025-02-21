@@ -92,7 +92,7 @@ Where **1451649600512** is a [unix timestamp](https://en.wikipedia.org/wiki/Unix
 Below are examples of commands for publishing different types of telemetry data.
 
 {% if docsPrefix == null %}
-Don't forget to replace <code>demo.thingsboard.io</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token. In this example, the hostname references live demo server.
+Don't forget to replace <code>iothub.magenta.at</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token. In this example, the hostname references live demo server.
 {% endif %}
 {% if docsPrefix == "pe/" %}
 Don't forget to replace <code>host</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token. In this example, the hostname references your local installation.
@@ -341,7 +341,7 @@ Where **host** - your localhost, or the platform address.
 If you use live demo server, the command will look like this:
 
 ```shell
-coap://demo.thingsboard.io/api/v1/provision
+coap://iothub.magenta.at/api/v1/provision
 ```
 {: .copy-code}
 {% endif %}

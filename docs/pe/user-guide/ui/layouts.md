@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - stitenko
 title: Layouts
-description: ThingsBoard Dashboard Layouts
+description: IoT Hub Dashboard Layouts
 
 layout-1:
     0:

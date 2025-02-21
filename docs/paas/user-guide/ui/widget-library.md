@@ -105,7 +105,7 @@ wl-digital-bundle:
 wl-edge-widgets-bundle:
     0:
         image: /images/user-guide/ui/widgets/widget-library/wl-edge-bundle-pe.png
-        title: 'For an overview of entities related to the specified ThingsBoard Edge instance.'
+        title: 'For an overview of entities related to the specified IoT Hub Edge instance.'
 
 wl-entity-admin-bundle:
     0:

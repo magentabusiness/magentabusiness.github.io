@@ -1,10 +1,10 @@
-You'll need to set up Kafka using Amazon MSK. ThingsBoard will use it to communicate between microservices, store unprocessed messages, etc.
+You'll need to set up Kafka using Amazon MSK. IoT Hub will use it to communicate between microservices, store unprocessed messages, etc.
 Kafka is useful to survive peak loads and hardware failures to make sure that all messages from devices will be processed.
 
 Please open AWS console and navigate to MSK, press `Create cluster` button and choose `Custom create` mode.
 
 * Make sure your Apache Kafka version is 3.7.x;
-* Make sure your MSK instance is accessible from the ThingsBoard cluster.
+* Make sure your MSK instance is accessible from the IoT Hub cluster.
   The easiest way to achieve this is to deploy the MSK instance in the same VPC.
   We also recommend to use private subnets. This way it will be nearly impossible to accidentally expose it to the internet;
 * Use m5.large or similar instance types;

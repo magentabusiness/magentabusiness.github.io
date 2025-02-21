@@ -14,7 +14,7 @@ Where **$THINGSBOARD_HOST_NAME** is your localhost, or the platform address.
 If you use live demo server, the command will look like this:
 
 ```shell
-coap://demo.thingsboard.io/api/v1/rpc
+coap://iothub.magenta.at/api/v1/rpc
 ```
 {: .copy-code}
 {% endif %}
@@ -59,7 +59,7 @@ coap://$THINGSBOARD_HOST_NAME/api/v1/rpc/{$id}
 If you use live demo server, the command will look like this:
 
 ```shell
-coap://demo.thingsboard.io/api/v1/rpc/{$id}
+coap://iothub.magenta.at/api/v1/rpc/{$id}
 ```
 {: .copy-code}
 {% endif %}
@@ -76,7 +76,7 @@ Where **$id** is an integer request identifier.
 <br>
 **Let's look at an example**:
 
-- Use **RPC debug terminal** widget in your ThingsBoard instance;
+- Use **RPC debug terminal** widget in your IoT Hub instance;
 
 {% if docsPrefix == null or docsPrefix == "pe/" %}
 - Subscribe to RPC commands from the server using the command below. To do this, in the first terminal window send GET request with observe flag. Don't forget to replace <code>$THINGSBOARD_HOST_NAME</code> with your host:

@@ -15,7 +15,7 @@ Where
 If you use live demo server, the command will look like this:
 
 ```shell
-coap://demo.thingsboard.io/api/v1/$ACCESS_TOKEN/attributes?clientKeys=attribute1,attribute2&sharedKeys=shared1,shared2
+coap://iothub.magenta.at/api/v1/$ACCESS_TOKEN/attributes?clientKeys=attribute1,attribute2&sharedKeys=shared1,shared2
 ```
 {: .copy-code}
 {% endif %}

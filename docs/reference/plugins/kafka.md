@@ -38,7 +38,7 @@ Prerequisites before contining Kafka extension configuration:
 
  - Kafka broker is up and running
  - Appropriate Kafka Topic created
- - ThingsBoard is up and running
+ - IoT Hub is up and running
 
 ### Kafka Plugin Configuration
 
@@ -86,7 +86,7 @@ Now you can send Telemetry message that contains *'temp'* telemetry for any of y
 
 You should see **'73.4'** message in appropriate Kafka topic once you'll post this message.
 
-Here is an example of a command that publish single telemetry message to locally installed ThingsBoard:
+Here is an example of a command that publish single telemetry message to locally installed IoT Hub:
 
 ```bash
 mosquitto_pub -d -h "localhost" -p 1883 -t "v1/devices/me/telemetry" -u "$ACCESS_TOKEN" -m '{"temp":73.4}'

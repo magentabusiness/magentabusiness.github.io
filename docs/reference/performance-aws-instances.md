@@ -1,15 +1,15 @@
 ---
 layout: docwithnav
-title: ThingsBoard Performance on different AWS instances
-description: ThingsBoard Performance on different AWS instances results
+title: IoT Hub Performance on different AWS instances
+description: IoT Hub Performance on different AWS instances results
 
 postgres-only-1000:
     0:
         image: /images/reference/performance-aws-instances/method/t3-medium/postgres/queue-stats.png  
-        title: 'Thingsboard queue stats'
+        title: 'IoT Hub queue stats'
     1:
         image: /images/reference/performance-aws-instances/method/t3-medium/postgres/api-usage.png
-        title: 'Thingsboard API usage'
+        title: 'IoT Hub API usage'
     2:
         image: /images/reference/performance-aws-instances/method/t3-medium/postgres/htop.png
         title: 'htop'
@@ -29,10 +29,10 @@ postgres-only-1000:
 postgres-only-1000-arm:
     0:
         image: /images/reference/performance-aws-instances/method/arm/t4g-medium/postgres/queue-stats.png  
-        title: 'Thingsboard queue stats on ARM architecture'
+        title: 'IoT Hub queue stats on ARM architecture'
     1:
         image: /images/reference/performance-aws-instances/method/arm/t4g-medium/postgres/api-usage.png
-        title: 'Thingsboard API usage on ARM architecture'
+        title: 'IoT Hub API usage on ARM architecture'
     2:
         image: /images/reference/performance-aws-instances/method/arm/t4g-medium/postgres/htop.png
         title: 'htop on ARM architecture'
@@ -52,10 +52,10 @@ postgres-only-1000-arm:
 postgres-only-x3-stress:
     0:
         image: /images/reference/performance-aws-instances/method/t3-medium/burst-x3/burst-x3-queue-stats.png  
-        title: 'Thingsboard queue stats'
+        title: 'IoT Hub queue stats'
     1:
         image: /images/reference/performance-aws-instances/method/t3-medium/burst-x3/burst-x3-api-usage.png
-        title: 'Thingsboard API usage'
+        title: 'IoT Hub API usage'
     2:
         image: /images/reference/performance-aws-instances/method/t3-medium/burst-x3/burst-x3-htop.png
         title: 'htop'
@@ -104,7 +104,7 @@ postgres-only-6000:
         title: 'Queue stats dashboard'
     1:
         image: /images/reference/performance-aws-instances/method/m6a-large/postgres/thingsboard-aws-m6a-large-api-usage-dashboard.png
-        title: 'Thingsboard API usage dashboard'
+        title: 'IoT Hub API usage dashboard'
     2:
         image: /images/reference/performance-aws-instances/method/m6a-large/postgres/thingsboard-aws-m6a-large-htop-cpu-memory-io-monitoring.png
         title: 'htop: CPU, memory, IO read/write'
@@ -127,10 +127,10 @@ postgres-only-6000:
 postgres-kafka-5000:
     0:
         image: /images/reference/performance-aws-instances/method/m6a-large/postgres-kafka/queue-stats.png  
-        title: 'Thingsboard queue stats'
+        title: 'IoT Hub queue stats'
     1:
         image: /images/reference/performance-aws-instances/method/m6a-large/postgres-kafka/api-usage.png
-        title: 'Thingsboard API usage'
+        title: 'IoT Hub API usage'
     2:
         image: /images/reference/performance-aws-instances/method/m6a-large/postgres-kafka/htop.png
         title: 'htop'
@@ -150,10 +150,10 @@ postgres-kafka-5000:
 postgres-kafka-5000-long-running:
     0:
         image: /images/reference/performance-aws-instances/method/m6a-large/postgres-kafka/long-running/queue-stats-long-running.png  
-        title: 'Thingsboard queue stats'
+        title: 'IoT Hub queue stats'
     1:
         image: /images/reference/performance-aws-instances/method/m6a-large/postgres-kafka/long-running/api-usage-long-running.png
-        title: 'Thingsboard API usage'
+        title: 'IoT Hub API usage'
     2:
         image: /images/reference/performance-aws-instances/method/m6a-large/postgres-kafka/long-running/jmx-visualvm-monitoring-long-running.png
         title: 'JMX VisualVM monitoring'
@@ -164,7 +164,7 @@ postgres-kafka-x3-stress:
         title: '100% CPU utilization. The system is overloaded'
     1:
         image: /images/reference/performance-aws-instances/method/m6a-large/postgres-kafka/stress-x3/queue-stats-stress-x3.png
-        title: 'Thingsboard queue stats under x3 stress test'
+        title: 'IoT Hub queue stats under x3 stress test'
     2:
         image: /images/reference/performance-aws-instances/method/m6a-large/postgres-kafka/stress-x3/jmx-visualvm-monitoring-long-running-stress-x3.png
         title: 'Java machine feels good. Heap memory has enough space to operate'
@@ -192,7 +192,7 @@ cassandra-25k-10k-30k:
         title: 'Queue stats dashboard'
     1:
         image: /images/reference/performance-aws-instances/method/m6a-2xlarge/25k-10k-30k/api-usage.png
-        title: 'Thingsboard API usage dashboard'
+        title: 'IoT Hub API usage dashboard'
     2:
         image: /images/reference/performance-aws-instances/method/m6a-2xlarge/25k-10k-30k/htop.png
         title: 'htop: CPU, memory, IO read/write'
@@ -220,7 +220,7 @@ cassandra-25k-10k-30k-jmx:
         title: 'VisualVM Java application list'
     1:
         image: /images/reference/performance-aws-instances/method/m6a-2xlarge/25k-10k-30k/jmx-thingsboard.png
-        title: 'JMX monitoring for the Thingsboard. The system is stable'
+        title: 'JMX monitoring for the IoT Hub. The system is stable'
     2:
         image: /images/reference/performance-aws-instances/method/m6a-2xlarge/25k-10k-30k/jmx-kafka.png
         title: 'JMX monitoring for the Kafka. The system is stable'
@@ -237,7 +237,7 @@ cassandra-100k-5k-15k:
         title: 'Queue stats dashboard'
     1:
         image: /images/reference/performance-aws-instances/method/m6a-2xlarge/100k-5k-15k/api-usage.png
-        title: 'Thingsboard API usage dashboard'
+        title: 'IoT Hub API usage dashboard'
     2:
         image: /images/reference/performance-aws-instances/method/m6a-2xlarge/100k-5k-15k/htop.png
         title: 'htop: CPU, memory, IO read/write'
@@ -263,7 +263,7 @@ cassandra-100k-10k-30k:
         title: 'Queue stats dashboard'
     1:
         image: /images/reference/performance-aws-instances/method/m6a-2xlarge/100k-10k-30k/api-usage.png
-        title: 'Thingsboard API usage dashboard'
+        title: 'IoT Hub API usage dashboard'
     2:
         image: /images/reference/performance-aws-instances/method/m6a-2xlarge/100k-10k-30k/htop.png
         title: 'htop: CPU, memory, IO read/write'
@@ -286,7 +286,7 @@ cassandra-100k-10k-30k-24h:
         title: 'Queue stats dashboard'
     1:
         image: /images/reference/performance-aws-instances/method/m6a-2xlarge/100k-10k-30k/24h-run/api-usage.png
-        title: 'Thingsboard API usage dashboard'
+        title: 'IoT Hub API usage dashboard'
     2:
         image: /images/reference/performance-aws-instances/method/m6a-2xlarge/100k-10k-30k/24h-run/aws-instance-monitoring.png
         title: 'AWS CPU and network monitoring'

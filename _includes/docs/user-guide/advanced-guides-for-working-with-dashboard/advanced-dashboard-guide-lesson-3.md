@@ -16,7 +16,7 @@ In this part, we will add separate states for each device, simulate telemetry da
 
 ## Simulation of the devices' telemetry data
 
-Since we are using virtual devices, they do not send telemetry data to the ThingsBoard. However, we can simulate the transmission of such data in real time.
+Since we are using virtual devices, they do not send telemetry data to the IoT Hub. However, we can simulate the transmission of such data in real time.
 To do this, we will use [Rule Engine](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/){:target="_blank"}.
 
 We will add a new [Rule Chain](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#rule-chain){:target="_blank"} with four [generator nodes](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/action-nodes/#generator-node){:target="_blank"} that will periodically generate simple messages with random telemetry readings, unique to each of our devices. Let's get started.
@@ -49,7 +49,7 @@ return { msg: msg, metadata: metadata, msgType: msgType };
 - Paste the copied script into the generator function section to simulate temperature, humidity, and CO2 telemetry data;
 - Click "Add".
 
-We added a "generator" node that will send telemetry to ThingsBoard on behalf of the "Indoor Air Quality Sensor" device every 10 minutes (600 seconds). There will be 100 such messages.
+We added a "generator" node that will send telemetry to IoT Hub on behalf of the "Indoor Air Quality Sensor" device every 10 minutes (600 seconds). There will be 100 such messages.
 
 {% include images-gallery.html imageCollection="adding-new-rule-chain-2" %}
 
@@ -410,7 +410,7 @@ This will allow us to not only monitor the current state of air quality paramete
 
 ### Temperature, humidity, and CO2 level cards widgets
 
-In ThingsBoard, there is a bundle of pre-configured widgets for displaying telemetry of the indoor environment, including temperature, humidity, and CO2 levels, etc. In this lesson, we will use this widgets bundle.
+In IoT Hub, there is a bundle of pre-configured widgets for displaying telemetry of the indoor environment, including temperature, humidity, and CO2 levels, etc. In this lesson, we will use this widgets bundle.
 
 First, add a widget to display the current temperature in the office.
 

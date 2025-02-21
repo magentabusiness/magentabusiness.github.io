@@ -4,7 +4,7 @@
 {% assign sinceVersion = "3.8.0" %}
 {% include templates/since.md %}
 
-In ThingsBoard, SCADA symbols are crafted using [SVG](https://en.wikipedia.org/wiki/SVG){:target="_blank"} (Scalable Vector Graphics), 
+In IoT Hub, SCADA symbols are crafted using [SVG](https://en.wikipedia.org/wiki/SVG){:target="_blank"} (Scalable Vector Graphics), 
 which enables seamless scaling across different screen sizes due to their vector nature. 
 Our engineers have enhanced the SVG format to support interactivity in these symbols. 
 This guide will walk you through the steps to create your own interactive SCADA symbol using a sample SVG file.
@@ -26,7 +26,7 @@ We will often use the following definitions:
 - **Developer** - a person responsible for defining the SCADA symbol;
 - **End user** - a person who integrates the SCADA symbol into the dashboard.
 
-Creating a SCADA symbol in ThingsBoard involves an SVG file along with several concepts:
+Creating a SCADA symbol in IoT Hub involves an SVG file along with several concepts:
 
 - **Tags**: These are custom labels assigned to shapes within the SVG file. Tags are utilized to specify render functions and `onClick` actions for SVG elements;
 
@@ -376,7 +376,7 @@ Let's set up new action behavior items for the user interactions with the "On" a
 {% include images-gallery.html imageCollection="add-off-btn-click-behavior-1" %}
 
 <br>
-Configure the "onFanClick" click action to open the ThingsBoard platform&#39;s webpage in a separate browser tab:
+Configure the "onFanClick" click action to open the IoT Hub platform&#39;s webpage in a separate browser tab:
 
   - **Id**: onFanClick
   - **Name**: On fan click
@@ -1032,7 +1032,7 @@ Now let's test our widget on the dashboard:
 
 ### ScadaSymbolContext
 
-The `ScadaSymbolContext` (represented as `ctx` in functions code) is a JavaScript object integral to interacting with SCADA symbols in ThingsBoard. It contains the following fields:
+The `ScadaSymbolContext` (represented as `ctx` in functions code) is a JavaScript object integral to interacting with SCADA symbols in IoT Hub. It contains the following fields:
 
 1. `ctx.svg`: This field accesses the root SVG node, acting as the primary entry point to the SVG's DOM structure.
 
@@ -1058,7 +1058,7 @@ export interface ScadaSymbolContext {
 
 ### ScadaSymbolApi
 
-The `ScadaSymbolApi` (referred to as `api` when accessed via `ScadaSymbolContext`) is a comprehensive JavaScript interface designed for manipulating SCADA symbol elements in ThingsBoard. It encapsulates a variety of methods for creating, modifying, and managing interactions with SVG elements. Here are the primary functionalities provided by this API:
+The `ScadaSymbolApi` (referred to as `api` when accessed via `ScadaSymbolContext`) is a comprehensive JavaScript interface designed for manipulating SCADA symbol elements in IoT Hub. It encapsulates a variety of methods for creating, modifying, and managing interactions with SVG elements. Here are the primary functionalities provided by this API:
 
 * **generateElementId**: Generates a unique identifier for an element. Useful if you want to create new elements.
    ```javascript
@@ -1188,7 +1188,7 @@ The `ScadaSymbolApi` (referred to as `api` when accessed via `ScadaSymbolContext
 
 ### ScadaSymbolAnimation
 
-The `ScadaSymbolAnimation` interface in ThingsBoard is designed to facilitate complex animations within SCADA symbols using CSS animation.
+The `ScadaSymbolAnimation` interface in IoT Hub is designed to facilitate complex animations within SCADA symbols using CSS animation.
 This interface allows developers to control animation aspects dynamically, offering a variety of methods to manipulate the animation's behavior and properties.
 Below are the key methods provided by the `ScadaSymbolAnimation` interface:
 

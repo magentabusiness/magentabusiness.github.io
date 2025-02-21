@@ -23,7 +23,7 @@ Please refer to [**Building from sources**](/docs/user-guide/install/building-fr
 
 To run integration and black-box tests **docker** and **docker-compose** required, please, refer to the [Running tests](/docs/user-guide/install/building-from-source/#tips-and-tricks) section.
 
-#### Fork and build ThingsBoard repository
+#### Fork and build IoT Hub repository
 
 Once you have completed installation of required tools please fork official [**IoT Hub repository**](https://github.com/thingsboard/thingsboard).
 

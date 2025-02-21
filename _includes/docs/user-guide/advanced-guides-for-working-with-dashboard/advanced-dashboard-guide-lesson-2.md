@@ -328,8 +328,8 @@ We have added information card about the building. Resize the widget to your lik
 
 ### Map widget
 
-Next, we will add a map widget that will display only the selected building. In a previous lesson, we added a similar [widget that displays all our buildings on the map](/docs/{{docsPrefix}}user-guide/advanced-guides-for-working-with-dashboard/advanced-dashboard-guide-lesson-1/#openstreet-map-widget){:target="_blank"}. 
-ThingsBoard allows copying widgets, so let’s add the map widget by copying and pasting.
+Next, we will add a map widget that will display only the selected building. In a previous lesson, we added a similar [widget that displays all our buildings on the map](/docs/{{docsPrefix}}user-guide/advanced-guides-for-working-with-dashboard/advanced-dashboard-guide-lesson-1/#openstreet-map-widget){:target="_blank"}.
+IoT Hub allows copying widgets, so let’s add the map widget by copying and pasting.
 
 - Return to the default state of your dashboard where the original map widget is located;
 - Enter the dashboard editing mode;

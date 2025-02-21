@@ -121,12 +121,7 @@ The following interactive dashboard hosted on live demo server represents vehicl
 
 {% include carousel.liquid nonActiveItemsVisibility = true overlay = false collectionMap = 'use-cases' collectionKey = 'fleet-tracking' %}
 
-<div class="center" style="margin-bottom: 64px;">
-    <a id="UseCases_FleetTracking_ViewLiveDemo" target="_blank" href="https://demo.thingsboard.io/dashboard/3d0bf910-ee09-11e6-b619-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0" class="button gtm_button">View live demo</a>
-</div>
-
 The live Fleet Tracking dashboard displays real-time data from several tracking sensors collected using IoT Hub MQTT API. Collected data is processed via the rule engine to raise alarms on certain thresholds. You may export the dashboard from our live demo server and import it to your IoT Hub instance.
->>>>>>> ad368c0ed5d3799cf901e3e0c5e84bf8564eb1c6
 
 IoT Hub’s fleet management IoT solutions are meticulously crafted to offer unparalleled insights, efficiency, and adaptability.
 

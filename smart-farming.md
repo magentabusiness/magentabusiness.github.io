@@ -23,7 +23,6 @@ notitle: "true"
                 <p class="smart-farm-demo-descr">IoT Hub іs an IoT platform that provides instruments for building end to end IoT solutions.</p>
                 <p>In the context of smart agriculture, IoT Hub allows farmers to monitor, manage and optimise their operations. This platform integrates data streams from various sensors, devices and third party systems, providing a single interface for efficient management of agricultural activities.</p>
                 <div class="smart-farm-demo-btn">
-                    <a target="_blank" href="https://demo.thingsboard.io/dashboard/1f9828d0-058e-11e7-87f7-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0"><button class="try-demo">View live demo</button></a>
                     <a target="_blank" href="/smart-farming-demo"><button id="smart-farm-contact-us" class="button anchor-button gtm_button" class="contact-us">Learn more</button></a>
                 </div>
             </div>
@@ -441,7 +440,6 @@ notitle: "true"
                 <div class="smart-farm-management-software-text">
                     <h2>Agriculture & Farm management Software</h2>
                     <p>By leveraging the IoT Hub IoT platform, farmers can enhance productivity, reduce resource wastage, and ensure sustainable agricultural practices. This ultimately leads to improved farm management and increased profitability, making IoT Hub a valuable software for modern smart farming.</p>
-                    <a target="_blank" href="https://demo.thingsboard.io/dashboard/1f9828d0-058e-11e7-87f7-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0"><button class="try-demo">Live demo</button></a>
                 </div>
                 <div class="smart-farm-management-software-img">
                     <img loading="lazy" src="/images/usecases/smart-farming/agriculture_farm_management.webp" alt="agriculture_farm_management">

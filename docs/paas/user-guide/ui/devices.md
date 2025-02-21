@@ -8,7 +8,7 @@ description: IoT Hub IoT Device management
 add-device:
     0:
         image: /images/helloworld/getting-started-pe/hello-world-1-1-provision-device-1-pe.png
-        title: 'Login to your ThingsBoard instance and navigate to the "Entities" section. Then go to the "Devices" page;'
+        title: 'Login to your IoT Hub instance and navigate to the "Entities" section. Then go to the "Devices" page;'
     1:
         image: /images/helloworld/getting-started-pe/hello-world-1-1-provision-device-2-pe.png
         title: 'By default, you navigate to the device group "All". Click on the "+" icon in the top right corner of the table and then select "Add new device";'
@@ -17,7 +17,7 @@ add-device:
         title: 'Enter the device name. For example, "My New Device". No other changes are required at this time. Click "Add";'
     3:
         image: /images/helloworld/getting-started-pe/hello-world-1-1-provision-device-4-pe.png
-        title: 'Device is created. A window will open where you can check the device&#39;s connection to ThingsBoard. This step is optional. Let&#39;s close this window for now and return to checking the connection in the next step in more detail;'
+        title: 'Device is created. A window will open where you can check the device&#39;s connection to IoT Hub. This step is optional. Let&#39;s close this window for now and return to checking the connection in the next step in more detail;'
     4:
         image: /images/helloworld/getting-started-pe/hello-world-1-1-provision-device-5-pe.png
         title: 'Your first device has been added. As new devices are added, they will be added to the top of the table since the table sorts devices by default using the time of creation.'
@@ -90,7 +90,7 @@ check-connectivity:
         title: 'Select the messaging protocol and your operating system, then copy the command;'
     2:
         image: /images/user-guide/ui/devices/pe/check-connectivity-3-pe.png
-        title: 'Send telemetry to the ThingsBoard instance on behalf of the device by executing the command via terminal. The device state should be changed from "Inactive" to "Active" and you should see the published "temperature" readings.'
+        title: 'Send telemetry to the IoT Hub instance on behalf of the device by executing the command via terminal. The device state should be changed from "Inactive" to "Active" and you should see the published "temperature" readings.'
 
 copy-device-id:
     0:
@@ -141,18 +141,17 @@ events:
 relations:
     0:
         image: /images/user-guide/ui/devices/pe/device-relations-1-pe.png
-        title: 'This tab displays the relationships of this device with other devices, dashboards, assets, and other entities in the ThingsBoard system.'
+        title: 'This tab displays the relationships of this device with other devices, dashboards, assets, and other entities in the IoT Hub system.'
 
 audit-logs:
     0:
         image: /images/user-guide/ui/devices/pe/device-audit-logs-1-pe.png
-        title: 'ThingsBoard provides the ability to track user actions in order to keep an audit log. It is possible to log user actions related to main entities: assets, devices, dashboard, rules, etc.'
->>>>>>> ad368c0ed5d3799cf901e3e0c5e84bf8564eb1c6
+        title: 'IoT Hub provides the ability to track user actions in order to keep an audit log. It is possible to log user actions related to main entities: assets, devices, dashboard, rules, etc.'
 
 version-control:
     0:
         image: /images/user-guide/ui/devices/pe/device-version-control-1-pe.png
-        title: 'ThingsBoard version control service provides the ability to export and restore ThingsBoard Entities using Git.'
+        title: 'IoT Hub version control service provides the ability to export and restore IoT Hub Entities using Git.'
 
 ---
 

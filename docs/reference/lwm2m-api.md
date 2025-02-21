@@ -8,7 +8,7 @@ description: Supported LWM2M API Reference for IoT Devices
 upload-models:
     0:
         image: /images/lwm2m/upload-ce.png
-        title: 'Login to your ThingsBoard instance and go to System settings -> Resource Library,
+        title: 'Login to your IoT Hub instance and go to System settings -> Resource Library,
                 then click "+" button'
     1:
         image: /images/lwm2m/upload-1-ce.png
@@ -54,7 +54,7 @@ device-objects:
 data-fetch:
     0:
         image: /images/lwm2m/data-fetch-ce.png
-        title: 'Tick "Attrubutes" for  data that you want to get when device connects and store it as ThingsBoard attributes'
+        title: 'Tick "Attrubutes" for  data that you want to get when device connects and store it as IoT Hub attributes'
     1:
         image: /images/lwm2m/data-fetch-1-ce.png
         title: 'Tick Telemetry and\or Observe boxes, if you would like the Server to observe them and fetch updated values'

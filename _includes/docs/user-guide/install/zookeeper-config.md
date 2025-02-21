@@ -11,7 +11,7 @@
           <td>zk.enabled</td>
           <td>ZOOKEEPER_ENABLED</td>
           <td>false</td>
-          <td>Enable/disable zookeeper discovery service. Used for ThingsBoard cluster</td>
+          <td>Enable/disable zookeeper discovery service. Used for IoT Hub cluster</td>
         </tr>
         <tr>
           <td>zk.url</td>

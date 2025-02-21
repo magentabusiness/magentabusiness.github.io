@@ -1,7 +1,7 @@
 ---
 layout: smart-farming-demo
 title: Smart Farming Monitoring
-description: Smart Farming Monitoring with ThingsBoard IoT Platform
+description: Smart Farming Monitoring with IoT Hub IoT Platform
 notitle: "true"
 
 --- 
@@ -13,13 +13,9 @@ notitle: "true"
     <img id="background" src="/images/usecases/smart-farming/elipse-background.png" alt="Background"/>
     <div class="hero-container">
         <div id="hero-content">
-            <h3 class="hero-title">ThingsBoard IoT platform</h3>
+            <h3 class="hero-title">IoT Hub IoT platform</h3>
             <h1 class="title">Agriculture & Farm management Software</h1>
             <h3 class="sub-title">Smart Farming and Agriculture software solution designed to manage a farm or livestock business. Organize, integrate, monitor and improve all aspects of your farm on one platform.></h3>
-            <div class="info-block">
-                <a class="filled-button" target="_blank" href="https://demo.thingsboard.io/dashboard/1f9828d0-058e-11e7-87f7-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0">Live demo</a>
-                <input class="outline-button anchor-button" type="button" value="Contact us"/>
-            </div>
         </div>
         <div class="container">
             <img id="header-img1" src="/images/usecases/smart-farming/hero-image-1.webp" alt="Hero image 1"/>
@@ -43,7 +39,7 @@ notitle: "true"
 
 <section id="benefits-screen" class="content-wrapper">
     <h2 class="benefits-title">The benefits of using Agriculture software products</h2>
-    <div class="benefits-sub-title">ThingsBoard software for agriculture industry help to save up to 90% of development time for your smart farming & agriculture software solutions by utilizing the following benefits:</div>
+    <div class="benefits-sub-title">IoT Hub software for agriculture industry help to save up to 90% of development time for your smart farming & agriculture software solutions by utilizing the following benefits:</div>
     <div class="cards">
         <div class="card">
             <img src="/images/usecases/smart-farming/real-time-icon.webp" alt="Accurate level icon" loading="lazy"/>
@@ -132,7 +128,6 @@ notitle: "true"
                     <p>Receive alerts based on customized rules. Get an email or sms, set details for the notifications.</p>
                 </div>
             </div>
-            <a target="_blank" class="try-demo-button" href="https://demo.thingsboard.io/dashboard/1f9828d0-058e-11e7-87f7-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0">View live demo</a>
         </div>
         <div class="images"></div>
     </div>
@@ -144,8 +139,8 @@ notitle: "true"
             <img class="connectivity-image" loading="lazy" src="/images/usecases/smart-farming/connectivity.webp" alt="Connectivity card"/>
         </div>
         <div class="right">
-            <h2 class="title">ThingsBoard platform device supports</h2>
-            <div class="text">ThingsBoard supports a variety of direct communication <a class="blue-text" href="/docs/pe/api/">protocols</a> for interaction between devices and the IoT platform — MQTT, CoAP, HTTP, LWM2M, OPC-UA, Modbus, etc. Those protocols are already industry standards. However, we do support other options — SNMP, Kafka, TCP/UDP.</div>
+            <h2 class="title">IoT Hub platform device supports</h2>
+            <div class="text">IoT Hub supports a variety of direct communication <a class="blue-text" href="/docs/pe/api/">protocols</a> for interaction between devices and the IoT platform — MQTT, CoAP, HTTP, LWM2M, OPC-UA, Modbus, etc. Those protocols are already industry standards. However, we do support other options — SNMP, Kafka, TCP/UDP.</div>
             <div class="text">We also <a class="blue-text" href="/docs/user-guide/integrations/">accept devices</a> from external connectivity IoT device management companies like LoRaWAN, Sigfox, NB-IoT, AWS IoT, Azure IoT, Actility ThingPark, TheThingsStack, OceanConnect, etc.</div>
         </div> 
     </div>
@@ -211,7 +206,7 @@ notitle: "true"
                         <select class="cdu-form-control" name="subject">
                             <option value="Custom Development" selected>Custom Development</option>
                             <option value="Technical Support">Technical Support</option>
-                            <option value="ThingsBoard Products">ThingsBoard Products</option>
+                            <option value="ThingsBoard Products">IoT Hub Products</option>
                             <option value="Deployment Options">Deployment Options</option>
                             <option value="Training">Training</option>
                             <option value="Professional Services">Professional Services</option>

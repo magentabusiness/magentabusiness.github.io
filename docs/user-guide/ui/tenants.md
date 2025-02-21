@@ -8,7 +8,7 @@ description: IoT Hub Tenants management
 create-tenants-ce:
     0:
         image: /images/user-guide/tenant-profile/CE/create-tenant-1-ce.png
-        title: 'Login to your ThingsBoard instance WEB UI as a system administrator;'
+        title: 'Login to your IoT Hub instance WEB UI as a system administrator;'
     1:
         image: /images/user-guide/tenant-profile/CE/create-tenant-2-ce.png
         title: 'Navigate to the Tenants page. Then click on the "plus" icon in the upper right corner of the screen;'

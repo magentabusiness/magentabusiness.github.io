@@ -34,7 +34,7 @@ In this example, we are going to demonstrate how you can configure Rest API Call
 
 Prerequisites before continuing REST API Call extension configuration:
 
- - ThingsBoard is up and running
+ - IoT Hub is up and running
  - Third-party HTTP server and particular endpoint that is able to receive POST or PUT requests are up and running
 
 ### REST API Call Plugin Configuration
@@ -85,7 +85,7 @@ Now for any of your devices send Telemetry message that contains *'temp'* teleme
 
 You should see **'73.4'** as a body request in appropriate rest endpoint once you'll post this message.
 
-Here is an example of a command that publish single telemetry message to locally installed ThingsBoard:
+Here is an example of a command that publish single telemetry message to locally installed IoT Hub:
 
 ```bash
 mosquitto_pub -d -h "localhost" -p 1883 -t "v1/devices/me/telemetry" -u "$ACCESS_TOKEN" -m '{"temp":73.4}'

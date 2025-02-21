@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-paas
 title: Dart API Client
-description: ThingsBoard PE API client library for Dart developers
+description: IoT Hub API client library for Dart developers
 
 ---
  

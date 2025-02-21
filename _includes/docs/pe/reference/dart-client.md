@@ -12,7 +12,7 @@ The Dart IoT Hub API Client is also a part of IoT Hub Mobile Application.
 
 The version of the Dart IoT Hub API Client depends on the version of the platform that you are using.
 
-## Installing Dart ThingsBoard API Client (Professional Edition)
+## Installing Dart IoT Hub API Client (Professional Edition)
 
 To use Dart IoT Hub API Client package in your Dart/Flutter project run this command:
 
@@ -49,7 +49,7 @@ import 'package:thingsboard_pe_client/thingsboard_client.dart';
 
 ### Basic Usage
 
-The next sample code shows how to instantiate ThingsBoard Client, perform login and get user details of current logged in user.
+The next sample code shows how to instantiate IoT Hub Client, perform login and get user details of current logged in user.
 
 ```dart
 import 'package:thingsboard_pe_client/thingsboard_client.dart';
@@ -60,7 +60,7 @@ const thingsBoardApiEndpoint = 'http://localhost:8080';
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
+    // Create instance of IoT Hub API Client
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
@@ -93,13 +93,13 @@ The following sample code shows how to get allowed permissions of current logged
 ```dart
 import 'package:thingsboard_pe_client/thingsboard_client.dart';
 
-// ThingsBoard REST API URL
+// IoT Hub REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
+    // Create instance of IoT Hub API Client
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
@@ -132,13 +132,13 @@ The following sample code shows how to fetch user devices via page link.
 ```dart
 import 'package:thingsboard_pe_client/thingsboard_client.dart';
 
-// ThingsBoard REST API URL
+// IoT Hub REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
+    // Create instance of IoT Hub API Client
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
@@ -170,13 +170,13 @@ The following sample code shows how to fetch user dashboards via page link.
 ```dart
 import 'package:thingsboard_pe_client/thingsboard_client.dart';
 
-// ThingsBoard REST API URL
+// IoT Hub REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
+    // Create instance of IoT Hub API Client
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
@@ -208,13 +208,13 @@ The following sample code shows how to fetch entity groups.
 ```dart
 import 'package:thingsboard_pe_client/thingsboard_client.dart';
 
-// ThingsBoard REST API URL
+// IoT Hub REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
+    // Create instance of IoT Hub API Client
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
@@ -253,13 +253,13 @@ The following sample code shows how to use Entity Data Query API to count total 
 ```dart
 import 'package:thingsboard_pe_client/thingsboard_client.dart';
 
-// ThingsBoard REST API URL
+// IoT Hub REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
+    // Create instance of IoT Hub API Client
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
@@ -321,13 +321,13 @@ The following sample code shows how to use Entity Data Query API to get all acti
 ```dart
 import 'package:thingsboard_pe_client/thingsboard_client.dart';
 
-// ThingsBoard REST API URL
+// IoT Hub REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
+    // Create instance of IoT Hub API Client
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
@@ -400,13 +400,13 @@ The following sample code demonstrates basic concepts of device management API (
 ```dart
 import 'package:thingsboard_pe_client/thingsboard_client.dart';
 
-// ThingsBoard REST API URL
+// IoT Hub REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
+    // Create instance of IoT Hub API Client
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
@@ -465,13 +465,13 @@ import 'dart:math';
 
 import 'package:thingsboard_pe_client/thingsboard_client.dart';
 
-// ThingsBoard REST API URL
+// IoT Hub REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
+    // Create instance of IoT Hub API Client
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials

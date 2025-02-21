@@ -517,7 +517,7 @@
 		<tr>
 			<td>ui.solution_templates.docs_base_url</td>
 			<td>UI_SOLUTION_TEMPLATES_DOCS_BASE_URL</td>
-			<td>https://thingsboard.io/docs/pe</td>
+			<td>/docs/pe</td>
 			<td> Base URL for solution templates docs</td>
 		</tr>
 	</tbody>
@@ -543,13 +543,13 @@
 			<td>database.ts.type</td>
 			<td>DATABASE_TS_TYPE</td>
 			<td>sql</td>
-			<td> cassandra or sql. timescale option is deprecated and will no longer be supported in ThingsBoard 4.0</td>
+			<td> cassandra or sql. timescale option is deprecated and will no longer be supported in IoT Hub 4.0</td>
 		</tr>
 		<tr>
 			<td>database.ts_latest.type</td>
 			<td>DATABASE_TS_LATEST_TYPE</td>
 			<td>sql</td>
-			<td> cassandra or sql. timescale option is deprecated and will no longer be supported in ThingsBoard 4.0</td>
+			<td> cassandra or sql. timescale option is deprecated and will no longer be supported in IoT Hub 4.0</td>
 		</tr>
 	</tbody>
 </table>

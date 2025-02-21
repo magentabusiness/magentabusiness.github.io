@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-ThingsBoard provides the ability to run CoAP server over DTLS. Both one-way and two-way DTLS are supported.
+IoT Hub provides the ability to run CoAP server over DTLS. Both one-way and two-way DTLS are supported.
 DTLS provisioning requires valid [ECDSA](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) certificates. 
 ECDSA keys are smaller than RSA keys and thus more preferable for constrained devices. 
 See comparison [article](https://sectigostore.com/blog/ecdsa-vs-rsa-everything-you-need-to-know/) for more details.
@@ -35,7 +35,7 @@ where:
 * COAP_DTLS_PEM_KEY - Path to the server certificate private key file. Optional by default. Required if the private key is not present in server certificate file;
 * COAP_DTLS_PEM_KEY_PASSWORD - Optional server certificate private key password.
 
-After completing the setup, start or restart the ThingsBoard server.
+After completing the setup, start or restart the IoT Hub server.
 
 {% include templates/ssl/pem_files_location.md %}
 

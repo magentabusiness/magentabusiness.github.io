@@ -50,7 +50,7 @@ Where
 If you use live demo server, the command will look like this:
 
 ```shell
-https://demo.thingsboard.io/api/v1/$ACCESS_TOKEN/telemetry
+https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/telemetry
 ```
 {: .copy-code}
 
@@ -93,7 +93,7 @@ For example, the value '1451649600512' corresponds to 'Fri, 01 Jan 2016 12:00:00
 Below are the examples of commands for publishing different types of telemetry data.
 
 {% if docsPrefix == null %}
-Don't forget to replace <code>demo.thingsboard.io</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token. In this example, the hostname references live demo server.
+Don't forget to replace <code>iothub.magenta.at</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token. In this example, the hostname references live demo server.
 {% endif %}
 {% if docsPrefix == "pe/" %}
 Don't forget to replace <code>host</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token. In this example, the hostname references your local installation.
@@ -111,7 +111,7 @@ Execute the command:
 
 {% if docsPrefix == null %}
 ```shell
-curl -v -X POST --data "{"temperature":42,"humidity":73}" https://demo.thingsboard.io/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
+curl -v -X POST --data "{"temperature":42,"humidity":73}" https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
 ```
 {: .copy-code}
 {% endif %}
@@ -146,7 +146,7 @@ Execute the command:
 
 {% if docsPrefix == null %}
 ```shell
-curl -v -X POST -d @telemetry-data-as-object.json https://demo.thingsboard.io/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
+curl -v -X POST -d @telemetry-data-as-object.json https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
 ```
 {: .copy-code}
 {% endif %}
@@ -191,7 +191,7 @@ Execute the command:
 
 {% if docsPrefix == null %}
 ```shell
-curl -v -X POST -d @telemetry-data-as-array.json https://demo.thingsboard.io/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
+curl -v -X POST -d @telemetry-data-as-array.json https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
 ```
 {: .copy-code}
 {% endif %}
@@ -226,7 +226,7 @@ Execute the command:
 
 {% if docsPrefix == null %}
 ```shell
-curl -v -X POST -d @telemetry-data-with-ts.json https://demo.thingsboard.io/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
+curl -v -X POST -d @telemetry-data-with-ts.json https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
 ```
 {: .copy-code}
 {% endif %}
@@ -296,7 +296,7 @@ Where
 If you use live demo server, the command will look like this:
 
 ```shell
-https://demo.thingsboard.io/api/v1/$ACCESS_TOKEN/attributes
+https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/attributes
 ```
 {: .copy-code}
 
@@ -315,7 +315,7 @@ Where **$ACCESS_TOKEN** - device access token.
 Below are the examples of commands for publishing different types of telemetry data.
 
 {% if docsPrefix == null %}
-Don't forget to replace <code>demo.thingsboard.io</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token. In this example, the hostname references live demo server.
+Don't forget to replace <code>iothub.magenta.at</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token. In this example, the hostname references live demo server.
 {% endif %}
 {% if docsPrefix == "pe/" %}
 Don't forget to replace <code>host</code> with your host and port and <code>$ACCESS_TOKEN</code> with your device's access token.
@@ -331,7 +331,7 @@ Don't forget to replace <code>$THINGSBOARD_EDGE_HOST_NAME</code> with your host 
 
 {% if docsPrefix == null %}
 ```shell
-curl -v -X POST --data "{"attribute1": "value1", "attribute2":true, "attribute3": 43.0}" https://demo.thingsboard.io/api/v1/$ACCESS_TOKEN/attributes --header "Content-Type:application/json"
+curl -v -X POST --data "{"attribute1": "value1", "attribute2":true, "attribute3": 43.0}" https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/attributes --header "Content-Type:application/json"
 ```
 {: .copy-code}
 {% endif %}
@@ -359,7 +359,7 @@ curl -v -X POST --data "{"attribute1": "value1", "attribute2":true, "attribute3"
 
 {% if docsPrefix == null %}
 ```shell
-curl -v -X POST -d @new-attributes-values.json https://demo.thingsboard.io/api/v1/$ACCESS_TOKEN/attributes --header "Content-Type:application/json"
+curl -v -X POST -d @new-attributes-values.json https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/attributes --header "Content-Type:application/json"
 ```
 {: .copy-code}
 {% endif %}
@@ -417,7 +417,7 @@ Where
 If you use live demo server, the command will look like this:
 
 ```shell
-https://demo.thingsboard.io/api/v1/$ACCESS_TOKEN/attributes?clientKeys=attribute1,attribute2&sharedKeys=shared1,shared2
+https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/attributes?clientKeys=attribute1,attribute2&sharedKeys=shared1,shared2
 ```
 {: .copy-code}
 
@@ -433,7 +433,7 @@ Where **$ACCESS_TOKEN** - device access token.
 {% endif %}
 
 {% if docsPrefix == null %}
-Execute the command. Don't forget to replace <code>demo.thingsboard.io</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token. In this example, the hostname references live demo server.
+Execute the command. Don't forget to replace <code>iothub.magenta.at</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token. In this example, the hostname references live demo server.
 {% endif %}
 {% if docsPrefix == "pe/" %}
 Execute the command. Don't forget to replace <code>host</code> with your host and port and <code>$ACCESS_TOKEN</code> with your device's access token.
@@ -447,7 +447,7 @@ Execute the command. Don't forget to replace <code>$THINGSBOARD_EDGE_HOST_NAME</
 
 {% if docsPrefix == null %}
 ```shell
-curl -v -X GET "https://demo.thingsboard.io/api/v1/$ACCESS_TOKEN/attributes?clientKeys=attribute1,attribute2&sharedKeys=shared1,shared2"
+curl -v -X GET "https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/attributes?clientKeys=attribute1,attribute2&sharedKeys=shared1,shared2"
 ```
 {: .copy-code}
 {% endif %}
@@ -501,7 +501,7 @@ Where
 If you use live demo server, the command will look like this:
 
 ```shell
-https://demo.thingsboard.io/api/v1/$ACCESS_TOKEN/attributes/updates
+https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/attributes/updates
 ```
 {: .copy-code}
 
@@ -520,7 +520,7 @@ Where **$ACCESS_TOKEN** - device access token.
 Once shared attribute will be changed by one of the server-side components (REST API or Rule Chain) the client will receive the following update: 
 
 {% if docsPrefix == null %}
-Execute the command. Don't forget to replace <code>demo.thingsboard.io</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token. In this example, the hostname references live demo server.
+Execute the command. Don't forget to replace <code>iothub.magenta.at</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token. In this example, the hostname references live demo server.
 {% endif %}
 {% if docsPrefix == "pe/" %}
 Execute the command. Don't forget to replace <code>host</code> with your host and port and <code>$ACCESS_TOKEN</code> with your device's access token.
@@ -534,7 +534,7 @@ Execute the command. Don't forget to replace <code>$THINGSBOARD_EDGE_HOST_NAME</
 
 {% if docsPrefix == null %}
 ```shell
-curl -v -X GET https://demo.thingsboard.io/api/v1/$ACCESS_TOKEN/attributes/updates?timeout=20000
+curl -v -X GET https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/attributes/updates?timeout=20000
 ```
 {: .copy-code}
 {% endif %}
@@ -586,7 +586,7 @@ Where
 If you use live demo server, the command will look like this:
 
 ```shell
-https://demo.thingsboard.io/api/v1/$ACCESS_TOKEN/rpc
+https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/rpc
 ```
 {: .copy-code}
 
@@ -635,7 +635,7 @@ http(s)://host/api/v1/$ACCESS_TOKEN/rpc/{$id}
 If you use live demo server, the command will look like this:
 
 ```shell
-https://demo.thingsboard.io/api/v1/$ACCESS_TOKEN/rpc/{$id}
+https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/rpc/{$id}
 ```
 {: .copy-code}
 
@@ -655,7 +655,7 @@ Where
 <br>
 **Let's look at an example**:
 
-- Use **RPC debug terminal** widget in your ThingsBoard instance;
+- Use **RPC debug terminal** widget in your IoT Hub instance;
 
 {% if docsPrefix == null or docsPrefix == "pe/" %}
 - Subscribe to RPC commands from the server using the command below. To do this, in the first terminal window send GET request with observe flag. Don't forget to replace <code>host</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token:
@@ -733,7 +733,7 @@ Where
 If you use live demo server, the command will look like this:
 
 ```shell
-https://demo.thingsboard.io/api/v1/$ACCESS_TOKEN/rpc
+https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/rpc
 ```
 {: .copy-code}
 
@@ -818,7 +818,7 @@ Where
 If you use live demo server, the command will look like this:
 
 ```shell
-https://demo.thingsboard.io/api/v1/$ACCESS_TOKEN/claim
+https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/claim
 ```
 {: .copy-code}
 
@@ -866,7 +866,7 @@ Where **host** - the hostname or IP address your platform is running on;
 If you use live demo server, the command will look like this:
 
 ```shell
-https://demo.thingsboard.io/api/v1/provision
+https://iothub.magenta.at/api/v1/provision
 ```
 {: .copy-code}
 
@@ -910,7 +910,7 @@ Where
 If you use live demo server, the command will look like this:
 
 ```shell
-https://demo.thingsboard.io/api/v1/$ACCESS_TOKEN/firmware?title=$TITLE&version=$VERSION
+https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/firmware?title=$TITLE&version=$VERSION
 ```
 {: .copy-code}
 

@@ -3,12 +3,12 @@ layout: docwithnav
 assignees:
 - ashvayka
 title: Two-factor authentication
-description: Two-factor authentication using ThingsBoard
+description: Two-factor authentication using IoT Hub
 
 two-factor-authentication-password-and-authentication:
     0:
         image: /images/user-guide/two-factor-authentication/two-factor-authentication-password-and-authentication-1-ce.png
-        title: 'Log in to ThingsBoard with basic credentials. In the upper right corner, click on the three dots icon. In the dropdown menu, proceed with "Account";'
+        title: 'Log in to IoT Hub with basic credentials. In the upper right corner, click on the three dots icon. In the dropdown menu, proceed with "Account";'
     1:
         image: /images/user-guide/two-factor-authentication/two-factor-authentication-password-and-authentication-2-ce.png
         title: 'Navigate to the "Security" tab. Activate the convenient verification method. One can activate multiple providers. Save changes.'

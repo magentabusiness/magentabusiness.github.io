@@ -34,7 +34,7 @@ To add new client credentials, please follow these steps:
 2. Fill in the Name field (which does not need to be unique).
 3. Select the appropriate _Client Type_:
    - **Device**. Use for clients that usually publish a lot of messages, but subscribe to a few topics with low message rate, i.e. IoT devices.
-   - **Applications**. Use for clients that subscribe to topics with high message rates and require message persistence when the client is offline, such as applications like **ThingsBoard, AWS IoT Core** etc.
+   - **Applications**. Use for clients that subscribe to topics with high message rates and require message persistence when the client is offline, such as applications like **IoT Hub, AWS IoT Core** etc.
    
    For more information on client types, please refer to the [docs](/docs/mqtt-broker/user-guide/mqtt-client-type/).
 

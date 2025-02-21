@@ -3,7 +3,7 @@ layout: docwithnav
 assignees:
 - ashvayka
 title: Slack Settings
-description: ThingsBoard IoT platform Slack settings
+description: IoT Hub IoT platform Slack settings
 slackProviderSettings:
     0:
         image: /images/user-guide/ui/slack/create-slack-api-token-1.png
@@ -36,12 +36,12 @@ slackProviderSettings:
 thingsboardSystemAdminSettings:
     0:
         image: /images/user-guide/ui/slack/add-slack-api-token-sysadmin-1-ce.png
-        title: 'Login to your ThingsBoard UI as a system administrator. Navigate to "Settings" page, "Notification" tab. In "Slack settings" window paste copied Slack API token to "Slack api token" row and click "Save".'
+        title: 'Login to your IoT Hub UI as a system administrator. Navigate to "Settings" page, "Notification" tab. In "Slack settings" window paste copied Slack API token to "Slack api token" row and click "Save".'
 
 thingsboardTenantAdminSettings:
     0:
         image: /images/user-guide/ui/slack/add-slack-api-token-tenant-admin-1-ce.png
-        title: 'Login to your ThingsBoard UI as a tenant administrator. Navigate to "Settings" page, "Notification" tab. In "Slack settings" window paste copied Slack API token to "Slack api token" row and click "Save".'
+        title: 'Login to your IoT Hub UI as a tenant administrator. Navigate to "Settings" page, "Notification" tab. In "Slack settings" window paste copied Slack API token to "Slack api token" row and click "Save".'
 
 
 ---

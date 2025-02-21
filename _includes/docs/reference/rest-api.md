@@ -5,14 +5,14 @@
 ## Interactive Documentation
 
 {% if docsPrefix contains "paas/" or docsPrefix == "pe/"  %}
-ThingsBoard REST API interactive documentation is available via Swagger UI. For example, you may browse ThingsBoard Cloud API documentation using the **[Swagger UI link](https://{{hostName}}/swagger-ui.html)**.
+IoT Hub REST API interactive documentation is available via Swagger UI. For example, you may browse IoT Hub Cloud API documentation using the **[Swagger UI link](https://{{hostName}}/swagger-ui.html)**.
 {% else %}
-ThingsBoard REST API interactive documentation is available via Swagger UI. For example, you may browse Community Edition demo server API documentation using the **[Swagger UI link](https://demo.thingsboard.io/swagger-ui.html)**.
+IoT Hub REST API interactive documentation is available via Swagger UI. For example, you may browse Community Edition demo server API documentation using the **[Swagger UI link](https://iothub.magenta.at/swagger-ui.html)**.
 {% endif %}
 
 {% if docsPrefix contains "paas/" %}
 {% else %}
-Once you will install ThingsBoard server you can open an interactive documentation using the following URL:
+Once you will install IoT Hub server you can open an interactive documentation using the following URL:
 
 ``` 
 http://YOUR_HOST:PORT/swagger-ui.html
@@ -27,7 +27,7 @@ You may use “Authorize” button in the top right corner of the documentation 
 
 {% if docsPrefix == "pe/" or docsPrefix contains "paas/" %}
 
-The easiest way to get your account is to use [ThingsBoard Cloud](https://{{hostName}}/signup) server.
+The easiest way to get your account is to use [IoT Hub Cloud](https://{{hostName}}/signup) server.
 
 {% else %}
 
@@ -37,7 +37,7 @@ See **[live-demo](/docs/{{docsPrefix}}user-guide/live-demo/)** page for more det
 
 ## JWT Tokens
 
-ThingsBoard uses [JWT](https://jwt.io/) tokens for representing claims securely between the API client (browser, scripts, etc) and the platform.
+IoT Hub uses [JWT](https://jwt.io/) tokens for representing claims securely between the API client (browser, scripts, etc) and the platform.
 When you login to the platform, your username and password is exchanged to the pair of tokens.
 
 
@@ -65,10 +65,10 @@ B,response.json,json,resources/get-token-response.json,/docs/reference/resources
 
 ## Java REST API Client
 
-ThingsBoard team provides client library written in Java to simplify consumption of the REST API.
+IoT Hub team provides client library written in Java to simplify consumption of the REST API.
 Please see Java REST API Client [documentation page](/docs/{{docsPrefix}}reference/rest-client/) for more details.
 
 ## Python REST API Client
 
-ThingsBoard team provides client library written in Python to simplify consumption of the REST API.
+IoT Hub team provides client library written in Python to simplify consumption of the REST API.
 Please see Python REST API Client [documentation page](/docs/{{docsPrefix}}reference/python-rest-client/) for more details.

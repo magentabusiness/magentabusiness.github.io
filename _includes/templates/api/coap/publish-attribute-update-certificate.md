@@ -14,7 +14,7 @@ Where **$THINGSBOARD_HOST_NAME** is your localhost, or the platform address.
 If you use live demo server, the command will look like this:
 
 ```shell
-coap://demo.thingsboard.io/api/v1/attributes
+coap://iothub.magenta.at/api/v1/attributes
 ```
 {: .copy-code}
 

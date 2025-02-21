@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - ashvayka
 title: Monolith setup using AWS infrastructure
-description: ThingsBoard IoT platform monolith setup with Kubernetes in AWS EKS
+description: IoT Hub IoT platform monolith setup with Kubernetes in AWS EKS
 
 rdsSetup:
     0:
@@ -17,7 +17,7 @@ rdsSetup:
         title: 'Use "Provisioned IOPS" for better performance.'
     3:
         image: /images/install/cloud/aws/rds-4.png
-        title: 'Make sure your PostgreSQL RDS instance is accessible from the ThingsBoard cluster; The easiest way to achieve this is to deploy the PostgreSQL RDS instance in the same VPC and use "eksctl-thingsboard-cluster-ClusterSharedNodeSecurityGroup-*" security group.'
+        title: 'Make sure your PostgreSQL RDS instance is accessible from the IoT Hub cluster; The easiest way to achieve this is to deploy the PostgreSQL RDS instance in the same VPC and use "eksctl-thingsboard-cluster-ClusterSharedNodeSecurityGroup-*" security group.'
     4:
         image: /images/install/cloud/aws/rds-5.png
         title: 'Make sure you use "thingsboard" as initial database name.'
@@ -36,18 +36,18 @@ rdsEndpointUrl:
 
 {% assign tbServicesFile = "tb-node.yml" %}
 
-This guide will help you to set up ThingsBoard in monolith mode in AWS EKS. 
+This guide will help you to set up IoT Hub in monolith mode in AWS EKS. 
 
 ## Prerequisites
 
 {% include templates/install/aws/eks-prerequisites.md %}
 
-### Pull ThingsBoard PE images from docker hub
+### Pull IoT Hub images from docker hub
 
 {% assign checkoutMode = "monolith" %}
 {% include templates/install/dockerhub/checkout.md %}
 
-## Step 1. Clone ThingsBoard PE K8S scripts repository
+## Step 1. Clone IoT Hub K8S scripts repository
 
 ```bash
 git clone -b release- {{site.release.ver}} https://github.com/thingsboard/thingsboard-pe-k8s.git --depth 1

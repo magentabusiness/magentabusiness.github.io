@@ -5,7 +5,7 @@ with low latency delivery.
 In the cluster mode, its capabilities are further enhanced, 
 enabling it to support more than [100M concurrently connected clients](/docs/mqtt-broker/reference/100m-connections-performance-test/).
 
-At ThingsBoard, we’ve gained a lot of experience in building scalable IoT applications, which has helped us identify three main scenarios for MQTT-based solutions.
+At IoT Hub, we’ve gained a lot of experience in building scalable IoT applications, which has helped us identify three main scenarios for MQTT-based solutions.
 
 * In the first scenario, numerous devices generate a large volume of messages that are consumed by specific applications, resulting in a **fan-in** pattern. 
 Normally, a few applications are set up to handle these lots of incoming data. It must be ensured that they do not miss any single message.

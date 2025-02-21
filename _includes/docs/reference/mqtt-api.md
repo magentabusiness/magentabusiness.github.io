@@ -23,7 +23,7 @@ The application needs to send MQTT CONNECT message with username that contains *
 
 Possible return codes, and their reasons during the connect sequence:
 
-* **0x00 Connected** - Successfully connected to ThingsBoard MQTT server.
+* **0x00 Connected** - Successfully connected to IoT Hub MQTT server.
 * **0x04 Connection Refused, bad username or password** - Username is empty.
 * **0x05 Connection Refused, not authorized** - Username contains invalid **$ACCESS_TOKEN**.
 
@@ -198,7 +198,7 @@ v1/devices/me/attributes
 Below are the examples of how to publish client-side device attributes.
 
 {% if docsPrefix == null %}
-Don't forget to replace <code>demo.thingsboard.io</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token. In this example, the hostname references live demo server.
+Don't forget to replace <code>iothub.magenta.at</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token. In this example, the hostname references live demo server.
 {% endif %}
 {% if docsPrefix == "pe/" %}
 Don't forget to replace <code>$THINGSBOARD_HOST_NAME</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token.
@@ -271,7 +271,7 @@ The following example is written in javascript and is based on mqtt.js.
 Pure command-line examples are not available because subscribe and publish need to happen in the same mqtt session.
 
 {% if docsPrefix == null %}
-Save the "[mqtt-js-attributes-request.js](/docs/reference/resources/mqtt-js-attributes-request.js)" file to your PC. Don't forget to replace the hostname "<code>demo.thingsboard.io</code>" to your host. In this example, the hostname references live demo server.
+Save the "[mqtt-js-attributes-request.js](/docs/reference/resources/mqtt-js-attributes-request.js)" file to your PC. Don't forget to replace the hostname "<code>iothub.magenta.at</code>" to your host. In this example, the hostname references live demo server.
 {% endif %}
 {% if docsPrefix == "pe/" %}
 Save the "[mqtt-js-attributes-request.js](/docs/pe/reference/resources/mqtt-js-attributes-request.js)" file to your PC. Don't forget to replace the hostname "<code>127.0.0.1</code>" to your host. In this example, the hostname reference your local installation.
@@ -323,7 +323,7 @@ When a shared attribute is changed by one of the server-side components (such as
 ```
 
 {% if docsPrefix == null %}
-For the following example, don't forget to replace <code>demo.thingsboard.io</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token. In this example, the hostname references live demo server.
+For the following example, don't forget to replace <code>iothub.magenta.at</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token. In this example, the hostname references live demo server.
 {% endif %}
 {% if docsPrefix == "pe/" %}
 For the following example, don't forget to replace <code>$THINGSBOARD_HOST_NAME</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token.
@@ -375,7 +375,7 @@ The following example is written in javascript and is based on mqtt.js.
 Pure command-line examples are not available because subscribe and publish need to happen in the same mqtt session.
 
 {% if docsPrefix == null %}
-Save the "[mqtt-js-rpc-from-server.js](/docs/reference/resources/mqtt-js-rpc-from-server.js)" file to your PC. Don't forget to replace the hostname "<code>demo.thingsboard.io</code>" with your host.
+Save the "[mqtt-js-rpc-from-server.js](/docs/reference/resources/mqtt-js-rpc-from-server.js)" file to your PC. Don't forget to replace the hostname "<code>iothub.magenta.at</code>" with your host.
 In this example, the hostname references live demo server.
 {% endif %}
 {% if docsPrefix == "pe/" %}
@@ -396,7 +396,7 @@ A,The content of the "mqtt-js-rpc-from-server.js" file,javascript,resources/mqtt
 
 Now, follow these steps:
 
-- Use **RPC debug terminal** widget in your ThingsBoard instance;
+- Use **RPC debug terminal** widget in your IoT Hub instance;
 - Execute the command to subscribe to RPC commands from the server using the command below. Don't forget to replace <code>$ACCESS_TOKEN</code> with your device's access token.
 
 ```shell
@@ -410,7 +410,7 @@ node mqtt-js-rpc-from-server.js
 
 {% include images-gallery.html imageCollection="server-side-rpc" %}
 
-In case your MQTT device is a gateway, ThingsBoard will send a server-side RPC (notification) about changes on provisioned device entities.  
+In case your MQTT device is a gateway, IoT Hub will send a server-side RPC (notification) about changes on provisioned device entities.  
 Your MQTT gateway device will receive a service RPC about removal or renaming of device to [properly resolve such events](/docs/iot-gateway/how-device-removing-renaming-works/). 
 
 ### Client-side RPC
@@ -433,7 +433,7 @@ The following example is written in javascript and is based on mqtt.js.
 Pure command-line examples are not available because subscribe and publish need to happen in the same mqtt session.
 
 {% if docsPrefix == null %}
-Save the "[mqtt-js-rpc-from-client.js](/docs/reference/resources/mqtt-js-rpc-from-client.js)" file to your PC. Don't forget to replace the hostname "<code>demo.thingsboard.io</code>" to your host.
+Save the "[mqtt-js-rpc-from-client.js](/docs/reference/resources/mqtt-js-rpc-from-client.js)" file to your PC. Don't forget to replace the hostname "<code>iothub.magenta.at</code>" to your host.
 In this example, the hostname references live demo server.
 {% endif %}
 {% if docsPrefix == "pe/" %}
@@ -479,7 +479,7 @@ node mqtt-js-rpc-from-client.js
 The **getSessionLimits** RPC method is designed to help device manufacturers and developers understand the limits that used by the MQTT transport.
 Understanding these limits ensures that devices operate within the defined parameters, preventing issues like message rejection or connection loss.
 
-A typical RPC to retrieve session limits from the ThingsBoard server looks like this:
+A typical RPC to retrieve session limits from the IoT Hub server looks like this:
 ```json
 {
   "method": "getSessionLimits",

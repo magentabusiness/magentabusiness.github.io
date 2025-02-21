@@ -5,7 +5,7 @@
 
 ## Overview
 
-Tuya is a cloud platform that connects a range of devices via the IoT. After integrating Tuya with the ThingsBoard, you can connect, manage, communicate, process and visualize data from your devices in the ThingsBoard IoT platform.
+Tuya is a cloud platform that connects a range of devices via the IoT. After integrating Tuya with the IoT Hub, you can connect, manage, communicate, process and visualize data from your devices in the IoT Hub IoT platform.
 
 ## Tuya Integration Tutorial
 
@@ -50,7 +50,7 @@ Make sure you enabled Messaging rule (filter) to receive uplinks. The very basic
 
 ### Uplink Converter
 
-Before setting up a **Tuya integration**, you need to create an **Uplink Converter** which is a script for parsing and transforming the data received by Tuya integration to a format that ThingsBoard can consume.
+Before setting up a **Tuya integration**, you need to create an **Uplink Converter** which is a script for parsing and transforming the data received by Tuya integration to a format that IoT Hub can consume.
 
 To create an **Uplink Converter**, go to the **Data Converters** section and click **Add new data converter —> Create new converter**, name it **"Tuya Uplink Converter"** and select type **Uplink**. Use debug mode for now.
 
@@ -111,7 +111,7 @@ In the last step, fill in the following fields:
 
 - **Region** - specify your region;
 
-- **Environment:** choose **PROD** or **TEST**. Choose **PROD** for real devices. Select **TEST** if you want to connect a [**virtual device**](https://developer.tuya.com/en/docs/iot/manage-virtual-devices?id=Ka4725tiyfhg0) to Thingsboard and test its operation before you buy it.
+- **Environment:** choose **PROD** or **TEST**. Choose **PROD** for real devices. Select **TEST** if you want to connect a [**virtual device**](https://developer.tuya.com/en/docs/iot/manage-virtual-devices?id=Ka4725tiyfhg0) to IoT Hub and test its operation before you buy it.
 
 - **Access Id** and **Access Key** is an authorization certificate distributed by Tuya. Paste previously copied **Access Id** and **Access Key** into the integration. 
 
@@ -146,7 +146,7 @@ After these steps, we need to tap on a right grey circle of rule node **message 
 
 ### Uplink message
 
-Once ThingsBoard **Tuya Integration** has been created, you must disconnect Smart Plug from power and reconnect. The device will send an uplink message with telemetry and attributes to the integration
+Once IoT Hub **Tuya Integration** has been created, you must disconnect Smart Plug from power and reconnect. The device will send an uplink message with telemetry and attributes to the integration
 
 Go to **Device Groups** -> **All** you should find your device  provisioned by the Integration. In my case it is - **SmartPlug268970**.
 

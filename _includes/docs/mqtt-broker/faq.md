@@ -4,7 +4,7 @@
 
 ### What is TBMQ?
 
-TBMQ represents an open-source software product developed by ThingsBoard, designed to facilitate communication between MQTT clients. 
+TBMQ represents an open-source software product developed by IoT Hub, designed to facilitate communication between MQTT clients. 
 This particular product is freely available for both personal and commercial purposes, with the added flexibility of being deployable in any desired location. 
 For individuals new to utilizing the broker, we suggest consulting the comprehensive resources, namely the
 [what-is-tbmq](/docs/mqtt-broker/getting-started-guides/what-is-thingsboard-mqtt-broker/) and the

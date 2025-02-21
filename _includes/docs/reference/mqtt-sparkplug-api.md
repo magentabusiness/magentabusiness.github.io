@@ -5,14 +5,14 @@
 ## Prerequisites
 
 We assume you have completed the general [Getting Started](/docs/{{docsPrefix}}getting-started-guides/helloworld/) guide
-to get familiar with ThingsBoard. We also recommend to review the [Device Profiles](/docs/{{docsPrefix}}user-guide/device-profiles/) documentation first.
+to get familiar with IoT Hub. We also recommend to review the [Device Profiles](/docs/{{docsPrefix}}user-guide/device-profiles/) documentation first.
 
 ## Sparkplug basics
 
 [Sparkplug](https://sparkplug.eclipse.org/) is an open-source software specification that provides MQTT clients the framework 
 to seamlessly integrate data from their applications, sensors, devices, and gateways within the MQTT Infrastructure.
 
-ThingsBoard acts as an MQTT Server which support the SparkPlug payload and topic structure and allows connections from the 
+IoT Hub acts as an MQTT Server which support the SparkPlug payload and topic structure and allows connections from the 
 MQTT Edge of Network (EoN) Node.
 
 The EoN Node is any V3.1.1 compliant MQTT Client application that manages an MQTT Session and provides the physical and/or 
@@ -22,7 +22,7 @@ logical gateway functions. The EoN node is responsible for any local protocol in
 The protocol [specification](https://sparkplug.eclipse.org/specification/version/2.2/documents/sparkplug-specification-2.2.pdf) 
 defines both MQTT topic and message structure for the EoN Nodes to communicate with the MQTT Server.
 Single EoN Node may represent multiple physical devices and sensors and upload device metrics for each of those devices.
-ThingsBoard decodes the device metrics from the Sparkplug payload and stores it as a corresponding device 
+IoT Hub decodes the device metrics from the Sparkplug payload and stores it as a corresponding device 
 [attributes](/docs/{{docsPrefix}}user-guide/attributes/) or [time series](/docs/{{docsPrefix}}user-guide/telemetry/) data. 
 You may also issue an update to the Sparkplug device using 
 [shared attributes update](#update-metrics-from-shared-attributes-to-mqtt-eondevice) or 
@@ -31,14 +31,14 @@ You may also issue an update to the Sparkplug device using
 {% capture difference %}
 **NOTE:**
 <br>
-ThingsBoard supports **Sparkplug™ B** payloads only.
+IoT Hub supports **Sparkplug™ B** payloads only.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
 ## Getting started
 
-This guide will teach us how to: connect Sparkplug EoN node to ThingsBoard,
-collect device metrics and store them as ThingsBoard time series data,
+This guide will teach us how to: connect Sparkplug EoN node to IoT Hub,
+collect device metrics and store them as IoT Hub time series data,
 and push commands back to devices.
 
 ### Step 1. Create device profile
@@ -112,13 +112,13 @@ Additionally, a separate device profile is created for the two new devices with 
 
 {% include images-gallery.html imageCollection="sparkplug-create-two-devices" %}
 
-### Step 5. Push updates to Sparkplug metrics from Thingsboard server to MQTT EON and Device
+### Step 5. Push updates to Sparkplug metrics from IoT Hub server to MQTT EON and Device
 
-You may push update to Sparkplug node/device metric from ThingsBoard via shared attribute update or RPC command. 
+You may push update to Sparkplug node/device metric from IoT Hub via shared attribute update or RPC command. 
 
 #### Update Metrics using shared attributes
 
-ThingsBoard [Shared Attributes](/docs/{{docsPrefix}}user-guide/attributes/#shared-attributes) are used to deliver metric value updates to the device.
+IoT Hub [Shared Attributes](/docs/{{docsPrefix}}user-guide/attributes/#shared-attributes) are used to deliver metric value updates to the device.
 You may change the shared attribute in multiple ways - via administration UI, dashboard widget, REST API, or rule engine node.
 
 <br>
@@ -165,9 +165,9 @@ The attribute values for "*Outputs/LEDs/Green*" and "*Device Control/Scan Rate*"
 
 {% include images-gallery.html imageCollection="sparkplug-update-metrics-using-shared-attributes-5" %}
 
-#### Update Metrics  using the ThingsBoard RPC command from server to MQTT EON/Device
+#### Update Metrics  using the IoT Hub RPC command from server to MQTT EON/Device
 
-ThingsBoard supports on-demand update to metrics of the Sparkplug EoN Node or Device using RPC(Remote Procedure Call) feature. We also use term "command" instead of RPC for simplicity.
+IoT Hub supports on-demand update to metrics of the Sparkplug EoN Node or Device using RPC(Remote Procedure Call) feature. We also use term "command" instead of RPC for simplicity.
 You can send the command using REST API, dashboard widget, rule engine, or custom script.
 See the structure of the command is documented [here](/docs/{{docsPrefix}}user-guide/rpc/#server-side-rpc).
 

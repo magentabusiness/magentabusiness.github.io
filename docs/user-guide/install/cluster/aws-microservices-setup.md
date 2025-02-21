@@ -3,7 +3,7 @@ layout: docwithnav
 assignees:
 - ashvayka
 title: Microservices setup using AWS EKS
-description: ThingsBoard IoT platform microservices setup with Kubernetes in AWS EKS
+description: IoT Hub IoT platform microservices setup with Kubernetes in AWS EKS
 
 rdsSetup:
     0:
@@ -17,7 +17,7 @@ rdsSetup:
         title: 'Use "Provisioned IOPS" for better performance.'
     3:
         image: /images/install/cloud/aws/rds-4.png
-        title: 'Make sure your PostgreSQL RDS instance is accessible from the ThingsBoard cluster; The easiest way to achieve this is to deploy the PostgreSQL RDS instance in the same VPC and use "eksctl-thingsboard-cluster-ClusterSharedNodeSecurityGroup-*" security group.'
+        title: 'Make sure your PostgreSQL RDS instance is accessible from the IoT Hub cluster; The easiest way to achieve this is to deploy the PostgreSQL RDS instance in the same VPC and use "eksctl-thingsboard-cluster-ClusterSharedNodeSecurityGroup-*" security group.'
     4:
         image: /images/install/cloud/aws/rds-5.png
         title: 'Make sure you use "thingsboard" as initial database name.'
@@ -36,7 +36,7 @@ mskSetup:
         title: 'Make sure your Apache Kafka version is 3.7.x.'
     1:
         image: /images/install/cloud/aws/msk-2.png
-        title: 'Make sure your MSK instance is accessible from the ThingsBoard cluster. The easiest way to achieve this is to deploy the MSK instance in the same VPC. We also recommend to use private subnets. This way it will be nearly impossible to accidentally expose it to the internet.'
+        title: 'Make sure your MSK instance is accessible from the IoT Hub cluster. The easiest way to achieve this is to deploy the MSK instance in the same VPC. We also recommend to use private subnets. This way it will be nearly impossible to accidentally expose it to the internet.'
     2:
         image: /images/install/cloud/aws/msk-3.png
         title: 'Use m5.large or similar instance types.'
@@ -61,7 +61,7 @@ redisSetup:
         title: 'Specify Redis Engine version 7.x and node type with at least 1 GB of RAM.'
     1:
         image: /images/install/cloud/aws/redis-single-2.png
-        title: 'Make sure your Redis cluster is accessible from the ThingsBoard cluster. The easiest way to achieve this is to deploy the Redis cluster in the same VPC. We also recommend to use private subnets. Use "eksctl-thingsboard-cluster-ClusterSharedNodeSecurityGroup-*" security group.'
+        title: 'Make sure your Redis cluster is accessible from the IoT Hub cluster. The easiest way to achieve this is to deploy the Redis cluster in the same VPC. We also recommend to use private subnets. Use "eksctl-thingsboard-cluster-ClusterSharedNodeSecurityGroup-*" security group.'
     2:
         image: /images/install/cloud/aws/redis-single-3.png
         title: 'Disable automatic backups.'
@@ -76,7 +76,7 @@ redisEndpointUrl:
 * TOC
 {:toc}
 
-This guide will help you to setup ThingsBoard in microservices mode using AWS EKS. 
+This guide will help you to setup IoT Hub in microservices mode using AWS EKS. 
 See [microservices](/docs/reference/msa/) architecture page for more details about each component that will be installed.
 We will use Amazon RDS for managed PostgreSQL, Amazon MSK for managed Kafka and Amazon ElastiCache for managed Redis.
 
@@ -84,7 +84,7 @@ We will use Amazon RDS for managed PostgreSQL, Amazon MSK for managed Kafka and 
 
 {% include templates/install/aws/eks-prerequisites.md %}
 
-## Step 1. Clone ThingsBoard CE K8S scripts repository
+## Step 1. Clone IoT Hub K8S scripts repository
 
 ```bash
 git clone -b release-{{ site.release.ver }} https://github.com/thingsboard/thingsboard-ce-k8s.git
@@ -140,7 +140,7 @@ Recommended CPU/memory resources allocation:
 
 ## Step 9. Starting
 
-Execute the following command to deploy ThingsBoard services:
+Execute the following command to deploy IoT Hub services:
 
 ```
  ./k8s-deploy-resources.sh

@@ -10,14 +10,14 @@ description: ROLTEK guide
 
 ## Introduction
 
-This article contains instructions on how to configure ThingsBoard IoT platform and connect Roltek DC620 device. 
-[ThingsBoard IoT](https://thingsboard.io/) platform is an open-source IoT platform for data collection, processing, visualization, and device management. 
-It enables device connectivity via industry standard IoT protocols - MQTT, CoAP and HTTP and supports both cloud and on-premises deployments. 
-ThingsBoard combines scalability, fault-tolerance and performance so you will never lose your data.
+This article contains instructions on how to configure IoT Hub IoT platform and connect Roltek DC620 device. 
+[IoT Hub](https://docs.iothub.magenta.at/) platform is an open-source IoT platform for data collection, processing, visualization, and device management. 
+It enables device connectivity via industry standard IoT protocols - MQTT, CoAP and HTTP and supports both cloud and on-premises deployments.
+IoT Hub combines scalability, fault-tolerance and performance so you will never lose your data.
 
-## Create Device On Thingsboard
+## Create Device On IoT Hub
 
-Login to your ThingsBoard platform and ppen "**Devices**" page.
+Login to your IoT Hub platform and ppen "**Devices**" page.
 
 ![image](/images/samples/roltek/tb1.png)
 
@@ -38,7 +38,7 @@ First connect your device to the Internet via WiFi or Ethernet as described in t
 
 On the "**MQTT Settings**" page: 
  - Set "**MQTT Mode**" to **enable**;
- - Enter your Thingsboard Server hostname or IP to "**MQTT Broker URI**";
+ - Enter your IoT Hub Server hostname or IP to "**MQTT Broker URI**";
  - Enter your **Access Token** to "**MQTT Broker Username**";
  - Click **Save** button.
 

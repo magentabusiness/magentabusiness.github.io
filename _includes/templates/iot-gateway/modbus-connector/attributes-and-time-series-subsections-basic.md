@@ -1,4 +1,4 @@
-The configuration in this unit provides settings for processing data on Modbus server. These settings will be interpreted in ThingsBoard platform instance as attributes/time series of the device. For adding new attribute or time series use the following steps:
+The configuration in this unit provides settings for processing data on Modbus server. These settings will be interpreted in IoT Hub platform instance as attributes/time series of the device. For adding new attribute or time series use the following steps:
 
 {% assign attributes = '
     ===

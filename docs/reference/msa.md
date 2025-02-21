@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
-title: ThingsBoard Microservices architecture
-description: ThingsBoard architecture
+title: IoT Hub Microservices architecture
+description: IoT Hub architecture
 
 ---
 

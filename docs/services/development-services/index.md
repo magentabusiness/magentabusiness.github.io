@@ -2,7 +2,7 @@
 layout: development-services
 title: ᐉ Professional IoT Solution Development Services
 notitle: "true"
-description: "Discover ThingsBoard's premier IoT services:  ✔ From widgets to complex systems, ✔ including dashboards, ✔ device connections, and tailored ✔ system integration."
+description: "Discover IoT Hub's premier IoT services:  ✔ From widgets to complex systems, ✔ including dashboards, ✔ device connections, and tailored ✔ system integration."
 
 ---
 
@@ -187,7 +187,7 @@ description: "Discover ThingsBoard's premier IoT services:  ✔ From widgets to 
                         We offer architecture design session for clear vision of your product
                     </div>
                     <div class="section-text">
-                        In case you are facing uncertainty regarding your user story, topology, or system design, the ThingsBoard development team offers an architecture design session. With our one-week architecture session, we assure you that you will receive a comprehensive and detailed document with a well-structured roadmap, including all the necessary steps to deliver a clarified scope of work and successfully implement your idea.
+                        In case you are facing uncertainty regarding your user story, topology, or system design, the IoT Hub development team offers an architecture design session. With our one-week architecture session, we assure you that you will receive a comprehensive and detailed document with a well-structured roadmap, including all the necessary steps to deliver a clarified scope of work and successfully implement your idea.
                     </div>
                 </div>
                 <div class="right-block">
@@ -282,7 +282,7 @@ description: "Discover ThingsBoard's premier IoT services:  ✔ From widgets to 
                         <select class="form-control cdu-form-control" name="subject">
                             <option value="Custom Development" selected>Custom Development</option>
                             <option value="Technical Support">Technical Support</option>
-                            <option value="ThingsBoard Products">ThingsBoard Products</option>
+                            <option value="ThingsBoard Products">IoT Hub Products</option>
                             <option value="Deployment Options">Deployment Options</option>
                             <option value="Training">Training</option>
                             <option value="Professional Services">Professional Services</option>

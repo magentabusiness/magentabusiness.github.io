@@ -18,7 +18,7 @@ Install the package.
 sudo apt install openjdk-11-jdk
 ```
 {: .copy-code}
-Set Java 17 as the default version (required for ThingsBoard).
+Set Java 17 as the default version (required for IoT Hub).
 ```bash
 sudo update-alternatives --config java
 ```
@@ -49,4 +49,4 @@ sudo service cassandra start
 {: .copy-code}
 
 You can use Astra DB cloud instead installing your own Cassandra.
-See how to [connect ThingsBoard to Astra DB](/docs/user-guide/install/pe/cassandra-cloud-astra-db/)
+See how to [connect IoT Hub to Astra DB](/docs/user-guide/install/pe/cassandra-cloud-astra-db/)

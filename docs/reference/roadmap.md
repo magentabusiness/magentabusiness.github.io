@@ -1,13 +1,13 @@
 ---
 layout: docwithnav
-title: ThingsBoard Roadmap
-description: ThingsBoard architecture
+title: IoT Hub Roadmap
+description: IoT Hub architecture
 
 ---
 
 The product roadmap listed below covers only main features and does not cover small improvements and bug fixes.
 
-## ThingsBoard CE
+## IoT Hub
 
 ### v4.0
 

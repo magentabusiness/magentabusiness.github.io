@@ -1,13 +1,13 @@
 ---
 layout: docwithnav
-title: Register of a mokosmart LoRaWAN device and Gateway in ThingsBoard
+title: Register of a mokosmart LoRaWAN device and Gateway in IoT Hub
 
 ---
 
 * TOC
 {:toc}
 
-The purpose of this guide is to outline how to register mokosmart LoRaWAN end devices and gateway in ThingsBoard. This document is applicable to all the end point LoRaWan product of mokosmart.
+The purpose of this guide is to outline how to register mokosmart LoRaWAN end devices and gateway in IoT Hub. This document is applicable to all the end point LoRaWan product of mokosmart.
 
 ## Add Gateway
 
@@ -101,7 +101,7 @@ The purpose of this guide is to outline how to register mokosmart LoRaWAN end de
 
 <br>
 
-### Create Integration in ThingsBoard
+### Create Integration in IoT Hub
 
 - Go to the "**Integrations**" page of the "**Integrations center**" section. Click "**plus**" icon in the upper right corner to add new integration. Select "**The Things Stack Community**" as the integration type. Then, click "**Next**".
 
@@ -252,13 +252,13 @@ And you can also check the live data, if there is payload uploaded means the dev
 
 **Step 8**: Navigate to the "**Devices**" page of the "**Entities**" section, here you can see that:
 
-- Devices registered in TTN were registered in ThingsBoard in the "Latest telemetry" section you will the update data from the device.
+- Devices registered in TTN were registered in IoT Hub in the "Latest telemetry" section you will the update data from the device.
 
 ![image](/images/samples/moko-smart/add-device-7.png)
 
 ## Add Dashboard
 
-A dashboard in ThingsBoard allows users to visualize and monitor data collected from IoT devices. Let's create a dashboard and add two widgets to it:
+A dashboard in IoT Hub allows users to visualize and monitor data collected from IoT devices. Let's create a dashboard and add two widgets to it:
 
 - The first widget will show the device's battery level.
 - The second widget will display the device's location on a map.

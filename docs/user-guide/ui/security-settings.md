@@ -3,7 +3,7 @@ layout: docwithnav
 assignees:
 - stitenko
 title: Security settings
-description: ThingsBoard IoT platform security settings
+description: docs/pe/user-guide/ui/widget-actions/ IoT platform security settings
 
 ---
 

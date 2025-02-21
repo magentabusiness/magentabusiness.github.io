@@ -2,9 +2,9 @@
 
 #### Step 1. Prepare your server and certificate chain
 
-ThingsBoard Team has already provisioned a valid certificate for [ThingsBoard Cloud](https://{{hostName}}/signup).
+IoT Hub Team has already provisioned a valid certificate for [IoT Hub](https://{{hostName}}/signup).
 {% if docsPrefix != 'paas/' %}
-Follow the [MQTT over SSL](/docs/{{docsPrefix}}user-guide/mqtt-over-ssl/) guide to provision server certificate if you are hosting your own ThingsBoard instance.
+Follow the [MQTT over SSL](/docs/{{docsPrefix}}user-guide/mqtt-over-ssl/) guide to provision server certificate if you are hosting your own IoT Hub instance.
 {% endif %}
 
 Once provisioned, you should prepare a CA root certificate in pem format. This certificate will be used by mqtt client to validate the server certificate.
@@ -37,13 +37,13 @@ We will use them in next steps.
 
 #### Step 3. Provision Client Public Key as Device Credentials
 
-Go to **ThingsBoard Web UI -> Entities -> Devices -> Your Device -> Manage credentials**.
+Go to **IoT Hub Web UI -> Entities -> Devices -> Your Device -> Manage credentials**.
 Select **X.509 Certificate** device credentials, insert the contents of *cert.pem* file and click save.
 Alternatively, the same can be done through the [REST API](/docs/{{docsPrefix}}reference/rest-api/).
 
 #### Step 4. Test the connection
 
-Execute the following command to upload temperature readings to ThingsBoard Cloud using secure channel:
+Execute the following command to upload temperature readings to IoT Hub Cloud using secure channel:
 
 {% if docsPrefix contains 'paas/' %}
 ```bash
@@ -59,4 +59,4 @@ mosquitto_pub --cafile ca-root.pem -d -q 1 -h "YOUR_TB_HOST" -p "8883" \
 {: .copy-code}
 {% endif %}
 
-Don't forget to replace **YOUR_TB_HOST** with the host of your ThingsBoard instance.
+Don't forget to replace **YOUR_TB_HOST** with the host of your IoT Hub instance.

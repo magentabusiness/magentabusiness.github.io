@@ -2,8 +2,8 @@
 layout: docwithnav-pe
 assignees:
 - ashvayka
-title: ThingsBoard Professional Edition cluster setup with Kubernetes and Minikube guide
-description: ThingsBoard Professional Edition cluster setup with Kubernetes and Minikube guide
+title: IoT Hub cluster setup with Kubernetes and Minikube guide
+description: IoT Hub cluster setup with Kubernetes and Minikube guide
 
 ---
 
@@ -12,12 +12,12 @@ description: ThingsBoard Professional Edition cluster setup with Kubernetes and 
 * TOC
 {:toc}
 
-This guide will help you to setup ThingsBoard in cluster mode with Kubernetes and Minikube. 
+This guide will help you to setup IoT Hub in cluster mode with Kubernetes and Minikube. 
 For this purpose, we will use docker container images available on [Docker Hub](https://hub.docker.com/search?q=thingsboard&type=image&image_filter=store).  
 
 ## Prerequisites
 
-ThingsBoard Microservices run on the Kubernetes cluster. You need to have a Kubernetes cluster, and the `kubectl` command-line tool must be configured to communicate with your cluster. 
+IoT Hub Microservices run on the Kubernetes cluster. You need to have a Kubernetes cluster, and the `kubectl` command-line tool must be configured to communicate with your cluster. 
 If you don't have Minikube installed, please follow [these instructions](https://kubernetes.io/docs/setup/learning-environment/minikube/).
 
 ### Enable ingress addon
@@ -30,16 +30,16 @@ minikube addons enable ingress
 ```
 {: .copy-code}
 
-### Pull ThingsBoard PE images from docker hub
+### Pull IoT Hub images from docker hub
 
 {% include templates/install/dockerhub/checkout.md %}
 
 ## Step 1. Review the architecture page
 
-Starting ThingsBoard v2.2, it is possible to install ThingsBoard cluster using new microservices architecture and docker containers. 
+Starting IoT Hub v2.2, it is possible to install IoT Hub cluster using new microservices architecture and docker containers. 
 See [**microservices**](/docs/reference/msa/) architecture page for more details.
 
-## Step 2. Clone ThingsBoard PE Kubernetes scripts
+## Step 2. Clone IoT Hub Kubernetes scripts
 
 ```bash
 git clone -b release-{{ site.release.ver }} https://github.com/thingsboard/thingsboard-pe-k8s.git --depth 1
@@ -78,7 +78,7 @@ and put the license secret parameter:
 
 ## Step 5. Review the architecture page
 
-Starting ThingsBoard v2.2, it is possible to install ThingsBoard cluster using new microservices architecture and docker containers. 
+Starting IoT Hub v2.2, it is possible to install IoT Hub cluster using new microservices architecture and docker containers. 
 See [**microservices**](/docs/reference/msa/) architecture page for more details.
 
 ## Step 6. Configure Minikube
@@ -91,9 +91,9 @@ minikube addons enable ingress
 ```
 {: .copy-code} 
 
-## Step 7. Configure ThingsBoard database
+## Step 7. Configure IoT Hub database
 
-Before performing initial installation you can configure the type of database to be used with ThingsBoard.
+Before performing initial installation you can configure the type of database to be used with IoT Hub.
 In order to set database type change the value of `DATABASE` variable in `.env` file to one of the following:
 
 - `postgres` - use PostgreSQL database;
@@ -121,9 +121,9 @@ Execute the following command to deploy third-party resources:
 ```
 {: .copy-code}
 
-Type **'yes'** when prompted, if you are running ThingsBoard in `high-availability` `DEPLOYMENT_TYPE` for the first time or don't have configured Redis cluster.
+Type **'yes'** when prompted, if you are running IoT Hub in `high-availability` `DEPLOYMENT_TYPE` for the first time or don't have configured Redis cluster.
 
-Execute the following command to deploy ThingsBoard resources:
+Execute the following command to deploy IoT Hub resources:
  
 ```
 ./k8s-deploy-resources.sh
@@ -138,7 +138,7 @@ minikube ip
 ```
 {: .copy-code}
 
-You should see ThingsBoard login page.
+You should see IoT Hub login page.
 
 Use the following default credentials:
 
@@ -150,7 +150,7 @@ If you installed DataBase with demo data (using `--loadDemo` flag) you can also 
 - **Customer User**: customer@thingsboard.org / customer
 
 In case of any issues you can examine service logs for errors.
-For example to see ThingsBoard node logs execute the following command:
+For example to see IoT Hub node logs execute the following command:
 
 1) Get the list of the running tb-node pods:
 
@@ -175,7 +175,7 @@ Or use `kubectl get services` to see the state of all the services.
 Or use `kubectl get deployments` to see the state of all the deployments.
 See [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/) command reference for details.
 
-Execute the following command to delete all ThingsBoard microservices:
+Execute the following command to delete all IoT Hub microservices:
 
 ```
 ./k8s-delete-resources.sh

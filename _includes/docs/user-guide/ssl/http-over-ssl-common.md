@@ -1,7 +1,7 @@
 The advantage of such options is a simple configuration. 
 Most of the cloud load balancers (AWS, Google cloud, etc) have built-in certificate generation tools and rich documentation how to configure SSL.
 
-Nevertheless, it is possible to configure ThingsBoard to enable SSL and avoid SSL termination on the Load Balancer. 
+Nevertheless, it is possible to configure IoT Hub to enable SSL and avoid SSL termination on the Load Balancer. 
 We recommend to use valid SSL certificates generated using trusted CA authorities and avoid spending time on resolving issues with [self-signed certificates](#self-signed-certificates-generation). 
 See instructions below on how to configure SSL for certificates stored in PEM file format or Java Keystore.   
 

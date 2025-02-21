@@ -1,14 +1,14 @@
-### Thingsboard performance charts
+### IoT Hub performance charts
 
 Open your browser and go http://localhost:8080/dashboards and login. Use your instance IP address instead.  
 Default login for demo instance is `tenant@thingsboard.org`, password is `tenant`.
 
-![Thingsboard dashboard list with Rule Engine Statistics](/images/reference/performance-aws-instances/method/chart-examples/performance_test_thingsboard_dashboard_list.png "Thingsboard dashboard list with Rule Engine Statistics")
+![IoT Hub dashboard list with Rule Engine Statistics](/images/reference/performance-aws-instances/method/chart-examples/performance_test_thingsboard_dashboard_list.png "IoT Hub dashboard list with Rule Engine Statistics")
 
 Choose the "Rule Engine Statistics" dashboard. You can see how the system perform under the load.
 
-![Thingsboard rule engine statistics](/images/reference/performance-aws-instances/method/chart-examples/performance_test_thingsboard_rule_engine_statistics_queue_stats.png "Thingsboard rule engine statistics")
+![IoT Hub rule engine statistics](/images/reference/performance-aws-instances/method/chart-examples/performance_test_thingsboard_rule_engine_statistics_queue_stats.png "IoT Hub rule engine statistics")
 
 Another fancy feature is the API usage page
 
-![Thingsboard API usage feature](/images/reference/performance-aws-instances/method/chart-examples/performance_test_thingsboard_api_usage_feature.png "Thingsboard API usage feature")
+![IoT Hub API usage feature](/images/reference/performance-aws-instances/method/chart-examples/performance_test_thingsboard_api_usage_feature.png "IoT Hub API usage feature")

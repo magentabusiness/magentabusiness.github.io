@@ -1,7 +1,7 @@
 ---
 layout: use-case
 title: Air Quality Monitoring solution
-description: Air quality monitoring, AQI determination, data visualization and device management with ThingsBoard IoT Platform
+description: Air quality monitoring, AQI determination, data visualization and device management with IoT Hub IoT Platform
 notitle: "true"
 
 ---
@@ -41,17 +41,13 @@ Save up to 90% of development time for your air monitoring solution by utilizing
 
 {% include carousel.liquid nonActiveItemsVisibility = true overlay = false collectionMap = 'use-cases' collectionKey = 'air-quality-monitoring-1' %}
 
-<div class="center" style="margin-bottom: 64px;">
-    <a id="UseCases_AirQM_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/ec564620-82b2-11ed-a624-8360a2a6cb0e?publicId=4978baf0-8a92-11ec-98f9-ff45c37940c6" class="button gtm_button">View live demo</a>
-</div>
-
 The **Administration Dashboard** dashboard is designed for tenant administrators to perform basic device management tasks, and has multiple states:
 -  **Main state** which is intended for monitoring sensors health: battery level, connectivity, etc. The Main state contains:
 - **Sensor state** allows you to view detailed information about the sensor: It's latest sensor readings, location, etc. 
 
 {% include carousel.liquid nonActiveItemsVisibility = true overlay = false collectionMap = 'use-cases' collectionKey = 'air-quality-monitoring-2' %}
 
-## ThingsBoard advantages
+## IoT Hub advantages
 <section class="usecase-advantages">
     <div class="usecase-background">
         <div class="bottom-features1"></div><div class="bottom-features2"></div><div class="small11"></div><div class="small12"></div>
@@ -62,7 +58,7 @@ The **Administration Dashboard** dashboard is designed for tenant administrators
                 <object data="/images/microservices-icon.svg"></object>
                 <div>
                     <a class="title" href="/docs/reference/msa/">Scalability and high availability</a>
-                    <p>ThingsBoard supports high-availability deployments on cloud and on-premises data centers using K8S or bare-metal deployments. Platform components are horizontally scalable. ThingsBoard has production deployments with more than 500 000 smart-meters.</p>
+                    <p>IoT Hub supports high-availability deployments on cloud and on-premises data centers using K8S or bare-metal deployments. Platform components are horizontally scalable. IoT Hub has production deployments with more than 500 000 smart-meters.</p>
                 </div>
             </div>
         </div>
@@ -71,7 +67,7 @@ The **Administration Dashboard** dashboard is designed for tenant administrators
                 <object data="/images/telemetry-icon.svg"></object>
                 <div>
                     <a class="title" href="/docs/getting-started-guides/connectivity/">Connectivity</a>
-                    <p>Connect devices directly to the platform via the following built-in protocols: HTTP, CoAP, MQTT, LwM2M, and SNMP. Connect devices in your local network to the cloud using ThingsBoard Gateway via Modbus, BLE, BACnet, OPC-UA, and other protocols.</p>
+                    <p>Connect devices directly to the platform via the following built-in protocols: HTTP, CoAP, MQTT, LwM2M, and SNMP. Connect devices in your local network to the cloud using IoT Hub Gateway via Modbus, BLE, BACnet, OPC-UA, and other protocols.</p>
                 </div>
             </div>
         </div>
@@ -89,7 +85,7 @@ The **Administration Dashboard** dashboard is designed for tenant administrators
                 <object data="/images/security-icon.svg"></object>
                 <div>
                     <a class="title" href="/docs/pe/user-guide/ssl/http-over-ssl/">Security</a>
-                    <p>ThingsBoard supports industry-standard encryption algorithms like RSA and ECDSA to ensure the data is secure during transfer via TLS(TCP) and DTLS (UDP).</p>
+                    <p>IoT Hub supports industry-standard encryption algorithms like RSA and ECDSA to ensure the data is secure during transfer via TLS(TCP) and DTLS (UDP).</p>
                 </div>
             </div>
         </div>
@@ -98,7 +94,7 @@ The **Administration Dashboard** dashboard is designed for tenant administrators
                 <object data="/images/engine-icon.svg"></object>
                 <div>
                     <a class="title" href="/docs/pe/user-guide/rule-engine-2-0/overview/">Data processing</a>
-                    <p>ThingsBoard allows you to define application logic with drag-n-drop rule chain designer. The Rule Engine is a robust and scalable processing framework that leverages industry-standard message queue implementations like Apache Kafka or AWS SQS to ensure data durability and guarantee data processing. You are free to process data with the Rule engine or push it to further processing in external systems.</p>
+                    <p>IoT Hub allows you to define application logic with drag-n-drop rule chain designer. The Rule Engine is a robust and scalable processing framework that leverages industry-standard message queue implementations like Apache Kafka or AWS SQS to ensure data durability and guarantee data processing. You are free to process data with the Rule engine or push it to further processing in external systems.</p>
                 </div>
             </div>
         </div>
@@ -113,19 +109,10 @@ The **Administration Dashboard** dashboard is designed for tenant administrators
         </div>
         <div class="col-lg-6">
             <div class="block">
-                <object data="/images/phone-icon.svg"></object>
-                <div>
-                    <a class="title" href="/docs/mobile/">Mobile application</a>
-                    <p>Build your own IoT mobile application with minimum coding efforts using ThingsBoard Mobile Application, an open-source project based on Flutter. Leverage a built-in set of mobile actions to take a photo, scan QR code, update location, and more directly within the dashboard.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-6">
-            <div class="block">
                 <object data="/images/tenancy-icon.svg"></object>
                 <div>
                     <a class="title" href="/docs/user-guide/entities-and-relations/">Multi-tenancy</a>
-                    <p>ThingsBoard provides UI and API to manage tenants, customers, users, devices, and assets. Single tenant may have multiple tenant administrators and millions of devices and customers. It also offers out-of-the-box support of OTA updates for your smart meters.</p>
+                    <p>IoT Hub provides UI and API to manage tenants, customers, users, devices, and assets. Single tenant may have multiple tenant administrators and millions of devices and customers. It also offers out-of-the-box support of OTA updates for your smart meters.</p>
                 </div>
             </div>
         </div>
@@ -134,12 +121,12 @@ The **Administration Dashboard** dashboard is designed for tenant administrators
 
 ## Air Quality Monitoring solution overview
 
-The diagram below identifies data flow and integration points for a typical air quality monitoring solution that uses the ThingsBoard platform to collect and analyze monitoring data from air stations.
+The diagram below identifies data flow and integration points for a typical air quality monitoring solution that uses the IoT Hub platform to collect and analyze monitoring data from air stations.
 
 <object width="100%" style="max-width: max-content; margin: 32px 0" data="/images/iot-use-cases/smart-energy-diagram.svg"></object>
 
 You may notice plenty of connectivity options for the air monitoring stations: direct connection to the cloud, through the IoT Gateway, or an Integration with a third-party system.
-The platform supports industry-standard encryption algorithms and device credentials types. ThingsBoard stores data in the fault-tolerant and reliable Cassandra database.
+The platform supports industry-standard encryption algorithms and device credentials types. IoT Hub stores data in the fault-tolerant and reliable Cassandra database.
 The Rule Engine enables forwarding incoming data to various analytics systems, such as Apache Spark or Hadoop, using Kafka or other Message buses.
 
 ## Learn more
@@ -148,6 +135,6 @@ The Rule Engine enables forwarding incoming data to various analytics systems, s
     <a id="UseCases_AirQM_CustomersFb" href="/industries/smart-energy/" class="button gtm_button">Customers feedback</a>
     <a id="UseCases_AirQM_PlatformFeatures" href="/docs/#platform-features" class="button gtm_button">Platform features</a>
     <a id="UseCases_AirQM_Architecture" href="/docs/reference/" class="button gtm_button">Architecture</a>
-    <a id="UseCases_AirQM_ContactUs" href="/docs/contact-us/" class="button gtm_button">Contact us</a>
+    <a id="UseCases_AirQM_ContactUs" href="https://www.magenta.at/business/iot/kontakt" class="button gtm_button">Contact us</a>
 </div>
 

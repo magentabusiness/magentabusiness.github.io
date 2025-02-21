@@ -1,6 +1,6 @@
 ---
 layout: development-services-reviews
-title: ThingsBoard case studies and customers testimonials
+title: IoT Hub case studies and customers testimonials
 notitle: "true"
 description: Real feedback from real clients. Dive into our testimonials to understand the true impact of our services.
 
@@ -26,12 +26,12 @@ description: Real feedback from real clients. Dive into our testimonials to unde
             <div class="logo">
                 <img src="/images/development-services/logo-asg-tech.svg" alt=""/>
             </div>
-            <div class="review-header">Exceptional experience working with ThingsBoard's unit</div>
-            <div class="review-body"><h6>We are delighted to share our exceptional experience working with ThingsBoard's development unit for custom widget development. As a company specializing in delivering innovative IoT solutions, working with ThingsBoard Professional Edition platform, we sought their expertise to reduce our time to market. From the initial estimation to the final delivery, ThingsBoard's development team demonstrated remarkable professionalism and technical prowess.</h6>
+            <div class="review-header">Exceptional experience working with IoT Hub's unit</div>
+            <div class="review-body"><h6>We are delighted to share our exceptional experience working with IoT Hub's development unit for custom widget development. As a company specializing in delivering innovative IoT solutions, working with IoT Hub platform, we sought their expertise to reduce our time to market. From the initial estimation to the final delivery, IoT Hub's development team demonstrated remarkable professionalism and technical prowess.</h6>
             <h6>Their careful estimation process significantly enhanced our understanding of the project scope, making planning and collaboration more effective.
             Additionally, their team attentively listened to our detailed requirements and skilfully transformed them into thoughtfully designed custom widgets. The development process was smooth, with regular updates and transparent communication.</h6>
-            <h6>The custom widgets showcased impressive quality, surpassing our initial expectations. The team's attention to detail and commitment to following our design guidelines were commendable. The widgets successfully integrate with the ThingsBoard Professional Edition platform, contributing to a user-friendly experience and improving the functionality of our solutions.
-            We wholeheartedly recommend ThingsBoard's development unit for any custom development requirements. Their dedication to excellence, reliability, and their ability to transform ideas into tangible solutions make them an invaluable partner in driving innovation and delivering superior customer experiences. We look forward to continuing our collaboration with ThingsBoard and their development unit in future projects.</h6>
+            <h6>The custom widgets showcased impressive quality, surpassing our initial expectations. The team's attention to detail and commitment to following our design guidelines were commendable. The widgets successfully integrate with the IoT Hub platform, contributing to a user-friendly experience and improving the functionality of our solutions.
+            We wholeheartedly recommend IoT Hub's development unit for any custom development requirements. Their dedication to excellence, reliability, and their ability to transform ideas into tangible solutions make them an invaluable partner in driving innovation and delivering superior customer experiences. We look forward to continuing our collaboration with IoT Hub and their development unit in future projects.</h6>
             </div>
         </div>
     </div>
@@ -45,15 +45,15 @@ description: Real feedback from real clients. Dive into our testimonials to unde
             <div class="review-header">Very professional in its approach to projects</div>
             <div class="review-body">
                 <h5>Custom Development</h5>
-                <h6>The ThingsBoard team is very professional in its approach to projects. They can help you design and implement your ideas with solid attention to detail. They make sure to clearly understand your challenges so they can provide you the best scenario to get your project up and running quickly.</h6>
-                <h6>They helped us implement our IoT solutions for major transport industry clients, and all projects were completed on time and on budget. Their solutions architect also improved how we use the platform to get the most out of what ThingsBoard has to give.</h6>
+                <h6>The IoT Hub team is very professional in its approach to projects. They can help you design and implement your ideas with solid attention to detail. They make sure to clearly understand your challenges so they can provide you the best scenario to get your project up and running quickly.</h6>
+                <h6>They helped us implement our IoT solutions for major transport industry clients, and all projects were completed on time and on budget. Their solutions architect also improved how we use the platform to get the most out of what IoT Hub has to give.</h6>
                 <h6>The communication with the team is fluid, and requests are handled quickly. Has the maker of the platform, they are the best to help you in developing and implementing your requirements.</h6>
                 <h5>Service Monitoring and Tech Support</h5>
                 <h6>I cannot remember the last time our services were unavailable. The team monitors our infrastructure closely so we can sleep tight at night. They are also very responsive when we have technical questions or need guidance when implementing a new feature in our IoT devices.</h6>
-                <h5>ThingsBoard Platform</h5>
-                <h6>ThingsBoard will make the development of your IoT backend a breeze. It is a robust platform that can handle anything you throw at it. A wide variety of connection options exist, and it comes with a compelling user interface that can be customized to suit any need.</h6>
-                <h6>ThingsBoard will make the development of your IoT backend a breeze. It is a robust platform that can handle anything you throw at it. A wide variety of connection options exist, and it comes with a compelling user interface that can be customized to suit any need.</h6>
-                <h6>It has a very flexible price bracket. The open-source version is free, and the Professional version has a comprehensive price bracket to let you grow as your business increases. Want to avoid managing complex IT infrastructures? You will love their hosted version thingsboard.cloud!</h6>
+                <h5>IoT Hub Platform</h5>
+                <h6>IoT Hub will make the development of your IoT backend a breeze. It is a robust platform that can handle anything you throw at it. A wide variety of connection options exist, and it comes with a compelling user interface that can be customized to suit any need.</h6>
+                <h6>IoT Hub will make the development of your IoT backend a breeze. It is a robust platform that can handle anything you throw at it. A wide variety of connection options exist, and it comes with a compelling user interface that can be customized to suit any need.</h6>
+                <h6>It has a very flexible price bracket. The open-source version is free, and the Professional version has a comprehensive price bracket to let you grow as your business increases. Want to avoid managing complex IT infrastructures? You will love their hosted version iothub.magenta.at!</h6>
             </div>
         </div>
     </div>
@@ -66,11 +66,11 @@ description: Real feedback from real clients. Dive into our testimonials to unde
             </div>
             <div class="review-header">Impressed by professionalism, knowledge, and commitment</div>
             <div class="review-body">
-                <h6>At Super Bock Bebidas, S.A. we pride ourselves on our ability to adapt, innovate, and stay ahead of the curve. We have been using in-house beer drive tanks and tracking systems for many years. It served us well, but as the times evolved, we realized our system had become outdated, lacking the efficiency we desired. That's when we discovered ThingsBoard.</h6>
-                <h6>Our decision to migrate our existing system to the ThingsBoard platform was not taken lightly. After all, we were entrusting our critical operational processes to a new platform. But, after interacting with the highly skilled team at ThingsBoard, we felt confident about the upcoming transformation. The development unit at ThingsBoard listened to our needs and clarified the scope of work. We were impressed by their professionalism, knowledge, and commitment to delivering a market-ready solution tailored to our needs.</h6>
-                <h6>As promised, ThingsBoard delivered an exceptional beer tank tracking solution, on-time and within budget. The platform provided us visibility into our assets, real-time tracking, and actionable insights that significantly improved our operational efficiency. It's user-friendly interface, flexibility, and robust features brought our system up to speed with modern technological advancements. The IoT integration provided by ThingsBoard has elevated our operations, offering us a competitive edge in the market.</h6>
-                <h6>ThingsBoard's support didn't stop at the delivery of the solution. They have continuously assisted us in optimizing the system, responding promptly to any queries, and addressing issues effectively. We are thoroughly impressed by their post-delivery support and commitment to ensuring our satisfaction. Today, we can proudly say that our decision to choose ThingsBoard has allowed us to operate more efficiently and effectively, improving our overall productivity and enhancing our services to our valued customers.</h6>
-                <h6>Choosing ThingsBoard has not only been a business decision for us but a step towards the future of IoT. The team has been committed to delivering quality solutions, and we look forward to a long-lasting partnership with them. We are thrilled to endorse ThingsBoard and recommend their IoT solutions to any organization looking for a reliable and forward-thinking partner.</h6>
+                <h6>At Super Bock Bebidas, S.A. we pride ourselves on our ability to adapt, innovate, and stay ahead of the curve. We have been using in-house beer drive tanks and tracking systems for many years. It served us well, but as the times evolved, we realized our system had become outdated, lacking the efficiency we desired. That's when we discovered IoT Hub.</h6>
+                <h6>Our decision to migrate our existing system to the IoT Hub platform was not taken lightly. After all, we were entrusting our critical operational processes to a new platform. But, after interacting with the highly skilled team at IoT Hub, we felt confident about the upcoming transformation. The development unit at IoT Hub listened to our needs and clarified the scope of work. We were impressed by their professionalism, knowledge, and commitment to delivering a market-ready solution tailored to our needs.</h6>
+                <h6>As promised, IoT Hub delivered an exceptional beer tank tracking solution, on-time and within budget. The platform provided us visibility into our assets, real-time tracking, and actionable insights that significantly improved our operational efficiency. It's user-friendly interface, flexibility, and robust features brought our system up to speed with modern technological advancements. The IoT integration provided by IoT Hub has elevated our operations, offering us a competitive edge in the market.</h6>
+                <h6>IoT Hub's support didn't stop at the delivery of the solution. They have continuously assisted us in optimizing the system, responding promptly to any queries, and addressing issues effectively. We are thoroughly impressed by their post-delivery support and commitment to ensuring our satisfaction. Today, we can proudly say that our decision to choose IoT Hub has allowed us to operate more efficiently and effectively, improving our overall productivity and enhancing our services to our valued customers.</h6>
+                <h6>Choosing IoT Hub has not only been a business decision for us but a step towards the future of IoT. The team has been committed to delivering quality solutions, and we look forward to a long-lasting partnership with them. We are thrilled to endorse IoT Hub and recommend their IoT solutions to any organization looking for a reliable and forward-thinking partner.</h6>
             </div>
         </div>
     </div>
@@ -85,8 +85,8 @@ description: Real feedback from real clients. Dive into our testimonials to unde
             </div>
             <div class="review-header">Expertise, attention to detail, and client satisfaction</div>
             <div class="review-body">
-                <h6>We have found the ThingsBoard suite to be the best in class tool for presenting our Industrial IoT data to customers. Our distributed hardware solution is built to monitor electrostatic discharge (ESD) conditions in electronics manufacturing. The functionality of TB's software stack is extensive and the documentation makes it easy to get up and running.</h6>
-                <h6>We worked with the ThingsBoard Development Unit to unlock some additional features with custom software that helped us tailor the ThingsBoard solution to our needs.<br>Throughout the development journey, the TBU exhibited professionalism, clear communication, and a genuine commitment to our success. We wholeheartedly recommend the ThingsBoard Development Unit for their expertise, attention to detail, and client satisfaction. We look forward to future collaborations.</h6>
+                <h6>We have found the IoT Hub suite to be the best in class tool for presenting our Industrial IoT data to customers. Our distributed hardware solution is built to monitor electrostatic discharge (ESD) conditions in electronics manufacturing. The functionality of TB's software stack is extensive and the documentation makes it easy to get up and running.</h6>
+                <h6>We worked with the IoT Hub Development Unit to unlock some additional features with custom software that helped us tailor the IoT Hub solution to our needs.<br>Throughout the development journey, the TBU exhibited professionalism, clear communication, and a genuine commitment to our success. We wholeheartedly recommend the IoT Hub Development Unit for their expertise, attention to detail, and client satisfaction. We look forward to future collaborations.</h6>
             </div>
         </div>
     </div>
@@ -147,7 +147,7 @@ description: Real feedback from real clients. Dive into our testimonials to unde
                         <select class="cdu-form-control" name="subject">
                             <option value="Custom Development" selected>Custom Development</option>
                             <option value="Technical Support">Technical Support</option>
-                            <option value="ThingsBoard Products">ThingsBoard Products</option>
+                            <option value="ThingsBoard Products">IoT Hub Products</option>
                             <option value="Deployment Options">Deployment Options</option>
                             <option value="Training">Training</option>
                             <option value="Professional Services">Professional Services</option>

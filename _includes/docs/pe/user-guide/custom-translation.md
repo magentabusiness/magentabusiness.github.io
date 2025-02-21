@@ -3,7 +3,7 @@
 * TOC
 {:toc}
 
-The Custom translation feature allows you to add new languages not currently supported by ThingsBoard, edit the existing locale translations, and gives opportunity to customize specific dashboard GUI elements.
+The Custom translation feature allows you to add new languages not currently supported by IoT Hub, edit the existing locale translations, and gives opportunity to customize specific dashboard GUI elements.
 
 Go to the "Custom translation" tab of the "White labeling" page. On this page, you will find the current list of available languages and their translation progress indicated in percentages. While not all translations are complete, our team is constantly working on improving and expanding the list.
 
@@ -44,7 +44,7 @@ You've successfully added a new language. Since translations for term keys have 
 
 ## Change platform language
 
-To change the ThingsBoard's interface language, follow these steps:
+To change the IoT Hub's interface language, follow these steps:
 
 {% assign changeLanguagePE = '
     ===
@@ -64,7 +64,7 @@ To change the ThingsBoard's interface language, follow these steps:
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=changeLanguagePE %}
 
-After completing these steps, ThingsBoard's interface language will be changed to the language of your choice.
+After completing these steps, IoT Hub's interface language will be changed to the language of your choice.
 In this guide, we have chosen Italian as the system language for demonstration purposes. Next, we will set up a translation for it.
 
 ## Translation editing
@@ -169,7 +169,7 @@ Let's see how it works:
 ## Platform's internalization
 
 Imagine you manage a dashboard that is accessed by customers from various countries. To ensure everyone can understand the dashboard easily, you may want the names of the dashboard, widgets, devices, data keys, and any other dashboard components to appear in customer's specific language. 
-This is where ThingsBoard's internationalization feature comes into play.
+This is where IoT Hub's internationalization feature comes into play.
 
 To make translation of mentioned elements dynamic use structure in the format **{i18n}**.
 This structure ensures that the name of each element is pulled from the customer's individual translation map.

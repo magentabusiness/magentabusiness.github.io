@@ -1,6 +1,6 @@
 ##### Deploy Cassandra stateful set
 
-Create ThingsBoard namespace:
+Create IoT Hub namespace:
 
 ```bash
 kubectl apply -f tb-namespace.yml
@@ -23,7 +23,7 @@ kubectl get pods
 
 ##### Update DB settings
 
-Edit the ThingsBoard DB settings file and add Cassandra settings{{tbCassandraRegionComments}}
+Edit the IoT Hub DB settings file and add Cassandra settings{{tbCassandraRegionComments}}
 
 
 ```bash

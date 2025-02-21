@@ -1,13 +1,13 @@
 ## Cluster deletion
 
-Execute the following command to delete all ThingsBoard pods:
+Execute the following command to delete all IoT Hub pods:
 
 ```bash
 ./k8s-delete-resources.sh
 ```
 {: .copy-code}
 
-Execute the following command to delete all ThingsBoard pods and configmaps:
+Execute the following command to delete all IoT Hub pods and configmaps:
 
 ```bash
 ./k8s-delete-all.sh

@@ -81,10 +81,6 @@ The following interactive dashboard represents smart-energy IoT data visualizati
 
 {% include carousel.liquid nonActiveItemsVisibility = true overlay = false collectionMap = 'use-cases' collectionKey = 'smart-energy' %}
 
-<div class="center" style="margin-bottom: 64px;">
-    <a id="UseCases_SmartEnergy_ViewLiveDemo" target="_blank" href="" class="button gtm_button">View live demo</a>
-</div>
-
 The live dashboard displays real-time data from several smart meters collected using IoT Hub MQTT API. 
 Collected data is processed via the rule engine to raise alarms on certain thresholds. 
 The main dashboard displays the energy meters, corresponding alarms, and real-time data feeds. 
@@ -192,34 +188,3 @@ The Rule Engine enables forwarding incoming data to various analytics systems, s
 * Smart Office: Ensure employee health and safety to boost organization productivity. Optimize resource consumption by monitoring and controlling the office's indoor climate.
 
 
-<div id="contact-us" class="block-wrapper wrapper-main-color">
-    <div class="block-content">
-        <div class="contact-us-content">
-            <div class="info">
-                <div class="title">Ready to launch your unique product?</div>
-                <div class="text">Leave us your name and email and we will get back to you within 2 business days</div>
-            </div>
-            <form id="UseCases_SmartEnergy_ReadyToLaunch" class="contact-form1 gtm_form readyToLaunchForm" method="post" onsubmit="return validateContactForm(this)">
-                <fieldset>
-                    <div class="form-section">
-                        <div class="form-element">
-                            <label for="name">
-                                <input id="name" class="contact-us-form-control" value="" placeholder="Your Name" name="name" type="text" size="40" maxlength="50">
-                                <p class="second-placeholder" style="font-size: 12px">Name*</p>
-                            </label>
-                        </div>
-                        <div class="form-element">
-                            <label for="email">
-                                <input id="email" class="contact-us-form-control" value="" placeholder="Enter Email" name="email" type="email" size="40" maxlength="80">
-                                <p class="second-placeholder" style="font-size: 12px">Email Address*</p>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="submit-button-container">
-                        <input class="contact-us-button" value="Submit" type="submit">
-                    </div>
-                </fieldset>
-            </form>
-        </div>
-    </div>
-</div>

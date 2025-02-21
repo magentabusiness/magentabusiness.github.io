@@ -9,7 +9,7 @@ for IP in ${IPS}; do
 
   ssh -i ~/.ssh/aws/smatvienko.pem -o StrictHostKeyChecking=accept-new ubuntu@${IP} <<'ENDSSH'
 set +x
-#optional. replace with your Thingsboard instance ip
+#optional. replace with your IoT Hub instance ip
 #echo '52.50.5.45 thingsboard' | sudo tee -a /etc/hosts
 #extend the local port range up to 64500 
 cat /proc/sys/net/ipv4/ip_local_port_range

@@ -37,7 +37,7 @@ Prerequisites before contining Kafka extension configuration:
  - AWS IAM User is created and Access Key ID/Secret Access Key are obtained
  - SQS Standard Queue is created
  - SQS FIFO Queue is created
- - ThingsBoard is up and running
+ - IoT Hub is up and running
 
 The information on how to create SQS Queues can be found [here](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-create-queue.html)
  
@@ -89,7 +89,7 @@ Now you can send Telemetry message that contains *'temp'* telemetry for any of y
 {"temp":73.4}
 ```
 
-Here is an example of a command that publish single telemetry message to locally installed ThingsBoard:
+Here is an example of a command that publish single telemetry message to locally installed IoT Hub:
 
 ```bash
 mosquitto_pub -d -h "localhost" -p 1883 -t "v1/devices/me/telemetry" -u "$ACCESS_TOKEN" -m "{'temp':73.4}"
@@ -102,7 +102,7 @@ Now you should be able to see the message available in your SQS Standard Queue t
 ### SQS FIFO Queue Rule Configuration
 
 [SQS FIFO Queue](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html) maintains First-In-First-Out order Per Message Group ID and ensures exactly one processing.
-ThingsBoard SQS Plugin uses Device ID as Message Group ID  when sending a message to SQS FIFO Queue. It means that FIFO order will be maintained on per-device basis.
+IoT Hub SQS Plugin uses Device ID as Message Group ID  when sending a message to SQS FIFO Queue. It means that FIFO order will be maintained on per-device basis.
 
 SQS FIFO Queue Rule configation is very similar to the SQS Standard Queue configuration with subtle differences.
 
@@ -136,7 +136,7 @@ Now you can send Telemetry message that contains *'temp'* telemetry for any of y
 {"temp":68.3}
 ```
 
-Here is an example of a command that publish single telemetry message to locally installed ThingsBoard:
+Here is an example of a command that publish single telemetry message to locally installed IoT Hub:
 
 ```bash
 mosquitto_pub -d -h "localhost" -p 1883 -t "v1/devices/me/telemetry" -u "$ACCESS_TOKEN" -m "{'temp':68.3}"

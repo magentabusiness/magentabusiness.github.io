@@ -25,7 +25,7 @@ Execute the following command to start services:
 {: .copy-code}
 
 After a while when all services will be successfully started you can open `http://{your-host-ip}` in you browser (for ex. `http://localhost`).
-You should see ThingsBoard login page.
+You should see IoT Hub login page.
 
 Use the following default credentials:
 
@@ -37,7 +37,7 @@ If you installed DataBase with demo data (using `--loadDemo` flag) you can also 
 - **Customer User**: customer@thingsboard.org / customer
 
 In case of any issues you can examine service logs for errors.
-For example to see ThingsBoard node logs execute the following command:
+For example to see IoT Hub node logs execute the following command:
 
 ```bash
 docker compose {{dockerComposeFileLocation}}logs -f tb-core1 tb-rule-engine1

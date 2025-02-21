@@ -2365,7 +2365,7 @@ Once you have the file with your components, let's proceed to load them into Thi
 - Drag the file with your compiled components;
 - Click "Add".
 
-Congratulations, your components were added to the ThingsBoard!
+Congratulations, your components were added to the IoT Hub!
 
 {% include images-gallery.html imageCollection="add-js-module" %}
 

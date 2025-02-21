@@ -3,28 +3,28 @@
 * TOC
 {:toc}
 
-In this guide, we integrate the TBMQ with the ThingsBoard using MQTT integration. 
-We utilize TBMQ client credentials with the type **APPLICATION** to connect ThingsBoard integration as an APPLICATION client.
+In this guide, we integrate the TBMQ with the IoT Hub using MQTT integration. 
+We utilize TBMQ client credentials with the type **APPLICATION** to connect IoT Hub integration as an APPLICATION client.
 APPLICATION clients specialize in subscribing to topics with high message rates. 
 The messages will be persisted when the client is offline and will be delivered once it goes online, ensuring the availability of crucial data. 
-Read more about the APPLICATION client [here](https://thingsboard.io/docs/mqtt-broker/user-guide/mqtt-client-type/).
+Read more about the APPLICATION client [here](/docs/mqtt-broker/user-guide/mqtt-client-type/).
 
-ThingsBoard MQTT Integration acts as an MQTT client. It subscribes to topics and converts the received data into telemetry and attribute updates. 
+IoT Hub MQTT Integration acts as an MQTT client. It subscribes to topics and converts the received data into telemetry and attribute updates. 
 In case of a downlink message, MQTT integration converts it to the device-suitable format and pushes it to TBMQ. 
-Pay attention: TBMQ should be either co-located with the ThingsBoard instance or deployed in the cloud and have a valid DNS name or public static IP address. 
-ThingsBoard instance that is running in the cloud can’t connect to the TBMQ deployed in the local network with no internet connection.
+Pay attention: TBMQ should be either co-located with the IoT Hub instance or deployed in the cloud and have a valid DNS name or public static IP address.
+IoT Hub instance that is running in the cloud can’t connect to the TBMQ deployed in the local network with no internet connection.
 
 ### Prerequisites
 
 In this tutorial, we will use:
 
- - The instance of [ThingsBoard Professional Edition](https://thingsboard.io/docs/user-guide/install/pe/installation-options/) installed **locally**;
- - [TBMQ](https://thingsboard.io/docs/mqtt-broker/install/installation-options/) installed **locally** and accessible by ThingsBoard PE instance;
+ - The instance of [IoT Hub](/docs/user-guide/install/pe/installation-options/) installed **locally**;
+ - [TBMQ](/docs/mqtt-broker/install/installation-options/) installed **locally** and accessible by IoT Hub instance;
  - mosquitto_pub MQTT client to send messages.
 
 ### TBMQ setup
 
-First, we need to create TBMQ client credentials to use them for connecting ThingsBoard integration to TBMQ.
+First, we need to create TBMQ client credentials to use them for connecting IoT Hub integration to TBMQ.
 
 To do this, login to your TBMQ user interface and follow the next steps.
 
@@ -37,16 +37,16 @@ The "SECURITY_MQTT_BASIC_ENABLED" environment variable must be set to "true" in 
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
-Now you can proceed to the next step - configuration of ThingsBoard integration.
+Now you can proceed to the next step - configuration of IoT Hub integration.
 
-### ThingsBoard setup
+### IoT Hub setup
 
-In this example, we will use the MQTT integration to connect the ThingsBoard to TBMQ.
+In this example, we will use the MQTT integration to connect the IoT Hub to TBMQ.
 Before setting up an MQTT integration, you need to create uplink converter.
 
 #### Uplink Converter
 
-The purpose of the decoder function is to parse the incoming data and metadata to a format that ThingsBoard can consume.
+The purpose of the decoder function is to parse the incoming data and metadata to a format that IoT Hub can consume.
 
 To create uplink converter, go to the "Integrations center" section -> "Data converters" page and click on the "plus" icon. Name it "TBMQ Uplink Converter" and select type "Uplink". Paste the decoder script below into the decoder functions section. Click "Add".
 
@@ -68,7 +68,7 @@ Now create an integration.
 
 {% include images-gallery.html imageCollection="create-integration" showListImageTitles="true" %}
 
-Now go to the "Sessions" page in the TBMQ UI. Upon successful establishment of the connection between ThingsBoard and TBMQ, we will see a new session and its status - "Connected".
+Now go to the "Sessions" page in the TBMQ UI. Upon successful establishment of the connection between IoT Hub and TBMQ, we will see a new session and its status - "Connected".
 
 {% include images-gallery.html imageCollection="successful-connection-tbmq-to-thingsboard" %}
 
@@ -98,7 +98,7 @@ mosquitto_pub -h localhost -p 1883 -q 1 -t "tb/mqtt-integration-tutorial/sensors
 
 ![image](/images/mqtt-broker/user-guide/integrations/how-to-connect-tbqm-to-thingsboard/tbmq-uplink-message-1.png)
 
-After you sent uplink message, go to your integration in ThingsBoard UI and navigate to the "Events" tab. There you'll see the message consumed by the "MQTT Integration".
+After you sent uplink message, go to your integration in IoT Hub UI and navigate to the "Events" tab. There you'll see the message consumed by the "MQTT Integration".
 
 {% include images-gallery.html imageCollection="tbmq-integration-events" %}
 

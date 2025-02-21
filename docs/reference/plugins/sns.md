@@ -36,7 +36,7 @@ Prerequisites before contining Kafka extension configuration:
 
  - AWS IAM User is created and Access Key ID/Secret Access Key are obtained
  - SNS Topic is created
- - ThingsBoard is up and running
+ - IoT Hub is up and running
 
 The information on how to create SNS Topic can be found [here](http://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html)
  
@@ -94,7 +94,7 @@ Now you can send Telemetry message that contains *'temp'* telemetry for any of y
 {"temp":88.2}
 ```
 
-Here is an example of a command that publish single telemetry message to locally installed ThingsBoard:
+Here is an example of a command that publish single telemetry message to locally installed IoT Hub:
 
 ```bash
 mosquitto_pub -d -h "localhost" -p 1883 -t "v1/devices/me/telemetry" -u "$ACCESS_TOKEN" -m "{'temp':88.2}"

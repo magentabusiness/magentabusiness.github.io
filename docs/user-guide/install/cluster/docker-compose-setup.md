@@ -3,25 +3,25 @@ layout: docwithnav
 assignees:
 - ashvayka
 title: Cluster setup with Docker Compose
-description: ThingsBoard IoT platform cluster setup with Docker Compose guide
+description: IoT Hub IoT platform cluster setup with Docker Compose guide
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to setup ThingsBoard in cluster mode using Docker Compose tool. 
+This guide will help you to setup IoT Hub in cluster mode using Docker Compose tool. 
 
 ## Prerequisites
 
-ThingsBoard Microservices are running in dockerized environment.
+IoT Hub Microservices are running in dockerized environment.
 Before starting please make sure Docker Engine and Docker Compose are installed in your system. 
 
 {% include templates/install/docker-install.md %}
 
 {% include templates/install/docker-install-note.md %}
 
-## Step 1. Pull ThingsBoard CE Images
+## Step 1. Pull IoT Hub Images
 
 Make sure your have [logged in](https://docs.docker.com/engine/reference/commandline/login/) to docker hub using command line.
 
@@ -38,10 +38,10 @@ docker pull thingsboard/tb-snmp-transport:{{ site.release.ce_full_ver }}
 
 ## Step 2. Review the architecture page
 
-Starting ThingsBoard v2.2, it is possible to install ThingsBoard cluster using new microservices architecture and docker containers. 
+Starting IoT Hub v2.2, it is possible to install IoT Hub cluster using new microservices architecture and docker containers. 
 See [**microservices**](/docs/reference/msa/) architecture page for more details.
 
-## Step 3. Clone ThingsBoard CE repository
+## Step 3. Clone IoT Hub repository
 
 ```bash
 git clone -b {{ site.release.branch }} https://github.com/thingsboard/thingsboard.git --depth 1
@@ -49,11 +49,11 @@ cd thingsboard/docker
 ```
 {: .copy-code}
 
-## Step 4. Configure ThingsBoard database
+## Step 4. Configure IoT Hub database
 
 {% include templates/install/configure-db-docker-compose.md %}
 
-## Step 5. Choose ThingsBoard queue service 
+## Step 5. Choose IoT Hub queue service 
 
 {% include templates/install/install-queue-docker-compose.md %}
 

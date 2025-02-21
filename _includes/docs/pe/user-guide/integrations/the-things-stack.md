@@ -11,7 +11,7 @@
 
 ## Overview
 TheThingsStack is LoRaWAN network designed for connecting your devices using LoRaWAN stack. 
-After integrating TheThingsStack with Thingsboard, you can connect, communicate, process and visualize data from devices in the Thingsboard IoT platform.
+After integrating TheThingsStack with IoT Hub, you can connect, communicate, process and visualize data from devices in the IoT Hub IoT platform.
 
 
 ## The Things Stack Community setup
@@ -30,10 +30,10 @@ will be *eu* region.
 ##### Payload Decoder
 Our device submits data in binary format. We have 2 options where to decode this data:
 
-- **TheThingsStack decoder** - data will be decoded before entering the Thingsboard
-- **Thingsboard converters** - uplink/downlink converters will be used to decode data from binary format into JSON
+- **TheThingsStack decoder** - data will be decoded before entering the IoT Hub
+- **IoT Hub converters** - uplink/downlink converters will be used to decode data from binary format into JSON
 
-In this tutorial, we will make an initial transformation into JSON with TTS decoder and then use Thingsboard converters for correct data processing.
+In this tutorial, we will make an initial transformation into JSON with TTS decoder and then use IoT Hub converters for correct data processing.
 In real life scenario, it is up to you where to decode/encode data, because it is possible to do this on any side.
 
 Decode Function:
@@ -91,10 +91,10 @@ Also, an access key will be needed to configure the integration, it can be gener
 
 {% include images-gallery.html imageCollection="api_key_access" %}
 
-## Integration with Thingsboard
-We made all required configurations in the TheThingsStack (register application, add decoder function and register device). Now we can start configuring Thingsboard.
+## Integration with IoT Hub
+We made all required configurations in the TheThingsStack (register application, add decoder function and register device). Now we can start configuring IoT Hub.
 
-##### Thingsboard Uplink Data Converter
+##### IoT Hub Uplink Data Converter
 
 First, we need to create an Uplink Data Converter which will be used for receiving messages from the TTS. 
 The converter should transform incoming payload into the required message format. Message must 
@@ -177,8 +177,8 @@ return result;
 
 ![image](/images/user-guide/integrations/ttn/tb-converter_1.png)
 
-##### Thingsboard Downlink Data Converter
-For sending Downlink messages from Thingsboard to the device inside TTS, we need to define a Downlink 
+##### IoT Hub Downlink Data Converter
+For sending Downlink messages from IoT Hub to the device inside TTS, we need to define a Downlink 
 Converter. In general, the output from the Downlink Converter should have the following structure:
 ```json
 {
@@ -226,7 +226,7 @@ in the outbound message. The destination device is a **thermostat-a** device.
 
 ##### TTS Integration
 
-Next we will create the integration with TheThingsStack inside Thingsboard. Open **Integrations** section and add new Integration with type
+Next we will create the integration with TheThingsStack inside IoT Hub. Open **Integrations** section and add new Integration with type
 **TheThingsStack**
 
 - Name: **TheThingsStack Integration**
@@ -240,7 +240,7 @@ Next we will create the integration with TheThingsStack inside Thingsboard. Open
 
 ![image](/images/user-guide/integrations/ttn/tb-integration_0.png)
 
-When adding the integration, you can test the connection between ThingsBoard and TheThingsStack. For it, 
+When adding the integration, you can test the connection between IoT Hub and TheThingsStack. For it, 
 after all required configurations, click the **Check connection** button.
 
 ![image](/images/user-guide/integrations/ttn/tb-integration_1.png)
@@ -253,9 +253,9 @@ Our device will publish temperature **0F** (15). So enter **0F** into the payloa
 
 ![image](/images/user-guide/integrations/ttn/ttn-send-payload.png)
 
-In Thingsboard go to **Device Group** -> **All** -> **thermostat-a** - here you can see that 
+In IoT Hub go to **Device Group** -> **All** -> **thermostat-a** - here you can see that 
 
-- a new device was registered in Thingsboard
+- a new device was registered in IoT Hub
 - in the **Latest Telemetry** section you will see that the last submitted temperature equals 15.
 
 ![image](/images/user-guide/integrations/ttn/tb-device-telemetry.png)

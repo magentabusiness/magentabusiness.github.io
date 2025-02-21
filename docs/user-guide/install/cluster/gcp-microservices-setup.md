@@ -3,21 +3,21 @@ layout: docwithnav
 assignees:
 - ashvayka
 title: Microservices setup using GCP infrastructure
-description: ThingsBoard IoT platform microservices setup with Kubernetes in GKE
+description: IoT Hub IoT platform microservices setup with Kubernetes in GKE
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to setup ThingsBoard in microservices mode in GKE. 
+This guide will help you to setup IoT Hub in microservices mode in GKE. 
 
 ## Prerequisites
 
 {% include templates/install/gcp/gke-prerequisites.md %}
 
 
-## Step 1. Clone ThingsBoard CE K8S scripts repository
+## Step 1. Clone IoT Hub K8S scripts repository
 
 ```bash
 git clone -b release-{{ site.release.ver }} https://github.com/thingsboard/thingsboard-ce-k8s.git

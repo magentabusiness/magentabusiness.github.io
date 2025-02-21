@@ -4,9 +4,9 @@
 
 ## Overview
 
-Since ThingsBoard 3.4.2, the Tenant administrator is able to configure common settings for multiple assets using Asset Profiles.
+Since IoT Hub 3.4.2, the Tenant administrator is able to configure common settings for multiple assets using Asset Profiles.
 Each Asset has one and only profile at a single point in time.
-Experienced ThingsBoard users can notice that the asset type has been deprecated in favor of the Asset Profile.
+Experienced IoT Hub users can notice that the asset type has been deprecated in favor of the Asset Profile.
 The update script will automatically create Asset Profiles based on unique Asset Types and assign them to the appropriate assets.
 
 Asset Profile allows you to select the [Rule Chain](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#rule-chain) and [Queue](/docs/{{docsPrefix}}user-guide/rule-engine-2-5/queues/) to be used by the [Rule Engine](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview) for processing of the asset data.
@@ -31,7 +31,7 @@ By default, the [Root Rule Chain](/docs/{{docsPrefix}}user-guide/rule-engine-2-0
 However, the more different asset types you have, the more complex your Root Rule Chain may become.
 Many platform users create their Root Rule Chain for the sole purpose of sending messages to specific rule chains depending on the asset type.
 
-To avoid this painful and mundane activity, since ThingsBoard 3.4.2, you can specify a custom Rule Chain for your assets.
+To avoid this painful and mundane activity, since IoT Hub 3.4.2, you can specify a custom Rule Chain for your assets.
 The new Rule Chain will receive asset attributes updates, and asset lifecycle(Created/Updated/Deleted) events.
 This setting is available in the Asset Profile details.
 

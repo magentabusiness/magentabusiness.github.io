@@ -3,18 +3,18 @@ layout: docwithnav
 assignees:
 - ashvayka
 title: Cluster setup using Minikube
-description: ThingsBoard IoT platform cluster setup with Kubernetes and Minikube guide
+description: IoT Hub IoT platform cluster setup with Kubernetes and Minikube guide
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to setup ThingsBoard in cluster mode using Minikube tool. 
+This guide will help you to setup IoT Hub in cluster mode using Minikube tool. 
 
 ## Prerequisites
 
-ThingsBoard Microservices run on the Kubernetes cluster. You need to have a Kubernetes cluster, and the `kubectl` command-line tool must be configured to communicate with your cluster. 
+IoT Hub Microservices run on the Kubernetes cluster. You need to have a Kubernetes cluster, and the `kubectl` command-line tool must be configured to communicate with your cluster. 
 If you don't have Minikube installed, please follow [these instructions](https://kubernetes.io/docs/setup/learning-environment/minikube/).
 
 
@@ -30,10 +30,10 @@ minikube addons enable ingress
 
 ## Step 1. Review the architecture page
 
-Starting ThingsBoard v2.2, it is possible to install ThingsBoard cluster using new microservices architecture and docker containers. 
+Starting IoT Hub v2.2, it is possible to install IoT Hub cluster using new microservices architecture and docker containers. 
 See [**microservices**](/docs/reference/msa/) architecture page for more details.
 
-## Step 2. Clone ThingsBoard CE Kubernetes scripts repository
+## Step 2. Clone IoT Hub Kubernetes scripts repository
 
 ```bash
 git clone -b release-{{ site.release.ver }} https://github.com/thingsboard/thingsboard-ce-k8s.git --depth 1
@@ -41,9 +41,9 @@ cd thingsboard-ce-k8s/minikube
 ```
 {: .copy-code}
 
-## Step 3. Configure ThingsBoard database
+## Step 3. Configure IoT Hub database
 
-Before performing initial installation you can configure the type of database to be used with ThingsBoard.
+Before performing initial installation you can configure the type of database to be used with IoT Hub.
 In order to set database type change the value of `DATABASE` variable in `.env` file to one of the following:
 
 - `postgres` - use PostgreSQL database;
@@ -81,10 +81,10 @@ Execute the following command to deploy third-party resources:
 ```
 {: .copy-code}
 
-Type **'yes'** when prompted, if you are running ThingsBoard in `high-availability` `DEPLOYMENT_TYPE` for the first time or don't have configured Redis cluster.
+Type **'yes'** when prompted, if you are running IoT Hub in `high-availability` `DEPLOYMENT_TYPE` for the first time or don't have configured Redis cluster.
 
 
-Execute the following command to deploy ThingsBoard resources:
+Execute the following command to deploy IoT Hub resources:
 
 ```
 ./k8s-deploy-resources.sh
@@ -99,7 +99,7 @@ minikube ip
 ```
 {: .copy-code}
 
-You should see ThingsBoard login page.
+You should see IoT Hub login page.
 
 Use the following default credentials:
 
@@ -111,7 +111,7 @@ If you installed DataBase with demo data (using `--loadDemo` flag) you can also 
 - **Customer User**: customer@thingsboard.org / customer
 
 In case of any issues you can examine service logs for errors.
-For example to see ThingsBoard node logs execute the following command:
+For example to see IoT Hub node logs execute the following command:
 
 1) Get the list of the running tb-node pods:
 
@@ -136,7 +136,7 @@ Or use `kubectl get services` to see the state of all the services.
 Or use `kubectl get deployments` to see the state of all the deployments.
 See [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/) command reference for details.
 
-Execute the following command to delete all ThingsBoard microservices:
+Execute the following command to delete all IoT Hub microservices:
 
 ```
 ./k8s-delete-resources.sh

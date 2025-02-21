@@ -12,7 +12,7 @@ The default PostgreSQL user is thingsboard, default password is postgres. Please
 
 ![](/images/reference/performance-aws-instances/method/pgadmin/pgadmin-thingsboard-database-server-connect-connection.png)
 
-To use SSH tunneling, put your Thingsboard instance IP and identity file (same as using to connect from terminal) for AWS EC2 instance.
+To use SSH tunneling, put your IoT Hub instance IP and identity file (same as using to connect from terminal) for AWS EC2 instance.
 
 ![](/images/reference/performance-aws-instances/method/pgadmin/pgadmin-thingsboard-database-server-connect-ssh-tunnel.png)
 
