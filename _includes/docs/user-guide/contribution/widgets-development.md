@@ -3,8 +3,8 @@
 
 ## Introduction
 
-**IoT Hub widgets** are additional UI modules that easily integrate into any [IoT Dashboard](/docs/{{docsPrefix}}user-guide/dashboards/).  They provide end-user functions such as data visualization, remote device control, alarms management and display of static custom html content.
-According to the provided features, each widget definition represents a specific [Widget Type](/docs/{{docsPrefix}}user-guide/ui/widget-library/#widget-types).
+**IoT Hub widgets** are additional UI modules that seamlessly integrate into any [IoT Dashboard](/docs/{{docsPrefix}}user-guide/dashboards/).  They provide end-user functions such as data visualization, remote device control, alarms management, and display of static custom HTML content.
+Each widget definition represents a specific [Widget Type](/docs/{{docsPrefix}}user-guide/ui/widget-library/#widget-types)  based on the provided features.
 
 ## Creating new widget definition
 
@@ -25,10 +25,10 @@ After that, the pre-populated "Widget Editor" page will open with starter widget
 Widget Editor view is a mini IDE designed to develop custom widget definitions.
 It consists of [top toolbar](#widget-editor-toolbar) and four main sections:
 
- - [Resources/HTML/CSS](#resourceshtmlcss-section)    
- - [JavaScript](#javascript-section) 
- - [Settings schema](#settings-schema-section) 
- - [Widget preview](#widget-preview-section)
+- [Resources/HTML/CSS](#resourceshtmlcss-section)
+- [JavaScript](#javascript-section)
+- [Settings schema](#settings-schema-section)
+- [Widget preview](#widget-preview-section)
 
 #### Widget Editor Toolbar
 
@@ -36,13 +36,13 @@ It consists of [top toolbar](#widget-editor-toolbar) and four main sections:
 
 Widget Editor Toolbar consists of the following items:
 
- - **Widget Title** field - used to specify title of the widget definition
- - **Widget Type** selector -  used to specify [type](/docs/{{docsPrefix}}user-guide/ui/widget-library/#widget-types) of the widget definition
- - **Run** button - used to run widget code and view result in **Widget preview** section
- - **Undo** button - reverts all editor sections to latest saved state
- - **Save** button - saves widget definition
- - **Save as** button - allows to save a new copy of widget definition by specifying new widget type name and target **Widgets Bundle**
- 
+- **Widget Title** field - used to specify title of the widget definition
+- **Widget Type** selector -  used to specify [type](/docs/{{docsPrefix}}user-guide/ui/widget-library/#widget-types) of the widget definition
+- **Run** button - used to run widget code and view result in **Widget preview** section
+- **Undo** button - reverts all editor sections to latest saved state
+- **Save** button - saves widget definition
+- **Save as** button - allows to save a new copy of widget definition by specifying new widget type name and target **Widgets Bundle**
+
 #### Resources/HTML/CSS section
 
 This section consists of three tabs:
@@ -56,13 +56,13 @@ Second **HTML** tab contains the widget's HTML code *(Note: some widgets create 
 
 ![image](/images/user-guide/contribution/widgets/widget-editor-html.png)
 
-Third **CSS** tab contains widget specific CSS style definitions. 
+Third **CSS** tab contains widget specific CSS style definitions.
 
 ![image](/images/user-guide/contribution/widgets/widget-editor-css.png)
 
 #### JavaScript section
 
-This section contains all widget related JavaScript code according to the [Widget API](#basic-widget-api).  
+This section contains all widget related JavaScript code according to the [Widget API](#basic-widget-api).
 
 ![image](/images/user-guide/contribution/widgets/widget-editor-javascript.png)
 
@@ -70,15 +70,15 @@ This section contains all widget related JavaScript code according to the [Widge
 
 This section consists of two tabs:
 
-The first tab, **Settings schema**, is used to specify the JSON schema of widget settings for automatically generating a UI form using the react-schema-form [builder](http://networknt.github.io/react-schema-form/). 
-This generated UI form is displayed in the **Advanced** mode in the **Appearance** tab of widget settings. 
+The first tab, **Settings schema**, is used to specify the JSON schema of widget settings for automatically generating a UI form using the react-schema-form [builder](http://networknt.github.io/react-schema-form/).
+This generated UI form is displayed in the **Advanced** mode in the **Appearance** tab of widget settings.
 The Settings Object serialized by this schema, is used to store specific widget settings and is accessible from the widget's JavaScript code.
 
 ![image](/images/user-guide/contribution/widgets/widget-editor-settings-schema.png)
- 
-The second tab, **Data key settings schema**, is used to specify JSON schema of data key settings for automatically generating a UI form using the react-schema-form [builder](http://networknt.github.io/react-schema-form/). 
+
+The second tab, **Data key settings schema**, is used to specify JSON schema of data key settings for automatically generating a UI form using the react-schema-form [builder](http://networknt.github.io/react-schema-form/).
 This generated UI form is displayed in **Advanced** tab of the **Data key configuration** dialog.
-The Settings Object serialized by this schema is used to store specific settings for each data key of the datasource defined in the widget. 
+The Settings Object serialized by this schema is used to store specific settings for each data key of the datasource defined in the widget.
 These settings are accessible from widget's JavaScript code.
 
 ![image](/images/user-guide/contribution/widgets/widget-editor-datakey-settings-schema.png)
@@ -147,7 +147,7 @@ Here is the result of applying **settings schema**, will be visible in **Appeara
 
 
 The **schema** property supports types such as **Number**, **Boolean**, **String** and **Object**.
-In the **form** array, every property can be specified as an **input**, **checkbox**, **dropdown**, **functional field**(JS, HTML, CSS), **image selection**, **color picker**, or an **array of properties**. 
+In the **form** array, every property can be specified as an **input**, **checkbox**, **dropdown**, **functional field**(JS, HTML, CSS), **image selection**, **color picker**, or an **array of properties**.
 Fields can be displayed conditionally and grouped in logical blocks.
 
 Here is the complex example of the custom **settings schema**:
@@ -269,8 +269,8 @@ The result of applying custom **settings schema** to the widget:
 
 This section is used to preview and test widget definitions.
 It is presented as a mini dashboard containing one widget instantiated from the current widget definition.
-It has mostly all functionality provided by usual IoT Hub dashboard, with some limitations.
-For example, "Function" can only be selected as datasource type in widget datasources section for debugging purposes.    
+It has most of the functionality provided by a typical IoT Hub dashboard, with some limitations.
+For example, "Function" can only be selected as datasource type in widget datasources section for debugging purposes.
 
 ![image](/images/user-guide/contribution/widgets/widget-editor-preview.png)
 
@@ -300,13 +300,13 @@ Below is a brief description of widget context properties:
 | hideTitlePanel                   | Boolean            | Manages visibility of widget title panel. Useful for widget with custom title panels or different states. **updateWidgetParams()** function must be called after this property change.                                                                                                                             |
 | widgetTitle                      | String             | If set, will override configured widget title text. **updateWidgetParams()** function must be called after this property change.                                                                                                                                                                                   |
 | detectChanges()                  | Function           | Trigger change detection for current widget. Must be invoked when widget HTML template bindings should be updated due to widget data changes.                                                                                                                                                                      |
-| updateWidgetParams()             | Function           | Updates widget with runtime set properties such as **widgetTitle**, **hideTitlePanel**, etc. Must be invoked in order these properties changes take effect.                                                                                                                                                        |
+| updateWidgetParams()             | Function           | Updates widget with runtime set properties such as **widgetTitle**, **hideTitlePanel**, etc. Must be invoked for these property changes to take effect.                                                                                                                                                            |
 | pageLink(pageSize, page, textSearch, sortOrder) | [PageLink](https://github.com/thingsboard/thingsboard/blob/{{ site.release.wd_examples_commit }}/ui-ngx/src/app/shared/models/page/page-link.ts#L98) | Is used to create sorting configuration for GET requests. **pageSize** - determines the number of entities displayed on a page, **page** - specifies which page should be displayed, **textSearch** - filters entities based on the included text, **sortOrder** - sets the order in which entities are displayed. |
 | defaultSubscription              | [IWidgetSubscription](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L220")             | Default widget subscription object contains all subscription information, including current data, according to the widget type. See [Subscription object](#subscription-object).                                                                                                                                   |
 | timewindowFunctions              | [TimewindowFunctions](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L45)             | Object with timewindow functions used to manage widget data time frame. Can be used by Time-series or Alarm widgets. See [Timewindow functions](#timewindow-functions).                                                                                                                                            |
 | controlApi                       | [RpcApi](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L58)             | Object that provides API functions for RPC (Control) widgets. See [Control API](#control-api).                                                                                                                                                                                                                     | 
-| actionsApi                       | [WidgetActionsApi](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L67)             | Set of API functions to work with user defined actions. See [Actions API](#actions-api).                                                                                                                                                                                                                           |
-| stateController                  | [IStateController](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L121)             | Reference to Dashboard state controller, providing API to manage current dashboard state. See [State Controller](#state-controller).                                                                                                                                                                               |
+| actionsApi                       | [WidgetActionsApi](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L67)             | A set of API functions for working with user-defined actions. See [Actions API](#actions-api).                                                                                                                                                                                                                     |
+| stateController                  | [IStateController](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L121)             | Reference to Dashboard state controller, providing API to manage the current dashboard state. See [State Controller](#state-controller).                                                                                                                                                                           |
 
 In order to implement a new widget, the following JavaScript functions should be defined *(Note: each function is optional and can be implemented according to  widget specific behaviour):*
 
@@ -330,7 +330,7 @@ The widget subscription object is instance of [IWidgetSubscription](https://gith
 Depending on widget type, subscription object provides different data structures.
 For [Latest values](/docs/{{docsPrefix}}user-guide/ui/widget-library/#latest-values) and [Time-series](/docs/{{docsPrefix}}user-guide/ui/widget-library/#time-series) widget types, it provides the following properties:
 
- - **datasources** - array of datasources (Array<[Datasource](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L250)>) used by this subscription, using the following structure:
+- **datasources** - array of datasources (Array<[Datasource](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L250)>) used by this subscription, it has the following structure:
 
 ```javascript
     datasources = [
@@ -357,7 +357,7 @@ For [Latest values](/docs/{{docsPrefix}}user-guide/ui/widget-library/#latest-val
     ]
 ```
 
-  - **data** - array of latest data (Array<[DatasourceData](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L275)>) received in scope of this subscription, using the following structure:
+- **data** - array of latest data (Array<[DatasourceData](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L275)>) received in scope of this subscription, it has the following structure:
 
 ```javascript
     data = [
@@ -377,8 +377,8 @@ For [Latest values](/docs/{{docsPrefix}}user-guide/ui/widget-library/#latest-val
 ```
 
 For [Alarm widget](/docs/{{docsPrefix}}user-guide/ui/widget-library/#alarm-widget) type it provides the following properties:
- 
- - **alarmSource** - ([Datasource](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L250)) information about entity for which alarms are fetched, using the following structure: 
+
+- **alarmSource** - ([Datasource](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L250)) information about entity for which alarms are fetched, it has the following structure:
 
 ```javascript
     alarmSource = {
@@ -401,7 +401,7 @@ For [Alarm widget](/docs/{{docsPrefix}}user-guide/ui/widget-library/#alarm-widge
     }
 ```
 
-  - **alarms** - array of alarms (Array<[Alarm](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/alarm.models.ts#L88)>) received in scope of this subscription, using the following structure:
+- **alarms** - array of alarms (Array<[Alarm](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/alarm.models.ts#L88)>) received in scope of this subscription, it has the following structure:
 
 ```javascript
     alarms = [
@@ -432,11 +432,11 @@ For [Alarm widget](/docs/{{docsPrefix}}user-guide/ui/widget-library/#alarm-widge
     ]
 ```
 
-For [RPC](/docs/{{docsPrefix}}user-guide/ui/widget-library/#rpc-control-widget) or [Static](/docs/{{docsPrefix}}user-guide/ui/widget-library/#static) widget types, subscription object is optional and does not contain necessary information.    
+For [RPC](/docs/{{docsPrefix}}user-guide/ui/widget-library/#rpc-control-widget) or [Static](/docs/{{docsPrefix}}user-guide/ui/widget-library/#static) widget types, subscription object is optional and does not contain necessary information.
 
 #### Timewindow functions
 
-Object with timewindow functions ([TimewindowFunctions](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L45)) used to manage widget data time frame. Can by used by [Time-series](/docs/{{docsPrefix}}user-guide/ui/widget-library/#time-series) or [Alarm](/docs/{{docsPrefix}}user-guide/ui/widget-library/#alarm-widget) widgets. Path: **widgetContext.dashboard**.
+Object with timewindow functions ([TimewindowFunctions](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L45)) used to manage widget data time frame. Can be used by [Time-series](/docs/{{docsPrefix}}user-guide/ui/widget-library/#time-series) or [Alarm](/docs/{{docsPrefix}}user-guide/ui/widget-library/#alarm-widget) widgets. Path: **widgetContext.dashboard**.
 
 | **Function**                                        | **Description**                                                                        |
 |-----------------------------------------------------|----------------------------------------------------------------------------------------|
@@ -458,13 +458,13 @@ The Control API ([RpcApi](https://github.com/thingsboard/thingsboard/blob/{{ sit
 
 Set of API functions ([WidgetActionsApi](https://github.com/thingsboard/thingsboard/blob/{{ site.release.wd_examples_commit }}/ui-ngx/src/app/core/api/widget-api.models.ts#L86)) to work with user defined actions. Path: **widgetContext.actionsApi**.
 
-| **Function**                                                          | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-|-----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ``` getActionDescriptors(actionSourceId) ```                          | Returns the list of action descriptors for provided **actionSourceId**.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| ``` handleWidgetAction($event, descriptor, entityId, entityName) ```  | Handles action produced by particular action source. **$event** - event object associated with action, **descriptor** - action descriptor, **entityId** and **entityName** - current entity id and name provided by action source if available.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ``` getActiveEntityInfo() ```                                         | Returns information about the first found entity in the widget.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ``` openDashboardStateInSeparateDialog(targetDashboardStateId, params?, dialogTitle?, hideDashboardToolbar?, dialogWidth?, dialogHeight?) ``` | Open the dashboard state in a separate dialog using **stateId**. The parameter **targetDashboardStateId** refers to the ID of the state that will be opened in this separate dialog. The **params** - contains information about state entity and additional info. The **dialogTitle** sets the title for the separate dialog. The **hideDashboardToolbar** parameter determines the visibility of the dashboard toolbar. **dialogWidth** and **dialogHeight** define the width and height of the separate dialog, respectively.                                                                                                                                                                                                            |
-| ``` openDashboardStateInPopover($event, targetDashboardStateId, params?, hideDashboardToolbar?, preferredPlacement?, hideOnClickOutside?, popoverWidth?, popoverHeight?, popoverStyle?) ``` | Opens dashboard state in the popover window by **stateId**. The **$event** - event object associated with the action. The **targetDashboardStateId** refers to the id of the state that will be open in popover. The **params** - contains information about state entity and additional info. The **hideDashboardToolbar** parameter determines the visibility of the dashboard toolbar. The **referredPlacement** determines the position for opening the popover. The **hideOnClickOutside** parameter, when enabled, ensures the popup closes upon an outside click.  The **popoverStyle** sets the style of popover window. **popoverWidth** and **popoverHeight** define the width and height of the separate dialog, respectively. |
+| **Function**                                                          | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|-----------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ``` getActionDescriptors(actionSourceId) ```                          | Returns the list of action descriptors for provided **actionSourceId**.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ``` handleWidgetAction($event, descriptor, entityId, entityName) ```  | Handles action produced by particular action source. **$event** - event object associated with action, **descriptor** - action descriptor, **entityId** and **entityName** - current entity id and name provided by action source if available.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ``` getActiveEntityInfo() ```                                         | Returns information about the first found entity in the widget.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ``` openDashboardStateInSeparateDialog(targetDashboardStateId, params?, dialogTitle?, hideDashboardToolbar?, dialogWidth?, dialogHeight?) ``` | Open the dashboard state in a separate dialog using **stateId**. The parameter **targetDashboardStateId** refers to the ID of the state that will be opened in this separate dialog. The **params** - contains information about state entity and additional info. The **dialogTitle** sets the title for the separate dialog. The **hideDashboardToolbar** parameter determines the visibility of the dashboard toolbar. **dialogWidth** and **dialogHeight** define the width and height of the separate dialog, respectively.                                                                                                                                                                                                              |
+| ``` openDashboardStateInPopover($event, targetDashboardStateId, params?, hideDashboardToolbar?, preferredPlacement?, hideOnClickOutside?, popoverWidth?, popoverHeight?, popoverStyle?) ``` | Opens dashboard state in the pop-over window by **stateId**. The **$event** - event object associated with the action. The **targetDashboardStateId** refers to the id of the state that will be open in pop-over. The **params** - contains information about state entity and additional info. The **hideDashboardToolbar** parameter determines the visibility of the dashboard toolbar. The **referredPlacement** determines the position for opening the pop-over. The **hideOnClickOutside** parameter, when enabled, ensures the pop-over closes upon an outside click.  The **popoverStyle** sets the style of pop-over window. **popoverWidth** and **popoverHeight** define the width and height of the separate dialog, respectively. |
 
 #### Widget Subscription API
 
@@ -483,7 +483,7 @@ Reference to Dashboard state controller ([IStateController](https://github.com/t
 
 | **Function**                                        | **Description**                                                                                                                                                                                                                                                                                                   |
 |-----------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ``` openState(id, params, openRightLayout) ```      | Navigates to new dashboard state. **id** - id of the target dashboard state, **params** - object with state parameters to use by the new state, **openRightLayout** - optional boolean argument to force open right dashboard layout if present in mobile view mode.                                              |
+| ``` openState(id, params, openRightLayout) ```      | Navigates to new dashboard state. **id** - id of the target dashboard state, **params** - object with state parameters to be used by the new state, **openRightLayout** - optional boolean argument that forces the right dashboard layout to open if present in mobile view mode.                                              |
 | ``` updateState(id, params, openRightLayout) ```    | Updates current dashboard state. **id** - optional id of the target dashboard state to replace current state id, **params** - object with state parameters to update current state parameters, **openRightLayout** - optional boolean argument to force open right dashboard layout if present in mobile view mode. |
 | ``` resetState() ```                                | Resets current dashboard state.                                                                                                                                                                                                                                                                                   |                                               
 | ``` getStateId() ```                                | Returns current dashboard state id.                                                                                                                                                                                                                                                                               |
@@ -508,7 +508,7 @@ The Broadcast Service ([BroadcastService](https://github.com/thingsboard/thingsb
 
 For example, consider sending data from Widget 1 to Widget 2.
 
-![image](/images/user-guide/contribution/widgets/broadcast-service-start.png) 
+![image](/images/user-guide/contribution/widgets/broadcast-service-start.png)
 
 In Widget 1 you must send data using broadcast(...) function:
 ```
@@ -540,17 +540,25 @@ self.onInit = function() {
 
 as a result on Widget 2 you can see your data:
 
-![image](/images/user-guide/contribution/widgets/broadcast-service-finish.png) 
+![image](/images/user-guide/contribution/widgets/broadcast-service-finish.png)
 
 #### Type parameters object
 
-Object [WidgetTypeParameters](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L146) describing widget datasource parameters. It has the following properties:
+Object [WidgetTypeParameters](https://github.com/thingsboard/thingsboard/blob/5a16da51b5d755e18c5d8088e88336f07e4766ea/ui-ngx/src/app/shared/models/widget.models.ts#L170) describing widget datasource parameters. It has the following properties:
 
 ```javascript
     return {
         maxDatasources: -1, // Maximum allowed datasources for this widget, -1 - unlimited
         maxDataKeys: -1, //Maximum allowed data keys for this widget, -1 - unlimited
-        dataKeysOptional: false //Whether this widget can be configured with datasources without data keys
+        dataKeysOptional: false, //Whether this widget can be configured with datasources without data keys
+        datasourcesOptional: false, //Whether this widget can be configured without datasources
+        singleEntity: false, //Whether this widget will work with only one entity
+        hasAdditionalLatestDataKeys: false, //Whether this widget will support additional latest data keys
+        ignoreDataUpdateOnIntervalTick: true, //Use for time series widgets. if true, onDataUpdate will trigger when new data is received otherwise it will be triggered each second.
+        previewWidth: 250px, //Default size of preview X axis
+        previewHeight: 250px, //Default size of preview Y axis
+        embedTitlePanel: false, //Whether hide title panel
+        hideDataSettings: false, //Whether data settings will hide (appearance tab)
     }
 ```
 
@@ -576,11 +584,11 @@ By the way, you can always use pure JavaScript or jQuery API in your widget code
 #### Latest Values widget
 
 In the **Widgets Bundle** view, click the big “+” button at the bottom-right part of the screen and then click the “Create new widget type” button.
-Click the **Latest Values** button on the **Select widget type** popup.
+Click the **Latest Values** button on the **Select widget type** pop-up.
 The **Widget Editor** will open, pre-populated with the content of the default **Latest Values** template widget.
 
- - Clear content of the CSS tab of "Resources" section.
- - Put the following HTML code inside the HTML tab of "Resources" section:
+- Clear content of the CSS tab of "Resources" section.
+- Put the following HTML code inside the HTML tab of "Resources" section:
 
 ```html
   {% raw  %}<div fxFlex fxLayout="column" style="height: 100%;" fxLayoutAlign="center stretch">
@@ -593,8 +601,8 @@ The **Widget Editor** will open, pre-populated with the content of the default *
   </div>{% endraw %}
 ```
 
- - Put the following JavaScript code inside the "JavaScript" section:
- 
+- Put the following JavaScript code inside the "JavaScript" section:
+
 ```javascript
     self.onInit = function() {
        self.ctx.$scope.data = self.ctx.defaultSubscription.data;
@@ -605,28 +613,28 @@ The **Widget Editor** will open, pre-populated with the content of the default *
     }
 ```
 
- - Click the **Run** button on the **Widget Editor Toolbar** in order to see the result in **Widget preview** section.
- 
-![image](/images/user-guide/contribution/widgets/latest-values-widget-sample.png) 
+- Click the **Run** button on the **Widget Editor Toolbar** in order to see the result in **Widget preview** section.
+
+![image](/images/user-guide/contribution/widgets/latest-values-widget-sample.png)
 
 In this example, the **data** property of [subscription](#subscription-object) is assigned to the **$scope** and becomes accessible within the HTML template.
-Inside the HTML, a special [***ngFor**](https://angular.io/api/common/NgForOf) structural angular directive is used in order to iterate over available dataKeys & datapoints then render latest values with their corresponding timestamps. 
+Inside the HTML, a special [***ngFor**](https://angular.io/api/common/NgForOf) structural angular directive is used in order to iterate over available dataKeys & datapoints then render latest values with their corresponding timestamps.
 
 #### Time-Series widget
 
 In the **Widgets Bundle** view, click the big “+” button at the bottom-right part of the screen, then click the “Create new widget type” button.
-Click the **Time-Series** button on the **Select widget type** popup.
+Click the **Time-Series** button on the **Select widget type** pop-up.
 The **Widget Editor** will open, pre-populated with default **Time-Series** template widget content.
 
- - Replace content of the CSS tab in "Resources" section with the following one:
+- Replace content of the CSS tab in "Resources" section with the following one:
 
 ```css
 .my-data-table th {
     text-align: left;
 }
 ``` 
- 
- - Put the following HTML code inside the HTML tab of "Resources" section:
+
+- Put the following HTML code inside the HTML tab of "Resources" section:
 
 ```html
   {% raw  %}<mat-tab-group style="height: 100%;">
@@ -649,7 +657,7 @@ The **Widget Editor** will open, pre-populated with default **Time-Series** temp
   </mat-tab-group>{% endraw %}
 ```
 
- - Put the following JavaScript code inside the "JavaScript" section:
+- Put the following JavaScript code inside the "JavaScript" section:
 
 ```javascript
 self.onInit = function() {
@@ -681,9 +689,9 @@ self.onDataUpdated = function() {
 }
 ```
 
- - Click the **Run** button on the **Widget Editor Toolbar** in order to see the result in **Widget preview** section.
+- Click the **Run** button on the **Widget Editor Toolbar** in order to see the result in **Widget preview** section.
 
-![image](/images/user-guide/contribution/widgets/timeseries-widget-sample.png) 
+![image](/images/user-guide/contribution/widgets/timeseries-widget-sample.png)
 
 In this example, the [subscription](#subscription-object) **datasources** and **data** properties are assigned to **$scope** and become accessible within the HTML template.
 The **$scope.datasourceData** property is introduced to map datasource specific dataKeys data by datasource index for flexible access within the HTML template.
@@ -698,8 +706,8 @@ In the **Widgets Bundle** view, click the big “+” button at the bottom-right
 Click the **Control Widget** button on the **Select widget type** popup.
 The **Widget Editor** will open, pre-populated with default **Control** template widget content.
 
- - Clear content of the CSS tab of "Resources" section.
- - Put the following HTML code inside the HTML tab of "Resources" section:
+- Clear content of the CSS tab of "Resources" section.
+- Put the following HTML code inside the HTML tab of "Resources" section:
 
 ```html
     {% raw  %}<form #rpcForm="ngForm" (submit)="sendCommand()">
@@ -730,7 +738,7 @@ The **Widget Editor** will open, pre-populated with default **Control** template
     </form>{% endraw %}
 ```
 
- - Put the following JSON content inside the "Settings schema" tab of **Settings schema section**:
+- Put the following JSON content inside the "Settings schema" tab of **Settings schema section**:
 
 ```json
 {
@@ -758,7 +766,7 @@ The **Widget Editor** will open, pre-populated with default **Control** template
 }
 ```
 
- - Put the following JavaScript code inside the "JavaScript" section:
+- Put the following JavaScript code inside the "JavaScript" section:
 
 ```javascript
 self.onInit = function() {
@@ -798,51 +806,51 @@ self.onInit = function() {
 }
 ```
 
- - Fill **Widget title** field with widget type name, for ex. "My first control widget".
- - Click the **Run** button on the **Widget Editor Toolbar** in order to see the result in **Widget preview** section. 
- - Click dashboard edit button on the preview section to change the size of the resulting widget. Then click dashboard apply button. The final widget should look like the image below.
+- Fill **Widget title** field with widget type name, for ex. "My first control widget".
+- Click the **Run** button on the **Widget Editor Toolbar** in order to see the result in **Widget preview** section.
+- Click dashboard edit button on the preview section to change the size of the resulting widget. Then click dashboard apply button. The final widget should look like the image below.
 
 ![image](/images/user-guide/contribution/widgets/control-widget-sample.png)
 
- - Click the **Save** button on the **Widget Editor Toolbar** to save widget type.
+- Click the **Save** button on the **Widget Editor Toolbar** to save widget type.
 
 To test how this widget performs RPC commands, we will need to place it in a dashboard then bind it to a device working with RPC commands. To do this, perform the following steps:
 
- - Login as Tenant administrator.
- - Navigate to **Devices** and create new device with some name, for ex. "My RPC Device".
- - Open device details and click "Copy Access Token" button to copy device access token to clipboard.
- - Download [mqtt-js-rpc-from-server.sh](/docs/{{docsPrefix}}reference/resources/mqtt-js-rpc-from-server.sh) and [mqtt-js-rpc-from-server.js](/docs/{{docsPrefix}}reference/resources/mqtt-js-rpc-from-server.js). Place these files in a folder. 
- Edit **mqtt-js-rpc-from-server.sh** - replace **$ACCESS_TOKEN** with your device access token from the clipboard. And install mqtt client library.
- - Run **mqtt-js-rpc-from-server.sh** script. You should see a "connected" message in the console.
- - Navigate to **Dashboards** and create a new dashboard with some name, for ex. "My first control dashboard". Open this dashboard.
- - Click dashboard "edit" button. In the dashboard edit mode, click the "Entity aliases" button located on the dashboard toolbar.
+- Login as Tenant administrator.
+- Navigate to **Devices** and create new device with some name, for ex. "My RPC Device".
+- Open device details and click "Copy Access Token" button to copy device access token to clipboard.
+- Download [mqtt-js-rpc-from-server.sh](/docs/{{docsPrefix}}reference/resources/mqtt-js-rpc-from-server.sh) and [mqtt-js-rpc-from-server.js](/docs/{{docsPrefix}}reference/resources/mqtt-js-rpc-from-server.js). Place these files in a folder.
+  Edit **mqtt-js-rpc-from-server.sh** - replace **$ACCESS_TOKEN** with your device access token from the clipboard. Then, install mqtt client library.
+- Run **mqtt-js-rpc-from-server.sh** script. You should see a "connected" message in the console.
+- Navigate to **Dashboards** and create a new dashboard with some name, for ex. "My first control dashboard". Open this dashboard.
+- Click dashboard "edit" button. In the dashboard edit mode, click the "Entity aliases" button located on the dashboard toolbar.
 
 ![image](/images/user-guide/contribution/widgets/dashboard-toolbar-entity-aliases.png)
 
- - Inside **Entity aliases** popup click "Add alias".
- - Fill "Alias name" field, for ex. "My RPC Device Alias".
- - Select "Entity list" in "Filter type" field.
- - Choose "Device" in "Type" field.
- - Select your device in "Entity list" field. In this example "My RPC Device".
+- Inside **Entity aliases** pop-up click "Add alias".
+- Fill "Alias name" field, for ex. "My RPC Device Alias".
+- Select "Entity list" in "Filter type" field.
+- Choose "Device" in "Type" field.
+- Select your device in "Entity list" field. In this example "My RPC Device".
 
 ![image](/images/user-guide/contribution/widgets/add-rpc-device-alias.png)
 
- - Click "Add" and then "Save" in **Entity aliases**.
- - Click dashboard "+" button then click "Create new widget" button.
+- Click "Add" and then "Save" in **Entity aliases**.
+- Click dashboard "+" button then click "Create new widget" button.
 
 ![image](/images/user-guide/contribution/widgets/dashboard-create-new-widget-button.png)
 
- - Then select **Widget Bundle** where your RPC widget was saved. Select "Control widget" tab.
- - Click your widget. In this example, "My first control widget".
- - From **Add Widget** popup, select your device alias in **Target device** section. In this example "My RPC Device Alias".
- - Click **Add**. Your Control widget will appear in the dashboard. Click dashboard **Apply changes** button to save dashboard and leave editing mode.
- - Fill **RPC method** field with RPC method name. For ex. "TestMethod".
- - Fill **RPC params** field with RPC params. For ex. "{ param1: "value1" }".
- - Click **Send RPC command** button. You should see the following response in the widget.
+- Then select **Widget Bundle** where your RPC widget was saved. Select "Control widget" tab.
+- Click your widget. In this example, "My first control widget".
+- From **Add Widget** pop-up, select your device alias in **Target device** section. In this example "My RPC Device Alias".
+- Click **Add**. Your Control widget will appear on the dashboard. Click the dashboard's **Apply changes** button to save the dashboard and exit editing mode.
+- Fill **RPC method** field with RPC method name. For ex. "TestMethod".
+- Fill **RPC params** field with RPC params. For ex. "{ param1: "value1" }".
+- Click **Send RPC command** button. You should see the following response in the widget.
 
 ![image](/images/user-guide/contribution/widgets/control-widget-sample-response-one-way.png)
 
-  The following output should be printed in the device console:
+The following output should be printed in the device console:
 
 ```bash
   request.topic: v1/devices/me/rpc/request/0
@@ -851,19 +859,19 @@ To test how this widget performs RPC commands, we will need to place it in a das
 
 In order to test "Two way" RPC command mode, we need to change the corresponding widget settings property. To do this, perform the following steps:
 
- - Click dashboard "edit" button. In dashboard edit mode, click **Edit widget** button located in the header of Control widget.
- - In the widget details, view select "Advanced" tab and uncheck "Is One Way Command" checkbox.
+- Click dashboard "edit" button. In dashboard edit mode, click **Edit widget** button located in the header of Control widget.
+- In the widget details, select "Advanced" tab and uncheck "Is One Way Command" checkbox.
 
 ![image](/images/user-guide/contribution/widgets/control-widget-sample-settings.png)
 
- - Click **Apply changes** button on the widget details header. Close details and click dashboard **Apply changes** button.
- - Fill widget fields with RPC method name and params like in previous steps.
- Click **Send RPC command** button. You should see the following response in the widget.
+- Click **Apply changes** button on the widget details header. Close details and click dashboard **Apply changes** button.
+- Fill widget fields with RPC method name and params like in previous steps.
+  Click **Send RPC command** button. You should see the following response in the widget.
 
 ![image](/images/user-guide/contribution/widgets/control-widget-sample-response-two-way.png)
 
-  - stop **mqtt-js-rpc-from-server.sh** script.
- Click **Send RPC command** button. You should see the following response in the widget.
+- stop **mqtt-js-rpc-from-server.sh** script.
+  Click **Send RPC command** button. You should see the following response in the widget.
 
 ![image](/images/user-guide/contribution/widgets/control-widget-sample-response-timeout.png)
 
@@ -884,7 +892,7 @@ The **Widget Editor** will be opened, pre-populated with the content of the defa
 }
 ``` 
 
- - Put the following HTML code inside the HTML tab of "Resources" section:
+- Put the following HTML code inside the HTML tab of "Resources" section:
 
 ```html
   {% raw  %}<div fxFlex fxLayout="column" style="height: 100%;">
@@ -907,8 +915,8 @@ The **Widget Editor** will be opened, pre-populated with the content of the defa
   </div>{% endraw %}
 ```
 
- - Put the following JSON content inside the "Settings schema" tab of **Settings schema section**:
- 
+- Put the following JSON content inside the "Settings schema" tab of **Settings schema section**:
+
 ```json
 {
     "schema": {
@@ -932,8 +940,8 @@ The **Widget Editor** will be opened, pre-populated with the content of the defa
 }
 ```
 
- - Put the following JavaScript code inside the "JavaScript" section:
- 
+- Put the following JavaScript code inside the "JavaScript" section:
+
 ```javascript
 self.onInit = function() {
     var pageLink = self.ctx.pageLink(100);
@@ -990,7 +998,7 @@ self.onDataUpdated = function() {
 }
 ```
 
- - Click the **Run** button on the **Widget Editor Toolbar** in order to see the result in **Widget preview** section.
+- Click the **Run** button on the **Widget Editor Toolbar** in order to see the result in **Widget preview** section.
 
 ![image](/images/user-guide/contribution/widgets/alarm-widget-sample.png)
 
@@ -999,16 +1007,16 @@ Inside the HTML, a special [***ngFor**](https://angular.io/api/common/NgForOf) s
 The table rows are rendered by iterating over **alarms** array and corresponding cells rendered by iterating over **dataKeys**.
 The function **getAlarmValue** is fetching alarm value and formatting **createdTime** alarm property using a [DatePipe](https://angular.io/api/common/DatePipe) angular pipe accessible via **date** property of **ctx**.
 The function **getAlarmCellStyle** is used to assign custom cell styles for each alarm cell. In this example, we introduced new settings property called **alarmSeverityColorFunction** that contains function body returning color depending on alarm severity.
-Inside the **getAlarmCellStyle** function there is corresponding invocation of **alarmSeverityColorFunction** with severity value in order to get color for alarm severity cell. 
-Note that in this code **onDataUpdated** function is implemented in order to update **alarms** property with latest alarms from subscription and invoke change detection using **detectChanges()** function.   
+Inside the **getAlarmCellStyle** function there is corresponding invocation of **alarmSeverityColorFunction** with severity value in order to get color for alarm severity cell.
+Note that in this code **onDataUpdated** function is implemented in order to update **alarms** property with latest alarms from subscription and invoke change detection using **detectChanges()** function.
 
 #### Static widget
 
 In the **Widgets Bundle** view, click the big “+” button at the bottom-right part of the screen and then click the “Create new widget type” button.
-Click the **Static Widget** button on the **Select widget type** popup.
+Click the **Static Widget** button on the **Select widget type** pop-up.
 The **Widget Editor** will be opened pre-populated with the content of default **Static** template widget.
 
- - Put the following HTML code inside the HTML tab of "Resources" section:
+- Put the following HTML code inside the HTML tab of "Resources" section:
 
 ```html
   {% raw  %}<div fxFlex fxLayout="column" style="height: 100%;" fxLayoutAlign="space-around stretch">
@@ -1017,8 +1025,8 @@ The **Widget Editor** will be opened pre-populated with the content of default *
   </div>{% endraw %}
 ```
 
- - Put the following JSON content inside the "Settings schema" tab of **Settings schema section**:
- 
+- Put the following JSON content inside the "Settings schema" tab of **Settings schema section**:
+
 ```json
 {
     "schema": {
@@ -1038,8 +1046,8 @@ The **Widget Editor** will be opened pre-populated with the content of default *
 }
 ``` 
 
- - Put the following JavaScript code inside the "JavaScript" section:
- 
+- Put the following JavaScript code inside the "JavaScript" section:
+
 ```javascript
 self.onInit = function() {
 
@@ -1054,14 +1062,14 @@ self.onInit = function() {
 }
 ```
 
- - Click the **Run** button on the **Widget Editor Toolbar** to see the resulting **Widget preview** section.
+- Click the **Run** button on the **Widget Editor Toolbar** to see the resulting **Widget preview** section.
 
 ![image](/images/user-guide/contribution/widgets/static-widget-sample.png)
 
 This is just a static HTML widget.  There is no subscription data and no special widget API was used.
 Only custom **showAlert** function was implemented showing an alert with the content of **alertContent** property of widget settings.
 You can switch to dashboard edit mode in **Widget preview** section and change value of **alertContent** by changing widget settings in the "Advanced" tab of widget details.
-Then you can see that the new alert content is displayed. 
+Then you can see that the new alert content is displayed.
 
 ### Custom subscriptions
 
@@ -1071,7 +1079,7 @@ Typically, **custom subscriptions** are used with **static** widget types, as th
 #### Main information
 
 For creating custom subscriptions you have to use function **createSubscription** from [Widget Subscription API]( #widget-subscription-api ):
- 
+
 ```javascript
 widgetContext.createSubscription(options);
 ```
@@ -1127,10 +1135,10 @@ The [datasource](https://github.com/thingsboard/thingsboard/blob/{{ site.release
 | ```onLatestDataUpdated```                      | Called only in time-series subscription after updating data from **latestDataKeys**. |
 | ```onDataUpdateError```                        | Called after an error in updating data. |
 | ```onLatestDataUpdateError```                  | Called only in time-series subscription after error in updating data from **latestDataKeys**. |
-| ```legendDataUpdated```                        | Called after update legend data. |
-| ```timeWindowUpdated```                        | Called after update **timewindow**. |
+| ```legendDataUpdated```                        | Called after updating legend data. |
+| ```timeWindowUpdated```                        | Called after updating **timewindow**. |
 | ```dataLoading```                              | Called after loading data. |
-| ```rpcStateChanged```                          | Called after change RPC state. |
+| ```rpcStateChanged```                          | Called after changing RPC state. |
 | ```onRpcSuccess```                             | Called exclusively in the RPC subscription after a successful RPC. |
 | ```onRpcFailed```                              | Called exclusively in the RPC subscription after a failed RPC. |
 
@@ -1179,7 +1187,7 @@ Allows to filter entities of the same type using their ids. For example, this en
 
 - **Entity Name Filter**
 
-Allows to filter entities of the same type using the **starts with** expression over entity name. For example, this entity filter selects all devices whose name starts with **Air Quality**:
+Allows to filter entities of the same type using the **starts with** expression on entity name. For example, this entity filter selects all devices with names starting with **Air Quality**:
 ```javascript
 {
     type: "entityName",
@@ -1212,7 +1220,7 @@ Return multiple groups of the same type using specified ids. For example, this e
 
 - **Group Name Filter**
 
-Allows to filter entity groups based on their type and the **starts with** expression over their name. For example, this entity filter selects all devices whose name starts with **CAT**:
+Allows to filter entity groups based on their type and the **starts with** expression on their name. For example, this entity filter selects all devices with names starting with **CAT**:
 ```javascript
 {
     type: "entityGroupName",
@@ -1223,7 +1231,7 @@ Allows to filter entity groups based on their type and the **starts with** expre
 
 - **Entities by Group Name Filter**
 
-Allows to filter entities that belong to group based on the entity type and the group name. Optional parameter **ownerId** allows you to specify the owner of the group (Tenant or Customer, current user owner by default). For example, this entity filter selects all devices that belong to group **Water Meters**:
+Allows to filter entities that belong to group based on the entity type and the group name. Optional parameter **ownerId** allows you to specify the owner of the group (Tenant or Customer, current user owner by default). For example, this entity filter selects all devices that belong to **Water Meters** group:
 ```javascript
 {
     type: "entitiesByGroupName",
@@ -1232,7 +1240,7 @@ Allows to filter entities that belong to group based on the entity type and the 
 }
 ```
 
-Another example, this entity filter selects all devices that belong to group **Water Meters** which in turn belongs to (sub-)Customer with id **e52b0020-2a7a-11ec-94eb-213c95f54093**:
+Another example, this entity filter selects all devices that belong to **Water Meters** group which in turn belongs to (sub-)Customer with id **e52b0020-2a7a-11ec-94eb-213c95f54093**:
 ```javascript
 {
     type: "entitiesByGroupName",
@@ -1255,6 +1263,54 @@ Allows to fetch owner (Tenant or Customer) of the specified entity. For example,
 }
 ```
 {% endif %}
+
+- **Asset Type Filter**
+
+Allows to filter assets based on their type and the **'starts with'** expression over their name. For example, this entity filter selects all 'charging station' assets with name that start with 'Tesla':
+```javascript
+{
+     type: "assetType", 
+     assetTypes: ["charging station"],
+     assetNameFilter: "Tesla"
+}
+
+```
+
+- **Device Type Filter**
+
+Allows to filter devices based on their type and the **'starts with'** expression over their name. For example, this entity filter selects all 'Temperature Sensor' devices with name that start with 'ABC':
+```javascript
+{
+     type: "deviceType",
+     deviceTypes: ["Temperature Sensor"],
+     deviceNameFilter: "ABC"
+}
+
+```
+
+- **Entity View Filter**
+
+Allows to filter entity views based on their type and the **'starts with'** expression over their name. For example, this entity filter selects all 'Concrete Mixer' entity views with name that start with 'CAT':
+```javascript
+{
+     type: "entityViewType",
+     entityViewTypes: ["Concrete Mixer"],
+     entityViewNameFilter: "CAT"
+}
+
+```
+
+- **Edge Type Filter**
+
+Allows to filter edge instances based on their type and the **'starts with'** expression over their name. For example, this entity filter selects all 'Factory' edge instances with name that start with 'Nevada':
+```javascript
+{
+     type: "edgeType",
+     edgeTypes: ["Factory"], 
+     edgeNameFilter: "Nevada"
+}
+
+```
 
 - **Api Usage Filter**
 
@@ -1383,6 +1439,21 @@ For example, this entity filter selects **Factory** edge instances that are rela
     edgeTypes: [
         "Factory"
     ]
+}
+```
+
+- **Scheduler Event Query**
+
+Allows to filter schedulers based on entity and scheduler event type. For example, this entity filter selects all schedulers with event type **Light switch scheduler** and related to the device with id **e01d2630-d710-11ef-a015-9bbc9baea46f**.
+
+```javascript
+{
+    type: "schedulerEvent",
+    originator: {
+        entityType: "DEVICE", 
+        id: "e01d2630-d710-11ef-a015-9bbc9baea46f"
+    },
+    eventType: "Light switch scheduler"
 }
 ```
 
@@ -1526,7 +1597,7 @@ More complex predicate example, to check **value < 10 or (value > 50 && value < 
 }
 ```
 
-You may also want to replace hardcoded values (for example, temperature > 20) with the more dynamic expression (for example, temperature > value of the tenant attribute with key **temperatureThreshold**). It is possible to use **dynamicValue** to define attribute of the tenant, customer or user that is performing the API call. See example below:
+You may also want to replace hardcoded values (for example, temperature > 20) with the more a dynamic expression (for example, temperature > value of the tenant attribute with key **temperatureThreshold**). It is possible to use **dynamicValue** to define attribute of the tenant, customer or user that is performing the API call. See example below:
 ```javascript
 {
     operation: "GREATER",
@@ -1545,7 +1616,10 @@ Note that you may use **CURRENT_USER**, **CURRENT_CUSTOMER** and **CURRENT_TENAN
 
 Available for users with **TENANT_ADMIN** or **CUSTOMER_USER** authority.
 
-
+{% capture difference %}
+Entities filtering is based on the **"latest"** value of the attribute or time series key. Don't use this feature to **"filter out"** historical time series values.
+{% endcapture %}
+{% include templates/info-banner.md content=difference %}
 
 #### Examples
 
@@ -1556,6 +1630,7 @@ Below is a set of typical custom subscription examples.
 Let's create a custom subscription for the number of devices in the system, and the number of active devices:
 
 ```javascript
+...
 self.onInit = function() {
     ...
     const datasources = [
@@ -1601,9 +1676,9 @@ self.onInit = function() {
                     },
                     predicate: {
                         operation: "EQUAL", //Operation type (You can find full list of operations in Key Filters topic)
-                        type: "BOOLEAN", //Sorting value type
+                        type: "BOOLEAN", //Predicate value type
                         value: {
-                            defaultValue: true //Sorting value
+                            defaultValue: true //Predicate value
                         }
                     },
                     valueType: "BOOLEAN" //Value type
@@ -1618,6 +1693,7 @@ self.onInit = function() {
         callbacks: //Sets callbacks for subscription
         {
             onDataUpdated: () => {
+                //Data ready to processing
                 self.onDataUpdated();
             }
         }
@@ -1625,6 +1701,7 @@ self.onInit = function() {
 
     self.ctx.subscriptionApi.createSubscription(subscriptionOptions, true).subscribe(
         (subscription) => {
+            //Data is not available here! Code below just indicates where data will save.
             self.ctx.defaultSubscription = subscription; //Saves subscription information into widget context
             self.ctx.data = subscription.data; //Saves data into widget context
             self.ctx.datasources = subscription.datasources; //Saves datasource into widget context
@@ -1633,10 +1710,14 @@ self.onInit = function() {
     );
     ...
 }
+
+self.onDataUpdated = function() {
+    //Data processing logic should be place here
+}
 ...
 ```
 
-As a result, will be created subscription to count devices in the system and count active devices (**the widget is illustrative**):
+As a result, a subscription will be created to count devices in the system and count active devices (**the widget is illustrative**):
 
 ![image](/images/user-guide/contribution/widgets/count-subscription.png)
 
@@ -1645,6 +1726,7 @@ As a result, will be created subscription to count devices in the system and cou
 
 Let's create a custom subscription to the latest **temperature** key value for active devices:
 ```javascript
+...
 self.onInit = function() {
     ...
     const datasources = [
@@ -1681,9 +1763,9 @@ self.onInit = function() {
                     },
                     predicate: {
                         operation: "EQUAL", //Operation type (You can find full list of operations in Key Filters topic)
-                        type: "BOOLEAN", //Sorting value type
+                        type: "BOOLEAN", //Predicate value type
                         value: {
-                            defaultValue: true //Sorting value
+                            defaultValue: true //Predicate value
                         }
                     },
                     valueType: "BOOLEAN" //Value type
@@ -1698,6 +1780,7 @@ self.onInit = function() {
         callbacks: //Sets callbacks for subscription
         {
             onDataUpdated: () => {
+                //Data ready to processing
                 self.onDataUpdated();
             }
         }
@@ -1705,6 +1788,7 @@ self.onInit = function() {
 
     self.ctx.subscriptionApi.createSubscription(subscriptionOptions, true).subscribe(
         (subscription) => {
+            //Data is not available here! Code below just indicates where data will save.
             self.ctx.defaultSubscription = subscription; //Saves subscription information into widget context
             self.ctx.data = subscription.data; //Saves data into widget context
             self.ctx.datasources = subscription.datasources; //Saves datasource into widget context
@@ -1713,14 +1797,19 @@ self.onInit = function() {
     );
     ...
 }
+
+self.onDataUpdated = function() {
+ //Data processing logic should be place here
+}
 ...
 ```
+
 As a result a subscription to the **temperature** and **active** keys will be created **only** for active devices (**the widget is illustrative**):
 
 ![image](/images/user-guide/contribution/widgets/attributes-telemetry-subscription.png)
 
 ##### Subscription with PageLink
-Let's create a custom subscription to the latest **temperature** key value that **greatest** 30 with two entities on the page:
+Let's create a custom subscription to the latest **temperature** key value that is **greater** than 30 with two entities on the page:
 
 ```javascript
 ...
@@ -1747,7 +1836,9 @@ self.onInit = function() {
             entityFilter: //Describes entities (See Entity Filters topic)
             {
                 type: "deviceType", //Entity filter type
-                deviceType: "thermostat" //Device type
+                deviceTypes: [
+                    "thermostat" //Device type
+                ]
             },
             keyFilters: //Filtering entity by keys (See Key Filter topic)
             [
@@ -1758,9 +1849,9 @@ self.onInit = function() {
                     },
                     predicate: {
                         operation: "GREATER", //Operation type (You can find full list of operations in Key Filters topic)
-                        type: "NUMERIC", //Sorting value type
+                        type: "NUMERIC", //Predicate value type
                         value: {
-                            defaultValue: 30 //Sorting value
+                            defaultValue: 30 //Predicate value
                         }
                     },
                     valueType: "NUMERIC" //Value type
@@ -1776,6 +1867,7 @@ self.onInit = function() {
         callbacks: //Sets callbacks for subscription
         {
             onDataUpdated: () => {
+                //Data ready to processing
                 self.onDataUpdated();
             }
         }
@@ -1789,6 +1881,7 @@ self.onInit = function() {
 
      self.ctx.subscriptionApi.createSubscription(subscriptionOptions, true).subscribe(
         (subscription) => {
+            //Data is not available here! Code below just indicates where data will save.
             self.ctx.defaultSubscription = subscription; //Saves subscription information into widget context
             subscribeForPaginatedData(self.ctx.$scope.pageLink);
             self.ctx.data = subscription.data; //Saves data into widget context
@@ -1801,11 +1894,16 @@ self.onInit = function() {
     ...
 }
 
+self.onDataUpdated = function() {
+ //Data processing logic should be place here
+}
+
 function subscribeForPaginatedData(pageLink) {
     self.ctx.defaultSubscription.subscribeAllForPaginatedData(pageLink, null); //Get information by pageLink params
 }
 ...
 ```
+
 As a result, a subscription to the **temperature** and **active** keys will be created using PageLink (**the widget is illustrative**):
 
 ![image](/images/user-guide/contribution/widgets/page-link-subscription.png)
@@ -1848,30 +1946,24 @@ self.onInit = function() {
         }
     ];
 
-    self.ctx.$scope.pageLink = {
-        page: 0, //Page Number
-        pageSize: 2  //Number of entities per page
-    };
-
     const subscriptionOptions = { 
         type: 'timeseries', //Subscription type
         datasources: datasources, //Describes what data you want to subscribe
-        hasDataPageLink: true, //Sets subscription into pageLink mode
         ignoreDataUpdateOnIntervalTick: true, //if true onDataUpdated will be triggered only when new data appears otherwise onDataUpdate will be triggered every second
         useDashboardTimewindow: true,
         callbacks: //Sets callbacks for subscription
         {
             onDataUpdated: () => {
+                //Data ready to processing
                 self.onDataUpdated();
             }
         }
     };
-
-
+    
      self.ctx.subscriptionApi.createSubscription(subscriptionOptions, true).subscribe(
         (subscription) => {
+            //Data is not available here! Code below just indicates where data will save.
             self.ctx.defaultSubscription = subscription; //Saves subscription information into widget context
-            subscribeForPaginatedData(self.ctx.$scope.pageLink);
             self.ctx.data = subscription.data; //Saves data into widget context
             self.ctx.datasources = subscription.datasources; //Saves datasource into widget context
             self.ctx.dataPages = subscription.dataPages; //Saves dataPages into widget context
@@ -1882,20 +1974,20 @@ self.onInit = function() {
     ...
 }
 
-function subscribeForPaginatedData(pageLink) {
-    self.ctx.defaultSubscription.subscribeAllForPaginatedData(pageLink, null); //Get information by pageLink params
+self.onDataUpdated = function() {
+ //Data processing logic should be place here
 }
 ...
 ```
 
-As a result, will be created subscription to the **temperature** telemetry time-series (**the widget is illustrative**):
+As a result, a subscription to the **temperature** telemetry time-series will be created (**the widget is illustrative**):
 
 ![image](/images/user-guide/contribution/widgets/timeseries-subscrition.png)
 
 
 ##### Subscription for alarms
 Let’s create a custom subscription to the alarms from **thermostat** type devices
- 
+
 ```javascript
 ...
 self.onInit = function() {
@@ -1928,7 +2020,9 @@ self.onInit = function() {
         entityFilter: //Describes entities (See Entity Filters topic)
         {
             type: "deviceType", //Entity filter type
-            deviceType: "thermostat" //Device type
+            deviceTypes: [
+                "thermostat" //Device type
+            ]
         }
     };
 
@@ -1955,13 +2049,15 @@ self.onInit = function() {
         callbacks: //Sets callbacks for subscription
         {
             onDataUpdated: () => {
-               ...
+                //Data ready to processing
+                self.onDataUpdated();
             }
         }
     };
 
     self.ctx.subscriptionApi.createSubscription(subscriptionOptions, true).subscribe(
         (subscription) => {
+            //Data is not available here! Code below just indicates where data will save.
             self.ctx.alarmsSubscription = subscription; //Saves subscription information into widget context
             self.ctx.alarmsSubscription.subscribeForAlarms(alarmDataPageLink, null); //Get information by pageLink params
             ...
@@ -1969,8 +2065,13 @@ self.onInit = function() {
     );
     ...
 }
+
+self.onDataUpdated = function() {
+ //Data processing logic should be place here
+}
 ...
 ```
+
 As a result, a subscription to the thermostat's alarms will be created (**the widget is illustrative**):
 
 ![image](/images/user-guide/contribution/widgets/alarm-subscription.png)
@@ -2006,12 +2107,15 @@ First of all, we need to create a custom setting schema that will contain user's
 
 Now let's create a custom subscription. For clarity, we will add two fields: one contains the original value and the second one contains the processed value:
 ```javascript
-   const datasources = [
+...
+self.onInit = function() {
+    ...
+    const datasources = [
         {
             type: "entity", //Indicates that there is a subscription to entity data
             dataKeys: //Describes keys
             [
-                 {
+                {
                     decimals: 0, //Number of digits after floating point for this key
                     label: "Weight telemetry", //Key label
                     name: "weight", //Key name
@@ -2033,7 +2137,7 @@ Now let's create a custom subscription. For clarity, we will add two fields: one
                     name: "active",
                     settings: {},
                     type: "attribute"
-                 }
+                }
             ],
             entityFilter: //Describes entities (See Entity Filters topic)
             {
@@ -2049,9 +2153,9 @@ Now let's create a custom subscription. For clarity, we will add two fields: one
                     },
                     predicate: {
                         operation: "EQUAL", //Operation type (You can find full list of operations in Key Filters topic)
-                        type: "BOOLEAN", //Sorting value type
+                        type: "BOOLEAN", //Predicate value type
                         value: {
-                            defaultValue: true //Sorting value
+                            defaultValue: true //Predicate value
                         }
                     },
                     valueType: "BOOLEAN" //Value type
@@ -2066,19 +2170,27 @@ Now let's create a custom subscription. For clarity, we will add two fields: one
         callbacks: //Sets callbacks for subscription
         {
             onDataUpdated: () => {
-                self.onDataUpdated();
+                //Data ready to processing
+                 self.onDataUpdated();
             }
         }
-   };
+    };
 
     self.ctx.subscriptionApi.createSubscription(subscriptionOptions, true).subscribe(
         (subscription) => {
+            //Data is not available here! Code below just indicates where data will save.
             self.ctx.defaultSubscription = subscription; //Saves subscription information into widget context
             self.ctx.data = subscription.data; //Saves data into widget context
             self.ctx.datasources = subscription.datasources; //Saves datasource into widget context
-            ...
+        ...
         }
     );
+}
+
+self.onDataUpdated = function() {
+ //Data processing logic should be place here
+}
+...
 ```
 The subscription is ready now let's convert weight telemetry from kilograms into grams:
 ![image](/images/user-guide/contribution/widgets/post-processing-function-example.png)
@@ -2106,7 +2218,7 @@ self.onInit = function () {
 };
 ```
 
-Now, the report service will wait until widget sends information about its loading status or the waiting timeout will expires. We will inform the report service about the successful loading of widget inside ```self.onDataUpdated```:
+Now, the report service will wait until widget sends information about its loading status or the waiting timeout expires. We will inform the report service about the successful loading of widget inside ```self.onDataUpdated```:
 ```javascript
 self.onDataUpdated = function () {
     ...data is ready
@@ -2130,24 +2242,24 @@ Below are some examples demonstrating how external JavaScript libraries or exist
 In this example, **Latest Values** gauge widget will be created using external [gauge.js](http://bernii.github.io/gauge.js/) library.
 
 In the **Widgets Bundle** view, click the big “+” button at the bottom-right part of the screen, then click the “Create new widget type” button.
-Click the **Latest Values** button on the **Select widget type** popup.
+Click the **Latest Values** button on the **Select widget type** pop-up.
 The **Widget Editor** will be opened, pre-populated with the content of default **Latest Values** template widget.
 
- - Open **Resources** tab and click "Add" then insert the following link:
+- Open **Resources** tab and click "Add" then insert the following link:
 
 ```
 https://bernii.github.io/gauge.js/dist/gauge.min.js
 ```
 
- - Clear content of the CSS tab of "Resources" section.
- - Put the following HTML code inside the HTML tab of "Resources" section:
- 
+- Clear content of the CSS tab of "Resources" section.
+- Put the following HTML code inside the HTML tab of "Resources" section:
+
 ```html
   {% raw  %}<canvas id="my-gauge"></canvas>{% endraw %}
 ```
 
- - Put the following JavaScript code inside the "JavaScript" section:
- 
+- Put the following JavaScript code inside the "JavaScript" section:
+
 ```javascript
 var canvasElement;
 var gauge;
@@ -2176,35 +2288,35 @@ self.onDataUpdated = function() {
 }
 ```
 
- - Click the **Run** button on the **Widget Editor Toolbar** in order to see the result in **Widget preview** section.
+- Click the **Run** button on the **Widget Editor Toolbar** in order to see the result in **Widget preview** section.
 
 ![image](/images/user-guide/contribution/widgets/external-js-widget-sample.png)
 
-In this example, the external JS library API was used that becomes available after injecting the corresponding URL in **Resources** section.
-The value displayed was obtained from [subscription](#subscription-object) **data** property for the first dataKey. 
+In this example, the external JS library API was used, which becomes available after injecting the corresponding URL in **Resources** section.
+The displayed value was obtained from [subscription](#subscription-object) **data** property for the first dataKey.
 
 #### Time-Series Example
 
 In this example, **Time-Series** line chart widget will be created using external [Chart.js](https://www.chartjs.org/) library.
 
 In the **Widgets Bundle** view, click the big “+” button at the bottom-right part of the screen, then click the “Create new widget type” button.
-Click the **Time-Series** button on the **Select widget type** popup.
+Click the **Time-Series** button on the **Select widget type** pop-up.
 The **Widget Editor** will be opened, pre-populated with the content of default **Time-Series** template widget.
 
- - Open **Resources** tab and click "Add" then insert the following link:
+- Open **Resources** tab and click "Add" then insert the following link:
 
 ```  
 https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js
 ```
 
- - Clear content of the CSS tab of "Resources" section.
- - Put the following HTML code inside the HTML tab of "Resources" section:
+- Clear content of the CSS tab of "Resources" section.
+- Put the following HTML code inside the HTML tab of "Resources" section:
 
 ```html
   {% raw  %}<canvas id="myChart"></canvas>{% endraw %}
 ```
 
- - Put the following JavaScript code inside the "JavaScript" section:
+- Put the following JavaScript code inside the "JavaScript" section:
 
 ```javascript
 var myChart;
@@ -2275,19 +2387,19 @@ self.onDataUpdated = function() {
 }
 ```
 
- - Click the **Run** button on the **Widget Editor Toolbar** in order to see the result in **Widget preview** section.
+- Click the **Run** button on the **Widget Editor Toolbar** in order to see the result in **Widget preview** section.
 
 ![image](/images/user-guide/contribution/widgets/external-js-timeseries-widget-sample.png)
 
-In this example, the external JS library API was used that becomes available after injecting the corresponding URL in **Resources** section.
+In this example, the external JS library API was used, which becomes available after injecting the corresponding URL in **Resources** section.
 Initially chart datasets prepared using configured dataKeys from **data** property of **ctx**.
 In the **onDataUpdated** function datasources data converted to Chart.js line chart format and pushed to chart datasets.
-Please note that xAxis (time axis) is limited to current timewindow bounds obtained from **timeWindow** property of **ctx**.  
+Please note that xAxis (time axis) is limited to current timewindow bounds obtained from **timeWindow** property of **ctx**.
 
 ### Using existing JavaScript code
 
 Another approach of creating widgets is to use existing bundled JavaScript code.
-In this case, you can create own TypeScript class or Angular component and bundle it into the IoT Hub UI code.
+In this case, you can create your own TypeScript class or Angular component and bundle it into the IoT Hub UI code.
 In order to make this code accessible within the widget, you need to register corresponding Angular module or inject TypeScript class to a global variable (for ex. window object).
 Some of the IoT Hub widgets already use this approach. Take a look at the [polyfills.ts](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/polyfills.ts#L106)
 or [widget-components.module.ts](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/modules/home/components/widget/widget-components.module.ts#L44).
@@ -2306,7 +2418,7 @@ import { TbFlot } from '@home/components/widget/lib/flot-widget';
 ```
 
 Another example is "Timeseries table" widget (from "Cards" Widgets Bundle) that uses Angular component [**tb-timeseries-table-widget**](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/modules/home/components/widget/lib/timeseries-table-widget.component.ts#L99) which is registered as dependency of **WidgetComponentsModule** Angular module inside **widget-components.module.ts**.
-Thereby this component becomes available for use inside the widget template HTML. 
+Thereby this component becomes available for use inside the widget template HTML.
 
 ```typescript
 ...
@@ -2345,45 +2457,65 @@ Browser debugger (if enabled) will automatically pause code execution at the deb
 
 ## IoT Hub extensions
 
-[ThingsBoard extensions](https://github.com/thingsboard/thingsboard-extensions){:target="_blank"} is our additional project that allows you to create your own angular components and use them in your widgets and actions.
+[IoT Hub extensions](https://github.com/thingsboard/thingsboard-extensions){:target="_blank"} is our additional project that allows you to create your own angular components and use them in your widgets and actions.
 We highly recommend using this feature for any complex logic in your solutions, because it provides you an opportunity to reuse your code, using all functionality of TypeScript, RXJS, Angular, etc.
 In this topic, we will cover how to connect your extensions in IoT Hub 3.6 and higher using our UI.
 
 {% capture difference %}
-**Important remark**: you can use **extensions** even if you use previous versions of ThingsBoard(before 3.6). For this, you will need to load the extension file manually to your server and restart it. All the necessary information can be found in the **README** file in the corresponding branches of the extensions project. [This branch](https://github.com/thingsboard/thingsboard-extensions/tree/release-3.1) is used for the IoT Hub 3.1.0 - 3.4.1 version and [this one](https://github.com/thingsboard/thingsboard-extensions/tree/release-3.5) is for 3.5 - 3.5.1 version.
+**Important remark**: you can use **extensions** even if you use previous versions of IoT Hub(before 3.6). For this, you will need to load the extension file manually to your server and restart it. All the necessary information can be found in the **README** file in the corresponding branches of the extensions project. [This branch](https://github.com/thingsboard/thingsboard-extensions/tree/release-3.1) is used for the ThingsBoard 3.1.0 - 3.4.1 version and [this one](https://github.com/thingsboard/thingsboard-extensions/tree/release-3.5) is for 3.5 - 3.5.1 version.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
-First of all, you need a file with your compiled components. By default, it is called **thingsboard-extension-widgets.js**. All instructions on how to create it can be found inside the **README** file to [ThingsBoard extensions](https://github.com/thingsboard/thingsboard-extensions){:target="_blank"}.
+First of all, you need a file with your compiled components. By default, it is called **thingsboard-extension-widgets.js**. All instructions on how to create it can be found inside the **README** file to [IoT Hub extensions](https://github.com/thingsboard/thingsboard-extensions){:target="_blank"}.
 
-Once you have the file with your components, let's proceed to load them into ThingsBoard:
+Once you have the file with your components, let's proceed to load them into IoT Hub:
 
 - Go to the "**JavaScript library**" page inside "**Resources**" section;
-- Click the "**Add JavaScript resource**" button (the "plus" icon in the upper right corner of the window);
-- In the open popup, select "**Extension**" in the "**JavaScript type**" selector (or "**Module**" to paste a piece of code);
+- Click the "**Add JavaScript resource**" button (the "plus" icon in the upper-right corner of the window);
+- In the open pop-up, select "**Extension**" in the "**JavaScript type**" selector (or "**Module**" to paste a piece of code);
 - Enter title for your module;
 - Drag the file with your compiled components;
 - Click "Add".
 
-Congratulations, your components were added to the IoT Hub!
+Congratulations, your components have been added to the IoT Hub!
 
 {% include images-gallery.html imageCollection="add-js-module" %}
 
 <br>
-Now, let's use them in some widget. We shall create a simple static widget that will use components from our extensions (in case you have questions about how to create a new widget, you should read [this topic](#creating-new-widget-definition)):
+Now, let's use them in some widget. We shall create a simple latest value widget that will use components from our extensions (in case you have questions about how to create a new widget, you should read [this topic](#creating-new-widget-definition)):
 
 - Go to the "**Widgets library**" page of the "**Resources**" section;
-- Click the "**plus**" icon in the upper right corner of the window, and select the "**Create new widget**" option;
-- Select widget type - "**Static widget**";
+- Click the "**plus**" icon in the upper-right corner of the window, and select the "**Create new widget**" option;
+- Select widget type - "**Latest value**";
 - Enter widget name;
 - Navigate to the "**Resources**" tab, and click "**Add**" button;
 - Check the "**Is extension**" box;
-- Choose your extension module from drop-don menu;
+- Choose your extension module from the drop-don menu;
 
 Your module is connected to your widget. Now, you can use your angular components:
 
-- Go the "**HTML**" tab, and add the custom component;
-- Clean the default **self.onInit** function;
+- Go to the "**HTML**" tab, and add the custom component. In our case it will be **tb-example-table** (don't forget to add **ctx**);
+- Clean the default content of **self.onInit**, **self.onDataUpdated**, **self.onResize** functions;
+- Add to the onDataUpdated function next code:
+  ```javascript
+  self.ctx.$scope.exampleTableComponent.onDataUpdated();
+  ```
+  {: .copy-code}
+  It will trigger the update function inside a custom component when the widget receives new data;
+- Add next function:
+  ```javascript
+  self.typeParameters = function() {
+    return {
+        maxDatasources: 1, //Maximum number of datasources 1
+        singleEntity: true, //Allow only one entity
+        previewWidth: '250px', //Default size of preview X axis 
+        previewHeight: '250px', //Default size of preview Y axis 
+        embedTitlePanel: true, //Hided title panel
+    };
+  };
+  ```
+  {: .copy-code}
+  It sets behavior rules for the widget
 - Click the "Run" button to preview how your widget will look;
 - To apply the changes, click the "Save" button.
 
@@ -2391,7 +2523,7 @@ Now, your component is used inside your widget.
 
 {% include images-gallery.html imageCollection="select-extensions-module" %}
 
-In general, [ThingsBoard extensions](https://github.com/thingsboard/thingsboard-extensions){:target="_blank"} allows you to create any possible widgets in the scope of IoT Hub platforms.
+In general, [IoT Hub extensions](https://github.com/thingsboard/thingsboard-extensions){:target="_blank"} allow you to create any possible widgets in the scope of IoT Hub platforms.
 
 Good luck with your future awesome solutions!
 
