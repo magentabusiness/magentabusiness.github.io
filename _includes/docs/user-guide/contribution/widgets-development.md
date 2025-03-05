@@ -330,7 +330,7 @@ The widget subscription object is instance of [IWidgetSubscription](https://gith
 Depending on widget type, subscription object provides different data structures.
 For [Latest values](/docs/{{docsPrefix}}user-guide/ui/widget-library/#latest-values) and [Time-series](/docs/{{docsPrefix}}user-guide/ui/widget-library/#time-series) widget types, it provides the following properties:
 
-- **datasources** - array of datasources (Array<[Datasource](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L250)>) used by this subscription, it has the following structure:
+ - **datasources** - array of datasources (Array<[Datasource](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L250)>) used by this subscription, it has the following structure:
 
 ```javascript
     datasources = [
@@ -357,7 +357,7 @@ For [Latest values](/docs/{{docsPrefix}}user-guide/ui/widget-library/#latest-val
     ]
 ```
 
-- **data** - array of latest data (Array<[DatasourceData](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L275)>) received in scope of this subscription, it has the following structure:
+  - **data** - array of latest data (Array<[DatasourceData](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L275)>) received in scope of this subscription, it has the following structure:
 
 ```javascript
     data = [
@@ -378,7 +378,7 @@ For [Latest values](/docs/{{docsPrefix}}user-guide/ui/widget-library/#latest-val
 
 For [Alarm widget](/docs/{{docsPrefix}}user-guide/ui/widget-library/#alarm-widget) type it provides the following properties:
 
-- **alarmSource** - ([Datasource](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L250)) information about entity for which alarms are fetched, it has the following structure:
+ - **alarmSource** - ([Datasource](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L250)) information about entity for which alarms are fetched, it has the following structure: 
 
 ```javascript
     alarmSource = {
@@ -401,7 +401,7 @@ For [Alarm widget](/docs/{{docsPrefix}}user-guide/ui/widget-library/#alarm-widge
     }
 ```
 
-- **alarms** - array of alarms (Array<[Alarm](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/alarm.models.ts#L88)>) received in scope of this subscription, it has the following structure:
+  - **alarms** - array of alarms (Array<[Alarm](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/alarm.models.ts#L88)>) received in scope of this subscription, it has the following structure:
 
 ```javascript
     alarms = [
@@ -816,22 +816,22 @@ self.onInit = function() {
 
 To test how this widget performs RPC commands, we will need to place it in a dashboard then bind it to a device working with RPC commands. To do this, perform the following steps:
 
-- Login as Tenant administrator.
-- Navigate to **Devices** and create new device with some name, for ex. "My RPC Device".
-- Open device details and click "Copy Access Token" button to copy device access token to clipboard.
-- Download [mqtt-js-rpc-from-server.sh](/docs/{{docsPrefix}}reference/resources/mqtt-js-rpc-from-server.sh) and [mqtt-js-rpc-from-server.js](/docs/{{docsPrefix}}reference/resources/mqtt-js-rpc-from-server.js). Place these files in a folder.
-  Edit **mqtt-js-rpc-from-server.sh** - replace **$ACCESS_TOKEN** with your device access token from the clipboard. Then, install mqtt client library.
-- Run **mqtt-js-rpc-from-server.sh** script. You should see a "connected" message in the console.
-- Navigate to **Dashboards** and create a new dashboard with some name, for ex. "My first control dashboard". Open this dashboard.
-- Click dashboard "edit" button. In the dashboard edit mode, click the "Entity aliases" button located on the dashboard toolbar.
+ - Login as Tenant administrator.
+ - Navigate to **Devices** and create new device with some name, for ex. "My RPC Device".
+ - Open device details and click "Copy Access Token" button to copy device access token to clipboard.
+ - Download [mqtt-js-rpc-from-server.sh](/docs/{{docsPrefix}}reference/resources/mqtt-js-rpc-from-server.sh) and [mqtt-js-rpc-from-server.js](/docs/{{docsPrefix}}reference/resources/mqtt-js-rpc-from-server.js). Place these files in a folder. 
+ Edit **mqtt-js-rpc-from-server.sh** - replace **$ACCESS_TOKEN** with your device access token from the clipboard. Then, install mqtt client library.
+ - Run **mqtt-js-rpc-from-server.sh** script. You should see a "connected" message in the console.
+ - Navigate to **Dashboards** and create a new dashboard with some name, for ex. "My first control dashboard". Open this dashboard.
+ - Click dashboard "edit" button. In the dashboard edit mode, click the "Entity aliases" button located on the dashboard toolbar.
 
 ![image](/images/user-guide/contribution/widgets/dashboard-toolbar-entity-aliases.png)
 
-- Inside **Entity aliases** pop-up click "Add alias".
-- Fill "Alias name" field, for ex. "My RPC Device Alias".
-- Select "Entity list" in "Filter type" field.
-- Choose "Device" in "Type" field.
-- Select your device in "Entity list" field. In this example "My RPC Device".
+ - Inside **Entity aliases** pop-up click "Add alias".
+ - Fill "Alias name" field, for ex. "My RPC Device Alias".
+ - Select "Entity list" in "Filter type" field.
+ - Choose "Device" in "Type" field.
+ - Select your device in "Entity list" field. In this example "My RPC Device".
 
 ![image](/images/user-guide/contribution/widgets/add-rpc-device-alias.png)
 
@@ -840,13 +840,13 @@ To test how this widget performs RPC commands, we will need to place it in a das
 
 ![image](/images/user-guide/contribution/widgets/dashboard-create-new-widget-button.png)
 
-- Then select **Widget Bundle** where your RPC widget was saved. Select "Control widget" tab.
-- Click your widget. In this example, "My first control widget".
-- From **Add Widget** pop-up, select your device alias in **Target device** section. In this example "My RPC Device Alias".
-- Click **Add**. Your Control widget will appear on the dashboard. Click the dashboard's **Apply changes** button to save the dashboard and exit editing mode.
-- Fill **RPC method** field with RPC method name. For ex. "TestMethod".
-- Fill **RPC params** field with RPC params. For ex. "{ param1: "value1" }".
-- Click **Send RPC command** button. You should see the following response in the widget.
+ - Then select **Widget Bundle** where your RPC widget was saved. Select "Control widget" tab.
+ - Click your widget. In this example, "My first control widget".
+ - From **Add Widget** pop-up, select your device alias in **Target device** section. In this example "My RPC Device Alias".
+ - Click **Add**. Your Control widget will appear on the dashboard. Click the dashboard's **Apply changes** button to save the dashboard and exit editing mode.
+ - Fill **RPC method** field with RPC method name. For ex. "TestMethod".
+ - Fill **RPC params** field with RPC params. For ex. "{ param1: "value1" }".
+ - Click **Send RPC command** button. You should see the following response in the widget.
 
 ![image](/images/user-guide/contribution/widgets/control-widget-sample-response-one-way.png)
 
@@ -859,8 +859,8 @@ The following output should be printed in the device console:
 
 In order to test "Two way" RPC command mode, we need to change the corresponding widget settings property. To do this, perform the following steps:
 
-- Click dashboard "edit" button. In dashboard edit mode, click **Edit widget** button located in the header of Control widget.
-- In the widget details, select "Advanced" tab and uncheck "Is One Way Command" checkbox.
+ - Click dashboard "edit" button. In dashboard edit mode, click **Edit widget** button located in the header of Control widget.
+ - In the widget details, select "Advanced" tab and uncheck "Is One Way Command" checkbox.
 
 ![image](/images/user-guide/contribution/widgets/control-widget-sample-settings.png)
 
@@ -2293,7 +2293,7 @@ self.onDataUpdated = function() {
 ![image](/images/user-guide/contribution/widgets/external-js-widget-sample.png)
 
 In this example, the external JS library API was used, which becomes available after injecting the corresponding URL in **Resources** section.
-The displayed value was obtained from [subscription](#subscription-object) **data** property for the first dataKey.
+The displayed value was obtained from [subscription](#subscription-object) **data** property for the first dataKey. 
 
 #### Time-Series Example
 
@@ -2462,7 +2462,7 @@ We highly recommend using this feature for any complex logic in your solutions, 
 In this topic, we will cover how to connect your extensions in IoT Hub 3.6 and higher using our UI.
 
 {% capture difference %}
-**Important remark**: you can use **extensions** even if you use previous versions of IoT Hub(before 3.6). For this, you will need to load the extension file manually to your server and restart it. All the necessary information can be found in the **README** file in the corresponding branches of the extensions project. [This branch](https://github.com/thingsboard/thingsboard-extensions/tree/release-3.1) is used for the ThingsBoard 3.1.0 - 3.4.1 version and [this one](https://github.com/thingsboard/thingsboard-extensions/tree/release-3.5) is for 3.5 - 3.5.1 version.
+**Important remark**: you can use **extensions** even if you use previous versions of IoT Hub(before 3.6). For this, you will need to load the extension file manually to your server and restart it. All the necessary information can be found in the **README** file in the corresponding branches of the extensions project. [This branch](https://github.com/thingsboard/thingsboard-extensions/tree/release-3.1) is used for the IoT Hub 3.1.0 - 3.4.1 version and [this one](https://github.com/thingsboard/thingsboard-extensions/tree/release-3.5) is for 3.5 - 3.5.1 version.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -2496,13 +2496,13 @@ Your module is connected to your widget. Now, you can use your angular component
 
 - Go to the "**HTML**" tab, and add the custom component. In our case it will be **tb-example-table** (don't forget to add **ctx**);
 - Clean the default content of **self.onInit**, **self.onDataUpdated**, **self.onResize** functions;
-- Add to the onDataUpdated function next code:
+- Add to the onDataUpdated function next code:  
   ```javascript
   self.ctx.$scope.exampleTableComponent.onDataUpdated();
   ```
   {: .copy-code}
   It will trigger the update function inside a custom component when the widget receives new data;
-- Add next function:
+- Add next function: 
   ```javascript
   self.typeParameters = function() {
     return {
