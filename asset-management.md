@@ -2,7 +2,7 @@
 layout: iot-article
 title: ᐉ Assets Management Software — IoT Asset Tracking System
 notitle: "true"
-description: "Digital asset management system ✔Asset inventory management software ⚫ ThingsBoard ➤ Helps track ✔ assets ✔ inventory ✔ tools ✔ and more"
+description: "Digital asset management system ✔Asset inventory management software ⚫ IoT Hub ➤ Helps track ✔ assets ✔ inventory ✔ tools ✔ and more"
 
 ---
 <section class="hero light-text"></section>
@@ -15,7 +15,7 @@ description: "Digital asset management system ✔Asset inventory management soft
         </div>
         <img style="box-shadow: 0px 0px 40px 10px #00000014;" class="image" srcset="/images/iot-articles/asset-management_1_1090x658.png 1090w, /images/iot-articles/asset-management_1_2180x1316.png 2180w" sizes="(max-width: 1920px) 1090px, (min-width: 1921px) 2180px" src="/images/iot-articles/asset-management_1_1090x658.png" alt="IoT solutions dashboard with widgets dark"/>
         <div class="text-wrapper">
-            <div class="text-content medium-margin">ThingsBoard assets management software is a comprehensive solution that enables you to track, manage, and organize digital assets throughout their usable life. It provides detailed information about all asset data — from its procurement stage, continued maintenance, current status, and location, as well as who is responsible for it. ThingsBoard offers flexibility and scalable asset management tools that can handle any type and number of assets, from simple to complex, from small to large.</div>
+            <div class="text-content medium-margin">IoT Hub assets management software is a comprehensive solution that enables you to track, manage, and organize digital assets throughout their usable life. It provides detailed information about all asset data — from its procurement stage, continued maintenance, current status, and location, as well as who is responsible for it. IoT Hub offers flexibility and scalable asset management tools that can handle any type and number of assets, from simple to complex, from small to large.</div>
         </div>
         <div class="text-wrapper">
             <h2>Processes Behind Assets Management Software</h2>
@@ -44,8 +44,8 @@ description: "Digital asset management system ✔Asset inventory management soft
                 <li><span class="bold-text">Ensure regulatory compliance and security.</span> Through features like role-based access control and secure data exchange protocols, businesses can safeguard sensitive information while adhering to industry-specific compliance requirements.</li>
                 <li><span class="bold-text">Save costs and time.</span> Asset inventory software allows companies to spend less time and money on internal hiring and external partners.</li>
             </ul>
-            <h2>ThingsBoard's IoT Tracking Solutions</h2>
-            <div class="text-content">ThingsBoard takes pride in offering a robust suite of asset-tracking IoT solutions that cater to the specific needs of diverse industries. These solutions are designed to seamlessly integrate with existing workflows and provide actionable insights for efficient asset management.</div>
+            <h2>IoT Hub's IoT Tracking Solutions</h2>
+            <div class="text-content">IoT Hub takes pride in offering a robust suite of asset-tracking IoT solutions that cater to the specific needs of diverse industries. These solutions are designed to seamlessly integrate with existing workflows and provide actionable insights for efficient asset management.</div>
         </div>
         <div class="definitions-block">
             <div class="definitions-list side-paddings">
@@ -55,11 +55,11 @@ description: "Digital asset management system ✔Asset inventory management soft
                 </div>
                 <div class="definitions-list-item one-to-one-and-half align-start">
                     <div class="term bold">Robust security measures</div>
-                    <div class="definition">ThingsBoard ensures secure data exchange and implements role-based access control to protect confidential information and comply with industry standards.</div>
+                    <div class="definition">IoT Hub ensures secure data exchange and implements role-based access control to protect confidential information and comply with industry standards.</div>
                 </div>
                 <div class="definitions-list-item one-to-one-and-half align-start">
                     <div class="term bold padding-top">Integration with 3rd party systems</div>
-                    <div class="definition">ThingsBoard ensures a holistic approach to asset management, integrating with third-party systems such as CRM, ERP, CMMS, etc.</div>
+                    <div class="definition">IoT Hub ensures a holistic approach to asset management, integrating with third-party systems such as CRM, ERP, CMMS, etc.</div>
                 </div>
                 <div class="definitions-list-item one-to-one-and-half align-start">
                     <div class="term bold">Scalability and flexibility</div>
@@ -81,27 +81,27 @@ description: "Digital asset management system ✔Asset inventory management soft
         </div>
         <div class="text-wrapper">
             <h1>IoT Asset Management Dashboard Examples</h1>
-            <div class="text-content medium-margin">Explore a glimpse of the intuitive and insightful dashboards available through ThingsBoard's IoT asset management software. From real-time location tracking to comprehensive health monitoring, our dashboards empower users with actionable insights for streamlined asset management.</div>
+            <div class="text-content medium-margin">Explore a glimpse of the intuitive and insightful dashboards available through IoT Hub's IoT asset management software. From real-time location tracking to comprehensive health monitoring, our dashboards empower users with actionable insights for streamlined asset management.</div>
         </div>
         <img class="image" srcset="/images/iot-articles/asset-management_2_1090x682.png 1090w, /images/iot-articles/asset-management_2_2180x1364.png 2180w" sizes="(max-width: 1920px) 1090px, (min-width: 1921px) 2180px" src="/images/iot-articles/asset-management_2_1090x682.png" alt="IoT solutions dashboard with widgets dark"/>
         <div class="text-wrapper">
-            <h1>ThingsBoard Benefits:</h1>
-            <div class="text-content medium-margin">When choosing an asset inventory management software, ThingsBoard sets itself apart with a range of unique advantages tailored to meet our client's specific needs.</div>
+            <h1>IoT Hub Benefits:</h1>
+            <div class="text-content medium-margin">When choosing an asset inventory management software, IoT Hub sets itself apart with a range of unique advantages tailored to meet our client's specific needs.</div>
             <h4 class="h4-left">Deep Industry Expertise</h4>
-            <div class="text-content medium-margin">ThingsBoard boasts a team of experts with extensive knowledge in asset tracking. This specialized insight allows us to develop solutions that are tuned to the challenges faced by various industries.</div>
+            <div class="text-content medium-margin">IoT Hub boasts a team of experts with extensive knowledge in asset tracking. This specialized insight allows us to develop solutions that are tuned to the challenges faced by various industries.</div>
             <h4 class="h4-left">Dedication to Innovation</h4>
-            <div class="text-content medium-margin">Our commitment to staying at the forefront of technological advancements ensures that our clients will have access to cutting-edge solutions. ThingsBoard continuously evolves to meet the changing needs of the market.</div>
+            <div class="text-content medium-margin">Our commitment to staying at the forefront of technological advancements ensures that our clients will have access to cutting-edge solutions. IoT Hub continuously evolves to meet the changing needs of the market.</div>
             <h4 class="h4-left">Customizable Solutions</h4>
-            <div class="text-content medium-margin">We understand that one size doesn't fit all. ThingsBoard offers highly customizable software asset management tools that can be tailored to the requirements of each client, providing a truly personalized experience.</div>
+            <div class="text-content medium-margin">We understand that one size doesn't fit all. IoT Hub offers highly customizable software asset management tools that can be tailored to the requirements of each client, providing a truly personalized experience.</div>
             <h4 class="h4-left">Robust Customer Support</h4>
-            <div class="text-content medium-margin">ThingsBoard takes pride in delivering exceptional customer support. Our dedicated team is readily available to address any queries, provide assistance, and ensure a seamless experience for our clients.</div>
+            <div class="text-content medium-margin">IoT Hub takes pride in delivering exceptional customer support. Our dedicated team is readily available to address any queries, provide assistance, and ensure a seamless experience for our clients.</div>
             <h4 class="h4-left">Global Reach and Presence</h4>
-            <div class="text-content medium-margin">ThingsBoard's asset management solutions influence on a global scale, serving clients in various countries and industries. This international presence reflects our ability to adapt to diverse business environments.</div>
-            <div class="text-content medium-margin">We go beyond standard offerings to provide a tailored, innovative, and reliable IoT asset-tracking system that truly sets us apart. With a history of successful implementations and satisfied clients, ThingsBoard has established itself as a trusted partner in asset-tracking IoT. Our cases speak for itself.</div>
+            <div class="text-content medium-margin">IoT Hub's asset management solutions influence on a global scale, serving clients in various countries and industries. This international presence reflects our ability to adapt to diverse business environments.</div>
+            <div class="text-content medium-margin">We go beyond standard offerings to provide a tailored, innovative, and reliable IoT asset-tracking system that truly sets us apart. With a history of successful implementations and satisfied clients, IoT Hub has established itself as a trusted partner in asset-tracking IoT. Our cases speak for itself.</div>
         </div>
         <div class="text-wrapper">
             <h1>Our Cases:</h1>
-            <div class="text-content medium-margin">ThingsBoard’s IoT asset tracking system has had on various industries. Let's explore how our solutions address critical challenges and drive operational excellence.</div>
+            <div class="text-content medium-margin">IoT Hub’s IoT asset tracking system has had on various industries. Let's explore how our solutions address critical challenges and drive operational excellence.</div>
         </div>
         <div class="definitions-block">
             <div class="definitions-list side-paddings">
@@ -125,37 +125,6 @@ description: "Digital asset management system ✔Asset inventory management soft
         </div>
         <div class="text-wrapper">
             <div class="text-content medium-margin">By addressing specific pain points and tailoring solutions to individual industry needs, we continue to drive efficiency, safety, and profitability for our clients. If you are looking for an IoT asset-tracking system that can help you to improve your business, contact us.</div>
-        </div>
-    </div>
-</div>
-<div id="contact-us" class="block-wrapper wrapper-main-color">
-    <div class="block-content">
-        <div class="contact-us-content">
-            <div class="info">
-                <div class="title">Ready to launch your unique product?</div>
-                <div class="text">Leave us your name and email and we will get back to you within 2 business days</div>
-            </div>
-            <form id="Serv_AssetManage_ReadyToLaunch" class="contact-form gtm_form readyToLaunchForm" method="post" onsubmit="return validateContactForm(this)">
-                <fieldset>
-                    <div class="form-section">
-                        <div class="form-element">
-                            <label for="name">
-                                <input id="name" class="contact-us-form-control" value="" placeholder="Your Name" name="name" type="text" size="40" maxlength="50">
-                                <p>Name*</p>
-                            </label>
-                        </div>
-                        <div class="form-element">
-                            <label for="email">
-                                <input id="email" class="contact-us-form-control" value="" placeholder="Enter Email" name="email" type="email" size="40" maxlength="80">
-                                <p>Email Address*</p>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="submit-button-container">
-                        <input class="contact-us-button" value="Submit" type="submit">
-                    </div>
-                </fieldset>
-            </form>
         </div>
     </div>
 </div>
