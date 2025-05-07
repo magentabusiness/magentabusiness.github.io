@@ -1,16 +1,17 @@
 tocs:
 - docs-home
 - getting-started
+- devices-library
 - guides
 - api
-- installation
-- reference
 - faq
 docs-header:
 - toc: getting-started
   title: Getting Started
 - toc: docs-home
   title: Documentation
+- toc: devices-library
+  title: Devices Library
 - toc: guides
   title: Guides
 - toc: api
