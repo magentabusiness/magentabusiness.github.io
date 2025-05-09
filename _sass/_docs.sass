@@ -457,7 +457,7 @@
         display: block
         position: absolute
         left: 18px
-        top: 12px
+        top: 7px
         transform: rotate(0deg)
         transition: transform 0.3s
         border: none
@@ -514,7 +514,7 @@
         width: 10px
         position: relative
         left: -25px
-        top: 23.5px
+        top: 23px
         transform: rotate(90deg)
         transition: transform 0.3s
         border: none
@@ -691,19 +691,6 @@ a.feature-card
       line-height: 24px
       position: relative
       color: #212529
-      &::after
-        content: "\f054"
-        font-family: 'Font Awesome 5 Free'
-        font-size: 14px
-        font-weight: 900
-        line-height: 1
-        display: block
-        position: absolute
-        top: 5px
-        right: 18px
-        transform: rotate(90deg)
-        transition: transform .3s
-        border: none
     .product-description
       color: #899aab
       font-size: 13px
@@ -743,9 +730,6 @@ a.feature-card
     &:hover, &.active
       cursor: pointer
     &.active
-      .product-title
-        &::after
-          transform: rotate(-90deg)
       .products
         visibility: visible
         opacity: 1
