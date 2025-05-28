@@ -31,13 +31,13 @@
 Any access technology (public Internet, WIFI,LTE,5G,GPRS ..)
 #### Protocol Endpoints  
 
-| Protocol     | DNS-Name                   | IP-Addresses                                    | Ports          | Encryption  | 
-| ------------|-----------------------------| ------------------------------------------------|----------------| ------------|
-| LwM2M       | <nobr>lwm2m.iothub.magenta.at</nobr>     | 3.65.109.171<br>52.59.131.237<br>18.198.110.220 | **5686** / UDP | DTLS        |
-| LwM2M<br>Bootstrap | <nobr>lwm2m.iothub.magenta.at</nobr>     | 3.65.109.171<br>52.59.131.237<br>18.198.110.220 | **5688** / UDP | DTLS        |
-| CoAP        | <nobr>coap.iothub.magenta.at</nobr>      | 3.66.107.91<br>18.198.148.101<br>3.68.173.175   | **5684** / UDP | DTLS        |
-| MQTTS       | <nobr>iothub.magenta.at</nobr>           | 3.67.118.159<br>3.68.57.75<br>3.67.110.96       | **8883** / TCP | SSL/TLS     |
-| HTTPS       | <nobr>iothub.magenta.at</nobr>           | 3.67.118.159<br>3.68.57.75<br>3.67.110.96       | **443**  / TCP | SSL/TLS     |
+| Protocol     | DNS-Name          | IP-Addresses                                    | Ports          | Encryption  | 
+| ------------|-------------------| ------------------------------------------------|----------------| ------------|
+| LwM2M       | lwm2m.iothub.magenta.at | 3.65.109.171<br>52.59.131.237<br>18.198.110.220 | **5686** / UDP | DTLS        |
+| LwM2M<br>Bootstrap | lwm2m.iothub.magenta.at | 3.65.109.171<br>52.59.131.237<br>18.198.110.220 | **5688** / UDP | DTLS        |
+| CoAP        | coap.iothub.magenta.at | 3.66.107.91<br>18.198.148.101<br>3.68.173.175   | **5684** / UDP | DTLS        |
+| MQTTS       | iothub.magenta.at | 3.67.118.159<br>3.68.57.75<br>3.67.110.96       | **8883** / TCP | SSL/TLS     |
+| HTTPS       | iothub.magenta.at | 3.67.118.159<br>3.68.57.75<br>3.67.110.96       | **443**  / TCP | SSL/TLS     |
 
 
 
