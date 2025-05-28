@@ -1,50 +1,99 @@
 {% assign peDocsPrefix = '' %}
 {% if docsPrefix == 'pe/' %}
+{% assign platformName = 'IoT Hub' %}
+{% assign firstRowItemClasses = 'col-12 col-sm-6 col-lg col-xxl-6 col-4xl' %}
+{% assign faqItemClasses = 'col-12 col-sm-6 col-lg col-xxl-6 col-4xl' %}
 <p>The IoT Hub documentation can help you set up IoT Hub, learn about the platform and get your IoT projects running on IoT Hub.</p>
-{% elsif docsPrefix == 'paas/' %}
+{% elsif docsPrefix contains 'paas/' %}
 {% assign peDocsPrefix = docsPrefix %}
+{% assign platformName = 'IoT Hub' %}
+{% assign firstRowItemClasses = 'col-12 col-sm-6 col-lg-3 col-xxl-6 col-4xl-3' %}
+{% assign faqItemClasses = 'col col-lg-6 col-xxl col-4xl-6' %}
 <p>The IoT Hub documentation can help you to start with IoT Hub, learn about the platform and get your IoT projects running on IoT Hub.</p>
 {% endif %}
 
-
-**Service:**    
-Haben Sie Fragen zu Ihren Zugangsdaten, Verrechnung, SIM-Karten oder Vertrag,   
-kontaktieren Sie bitte unser Service Team:  
-  
-Ihr Kontakt zum "M2M Service Team" von Magenta:   
-E-Mail: [service4iot@magenta.at](mailto:service4iot@magenta.at)    
-<!-- Internationale Telefonnummer +43 1 79585 1385    -->
-
-**Geschäftszeiten:**    
-Montag bis Donnerstag 08:00 Uhr bis 17:00 Uhr   
-Freitag 08:00 Uhr bis 16:00 Uhr  
-
-Haben Sie Fragen zum IoT-Hub (Protokollen, Devices, Dashbaords...), benutzen Sie   
-die Quickstartguides und die Hilfe unter [https://docs.iothub.magenta.at](https://docs.iothub.magenta.at)  
-
-<!-- Email: iothub@magenta.at   -->
-
-<!-- [How to connect your Device (APN, Protocol Endpoints)](/docs/pe/getting-started-guides/connectivity/) -->
-
-
-<!-- <a style="margin: 10px 10px 10px 0;" href="/docs/{{docsPrefix}}getting-started-guides/what-is-iothub/" class="button">IoT Hub Overview</a> -->
-<a style="margin: 10px 10px 10px 0;" href="/docs/{{docsPrefix}}getting-started-guides/helloworld/" class="button">Getting started</a>
-<a style="margin: 10px;" href="/docs/{{docsPrefix}}guides/" class="button">&nbsp;&nbsp;&nbsp;Guides&nbsp;&nbsp;&nbsp;</a>
-<a style="margin: 10px;" href="/docs/{{docsPrefix}}getting-started-guides/connectivity/" class="button">&nbsp;&nbsp;&nbsp;How to connect your Device&nbsp;&nbsp;&nbsp;</a>
-
-
-
+<div class="doc-features row mt-4">
+    <div class="{{firstRowItemClasses}} mb-4">
+        <a class="feature-card" href="/docs/{{docsPrefix}}getting-started-guides/what-is-iothub/">
+            <img class="feature-logo" src="/images/feature-logo/thingsboard-logo.svg" alt="IoT Hub logo">
+            <div class="feature-title">What is IoT Hub?</div>
+            <div class="feature-text">
+                <ul>
+                    <li>Features</li>
+                    <li>Architecture</li>
+                </ul>
+            </div>
+        </a>
+    </div>
+    <div class="{{firstRowItemClasses}} mb-4">
+        <a class="feature-card" href="/docs/{{docsPrefix}}getting-started-guides/helloworld/">
+            <img class="feature-logo" src="/images/feature-logo/getting-started.svg" alt="Getting started icon">
+            <div class="feature-title">Getting started</div>
+            <div class="feature-text">
+                Learn how to use {{platformName}} platform.
+            </div>
+        </a>
+    </div>
 {% if docsPrefix == 'pe/' %}
-<h2 id="features">IoT Hub Features</h2>
-{% elsif docsPrefix == 'paas/' %}
-<h2 id="features">IoT Hub Features</h2>
+    <div class="{{firstRowItemClasses}} mb-4">
+        <a class="feature-card" href="/docs/user-guide/install/pe/installation-options/">
+            <img class="feature-logo" src="/images/feature-logo/install.svg" alt="Install icon">
+            <div class="feature-title">Installation</div>
+            <div class="feature-text">
+                Learn how to install and upgrade platform.
+            </div>
+        </a>
+    </div>
 {% endif %}
+    <div class="{{faqItemClasses}} mb-4">
+        <a class="feature-card" href="/docs/{{docsPrefix}}faq/">
+            <img class="feature-logo" src="/images/feature-logo/faq.svg" alt="Question icon">
+            <div class="feature-title">FAQ</div>
+            <div class="feature-text">
+                Get answers to the most common questions.
+            </div>
+        </a>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-12 col-sm-6 col-lg-3 col-xxl-6 col-4xl-3 mb-4">
+        <a class="feature-card" href="https://www.youtube.com/channel/UCDb9fsV-YR4JmnipAMGsVAQ/videos">
+            <img class="feature-logo" src="/images/feature-logo/tutorials.svg" alt="Tutorials icon">
+            <div class="feature-title">Video tutorials</div>
+            <div class="feature-text">
+                Watch tutorials about platform features on YouTube.
+            </div>
+        </a>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-3 col-xxl-6 col-4xl-3 mb-4">
+        <a class="feature-card" href="/docs/{{docsPrefix}}devices-library/">
+            <img class="feature-logo" src="/images/feature-logo/devices-library.svg" alt="Guides icon">
+            <div class="feature-title">Devices library</div>
+            <div class="feature-text">
+                Learn how to connect different devices to {{platformName}}.
+            </div>
+        </a>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-3 col-xxl-6 col-4xl-3 mb-4">
+        <a class="feature-card" href="/docs/{{docsPrefix}}guides/">
+            <img class="feature-logo" src="/images/feature-logo/guides.svg" alt="Guides icon">
+            <div class="feature-title">Guides</div>
+            <div class="feature-text">
+                Learn main {{platformName}} features.
+            </div>
+        </a>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-3 col-xxl-6 col-4xl-3 mb-4">
+        <a class="feature-card" href="/docs/{{docsPrefix}}api/">
+            <img class="feature-logo" src="/images/feature-logo/api.svg" alt="Api documentation icon">
+            <div class="feature-title">API</div>
+            <div class="feature-text">
+                Learn device connectivity and server-side platform specific API.
+            </div>
+        </a>
+    </div>
+</div>
 
 <h2 id="features">Features</h2>
-
-<!-- <h2>Video Tutorials</h2>
-
-<p>The IoT Hub Youtube <b><a href="https://www.youtube.com/channel/UCDb9fsV-YR4JmnipAMGsVAQ/videos">channel</a></b> contains useful video tutorials that cover various platform features.</p> -->
 
 <div class="doc-features row mt-4">
     <div class="col-12 col-sm-6 col-lg-4 col-xxl-6 col-4xl-4 mb-4">
@@ -319,4 +368,3 @@ die Quickstartguides und die Hilfe unter [https://docs.iothub.magenta.at](https:
         </div>
     </div>
 </div>
-
