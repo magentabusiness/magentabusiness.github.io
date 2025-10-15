@@ -67,7 +67,7 @@ return result;
 
 ![image](/images/user-guide/integrations/azure/iot-hub-converter.png)
 
-##### Azure IoT Hub Integration
+### Azure IoT Hub Integration
 
 Next we will create Integration with Azure IoT Hub inside the IoT Hub. Open **Integrations** section and add new Integration with type
 **Azure IoT Hub**

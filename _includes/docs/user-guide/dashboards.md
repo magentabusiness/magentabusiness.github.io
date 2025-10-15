@@ -98,7 +98,7 @@ Each widget typically has specific settings and parameters that allow users to c
 For more information about widgets, how to create them, and their settings, click the button below:
 
 <br>
-<p><a href="/docs/{{docsPrefix}}user-guide/widgets/" class="n-button add-device">Widgets documentation</a></p>
+<p><a href="/docs/{{docsPrefix}}user-guide/widgets/" class="button">Widgets documentation</a></p>
 
 <br>
 
@@ -107,6 +107,15 @@ For more information about widgets, how to create them, and their settings, clic
 The Time window is a tool used to define time intervals when working with telemetry data. 
 The time window is used by all time series and alarm widgets unless they are configured to use their own [widget time window](/docs/{{docsPrefix}}user-guide/widgets/#widget-time-window){:target="_blank"}.
 In the case of a time series widget, IoT Hub fetches telemetry with a timestamp that matches the time window. In the case of an alarm widget, IoT Hub fetches alarms with the created time that matches the time window.
+
+&nbsp;
+<div id="video">  
+    <div id="video_wrapper">
+        <iframe src="https://www.youtube.com/embed/3xRWm1W1IM4" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+<br>
 
 **The time window can work in two modes**:
 

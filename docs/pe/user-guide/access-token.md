@@ -2,7 +2,7 @@
 layout: docwithnav-pe
 assignees:
 - ashvayka
-title: Access Token based authentication
+title: Access Token based authentication for MQTT
 description: IoT Hub Access Token based authentication.
 
 ---

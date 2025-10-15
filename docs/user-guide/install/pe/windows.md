@@ -14,7 +14,7 @@ description: Installing IoT Hub on Windows
 
 {% include templates/install/windows-warning-note.md %}
 
-### Prerequisites
+## Prerequisites
 
 This guide describes how to install IoT Hub on a Windows machine.
 Instructions below are provided for Windows 11/10. 
@@ -22,11 +22,11 @@ Hardware requirements depend on chosen database and amount of devices connected 
 To run IoT Hub and PostgreSQL on a single machine you will need at least 4Gb of RAM.
 To run IoT Hub and Cassandra on a single machine you will need at least 8Gb of RAM.
 
-### Step 1. Install Java 17 (OpenJDK) 
+## Step 1. Install Java 17 (OpenJDK) 
 
 {% include templates/install/windows-java-install.md %}
 
-### Step 2. IoT Hub service installation
+## Step 2. IoT Hub service installation
 
 Download and extract the package.
 
@@ -38,7 +38,7 @@ https://dist.thingsboard.io/thingsboard-windows-{{ site.release.pe_ver }}.zip
 
 **Note:** We assume you have installed IoT Hub to default location: *C:\Program Files (x86)\thingsboard*  
 
-### Step 3. Obtain and configure license key 
+## Step 3. Obtain and configure license key 
 
 We assume you have already chosen your subscription plan or decided to purchase a perpetual license. 
 If not, please navigate to [pricing](/pricing/) page to select the best license option for your case and get your license. 
@@ -68,7 +68,7 @@ license:
     secret: "${TB_LICENSE_SECRET:YOUR_LICENSE_SECRET_HERE}" # license secret obtained from IoT Hub License Portal (https://license.thingsboard.io)
 ``` 
 
-### Step 4. Configure IoT Hub database
+## Step 4. Configure IoT Hub database
 
 {% include templates/install/install-db.md %}
 
@@ -77,26 +77,22 @@ PostgreSQL <small>(recommended for < 5K msg/sec)</small>%,%postgresql%,%template
 
 {% include content-toggle.liquid content-toggle-id="ubuntuThingsboardDatabase" toggle-spec=contenttogglespec %} 
 
-### Step 5. Choose IoT Hub queue service
+## Step 5. Choose IoT Hub queue service
 
 {% include templates/install/install-queue.md %}
 
 {% capture contenttogglespecqueue %}
 In Memory <small>(built-in and default)</small>%,%inmemory%,%templates/install/queue-in-memory.md%br%
 Kafka <small>(recommended for on-prem, production installations)</small>%,%kafka%,%templates/install/windows-queue-kafka.md%br%
-AWS SQS <small>(managed service from AWS)</small>%,%aws-sqs%,%templates/install/windows-queue-aws-sqs.md%br%
-Google Pub/Sub <small>(managed service from Google)</small>%,%pubsub%,%templates/install/windows-queue-pub-sub.md%br%
-Azure Service Bus <small>(managed service from Azure)</small>%,%service-bus%,%templates/install/windows-queue-service-bus.md%br%
-RabbitMQ <small>(for small on-prem installations)</small>%,%rabbitmq%,%templates/install/windows-queue-rabbitmq.md%br%
 Confluent Cloud <small>(Event Streaming Platform based on Kafka)</small>%,%confluent-cloud%,%templates/install/windows-queue-confluent-cloud.md{% endcapture %}
 
 {% include content-toggle.liquid content-toggle-id="windowsThingsboardQueue" toggle-spec=contenttogglespecqueue %} 
 
-### Step 6. [Optional] Memory update for slow machines 
+## Step 6. [Optional] Memory update for slow machines 
 
 {% include templates/install/windows-memory-on-slow-machines.md %} 
 
-### Step 7. Run installation script
+## Step 7. Run installation script
 
 Launch windows shell (Command Prompt) as Administrator. Change directory to your IoT Hub installation directory.
 
@@ -115,7 +111,7 @@ Installing thingsboard ...
 IoT Hub installed successfully!
 ```
 
-### Step 8. Start IoT Hub service
+## Step 8. Start IoT Hub service
 
 {% include templates/windows-start-service.md %}
 
@@ -123,7 +119,7 @@ IoT Hub installed successfully!
 Please allow up to 90 seconds for the Web UI to start.{% endcapture %}
 {% include templates/info-banner.md content=90-sec-ui %}
 
-### Step 9. Install IoT Hub Web Report Server component
+## Step 9. Install IoT Hub Web Report Server component
 
 Download and extract the installation package.
 
@@ -163,7 +159,7 @@ The IoT Hub Web Report Microservice service is starting.
 The IoT Hub Web Report Microservice service was started successfully.
 ```
 
-### Troubleshooting
+## Troubleshooting
 
 The log files are located in **logs** folder ("C:\Program Files (x86)\thingsboard\logs" in our case).
 
@@ -175,7 +171,7 @@ YYYY-MM-DD HH:mm:ss,sss [main] INFO  o.t.s.ThingsboardServerApplication - Starte
 
 In case of any unclear errors, use general [troubleshooting guide](/docs/user-guide/troubleshooting/#getting-help) or [contact us](/docs/contact-us/).
 
-### Windows firewall settings
+## Windows firewall settings
 
 In order to have external access to IoT Hub Web UI and device connectivity (HTTP, MQTT, CoAP)
 you need to create a new inbound rule with Windows Firewall with Advanced Security.

@@ -13,6 +13,9 @@
 {% if currentGuide != "Prediction" %}
 - [**Prediction**](/docs/trendz/prediction) - Learn how to make forecasts and predict telemetry behavior.
 {% endif %}
+{% if currentGuide != "AnomalyDetection" %}
+- [**Anomaly Detection**](/docs/trendz/anomaly/overview.md) - Learn how to identify anomalies in the data.
+{% endif %}
 {% if currentGuide != "Filtering" %}
 - [**Filters**](/docs/trendz/data-filtering) - Learn how filter dataset during analysis.
 {% endif %}
@@ -22,4 +25,7 @@
 {% if currentGuide != "EmbedVisualizations" %}
 - [**Share and embed Visualizations**](/docs/trendz/embed-visuals) - Learn how to add Trendz visualizations on IoT Hub dashboard or 3rd party web pages.
 {% endif %}  
+{% if currentGuide != "AiAssistant" %}
+- [**AI Assistant**](/docs/trendz/ai-assistance-overview) - Learn how to utilize Trendz AI capabilities.
+{% endif %}
 <br>

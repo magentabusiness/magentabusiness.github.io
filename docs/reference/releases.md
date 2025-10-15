@@ -8,6 +8,315 @@ description: IoT Hub architecture
 * TOC
 {:toc}
 
+## v4.1.0 (Jul 3, 2025) {#v41}
+
+<!-- Release notes generated using configuration in .github/release.yml at release-4.1 -->
+
+**Major Improvements**
+
+* Core & Rule Engine
+
+  * [#12926](https://github.com/thingsboard/thingsboard/pull/12926) Cassandra 5.0 support by @smatvienko-tb
+  * [#12925](https://github.com/thingsboard/thingsboard/pull/12925) ValKey 8.0 (alternative to Redis > 7.2) by @smatvienko-tb
+  * [#13510](https://github.com/thingsboard/thingsboard/pull/13510) Calculated fields performance improvements by @irynamatveieva
+  * [#13570](https://github.com/thingsboard/thingsboard/pull/13570) Memory usage improvements by @ViacheslavKlimov
+
+* UI
+
+  * [#13282](https://github.com/thingsboard/thingsboard/pull/13282) Units conversion by @vvlladd28
+  * [#13529](https://github.com/thingsboard/thingsboard/pull/13529) Added unit conversion support in SCADA system by @ArtemDzhereleiko
+  * [#13500](https://github.com/thingsboard/thingsboard/pull/13500) Improved knob control widgets by @vvlladd28
+  * New UI Localization: Danish, Dutch, French, German, Greek, Italian, Norwegian, and Spanish by @OKhalkov
+
+**Minor improvements**
+
+* Core & Rule Engine
+
+  * [#13324](https://github.com/thingsboard/thingsboard/pull/13324) Added MQTT version selection for rule nodes by @deaflynx
+  * [#13272](https://github.com/thingsboard/thingsboard/pull/13272) Added Ability to use message timestamp for CF results by @irynamatveieva
+  * [#13641](https://github.com/thingsboard/thingsboard/pull/13641) Added Missing fields for RPC message in cluster mode by @ShvaykaD
+  * [#13541](https://github.com/thingsboard/thingsboard/pull/13541) Added Update cached device activity status only after a successful database save by @dskarzh
+  * [#13322](https://github.com/thingsboard/thingsboard/pull/13322) Automatic relations creation between Rule Chains when adding a “Rule Chain” node by @ViacheslavKlimov
+  * [#13262](https://github.com/thingsboard/thingsboard/pull/13262) Emit `ALARM_DELETE` event only after the delete operation completes by @dskarzh
+  * [#13148](https://github.com/thingsboard/thingsboard/pull/13148) Make Kafka consumer properties configurable for overridden topic names by @AndriiLandiak
+  * [#12616](https://github.com/thingsboard/thingsboard/pull/12616) Notification on resources shortage by @AndriiLandiak
+  * [#13428](https://github.com/thingsboard/thingsboard/pull/13428) Separate rate limits (READ and WRITE) for Cassandra by @ShvaykaD
+  * [#13541](https://github.com/thingsboard/thingsboard/pull/13541) Update cached device activity status only after a successful database save by @dskarzh
+  * [#12257](https://github.com/thingsboard/thingsboard/pull/12257) Used TbMsgProto instead of ByteString by @YevhenBondarenko
+
+* UI
+
+  * [#13301](https://github.com/thingsboard/thingsboard/pull/13301) Added Trendz settings by @yuliaklochai
+  * [#13279](https://github.com/thingsboard/thingsboard/pull/13279) Added LwM2M observe strategies by @nickAS21
+  * [#13501](https://github.com/thingsboard/thingsboard/pull/13501) Added Ability to create/view relations to rule chains by @vvlladd28
+  * [#13533](https://github.com/thingsboard/thingsboard/pull/13533) Added “Confirm OTA Update” title in OTA update confirmation dialog by @vvlladd28
+  * [#13516](https://github.com/thingsboard/thingsboard/pull/13516) Added Missing validation for notification message length by @vvlladd28
+  * [#13575](https://github.com/thingsboard/thingsboard/pull/13575) Changed MIME type for CSV export file by @vvlladd28
+  * [#13442](https://github.com/thingsboard/thingsboard/pull/13442) Hide zero tooltip for time series charts by @ArtemDzhereleiko
+  * [#13457](https://github.com/thingsboard/thingsboard/pull/13457) Implemented Radar widget common axes mode by @ArtemDzhereleiko
+  * [#13231](https://github.com/thingsboard/thingsboard/pull/13231) Improved safety of customTranslation placeholder parsing by @maxunbearable
+  * [#13552](https://github.com/thingsboard/thingsboard/pull/13552) Made last-day selection default in Range (Time Window History) by @ChantsovaEkaterina
+
+* Edge
+
+  * [#13494](https://github.com/thingsboard/thingsboard/pull/13494) Added calculated fields support for Edge by @jekka001
+
+**Bug fixes**
+
+* Core & Rule Engine
+
+  * [#13064](https://github.com/thingsboard/thingsboard/pull/13064) Fixed alarm creation when having both attributes and telemetry in the alarm rule by @dashevchenko
+  * [#12905](https://github.com/thingsboard/thingsboard/pull/12905) Fixed resource restoring in Version Control by @dashevchenko
+  * [#13072](https://github.com/thingsboard/thingsboard/pull/13072) Fixed manually added telemetry not triggering alarm by @dashevchenko
+  * [#13480](https://github.com/thingsboard/thingsboard/pull/13480) Fixed tenant ID resolving in OAuth2 mapper by @AndriiLandiak
+  * [#13509](https://github.com/thingsboard/thingsboard/pull/13509) Fixed JSON argument handling in Calculated Fields by @irynamatveieva
+  * [#13565](https://github.com/thingsboard/thingsboard/pull/13565) Fixed updating CF state when old telemetry sent by @irynamatveieva
+  * [#13627](https://github.com/thingsboard/thingsboard/pull/13627) Fixed showing outdated system resource info on tenant level by @ViacheslavKlimov
+
+* UI
+
+  * [#13287](https://github.com/thingsboard/thingsboard/pull/13287) Fixed device profile → LwM2M transport observe strategy selector by @deaflynx
+  * [#13426](https://github.com/thingsboard/thingsboard/pull/13426) Fixed validation of advanced button style for widget header action setting by @ArtemDzhereleiko
+  * [#13474](https://github.com/thingsboard/thingsboard/pull/13474) Fixed saving checksum in OTA package config when using external URL by @vvlladd28
+  * [#13504](https://github.com/thingsboard/thingsboard/pull/13504) Fixed SCADA connectors arrow color by @ArtemDzhereleiko
+  * [#13508](https://github.com/thingsboard/thingsboard/pull/13508) Fixed full-screen mode in editors by @vvlladd28
+  * [#13512](https://github.com/thingsboard/thingsboard/pull/13512) Fixed LwM2M Bootstrap display after saving by @vvlladd28
+  * [#13515](https://github.com/thingsboard/thingsboard/pull/13515) Fixed XSS vulnerability when deleting state name by @vvlladd28
+  * [#13517](https://github.com/thingsboard/thingsboard/pull/13517) Fixed details panel button freeze midway in Firefox by @vvlladd28
+  * [#13519](https://github.com/thingsboard/thingsboard/pull/13519) Fixed visible elements behind widget preview by @vvlladd28
+  * [#13520](https://github.com/thingsboard/thingsboard/pull/13520) Fixed LwM2M device profile object configuration checkbox alignment by @vvlladd28
+  * [#13527](https://github.com/thingsboard/thingsboard/pull/13527) Fixed change detection in device profile transport configuration by @vvlladd28
+  * [#13394](https://github.com/thingsboard/thingsboard/pull/13394) Fixed for widgetTitlePanel templateOutlet by @LeoMorgan113
+  * [#13540](https://github.com/thingsboard/thingsboard/pull/13540) Hide zero-false tooltip for Rule Engine Statistics dashboard by @ArtemDzhereleiko
+  * [#13550](https://github.com/thingsboard/thingsboard/pull/13550) Prevent deleting an (entity alias/filter) that’s still used in map widgets by @vvlladd28
+
+** Transport**
+
+  * [#12876](https://github.com/thingsboard/thingsboard/pull/12876) Fixed FoTA updates in LwM2M by @nickAS21
+  * [#13243](https://github.com/thingsboard/thingsboard/pull/13243) Fixed 404 error when accessing LwM2M Profile Transport Configuration with LwM2M disabled by @nickAS21
+  * [#12799](https://github.com/thingsboard/thingsboard/pull/12799) Use LwM2M Object 19 to send OTA update metadata by @nickAS21
+
+**New Contributors**
+
+  * [#13145](https://github.com/thingsboard/thingsboard/pull/13145) @omahurin made their first contribution
+  * [#13154](https://github.com/thingsboard/thingsboard/pull/13154) @tjg23 made their first contribution
+  * [#13301](https://github.com/thingsboard/thingsboard/pull/13301) @yuliaklochai made their first contribution
+  * [#13404](https://github.com/thingsboard/thingsboard/pull/13404) @sumin-denys made their first contribution
+  * [#13367](https://github.com/thingsboard/thingsboard/pull/13367) @idealissst made their first contribution
+  * [#13427](https://github.com/thingsboard/thingsboard/pull/13427) @Deesthortered made their first contribution
+
+Full Changelog: https://github.com/thingsboard/thingsboard/compare/v4.0.2...v4.1
+
+
+## v4.0.2 (Jul 3, 2025) {#v402}
+
+Minor release with the following bug fixes and improvements:
+
+**What's Changed**
+
+* Core & Rule Engine
+  * [#13362](https://github.com/thingsboard/thingsboard/pull/13362) EDQS improvements and bug fixes by @ViacheslavKlimov
+  * [#13356](https://github.com/thingsboard/thingsboard/pull/13356) Fixed vulnerabilities by @smatvienko-tb
+  * [#13414](https://github.com/thingsboard/thingsboard/pull/13414) Fixed retry mechanism in deduplication rule node by @ShvaykaD
+  * [#13374](https://github.com/thingsboard/thingsboard/pull/13374) Fixed queue prefix not applied for some topics by @ViacheslavKlimov
+  * [#13465](https://github.com/thingsboard/thingsboard/pull/13465) Fixed WS updates when updating older timeseries by @irynamatveieva
+  * [#13577](https://github.com/thingsboard/thingsboard/pull/13577) Fixed vulnerabilities CVE-2025-49146 postgresql.driver and CVE-2025-27817 kafka client by @smatvienko-tb
+
+* UI
+  * [#13292](https://github.com/thingsboard/thingsboard/pull/13292) Hint for dynamic settings and refactoring flow animation connectors SCADA symbols by @ArtemDzhereleiko
+  * [#13290](https://github.com/thingsboard/thingsboard/pull/13290) Improved Nederlands (België) translation by @vvlladd28
+  * [#13299](https://github.com/thingsboard/thingsboard/pull/13299) Improved dashboard autocomplete component by @vvlladd28
+  * [#13344](https://github.com/thingsboard/thingsboard/pull/13344) Removed sticky option for argument table header row in calculate field dialog by @ArtemDzhereleiko
+  * [#13253](https://github.com/thingsboard/thingsboard/pull/13253) Fixed an issue with broken pagination settings validation in table-widgets by @Terny22
+  * [#13289](https://github.com/thingsboard/thingsboard/pull/13289) Fixed incorrect help links for calculated fields by @vvlladd28
+  * [#13300](https://github.com/thingsboard/thingsboard/pull/13300) Fixed percent value for doughnut chart by @ArtemDzhereleiko
+  * [#13321](https://github.com/thingsboard/thingsboard/pull/13321) Fixed rule node config style by @vvlladd28
+  * [#13413](https://github.com/thingsboard/thingsboard/pull/13413) Fixed HP circuit breaker widget type FQN by @ArtemDzhereleiko
+
+* Transport
+  * [#12981](https://github.com/thingsboard/thingsboard/pull/12981) MQTT client exponential reconnect strategy by @smatvienko-tb
+
+**Full Changelog**: https://github.com/thingsboard/thingsboard/compare/v4.0.1...v4.0.2
+
+## v4.0.1 (Apr 22, 2025) {#v401}
+
+Minor release with the following bug fixes and improvements:
+
+* UI
+
+  * [#13214](https://github.com/thingsboard/thingsboard/pull/13214) Fixed dynamic form array items configuration by @vvlladd28
+  * [#13215](https://github.com/thingsboard/thingsboard/pull/13215) Fixed type checking for Date and Array in deepClone utils method by @vvlladd28
+  * [#13218](https://github.com/thingsboard/thingsboard/pull/13218) Fixed early updatePosition call to prevent CDK overlay crash in matSuffix context by @maxunbearable
+  * [#13226](https://github.com/thingsboard/thingsboard/pull/13226) Fixed mutation of default widget settings by @vvlladd28
+  * [#13229](https://github.com/thingsboard/thingsboard/pull/13229) Fixed SCADA HP bottom right elbow connector pipe by @ArtemDzhereleiko
+  * [#13217](https://github.com/thingsboard/thingsboard/pull/13217) Updated links for the rule nodes by @irynamatveieva
+
+**Full Changelog**: https://github.com/thingsboard/thingsboard/compare/v4.0...v4.0.1
+
+## v4.0.0 (Apr 15, 2025) {#v40}
+
+Major release with the following features and bug fixes:
+
+**Major Improvements**
+
+* Core & Rule Engine
+
+  * [#12374](https://github.com/thingsboard/thingsboard/pull/12374) Calculated Fields by @irynamatveieva and @ViacheslavKlimov
+  * [#12527](https://github.com/thingsboard/thingsboard/pull/12527) High-performance, in-memory Entity Data Query Service (EDQS) by @dashevchenko and @ViacheslavKlimov
+  * [#12764](https://github.com/thingsboard/thingsboard/pull/12764) Save attributes strategies by @dskarzh
+  * [#12413](https://github.com/thingsboard/thingsboard/pull/12413) Save time series strategies by @dskarzh
+  * [#12652](https://github.com/thingsboard/thingsboard/pull/12652) Added entity alias and filters for Alarm Count Widget by @dashevchenko
+
+* UI
+
+  * [#12875](https://github.com/thingsboard/thingsboard/pull/12875) New Map widgets by @ikulikov
+  * [#12325](https://github.com/thingsboard/thingsboard/pull/12325) Implemented dynamic forms to remove JSON schema forms by @ikulikov
+  * [#12274](https://github.com/thingsboard/thingsboard/pull/12274) SCADA: High-performance Oil and Gas symbols by @ArtemDzhereleiko
+  * [#12512](https://github.com/thingsboard/thingsboard/pull/12512) SCADA: High-performance Energy System symbols by @ArtemDzhereleiko
+  * [#12372](https://github.com/thingsboard/thingsboard/pull/12372) SCADA: Added traditional Meter SCADA symbols by @ArtemDzhereleiko
+  * [#12848](https://github.com/thingsboard/thingsboard/pull/12848) Improved widget header button action by @ArtemDzhereleiko
+
+**Minor improvements**
+
+* Core & Rule Engine
+
+  * [#12297](https://github.com/thingsboard/thingsboard/pull/12297) Refactored telemetry service by @ViacheslavKlimov
+  * [#12688](https://github.com/thingsboard/thingsboard/pull/12688) Added bundles to widget type info by @AndriiLandiak
+  * [#12508](https://github.com/thingsboard/thingsboard/pull/12508) Added validation for resource usage across entities by @artem-barysh-dev
+  * [#12588](https://github.com/thingsboard/thingsboard/pull/12588) Made more Kafka topics configurable by @AndriiLandiak
+
+* UI
+
+  * [#12856](https://github.com/thingsboard/thingsboard/pull/12856) Implemented TBEL utils autocompletes and highlights by @maxunbearable
+  * [#12467](https://github.com/thingsboard/thingsboard/pull/12467) Added action to provision device via mobile app by @maxunbearable
+  * [#12933](https://github.com/thingsboard/thingsboard/pull/12933) Added link to help page for timewindow settings by @ChantsovaEkaterina
+  * [#12711](https://github.com/thingsboard/thingsboard/pull/12711) Added property decimals for flow meter symbol by @ArtemDzhereleiko
+  * [#12551](https://github.com/thingsboard/thingsboard/pull/12551) Added 'Get dashboard state object' action by @vvlladd28
+  * [#12723](https://github.com/thingsboard/thingsboard/pull/12723) Added map action buttons by @vvlladd28
+  * [#12540](https://github.com/thingsboard/thingsboard/pull/12540) Added radio button for multiple input widget by @ArtemDzhereleiko
+  * [#12817](https://github.com/thingsboard/thingsboard/pull/12817) Added scale format for SCADA tank with units by @ArtemDzhereleiko
+  * [#12790](https://github.com/thingsboard/thingsboard/pull/12790) Added settings to disable sorting in Table-widgets by @Terny22
+  * [#12446](https://github.com/thingsboard/thingsboard/pull/12446) Added domain update request chaining by @maxunbearable
+  * [#12913](https://github.com/thingsboard/thingsboard/pull/12913) Added help for retrieving the dashboard state ID in actions by @ArtemDzhereleiko
+  * [#12908](https://github.com/thingsboard/thingsboard/pull/12908) Adjusted the help button color and position in the admin settings card by @ArtemDzhereleiko 
+  * [#12630](https://github.com/thingsboard/thingsboard/pull/12630) Improved behavior of changing start/end time in timewindow component by @ChantsovaEkaterina
+  * [#12682](https://github.com/thingsboard/thingsboard/pull/12682) Improved description for SCADA symbols by @ArtemDzhereleiko
+  * [#12928](https://github.com/thingsboard/thingsboard/pull/12928) Improved event handling hotkeys for Mac on the rule chain page by @ArtemDzhereleiko
+  * [#12704](https://github.com/thingsboard/thingsboard/pull/12704) Improved Mobile center validators, removed redundant request by @deaflynx
+  * [#12749](https://github.com/thingsboard/thingsboard/pull/12749) Improved pagination settings by @Terny22
+  * [#12407](https://github.com/thingsboard/thingsboard/pull/12407) Migrated rule node config components from another repository by @vvlladd28
+  * [#12627](https://github.com/thingsboard/thingsboard/pull/12627) Value stepper widget by @ArtemDzhereleiko
+  * [#12781](https://github.com/thingsboard/thingsboard/pull/12781) Flow animation for HP SCADA connectors by @ArtemDzhereleiko
+  * [#12509](https://github.com/thingsboard/thingsboard/pull/12509) Calculated Fields UI by @maxunbearable
+  * [#12556](https://github.com/thingsboard/thingsboard/pull/12556) Ability to extract widget settings component from system module by @vvlladd28
+
+* Edge
+
+  * [#9195](https://github.com/thingsboard/thingsboard/pull/9195) Added ability to create Rule Chain on Edge by @AndriiLandiak
+  * [#12458](https://github.com/thingsboard/thingsboard/pull/12458) Alarm ack & alarm clear are sent by 'Push to Edge' node only by @AndriiLandiak
+  * [#12448](https://github.com/thingsboard/thingsboard/pull/12448) Improved attribute update strategy by @AndriiLandiak
+  * [#12365](https://github.com/thingsboard/thingsboard/pull/12365) Improved related edges cache cleanup by @AndriiLandiak
+
+**Bug fixes**
+
+* Core & Rule Engine
+
+  * [#12667](https://github.com/thingsboard/thingsboard/pull/12667) Fixed audit log save error when saving resource by @YevhenBondarenko
+  * [#12763](https://github.com/thingsboard/thingsboard/pull/12763) Fixed entity version setting after creation by @ViacheslavKlimov
+  * [#12751](https://github.com/thingsboard/thingsboard/pull/12751) Fixed extraction of queue name from msg in Input rule node by @YevhenBondarenko
+  * [#12854](https://github.com/thingsboard/thingsboard/pull/12854) Fixed repository settings deletion ([Version control]) by @dashevchenko
+  * [#12774](https://github.com/thingsboard/thingsboard/pull/12774) Fixed serializers removal from config ([Kafka node]) by @YevhenBondarenko
+  * [#12736](https://github.com/thingsboard/thingsboard/pull/12736) Fixed StatsPersistTick scheduled future cancellation on actor destroy by @smatvienko-tb
+  * [#13013](https://github.com/thingsboard/thingsboard/pull/13013) Fixed issue with adding threshold in line chart widget by @dashevchenko
+
+* UI
+
+  * [#12666](https://github.com/thingsboard/thingsboard/pull/12666) Fixed apply changes button enabled by default in device profile transport configuration tab by @vvlladd28
+  * [#12393](https://github.com/thingsboard/thingsboard/pull/12393) Fixed blank screen on SCADA editor page refresh in development mode by @vvlladd28
+  * [#12623](https://github.com/thingsboard/thingsboard/pull/12623) Fixed blur effect issue in the Getting Started widget by @vvlladd28
+  * [#12888](https://github.com/thingsboard/thingsboard/pull/12888) Fixed changed event behavior in the nav tree component by @ArtemDzhereleiko
+  * [#12898](https://github.com/thingsboard/thingsboard/pull/12898) Fixed close button position in the Vertical Cylinder Tank widget by @ArtemDzhereleiko
+  * [#12443](https://github.com/thingsboard/thingsboard/pull/12443) Fixed columns to display filter panel scroll when on dashboard edge by @maxunbearable
+  * [#12633](https://github.com/thingsboard/thingsboard/pull/12633) Fixed CSV export for strings containing semicolon by @ChantsovaEkaterina
+  * [#12917](https://github.com/thingsboard/thingsboard/pull/12917) Fixed default event handling and added hotkeys for Mac on the dashboard page by @ArtemDzhereleiko
+  * [#12899](https://github.com/thingsboard/thingsboard/pull/12899) Fixed default shape for Horizontal Ellipse Tank widget by @ArtemDzhereleiko
+  * [#12810](https://github.com/thingsboard/thingsboard/pull/12810) Fixed device profile extra scroll in LwM2M model by @deaflynx
+  * [#12878](https://github.com/thingsboard/thingsboard/pull/12878) Fixed drag and drop for data keys chip by @ArtemDzhereleiko
+  * [#12416](https://github.com/thingsboard/thingsboard/pull/12416) Fixed empty notifications on slow WS connection by @maxunbearable
+  * [#12544](https://github.com/thingsboard/thingsboard/pull/12544) Fixed Entity data subscription command keys duplicates by @deaflynx
+  * [#12634](https://github.com/thingsboard/thingsboard/pull/12634) Fixed entity details page link in entity autocomplete component by @vvlladd28
+  * [#12892](https://github.com/thingsboard/thingsboard/pull/12892) Fixed get rule chains for entity list component by @ArtemDzhereleiko
+  * [#12610](https://github.com/thingsboard/thingsboard/pull/12610) Fixed incorrect search by LwM2M models by @vvlladd28
+  * [#12628](https://github.com/thingsboard/thingsboard/pull/12628) Fixed mdc notch unnecessary border by @maxunbearable
+  * [#12470](https://github.com/thingsboard/thingsboard/pull/12470) Fixed OAuth client ID and secret removal with slow internet by @maxunbearable
+  * [#12841](https://github.com/thingsboard/thingsboard/pull/12841) Fixed pop-up closing issue on dashboards by @kalutkaz
+  * [#12471](https://github.com/thingsboard/thingsboard/pull/12471) Fixed tooltip scroll issue in JS Library alias error state by @maxunbearable
+  * [#12802](https://github.com/thingsboard/thingsboard/pull/12802) Fixed transport messages max number hints by @maxunbearable
+  * [#12599](https://github.com/thingsboard/thingsboard/pull/12599) Fixed unclear cached result in dashboard autocomplete after user switch by @vvlladd28
+  * [#12909](https://github.com/thingsboard/thingsboard/pull/12909) Fixed validation for target entity type in the Create Relation node by @ArtemDzhereleiko
+
+* Transport
+
+  * [#12725](https://github.com/thingsboard/thingsboard/pull/12725) Fixed CoAP server enable/disable property by @YevhenBondarenko
+  * [#12378](https://github.com/thingsboard/thingsboard/pull/12378) Fixed concurrent device communication over DTLS (CoAP) by @nickAS21
+  * [#12876](https://github.com/thingsboard/thingsboard/pull/12876) Fixed FOTA update via URL (LwM2M) by @nickAS21
+  * [#12699](https://github.com/thingsboard/thingsboard/pull/12699) Fixed Observe for Object ID 3 (DEVICE) v1.1 (LwM2M) by @nickAS21
+  * [#12734](https://github.com/thingsboard/thingsboard/pull/12734) Fixed request sending failure (SNMP) by @artem-barysh-dev
+  * [#12398](https://github.com/thingsboard/thingsboard/pull/12398) Fixed dynamic update of device profile configuration (LwM2M) by @nickAS21
+
+
+**Breaking changes**
+
+* [#11937](https://github.com/thingsboard/thingsboard/pull/11937) ❌ Removed all queue types except Kafka  
+  → **Impact**: Systems previously using other queue types (e.g., RabbitMQ) must now migrate to Kafka. Ensure your infrastructure and configuration are updated accordingly.
+
+* [#12859](https://github.com/thingsboard/thingsboard/pull/12859) 🧹 Removed `flex-layout` library from the UI  
+  → **Impact**: Custom UI components or extensions relying on `flex-layout` will break. Replace with Angular’s native layout features or modern CSS techniques.
+
+**New Contributors**
+
+* @str4ng3-r made their first contribution in [#12568](https://github.com/thingsboard/thingsboard/pull/12568)
+
+**Full Changelog**: https://github.com/thingsboard/thingsboard/compare/v3.9.1...v4.0
+
+## v3.9.1 (Feb 19, 2025) {#v391}
+
+Minor release with the following improvements and bug fixes:
+
+* Core & Rule Engine
+
+  * [#12444](https://github.com/thingsboard/thingsboard/pull/12444) Version Control: Fixed error when checking access to repository by @ViacheslavKlimov
+  * [#12445](https://github.com/thingsboard/thingsboard/pull/12445) Mobile app center: Fixed bundle id null pointer exception after migration by @dashevchenko
+  * [#12497](https://github.com/thingsboard/thingsboard/pull/12497) RPC Rule Node: Fixed not producing any Success or Failure out message by @YevhenBondarenko
+  * [#12581](https://github.com/thingsboard/thingsboard/pull/12581) Actor system: Fixed memory leak with device subscriptions by @smatvienko-tb
+  * [#12640](https://github.com/thingsboard/thingsboard/pull/12640) REST API call node: Fixed Basic auth by @devaskim
+
+* UI
+
+  * [#12389](https://github.com/thingsboard/thingsboard/pull/12389) Notification center: Fixed entity tables not updating after copy or creation by @vvlladd28
+  * [#12455](https://github.com/thingsboard/thingsboard/pull/12455) Map widgets: Fixed issue with drawing a circle by @vvlladd28
+  * [#12456](https://github.com/thingsboard/thingsboard/pull/12456) Map widgets: Fixed issue with polygon/circle fill and stroke color functions by @vvlladd28
+  * [#12485](https://github.com/thingsboard/thingsboard/pull/12485) Time series bar chart: Fixed incorrect display of negative values by @vvlladd28
+  * [#12494](https://github.com/thingsboard/thingsboard/pull/12494) Trip animation widget: Fixed some of the applied settings not being shown by @vvlladd28
+  * [#12548](https://github.com/thingsboard/thingsboard/pull/12548) Trip animation widget: Fixed error when using path decorator setting by @vvlladd28
+  * [#12511](https://github.com/thingsboard/thingsboard/pull/12511) Update Device Attribute widgets: Fixed ability to send data by @vvlladd28
+  * [#12426](https://github.com/thingsboard/thingsboard/pull/12426) Mobile app center: Fixed editing of release notes by @vvlladd28
+  * [#12457](https://github.com/thingsboard/thingsboard/pull/12457) Mobile app center: Synchronize validation rules for the mobile app configuration form with the API by @vvlladd28
+  * [#12528](https://github.com/thingsboard/thingsboard/pull/12528) Mobile app center: Fixed validation issues for URLs including Unicode symbols by @vvlladd28
+  * [#12631](https://github.com/thingsboard/thingsboard/pull/12631) Entity details page: Fixed mobile view by @vvlladd28
+  * [#12664](https://github.com/thingsboard/thingsboard/pull/12664) Liquid level widget: Fixed incorrect shape layout settings by @vvlladd28
+
+* Transport
+
+  * [#12427](https://github.com/thingsboard/thingsboard/pull/12427) LwM2M: Client serialization fixes by @YevhenBondarenko
+  * [#12575](https://github.com/thingsboard/thingsboard/pull/12575) MQTT: Fixed unsubscribe error without previous subscribe by @artem-barysh-dev
+
+* Edge
+
+  * [#12593](https://github.com/thingsboard/thingsboard/pull/12593) Fixed assignment/un-assignment of dashboards by @volodymyr-babak
+  * [#12653](https://github.com/thingsboard/thingsboard/pull/12653) Speed up initial setup and improved handling of connect/disconnect by @volodymyr-babak
+  * [#12566](https://github.com/thingsboard/thingsboard/pull/12566) Fixed error in device profile processing by @jekka001
+
 ## v3.9.0 (Dec 31, 2024) {#v39}
 
 Major release with the following features and bug fixes:
@@ -1266,8 +1575,8 @@ Minor release with the following features and bug fixes:
   * [#7402](https://github.com/thingsboard/thingsboard/pull/7402) Update package version for tb docker images;  
   * [#7555](https://github.com/thingsboard/thingsboard/pull/7555) improved lifecycle events and added kill for crash event for js-executor;
   * [#7655](https://github.com/thingsboard/thingsboard/pull/7655) added max_old_space_size to node.js based modules.
-  
-## We welcome our new contributors:
+
+**We welcome our new contributors:**
 
   * [@ashaforost](https://github.com/ashaforost) made their first contribution in [#7199](https://github.com/thingsboard/thingsboard/pull/7199)
   * [@Lenteguppie](https://github.com/Lenteguppie) made their first contribution in [#7394](https://github.com/thingsboard/thingsboard/pull/7394)

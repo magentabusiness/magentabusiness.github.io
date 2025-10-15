@@ -6,14 +6,14 @@ If you missed part one, we covered the basics, including getting familiar with a
 It's highly recommended that you check out lesson 1 if you haven't already.
 
 <br>
-<p><a href="/docs/{{docsPrefix}}user-guide/advanced-guides-for-working-with-dashboard/advanced-dashboard-guide-lesson-1/" class="n-button add-device">Lesson 1. Visualizing assets data using OpenStreet Map and Entities table widgets</a></p>
+<p><a href="/docs/{{docsPrefix}}user-guide/advanced-guides-for-working-with-dashboard/advanced-dashboard-guide-lesson-1/" class="button">Lesson 1. Visualizing assets data using OpenStreet Map and Entities table widgets</a></p>
 
 <br>
 
 In this lesson, we'll continue to develop our project. We will add states for buildings and offices, and implement navigation between them.
 We will also continue adding widgets, including one that visualizes the placement of devices on the office plan. Let's get started.
 
-{% include carousel.liquid collectionMap = 'dashboard-lesson-2' nonActiveItemsVisibility = false %}
+{% include default-carousel.liquid collectionMap = 'dashboard-lesson-2' nonActiveItemsVisibility=false %}
 
 ## Adding building and office states
 
@@ -798,4 +798,4 @@ In the third part of this guide, we will continue to develop our dashboard. We w
 When you're ready to continue, just click the button below.
 
 <br>
-<p><a href="/docs/{{docsPrefix}}user-guide/advanced-guides-for-working-with-dashboard/advanced-dashboard-guide-lesson-3/" class="n-button add-device">Lesson 3: Adding and configuring individual states for each device</a></p>
+<p><a href="/docs/{{docsPrefix}}user-guide/advanced-guides-for-working-with-dashboard/advanced-dashboard-guide-lesson-3/" class="button">Lesson 3: Adding and configuring individual states for each device</a></p>

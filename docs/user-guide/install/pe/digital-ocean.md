@@ -15,18 +15,18 @@ Basically, you get the license directly from IoT Hub, Inc, but purchase correspo
 
 {% include templates/install/digital-ocean-droplet.md %} 
 
-### Step 4. Use regular installation instruction for Ubuntu
+## Step 4. Use regular installation instruction for Ubuntu
 
 Please navigate to the IoT Hub [**installation instruction**](/docs/user-guide/install/pe/ubuntu/) 
 for Ubuntu and complete the installation steps.
 
 **Note:** Use your droplet IP address instead of "localhost" to access the instance WEB UI.
 
-### Post-installation steps
+## Post-installation steps
 
 {% include templates/install/ubuntu-haproxy-postinstall.md %}
 
-### Troubleshooting
+## Troubleshooting
 
 {% include templates/install/troubleshooting.md %}
 

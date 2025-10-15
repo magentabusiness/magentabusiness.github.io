@@ -1,9 +1,9 @@
 ---
-layout: docwithnav-pe
-title: Filter Nodes
-description: Rule Engine 2.0 Filter Nodes
+layout: docwithnav
+title: Filter nodes
+description: Rule Engine 2.0 Filter nodes
 
 ---
 
 {% include get-hosts-name.html %}
-{% include docs/user-guide/rule-engine-2-0/ce-filter-nodes.md %}
+{% include docs/user-guide/rule-engine-2-0/filter-nodes.md %}

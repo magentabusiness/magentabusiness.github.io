@@ -16,7 +16,7 @@ After integrating TheThingsIndustries with the IoT Hub, you can connect, communi
 
 ## The Things Stack
 
-##### Register Application
+### Register Application
 The first step is to create an **application** in TheThingsIndustries console. Go to console by , open 
 **Applications** section, press **add application** button and fill required fields.
 
@@ -25,7 +25,7 @@ The first step is to create an **application** in TheThingsIndustries console. G
 ![image](/images/user-guide/integrations/tti/tti-create-app.png)
 
 
-##### Payload Decoder
+### Payload Decoder
 Our device submits data in binary format. We have 2 options where to decode this data:
 
 - **TheThingsIndustries decoder** - data will be decoded before entering the IoT Hub
@@ -55,7 +55,7 @@ Output json:
 
 Press **Save payload function**
 
-##### Device Registration in TheThingsIndustries
+### Device Registration in TheThingsIndustries
 
 Next step is a Device creation in the TTI. Open **End devices** page and press **Add end device**
 
@@ -159,7 +159,7 @@ return result;
 ![image](/images/user-guide/integrations/tti/tb-uplink.png)
 
 
-##### IoT Hub Downlink Data Converter
+### IoT Hub Downlink Data Converter
 For sending Downlink messages from the IoT Hub to the device inside TTI, we need to define downlink Converter.
 In general, output from Downlink converter should have the following structure:
 {% highlight json %}
@@ -202,7 +202,7 @@ This converter will take **version** field from the incoming message and add it 
 
 ![image](/images/user-guide/integrations/tti/tb-downlink.png)
 
-##### TTI Integration
+### TTI Integration
 
 Next we will create Integration with TheThingsIndustries inside the IoT Hub. Open **Integrations** section and add new Integration with type
 **TheThingsIndustries**
@@ -221,7 +221,7 @@ Next we will create Integration with TheThingsIndustries inside the IoT Hub. Ope
 
 ## Validation
 
-##### Validate Uplink Messages
+### Validate Uplink Messages
 Lets verify our integration. 
 
 When device sends data, we can check it in the IoT Hub, to do this:
@@ -233,7 +233,7 @@ Go to **Device Group** -> **All** -> **thermostat1** - you can see that
 
 ![image](/images/user-guide/integrations/tti/tb-device-telemetry.png)
 
-##### Validate Downlink Messages
+### Validate Downlink Messages
 For testing Downlink Messages, we will update our Root Rule Chain to send downlink message when device attribute is changed.
 Open and edit **Root Rule Chain**. Add **Integration Downlink** Action node and connect it with the **Message Type Switch** Node using relation 
 **Attributes Updated**

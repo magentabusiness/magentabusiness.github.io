@@ -3,8 +3,9 @@
 You will need to have IoT Hub server up and running. 
 The easiest way is to use [Live Demo](https://iothub.magenta.at/signup) server.
 
-The alternative option is to install IoT Hub using [Installation Guide](/docs/user-guide/install/installation-options/). 
-**Windows** users should follow this [guide](/docs/user-guide/install/docker-windows/). **Linux** users that have docker installed should execute the following commands:
+The alternative option is to install IoT Hub using the [installation guide](/docs/user-guide/install/installation-options/){:target="_blank"}:
+- **Windows** users should follow this [guide](/docs/user-guide/install/docker-windows/){:target="_blank"}
+- **Linux** users with Docker installed can execute the following commands:
 
 ```
 mkdir -p ~/.mytb-data && sudo chown -R 799:799 ~/.mytb-data
@@ -16,9 +17,5 @@ docker run -it -p 8080:9090 -p 7070:7070 -p 1883:1883 -p 5683-5688:5683-5688/udp
 
 These commands install IoT Hub and load demo data and accounts.
 
-IoT Hub UI will be available using the URL: [http://localhost:8080](http://localhost:8080).
-You may use username **tenant@thingsboard.org** and password **tenant**. 
-More info about demo accounts is available [here](/docs/samples/demo-account/). 
-
-
+IoT Hub UI will be available at: **http://localhost:8080**.
 

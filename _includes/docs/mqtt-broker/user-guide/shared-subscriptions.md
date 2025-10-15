@@ -3,12 +3,12 @@
 {:toc}
 
 Shared subscriptions are an advanced capability introduced in MQTT v5 that has been widely anticipated by users. 
-While TBMQ does not restrict its usage to MQTT v5 clients exclusively, clients with any protocol version can leverage this feature. 
+While TBMQ does not restrict its usage to MQTT v5 clients exclusively, clients with **any protocol version** can leverage this feature. 
 The official [documentation](https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901250) offers comprehensive details on shared subscriptions, 
 and this tutorial will focus on the fundamental aspects of this functionality. 
 By understanding and exploring shared subscriptions, users can harness the full potential of this powerful feature in their MQTT interactions.
 
-### What are Shared Subscriptions?
+## What are Shared Subscriptions?
 
 In traditional or standard subscriptions, each subscribed client receives a duplicate copy of every published message that matches the subscribed topic. 
 This approach ensures that all clients receive the same set of messages. 
@@ -34,7 +34,7 @@ For example, the following is a shared subscription:
 $share/group1/country/+/city/+/home/#
 ```
 
-### Shared Subscription Use Cases
+## Shared Subscription Use Cases
 
 Shared subscriptions can be applied to various use cases based on their suitability and advantages. 
 However, there are several common scenarios where shared subscriptions are particularly beneficial:
@@ -52,7 +52,14 @@ ensuring a balanced and efficient operation of the system.
 In summary, shared subscriptions offer flexibility and scalability for scenarios involving backend applications, 
 high message rates, and resource optimization, allowing for better management of MQTT message streams.
 
-### Subscribing to Shared Subscriptions
+## Message Ordering Guarantees
+
+According to the MQTT 5.0 specification, **message ordering is not guaranteed for shared subscriptions**. 
+The protocol allows the broker to deliver messages to any client in the shared group without preserving the order in which they were published. 
+This means that while each individual client may receive messages in the order they are assigned, **the overall order across the group is not maintained**. 
+If strict message ordering is critical for your application, consider using a **single subscriber** instead of a shared subscription group.
+
+## Subscribing to Shared Subscriptions
 
 In this tutorial, we will be connecting [DEVICE](/docs/mqtt-broker/user-guide/mqtt-client-type/#device-client) non-persistent clients and using the [Mosquitto](https://mosquitto.org/download/) client library.
 For Ubuntu users, it can be installed using the following command:
@@ -116,7 +123,7 @@ Let's see shared subscription processing in action:
 
 ![image](/images/mqtt-broker/user-guide/shared-subscription-demo.gif)
 
-### Shared Subscriptions Load Balancing Strategy
+## Shared Subscriptions Load Balancing Strategy
 
 Currently, TBMQ supports the **ROUND_ROBIN** load balancing strategy type for shared subscriptions. 
 This means that incoming messages for a shared subscription are evenly distributed among the subscribed clients in a round-robin fashion. 
@@ -124,7 +131,7 @@ Each client in the group receives messages in sequential order, taking turns to 
 We are continuously working on enhancing TBMQ and plan to introduce additional load-balancing strategy types in the near future. 
 These may include random and hash-based load-balancing strategies. Stay tuned for updates as we expand the capabilities of TBMQ.
 
-### Shared Subscriptions & Client Type
+## Shared Subscriptions & Client Type
 
 The **DEVICE** and **APPLICATION** clients in TBMQ are implemented differently, and this impacts how the shared subscription feature 
 is utilized and how it processes messages for each client type.
@@ -139,7 +146,7 @@ DEVICE clients will receive messages within the DEVICE shared subscription group
 Therefore, it's important to consider the client type when working with shared subscriptions in TBMQ, 
 as the messages will be processed and distributed accordingly based on the client type within their respective shared subscription groups.
 
-#### DEVICE client type
+### DEVICE client type
 
 From the user's perspective, using the shared subscription feature for DEVICE clients in TBMQ is seamless. 
 Simply subscribe your clients to the shared subscription, and the feature will work as intended.
@@ -147,13 +154,18 @@ Simply subscribe your clients to the shared subscription, and the feature will w
 However, there are some considerations when persistent clients are involved in the shared subscription group:
 1. If the shared subscription group **contains some persistent clients**, they will share the message load for the subscription topic as well until they go offline. 
 Once they are offline, the messages will not be distributed among them.
-2. On the other hand, if the shared subscription group **consists solely of persistent clients**, and they all go offline, 
+2. On the other hand, if the shared subscription group **consists entirely of persistent clients**, and they all go offline, 
 newly received messages will be stored per shared subscription group in the Redis database. 
 Once the first client from the group reconnects to the broker, it will receive stored persistent messages related to the shared subscription.
 
 These considerations ensure that message distribution and persistence are handled appropriately for shared subscription groups containing persistent clients.
 
-#### APPLICATION client type
+> Recommendation:
+> Avoid mixing persistent and non-persistent clients within the same shared subscription group. 
+> This setup can lead to inconsistent delivery behavior and make it harder to reason about which clients receive which messages. 
+> For predictable message flow and better debugging, use either all persistent or all non-persistent clients per group.
+
+### APPLICATION client type
 
 To utilize the shared subscription feature for APPLICATION clients in TBMQ, you need to follow an additional step. 
 First, you'll need to create an Application Shared Subscription entity in the PostgreSQL database. 
@@ -186,6 +198,25 @@ When the client connects to the broker and initiates a shared subscription, a ne
 As additional clients subscribe, their consumers are also added to the CG, enabling them to share the message load. 
 Similarly, when a client unsubscribes, its consumer is removed from the CG, and the group rebalances automatically.
 
+Importantly, even if all APPLICATION clients go offline, messages published to the shared subscription continue to be written to Kafka.
+These messages are retained and delivered once any client in the group reconnects, ensuring no data is lost.
+
 This utilization of Kafka's capabilities enables enhanced performance, scalability, and reliability for shared subscriptions with APPLICATION clients in TBMQ. 
 By leveraging Kafka's features, the system can effectively manage and distribute the workload among the subscribed clients, ensuring optimal performance and fault tolerance.
 
+## Quality of Service (QoS) in Shared Subscriptions
+
+Shared subscriptions in MQTT honor the Quality of Service (QoS) level requested by each individual subscriber. 
+The broker applies the same QoS handling rules as it does for regular subscriptions, but message delivery is distributed among clients within the shared group.
+
+**Key points:** 
+
+* The effective QoS is the minimum of the publisher’s and subscriber’s QoS.
+* If subscribers in the shared group use different QoS levels, each client receives messages according to its own requested QoS.
+* Only one client in the group receives each matching message, regardless of QoS.
+* QoS does not affect load balancing behavior — it only defines delivery guarantees for each individual client.
+
+**Best practice:**
+
+It is recommended to use the same QoS level for all subscribers within a shared group. 
+This consistency simplifies message flow, helps ensure predictable behavior, and makes it easier to debug and monitor message delivery across clients.

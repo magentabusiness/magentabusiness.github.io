@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-IoT Hub allows you to configure customizable IoT dashboards.
+ThingsBoard allows you to configure customizable IoT dashboards.
 Each IoT Dashboard can contain multiple widgets that visualize data from multiple IoT devices.
 Once IoT Dashboard is created, you can assign it to multiple customers of your IoT project.
  
@@ -13,5 +13,5 @@ You can find useful links to get started below:
  - [IoT Dashboards](/docs/{{docsPrefix}}user-guide/dashboards/) - contains tutorials about basic IoT dashboard operations.
 {% if docsPrefix == "pe/" or docsPrefix contains "paas/" %}
  - [Solution Templates](/docs/{{docsPrefix}}solution-templates/overview/) - contains several examples of IoT dashboards.
-{% endif %}
+{% endif %} 
  - [Widget Library](/docs/{{docsPrefix}}user-guide/ui/widget-library/) - contains an overview of dashboard widget bundles.

@@ -1,19 +1,30 @@
 - tag: ce
-  hostName: https://iothub.magenta.at
-  mqttHostName: https://iothub.magenta.at
-  coapHostName: https://iothub.magenta.at
-  httpsUrl: https://iothub.magenta.at
-  lwm2mHostName: https://iothub.magenta.at
-  apiHostName: https://iothub.magenta.at
-- tag: pe
+  hostLabel: Iot Hub
   hostName: iothub.magenta.at
   mqttHostName: iothub.magenta.at
   coapHostName: iothub.magenta.at
-  httpsUrl: iothub.magenta.at
+  httpsUrl: https://iothub.magenta.at
+  lwm2mHostName: iothub.magenta.at
+  apiHostName: iothub.magenta.at
+- tag: pe
+  hostLabel: Iot Hub
+  hostName: iothub.magenta.at
+  mqttHostName: iothub.magenta.at
+  coapHostName: iothub.magenta.at
+  httpsUrl: https://iothub.magenta.at
   lwm2mHostName: iothub.magenta.at
   apiHostName: iothub.magenta.at
 - tag: paas
-  hostName: https://iothub.magenta.at
+  hostLabel: Iot Hub
+  hostName: iothub.magenta.at
+  mqttHostName: iothub.magenta.at
+  coapHostName: iothub.magenta.at
+  httpsUrl: https://iothub.magenta.at
+  lwm2mHostName: iothub.magenta.at
+  apiHostName: iothub.magenta.at
+- tag: paas-eu
+  hostLabel: Iot Hub
+  hostName: iothub.magenta.at
   mqttHostName: iothub.magenta.at
   coapHostName: iothub.magenta.at
   httpsUrl: https://iothub.magenta.at

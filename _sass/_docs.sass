@@ -166,7 +166,7 @@
       padding: 0 16px
       height: 44px
       line-height: 30px
-      font-size: 18px
+      font-size: 16px
       vertical-align: middle
       border: 1px solid #ebebeb
       background-color: transparent
@@ -341,20 +341,18 @@
           a
             position: relative
             display: block
-            color: #212529
-            opacity: 0.6
+            color: #0000008A
             font-size: 14px
             font-weight: normal
             @media screen and (min-width: 1500px)
               font-size: 16px
-            @media screen and (min-width: 1700px)
-              font-size: 18px
             &.YAH
               position: relative
               opacity: 1
               font-weight: 500
+              color: #000000DE
             &:hover
-              opacity: 1
+              color: #000000DE
               text-decoration: none !important
 
   #githubButtonContainer
@@ -433,14 +431,15 @@
         font-weight: 500
     & > .container:first-child > .item.yah:first-child > .title
       padding-left: 0
-      font-size: 1.2em
+      font-size: 18px
       font-weight: 600
+      line-height: 30px
     .item
       display: block
       position: relative
       overflow: visible
     .title
-      color: #75767C
+      color: #0000008A
       line-height: 24px
       &:hover
         color: #e20074
@@ -461,6 +460,7 @@
         transform: rotate(0deg)
         transition: transform 0.3s
         border: none
+        color: #0000008A
     .item.on
       overflow: visible
       & > .title
@@ -533,7 +533,6 @@
         .filter-label
           cursor: pointer
           color: #75767C
-          line-height: 24px
         input[type=checkbox]
           -webkit-appearance: none
           appearance: none
@@ -600,14 +599,14 @@ a.feature-card, .feature-card
     margin-right: 7px
   .feature-title
     color: #212529
-    font-size: 18px
+    font-size: 16px
     font-weight: 500
     line-height: 28px
     padding-bottom: 8px
     span
       vertical-align: middle
   .feature-text
-    color: #75767C
+    color: rgba(0, 0, 0, 0.76)
     font-size: 14px
     font-weight: 400
     line-height: 24px
@@ -687,7 +686,7 @@ a.feature-card
       width: 338px
     .product-title
       font-size: 16px
-      font-weight: 600
+      font-weight: 500
       line-height: 24px
       position: relative
       color: #212529
@@ -715,7 +714,7 @@ a.feature-card
     opacity: 0
     a.product
       color: #75767C
-      font-size: 16px
+      font-size: 14px
       font-weight: 400
       line-height: 24px
       padding: 8px 12px

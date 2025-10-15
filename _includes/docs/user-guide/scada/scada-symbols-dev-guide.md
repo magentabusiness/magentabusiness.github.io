@@ -84,7 +84,7 @@ Once you upload your SCADA symbol, you'll be directed to the SCADA symbol editor
 
 {% include images-gallery.html imageCollection="explore-scada-editor-1" %}
 
-##### SCADA editor actions
+### SCADA editor actions
 
 - **Create Widget** - this button allows you to quickly create a widget based on your SCADA symbol. Any major changes to the SCADA symbol will automatically reflect in the widget library, except for fields like title, description, and search tags, which are copied at the moment you create the widget.
 
@@ -98,7 +98,7 @@ As a simple exercise, populate the description and search tags, then click "Appl
 
 {% include images-gallery.html imageCollection="scada-editor-actions-2" %}
 
-##### Widget size and aspect ratio
+### Widget size and aspect ratio
 
 Notice the widget size in columns and rows, which hints at how the SCADA layout should place the widget. 
 This setting impacts the aspect ratio of the widget and should ideally match the aspect ratio of your SVG. 
@@ -1067,9 +1067,9 @@ The `ScadaSymbolApi` (referred to as `api` when accessed via `ScadaSymbolContext
 
   **Returns**: Newly generated element ID as a string.
   <br/><br/>
-* **formatValue**: Formats numeric values according to specified precision and units.
+* **formatValue**: Formats numeric values according to specified precision and unit conversions.
    ```javascript
-   formatValue: (value: any, dec?: number, units?: string, showZeroDecimals?: boolean) => string | undefined
+   formatValue: (value: any, dec?: number, units?: string | TbUnit, showZeroDecimals?: boolean) => string | undefined
    ```
 
   **Parameters**:
@@ -1080,6 +1080,19 @@ The `ScadaSymbolApi` (referred to as `api` when accessed via `ScadaSymbolContext
 
   **Returns**: Formatted value as a string or undefined if formatting fails.
   <br/><br/>
+
+* **formatValue**: Formats numeric values according to specified precision and unit conversions.
+   ```javascript
+   formatValue: (value: any, settings: ValueFormatSettings) => string | undefined
+   ```
+
+  **Parameters**:
+  - **value**: Numeric value to be formatted.
+  - **settings**: ValueFormatSettings object defining formatting options (decimals, units, ignoreUnitSymbol, showZeroDecimals).
+
+  **Returns**: Formatted value as a string or undefined if formatting fails.
+  <br/><br/>
+
 * **text**: Sets or updates the text content of one or more SVG elements. Only applicable for elements of type [SVG.Text](https://svgjs.dev/docs/3.2/shape-elements/#svg-text){:target="_blank"} and [SVG.Tspan](https://svgjs.dev/docs/3.2/shape-elements/#svg-tspan){:target="_blank"}.
    ```javascript
    text: (element: Element | Element[], text: string) => void
@@ -1185,6 +1198,29 @@ The `ScadaSymbolApi` (referred to as `api` when accessed via `ScadaSymbolContext
     - **valueId**: ID of the behavior item with type 'Value'.
     - **value**: New value to set.
       <br/><br/>
+
+* **unitSymbol**: Retrieves the target unit symbol based on the current unit system or the provided unit.
+   ```javascript
+   unitSymbol: (unit: TbUnit) => string
+   ```
+
+  **Parameters**:
+  - **unit**: Unit specification, either a string or a TbUnitMapping object defining unit mappings for different systems (e.g., METRIC, IMPERIAL, HYBRID).
+
+  **Returns**: The target unit symbol as a string, derived from the current unit system or the provided unit.
+  <br/><br/>
+
+* **convertUnitValue**: Converts a numeric value from one unit to another using the provided unit specification.
+   ```javascript
+   convertUnitValue: (value: number, unit: TbUnit) => number
+   ```
+
+  **Parameters**:
+  - **value**: Numeric value to be converted.
+  - **unit**: Unit specification, either a string representing the source unit or a TbUnitMapping object for system-based conversion.
+
+  **Returns**: The converted numeric value. Returns the original value if conversion fails or no conversion is needed.
+  <br/><br/>
 
 ### ScadaSymbolAnimation
 
@@ -1403,3 +1439,67 @@ Below are the key methods provided by the `ScadaSymbolAnimation` interface:
     - **value** (optional): Value of the attribute if a single attribute name is provided.
 
   **Returns**: Itself - an updated instance of `ScadaSymbolAnimation`, allowing for chained method calls.
+
+### ConnectorScadaSymbolAnimation
+
+The `ConnectorScadaSymbolAnimation` interface in ThingsBoard is designed to manage animations for SVG connector elements, specifically for flow animations along a defined path. 
+This interface provides methods to control the animation's playback, appearance, speed, and direction, enabling dynamic manipulation of connector animations. 
+Below are the key methods provided by the `ConnectorScadaSymbolAnimation` interface:
+
+* **play**: Starts or resumes the connector animation.
+   ```javascript
+   play: () => void
+   ```
+
+Adds the animation path to the SVG element if not already present and begins the animation with a synchronized offset.
+
+* **stop**: Stops the connector animation.
+   ```javascript
+   stop: () => void
+   ```
+
+Ends the animation by stopping the `animate` element, pausing the flow effect.
+
+* **finish**: Completes the connector animation and removes it.
+   ```javascript
+   finish: () => void
+   ```
+
+Removes the animated path from the SVG element, effectively ending the animation.
+
+* **flowAppearance**: Configures the visual appearance of the connector animation.
+   ```javascript
+   flowAppearance: (width: number, color: string, linecap: StrokeLineCap, dashWidth: number, dashGap: number) => ConnectorScadaSymbolAnimation
+   ```
+
+  **Parameters**:
+  - **width**: The stroke width of the animated path.
+  - **color**: The stroke color of the animated path (e.g., '#C8DFF7').
+  - **linecap**: The stroke linecap style ('butt', 'round', or 'square').
+  - **dashWidth**: The width of the dash in the stroke dasharray.
+  - **dashGap**: The gap between dashes in the stroke dasharray.
+
+  **Returns**: Itself - an updated instance of `ConnectorScadaSymbolAnimation`, allowing for chained method calls.
+  <br/><br/>
+
+* **duration**: Sets the speed of the connector animation.
+   ```javascript
+   duration: (speed: number) => ConnectorScadaSymbolAnimation
+   ```
+
+  **Parameters**:
+  - **speed**: The duration of the animation in seconds.
+
+  **Returns**: Itself - an updated instance of `ConnectorScadaSymbolAnimation`, allowing for chained method calls.
+  <br/><br/>
+
+* **direction**: Sets the direction of the connector animation along the path.
+   ```javascript
+   direction: (direction: boolean) => ConnectorScadaSymbolAnimation
+   ```
+
+  **Parameters**:
+  - **direction**: If `true`, uses the forward path; if `false`, uses the reversed path.
+
+  **Returns**: Itself - an updated instance of `ConnectorScadaSymbolAnimation`, allowing for chained method calls.
+  <br/><br/>

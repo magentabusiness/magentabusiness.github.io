@@ -12,12 +12,11 @@ Similarly, you can restrict access to sensitive information, increasing business
 
 <!-- ## IoT Hub CE vs PE security features comparison
 
-IoT Hub Community Edition (TB CE) supports a straight-forward security model with three main roles: System administrator, Tenant administrator, and Customer user. 
-A system administrator is able to manage tenants, while a tenant administrator manages devices, dashboards, customers, and other entities that belong to a particular tenant.
-Customer user is able to view dashboards and control devices that are assigned to a specific customer.
-TB CE functionality is sufficient for a lot of simple use cases, especially building real-time [end-user dashboards](/docs/{{docsPrefix}}user-guide/dashboards/).
- 
-IoT Hub  brings much more flexibility in terms of user, customer, and role management. 
+### IoT Hub
+
+![image](/images/user-guide/security/rbac/TB_PE.png)
+
+IoT Hub brings much more flexibility in terms of user, customer, and role management. 
 It is designed to cover use cases for businesses and enterprises with multiple user groups that have different permissions but may interact with the same devices and assets. 
 
 IoT Hub security model was significantly improved in v2.3 to enable new security features and to support advanced RBAC for IoT applications. For example:

@@ -6,3 +6,4 @@ _site/**
 CNAMEx
 .idea/**
 **/*.iml
+_config.yml

@@ -5,9 +5,9 @@
   section:
     - path: /docs/getting-started-guides/helloworld-pe/
       title: Hello world
-      subtitle: Learn how to collect IoT device data using MQTT, HTTP or CoAP and visualize it on a simple dashboard. Provides variety of sample scripts that you can run on your PC or laptop to simulate the device.
+      subtitle: Learn how to collect data from IoT devices using MQTT, HTTP, or CoAP and visualize it on a simple dashboard.
       keywords: mqtt http coap visualization helloworld
-      video: false
+      video: true
       pe: false
     # - path: /docs/iot-video-tutorials/#working-with-users-devices-and-dashboards
     #   title: End user IoT dashboards
@@ -289,75 +289,80 @@
       keywords: Connect UDP devices
       pe: true
       video: true
-    # - path: /docs/samples/tektelic/
-    #   title: Connect Tektelic LoRaWAN sensors using TEKTELIC KONA Core Network Server
-    #   subtitle: Learn how to route messages from TEKTELIC KONA Core Network Server to IoT Hub.
-    #   keywords: Tektelic connect
-    #   pe: false
-    #   video: false
-
-#- title: Data visualization
-#  subtitle: These guides contain instructions how to configure complex IoT Hub dashboards
-#  id: DataVisualization
-#  section:
-#    - path: /docs/iot-video-tutorials/#dashboard-development-guide-part-1-of-3-visualizing-assets-data-using-maps-and-tables
-#      title: Visualizing assets data using Maps and Tables
-#      subtitle: "Learn how to: create assets and devices and define their relationships; add the server attributes and create a new dashboard; visualize data from the asset attributes using “Entities Table” and “Map” widgets."
-#      keywords:
-#      pe: false
-#      video: true
-#    - path: /docs/iot-video-tutorials/#dashboard-development-guide-part-2-of-3-dashboard-states-aliases-and-widget-actions
-#      title: Dashboard states, aliases and widget actions
-#      subtitle: "Learn how to: add and configure new dashboard states; create various aliases; visualize the attributes data using the Image Map widget; create actions in different widgets in order to navigate between states; visualize the telemetry data using Analogue and Digital gauges and the Timeseries widget."
-#      keywords:
-#      pe: false
-#      video: true
-#    - path: /docs/iot-video-tutorials/#dashboard-development-guide-part-3-of-3-remote-device-control-and-alarm-management
-#      title: Remote device control and alarm management
-#      subtitle: "Learn how to: add and use the Knob Control widget; create alarm rules; handle alarms using the Alarms widget; make a dashboard public."
-#      keywords:
-#      pe: false
-#      video: true
-#    - path: /docs/iot-video-tutorials/#widget-configuration-guide-part-1-of-3-basic-settings
-#      title: Basic widget settings
-#      subtitle: "Learn how to: change widget title, background, colors, fonts, shadows, etc."
-#      keywords:
-#      pe: false
-#      video: true
-#    - path: /docs/iot-video-tutorials/#widget-configuration-guide-part-2-of-3-latest-values-map-widget
-#      title: Latest Values Map widget
-#      subtitle: "Learn how to create Map widget, based on latitude and longitude, and customize the Map widget layout and properties."
-#      keywords:
-#      pe: false
-#      video: true
-#    - path: /docs/iot-video-tutorials/#widget-configuration-guide-part-3-of-3-time-series-map-widget
-#      title: Time Series Map widget
-#      subtitle: "Learn how to display your devices with the latest telemetry data on the Time Series Map widget and modify the widget properties."
-#      keywords:
-#      pe: false
-#      video: true
-#    - path: /docs/user-guide/ui/trip-animation-widget
-#      title: Trip Animation widget
-#      subtitle: "Learn how to display your devices with the latest telemetry data on the Trip Animation widget and modify the widget properties."
-#      keywords:
-#      pe: false
-#      video: true
+    - path: /docs/samples/tektelic/
+      title: Connect Tektelic LoRaWAN sensors using TEKTELIC KONA Core Network Server
+      subtitle: Learn how to route messages from TEKTELIC KONA Core Network Server to ThingsBoard.
+      keywords: Tektelic connect
+      pe: false
+      video: false
+    - path: /docs/user-guide/integrations/tuya/
+      title: Connect smart devices through Tuya Smart
+      subtitle: Learn how to connect smart devices using Tuya Smart to ThingsBoard.
+      keywords:
+      pe: true
+      video: false
+    - path: /docs/samples/sia-connect/
+      title: Connect OPC-UA devices through SIA Connect
+      subtitle: Learn how to connect OPC-UA devices using the SIA Connect to the ThingsBoard.
+      keywords:
+      pe: true
+      video: false
+- title: Data visualization
+  subtitle: These guides contain instructions how to configure complex ThingsBoard dashboards
+  id: DataVisualization
+  section:
+    - path: /docs/iot-video-tutorials/#dashboard-development-guide-part-1-of-3-visualizing-assets-data-using-maps-and-tables
+      title: Visualizing assets data using Maps and Tables
+      subtitle: "Learn how to: create assets and devices and define their relationships; add the server attributes and create a new dashboard; visualize data from the asset attributes using “Entities Table” and “Map” widgets."
+      keywords:
+      pe: false
+      video: true
+    - path: /docs/iot-video-tutorials/#dashboard-development-guide-part-2-of-3-dashboard-states-aliases-and-widget-actions
+      title: Dashboard states, aliases and widget actions
+      subtitle: "Learn how to: add and configure new dashboard states; create various aliases; visualize the attributes data using the Image Map widget; create actions in different widgets in order to navigate between states; visualize the telemetry data using Analogue and Digital gauges and the Timeseries widget."
+      keywords:
+      pe: false
+      video: true
+    - path: /docs/iot-video-tutorials/#dashboard-development-guide-part-3-of-3-remote-device-control-and-alarm-management
+      title: Remote device control and alarm management
+      subtitle: "Learn how to: add and use the Knob Control widget; create alarm rules; handle alarms using the Alarms widget; make a dashboard public."
+      keywords:
+      pe: false
+      video: true
+    - path: /docs/iot-video-tutorials/#widget-configuration-guide-part-1-of-3-basic-settings
+      title: Basic widget settings
+      subtitle: "Learn how to: change widget title, background, colors, fonts, shadows, etc."
+      keywords:
+      pe: false
+      video: true
+    - path: /docs/iot-video-tutorials/#widget-configuration-guide-part-2-of-3-latest-values-map-widget
+      title: Latest Values Map widget
+      subtitle: "Learn how to create Map widget, based on latitude and longitude, and customize the Map widget layout and properties."
+      keywords:
+      pe: false
+      video: true
+    - path: /docs/iot-video-tutorials/#widget-configuration-guide-part-3-of-3-time-series-map-widget
+      title: Time Series Map widget
+      subtitle: "Learn how to display your devices with the latest telemetry data on the Time Series Map widget and modify the widget properties."
+      keywords:
+      pe: false
+      video: true
 - title: Data processing & actions
-  subtitle: Learn how to use IoT Hub Rule Engine.
+  subtitle: Learn how to process data in ThingsBoard.
   id: DataProcessing
   section:
     - path: /docs/user-guide/rule-engine-2-0/tutorials/validate-incoming-telemetry/
       title: Validate incoming telemetry
       subtitle: Learn how to configure Rule Engine to discard invalid telemetry readings based on JavaScript filter function.
       pe: false
-    - path: /docs/user-guide/rule-engine-2-0/tutorials/telemetry-delta-validation/
+    - path: /docs/tutorials/telemetry-delta-calculation/
       title: Telemetry delta calculation
-      subtitle: Learn how to configure Rule Engine to calculate telemetry delta readings based on Originator telemetry rule node.
-      pe: false
-    - path: /docs/user-guide/rule-engine-2-0/tutorials/function-based-on-telemetry-from-two-devices/
+      subtitle: Learn how to calculate telemetry delta readings using the Calculated fields feature.
+      pe: true
+    - path: /docs/tutorials/function-based-on-telemetry-from-two-devices/
       title: Data function based on telemetry from 2 devices
-      subtitle: Learn how to configure Rule Engine to create new telemetry based on telemetry readings from multiple devices.
-      pe: false
+      subtitle: Learn how to generate a new telemetry value based on telemetry readings from multiple devices using the Calculated fields feature.
+      pe: true
     - path: /docs/user-guide/rule-engine-2-0/tutorials/transform-incoming-telemetry/
       title: Transform incoming telemetry
       subtitle: Learn how to configure Rule Engine to transform incoming telemetry based on JavaScript function before it is stored to the database.

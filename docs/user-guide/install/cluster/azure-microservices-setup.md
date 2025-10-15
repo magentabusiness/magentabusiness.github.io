@@ -19,7 +19,7 @@ This guide will help you to setup IoT Hub in microservices mode in Azure AKS.
 ## Step 1. Clone IoT Hub K8S scripts repository
 
 ```bash
-git clone -b release-{{ site.release.ver }} https://github.com/thingsboard/thingsboard-ce-k8s.git
+git clone -b release-{{ site.release.ce_full_ver }} https://github.com/thingsboard/thingsboard-ce-k8s.git
 cd thingsboard-ce-k8s/azure/microservices
 ```
 {: .copy-code}
@@ -47,7 +47,7 @@ cd thingsboard-ce-k8s/azure/microservices
 
 {% include templates/install/azure/configure-cassandra.md %}
 
-## Step 6. Azure Cache for Redis
+## Step 6. Azure Cache for Valkey (optional)
 
 {% include templates/install/azure/aks-create-redis.md %}
 

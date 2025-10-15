@@ -14,7 +14,7 @@ In case of a downlink message, MQTT integration converts it to the device-suitab
 Pay attention: TBMQ should be either co-located with the IoT Hub instance or deployed in the cloud and have a valid DNS name or public static IP address.
 IoT Hub instance that is running in the cloud can’t connect to the TBMQ deployed in the local network with no internet connection.
 
-### Prerequisites
+## Prerequisites
 
 In this tutorial, we will use:
 
@@ -22,7 +22,7 @@ In this tutorial, we will use:
  - [TBMQ](/docs/mqtt-broker/install/installation-options/) installed **locally** and accessible by IoT Hub instance;
  - mosquitto_pub MQTT client to send messages.
 
-### TBMQ setup
+## TBMQ setup
 
 First, we need to create TBMQ client credentials to use them for connecting IoT Hub integration to TBMQ.
 
@@ -44,7 +44,7 @@ Now you can proceed to the next step - configuration of IoT Hub integration.
 In this example, we will use the MQTT integration to connect the IoT Hub to TBMQ.
 Before setting up an MQTT integration, you need to create uplink converter.
 
-#### Uplink Converter
+### Uplink Converter
 
 The purpose of the decoder function is to parse the incoming data and metadata to a format that IoT Hub can consume.
 
@@ -62,7 +62,7 @@ JavaScript<small></small>%,%anonymous%,%templates/mqtt-broker/user-guide/integra
 
 {% include content-toggle.liquid content-toggle-id="mqttuplinkconverterconfig" toggle-spec=mqttuplinkconverterconfig %}
 
-#### MQTT Integration Setup
+### MQTT Integration Setup
 
 Now create an integration.
 
@@ -76,7 +76,7 @@ And on the "Topics" page of the "Kafka Management" menu section you will see a n
 
 {% include images-gallery.html imageCollection="tbmq-home-page" %}
 
-#### Send Uplink message
+### Send Uplink message
 
 Now let's simulate the device sending a temperature reading to TBMQ. 
 
@@ -107,6 +107,6 @@ Click on the device, go to "Latest Telemetry" tab to see "temperature" key and i
 
 {% include images-gallery.html imageCollection="tbmq-create-device" %}
 
-### Next steps
+## Next steps
 
 {% assign currentGuide = "TBIntegrationGuide" %}{% include templates/mqtt-broker-guides-banner.md %}

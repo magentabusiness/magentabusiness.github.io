@@ -146,7 +146,7 @@ For *Tenant administrator*:
 
  * *Affected user* - The user that is affected by the notification trigger event. For example, the person that is assigned to investigate the alarm event.
 
-#### Slack
+### Slack
 
 Send IoT Hub notifications as Slack messages to a public or private channel, or direct message.
 
@@ -165,7 +165,7 @@ first, you need to configure the Slack settings in IoT Hub using [this guide](/d
 
 {% include images-gallery.html imageCollection="notification-center-recipients-slack" %}
 
-#### Microsoft Teams
+### Microsoft Teams
 
 Send IoT Hub notifications as messages to your Microsoft Teams channel.
 
@@ -203,7 +203,7 @@ You may also modify the value of the parameter with one of the sufixes:
  * `lowerCase`, for example - `${recipientFirstName:lowerCase}`
  * `capitalize`, for example - `${recipientFirstName:capitalize}`
 
-#### Add new template
+### Add new template
 
 To add a new template, follow these steps:
 
@@ -220,7 +220,7 @@ To add a new template, follow these steps:
 <br>
 Let's take a closer look at all the available template types.
 
-#### General
+### General
 
 The general template is used to send generic notifications. For example, system maintenance or important announcement. 
 Available template parameters:
@@ -241,7 +241,7 @@ The notification in IoT Hub may look like this:
 ![image](/images/user-guide/notifications/templates/templates-general-ce.png)
 {% endif %}
 
-#### Alarm
+### Alarm
 
 The alarm template is used to send notification about alarms. For example, alarm creation or acknowledgment. 
 Available template parameters contain all parameters available for the [General](#general) template, plus:
@@ -270,7 +270,7 @@ The notification in IoT Hub may look like this:
 ![image](/images/user-guide/notifications/templates/templates-alarms-ce.png)
 {% endif %}
 
-#### Device activity
+### Device activity
 
 The device activity template is used to send notifications about whether a device is active or inactive.
 Available template parameters contain all parameters available for the [General](#general) template, plus:
@@ -296,7 +296,7 @@ The notification in IoT Hub may look like this:
 ![image](/images/user-guide/notifications/templates/templates-device-activity-ce.png)
 {% endif %}
 
-#### Entity action
+### Entity action
 
 The entity action template is used to send notification about entity action: creation, update or deletion.
 Available template parameters contain all parameters available for the [General](#general) template, plus:
@@ -321,7 +321,7 @@ The notification in IoT Hub may look like this:
 ![image](/images/user-guide/notifications/templates/templates-entity-action-ce.png)
 {% endif %}
 
-#### Alarm comment
+### Alarm comment
 
 The alarm comment template is used to send notification about comments on alarms.
 Available template parameters contain all parameters available for the [Alarm](#alarm) template, plus:
@@ -343,7 +343,7 @@ The notification in IoT Hub may look like this:
 ![image](/images/user-guide/notifications/templates/templates-alarm-comment-ce.png)
 {% endif %}
 
-#### Alarm assignment
+### Alarm assignment
 
 The alarm assignment template is used to send notification when alarm is assigned or unassigned. 
 Available template parameters contain all parameters available for the [Alarm](#alarm) template, plus:
@@ -368,7 +368,7 @@ The notification in IoT Hub may look like this:
 ![image](/images/user-guide/notifications/templates/templates-alarm-assignment-ce.png)
 {% endif %}
 
-#### Rule engine lifecycle event
+### Rule engine lifecycle event
 
 The rule engine lifecycle event template is used to send notification about rule chain or rule node lifecycle events. 
 For example, notify when new rule node fails to start. 
@@ -394,7 +394,7 @@ The notification in IoT Hub may look like this:
 ![image](/images/user-guide/notifications/templates/templates-rule-engine-lifecycle-event-ce.png)
 {% endif %}
 
-#### Rule node
+### Rule node
 
 The rule node template is used to send notifications from the '[send notification](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/external-nodes/#send-notification-node)' rule node.
 You may use data or metadata from the incoming message to build the notification subject and body.
@@ -421,7 +421,7 @@ The notification in IoT Hub may look like this:
 {% endif %}
 
 {% if docsPrefix == "pe/" or docsPrefix contains "paas/" %}
-#### Integration lifecycle event
+### Integration lifecycle event
 
 The integration lifecycle event template is used to send notification about integration lifecycle events. For example, notify when new integration fails to start.
 Available template parameters contain all parameters available for the [General](#general) template, plus:
@@ -440,7 +440,7 @@ The notification in IoT Hub may look like this:
 ![image](/images/user-guide/notifications/templates/templates-integration-lifecycle-event-pe.png) 
 {% endif %}
  
-#### Edge connection
+### Edge connection
 
 The Edge connection template is used to send notifications about changes in the connection status between IoT Hub and the Edge.
 
@@ -461,7 +461,7 @@ The notification in IoT Hub may look like this:
 ![image](/images/user-guide/notifications/templates/templates-edge-connection-ce.png)
 {% endif %}
 
-#### Edge communication failure
+### Edge communication failure
 
 The Edge communication failure template is used to send notifications about IoT Hub connection failures with the Edge.
 
@@ -483,7 +483,7 @@ The notification in IoT Hub may look like this:
 {% endif %}
 
 {% unless docsPrefix contains 'paas/' %}
-#### Entities limit
+### Entities limit
 
 This template is intended to notify tenants that they will reach the limit on the number of entities (devices, assets, etc.). Only the system administrator can use this template.
 Available template parameters contain all parameters available for the [General](#general) template, plus:
@@ -510,7 +510,7 @@ The notification in IoT Hub may look like this:
 ![image](/images/user-guide/notifications/templates/templates-entities-limit-ce.png)
 {% endif %}
 
-#### API usage limit
+### API usage limit
 
 This template is intended to notify tenants when they hit a specific API limit. Only the system administrator can use this template.
 Available template parameters contain all parameters available for the [General](#general) template, plus:
@@ -534,7 +534,7 @@ The notification in IoT Hub may look like this:
 ![image](/images/user-guide/notifications/templates/templates-api-usage-limit-ce.png)
 {% endif %}
 
-#### New platform version
+### New platform version
 
 This template is intended to notify tenants about the release of a new version of the IoT Hub platform. Only the system administrator can use this template.
 Available template parameters contain all parameters available for the [General](#general) template, plus:
@@ -556,7 +556,7 @@ The notification in IoT Hub may look like this:
 ![image](/images/user-guide/notifications/templates/templates-new-platform-version-ce.png)
 {% endif %}
 
-#### Exceeded rate limits
+### Exceeded rate limits
 
 This template is for notifying about exceeding rate limits. Only the system administrator can use this template.
 Available template parameters contain all parameters available for the [General](#general) template, plus:
@@ -592,7 +592,7 @@ The trigger event types are tightly coupled to the notification template types.
 <br>
 Let's take a closer look at all rules:
 
-#### Alarm
+### Alarm
 
 Using the "Alarm" rule the system sends notifications on specific events: alarm is created, acknowledged, cleared, severity updated, or alarm deleted.
 
@@ -630,7 +630,7 @@ Template message: `Severity: ${alarmSeverity}, originator: ${alarmOriginatorEnti
 
 See [Alarm](#alarm) template for a list of the available template parameters.
 
-#### Device activity
+### Device activity
 
 Using the "Device activity" rule the system sends notifications when the device becomes active or inactive.
 
@@ -657,7 +657,7 @@ Template message: `Device '${deviceName}' of type '${deviceType}' is now ${event
 
 See [Device activity](#device-activity) template for a list of the available template parameters.
 
-#### Entity action
+### Entity action
 
 Using the "Entity action" rule the system sends notifications when an entity is created, updated or deleted.
 
@@ -684,7 +684,7 @@ Template message: `${entityType} '${entityName}' was ${actionType} by user ${use
 
 See [Entity action](#entity-action) template for a list of the available template parameters.
 
-#### Alarm comment
+### Alarm comment
 
 Using the "Alarm comment" rule the system sends notifications when an alarm is commented.
 
@@ -711,7 +711,7 @@ Template message: `${userEmail} ${action} comment: ${comment}`
 
 See [Alarm comment](#alarm-comment) template for a list of the available template parameters.
 
-#### Alarm assignment
+### Alarm assignment
 
 Using the "Alarm assignment" rule the system sends notifications when an alarm is assigned or unassigned.
 
@@ -738,7 +738,7 @@ Template message: `${userEmail} assigned alarm on ${alarmOriginatorEntityType} '
 
 See [Alarm assignment](#alarm-assignment) template for a list of the available template parameters.
 
-#### Rule engine lifecycle event
+### Rule engine lifecycle event
 
 Using the "Rule engine lifecycle event" rule the system sends notifications about the rule chain or rule node lifecycle events.
 For example, notify when a new rule node fails to start (typically due to misconfiguration).
@@ -769,7 +769,7 @@ Template message: `${componentType} '${componentName}' failed to ${action}`
 See [Rule engine lifecycle event](#rule-engine-lifecycle-event) template for a list of the available template parameters.
 
 {% if docsPrefix == "pe/" or docsPrefix contains "paas/" %}
-#### Integration lifecycle event
+### Integration lifecycle event
 
 Using the "Integration lifecycle event" rule the system sends notifications about the integration lifecycle events.
 For example, notify when a integration fails to start (typically due to misconfiguration).
@@ -800,7 +800,7 @@ Template message: `Integration '${integrationName}' failed to start:<br/>${error
 See [Integration lifecycle event](#integration-lifecycle-event) template for a list of the available template parameters.
 {% endif %}
 
-#### Edge connection
+### Edge connection
 
 Using the "Edge connection" rule the system sends a notification to tenant admins when the connection status between TB and Edge changes.
 
@@ -829,7 +829,7 @@ Template message: `Edge '${edgeName}' is now ${eventType}`
 
 See [Edge connection](#edge-connection) template for a list of the available template parameters.
 
-#### Edge communication failure
+### Edge communication failure
 
 Using the "Edge communication failure" rule the system sends a notification to tenant admins when communication failures occur.
 
@@ -856,7 +856,7 @@ Template message: `Failure message: '${failureMsg}'`
 See [Edge communication failure](#edge-communication-failure) template for a list of the available template parameters.
 
 {% unless docsPrefix contains 'paas/' %}
-#### Entities limit
+### Entities limit
 
 The system administrator can use the "Entities limit" rule to notify tenants that they will reach the limit on the number of entities (devices or assets). 
 For example, notify when tenant has reached 80% of the 100 devices allowed. The max number of devices is extracted from the tenant profile. 
@@ -883,7 +883,7 @@ Template message: `${entityType}s usage: ${currentCount}/${limit} (${percents}%)
 
 See [Entities limit](#entities-limit) template for a list of the available template parameters.
 
-#### API usage limit
+### API usage limit
 
 The system administrator can use the "API usage limit" rule to notify tenants that they have reached the limit of used units.
 
@@ -912,7 +912,7 @@ Template message: `${feature} feature - ${status:upperCase} (usage: ${currentVal
 
 See [API usage limit](#api-usage-limit) template for a list of the available template parameters.
 
-#### New platform version
+### New platform version
 
 The system administrator can use the "New platform version" rule to notify tenants and system administrators about the release of a new version of the IoT Hub platform.
 
@@ -937,7 +937,7 @@ Template message: `Current version is ${currentVersion}. You can upgrade your Io
 
 See [New platform version](#new-platform-version) template for a list of the available template parameters.
 
-#### Exceeded rate limits
+### Exceeded rate limits
 
 The system administrator can use the "Exceeded rate limits" rule to notify tenants and system administrators about the exceeded rate limits.
 

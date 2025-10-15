@@ -5,7 +5,7 @@ Analytics Nodes that are specific to IoT Hub. Used for analysis of streamed or p
 * TOC
 {:toc}
 
-## Aggregate Latest Node
+## Aggregate latest node
 
 <table  style="width:250px;">
    <thead>
@@ -77,7 +77,7 @@ with failure reason and parent entity as originator. Failure message is forwarde
 
 <br>
 
-## Aggregate Stream Node
+## Aggregate stream node
 
 <table  style="width:250px;">
    <thead>
@@ -118,7 +118,7 @@ specifying "Buildings" entity group.
 
 ![image](/images/user-guide/rule-engine-2-0/pe/nodes/analytics-queue-name.png)
 
-## Alarms Count Node
+## Alarms count node
 
 <table  style="width:250px;">
    <thead>
@@ -165,7 +165,7 @@ with failure reason and entity as originator. Failure message is forwarded via *
 
 <br>
 
-## Alarms Count Node (deprecated)
+## Alarms count node (deprecated)
 
 <table  style="width:250px;">
    <thead>

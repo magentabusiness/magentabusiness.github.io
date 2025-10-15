@@ -14,7 +14,7 @@ There are two ways a Tenant Administrator can grant a Customer access to a speci
 We're continuing to enhance our dashboard. In the last lesson, we set up alarm rules for the Indoor Air Quality sensor and added a widget to manage alarms. If you haven’t completed that lesson yet, I suggest going through it first.
 
 <br>
-<p><a href="/docs/{{docsPrefix}}user-guide/advanced-guides-for-working-with-dashboard/advanced-dashboard-guide-lesson-4/" class="n-button add-device">Lesson 4: Alarm management</a></p>
+<p><a href="/docs/{{docsPrefix}}user-guide/advanced-guides-for-working-with-dashboard/advanced-dashboard-guide-lesson-4/" class="button">Lesson 4: Alarm management</a></p>
 
 <br>
 
@@ -22,7 +22,7 @@ In this lesson, we will add two customers and configure shared access for them t
 In our case, a Customer is an individual or organization that rents an office in your building and uses the devices available there.
 Each customer will have access solely to their respective rented office and the devices within it.
 
-{% include carousel.liquid collectionMap = 'dashboard-lesson-5' nonActiveItemsVisibility = false %}
+{% include default-carousel.liquid collectionMap = 'dashboard-lesson-5' nonActiveItemsVisibility = false %}
 
 As part of our lesson, imagine two customers: Customer A rents Office A in Building A. Customer B rents Office B in the same building.
 

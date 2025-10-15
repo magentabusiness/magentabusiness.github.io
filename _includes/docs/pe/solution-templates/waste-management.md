@@ -8,11 +8,11 @@ The Waste Management template represents a solution for monitoring and controlli
 
 {% include images-gallery.html imageCollection="solution-highlights" %}
 
-### Dashboard
+## Dashboard
 
 As part of this solution, we have created the **Waste Management Administration** dashboard that displays data from waste sensors.
 
-#### Waste Management Administration
+### Waste Management Administration
 
 The Waste Management Administration has multiple states - **Main state** and **Bin state**.
 
@@ -37,7 +37,7 @@ You may use the **Bin state** to:
 You may always customize the "Waste Management Administration" dashboard using dashboard development [guide](/docs/{{docsPrefix}}user-guide/dashboards/).
 
 
-### Devices
+## Devices
 
 We have already created 10 waste monitoring sensors and loaded some demo data for them. See solution [instructions](/docs/{{docsPrefix}}solution-templates/overview/#install-solution-template) for the list of created devices and their credentials. The solution expects that the sensor device will upload fullness level and battery level values. The most simple example of the expected payload is in JSON format:
 

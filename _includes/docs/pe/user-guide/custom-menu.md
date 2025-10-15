@@ -16,6 +16,13 @@ Menu customization options:
 
 - **Personalized settings**: The menu can be customized individually for each tenant, customer, or their users, providing an additional level of personalization.
 
+&nbsp;
+<div id="video">  
+    <div id="video_wrapper">
+        <iframe src="https://www.youtube.com/embed/U69PLwRoWyI" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
 ## Add custom menu
 
 Before adding a custom menu in IoT Hub, it is important to define the scope of its application, depending on who the end user is: Tenant or Customer.
@@ -137,7 +144,7 @@ Now, click on the new menu item. You will navigate to the specified dashboard.
 
 {% include images-gallery.liquid imageCollection=addCustomMenuItemBetweenExistingItems %}
 
-#### Adding suitem
+#### Adding subitem
 
 You can place several menu items into one section. For example, devices, assets, and entity views are located in the "Entities" section.
 

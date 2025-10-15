@@ -1,8 +1,8 @@
 {% include templates/install/queue-aws-sqs-config.md %}
 
-##### IoT Hub Configuration
+##### ThingsBoard Configuration
 
-Edit IoT Hub configuration file
+Edit ThingsBoard configuration file
 
 ```text
 sudo nano /etc/thingsboard/conf/thingsboard.conf
@@ -46,4 +46,4 @@ export TB_QUEUE_VC_PARTITIONS=1
 ```
 {: .copy-code}
 
-You can update default Rule Engine queues configuration (poll interval and partitions) using UI. More about IoT Hub Rule Engine queues see in [documentation](/docs/{{docsPrefix}}user-guide/rule-engine-2-5/queues/).
+You can update default Rule Engine queues configuration (poll interval and partitions) using UI. More about ThingsBoard Rule Engine queues see in [documentation](/docs/{{docsPrefix}}user-guide/rule-engine-2-5/queues/).

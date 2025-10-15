@@ -15,7 +15,7 @@ Non-video tutorials are available on the [Samples](/docs/samples/) page.
 
 ## Data Modeling
 
-#### Getting started guide
+### Getting started guide
 
 This video tutorial will give you a brief introduction to the IoT Hub platform and a hands-on part to help you to get started. 
 
@@ -28,7 +28,7 @@ You will learn how to provision a new Device, collect data using MQTT and visual
     </div>
 </div>
 
-#### Working with users, devices and dashboards
+### Working with users, devices and dashboards
 
 This video tutorial will cover the basic operations that can be done with Devices, Customers, and Dashboards. 
 
@@ -44,8 +44,7 @@ You will learn how to:
     </div>
 </div>
 
-
-#### Device data management using IoT Hub
+### Device data management using IoT Hub
 
 This video tutorial will cover the basic operations that can be done with the device attributes to implement practical device management use cases.
 
@@ -61,7 +60,7 @@ You will learn how to:
     </div>
 </div>
 
-#### End User IoT dashboards (before TB v1.4)
+### End User IoT dashboards (before TB v1.4)
 
 This video tutorial will cover the basic operations with Devices, Customers, and Dashboards.
 
@@ -79,7 +78,7 @@ You will learn how to:
 
 ## Device Connection Demos
 
-#### Temperature upload from ESP8266 and DHT22 using IoT Hub
+### Temperature upload from ESP8266 and DHT22 using IoT Hub
 
 This video tutorial shows a demo about how to upload the temperature and humidity data from ESP8266 and DHT22 over MQTT using Arduino SDK and IoT Hub.  
 
@@ -93,7 +92,7 @@ For more details and source code reference, please refer to the tutorial documen
 </div><br>
 Related Links: <a href="https://blog.iothub.magenta.at/2016/12/temperature-upload-over-mqtt-using_21.html">Tutorial Documentation
 
-#### ESP8266 GPIO control using IoT Hub
+### ESP8266 GPIO control using IoT Hub
 
 This video tutorial showsa demo about how to control ESP8266 GPIO over MQTT using Arduino SDK and IoT Hub 
 
@@ -107,7 +106,7 @@ For more details and source code reference, please refer to the tutorial documen
 </div><br>
 Related Links: <a href="https://blog.iothub.magenta.at/2017/01/esp8266-gpio-control-over-mqtt-using.html">Tutorial documentation
 
-#### Temperature upload from Raspberry Pi and DHT22 using IoT Hub
+### Temperature upload from Raspberry Pi and DHT22 using IoT Hub
 
 This video tutorial shows a demo about how to upload the temperature and humidity data from Raspberry Pi and DHT22 over MQTT using Python and IoT Hub 
 
@@ -121,8 +120,8 @@ For more details and source code reference, please refer to the tutorial documen
 </div><br>
 Related Links: <a href="https://blog.iothub.magenta.at/2017/01/temperature-upload-over-mqtt-using.html">Tutorial documentation
 
-#### Raspberry Pi GPIO control using IoT Hub
-This video tutorial shows a demo about how to contro Raspberry Pi GPIO over MQTT using Python and IoT Hub. 
+### Raspberry Pi GPIO control using IoT Hub
+This video tutorial shows a demo about how to contro Raspberry Pi GPIO over MQTT using Python and IoT Hub.
 For more details and source code reference, please refer to the tutorial documentation in the related links. 
 
 <br>
@@ -139,7 +138,7 @@ Related Links:<br>
 
 ## Visualization
 
-#### Dashboard development guide, Part 1 of 3: Visualizing Assets data using Maps and Tables
+### Dashboard development guide, Part 1 of 3: Visualizing Assets data using Maps and Tables
 
 This video tutorial, part 1, will show you how to create a new dashboard and visualize data from the asset attributes.
 
@@ -156,7 +155,7 @@ You will learn how to:
 </div>
 
 
-#### Dashboard development guide, Part 2 of 3: Dashboard states, Aliases and Widget actions
+### Dashboard development guide, Part 2 of 3: Dashboard states, Aliases and Widget actions
 
 This video tutorial, part 2, will cover the basic operations that can be done with dashboard states and actions. Also, it will give you an introduction to entity aliases and the image map widget.
 
@@ -175,7 +174,7 @@ You will learn how to:
 </div>
 
 
-#### Dashboard development guide, Part 3 of 3: Remote Device control and Alarm management
+### Dashboard development guide, Part 3 of 3: Remote Device control and Alarm management
 
 This video tutorial, part 3, will cover the usage of the device control widget and the basic operations that be done with rules and alarms.
 
@@ -193,7 +192,7 @@ You will learn how to:
 </div><br>
 
 
-#### Widget configuration guide, Part 1 of 3: Basic Settings
+### Widget configuration guide, Part 1 of 3: Basic Settings
 
 This video tutorial, part 1, will cover the basic settings you need to configure a widget in a dashboard.
 
@@ -211,7 +210,7 @@ You will learn how to:
 </div><br>
 
 
-#### Widget configuration guide, Part 2 of 3: Latest Values Map Widget
+### Widget configuration guide, Part 2 of 3: Latest Values Map Widget
 
 This video tutorial, part 2, will show you how to display your devices with the latest telemetry data on the ¨Latest Values Map¨ widget and modify the widget properties.
 
@@ -229,7 +228,7 @@ You will learn how to:
 </div><br>
 
 
-#### Widget configuration guide, Part 3 of 3: Time Series Map Widget
+### Widget configuration guide, Part 3 of 3: Time Series Map Widget
 This video tutorial, part 3, will show you how to display your devices with the latest telemetry data on the ¨Time Series Map¨ widget and modify the widget properties.
 
 You will learn how to:
@@ -246,8 +245,8 @@ You will learn how to:
 
 # IoT Hub  Features
 
-#### IoT Hub: White Labeling Guide
-IoT Hub web interface allows you to configure your company or product logo and color scheme in 2 minutes with zero coding efforts and no service restart required. 
+### IoT Hub: White Labeling Guide
+IoT Hub web interface allows you to configure your company or product logo and color scheme in 2 minutes with zero coding efforts and no service restart required.
 
 In this video tutorial, you will learn the configuration options that are available:
 
@@ -263,7 +262,7 @@ In this video tutorial, you will learn the configuration options that are availa
 </div><br>
 
 
-#### IoT Hub: Entity Groups Configuration Guide
+### IoT Hub: Entity Groups Configuration Guide
 IoT Hubs allows you to configure multiple custom Device & Asset Groups. Each entity (device or asset) may belong to multiple groups at the same time. The special group “All” always contains all devices that belong to a specific tenant account. This video tutorial will show you how to configure entity groups
 
 You will learn how to:
@@ -282,9 +281,8 @@ You will learn how to:
 Related Links: <a href="https://gist.github.com/Terny22/987074fc7e43ee75c83973363436c1d0"> Thermostat emulator
 <br>
 
-#### IoT Hub: CSV/XLS data export
-In this video tutorial, you will see how IoT Hub allows you to export data from widgets to CSV or XLS. This functionality is available almost in any widget if it is applicable to the widget type. The list of columns in the exported data set corresponds to the list of parameters you configure in the data set configuration. 
-
+### IoT Hub: CSV/XLS data export
+In this video tutorial, you will see how IoT Hub allows you to export data from widgets to CSV or XLS. This functionality is available almost in any widget if it is applicable to the widget type. The list of columns in the exported data set corresponds to the list of parameters you configure in the data set configuration.
 You will learn how to:
 
  - enable data export
@@ -297,7 +295,7 @@ You will learn how to:
 </div><br>
 
 
-#### IoT Hub: AWS IoT Integration Configuration Guide
+### IoT Hub: AWS IoT Integration Configuration Guide
 
 AWS IoT Integration allows to stream data from AWS IoT Backend to IoT Hub and converts device payloads to the IoT Hub format. This video tutorial will show you how to configure AWS IoT Integration.
 
@@ -316,8 +314,7 @@ You will learn how to:
 
 ## Integration
 
-
-####  IoT Hub: Data Converters Configuration Guide
+###  IoT Hub: Data Converters Configuration Guide
 
 Data Converters are a part of the Platform Integration feature. IoT Hub uses two types of data converters:
 
@@ -339,7 +336,7 @@ You will learn how to:
 </div><br>
 
 
-#### IoT Hub: SigFox Integration Configuration Guide
+### IoT Hub: SigFox Integration Configuration Guide
 Sigfox Integration allows to stream data from Sigfox Backend to IoT Hub and converts binary device payloads to the IoT Hub format. This video tutorial will show you how to configure SigFox Integration
 
 
@@ -354,7 +351,7 @@ You will learn how to:
     </div>
 </div><br>
 
-#### IoT Hub: HTTP Integration Configuration Guide 
+### IoT Hub: HTTP Integration Configuration Guide 
 IoT Hub HTTP Integration allows to convert existing protocols and payload formats to IoT Hub message format and it is useful in several deployment scenarios, such as: 
 
  - stream device and/or asset data from an external system, IoT platform or connectivity provider backend.
@@ -374,7 +371,7 @@ You will learn how to:
     </div>
 </div><br>
 
-#### IoT Hub: IBM Watson IoT Integration Configuration Guide 
+### IoT Hub: IBM Watson IoT Integration Configuration Guide 
 IBM Watson IoT Integration allows to stream data from IBM Watson IoT to IoT Hub and converts device payloads to the IoT Hub format. This video tutorial will show you how to configure IBM Wastson Integration
 
 You will learn how to:
@@ -389,7 +386,7 @@ You will learn how to:
     </div>
 </div><br>
 
-#### IoT Hub: Azure Event Hub Integration Configuration Guide
+### IoT Hub: Azure Event Hub Integration Configuration Guide
 Azure Event Hub Integration allows to stream data from Azure Event Hub to IoT Hub and converts device payloads to the IoT Hub format. This video tutorial will show you how to configure Azure Event Hub Integration.
 
 You will learn how to:
@@ -405,7 +402,7 @@ You will learn how to:
 </div><br>
 
 
-#### IoT Hub: MQTT Integration Configuration Guide
+### IoT Hub: MQTT Integration Configuration Guide
 IoT Hub MQTT Integration allows to convert existing protocols and payload formats to IoT Hub message format and it is useful in several deployment scenarios, such as: 
 
 - stream device and/or asset data from an external system, IoT platform or connectivity provider backend.
