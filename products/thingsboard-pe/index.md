@@ -268,7 +268,7 @@ description:
       <div class="item">
         <img src="/images/pe/pricing-models.svg" alt="Simple and predictable pricing models" loading="lazy" width="254" height="151">
         <h3 class="item-heading">Simple and predictable pricing models</h3>
-        <p>Say "No!" to per message or per device pricing that turns to a monster bills in production system. IoT Hub PE supports two simple and predictable pricing models depending on your product life-cycle stage.</p>
+        <p>Say "No!" to per message or per device pricing that turns to a monster bills in production system. IoT Hub supports two simple and predictable pricing models depending on your product life-cycle stage.</p>
       </div>
     </div>
   </section>

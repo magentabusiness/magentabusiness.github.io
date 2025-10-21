@@ -2,7 +2,7 @@
 {:toc}
 
 {% if docsPrefix == 'pe/edge/' %}
-{% assign appPrefix = "IoT Hub PE" %}
+{% assign appPrefix = "IoT Hub" %}
 {% assign cloudDocsPrefix = "pe/" %}
 {% else %}
 {% assign appPrefix = "IoT Hub CE" %}

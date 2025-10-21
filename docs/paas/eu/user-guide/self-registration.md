@@ -11,7 +11,7 @@ description:
 {:toc}
 
 IoT Hub self-registration feature allows tenant to configure sign-up page for its customers to be able to simply sign-up and login to the IoT Hub with predefined permission configurations.
-This feature was introduced in IoT Hub PE 2.4.1.
+This feature was introduced in IoT Hub 2.4.1.
 
 This documentation page contains complete use case configuration example.
 

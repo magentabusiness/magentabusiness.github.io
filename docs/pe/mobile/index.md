@@ -1,10 +1,10 @@
 ---
 layout: docwithnav-mobile-pe
-title: IoT Hub PE Mobile Application Documentation
-description: IoT Hub PE Mobile Application - starting point for your IoT mobile product
+title: IoT Hub Mobile Application Documentation
+description: IoT Hub Mobile Application - starting point for your IoT mobile product
 ---
 
-The IoT Hub PE Mobile Application is an open-source [project](https://github.com/thingsboard/flutter_thingsboard_pe_app) based on [Flutter](https://flutter.dev/).
+The IoT Hub Mobile Application is an open-source [project](https://github.com/thingsboard/flutter_thingsboard_pe_app) based on [Flutter](https://flutter.dev/).
 It allows you to build your own IoT mobile application **with minimum coding efforts**.
 
 This documentation can help you set up and run your first IoT mobile app, learn how to customize the app and publish it to Google Play or App Store.
@@ -39,12 +39,12 @@ This documentation can help you set up and run your first IoT mobile app, learn 
     </div>
 </div>
 
-<br>A compatibility table between the Flutter IoT Hub PE mobile application and the version of your IoT Hub PE instance.
+<br>A compatibility table between the Flutter IoT Hub mobile application and the version of your IoT Hub instance.
 
 <table>
     <thead>
         <tr>
-          <td style="width: 50%"><b>IoT Hub PE version</b></td><td style="width: 50%"><b>Flutter IoT Hub PE Mobile Application</b></td><td style="width: 50%"><b>Dart IoT Hub PE Client</b></td>
+          <td style="width: 50%"><b>IoT Hub version</b></td><td style="width: 50%"><b>Flutter IoT Hub Mobile Application</b></td><td style="width: 50%"><b>Dart IoT Hub Client</b></td>
         </tr>
     </thead>
     <tbody>

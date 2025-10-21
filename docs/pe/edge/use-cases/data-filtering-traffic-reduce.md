@@ -19,7 +19,7 @@ provisionDevicesEdge:
 provisionDevices:    
     0:
         image: /images/pe/edge/use-cases/data-filtering/provision-devices-item-6.png
-        title: 'Log in to your <b>IoT Hub PE</b> instance. Navigate to the "Devices" page.'
+        title: 'Log in to your <b>IoT Hub</b> instance. Navigate to the "Devices" page.'
     1:
         image: /images/pe/edge/use-cases/data-filtering/provision-devices-item-7.png
         title: 'Verify that the <b>"In-vehicle monitoring system"</b> device is listed in the devices list.'
@@ -32,7 +32,7 @@ rootRuleChainPreview:
 updateRootRuleChain:
     0:
         image: /images/pe/edge/use-cases/data-filtering/update-root-item-1.png
-        title: 'Log in to your <b>IoT Hub PE</b> instance and navigate to the "Rule chains" page.'
+        title: 'Log in to your <b>IoT Hub</b> instance and navigate to the "Rule chains" page.'
     1:
         image: /images/pe/edge/use-cases/data-filtering/update-root-item-2.png
         title: 'Click on the "Edge Root Rule Chain" to enter edit mode.'
@@ -98,7 +98,7 @@ verifyDeviceTelemetryEdge:
 verifyDeviceTelemetry:
     0:
         image: /images/pe/edge/use-cases/data-filtering/verify-device-telemetry-item-5.png
-        title: 'Log in to your <b>IoT Hub PE</b> instance. Then navigate to the "Devices" page.' 
+        title: 'Log in to your <b>IoT Hub</b> instance. Then navigate to the "Devices" page.' 
     1:
         image: /images/pe/edge/use-cases/data-filtering/verify-device-telemetry-item-6.png
         title: 'Click on the <b>"In-vehicle monitoring system"</b> row to open the device details.'
@@ -109,7 +109,7 @@ verifyDeviceTelemetry:
 createDashboard:
   0:
         image: /images/pe/edge/use-cases/data-filtering/configure-dashboards-item-1.png
-        title: 'Log in to your <b>IoT Hub PE</b> instance. Navigate to "Dashboards" page.'
+        title: 'Log in to your <b>IoT Hub</b> instance. Navigate to "Dashboards" page.'
   1:
         image: /images/pe/edge/use-cases/data-filtering/configure-dashboards-item-2.png
         title: 'Click on the ("+") icon, then select "Create new dashboard"'
@@ -162,7 +162,7 @@ createDashboard:
 
 {% assign cloudDocsPrefix = "pe/" %}
 {% assign docsPrefix = "pe/edge/" %}
-{% assign appPrefix = "IoT Hub PE" %}
+{% assign appPrefix = "IoT Hub" %}
 
 ## Use case
 

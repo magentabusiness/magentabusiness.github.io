@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-edge
-title: Getting started with IoT Hub PE Edge
-description: Getting started with IoT Hub PE Edge
+title: Getting started with IoT Hub Edge
+description: Getting started with IoT Hub Edge
 
 step1:
     0:

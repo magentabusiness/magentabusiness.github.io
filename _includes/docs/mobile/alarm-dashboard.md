@@ -1,5 +1,5 @@
 {% if docsPrefix == 'pe/' %}
-{% assign appPrefix = "IoT Hub PE" %}
+{% assign appPrefix = "IoT Hub" %}
 {% else %}
 {% assign appPrefix = "IoT Hub" %}
 {% endif %}

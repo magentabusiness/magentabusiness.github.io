@@ -388,7 +388,7 @@ Cons:
 
 ### Remote integrations
 
-Remote integration become available since IoT Hub PE v2.4.1 and enables new deployment scenario.
+Remote integration become available since IoT Hub v2.4.1 and enables new deployment scenario.
 One can install remote integration in the local network and stream data to the cloud.
 
 Let&#39;s assume you have local MQTT broker or OPC-UA server deployed on-premises.

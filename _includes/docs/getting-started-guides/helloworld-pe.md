@@ -120,7 +120,7 @@ Notifications can be delivered via email, SMS, or integrated third-party systems
 
 {% include images-gallery.html imageCollection="notification-center" %}
 
-Additionally, [IoT Hub PE Mobile Application](/docs/pe/mobile/){:target="_blank"} provides instant push notifications directly to your smartphone, ensuring you&#39;re always informed of critical events wherever you are.
+Additionally, [IoT Hub Mobile Application](/docs/pe/mobile/){:target="_blank"} provides instant push notifications directly to your smartphone, ensuring you&#39;re always informed of critical events wherever you are.
 
 Follow [this guide](/docs/pe/mobile/getting-started/){:target="_blank"} to install the IoT Hub mobile app and set up notifications.
 

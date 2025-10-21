@@ -8,7 +8,7 @@ description: Supported LwM2M API Reference for IoT Devices
 upload-models:
     0:
         image: /images/lwm2m/upload-lwm2m-models-1-pe.png
-        title: 'Log in to your IoT Hub PE instance as a System administrator. Navigate to the "Resources library" page under the "Resources" section. Click the "+" (Add resource) button in the top-right corner of the window.'
+        title: 'Log in to your IoT Hub instance as a System administrator. Navigate to the "Resources library" page under the "Resources" section. Click the "+" (Add resource) button in the top-right corner of the window.'
     1:
         image: /images/lwm2m/upload-lwm2m-models-2-pe.png
         title: 'Upload one or more LwM2M model files. Click "Add" to complete the upload.'

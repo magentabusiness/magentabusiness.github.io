@@ -79,7 +79,7 @@ Several ways are available for integrating AI summaries with different types of 
 
 ## IoT Hub Widgets
 You can easily integrate custom prompts from Trendz to generate a summary of the data displayed in your IoT Hub widgets.
-This feature is available starting from **IoT Hub PE v3.6 and higher**.
+This feature is available starting from **IoT Hub v3.6 and higher**.
 ### Trendz Summary JS Module
 Depending on your IoT Hub version, the setup process is slightly different:
 

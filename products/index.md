@@ -41,7 +41,7 @@ notitle: "true"
     </a>
     <a href="/products/mobile-pe/" class="card pe-mobile">
         <img src="/images/tb-pe-mobile-icon.svg">
-        <h5 class="title">IoT Hub PE Mobile Application</h5>
+        <h5 class="title">IoT Hub Mobile Application</h5>
         <p>Advanced IoT mobile product</p>
     </a>
 </div>

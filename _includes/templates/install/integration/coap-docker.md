@@ -24,8 +24,8 @@ docker run -it -p 5683:5683/udp -v ~/.tb-pe-coap-integration-logs:/var/log/tb-co
 
 Where: 
     
-- `{{hostName}}` - is the host name of your IoT Hub PE instance;
-- `9090` - is the port of your IoT Hub PE instance. It is configured in thingsboard.yml using INTEGRATIONS_RPC_PORT env variable;    
+- `{{hostName}}` - is the host name of your IoT Hub instance;
+- `9090` - is the port of your IoT Hub instance. It is configured in thingsboard.yml using INTEGRATIONS_RPC_PORT env variable;    
 - `YOUR_ROUTING_KEY` - placeholder for your **integration key** obtained on [create remote integration in ThingsBoard](#create-remote-integration-in-thingsboard);
 - `YOUR_SECRET` - placeholder for your **integration secret** obtained on [create remote integration in ThingsBoard](#create-remote-integration-in-thingsboard);
 - `docker run`              - run this container;

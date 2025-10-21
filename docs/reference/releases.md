@@ -2425,7 +2425,7 @@ Minor release with the following improvements and bug fixes:
 * Rest client:
     * Fix of incorrect url for getTenantProfiles call;
 
-### IoT Hub PE
+### IoT Hub
 
 Everything from [TB CE v3.2.2](https://github.com/thingsboard/thingsboard/releases/tag/v3.2.2) with the following improvements.
 
@@ -2513,7 +2513,7 @@ Minor release with the following improvements and bug fixes:
 * Fixed cycle API usage state update;
 * Fixed NPE - skip usage state messages for deleted tenants;
 
-### IoT Hub PE
+### IoT Hub
 
 Everything from [TB CE v3.2.1](https://github.com/thingsboard/thingsboard/releases/tag/v3.2.1) with the following improvements.
 
@@ -2548,7 +2548,7 @@ Bug Fixes:
 * MQTT transport: fix handling of cleanSession flag;
 * Kafka queue: removed ServiceId from kafka consumer groupId;
 
-### IoT Hub PE
+### IoT Hub
 
 Everything from [TB CE v2.5.6](https://github.com/thingsboard/thingsboard/releases/tag/v2.5.6).
 
@@ -2592,7 +2592,7 @@ We have also added features to track tenant API usage.
 
  * Cover all markers to fit bounds by default even when fit bounds marker is disabled in the map widget;
 
-### IoT Hub PE
+### IoT Hub
 
 Everything from [TB CE v3.2](https://github.com/thingsboard/thingsboard/releases/tag/v3.2) with the following improvements.
 
@@ -2632,7 +2632,7 @@ Bug Fixes:
  * Fixed inactivitiy timeout for gw sessions;
  * Fixed knob control widget;
 
-### IoT Hub PE
+### IoT Hub
 
 Everything from [TB CE v2.5.5](https://github.com/thingsboard/thingsboard/releases/tag/v2.5.5).
 
@@ -2673,7 +2673,7 @@ Minor bug fix release:
  * UI: Fixed clear state params for dashboardId change;
  * Various fixed of filtering queues;
 
-### IoT Hub PE
+### IoT Hub
 
 Everything from [TB CE v3.1.1](https://github.com/thingsboard/thingsboard/releases/tag/v3.1.1) with the following improvements.
 
@@ -2706,7 +2706,7 @@ Bug Fixes:
 
  * Fixed SQL scripts for Unit tests
 
-### IoT Hub PE
+### IoT Hub
 
 Everything from [TB CE v2.5.4](https://github.com/thingsboard/thingsboard/releases/tag/v2.5.4).
 
@@ -2762,7 +2762,7 @@ Minor release with the following improvements and bug fixes.
    * Fix boolean input widgets;
    * Fix web camera input widget;
 
-### IoT Hub PE
+### IoT Hub
 
 Everything from [TB CE v3.1](https://github.com/thingsboard/thingsboard/releases/tag/v3.1) with the following improvements.
 
@@ -2788,7 +2788,7 @@ Main features:
 
  * refactored DataValidator email pattern
 
-### IoT Hub PE
+### IoT Hub
 
 Everything from [TB CE v2.5.3](https://github.com/thingsboard/thingsboard/releases/tag/v2.5.3).
 
@@ -2814,7 +2814,7 @@ Minor release with everything from 3.0/2.5.2 plus the following improvements.
  * UI: Fix state chart subscription;
  * Set correct cassandra datacenter;
 
-### IoT Hub PE
+### IoT Hub
 
 Everything from [TB CE v3.0.1](https://github.com/thingsboard/thingsboard/releases/tag/v3.0.1) with the following improvements.
 
@@ -2843,7 +2843,7 @@ Minor bug-fix release with few improvements.
  * Message is pushed to correct queue in case of duplication;
  * Never use Fork-Join pool with parallelism set to 1.
 
-### IoT Hub PE
+### IoT Hub
 
 Everything from [TB CE v2.5.2](https://github.com/thingsboard/thingsboard/releases/tag/v2.5.2) with the following improvements.
 
@@ -2872,7 +2872,7 @@ Major release with everything from 2.5 plus the following improvements.
  * Replaced Velocity with Freemarker.
 
 
-### IoT Hub PE
+### IoT Hub
 
 Everything from [TB CE v3.0](https://github.com/thingsboard/thingsboard/releases/tag/v3.0) with the following improvements.
 
@@ -2912,7 +2912,7 @@ Minor bug-fix release with few improvements.
  * UI: Fixed data displaying in mobile browser for digital gauge widget;
  * Fixed 2.4.3 -> 2.5 upgrade script for AWS RDS; 
 
-### IoT Hub PE
+### IoT Hub
 
 Everything from [TB CE v2.5.1](https://github.com/thingsboard/thingsboard/releases/tag/v2.5.1) with the following improvements.
 
@@ -2995,7 +2995,7 @@ Major release with the following improvements.
 * UI: Fixed dialogs in Safari;
 
 
-### IoT Hub PE
+### IoT Hub
 
 Everything from [TB CE v2.5](https://github.com/thingsboard/thingsboard/releases/tag/v2.5) with the following improvements.
 
@@ -3051,7 +3051,7 @@ Bug fixes:
 * UI: Fixed entity name resolution;
 * UI: Fixed disable timewindow logic;
 
-### IoT Hub PE
+### IoT Hub
 
 Everything from [TB CE v2.4.3](https://github.com/thingsboard/thingsboard/releases/tag/v2.4.3) with the following improvements.
 
@@ -3125,7 +3125,7 @@ Bug fixes:
 * UI: Fixed disable on condition and errors displaying;
 * UI: Fix delete timeseries data;
 
-### IoT Hub PE
+### IoT Hub
 
 Everything from [TB CE v2.4.2](https://github.com/thingsboard/thingsboard/releases/tag/v2.4.2) with the following improvements.
 
@@ -3185,7 +3185,7 @@ Bug fixes:
 * Fixed violations on attributes/event primary and unique keys constraints;
 * UI: Fix fullscreen mode for ace editors inside react schema form.
 
-### IoT Hub PE
+### IoT Hub
 
 Everything from [TB CE v2.4.1](https://github.com/thingsboard/thingsboard/releases/tag/v2.4.1) with the following improvements.
 
@@ -3249,7 +3249,7 @@ Bug fixes:
 - UI: fix Chinese translation problem;
 - UI: fix Entities Table widget for wrong dataKey value when same key is used on multiple columns with different processing function;
 
-### IoT Hub PE
+### IoT Hub
 
 Everything from TB CE v2.4.0 with the following improvements.
 
@@ -3318,7 +3318,7 @@ Bug fixes:
 - UI: fixed individual tooltip content in Flot widget;
 - added prefix to device credentials cache keys.
 
-### IoT Hub PE
+### IoT Hub
 
 Everything from TB CE v2.3.1 with the following improvements.
 
@@ -3392,7 +3392,7 @@ Bug fixes:
 - UI: Flot timeseries widgets: fixed issue with tooltip vertical position;
 - UI: Fixed [issue #1427](https://github.com/thingsboard/thingsboard/issues/1427): Boolean input widgets were saving wrong value; 
 
-### IoT Hub PE
+### IoT Hub
 
 Everything from TB CE v2.3+ the following improvements.
 
@@ -3481,7 +3481,7 @@ Bug fixes:
  - UI. Hide fixed table header in entity attributes table when in widget selection mode.
  - UI. Fix deprecated maps settings. 
 
-### IoT Hub PE
+### IoT Hub
 
 Everything from TB CE v2.2+ the following improvements.
 

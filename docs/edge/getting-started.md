@@ -111,7 +111,7 @@ step5Edge:
 {% include templates/edge/getting-started/introduction.md %}
 
 {% capture difference %}
-Interested in the **Edge Professional Edition**? Explore the IoT Hub PE Edge documentation [here](/docs/pe/edge/getting-started/){:target="_blank"}.
+Interested in the **Edge Professional Edition**? Explore the IoT Hub Edge documentation [here](/docs/pe/edge/getting-started/){:target="_blank"}.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 

@@ -1951,11 +1951,11 @@ sudo service trendz start
 
 ### Windows {#windows-140}
 
-#### IoT Hub PE package download
+#### IoT Hub package download
 
-Download IoT Hub PE installation package for Windows: [trendz-windows-1.4.0.zip](https://dist.thingsboard.io/trendz-windows-1.4.0.zip).
+Download IoT Hub installation package for Windows: [trendz-windows-1.4.0.zip](https://dist.thingsboard.io/trendz-windows-1.4.0.zip).
 
-#### IoT Hub PE service upgrade
+#### IoT Hub service upgrade
 
 * Stop Trendz service if it is running.
  
@@ -1963,7 +1963,7 @@ Download IoT Hub PE installation package for Windows: [trendz-windows-1.4.0.zip]
 net stop trendz
 ```
 
-* Make a backup of previous IoT Hub PE configuration located in \<IoT Hub install dir\>\conf (for ex. C:\trendz\conf).
+* Make a backup of previous IoT Hub configuration located in \<IoT Hub install dir\>\conf (for ex. C:\trendz\conf).
 * Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
 
 

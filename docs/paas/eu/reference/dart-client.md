@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-paas-eu
 title: Dart API Client
-description: IoT Hub PE API client library for Dart developers
+description: IoT Hub API client library for Dart developers
 
 ---
  

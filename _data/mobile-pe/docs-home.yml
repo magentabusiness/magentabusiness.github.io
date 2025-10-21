@@ -1,5 +1,5 @@
-bigheader: "IoT Hub PE Mobile Application Documentation"
-abstract: "IoT Hub PE Mobile Application - starting point for your IoT mobile product."
+bigheader: "IoT Hub Mobile Application Documentation"
+abstract: "IoT Hub Mobile Application - starting point for your IoT mobile product."
 toc:
   - title: PE Mobile Application
     path: /docs/pe/mobile/

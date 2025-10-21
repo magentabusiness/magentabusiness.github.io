@@ -1,12 +1,12 @@
 {% if docsPrefix == 'pe/edge/' %}
-{% assign appPrefix = "IoT Hub PE" %}
+{% assign appPrefix = "IoT Hub" %}
 {% assign cloudDocsPrefix = "pe/" %}
 {% else %}
 {% assign appPrefix = "IoT Hub CE" %}
 {% endif %}
 
 {% if docsPrefix != 'pe/edge/' %}
-<h2>Interested in the Professional Edition? Explore the IoT Hub PE Edge Documentation <a style="pointer-events: all;" href="/docs/pe/edge/">Here</a>.</h2>
+<h2>Interested in the Professional Edition? Explore the IoT Hub Edge Documentation <a style="pointer-events: all;" href="/docs/pe/edge/">Here</a>.</h2>
 {% endif %}
 
 {% capture tb-open-source %}
@@ -19,7 +19,7 @@ If you are a new platform user, we suggest reading [**What is ThingsBoard?**](/d
 
 {% if docsPrefix == 'pe/edge/' %}
 With IoT Hub Edge, data analysis and management is brought to the point of data generation - the edge. 
-It seamlessly synchronizes with IoT Hub PE, whether it's a [cloud](https://thingsboard.cloud){: target="_blank"} or an on-premise installation, aligning with your business requirements.
+It seamlessly synchronizes with IoT Hub, whether it's a [cloud](https://thingsboard.cloud){: target="_blank"} or an on-premise installation, aligning with your business requirements.
 
 IoT Hub Edge PE is designed for a **single** tenant and/or **multiple** customers.
 As such, you cannot share IoT Hub Edge between multiple tenants, and devices from different tenants cannot be connected to a single IoT Hub Edge.
@@ -92,7 +92,7 @@ It supports the following **IoT Hub** features:
 * [**API Limits**](/docs/{{cloudDocsPrefix}}user-guide/api-limits/){: target="_blank"} - Control and limit the number of API requests from a single host.
 
 {% if docsPrefix == 'pe/edge/' %}
-Furthermore, Edge PE supports the following **IoT Hub PE** features:
+Furthermore, Edge PE supports the following **IoT Hub** features:
 * [**Integrations**](/docs/user-guide/integrations/){: target="_blank"}
     * Connect existing NB IoT, LoRaWAN, SigFox, and other devices with specific payload formats directly to the IoT Hub platform.
     * Stream data from devices connected to existing IoT Platforms to enable real-time interactive dashboards and efficient data processing.

@@ -54,7 +54,7 @@ Starting with **Edge version 4.0**, the **Rule chain** can be created and edited
 {% assign createRuleChainTemplatePE = '
     ===
         image: /images/pe/edge/rule-engine/create-rule-chain-template-step-1.webp,
-        title: Sign in to your <b>IoT Hub PE</b> instance and go to the <b>Edge Management > Rule chain templates</b> section. To add a new **Rule chain**, click the <b>"+"</b> button in the top right corner and choose the <b>"Create new rule chain"</b> option.
+        title: Sign in to your <b>IoT Hub</b> instance and go to the <b>Edge Management > Rule chain templates</b> section. To add a new **Rule chain**, click the <b>"+"</b> button in the top right corner and choose the <b>"Create new rule chain"</b> option.
     ===
         image: /images/pe/edge/rule-engine/create-rule-chain-template-step-2.webp,
         title: Enter a name for your rule chain, such as <b>"Remote Farm"</b>. Click the <b>"Add"</b> button to continue configuring the rule chain.

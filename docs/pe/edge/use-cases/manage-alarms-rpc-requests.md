@@ -6,7 +6,7 @@ description: IoT Hub Edge use case #1
 configureAlarmRules:
     0:
         image: /images/pe/edge/use-cases/manage-alarms/configure-rules-item-1.png
-        title: 'Login to your <b>IoT Hub PE</b> instance and open <b>Device profiles</b> menu page.'
+        title: 'Login to your <b>IoT Hub</b> instance and open <b>Device profiles</b> menu page.'
     1:
         image: /images/pe/edge/use-cases/manage-alarms/configure-rules-item-2.png
         title: 'Click on the <b>("+")</b> to add new device profile.'
@@ -81,7 +81,7 @@ provisionDevicesEdge:
 provisionDevices:
     0:
         image: /images/pe/edge/use-cases/manage-alarms/provision-devices-item-10.png
-        title: 'Login to your <b>IoT Hub PE</b> instance and open "Device groups" menu page.'
+        title: 'Login to your <b>IoT Hub</b> instance and open "Device groups" menu page.'
     1:
         image: /images/pe/edge/use-cases/manage-alarms/provision-devices-item-11.png
         title: 'Click on the the group <b>All</b> in the menu or in the device groups list.'
@@ -99,7 +99,7 @@ rootRuleChainPreview:
 updateRootRuleChain:
     0:
         image: /images/pe/edge/use-cases/data-filtering/update-root-item-1.png
-        title: 'Login to your <b>IoT Hub PE</b> instance and open <b>Rule chain</b> templates menu page.'
+        title: 'Login to your <b>IoT Hub</b> instance and open <b>Rule chain</b> templates menu page.'
     1:
         image: /images/pe/edge/use-cases/data-filtering/update-root-item-2.png
         title: 'Click on the <b>Open rule chain</b> icon to start editing <b>Edge Root Rule Chain</b>.'
@@ -188,7 +188,7 @@ mqttWindows:
 {:toc}
 
 {% assign docsPrefix = "pe/edge/" %}
-{% assign appPrefix = "IoT Hub PE" %}
+{% assign appPrefix = "IoT Hub" %}
 
 ## Use case
 

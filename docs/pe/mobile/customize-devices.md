@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-mobile-pe
-title: Customize device icons in IoT Hub PE Mobile Application
+title: Customize device icons in IoT Hub Mobile Application
 
 device-image:
  0:

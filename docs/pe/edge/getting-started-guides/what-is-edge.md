@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-edge
-title: What is IoT Hub PE Edge?
-description: IoT Hub PE Edge features, FAQ
+title: What is IoT Hub Edge?
+description: IoT Hub Edge features, FAQ
 redirect_from: 
   - "/docs/paas/edge/getting-started-guides/what-is-edge/"
   - "/docs/pe/user-guide/edge-computing/"

@@ -1,11 +1,11 @@
 {% if docsPrefix == 'pe/' %}
-{% assign platformName = 'IoT Hub PE' %}
+{% assign platformName = 'IoT Hub' %}
 {% else %}
 {% assign platformName = 'IoT Hub' %}
 {% endif %}
 
 {% if docsPrefix != 'pe/' %}
-<h3>Interested in the Professional Edition? Explore the IoT Hub PE Edge Documentation <a style="pointer-events: all;" href="/docs/pe/edge/">Here</a>.</h3>
+<h3>Interested in the Professional Edition? Explore the IoT Hub Edge Documentation <a style="pointer-events: all;" href="/docs/pe/edge/">Here</a>.</h3>
 <br>
 {% endif %}
 

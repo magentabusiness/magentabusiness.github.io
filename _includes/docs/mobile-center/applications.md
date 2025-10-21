@@ -5,7 +5,7 @@
 {% endif %}
 {% if (docsPrefix == "pe/") or (docsPrefix == "paas/") or (docsPrefix == "paas/eu/") %}
 {% assign MOBILE_APPLICATION_LINK = "[ThingsBoard PE Mobile Application](/docs/pe/mobile/)" %}
-{% assign MOBILE_APPLICATION = "IoT Hub PE Mobile Application" %}
+{% assign MOBILE_APPLICATION = "IoT Hub Mobile Application" %}
 {% assign GETTING_STARTED = "[Getting started with the ThingsBoard PE Mobile Application](/docs/pe/mobile/getting-started/)" %}
 {% endif %}
 

@@ -48,7 +48,7 @@ docker pull thingsboard/tb-edge:{{ site.release.edge_full_ver }}
 {% endif %}
 
 {% if docsPrefix == "pe/edge/" %}
-### Step 2. Clone IoT Hub PE Docker compose scripts
+### Step 2. Clone IoT Hub Docker compose scripts
 
 ```bash
 git clone -b release-4.0.0 https://github.com/thingsboard/thingsboard-edge-pe-docker-compose.git tb-edge-pe-docker-compose --depth 1
@@ -143,7 +143,7 @@ JAVA_OPTS="-Xmx2048M -Xms2048M -Xss384k -XX:+AlwaysPreTouch"
 * **CLOUD_ROUTING_KEY:** Put your edge key.
 * **CLOUD_ROUTING_SECRET:** Put your edge secret.
 {% if docsPrefix == "pe/edge/" %}
-* **CLOUD_RPC_HOST:** Use _thingsboard.cloud_ / _eu.thingsboard.cloud_ if you connect **Edge** to the [ThingsBoard Cloud (North America)](https://thingsboard.cloud/signup){: target="_blank"}/[ThingsBoard Cloud (Europe)](https://eu.thingsboard.cloud/signup){: target="_blank"} correspondingly, or an **IP address** of the machine with the **IoT Hub PE Platform**.
+* **CLOUD_RPC_HOST:** Use _thingsboard.cloud_ / _eu.thingsboard.cloud_ if you connect **Edge** to the [ThingsBoard Cloud (North America)](https://thingsboard.cloud/signup){: target="_blank"}/[ThingsBoard Cloud (Europe)](https://eu.thingsboard.cloud/signup){: target="_blank"} correspondingly, or an **IP address** of the machine with the **IoT Hub Platform**.
 {% else %}
 * **CLOUD_RPC_HOST:** Use _demo.thingsboard.io_ if you connect **Edge** to the [ThingsBoard Demo](https://demo.thingsboard.io/login){: target="_blank"}, or an **IP address** of the machine with the **IoT Hub Platform**.
 {% endif %}

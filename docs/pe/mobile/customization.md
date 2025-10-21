@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-mobile-pe
-title: Customize IoT Hub PE Mobile Application
+title: Customize IoT Hub Mobile Application
 
 ---
 

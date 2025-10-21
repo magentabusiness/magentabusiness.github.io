@@ -1,9 +1,9 @@
 bigheader: "IoT Hub Edge Documentation"
 abstract: "Distribute data processing and analysis using edge computing."
 toc:
-- title: IoT Hub PE Edge
+- title: IoT Hub Edge
   path: /docs/pe/edge/
-- title: What is IoT Hub PE Edge?
+- title: What is IoT Hub Edge?
   path: /docs/pe/edge/getting-started-guides/what-is-edge/
 - title: Key concepts
   section:

@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-mobile-pe
-title: Configure Self-registration in IoT Hub PE Mobile Application
+title: Configure Self-registration in IoT Hub Mobile Application
 
 self-registration:
  0:
@@ -21,7 +21,7 @@ self-registration:
 
 ---
 
-Self-registration in IoT Hub PE Mobile Application allows new users to create accounts independently, directly through the app.
+Self-registration in IoT Hub Mobile Application allows new users to create accounts independently, directly through the app.
 This feature provides a registration form that enables new users to sign up and access the platform with predefined permissions.
 
 The configuration of this feature is managed by the Tenant Administrator through the [Mobile center](/docs/pe/mobile-center/mobile-center/){:target="_blank"}.
