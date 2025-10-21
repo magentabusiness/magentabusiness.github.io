@@ -20,7 +20,7 @@ contactUsModal: "true"
                 <p class="text">As urban populations grow and sustainability standards tighten, waste management systems must evolve to be more efficient, scalable, and data-driven. Traditional methods — based on fixed collection schedules and manual checks —often result in overflows, resource waste, and high operational costs. IoT Hub IoT Platform effectively addresses these challenges, offering powerful tools for real-time monitoring, automation, and optimization of waste operations.</p>
             </div>
             <div class="demo-button">
-                <a id="UseCases_WasteManagement_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/7814f8a0-8fa9-11ef-baa8-4521077809fd?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>            
+                <a id="UseCases_WasteManagement_ViewLiveDemo" target="_blank" href="https://iothub.magenta.at/dashboard/7814f8a0-8fa9-11ef-baa8-4521077809fd?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>            
             </div>
         </div>
         <div class="long">
@@ -300,7 +300,7 @@ contactUsModal: "true"
                 <div class=image>${getImage(0)}</div>
             </div>
             <div class="buttons-block">
-                <a id="UseCases_WasteManagement_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/7814f8a0-8fa9-11ef-baa8-4521077809fd?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>            
+                <a id="UseCases_WasteManagement_ViewLiveDemo" target="_blank" href="https://iothub.magenta.at/dashboard/7814f8a0-8fa9-11ef-baa8-4521077809fd?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>            
                 <a id="UseCases_WasteManagement_ContactUs" target="_blank" href="/docs/contact-us/?subject=Custom%20Development" class="button contact-us gtm_button">Contact us</a>
             </div>`;
 

@@ -100,7 +100,7 @@ downlink-converter-message:
 ### Create converter and integration templates
 
 Only the **IoT Hub** creates converters and integration templates.
-So please use [**ThingsBoard Cloud**](https://thingsboard.cloud/signup){: target="_blank"} or [**install**](/docs/user-guide/install/pe/installation-options/){: target="_blank"} your own platform instance to log in as a **Tenant administrator**.
+So please use [**ThingsBoard Cloud**](https://iothub.magenta.at/signup){: target="_blank"} or [**install**](/docs/user-guide/install/pe/installation-options/){: target="_blank"} your own platform instance to log in as a **Tenant administrator**.
 
 Follow the steps below to add the **HTTP integration**:
 

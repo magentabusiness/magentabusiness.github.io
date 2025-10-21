@@ -20,7 +20,7 @@ contactUsModal: "true"
                 <p class="text">Urban areas, industrial districts, and high-traffic zones constantly battle air pollution — a critical issue that affects both public health and regulatory compliance. From fine particulate matter (PM2.5, PM10) to harmful gases like SO₂ and CO, monitoring these environmental threats requires a robust and responsive system. IoT Hub rises to this challenge with unmatched flexibility and reliability.</p>
             </div>
             <div class="demo-button">
-                <a id="UseCases_AirQM_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/ec564620-82b2-11ed-a624-8360a2a6cb0e?publicId=4978baf0-8a92-11ec-98f9-ff45c37940c6" class="button gtm_button">View live demo</a>            
+                <a id="UseCases_AirQM_ViewLiveDemo" target="_blank" href="https://iothub.magenta.at/dashboard/ec564620-82b2-11ed-a624-8360a2a6cb0e?publicId=4978baf0-8a92-11ec-98f9-ff45c37940c6" class="button gtm_button">View live demo</a>            
             </div>
         </div>
         <div class="long">
@@ -320,7 +320,7 @@ contactUsModal: "true"
                 <div class=image>${getImage(0)}</div>
             </div>
             <div class="buttons-block">
-                <a id="UseCases_AirQM_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/ec564620-82b2-11ed-a624-8360a2a6cb0e?publicId=4978baf0-8a92-11ec-98f9-ff45c37940c6" class="button gtm_button">View live demo</a>            
+                <a id="UseCases_AirQM_ViewLiveDemo" target="_blank" href="https://iothub.magenta.at/dashboard/ec564620-82b2-11ed-a624-8360a2a6cb0e?publicId=4978baf0-8a92-11ec-98f9-ff45c37940c6" class="button gtm_button">View live demo</a>            
                 <a id="UseCases_AirQM_ContactUs" target="_blank" href="/docs/contact-us/?subject=Custom%20Development" class="button contact-us gtm_button">Contact us</a>
             </div>`;
 

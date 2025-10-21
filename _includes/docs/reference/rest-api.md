@@ -30,11 +30,11 @@ http://$THINGSBOARD_HOST:PORT/swagger-ui.html
 For example, you may browse Community Edition demo server API documentation using the [Swagger UI link](https://iothub.magenta.at/swagger-ui.html){:target="_blank"}.
 {% endif %}
 {% if docsPrefix == "paas/" %}
-Every [ThingsBoard Cloud](https://thingsboard.cloud/){:target="_blank"} instance has its own Swagger UI page.   
+Every [ThingsBoard Cloud](https://iothub.magenta.at/){:target="_blank"} instance has its own Swagger UI page.   
 Browse IoT Hub REST API documentation by clicking the button below:
 
 <br>
-<p><a href="https://thingsboard.cloud/swagger-ui.html" target="_blank" class="n-button add-device">IoT Hub REST API documentation</a></p>
+<p><a href="https://iothub.magenta.at/swagger-ui.html" target="_blank" class="n-button add-device">IoT Hub REST API documentation</a></p>
 {% endif %}
 {% if docsPrefix == "paas/eu/" %}
 Every [ThingsBoard EU Cloud](https://eu.thingsboard.cloud/){:target="_blank"} instance has its own Swagger UI page.   
@@ -94,7 +94,7 @@ To obtain a JWT token for the user "your_user@company.com" with password "secret
 curl -X POST --header 'Content-Type: application/json' \
              --header 'Accept: application/json' \
              -d '{"username":"your_user@company.com", "password":"secret"}' \
-             'https://thingsboard.cloud/api/auth/login'
+             'https://iothub.magenta.at/api/auth/login'
 ```
 {: .copy-code}
 {% endif %}

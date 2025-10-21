@@ -23,7 +23,7 @@ To learn more, please see the integration diagram.
 ### Create converter and integration templates
 
 Only the **IoT Hub** creates converters and integration templates.
-So please use [**ThingsBoard Cloud**](https://thingsboard.cloud/signup){: target="_blank"} or [**install**](/docs/user-guide/install/pe/installation-options/){: target="_blank"} your own platform instance to log in as a **Tenant administrator**.
+So please use [**ThingsBoard Cloud**](https://iothub.magenta.at/signup){: target="_blank"} or [**install**](/docs/user-guide/install/pe/installation-options/){: target="_blank"} your own platform instance to log in as a **Tenant administrator**.
 
 #### Basic settings
 

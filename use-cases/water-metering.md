@@ -20,7 +20,7 @@ contactUsModal: "true"
                 <p class="text">Water is one of our most critical resources, and managing its distribution and consumption is key for sustainable urban development, utility cost control, and infrastructure maintenance. For this purpose, the IoT Hub platform is an ideal choice, offering powerful capabilities for real-time monitoring, alarms, visualization, and analytics.</p>
             </div>
             <div class="demo-button">
-                <a id="UseCases_WaterMeter_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/aff5f200-8b48-11ec-a344-c767c1ab1bb8?publicId=4978baf0-8a92-11ec-98f9-ff45c37940c6" class="button gtm_button">View live demo</a>            </div>
+                <a id="UseCases_WaterMeter_ViewLiveDemo" target="_blank" href="https://iothub.magenta.at/dashboard/aff5f200-8b48-11ec-a344-c767c1ab1bb8?publicId=4978baf0-8a92-11ec-98f9-ff45c37940c6" class="button gtm_button">View live demo</a>            </div>
             </div>
         <div class="long">
             <p>Traditional water metering methods often fall short in providing real-time data, accurate billing, and predictive maintenance insights. By leveraging connected sensors and intelligent dashboards, organizations can unlock powerful insights into water usage, detect anomalies like leaks, and automate alarm systems. At the core of these solutions is IoT Hub, a flexible IoT platform enabling the collection, processing, and visualization of telemetry data from water meters in real time.</p>
@@ -338,7 +338,7 @@ contactUsModal: "true"
                 <div class=image>${getImage(0)}</div>
             </div>
             <div class="buttons-block">
-                <a id="UseCases_WaterMeter_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/aff5f200-8b48-11ec-a344-c767c1ab1bb8?publicId=4978baf0-8a92-11ec-98f9-ff45c37940c6" class="button gtm_button">View live demo</a>
+                <a id="UseCases_WaterMeter_ViewLiveDemo" target="_blank" href="https://iothub.magenta.at/dashboard/aff5f200-8b48-11ec-a344-c767c1ab1bb8?publicId=4978baf0-8a92-11ec-98f9-ff45c37940c6" class="button gtm_button">View live demo</a>
                 <a id="UseCases_WaterMeter_ContactUs" target="_blank" href="/docs/contact-us/?subject=Custom%20Development" class="button contact-us gtm_button">Contact us</a>
             </div>`;
 

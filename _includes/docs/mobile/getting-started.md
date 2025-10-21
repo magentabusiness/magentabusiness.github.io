@@ -2,8 +2,8 @@
 {% assign appPrefix = "IoT Hub" %}
 {% assign appRepo = "https://github.com/thingsboard/flutter_thingsboard_pe_app.git" %}
 {% assign appProject = "flutter_thingsboard_pe_app" %}
-{% assign cloudApp = "[ThingsBoard Cloud](https://thingsboard.cloud/signup)" %}
-{% assign cloudEndpoint = "https://thingsboard.cloud" %}
+{% assign cloudApp = "[ThingsBoard Cloud](https://iothub.magenta.at/signup)" %}
+{% assign cloudEndpoint = "https://iothub.magenta.at" %}
 {% assign flutterAppVer = site.release.pe_flutter_app_ver %}
 {% else %}
 {% assign appPrefix = "IoT Hub" %}

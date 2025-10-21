@@ -29,7 +29,7 @@ You will require the following items:
 
 **1. In our example, we use IoT Hub**
 
-Create an account and then [log in](https://thingsboard.cloud/login){:target="_blank"}.
+Create an account and then [log in](https://iothub.magenta.at/login){:target="_blank"}.
 
 ![thingsboard_login](/images/devices-library/basic/single-board-computers/raspberry-pi-cm4/thingsboard_login.png)
 

@@ -20,7 +20,7 @@ contactUsModal: "true"
                 <p class="text">Modern enterprises that manage liquid storage — from fuel to water — face the critical need for continuous tank level monitoring and infrastructure status control. Poor monitoring can lead to leaks, equipment downtime, and higher operational costs. In this context, IoT-powered solutions become essential for digital transformation. The IoT Hub IoT platform addresses these challenges with ease.</p>
             </div>
             <div class="demo-button">
-                <a id="UseCases_FuelLevelMonitoring_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/e1ff5690-5e0c-11ee-aeee-d16039673934?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>            
+                <a id="UseCases_FuelLevelMonitoring_ViewLiveDemo" target="_blank" href="https://iothub.magenta.at/dashboard/e1ff5690-5e0c-11ee-aeee-d16039673934?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>            
             </div>
         </div>
         <div class="long">
@@ -310,7 +310,7 @@ contactUsModal: "true"
                 <div class=image>${getImage(0)}</div>
             </div>
             <div class="buttons-block">
-                <a id="UseCases_FuelLevelMonitoring_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/e1ff5690-5e0c-11ee-aeee-d16039673934?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>            
+                <a id="UseCases_FuelLevelMonitoring_ViewLiveDemo" target="_blank" href="https://iothub.magenta.at/dashboard/e1ff5690-5e0c-11ee-aeee-d16039673934?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>            
                 <a id="UseCases_FuelLevelMonitoring_ContactUs" target="_blank" href="/docs/contact-us/?subject=Custom%20Development" class="button contact-us gtm_button">Contact us</a>
             </div>`;
 

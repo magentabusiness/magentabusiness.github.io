@@ -19,7 +19,7 @@ If you are a new platform user, we suggest reading [**What is ThingsBoard?**](/d
 
 {% if docsPrefix == 'pe/edge/' %}
 With IoT Hub Edge, data analysis and management is brought to the point of data generation - the edge. 
-It seamlessly synchronizes with IoT Hub, whether it's a [cloud](https://thingsboard.cloud){: target="_blank"} or an on-premise installation, aligning with your business requirements.
+It seamlessly synchronizes with IoT Hub, whether it's a [cloud](https://iothub.magenta.at){: target="_blank"} or an on-premise installation, aligning with your business requirements.
 
 IoT Hub Edge PE is designed for a **single** tenant and/or **multiple** customers.
 As such, you cannot share IoT Hub Edge between multiple tenants, and devices from different tenants cannot be connected to a single IoT Hub Edge.

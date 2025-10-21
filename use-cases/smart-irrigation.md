@@ -20,7 +20,7 @@ contactUsModal: "true"
                 <p class="text">The global challenges of water scarcity, rising agricultural costs, and the need for sustainable farming have made smart irrigation not just a trend, but a necessity. Traditional watering systems often lack responsiveness, leading to water overuse and crop stress. Modern agriculture requires a platform that can bring automation, precision, and adaptability — exactly what IoT Hub delivers.</p>
             </div>
             <div class="demo-button">
-                <a id="UseCases_SmartIrrigation_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/a4640cc0-8fa9-11ef-baa8-4521077809fd?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>            
+                <a id="UseCases_SmartIrrigation_ViewLiveDemo" target="_blank" href="https://iothub.magenta.at/dashboard/a4640cc0-8fa9-11ef-baa8-4521077809fd?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>            
             </div>
         </div>
         <div class="long">
@@ -331,7 +331,7 @@ contactUsModal: "true"
                 <div class=image>${getImage(0)}</div>
             </div>
             <div class="buttons-block">
-                <a id="UseCases_SmartIrrigation_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/a4640cc0-8fa9-11ef-baa8-4521077809fd?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>            
+                <a id="UseCases_SmartIrrigation_ViewLiveDemo" target="_blank" href="https://iothub.magenta.at/dashboard/a4640cc0-8fa9-11ef-baa8-4521077809fd?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>            
                 <a id="UseCases_SmartIrrigation_ContactUs" target="_blank" href="/docs/contact-us/?subject=Custom%20Development" class="button contact-us gtm_button">Contact us</a>
             </div>`;
 

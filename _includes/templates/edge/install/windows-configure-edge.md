@@ -42,7 +42,7 @@ Locate "# Cloud configuration" block and replace **PUT_YOUR_EDGE_KEY_HERE** and 
 
 Please replace **PUT_YOUR_CLOUD_IP** with an IP address of the machine where {{appPrefix}} version is running:
 {% if docsPrefix == 'pe/edge/' %}
-* Use **thingsboard.cloud** in case you are connecting edge to [**ThingsBoard Cloud**](https://thingsboard.cloud/signup).
+* Use **thingsboard.cloud** in case you are connecting edge to [**ThingsBoard Cloud**](https://iothub.magenta.at/signup).
 
 **NOTE**: **thingsboard.cloud** uses SSL protocol for edge communication. 
 Please change **CLOUD_RPC_SSL_ENABLED** to **true** as well.

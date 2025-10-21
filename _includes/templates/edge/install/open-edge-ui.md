@@ -1,5 +1,5 @@
 {% if docsPrefix == 'pe/edge/' %}
-{% assign cloudLink = "[**ThingsBoard Cloud**](https://thingsboard.cloud/signup)" %}
+{% assign cloudLink = "[**ThingsBoard Cloud**](https://iothub.magenta.at/signup)" %}
 {% else %}
 {% assign cloudLink = "[**ThingsBoard Live Demo**](https://iothub.magenta.at/signup)" %}
 {% endif %}

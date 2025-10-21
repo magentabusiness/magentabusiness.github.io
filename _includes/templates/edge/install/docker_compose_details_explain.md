@@ -25,7 +25,7 @@ Where:
 Please set **CLOUD_RPC_HOST** with an IP address of the machine where {{appPrefix}} version is running:
 * DO NOT use **'localhost'** - **'localhost'** is the ip address of the edge service in the docker container.
 {% if docsPrefix == 'pe/edge/' %}
-* Use **thingsboard.cloud** if you are connecting Edge to the [**ThingsBoard Cloud**](https://thingsboard.cloud/signup){: target="_blank"}.
+* Use **thingsboard.cloud** if you are connecting Edge to the [**ThingsBoard Cloud**](https://iothub.magenta.at/signup){: target="_blank"}.
 
 **NOTE**: **thingsboard.cloud** uses SSL protocol for edge communication.
 Please change **CLOUD_RPC_SSL_ENABLED** to **true** as well.

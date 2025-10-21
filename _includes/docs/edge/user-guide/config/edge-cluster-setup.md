@@ -143,7 +143,7 @@ JAVA_OPTS="-Xmx2048M -Xms2048M -Xss384k -XX:+AlwaysPreTouch"
 * **CLOUD_ROUTING_KEY:** Put your edge key.
 * **CLOUD_ROUTING_SECRET:** Put your edge secret.
 {% if docsPrefix == "pe/edge/" %}
-* **CLOUD_RPC_HOST:** Use _thingsboard.cloud_ / _eu.thingsboard.cloud_ if you connect **Edge** to the [ThingsBoard Cloud (North America)](https://thingsboard.cloud/signup){: target="_blank"}/[ThingsBoard Cloud (Europe)](https://eu.thingsboard.cloud/signup){: target="_blank"} correspondingly, or an **IP address** of the machine with the **IoT Hub Platform**.
+* **CLOUD_RPC_HOST:** Use _thingsboard.cloud_ / _eu.thingsboard.cloud_ if you connect **Edge** to the [ThingsBoard Cloud (North America)](https://iothub.magenta.at/signup){: target="_blank"}/[ThingsBoard Cloud (Europe)](https://eu.thingsboard.cloud/signup){: target="_blank"} correspondingly, or an **IP address** of the machine with the **IoT Hub Platform**.
 {% else %}
 * **CLOUD_RPC_HOST:** Use _iothub.magenta.at_ if you connect **Edge** to the [ThingsBoard Demo](https://iothub.magenta.at/login){: target="_blank"}, or an **IP address** of the machine with the **IoT Hub Platform**.
 {% endif %}

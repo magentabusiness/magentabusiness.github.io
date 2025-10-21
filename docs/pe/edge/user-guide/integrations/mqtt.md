@@ -107,7 +107,7 @@ The **MQTT broker** should either be co-located with the **IoT Hub Edge** instan
 
 In this tutorial, we will use:
 
-- [ThingsBoard Professional Edition](https://thingsboard.cloud){: target="_blank"} account;
+- [ThingsBoard Professional Edition](https://iothub.magenta.at){: target="_blank"} account;
 - Locally installed [ThingsBoard PE Edge](/docs/user-guide/install/pe/edge/installation-options/){: target="_blank"} instance;
 - **MQTT broker** that can be accessed through the **IoT Hub Edge** instance: broker.hivemq.com (port 1883);
 - **mosquitto_pub** and **mosquitto_sub** MQTT clients for sending and receiving messages.
@@ -116,7 +116,7 @@ In this tutorial, we will use:
 ### Create converter and integration templates
 
 Only the **IoT Hub** creates converters and integration templates.
-So please use [**ThingsBoard Cloud**](https://thingsboard.cloud/signup){: target="_blank"} or [**install**](/docs/user-guide/install/pe/installation-options/){: target="_blank"} your own platform instance to log in as a **Tenant administrator**.
+So please use [**ThingsBoard Cloud**](https://iothub.magenta.at/signup){: target="_blank"} or [**install**](/docs/user-guide/install/pe/installation-options/){: target="_blank"} your own platform instance to log in as a **Tenant administrator**.
 
 Follow the steps below to add the **MQTT integration**:
 
