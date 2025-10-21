@@ -106,7 +106,7 @@ selfManagedPlan:
             <div class="content">
                 <h3 class="header">Connect Data</h3>
                 <p class="text">Connect Trendz to the IoT Hub in few clicks with automatic Topology Discovery.</p>
-                <p class="text">Trendz works with all IoT Hub products, including Open Source IoT Hub Community Edition and IoT Hub.</p>
+                <p class="text">Trendz works with all IoT Hub products, including Open Source IoT Hub and IoT Hub.</p>
                 <a id="Products_TA_LearnMore2" href="/docs/trendz/connect-thingsboard/" class="button try-pe gtm_button">Learn More</a>
             </div>
             <div class="image-block">

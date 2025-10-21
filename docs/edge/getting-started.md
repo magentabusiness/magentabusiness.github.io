@@ -96,7 +96,7 @@ step5Server:
 step5Edge:
     0:
         image: /images/edge/getting-started/step-5-item-3-ce.webp
-        title: 'Go to the <b>Dashboards</b> section and open the dashboard you have created on the <b>IoT Hub Community Edition Server</b>'    
+        title: 'Go to the <b>Dashboards</b> section and open the dashboard you have created on the <b>IoT Hub Server</b>'    
     1:
         image: /images/edge/getting-started/step-5-item-4-ce.webp
         title: 'Verify that these are the same widgets that you have added on the Cloud.'
@@ -106,7 +106,7 @@ step5Edge:
 * TOC
 {:toc}
 
-{% assign currentThingsBoardVersion = "IoT Hub Community Edition" %}
+{% assign currentThingsBoardVersion = "IoT Hub" %}
 
 {% include templates/edge/getting-started/introduction.md %}
 

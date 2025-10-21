@@ -32,7 +32,7 @@ cd rule-node-examples
 ```
 {: .copy-code}
 
-By default, sample project is configured to use APIs of the IoT Hub Community Edition. 
+By default, sample project is configured to use APIs of the IoT Hub. 
 This makes your rule nodes compatible with both Community and Professional editions of the platform.
 
 In case you would like to use some of the exclusive IoT Hub APIs (like working with Entity Groups, etc), 

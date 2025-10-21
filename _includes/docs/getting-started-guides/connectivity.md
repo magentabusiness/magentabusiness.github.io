@@ -46,7 +46,7 @@ See [What is IoT Gateway?](/docs/iot-gateway/what-is-iot-gateway/) for more info
 
 ## LoRaWAN
 
-<!-- It is possible to integrate ChirpStack network server with IoT Hub Community Edition using this [guide](https://www.chirpstack.io/application-server/integrations/thingsboard/). -->
+<!-- It is possible to integrate ChirpStack network server with IoT Hub using this [guide](https://www.chirpstack.io/application-server/integrations/thingsboard/). -->
 
 IoT Hub supports ChirpStack and many other network servers via [Integrations](/docs/{{peDocsPrefix}}user-guide/integrations/).
 For example: [TheThingsNetwork](/docs/{{peDocsPrefix}}user-guide/integrations/ttn/), [TheThingsIndustries](/docs/{{peDocsPrefix}}user-guide/integrations/tti/),

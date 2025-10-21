@@ -10,7 +10,7 @@ hidetoc: "true"
 
 ## Introduction
 
-This guide contains step-by-step instructions on how to connect your Nettra RTU device to IoT Hub Community Edition through ethernet, using as sample, one of the many applications that the Nettra RTU has. In particular, this sample application will allow you to monitor temperature using IoT Hub web UI to display the data coming from the sensor. 
+This guide contains step-by-step instructions on how to connect your Nettra RTU device to IoT Hub through ethernet, using as sample, one of the many applications that the Nettra RTU has. In particular, this sample application will allow you to monitor temperature using IoT Hub web UI to display the data coming from the sensor. 
 
 ### Nettra RTU
 [Nettra RTU](https://nettra.tech) called **"RTU+"** is a powerful IoT electronic device that has digital and analog inputs and outputs, as well as several integrated communication interfaces as modem, ethernet, 802.15.4, RS485, RS232 and GPS. It is an ideal product to implement monitoring, acquisition and control applications over a distributed data network. 

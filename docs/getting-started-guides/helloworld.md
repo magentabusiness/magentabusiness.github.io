@@ -457,7 +457,7 @@ Finally, log in to IoT Hub as a customer user.
 
 {% assign currentGuide = "GettingStartedGuides" %}{% include templates/guides-banner.md %}
 
-## IoT Hub Community Edition education course
+## IoT Hub education course
  
  <div id="video">  
      <div id="video_wrapper">

@@ -23,7 +23,7 @@ They contain important credentials, such as **Edge Secret**, **Edge Key**, etc. 
 {% assign presetConfigCE = '
     ===
         image: /images/edge/user-guide/edge-install/4-install-instructions.webp,
-        title: Go to the **Edge management > Instances** section of your **IoT Hub Community Edition** instance, and click on the **Instance**. Then, click the **"Install & Connect Instructions"** button.
+        title: Go to the **Edge management > Instances** section of your **IoT Hub** instance, and click on the **Instance**. Then, click the **"Install & Connect Instructions"** button.
     ===
         image: /images/edge/user-guide/edge-install/5-docker.webp,
         title: On the **"Install & Connect Instructions"** pop-up window, select the **"Docker"** tab and **copy the configuration lines**.

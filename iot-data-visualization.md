@@ -191,7 +191,7 @@ description: Explore powerful IoT data visualization with ThingsBoard. Build int
             <div class="row no-margin">
                 <div class="card">
                     <div class="content">
-                        <h4><a href="/docs/getting-started-guides/helloworld/#step-7-assign-device-and-dashboard-to-customer">In IoT Hub Community Edition</a></h4>
+                        <h4><a href="/docs/getting-started-guides/helloworld/#step-7-assign-device-and-dashboard-to-customer">In IoT Hub</a></h4>
                         <p>You assign dashboards to a customer, granting their users read-only access to the data that belongs to their devices and assets.</p>
                     </div>
                 </div>

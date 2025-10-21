@@ -25,7 +25,7 @@ To deploy the **IoT Hub Gateway**:
 {% assign iotGWdashboardCE = '
     ===
         image: /images/edge/user-guide/edge-install/6-instance-section-manage-dashboard.webp,
-        title: Log in to the **IoT Hub Community Edition** instance and go to the **Edge Management > Instances** section, then click the **“Manage dashboards”** button.
+        title: Log in to the **IoT Hub** instance and go to the **Edge Management > Instances** section, then click the **“Manage dashboards”** button.
     ===
         image: /images/edge/user-guide/edge-install/7-assign.webp,
         title: On the **“Edge Dashboards”** page, click the **“+”** icon to assign the **“IoT Hub IoT Gateways”** dashboard to the Edge instance. Click the **“Assign”** button. The **"IoT Hub IoT Gateways"** dashboard is one of the pre-created, out-of-the-box dashboards available.

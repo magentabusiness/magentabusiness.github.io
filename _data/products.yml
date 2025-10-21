@@ -17,7 +17,7 @@
   getStarted: /docs/pe/getting-started-guides/helloworld/
   docsPrefix: /docs/pe/
 #- title: Community Edition
-#  fulltitle: IoT Hub Community Edition
+#  fulltitle: IoT Hub
 #  description: IoT Hub Documentation
 #  tag: ce
 #  icon: /images/thingsboard-cm-icon.svg

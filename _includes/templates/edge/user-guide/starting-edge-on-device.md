@@ -14,7 +14,7 @@
 {% assign addEdgeCE = '
     ===
         image: /images/edge/user-guide/edge-install/1-instance-section.webp,
-        title: Log in to the **IoT Hub Community Edition instance** and go to the **Edge Management > Instances** section. Click the **“+”** icon in the top right corner and select the **“Add new edge”** option.
+        title: Log in to the **IoT Hub instance** and go to the **Edge Management > Instances** section. Click the **“+”** icon in the top right corner and select the **“Add new edge”** option.
     ===
         image: /images/edge/user-guide/edge-install/2-add-new-edge.webp,
         title: Enter a name for your Edge in the **“Name”** field and click the **“Add”** button to confirm the addition of your new Edge.

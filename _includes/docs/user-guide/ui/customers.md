@@ -8,7 +8,7 @@ A customer can be a separate business-entity: an individual, or an organization 
 A Customer can also be a division within the tenant organization.
 
 A customer user belongs to the customer and has read permissions to view dashboards and other entities assigned by the tenant administrator.
-In IoT Hub Community Edition a customer user cannot create their own customers, users, or subcustomers.
+In IoT Hub a customer user cannot create their own customers, users, or subcustomers.
 
 {% capture difference %}
 **Important:**

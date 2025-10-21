@@ -11,7 +11,7 @@ description: IoT Hub IoT Platform sample for Raspberry Pi Grove Base Hat connect
 
 ## Introduction
 
-IoT Hub Community Edition is an open-source server-side platform that allows you to monitor and control IoT devices. 
+IoT Hub is an open-source server-side platform that allows you to monitor and control IoT devices. 
 It is free for both personal and commercial usage and you can deploy it anywhere. 
 If you are not familiar with the platform yet, we recommend to review [what is IoT Hub page](/docs/getting-started-guides/what-is-iothub/) and [getting started guide](/docs/getting-started-guides/helloworld/) at first and then proceed with this tutorial.
 Within this guide we use [iothub.magenta.at](https://iothub.magenta.at).

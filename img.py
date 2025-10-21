@@ -3,9 +3,9 @@ import os
 import re
 import argparse
 
-# Правильно: \s и \u00A0 (неразрывный пробел)
+# Правильный паттерн: пробелы, табы, неразрывные пробелы и т.п.
 WS = r"[\s\u00A0]+"
-PATTERN = re.compile(rf"\bIoT{WS}Hub{WS}Professional{WS}Edition\b", re.IGNORECASE)
+PATTERN = re.compile(rf"\bIoT{WS}Hub{WS}Community{WS}Edition\b", re.IGNORECASE)
 REPLACEMENT = "IoT Hub"
 
 DEFAULT_EXTS = (
@@ -15,7 +15,10 @@ DEFAULT_EXTS = (
     ".css", ".scss", ".txt",
     ".py", ".xml", ".liquid"
 )
-DEFAULT_EXCLUDE_DIRS = {".git", ".hg", ".svn", "node_modules", "dist", "build", ".idea", ".vscode"}
+DEFAULT_EXCLUDE_DIRS = {
+    ".git", ".hg", ".svn", "node_modules", "dist", "build", ".idea", ".vscode"
+}
+
 
 def process_file(path: str, dry_run: bool, create_backup: bool) -> int:
     try:
@@ -32,8 +35,8 @@ def process_file(path: str, dry_run: bool, create_backup: bool) -> int:
     if dry_run:
         for m in matches:
             line_no = content.count("\n", 0, m.start()) + 1
-            left  = content[max(0, m.start()-40):m.start()]
-            mid   = content[m.start():m.end()]
+            left = content[max(0, m.start()-40):m.start()]
+            mid = content[m.start():m.end()]
             right = content[m.end():m.end()+40]
             print(f"{path}:{line_no}: …{left}{mid}{right}…")
         return len(matches)
@@ -42,13 +45,13 @@ def process_file(path: str, dry_run: bool, create_backup: bool) -> int:
 
     if create_backup:
         try:
-            os.replace(path, path + ".bak")
+            os.replace(path, path + ".bak")  # делаем резервную копию
             with open(path, "w", encoding="utf-8") as f:
                 f.write(new_content)
         except Exception as e:
             print(f"[ERROR] Backup/write failed for {path}: {e}")
             if os.path.exists(path + ".bak"):
-                os.replace(path + ".bak", path)
+                os.replace(path + ".bak", path)  # откат, если сбой
             return 0
     else:
         try:
@@ -61,16 +64,17 @@ def process_file(path: str, dry_run: bool, create_backup: bool) -> int:
     print(f"[UPDATED] {path} ({len(matches)} replacement(s))")
     return len(matches)
 
+
 def main():
     ap = argparse.ArgumentParser(
         description="Replace 'IoT Hub' (case-insensitive, whole words) with 'IoT Hub' across a project."
     )
-    ap.add_argument("--root", default=".", help="Корневая директория обхода.")
-    ap.add_argument("--exts", nargs="*", default=list(DEFAULT_EXTS), help="Обрабатываемые расширения.")
-    ap.add_argument("--dry-run", action="store_true", help="Показать совпадения без записи.")
-    ap.add_argument("--backup", action="store_true", help="Создавать .bak рядом с изменёнными файлами.")
+    ap.add_argument("--root", default=".", help="Корневая директория (по умолчанию текущая).")
+    ap.add_argument("--exts", nargs="*", default=list(DEFAULT_EXTS), help="Список расширений для обработки.")
+    ap.add_argument("--dry-run", action="store_true", help="Показать совпадения без записи изменений.")
+    ap.add_argument("--backup", action="store_true", help="Создавать .bak копии перед изменением.")
     ap.add_argument("--exclude-dirs", nargs="*", default=list(DEFAULT_EXCLUDE_DIRS),
-                    help="Исключаемые каталоги по имени.")
+                    help="Каталоги, которые нужно пропустить.")
     args = ap.parse_args()
 
     total_files = 0
@@ -92,6 +96,7 @@ def main():
 
     mode = "DRY-RUN" if args.dry_run else "APPLY"
     print(f"\n✅ Done [{mode}]. Files changed: {total_files}, replacements: {total_replacements}")
+
 
 if __name__ == "__main__":
     main()
