@@ -19,7 +19,7 @@ This guide covers initial IoT Gateway installation and configuration, we will do
 
 ## Prerequisites
 
-- Before initiating the Gateway setup, ensure that the IoT Hub server is up and running. The simplest approach is to utilize the [Live Demo](https://demo.thingsboard.io) or [ThingsBoard Cloud](https://thingsboard.cloud). Alternatively, you can install IoT Hub manually by following the steps outlined in the [Installation Guide](/docs/user-guide/install/installation-options/).
+- Before initiating the Gateway setup, ensure that the IoT Hub server is up and running. The simplest approach is to utilize the [Live Demo](https://iothub.magenta.at) or [ThingsBoard Cloud](https://thingsboard.cloud). Alternatively, you can install IoT Hub manually by following the steps outlined in the [Installation Guide](/docs/user-guide/install/installation-options/).
 - Before moving forward, ensure Docker is installed and properly configured on your machine. If you haven't installed Docker yet, you can download it from the [official Docker website](https://docs.docker.com/engine/install/) and follow their installation guide for your specific operating system. 
 - If you don't have a dashboard installed, you can download Gateway widget bundle [JSON file here](/docs/iot-gateway/resources/thingsboard-gateway-widget-bundle.json){:target="_blank" download="thingsboard-gateway-widget-bundle.json"} and IoT Hub IoT Gateways dashboard [JSON file here](/docs/iot-gateway/resources/thingsboard-iot-gateways.json){:target="_blank" download="thingsboard-iot-gateways.json"}. Use this [guide](#optional-import-gateway-widgets-bundle-and-dashboard) to import gateway widgets bundle and dashboard.
 

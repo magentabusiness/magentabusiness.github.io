@@ -10,7 +10,7 @@
 {% assign appRepo = "https://github.com/thingsboard/flutter_thingsboard_app.git" %}
 {% assign appProject = "flutter_thingsboard_app" %}
 {% assign cloudApp = "[Live Demo](https://iothub.magenta.at/signup)" %}
-{% assign cloudEndpoint = "https://demo.thingsboard.io" %}
+{% assign cloudEndpoint = "https://iothub.magenta.at" %}
 {% assign flutterAppVer = site.release.ce_flutter_app_ver %}
 {% endif %}
 

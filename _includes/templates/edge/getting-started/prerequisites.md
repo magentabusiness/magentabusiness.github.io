@@ -28,7 +28,7 @@ On-premise Server<br><small>Connect Edge to local server</small>%,%on-premise%,%
 {% endif %}
 {% if currentThingsBoardVersion == "IoT Hub" %}
 {% capture contenttogglespec2 %}
-Live Demo<br><small>Connect Edge to<br>https://demo.thingsboard.io</small>%,%cloud%,%templates/edge/ce-cloud.md%br%
+Live Demo<br><small>Connect Edge to<br>https://iothub.magenta.at</small>%,%cloud%,%templates/edge/ce-cloud.md%br%
 On-premise Server<br><small>Connect Edge to local server</small>%,%on-premise%,%templates/edge/on-premise-cloud.md{% endcapture %}
 {% include content-toggle.liquid content-toggle-id="cloudType" toggle-spec=contenttogglespec2 %}
 {% endif %}

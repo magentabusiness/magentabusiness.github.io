@@ -171,7 +171,7 @@ Let's start with publishing "temperature" telemetry for **Thermostat A** device.
 - Execute the copied command:
 
 ```shell
-curl -v -X POST http://demo.thingsboard.io/api/v1/CF8zr16VZeCk7zRyztZB/telemetry --header Content-Type:application/json --data "{temperature:25}"
+curl -v -X POST http://iothub.magenta.at/api/v1/CF8zr16VZeCk7zRyztZB/telemetry --header Content-Type:application/json --data "{temperature:25}"
 ```
 {: .copy-code}
 
@@ -186,7 +186,7 @@ After that let's make a few changes to the command to trigger REST RPC API:
 The resulted command should look like:
 
 ```shell
-curl -v -X POST http://demo.thingsboard.io/api/v1/ZcHBHbptBqxgV1A6Qrtx/rpc --header Content-Type:application/json --data "{method: "getCurrentTemperature", params:{}}"
+curl -v -X POST http://iothub.magenta.at/api/v1/ZcHBHbptBqxgV1A6Qrtx/rpc --header Content-Type:application/json --data "{method: "getCurrentTemperature", params:{}}"
 ```
 {: .copy-code}
 
@@ -202,7 +202,7 @@ Message was routed via configured rule chain and latest telemetry of the related
 If we try to submit request with unknown method:
 
 ```shell
-curl -v -X POST http://demo.thingsboard.io/api/v1/ZcHBHbptBqxgV1A6Qrtx/rpc --header Content-Type:application/json --data "{method: "getCurrentHumidity", params:{}}"
+curl -v -X POST http://iothub.magenta.at/api/v1/ZcHBHbptBqxgV1A6Qrtx/rpc --header Content-Type:application/json --data "{method: "getCurrentHumidity", params:{}}"
 ```
 {: .copy-code}
 

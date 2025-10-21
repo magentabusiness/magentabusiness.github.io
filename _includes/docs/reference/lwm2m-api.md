@@ -1598,7 +1598,7 @@ mvn clean install
 3. Run the client with custom parameters:
 
 ```
-java -jar thingsboard-lw-demo-client-{version}.jar -u coap://demo.thingsboard.io -n MyClientNoSec -tota
+java -jar thingsboard-lw-demo-client-{version}.jar -u coap://iothub.magenta.at -n MyClientNoSec -tota
 ```
 {: .copy-code}
 

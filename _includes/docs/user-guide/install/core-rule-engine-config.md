@@ -5394,7 +5394,7 @@
 		<tr>
 			<td>mobileApp.domain</td>
 			<td>TB_MOBILE_APP_DOMAIN</td>
-			<td>demo.thingsboard.io</td>
+			<td>iothub.magenta.at</td>
 			<td> Server domain name for Iot Hub Live mobile application</td>
 		</tr>
 		<tr>

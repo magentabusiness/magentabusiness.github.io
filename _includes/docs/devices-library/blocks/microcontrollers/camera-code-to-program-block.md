@@ -3,7 +3,7 @@ Now it’s time to program the board to connect to IoT Hub.
 To do this, you can use the code below. It contains all required functionality for this guide.  
 
 {% capture demoExample %}
-If you want to use [**demo.thingsboard.io**](https://demo.thingsboard.io), please notice that it has a size limit for the MQTT messages - **1024 bytes per message**.  
+If you want to use [**iothub.magenta.at**](https://iothub.magenta.at), please notice that it has a size limit for the MQTT messages - **1024 bytes per message**.  
   
 In this case you can reduce the resolution, quality and cut the encoded photo.  
 To do this you can change the value of variable **DEMO_MODE** to **1**:  
