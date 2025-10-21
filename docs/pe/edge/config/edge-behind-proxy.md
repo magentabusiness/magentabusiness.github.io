@@ -5,7 +5,7 @@ description: Detailed instructions on how to connect IoT Hub Edge to IoT Hub Clo
 
 configs:
   0:
-    image: https://img.thingsboard.io/edge/config/edge-behind-proxy/docker-with-proxy-pe.webp
+    image: /images/edge/config/edge-behind-proxy/docker-with-proxy-pe.webp
 ---
 {% assign docsPrefix = "pe/edge/" %}
 {% assign peDocsPrefix = "pe/" %}

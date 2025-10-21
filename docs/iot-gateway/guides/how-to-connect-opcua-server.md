@@ -129,8 +129,8 @@ Check data in your IoT Hub instance.
 <br>    
 Go to the device details, **ATTRIBUTES** tab, there you may see the attribute **batteryLevel** with some value.  
 <br>
-    ![](https://img.thingsboard.io/gateway/opcua-sensor-attributes.png)
+    ![](/images/gateway/opcua-sensor-attributes.png)
 <br><br>
 Go to the device details, **LATEST TELEMETRY** tab, to see your telemetries data: **Humidity** with some value.  
 <br>
-![](https://img.thingsboard.io/gateway/opcua-sensor-telemetry.png)
+![](/images/gateway/opcua-sensor-telemetry.png)

@@ -5,7 +5,7 @@ description: User Access management
 
 ---
 
-![image](https://img.thingsboard.io/coming-soon.jpg)
+![image](/images/coming-soon.jpg)
 
 ### User Access management
 

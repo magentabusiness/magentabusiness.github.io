@@ -9,7 +9,7 @@ The table below describes the RPC request parameters:
 | address       | Object address                                                        |
 | ---           
 
-![image](https://img.thingsboard.io/gateway/modbus-connector/rpc-requests-advanced-1-ce.png)
+![image](/images/gateway/modbus-connector/rpc-requests-advanced-1-ce.png)
 
 <br>
 Example:

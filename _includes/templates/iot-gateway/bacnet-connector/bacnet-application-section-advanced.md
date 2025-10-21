@@ -32,4 +32,4 @@ Example:
 },
 ```
 
-![image](https://img.thingsboard.io/gateway/bacnet-connector/bacnet-section-application-advanced-1-ce.png)
+![image](/images/gateway/bacnet-connector/bacnet-section-application-advanced-1-ce.png)

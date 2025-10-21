@@ -28,7 +28,7 @@ Let's move on to setting up the integration between the IoT Hub platform and Chi
 
 - Click "**Next**".
 
-![image](https://img.thingsboard.io/user-guide/integrations/chirpstack/chirpstack-integration-setup-1-pe.png)
+![image](/images/user-guide/integrations/chirpstack/chirpstack-integration-setup-1-pe.png)
 
 <br>
 
@@ -58,7 +58,7 @@ TBEL<small>Recommended</small>%,%accessToken%,%templates/integration/chirpstack/
 JavaScript<small></small>%,%anonymous%,%templates/integration/chirpstack/chirpstack-uplink-converter-config-javascript.md{% endcapture %}
 {% include content-toggle.liquid content-toggle-id="chirpstackuplinkconverterconfig" toggle-spec=chirpstackuplinkconverterconfig %}
 
-![image](https://img.thingsboard.io/user-guide/integrations/chirpstack/chirpstack-integration-setup-2-1-pe.png)
+![image](/images/user-guide/integrations/chirpstack/chirpstack-integration-setup-2-1-pe.png)
 
 - **Advanced decoding parameters**" section:
     - The **Device profile**, **Device label**, **Customer name**, and **Device group name** fields are not mandatory, and you can also use the $ pattern to populate them dynamically.
@@ -66,7 +66,7 @@ JavaScript<small></small>%,%anonymous%,%templates/integration/chirpstack/chirpst
     - In the **Update only keys list** section, define keys whose values will be saved to the database only if they have changed from the previous incoming message.This applies to both Attributes and Telemetry, helping optimize data storage.
 - Once the uplink converter is set up, click "**Next**".
 
-![image](https://img.thingsboard.io/user-guide/integrations/chirpstack/chirpstack-integration-setup-2-2-pe.png)
+![image](/images/user-guide/integrations/chirpstack/chirpstack-integration-setup-2-2-pe.png)
 
 <br>
 

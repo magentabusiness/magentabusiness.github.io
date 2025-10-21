@@ -4,7 +4,7 @@ title: Cloud Events
 description: Cloud Events
 cloudEvents:
     0:
-        image: https://img.thingsboard.io/edge/cloud-events.png
+        image: /images/edge/cloud-events.png
 ---
 
 **Cloud Events** page shows events that IoT Hub Edge pushes to the cloud.

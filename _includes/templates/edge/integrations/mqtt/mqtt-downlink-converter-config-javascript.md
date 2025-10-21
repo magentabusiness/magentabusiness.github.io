@@ -22,4 +22,4 @@ return result;
 ``` 
 {: .copy-code}
 
-![image](https://img.thingsboard.io/pe/edge/integrations/mqtt/add-mqtt-integration-template-3-java-edge.png)
+![image](/images/pe/edge/integrations/mqtt/add-mqtt-integration-template-3-java-edge.png)

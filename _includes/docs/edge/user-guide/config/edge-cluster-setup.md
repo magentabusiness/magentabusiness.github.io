@@ -15,7 +15,7 @@ Edge-specific considerations:
 * **Edge nodes** share the workload and maintain local failover.
 * The **Edge Cluster** syncs aggregated data to **IoT Hub Cloud**.
 
-![edge-cluster](https://img.thingsboard.io/edge/config/edge-cluster.webp){: style="display: block; margin: auto; max-width: 600px; max-height: 600px"}
+![edge-cluster](/images/edge/config/edge-cluster.webp){: style="display: block; margin: auto; max-width: 600px; max-height: 600px"}
 
 For more details, see the [microservices architecture](/docs/reference/msa/){: target="_blank"} page.
 

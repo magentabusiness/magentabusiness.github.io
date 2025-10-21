@@ -37,10 +37,10 @@ hide-dashboard:
 
 layout-1:
  0:
-  image: https://img.thingsboard.io/mobile-center/mobile-layout-1-ce.png
+  image: /images/mobile-center/mobile-layout-1-ce.png
   title: ''
  1:
-  image: https://img.thingsboard.io/mobile-center/mobile-layout-2-ce.png
+  image: /images/mobile-center/mobile-layout-2-ce.png
   title: ''
 
 ---

@@ -45,7 +45,7 @@ contactUsModal: "true"
         </div>
     </div>
     <div class="scheme">
-        <img id="schemeSVG"  loading="lazy" data-src="https://img.thingsboard.io/usecases/health-care/health-care-solution-structure.svg" alt="Health care solution structure">
+        <img id="schemeSVG"  loading="lazy" data-src="/images/usecases/health-care/health-care-solution-structure.svg" alt="Health care solution structure">
     </div>
 </section>
 <section class="health-solution-structure">
@@ -259,7 +259,7 @@ contactUsModal: "true"
         <p>This smart assisted living solution on IoT Hub provides a comprehensive approach to resident and facility management, with robust monitoring capabilities, intuitive zoning and device management, and customizable alerts for both health and environmental conditions. The solution empowers caregivers and administrators to respond quickly, keep environments safe, and provide the highest standard of care for residents.</p>
     </div>
     <div class="summary-icon">
-        <img src="https://img.thingsboard.io/usecases/health-care/summary.svg" alt="Text summary icon" title="Text summary icon">
+        <img src="/images/usecases/health-care/summary.svg" alt="Text summary icon" title="Text summary icon">
     </div>
 </section>
 
@@ -363,15 +363,15 @@ contactUsModal: "true"
 
         function getImage(index) {
             const images = [
-                "<img src='https://img.thingsboard.io/usecases/health-care/resident-overview.webp' alt='Resident overview dialog of dashboard'/>",
-                "<img src='https://img.thingsboard.io/usecases/health-care/resident-alarm.webp' alt='Resident alarm configuration dialog of dashboard'/>",
-                "<img src='https://img.thingsboard.io/usecases/health-care/real-time-resident-alarm.webp' alt='Real time resident alarm state of dashboard'/>",
-                "<img src='https://img.thingsboard.io/usecases/health-care/room-alarm-configuration.webp' alt='Room alarm configuration state of dashboard'/>",
-                "<img src='https://img.thingsboard.io/usecases/health-care/resident-list-management.webp' alt='Resident list management state of dashboard'/>",
-                "<img src='https://img.thingsboard.io/usecases/health-care/zone-and-floor-management.webp' alt='Zone and floor management state of dashboard'/>",
-                "<img src='https://img.thingsboard.io/usecases/health-care/room-and-device-layout.webp' alt='Room and device layout state of dashboard'/>",
-                "<img src='https://img.thingsboard.io/usecases/health-care/device-addition.webp' alt='Device addition state of dashboard'/>",
-                "<img src='https://img.thingsboard.io/usecases/health-care/room-configuration.webp' alt='Room configuration state of dashboard'/>"
+                "<img src='/images/usecases/health-care/resident-overview.webp' alt='Resident overview dialog of dashboard'/>",
+                "<img src='/images/usecases/health-care/resident-alarm.webp' alt='Resident alarm configuration dialog of dashboard'/>",
+                "<img src='/images/usecases/health-care/real-time-resident-alarm.webp' alt='Real time resident alarm state of dashboard'/>",
+                "<img src='/images/usecases/health-care/room-alarm-configuration.webp' alt='Room alarm configuration state of dashboard'/>",
+                "<img src='/images/usecases/health-care/resident-list-management.webp' alt='Resident list management state of dashboard'/>",
+                "<img src='/images/usecases/health-care/zone-and-floor-management.webp' alt='Zone and floor management state of dashboard'/>",
+                "<img src='/images/usecases/health-care/room-and-device-layout.webp' alt='Room and device layout state of dashboard'/>",
+                "<img src='/images/usecases/health-care/device-addition.webp' alt='Device addition state of dashboard'/>",
+                "<img src='/images/usecases/health-care/room-configuration.webp' alt='Room configuration state of dashboard'/>"
             ];
             return images[index];
         }

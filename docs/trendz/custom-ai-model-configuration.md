@@ -5,21 +5,21 @@ description: Step-by-step guide how to configure Large Language Model (LLM).
 
 trendz-assistance-use-own-model:
   0:
-    image: https://img.thingsboard.io/trendz/ai/ai-model-configuration/use-own-model-1.png
+    image: /images/trendz/ai/ai-model-configuration/use-own-model-1.png
     title: To enable/configure your own model, it’s necessary to go Setting -> General -> AI Assistance
 
 trendz-assistance-ai-models:
   0:
-    image: https://img.thingsboard.io/trendz/ai/ai-model-configuration/ai-google-model.png
+    image: /images/trendz/ai/ai-model-configuration/ai-google-model.png
     title: Google (Recommended)
   1:
-    image: https://img.thingsboard.io/trendz/ai/ai-model-configuration/ai-openai-model.png
+    image: /images/trendz/ai/ai-model-configuration/ai-openai-model.png
     title: Open AI
   2:
-    image: https://img.thingsboard.io/trendz/ai/ai-model-configuration/ai-aws-model.png
+    image: /images/trendz/ai/ai-model-configuration/ai-aws-model.png
     title: Amazon Bedrock
   3:
-    image: https://img.thingsboard.io/trendz/ai/ai-model-configuration/ai-custom-model.png
+    image: /images/trendz/ai/ai-model-configuration/ai-custom-model.png
     title: Other Models (Custom)
 ---
 * TOC

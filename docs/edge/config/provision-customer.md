@@ -5,7 +5,7 @@ description: Provision Customer from cloud to edge
 
 ---
 
-![image](https://img.thingsboard.io/coming-soon.jpg)
+![image](/images/coming-soon.jpg)
 
 ### User Access management
 

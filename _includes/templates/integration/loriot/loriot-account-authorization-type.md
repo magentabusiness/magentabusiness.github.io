@@ -7,4 +7,4 @@ In Loriot UI:
 In IoT Hub UI: 
 - Click "Add" to confirm creating integration.
 
-![image](https://img.thingsboard.io/user-guide/integrations/loriot/loriot-add-integration-4-1-pe.png)
+![image](/images/user-guide/integrations/loriot/loriot-add-integration-4-1-pe.png)

@@ -4,7 +4,7 @@ title: Edge Information page
 description: Edge Information page
 edgeInfo:
     0:
-        image: https://img.thingsboard.io/edge/edge-status.png
+        image: /images/edge/edge-status.png
 ---
 
 **Edge Info** page introduced to provide user information regarding basic edge configuration and IoT Hub **PE server information (URL and server version): 

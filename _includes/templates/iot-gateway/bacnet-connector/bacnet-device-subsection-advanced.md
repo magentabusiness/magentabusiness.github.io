@@ -30,4 +30,4 @@ Example:
   ...
 ```
 
-![image](https://img.thingsboard.io/gateway/bacnet-connector/bacnet-section-devices-advanced-1-ce.png)
+![image](/images/gateway/bacnet-connector/bacnet-section-devices-advanced-1-ce.png)

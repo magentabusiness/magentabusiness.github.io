@@ -6,16 +6,16 @@ title: Microsoft Teams Settings
 description: IoT Hub IoT platform Microsoft Teams settings
 microsoft-teams-settings:
     0:
-        image: https://img.thingsboard.io/user-guide/ui/microsoft-teams/microsoft-teams-1-settings.png
+        image: /images/user-guide/ui/microsoft-teams/microsoft-teams-1-settings.png
         title: 'Sign in to Microsoft Teams and navigate to the "Teams" tab, then click on the three dots next to your channel name. In the drop-down menu click on the "Connectors" item;'
     1:
-        image: https://img.thingsboard.io/user-guide/ui/microsoft-teams/microsoft-teams-2-settings.png
+        image: /images/user-guide/ui/microsoft-teams/microsoft-teams-2-settings.png
         title: 'Find "Incoming Webhook" connector and click "Configure";'
     2:
-        image: https://img.thingsboard.io/user-guide/ui/microsoft-teams/microsoft-teams-3-settings.png
+        image: /images/user-guide/ui/microsoft-teams/microsoft-teams-3-settings.png
         title: 'Configure how IoT Hub will appear when sending messages to your channel (choose a name and icon), and click "Create";'
     3:
-        image: https://img.thingsboard.io/user-guide/ui/microsoft-teams/microsoft-teams-4-settings.png
+        image: /images/user-guide/ui/microsoft-teams/microsoft-teams-4-settings.png
         title: 'Now, copy the webhook URL. We will use it when adding a notification recipients group in your IoT Hub instance'
 
 ---

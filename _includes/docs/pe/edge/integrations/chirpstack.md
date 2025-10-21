@@ -12,7 +12,7 @@ After integrating ChirpStack with **IoT Hub Edge**, you can locally connect, pro
 
 To learn more, please see the integration diagram.
 
-![image](https://img.thingsboard.io/pe/edge/integrations/chirpstack/chirpstack-diagram.webp){: style="display: block; margin: auto; max-height: 400px"}
+![image](/images/pe/edge/integrations/chirpstack/chirpstack-diagram.webp){: style="display: block; margin: auto; max-height: 400px"}
 
 ### Prerequisites
 

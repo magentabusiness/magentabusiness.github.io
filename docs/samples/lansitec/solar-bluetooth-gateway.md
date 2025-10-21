@@ -34,13 +34,13 @@ Step to add a gateway:
 
 {% assign solarGateway = '
     ===
-        image: https://img.thingsboard.io/samples/lansitec/gateway-1.png,
+        image: /images/samples/lansitec/gateway-1.png,
         title: Log in to Chirpstack server. Go to the **Gateways** page and click the **Add gateway** button.
     ===
-        image: https://img.thingsboard.io/samples/lansitec/gateway-2.png,
+        image: /images/samples/lansitec/gateway-2.png,
         title: Enter the **Name**, **Gateway ID** (found in the gateway control panel), then scroll down and click the **Submit** button.
     ===
-        image: https://img.thingsboard.io/samples/lansitec/gateway-3.png,
+        image: /images/samples/lansitec/gateway-3.png,
         title: Once added, you can view the gateway&#39;s status under the **Gateways** tab.
 '
 %}
@@ -53,10 +53,10 @@ To connect the gateway and transmit data to ChirpStack, follow these steps:
 
 {% assign solarRak = '
     ===
-        image: https://img.thingsboard.io/samples/lansitec/rak-1.png,
+        image: /images/samples/lansitec/rak-1.png,
         title: Open the gateway control panel. Go to the **Network Settings** page and set the Mode to **Packet Forwarder**. Enter your server address in the **Server Address** field (e.g., **192.168.31.11** in our case), then click **Save & Apply** button.
     ===
-        image: https://img.thingsboard.io/samples/lansitec/rak-2.png,
+        image: /images/samples/lansitec/rak-2.png,
         title: Verify the gateway&#39;s status on ChirpStack, it should now appear online.
 '
 %}
@@ -66,13 +66,13 @@ To connect the gateway and transmit data to ChirpStack, follow these steps:
 
 {% assign solarDeviceProfile = '
     ===
-        image: https://img.thingsboard.io/samples/lansitec/device-profiles-1.png,
+        image: /images/samples/lansitec/device-profiles-1.png,
         title: In Chirpstack UI, go to the **Device Profiles** page and click **Add device profile** button.
     ===
-        image: https://img.thingsboard.io/samples/lansitec/device-profiles-2.png,
+        image: /images/samples/lansitec/device-profiles-2.png,
         title: Fill in the required fields.
 ===
-        image: https://img.thingsboard.io/samples/lansitec/device-profiles-3.png,
+        image: /images/samples/lansitec/device-profiles-3.png,
         title: Navigate to the **Codec** tab, select "JavaScript functions”, paste the **Solar Bluetooth Gateway decoder**, and click **Submit**.
 '
 %}
@@ -392,22 +392,22 @@ To connect the gateway and transmit data to ChirpStack, follow these steps:
 
 {% assign solarApplication = '
     ===
-        image: https://img.thingsboard.io/samples/lansitec/application-1.png,
+        image: /images/samples/lansitec/application-1.png,
         title: Go to the **Applications** page and click **Add application** button.
     ===
-        image: https://img.thingsboard.io/samples/lansitec/application-2.png,
+        image: /images/samples/lansitec/application-2.png,
         title: Enter application name and click **Submit** button.
     ===
-        image: https://img.thingsboard.io/samples/lansitec/application-3.png,
+        image: /images/samples/lansitec/application-3.png,
         title: Click **Add device** button.
     ===
-        image: https://img.thingsboard.io/samples/lansitec/application-4.png,
+        image: /images/samples/lansitec/application-4.png,
         title: Fill in the device configuration parameters.
     ===
-        image: https://img.thingsboard.io/samples/lansitec/application-5.png,
+        image: /images/samples/lansitec/application-5.png,
         title: Go to the **Variables** dection, enter the "ThingsBoardAccessToken" parameter, and then click the **Submit** button.
     ===
-        image: https://img.thingsboard.io/samples/lansitec/application-6.png,
+        image: /images/samples/lansitec/application-6.png,
         title: Enter your **Application key** in this field and click **Submit** button to save the device.
 '
 %}
@@ -417,10 +417,10 @@ To connect the gateway and transmit data to ChirpStack, follow these steps:
 
 {% assign solarThingsboard = '
     ===
-        image: https://img.thingsboard.io/samples/lansitec/thingsboard-1.png,
+        image: /images/samples/lansitec/thingsboard-1.png,
         title: Go to the **Integrations** page and click on **IoT Hub**.
     ===
-        image: https://img.thingsboard.io/samples/lansitec/thingsboard-2.png,
+        image: /images/samples/lansitec/thingsboard-2.png,
         title: Enter your **IoT Hub server** address and click **Submit**.
 '
 %}
@@ -430,22 +430,22 @@ To connect the gateway and transmit data to ChirpStack, follow these steps:
 
 {% assign solarDevices = '
     ===
-        image: https://img.thingsboard.io/samples/lansitec/devices-1.png,
+        image: /images/samples/lansitec/devices-1.png,
         title: Go to the **Devices** page.
     ===
-        image: https://img.thingsboard.io/samples/lansitec/devices-2.png,
+        image: /images/samples/lansitec/devices-2.png,
         title: Click the **plus** icon to add new device.
     ===
-        image: https://img.thingsboard.io/samples/lansitec/devices-3.png,
+        image: /images/samples/lansitec/devices-3.png,
         title: Enter the device information and click "**Next: Credentials**" button.
     ===
-        image: https://img.thingsboard.io/samples/lansitec/devices-4.png,
+        image: /images/samples/lansitec/devices-4.png,
         title: Enter the **Access token** for the device and click **Add** button.
     ===
-        image: https://img.thingsboard.io/samples/lansitec/devices-5.png,
+        image: /images/samples/lansitec/devices-5.png,
         title: Click on the device to view detailed information.
     ===
-        image: https://img.thingsboard.io/samples/lansitec/devices-6.png,
+        image: /images/samples/lansitec/devices-6.png,
         title: Navigate to the **Latest telemetry** tab to view the device&#39;s reported data.
 '
 %}

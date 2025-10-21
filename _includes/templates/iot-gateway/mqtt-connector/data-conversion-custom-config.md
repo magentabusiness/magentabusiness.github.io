@@ -32,4 +32,4 @@ Converter subsection in the configuration will look like:
   }
 ```
 
-![image](https://img.thingsboard.io/gateway/mqtt-connector/data-conversion-advanced-custom-1-ce.png)
+![image](/images/gateway/mqtt-connector/data-conversion-advanced-custom-1-ce.png)

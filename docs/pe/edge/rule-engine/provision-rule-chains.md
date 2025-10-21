@@ -5,7 +5,7 @@ description: Provision Rule Chains from cloud to edge
 
 ---
 
-![image](https://img.thingsboard.io/coming-soon.jpg)
+![image](/images/coming-soon.jpg)
 
 #### Next Steps
 

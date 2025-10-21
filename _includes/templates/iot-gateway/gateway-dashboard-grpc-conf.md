@@ -1,4 +1,4 @@
-![](https://img.thingsboard.io/gateway/dashboard/gateway-dashboard-grpc-conf.png)
+![](/images/gateway/dashboard/gateway-dashboard-grpc-conf.png)
 
 GRPC - provides GRPC configuration:
 - Server port - network port on which the GRPC server will listen for incoming connections;

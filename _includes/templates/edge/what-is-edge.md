@@ -35,7 +35,7 @@ In such cases, multiple IoT Hub Edge instances need to be provisioned for each t
 
 <br>
 
-![image](https://img.thingsboard.io/edge/overview/edge_overview.svg){: style="display: block; margin: auto"}
+![image](/images/edge/overview/edge_overview.svg){: style="display: block; margin: auto"}
 
 ## Use-Cases for IoT Hub Edge
 
@@ -63,21 +63,21 @@ With **IoT Hub Edge**, you get:
 
 - **Local deployment and storage**: Process and store data from local (edge) devices without connecting to the cloud. Push updates to the cloud once the connection is restored.
 
-![image](https://img.thingsboard.io/edge/overview/offline_network_.svg){: style="display: block; margin: auto"}
+![image](/images/edge/overview/offline_network_.svg){: style="display: block; margin: auto"}
 
 - **Traffic filtering**: Filter data from local (edge) devices on the IoT Hub Edge service and push only a subset of the data to the cloud for further processing or storage.
 
-![image](https://img.thingsboard.io/edge/overview/data_filtering.svg){: style="display: block; margin: auto"}
+![image](/images/edge/overview/data_filtering.svg){: style="display: block; margin: auto"}
 
 - **Local alarms**: Instantly respond to critical situations on site, without the need for a cloud connection.
 
-![image](https://img.thingsboard.io/edge/overview/alarm.svg){: style="display: block; margin: auto"}
+![image](/images/edge/overview/alarm.svg){: style="display: block; margin: auto"}
 
 - **Real-time dashboards**: Monitor local events and time series data.
 - **Local storage**: Store data from edge devices on the edge if the cloud connection is inactive and push updates to the cloud once the connection is restored.
 - **Batch Update**: Update thousands of edge configurations with a single click.
 
-![image](https://img.thingsboard.io/edge/overview/update_dashboard.svg){: style="display: block; margin: auto"}
+![image](/images/edge/overview/update_dashboard.svg){: style="display: block; margin: auto"}
 
 IoT Hub Edge inherits features from {{appPrefix}}, providing the same experience for connecting, managing, and processing data from your devices.
 

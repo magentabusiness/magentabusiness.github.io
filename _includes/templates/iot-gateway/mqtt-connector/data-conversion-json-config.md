@@ -91,7 +91,7 @@ supported.
 }
 ```
 
-![image](https://img.thingsboard.io/gateway/mqtt-connector/data-conversion-advanced-json-1-ce.png)
+![image](/images/gateway/mqtt-connector/data-conversion-advanced-json-1-ce.png)
 
 {% capture tsField %}
 **Note**: In **Example 1** configuration section for `humidity` timeseries key illustrates how to use the `tsField` and
@@ -137,4 +137,4 @@ supported.
 }
 ```
 
-![image](https://img.thingsboard.io/gateway/mqtt-connector/data-conversion-advanced-json-2-ce.png)
+![image](/images/gateway/mqtt-connector/data-conversion-advanced-json-2-ce.png)

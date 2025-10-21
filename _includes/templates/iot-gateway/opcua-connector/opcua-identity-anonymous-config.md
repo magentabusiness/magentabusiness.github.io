@@ -13,4 +13,4 @@ This part of configuration will look like this:
     },
 ```
 
-![image](https://img.thingsboard.io/gateway/opc-ua-connector/opc-ua-section-application-advanced-anonymous-1-ce.png)
+![image](/images/gateway/opc-ua-connector/opc-ua-section-application-advanced-anonymous-1-ce.png)

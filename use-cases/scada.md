@@ -29,10 +29,10 @@ contactUsModal: "true"
 <section class="scada-overview addedBanner extraMargin">
     <div class="img-comp-container">
       <div class="img-comp-img">
-        <img class="traditional-background" src="https://img.thingsboard.io/usecases/scada/traditional.webp">
+        <img class="traditional-background" src="/images/usecases/scada/traditional.webp">
       </div>
       <div class="img-comp-img img-comp-overlay">
-        <img src="https://img.thingsboard.io/usecases/scada/high-performance.webp">
+        <img src="/images/usecases/scada/high-performance.webp">
       </div>
     </div>
     {% include contact-us-banner.liquid %}
@@ -106,7 +106,7 @@ contactUsModal: "true"
 <section class="scada-solution-structure">
     <h2>Solution structure</h2>
     <div class="scheme">
-        <img id="schemeSVG" loading="lazy" data-src="https://img.thingsboard.io/usecases/scada/scada-solution-structure.svg" alt="SCADA solution structure">
+        <img id="schemeSVG" loading="lazy" data-src="/images/usecases/scada/scada-solution-structure.svg" alt="SCADA solution structure">
     </div>
     <div class="use-cases-solution-structure-cards">
         <div class="use-cases-solution-structure-card">
@@ -538,18 +538,18 @@ contactUsModal: "true"
 
         function getImage(index, hp) {
             const images = [
-                "<img src='https://img.thingsboard.io/usecases/scada/swiming-pool-system-state.webp' alt='Swimming pool SCADA system state dashboard'/>",
-                "<img src='https://img.thingsboard.io/usecases/scada/water-pump-state.webp' alt='Water pump state dashboard'/>",
-                "<img src='https://img.thingsboard.io/usecases/scada/heat-pump-state.webp' alt='Heat pump state dashboard'/>",
-                "<img src='https://img.thingsboard.io/usecases/scada/sand-filter-state.webp' alt='Sand filter state dashboard'/>",
-                "<img src='https://img.thingsboard.io/usecases/scada/gateway.webp' alt='Gateway dashboard'/>"
+                "<img src='/images/usecases/scada/swiming-pool-system-state.webp' alt='Swimming pool SCADA system state dashboard'/>",
+                "<img src='/images/usecases/scada/water-pump-state.webp' alt='Water pump state dashboard'/>",
+                "<img src='/images/usecases/scada/heat-pump-state.webp' alt='Heat pump state dashboard'/>",
+                "<img src='/images/usecases/scada/sand-filter-state.webp' alt='Sand filter state dashboard'/>",
+                "<img src='/images/usecases/scada/gateway.webp' alt='Gateway dashboard'/>"
             ];
             const hpImages = [
-                "<img src='https://img.thingsboard.io/usecases/scada/hp-swiming-pool-system-state.webp' alt='Swimming pool SCADA system state dashboard'/>",
-                "<img src='https://img.thingsboard.io/usecases/scada/hp-water-pump-state.webp' alt='Water pump state dashboard'/>",
-                "<img src='https://img.thingsboard.io/usecases/scada/hp-heat-pump-state.webp' alt='Heat pump state dashboard'/>",
-                "<img src='https://img.thingsboard.io/usecases/scada/hp-sand-filter-state.webp' alt='Sand filter state dashboard'/>",
-                "<img src='https://img.thingsboard.io/usecases/scada/hp-gateway.webp' alt='Gateway dashboard'/>"
+                "<img src='/images/usecases/scada/hp-swiming-pool-system-state.webp' alt='Swimming pool SCADA system state dashboard'/>",
+                "<img src='/images/usecases/scada/hp-water-pump-state.webp' alt='Water pump state dashboard'/>",
+                "<img src='/images/usecases/scada/hp-heat-pump-state.webp' alt='Heat pump state dashboard'/>",
+                "<img src='/images/usecases/scada/hp-sand-filter-state.webp' alt='Sand filter state dashboard'/>",
+                "<img src='/images/usecases/scada/hp-gateway.webp' alt='Gateway dashboard'/>"
             ];
             return hp ? hpImages[index] : images[index];
         }

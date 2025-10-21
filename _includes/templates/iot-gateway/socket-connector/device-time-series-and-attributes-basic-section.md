@@ -5,22 +5,22 @@ To add new time series or attribute key, follow these steps:
 
 {% assign creatingAttrAndTimeseries = '
     ===
-        image: https://img.thingsboard.io/gateway/socket-connector/socket-adding-device-1-ce.png,
+        image: /images/gateway/socket-connector/socket-adding-device-1-ce.png,
         title: Click “**pencil**” icon of the “**Attributes**” section to add new attribute key;
     ===
-        image: https://img.thingsboard.io/gateway/socket-connector/socket-adding-device-2-ce.png,
+        image: /images/gateway/socket-connector/socket-adding-device-2-ce.png,
         title: Click on "**Add attribute**" in the opened window;
     ===
-        image: https://img.thingsboard.io/gateway/socket-connector/socket-adding-device-4-ce.png,
+        image: /images/gateway/socket-connector/socket-adding-device-4-ce.png,
         title: Enter the **key name** and fill in the **byte positions**. Click “**Apply**”;
     ===
-        image: https://img.thingsboard.io/gateway/socket-connector/socket-adding-device-5-ce.png,
+        image: /images/gateway/socket-connector/socket-adding-device-5-ce.png,
         title: Now click on the “**pencil**” icon of the “**Time series**” section to add new time series key;
     ===
-        image: https://img.thingsboard.io/gateway/socket-connector/socket-adding-device-6-ce.png,
+        image: /images/gateway/socket-connector/socket-adding-device-6-ce.png,
         title: Click on "**Add time series**" in the opened window;
     ===
-        image: https://img.thingsboard.io/gateway/socket-connector/socket-adding-device-7-ce.png,
+        image: /images/gateway/socket-connector/socket-adding-device-7-ce.png,
         title: Enter the **key name**, fill in the **byte positions** and click “**Apply**”.
     '
 %}
@@ -35,7 +35,7 @@ data is sent to the IoT Hub server. The following strategies are available:
 - **On value change and report period** - sends data to IoT Hub when the value changes or report period;
 - **On received** - sends data to IoT Hub after receiving data from the device (default strategy).
 
-![image](https://img.thingsboard.io/gateway/socket-connector/socket-adding-device-9-ce.png)
+![image](/images/gateway/socket-connector/socket-adding-device-9-ce.png)
 
 {% capture difference %}
 Additional information about the report strategy can be found [here](/docs/iot-gateway/features-overview/report-strategy){:target="_blank"}.
