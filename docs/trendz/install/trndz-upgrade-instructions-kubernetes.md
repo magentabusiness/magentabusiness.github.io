@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-trendz
 title: Kubernetes
-description: ThingsBoard Trendz Analytics upgrade instructions kubernetes
+description: IoT Hub Trendz Analytics upgrade instructions kubernetes
 
 ---
 

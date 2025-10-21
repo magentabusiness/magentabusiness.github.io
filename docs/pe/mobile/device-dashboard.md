@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-mobile-pe
-title: Configure device details dashboards in ThingsBoard PE Mobile Application
+title: Configure device details dashboards in IoT Hub PE Mobile Application
 
 device-dashboard:
  0:

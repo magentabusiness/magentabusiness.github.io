@@ -65,9 +65,9 @@ Go to the **Payload formatters** page and select **Custom JavaScript formatter**
 
 {% include {{ converterFilePath }} %}
 
-### Create integration in ThingsBoard
+### Create integration in IoT Hub
 
-Next, we will create the "**TheThingsIndustries**" integration inside the **ThingsBoard**.
+Next, we will create the "**TheThingsIndustries**" integration inside the **IoT Hub**.
 
 At first, copy the code, we will need it to create the uplink converter:
 

@@ -1,5 +1,5 @@
 
-Configure HTTP(S) Load Balancer to access web interface of your ThingsBoard instance. Basically you have 3 possible options of configuration:
+Configure HTTP(S) Load Balancer to access web interface of your IoT Hub instance. Basically you have 3 possible options of configuration:
 
 * http - Load Balancer without HTTPS support. Recommended **for development.**
   The only advantage is simple configuration and minimum costs. May be good option for development server but definitely not suitable for production.

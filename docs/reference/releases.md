@@ -1767,7 +1767,7 @@ Minor release with the following improvements and bug fixes:
 **Improvements**
 
 * Core:
-  * [#6024](https://github.com/thingsboard/thingsboard/issues/6034) ThingsBoard Edge Community Edition support;
+  * [#6024](https://github.com/thingsboard/thingsboard/issues/6034) IoT Hub Edge Community Edition support;
   * [#6056](https://github.com/thingsboard/thingsboard/issues/6056) Handling of PartitionChangeEvent in DefaultTbApiUsageStateService is synchronous;
   * [#6139](https://github.com/thingsboard/thingsboard/pull/6139) Refactoring validators - moved them to a separate classes;
   * [#6146](https://github.com/thingsboard/thingsboard/issues/6146) Edge - device profile is not removed from edge in case of removal from cloud;
@@ -2109,7 +2109,7 @@ Major release which contains 2126 commits and 1668 changed files.
 **Major Improvements**
 
 * Core:
-  * Interface to provision and communicate with ThingsBoard Edge;
+  * Interface to provision and communicate with IoT Hub Edge;
   * Firmware and Software over-the-air updates (FOTA & SOTA);
   * Persistent RPC calls;
   * API limits for number of created alarms;
@@ -2319,7 +2319,7 @@ Major release which contains 2126 commits and 1668 changed files.
 
 ## v3.2.2 (March 24, 2021)
 
-### ThingsBoard CE
+### IoT Hub CE
 
 Minor release with the following improvements and bug fixes:
 
@@ -2379,7 +2379,7 @@ Minor release with the following improvements and bug fixes:
 * Build scripts:
     * Update deb/rpm packages java dep versions. Update JVM options.
     * Added subject alternative names into key generation tool;
-    * Refactoring of migration tool for new Thingsboard DB structure;
+    * Refactoring of migration tool for new Iot Hub DB structure;
 
 **Bug fixes**
 
@@ -2425,7 +2425,7 @@ Minor release with the following improvements and bug fixes:
 * Rest client:
     * Fix of incorrect url for getTenantProfiles call;
 
-### ThingsBoard PE
+### IoT Hub PE
 
 Everything from [TB CE v3.2.2](https://github.com/thingsboard/thingsboard/releases/tag/v3.2.2) with the following improvements.
 
@@ -2456,7 +2456,7 @@ Bug Fixes:
 
 ## v3.2.1 (January 26, 2021)
 
-### ThingsBoard CE
+### IoT Hub CE
 
 Minor release with the following improvements and bug fixes:
 
@@ -2513,7 +2513,7 @@ Minor release with the following improvements and bug fixes:
 * Fixed cycle API usage state update;
 * Fixed NPE - skip usage state messages for deleted tenants;
 
-### ThingsBoard PE
+### IoT Hub PE
 
 Everything from [TB CE v3.2.1](https://github.com/thingsboard/thingsboard/releases/tag/v3.2.1) with the following improvements.
 
@@ -2536,7 +2536,7 @@ Bug Fixes:
 
 ## v2.5.6 (January 26, 2021)
 
-### ThingsBoard CE
+### IoT Hub CE
 
 **Improvements**
 
@@ -2548,7 +2548,7 @@ Bug Fixes:
 * MQTT transport: fix handling of cleanSession flag;
 * Kafka queue: removed ServiceId from kafka consumer groupId;
 
-### ThingsBoard PE
+### IoT Hub PE
 
 Everything from [TB CE v2.5.6](https://github.com/thingsboard/thingsboard/releases/tag/v2.5.6).
 
@@ -2562,7 +2562,7 @@ Bug fixes:
 
 ## v3.2 (December 1, 2020)
 
-### ThingsBoard CE
+### IoT Hub CE
 
 The goal of this release is to simplify provisioning and connecting the devices and configuration of the alarms. 
 We have also added features to track tenant API usage.  
@@ -2592,7 +2592,7 @@ We have also added features to track tenant API usage.
 
  * Cover all markers to fit bounds by default even when fit bounds marker is disabled in the map widget;
 
-### ThingsBoard PE
+### IoT Hub PE
 
 Everything from [TB CE v3.2](https://github.com/thingsboard/thingsboard/releases/tag/v3.2) with the following improvements.
 
@@ -2611,7 +2611,7 @@ Bug Fixes:
 
 ## v2.5.5 (December 1, 2020)
 
-### ThingsBoard CE
+### IoT Hub CE
 
 **Improvements**
 
@@ -2632,7 +2632,7 @@ Bug Fixes:
  * Fixed inactivitiy timeout for gw sessions;
  * Fixed knob control widget;
 
-### ThingsBoard PE
+### IoT Hub PE
 
 Everything from [TB CE v2.5.5](https://github.com/thingsboard/thingsboard/releases/tag/v2.5.5).
 
@@ -2652,7 +2652,7 @@ Bug fixes:
 
 ## v3.1.1 (August 28, 2020)
 
-### ThingsBoard CE
+### IoT Hub CE
 
 Minor bug fix release:
 
@@ -2673,7 +2673,7 @@ Minor bug fix release:
  * UI: Fixed clear state params for dashboardId change;
  * Various fixed of filtering queues;
 
-### ThingsBoard PE
+### IoT Hub PE
 
 Everything from [TB CE v3.1.1](https://github.com/thingsboard/thingsboard/releases/tag/v3.1.1) with the following improvements.
 
@@ -2695,7 +2695,7 @@ Bug Fixes:
 
 ## v2.5.4 (August 28, 2020)
 
-### ThingsBoard CE
+### IoT Hub CE
 
 **Improvements**
 
@@ -2706,7 +2706,7 @@ Bug Fixes:
 
  * Fixed SQL scripts for Unit tests
 
-### ThingsBoard PE
+### IoT Hub PE
 
 Everything from [TB CE v2.5.4](https://github.com/thingsboard/thingsboard/releases/tag/v2.5.4).
 
@@ -2722,7 +2722,7 @@ Bug fixes:
 
 ## v3.1 (August 12, 2020)
 
-### ThingsBoard CE
+### IoT Hub CE
 
 Minor release with the following improvements and bug fixes.
 
@@ -2762,7 +2762,7 @@ Minor release with the following improvements and bug fixes.
    * Fix boolean input widgets;
    * Fix web camera input widget;
 
-### ThingsBoard PE
+### IoT Hub PE
 
 Everything from [TB CE v3.1](https://github.com/thingsboard/thingsboard/releases/tag/v3.1) with the following improvements.
 
@@ -2774,7 +2774,7 @@ Main features:
 
 ## v2.5.3 (August 12, 2020)
 
-### ThingsBoard CE
+### IoT Hub CE
 
 **Improvements**
 
@@ -2788,13 +2788,13 @@ Main features:
 
  * refactored DataValidator email pattern
 
-### ThingsBoard PE
+### IoT Hub PE
 
 Everything from [TB CE v2.5.3](https://github.com/thingsboard/thingsboard/releases/tag/v2.5.3).
 
 ## v3.0.1 (June 9, 2020)
 
-### ThingsBoard CE
+### IoT Hub CE
 
 Minor release with everything from 3.0/2.5.2 plus the following improvements.
 
@@ -2814,7 +2814,7 @@ Minor release with everything from 3.0/2.5.2 plus the following improvements.
  * UI: Fix state chart subscription;
  * Set correct cassandra datacenter;
 
-### ThingsBoard PE
+### IoT Hub PE
 
 Everything from [TB CE v3.0.1](https://github.com/thingsboard/thingsboard/releases/tag/v3.0.1) with the following improvements.
 
@@ -2824,7 +2824,7 @@ Everything from [TB CE v3.0.1](https://github.com/thingsboard/thingsboard/releas
 
 ## v2.5.2 (June 9, 2020)
 
-### ThingsBoard CE
+### IoT Hub CE
 
 Minor bug-fix release with few improvements.
 
@@ -2843,7 +2843,7 @@ Minor bug-fix release with few improvements.
  * Message is pushed to correct queue in case of duplication;
  * Never use Fork-Join pool with parallelism set to 1.
 
-### ThingsBoard PE
+### IoT Hub PE
 
 Everything from [TB CE v2.5.2](https://github.com/thingsboard/thingsboard/releases/tag/v2.5.2) with the following improvements.
 
@@ -2853,7 +2853,7 @@ Everything from [TB CE v2.5.2](https://github.com/thingsboard/thingsboard/releas
 
 ## v3.0 (June 1, 2020)
 
-### ThingsBoard CE
+### IoT Hub CE
 
 Major release with everything from 2.5 plus the following improvements.
 
@@ -2872,7 +2872,7 @@ Major release with everything from 2.5 plus the following improvements.
  * Replaced Velocity with Freemarker.
 
 
-### ThingsBoard PE
+### IoT Hub PE
 
 Everything from [TB CE v3.0](https://github.com/thingsboard/thingsboard/releases/tag/v3.0) with the following improvements.
 
@@ -2887,7 +2887,7 @@ Everything from [TB CE v3.0](https://github.com/thingsboard/thingsboard/releases
 
 ## v2.5.1 (June 1, 2020)
 
-### ThingsBoard CE
+### IoT Hub CE
 
 Minor bug-fix release with few improvements.
 
@@ -2912,7 +2912,7 @@ Minor bug-fix release with few improvements.
  * UI: Fixed data displaying in mobile browser for digital gauge widget;
  * Fixed 2.4.3 -> 2.5 upgrade script for AWS RDS; 
 
-### ThingsBoard PE
+### IoT Hub PE
 
 Everything from [TB CE v2.5.1](https://github.com/thingsboard/thingsboard/releases/tag/v2.5.1) with the following improvements.
 
@@ -2927,7 +2927,7 @@ Everything from [TB CE v2.5.1](https://github.com/thingsboard/thingsboard/releas
 
 ## v2.5 (May 12, 2020)
 
-### ThingsBoard CE
+### IoT Hub CE
 
 Major release with the following improvements.
 
@@ -2942,7 +2942,7 @@ Major release with the following improvements.
     * Ability to isolate tenant processing to separate rule engine instance(s);
     * Improved statistics and error tracing;
     * Automatic reset of blacklisted functions;
-    * Replaced gRPC with queues for communication between ThingsBoard components;
+    * Replaced gRPC with queues for communication between IoT Hub components;
 * OAuth support;
 * JSON support for telemetry and attributes;
 * Improvements to timeseries DAO for SQL:
@@ -2995,7 +2995,7 @@ Major release with the following improvements.
 * UI: Fixed dialogs in Safari;
 
 
-### ThingsBoard PE
+### IoT Hub PE
 
 Everything from [TB CE v2.5](https://github.com/thingsboard/thingsboard/releases/tag/v2.5) with the following improvements.
 
@@ -3019,7 +3019,7 @@ Everything from [TB CE v2.5](https://github.com/thingsboard/thingsboard/releases
 
 ## v2.4.3 (January 8, 2020)
 
-### ThingsBoard CE
+### IoT Hub CE
 
 Minor release with the following improvements.
 
@@ -3051,7 +3051,7 @@ Bug fixes:
 * UI: Fixed entity name resolution;
 * UI: Fixed disable timewindow logic;
 
-### ThingsBoard PE
+### IoT Hub PE
 
 Everything from [TB CE v2.4.3](https://github.com/thingsboard/thingsboard/releases/tag/v2.4.3) with the following improvements.
 
@@ -3073,7 +3073,7 @@ Bug fixes:
 
 ## v2.4.2 (December 10, 2019)
 
-### ThingsBoard CE
+### IoT Hub CE
 
 Minor release with the following improvements.
 
@@ -3125,7 +3125,7 @@ Bug fixes:
 * UI: Fixed disable on condition and errors displaying;
 * UI: Fix delete timeseries data;
 
-### ThingsBoard PE
+### IoT Hub PE
 
 Everything from [TB CE v2.4.2](https://github.com/thingsboard/thingsboard/releases/tag/v2.4.2) with the following improvements.
 
@@ -3152,7 +3152,7 @@ Bug fixes:
 
 ## v2.4.1 (September 13, 2019)
 
-### ThingsBoard CE
+### IoT Hub CE
 
 Minor release with the following improvements.
 
@@ -3185,7 +3185,7 @@ Bug fixes:
 * Fixed violations on attributes/event primary and unique keys constraints;
 * UI: Fix fullscreen mode for ace editors inside react schema form.
 
-### ThingsBoard PE
+### IoT Hub PE
 
 Everything from [TB CE v2.4.1](https://github.com/thingsboard/thingsboard/releases/tag/v2.4.1) with the following improvements.
 
@@ -3201,7 +3201,7 @@ Additional features:
 
 ## v2.4 (July 10, 2019)
 
-### ThingsBoard CE
+### IoT Hub CE
 
 Minor release with the following improvements.
 
@@ -3249,7 +3249,7 @@ Bug fixes:
 - UI: fix Chinese translation problem;
 - UI: fix Entities Table widget for wrong dataKey value when same key is used on multiple columns with different processing function;
 
-### ThingsBoard PE
+### IoT Hub PE
 
 Everything from TB CE v2.4.0 with the following improvements.
 
@@ -3275,14 +3275,14 @@ Bug fixes:
 
 ## v2.3.1 (April 3, 2019)
 
-### ThingsBoard CE
+### IoT Hub CE
 
 Minor release with the following improvements.
 
 Main features:
 
 - Migrate to Spring Boot 2.1.0 and Spring 5.1.2;
-- [Kubernetes scripts](https://github.com/thingsboard/thingsboard/blob/v2.3.1/k8s) for ThingsBoard Microservices;
+- [Kubernetes scripts](https://github.com/thingsboard/thingsboard/blob/v2.3.1/k8s) for IoT Hub Microservices;
 - UI: New Trip Animation Widget;
 - UI: New Date Range Navigator Widget;
 - UI: New [Entities Hierarchy Widget](https://www.youtube.com/watch?v=bc07ys-azqw);
@@ -3318,7 +3318,7 @@ Bug fixes:
 - UI: fixed individual tooltip content in Flot widget;
 - added prefix to device credentials cache keys.
 
-### ThingsBoard PE
+### IoT Hub PE
 
 Everything from TB CE v2.3.1 with the following improvements.
 
@@ -3345,7 +3345,7 @@ Bug fixes:
 
 ## v2.3 (February 7, 2019)
 
-### ThingsBoard CE
+### IoT Hub CE
 
 Minor release with the following improvements.
 
@@ -3392,7 +3392,7 @@ Bug fixes:
 - UI: Flot timeseries widgets: fixed issue with tooltip vertical position;
 - UI: Fixed [issue #1427](https://github.com/thingsboard/thingsboard/issues/1427): Boolean input widgets were saving wrong value; 
 
-### ThingsBoard PE
+### IoT Hub PE
 
 Everything from TB CE v2.3+ the following improvements.
 
@@ -3416,7 +3416,7 @@ Bug fixes:
 
 ## v2.2 (November 30, 2018)
 
-### ThingsBoard CE
+### IoT Hub CE
 
 Minor release with the following improvements.
 
@@ -3424,16 +3424,16 @@ Main features:
 
  - Introduced support of a **microservices** architecture and deployment options. 
    See [microservices](/docs/reference/msa/) architecture page and [deployment](https://github.com/thingsboard/thingsboard/blob/master/docker/README.md) tips for more details;
- - Improved **docker images** to be able to launch ThingsBoard with a single command. 
+ - Improved **docker images** to be able to launch IoT Hub with a single command. 
    See [Linux or MacOS](/docs/user-guide/install/docker/) and [Windows](/docs/user-guide/install/docker-windows/) installation pages; 
  - Added [**Entity Views**](/docs/user-guide/entity-views/) feature to allow to 
  limit the degree of exposure of the Device or Asset telemetry and attributes to the Customers;
- - Added ThingsBoard [**JavaScript Executor**](/docs/reference/msa/#javascript-executor-microservices) microservice to isolate execution of rule engine scripts from the main rule engine components and flow;
- - Added ThingsBoard [**Web UI**](/docs/reference/msa/#web-ui-microservices) microservice to isolate static content hosting from the REST and Websocket APIs;
- - Added ThingsBoard [**MQTT, HTTP and CoAP**](/docs/reference/msa/#transport-microservices) transport microservices to isolate communication with devices from the main ThingsBoard services;
- - Added support of [Kafka](/docs/reference/msa/#kafka) to store device telemetry before it is processed with ThingsBoard Rule Engine;
+ - Added IoT Hub [**JavaScript Executor**](/docs/reference/msa/#javascript-executor-microservices) microservice to isolate execution of rule engine scripts from the main rule engine components and flow;
+ - Added IoT Hub [**Web UI**](/docs/reference/msa/#web-ui-microservices) microservice to isolate static content hosting from the REST and Websocket APIs;
+ - Added IoT Hub [**MQTT, HTTP and CoAP**](/docs/reference/msa/#transport-microservices) transport microservices to isolate communication with devices from the main IoT Hub services;
+ - Added support of [Kafka](/docs/reference/msa/#kafka) to store device telemetry before it is processed with IoT Hub Rule Engine;
  - Introduced [Rate Limits](/docs/user-guide/api-limits/) for REST, Websocket and Device APIsl
- - Framework for [**black-box testing**](https://github.com/thingsboard/thingsboard/tree/master/msa/black-box-tests) of ThingsBoard by automatically launching ThingsBoard cluster using docker-compose and running API tests;
+ - Framework for [**black-box testing**](https://github.com/thingsboard/thingsboard/tree/master/msa/black-box-tests) of IoT Hub by automatically launching IoT Hub cluster using docker-compose and running API tests;
  - Added input widgets bundle. 
 
 Additional features:
@@ -3481,7 +3481,7 @@ Bug fixes:
  - UI. Hide fixed table header in entity attributes table when in widget selection mode.
  - UI. Fix deprecated maps settings. 
 
-### ThingsBoard PE
+### IoT Hub PE
 
 Everything from TB CE v2.2+ the following improvements.
 

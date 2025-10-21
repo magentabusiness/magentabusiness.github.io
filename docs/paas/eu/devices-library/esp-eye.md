@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect ESP-EYE to ThingsBoard?
+title: How to connect ESP-EYE to IoT Hub?
 category: Microcontrollers
 chip: ESP32
 connectivity: HTTP, MQTT, WIFI, Bluetooth

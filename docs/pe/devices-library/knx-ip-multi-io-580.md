@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect KNX IP Multi IO 580 to ThingsBoard?
+title: How to connect KNX IP Multi IO 580 to IoT Hub?
 category: Other devices
 connectivity: KNX
 vendor: Weinzierl

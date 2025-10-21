@@ -2,8 +2,8 @@
 layout: docwithnav-trendz
 assignees:
 - vparomskiy
-title: Installing ThingsBoard Trendz Analytics on Kubernetes
-description: Installing ThingsBoard Trendz Analytics on Kubernetes
+title: Installing IoT Hub Trendz Analytics on Kubernetes
+description: Installing IoT Hub Trendz Analytics on Kubernetes
 
 ---
 * TOC
@@ -74,9 +74,9 @@ nano trendz-app-db-config.yml
 
 ```
 
-## Step 5. Connect Trendz to ThingsBoard service
+## Step 5. Connect Trendz to IoT Hub service
 
-We must set an url for connecting to ThingsBoard Rest API (for example https://my-tb.com). Note that ThingsBoard IP address or domain name should be resolvable from Trendz docker container
+We must set an url for connecting to IoT Hub Rest API (for example https://my-tb.com). Note that IoT Hub IP address or domain name should be resolvable from Trendz docker container
 
 ```bash
 nano trendz-app-deployment.yml
@@ -129,7 +129,7 @@ The last thing is to set up a load balancer to route requests to the Trendz inst
 Different environments have different requirements for these configurations, so you need to adjust these settings to your environment.
 
 ## Post-installation steps
-It is essential to follow these [instructions](/docs/trendz/post-installation-steps) to fully use all features, such as saving telemetry to ThingsBoard and adding Trendz views to dashboards.
+It is essential to follow these [instructions](/docs/trendz/post-installation-steps) to fully use all features, such as saving telemetry to IoT Hub and adding Trendz views to dashboards.
 
 ## Next steps
 

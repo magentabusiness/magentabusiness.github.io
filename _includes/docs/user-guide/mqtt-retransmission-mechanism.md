@@ -1,4 +1,4 @@
-ThingsBoard's internal MQTT client includes a retransmission mechanism designed to improve reliability for message types that require acknowledgment.  
+IoT Hub's internal MQTT client includes a retransmission mechanism designed to improve reliability for message types that require acknowledgment.  
 This mechanism applies specifically to the following MQTT message types:
 - **PUBLISH** (only for QoS 1 or 2)
 - **SUBSCRIBE**

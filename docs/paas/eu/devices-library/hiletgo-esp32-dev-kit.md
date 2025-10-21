@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect HiLetgo ESP32 Development Board to ThingsBoard?
+title: How to connect HiLetgo ESP32 Development Board to IoT Hub?
 category: Microcontrollers
 chip: ESP32
 connectivity: HTTP, MQTT, WIFI, Bluetooth

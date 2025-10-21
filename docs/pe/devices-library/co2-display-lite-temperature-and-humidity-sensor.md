@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect CO2 Display lite Temperature and humidity sensor to ThingsBoard?
+title: How to connect CO2 Display lite Temperature and humidity sensor to IoT Hub?
 category: Other devices
 connectivity: LoRaWAN®
 vendor: MClimate

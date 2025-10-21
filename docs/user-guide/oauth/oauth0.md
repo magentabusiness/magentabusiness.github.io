@@ -158,7 +158,7 @@ security:
 After all the changes being applied, please, make sure to have the IoT Hub restart.
 The IoT Hub restart can be invoked with the next command on the Linux Server: 
 ```bash
-$ sudo service thingsboard restart
+$ sudo service iot hub restart
 ```  
 After that, proceed to the User Interface of yours, to make sure there are no troubles, press the **Login With OAuth0**.
 

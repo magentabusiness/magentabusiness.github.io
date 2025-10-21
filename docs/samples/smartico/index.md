@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
 title: Smartico overview
-description: ThingsBoard IoT Platform hardware samples for Smartico devices.
+description: IoT Hub IoT Platform hardware samples for Smartico devices.
 
 ---
 

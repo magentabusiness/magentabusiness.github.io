@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect Hikey 970 Development Board to ThingsBoard?
+title: How to connect Hikey 970 Development Board to IoT Hub?
 category: Single-board computers
 chip: Kirin 970
 connectivity: Ethernet, WIFI, Bluetooth

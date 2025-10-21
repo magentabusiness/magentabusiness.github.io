@@ -4,7 +4,7 @@
 {:toc}
 
 [Loriot](https://loriot.io/){:target="_blank"} is LoRaWAN network designed for connecting your devices using LoRaWAN stack. After integrating LORIOT with the
-IoT Hub, you can connect, communicate, process and visualize data from devices in the ThingsBoard IoT platform.
+IoT Hub, you can connect, communicate, process and visualize data from devices in the IoT Hub IoT platform.
 
 ## Register an account on Loriot
 
@@ -21,15 +21,12 @@ Here&#39;s how to get started with Loriot:
 
 ## Create Loriot integration
 
-You will need to have access to ThingsBoard Professional Edition. The easiest way is to use [ThingsBoard Cloud](https://thingsboard.io/installations/choose-region/){:target="_blank"} server.
-The alternative option is to install ThingsBoard using [installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
-
 <br>
-Let's move on to setting up the integration between the ThingsBoard platform and Loriot.
+Let's move on to setting up the integration between the IoT Hub platform and Loriot.
 
 **1. Basic settings**.
 
-- Sign in to your ThingsBoard account.
+- Sign in to your IoT Hub account.
 - Navigate to the "**Integrations**" page under the "**Integrations center**" section. Click "**plus**" button to add a new integration.
 - From the list, select the integration type "**Loriot**".
 - If you'd like to monitor events and troubleshoot, enable [debug mode](/docs/user-guide/integrations/#debug-mode){:target="_blank"}.
@@ -44,11 +41,11 @@ Let's move on to setting up the integration between the ThingsBoard platform and
 
 **2. Uplink data converter**. 
 
-Uplink is necessary in order to convert the incoming data from the device into the required format for displaying them in ThingsBoard.
+Uplink is necessary in order to convert the incoming data from the device into the required format for displaying them in IoT Hub.
 
-Starting from **ThingsBoard 4.0**, we have simplified the process of writing converters for Loriot integration. You can now easily choose where the message fields from the integration should go (attributes or telemetry) without manually defining this in the decoder function.
+Starting from **IoT Hub 4.0**, we have simplified the process of writing converters for Loriot integration. You can now easily choose where the message fields from the integration should go (attributes or telemetry) without manually defining this in the decoder function.
 
-> **Note**: Converters created before the release of ThingsBoard 4.0 will still be available and will continue to function properly.
+> **Note**: Converters created before the release of IoT Hub 4.0 will still be available and will continue to function properly.
 
 Let's review sample uplink message from Loriot:
 
@@ -67,7 +64,7 @@ Let's review sample uplink message from Loriot:
      "snr"  : 1.2
  }
 ```
-As you can see the unique device id arrives in the "**EUI**" field. We will use it as a device name in ThingsBoard. 
+As you can see the unique device id arrives in the "**EUI**" field. We will use it as a device name in IoT Hub. 
 
 Device data is encoded in the "**data**" field. The encoded data here is:
 
@@ -113,9 +110,9 @@ At the step of adding a downlink converter, you can also select a previously cre
 
 **4. Connection**.
 
-In order for data to be transferred from Loriot to ThingsBoard, you need to configure an **Output** for your Loriot application. You can do this manually (recommended) or ThingsBoard Integration can do this for you (you will need to specify login and password from your Loriot account for us to be able to automatically provision the output).
+In order for data to be transferred from Loriot to IoT Hub, you need to configure an **Output** for your Loriot application. You can do this manually (recommended) or IoT Hub Integration can do this for you (you will need to specify login and password from your Loriot account for us to be able to automatically provision the output).
 
-We can create the **Output** by either specifying the "**HTTP endpoint URL**" of the integration directly in the Loriot account or by enabling the "**Create Loriot Application output**" option in ThingsBoard and providing your Loriot credentials there.
+We can create the **Output** by either specifying the "**HTTP endpoint URL**" of the integration directly in the Loriot account or by enabling the "**Create Loriot Application output**" option in IoT Hub and providing your Loriot credentials there.
 
 {% capture loriotAuthorizationTypes %}
 Use Loriot account<br><small>Recommended</small>%,%loriot-account%,%templates/integration/loriot/loriot-account-authorization-type.md%br%
@@ -166,7 +163,7 @@ curl -v -X POST -d "{\"EUI\":\"BE7A000000000552\",\"data\":\"2A3F\",\"port\":1,\
 ```
 {: .copy-code}
 
-To find the "**HTTP endpoint URL**", go to the "Integrations" page in ThingsBoard and click on the Loriot integration to open its details. There, you will find the "<b>HTTP endpoint URL</b>".
+To find the "**HTTP endpoint URL**", go to the "Integrations" page in IoT Hub and click on the Loriot integration to open its details. There, you will find the "<b>HTTP endpoint URL</b>".
 
 {% include images-gallery.html imageCollection="endpoint-url" %}
 

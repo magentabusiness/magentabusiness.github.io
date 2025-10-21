@@ -109,8 +109,8 @@ Additionally, they were interested in reducing their environmental impact by red
 ### Prerequisites
 We are focusing and data analysis and visualization in this guide. So we will omit details about sensors installation and configuration. Here is a short description of the system that we will use in this guide:
 
-* Occupancy sensors already installed in each area of the hotel and connected to ThingsBoard via LoRaWAN integration. 
-* There are 3 asset types in ThingsBoard - building, floor, area. Building has relations to multiple floors, floor has relations to multiple areas and each area has related occupancy sensor. 
+* Occupancy sensors already installed in each area of the hotel and connected to IoT Hub via LoRaWAN integration. 
+* There are 3 asset types in IoT Hub - building, floor, area. Building has relations to multiple floors, floor has relations to multiple areas and each area has related occupancy sensor. 
 * Sensor reports how many people are currently in the area.
 * Occupancy sensor payload - `{"ts": 1651419204000, peopleCnt": 5}`
 * Each area has an attribute with maximum capacity. We will use this attribute to compute occupancy rate. Initial values are set during system provisioning.
@@ -207,17 +207,17 @@ Almost the same steps should be done for a bar chart with top-5 underutilized ar
 
 {% include images-gallery.html imageCollection="building-occupancy-top-crowded-areas" %}
 
-### Step 5: Create occupancy analysis dashboard in ThingsBoard
+### Step 5: Create occupancy analysis dashboard in IoT Hub
 All Trendz analytic charts are ready and we can create user dashboard in ThingsBoard. Note that user can have access to multiple hotels and we want to create a dashboard that will work for all of them. User should have an ability to select a hotel, floor and area.
 At first, we will add all Trendz views on the dashboard: 
 
-* In ThingsBoard create dashboard with name **Occupancy analysis**
+* In IoT Hub create dashboard with name **Occupancy analysis**
 * In Trendz: for each widget that we created in previous steps:
-  * Click on `Share to ThingsBoard` button and copy `Add on Dashboard`.
+  * Click on `Share to IoT Hub` button and copy `Add on Dashboard`.
   * Select **Occupancy analysis** dashboard.
   * Enable **Create alias** checkbox.
   * Select **Area name** as a filter.
-* Return to ThingsBoard **Occupancy analysis** dashboard and tune dashboard layout.
+* Return to IoT Hub **Occupancy analysis** dashboard and tune dashboard layout.
 
 Then we would create dashboard aliases that will be used to filter data in the dashboard.
 

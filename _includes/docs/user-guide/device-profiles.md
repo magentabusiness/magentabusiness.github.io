@@ -53,8 +53,8 @@ Separation of the queues also allows you to customize different [submit](/docs/{
 
 The platform supports two transport types: Default and MQTT.
 
-The current version of ThingsBoard platform supports the following transport types: 
-- [Default](#default-transport-type){:target="_blank"} - standard HTTP transport suitable for basic device interactions with ThingsBoard. Easy to configure, but less efficient for a large number of devices or frequent updates.
+The current version of IoT Hub platform supports the following transport types: 
+- [Default](#default-transport-type){:target="_blank"} - standard HTTP transport suitable for basic device interactions with IoT Hub. Easy to configure, but less efficient for a large number of devices or frequent updates.
 - [MQTT](#mqtt-transport-type){:target="_blank"} -  lightweight, bidirectional protocol specifically optimized for IoT devices, providing efficient telemetry delivery, high throughput, and resource efficiency.
 - [CoAP](#coap-transport-type){:target="_blank"} - lightweight IoT protocol ideal for resource-constrained devices operating in low-bandwidth networks.
 - [LWM2M](/docs/{{docsPrefix}}reference/lwm2m-api/#step-2-define-lwm2m-device-profile){:target="_blank"} - standardized IoT protocol designed for efficient management of resource-constrained devices, enabling centralized configuration management, firmware updates, and device monitoring.
@@ -65,7 +65,7 @@ The current version of ThingsBoard platform supports the following transport typ
 #### MQTT transport type
 
 The **Default** transport type is designed to ensure compatibility with earlier versions of the platform.
-Devices using this type can connect through ThingsBoard&#39;s standard APIs: [MQTT](/docs/{{docsPrefix}}reference/mqtt-api/){:target="_blank"}, [HTTP](/docs/{{docsPrefix}}reference/http-api/){:target="_blank"}, and [CoAP](/docs/{{docsPrefix}}reference/coap-api/){:target="_blank"}.
+Devices using this type can connect through IoT Hub&#39;s standard APIs: [MQTT](/docs/{{docsPrefix}}reference/mqtt-api/){:target="_blank"}, [HTTP](/docs/{{docsPrefix}}reference/http-api/){:target="_blank"}, and [CoAP](/docs/{{docsPrefix}}reference/coap-api/){:target="_blank"}.
 It requires no special configuration.
 
 {% include images-gallery.html imageCollection="default-transport-type" %}
@@ -73,7 +73,7 @@ It requires no special configuration.
 ### MQTT transport type
 
 The **MQTT** transport type allows for flexible communication setup with devices using the MQTT protocol.
-You can define custom **MQTT topic filters** for sending telemetry and updating attributes by using ThingsBoard&#39;s [telemetry upload API](/docs/{{docsPrefix}}reference/mqtt-api/#telemetry-upload-api){:target="_blank"} and [attribute update API](/docs/{{docsPrefix}}reference/mqtt-api/#publish-attribute-update-to-the-server){:target="_blank"}.
+You can define custom **MQTT topic filters** for sending telemetry and updating attributes by using IoT Hub&#39;s [telemetry upload API](/docs/{{docsPrefix}}reference/mqtt-api/#telemetry-upload-api){:target="_blank"} and [attribute update API](/docs/{{docsPrefix}}reference/mqtt-api/#publish-attribute-update-to-the-server){:target="_blank"}.
 
 **The MQTT transport type has the following settings:**
 
@@ -152,15 +152,15 @@ mosquitto_pub -h {{mqttHostName}} -t v1/devices/me/attributes -i "c1" -u "t1" -P
 
 <br><b><font size="4">MQTT device payload</font></b>
 
-- **JSON**. By default, ThingsBoard expects devices to send data in JSON format. However, it is also possible to transmit data using [Protocol Buffers](https://developers.google.com/protocol-buffers) (Protobuf).
+- **JSON**. By default, IoT Hub expects devices to send data in JSON format. However, it is also possible to transmit data using [Protocol Buffers](https://developers.google.com/protocol-buffers) (Protobuf).
 - **Protocol Buffers (Protobuf)** is a language- and a platform-neutral way of serializing structured data. It is convenient to minimize the size of transmitted data.   
-The current version of the ThingsBoard platform supports customizable proto schemas for [telemetry upload](/docs/{{docsPrefix}}reference/mqtt-api/#telemetry-upload-api) and [attribute upload](/docs/{{docsPrefix}}reference/mqtt-api/#publish-attribute-update-to-the-server) and implemented the ability to define a schema for downlink messages (RPC calls). 
+The current version of the IoT Hub platform supports customizable proto schemas for [telemetry upload](/docs/{{docsPrefix}}reference/mqtt-api/#telemetry-upload-api) and [attribute upload](/docs/{{docsPrefix}}reference/mqtt-api/#publish-attribute-update-to-the-server) and implemented the ability to define a schema for downlink messages (RPC calls). 
 > IoT Hub parses the protobuf structures dynamically, that is why, it does not support some protobuf features like OneOf, extensions and maps, yet.
 
 {% include images-gallery.html imageCollection="mqtt-device-payload" %}
 
 - **Compatibility with other payload formats** option.   
-When compatibility mode is enabled, ThingsBoard will default to using a Protobuf payload format. If parsing the Protobuf payload fails, ThingsBoard will automatically attempt to use the JSON payload format. This feature is particularly useful for ensuring backward compatibility during firmware updates. For example, an initial firmware release might use JSON, while a new release switches to Protobuf. During firmware updates across multiple devices, supporting both formats simultaneously is essential.   
+When compatibility mode is enabled, IoT Hub will default to using a Protobuf payload format. If parsing the Protobuf payload fails, IoT Hub will automatically attempt to use the JSON payload format. This feature is particularly useful for ensuring backward compatibility during firmware updates. For example, an initial firmware release might use JSON, while a new release switches to Protobuf. During firmware updates across multiple devices, supporting both formats simultaneously is essential.   
 > It is important to note that enabling compatibility mode can introduce slight performance degradation. Therefore, it is recommended to disable compatibility mode once all devices have been successfully updated.
 
 {% include images-gallery.html imageCollection="compatibility-with-other-payload-formats" %}
@@ -175,13 +175,13 @@ When compatibility mode is enabled, ThingsBoard will default to using a Protobuf
 You can also configure devices to transmit data using [Protocol Buffers](https://developers.google.com/protocol-buffers){:target="_blank"} (Protobuf) by changing the **CoAP device payload** setting to **Protobuf**.
 
     - **Protocol Buffers (Protobuf)** is a language- and platform-neutral method of serializing structured data, designed primarily to reduce the size of transmitted data.   
-  The current version of the ThingsBoard platform supports customizable proto schemas for [telemetry upload](/docs/{{docsPrefix}}reference/coap-api/#telemetry-upload-api){:target="_blank"} and [attribute upload](/docs/{{docsPrefix}}reference/coap-api/#publish-attribute-update-to-the-server){:target="_blank"} and implemented the ability to define a schema for downlink messages (RPC calls).
-  ThingsBoard parses the protobuf structures dynamically, that is why, it does not support some protobuf features like OneOf, extensions and maps, yet.
+  The current version of the IoT Hub platform supports customizable proto schemas for [telemetry upload](/docs/{{docsPrefix}}reference/coap-api/#telemetry-upload-api){:target="_blank"} and [attribute upload](/docs/{{docsPrefix}}reference/coap-api/#publish-attribute-update-to-the-server){:target="_blank"} and implemented the ability to define a schema for downlink messages (RPC calls).
+  IoT Hub parses the protobuf structures dynamically, that is why, it does not support some protobuf features like OneOf, extensions and maps, yet.
 
 {% include images-gallery.html imageCollection="coap-default" %}
 
 - **Efento NB-IoT** devices are wireless sensors that use NB-IoT technology for energy-efficient transmission of telemetry data (e.g., temperature, humidity, pressure, open/close, leakage, and more). 
-You can integrate them with ThingsBoard using the built-in CoAP transport, which receives messages from the devices, decodes them using Protobuf, and stores telemetry data on the platform.
+You can integrate them with IoT Hub using the built-in CoAP transport, which receives messages from the devices, decodes them using Protobuf, and stores telemetry data on the platform.
 This data becomes instantly available for viewing, charting, dashboarding, alarm setup, and automation.
 > Requires Efento devices with FW version: 06.02+. 
 
@@ -203,7 +203,7 @@ The platform supports the following power-saving mechanisms for optimized device
 To configure an **LwM2M device profile**, specify the following parameters:
 - **Define the objects** you want to observe or interact with
 - **Set the observe strategy** to determine how the platform monitors object changes
-- **Configure how ThingsBoard processes LwM2M object data**, including telemetry, attributes, and key parameters
+- **Configure how IoT Hub processes LwM2M object data**, including telemetry, attributes, and key parameters
 
 Learn more about configuring the LwM2M transport at [this link](/docs/{{docsPrefix}}reference/lwm2m-api/){:target="_blank"}.
 
@@ -216,7 +216,7 @@ Learn more about configuring the LwM2M transport at [this link](/docs/{{docsPref
 To configure an **SNMP device profile**, specify the following parameters:
 - **Request timeout** — how long (in milliseconds) the system waits before retrying or marking the request as failed
 - **Retry count** — how many times the system will attempt the request before giving up
-- **Communication configuration** — define how the device communicates with ThingsBoard over SNMP
+- **Communication configuration** — define how the device communicates with IoT Hub over SNMP
 
 Learn more about configuring the SNMP transport at [this link](/docs/{{docsPrefix}}reference/snmp-api/){:target="_blank"}.
 
@@ -224,7 +224,7 @@ Learn more about configuring the SNMP transport at [this link](/docs/{{docsPrefi
 
 ## Alarm rules
 
-**Alarm rules** in ThingsBoard define the conditions under which alarms are created, updated, or cleared. 
+**Alarm rules** in IoT Hub define the conditions under which alarms are created, updated, or cleared. 
 They are a key component of automation that enables efficient real-time monitoring of device states and data.
 
 Alarm rules are configured in device profiles, allowing centralized control over alarm logic for entire groups of similar device types.
@@ -233,7 +233,7 @@ Alarm rules are configured in device profiles, allowing centralized control over
 - **Alarm type** — a unique identifier for the alarm within the device profile.
 - **Advanced settings** — optional configuration for alarm propagation to related entities such as assets, customers, tenants, or other entities.
 - **Alarm creation condition** — define when an alarm is created or updated. This section includes:
-  - **Severity** — the level of criticality assigned to the alarm. ThingsBoard evaluates alarm conditions in descending order of severity.
+  - **Severity** — the level of criticality assigned to the alarm. IoT Hub evaluates alarm conditions in descending order of severity.
   For example, if the condition with Critical severity is true, the alarm is raised as Critical, and lower-severity conditions (e.g., Major, Minor, or Warning) are not evaluated.
   Each severity level must be unique within a single alarm rule.
   - **Alarm rule condition**:
@@ -250,8 +250,8 @@ Alarm rules are configured in device profiles, allowing centralized control over
   - **Additional info** — an optional alarm details template that supports dynamic substitution of telemetry or attribute values using **${attributeName}** syntax.
 - **Alarm clear condition** — specifies the criteria for clearing or deactivating the alarm.
 
-> By default, ThingsBoard sends notifications about alarm creation or updates to the ThingsBoard [Notification center](/docs/user-guide/notifications/){:target="_blank"}.   
-You can configure additional notification channels, including messages through the ThingsBoard mobile app, SMS, email, Slack, or Microsoft Teams. For detailed instructions on setting up these notification methods, please refer to the [ThingsBoard notifications documentation](/docs/user-guide/notifications/#alarm-1){:target="_blank"}.
+> By default, IoT Hub sends notifications about alarm creation or updates to the IoT Hub [Notification center](/docs/user-guide/notifications/){:target="_blank"}.   
+You can configure additional notification channels, including messages through the IoT Hub mobile app, SMS, email, Slack, or Microsoft Teams. For detailed instructions on setting up these notification methods, please refer to the [IoT Hub notifications documentation](/docs/user-guide/notifications/#alarm-1){:target="_blank"}.
 
 ### Alarm rule configurations
 
@@ -370,5 +370,5 @@ The technique mentioned above may be used to enable or disable rules or combine 
 
 ## Device provisioning
 
-Device provisioning allows a device to automatically register in ThingsBoard either during or after manufacturing. 
+Device provisioning allows a device to automatically register in IoT Hub either during or after manufacturing. 
 See separate documentation [page](/docs/{{docsPrefix}}user-guide/device-provisioning/){:target="_blank"} for more details.

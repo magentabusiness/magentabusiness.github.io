@@ -50,9 +50,9 @@ To do this please follow next steps:
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=copyLoriotApplicationId %}
 
-Now we can move to ThingsBoard to configure integration.
+Now we can move to IoT Hub to configure integration.
 
-### Create integration in ThingsBoard
+### Create integration in IoT Hub
 
 Next we will create an integration with Loriot inside the ThingsBoard.  
 
@@ -200,7 +200,7 @@ You can configure it manually:
 {% assign loriotTroubleshooting = '
     ===
         image: /images/devices-library/basic/integrations/loriot/loriot-troubleshootin-1-pe.png,
-        title: Go to edit mode ThingsBoard Loriot integration, switch off **"Create Loriot Application output"** slider and copy **"HTTP endpoint URL"**. Then, apply changes;
+        title: Go to edit mode IoT Hub Loriot integration, switch off **"Create Loriot Application output"** slider and copy **"HTTP endpoint URL"**. Then, apply changes;
     ===
         image: /images/devices-library/basic/integrations/loriot/loriot-troubleshootin-2-pe.png,
         title: Now, go to **eu2.loriot.io** than navigate to the **"Output"** page in left panel. Click on **"Add new output"** button;

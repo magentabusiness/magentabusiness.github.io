@@ -1,4 +1,4 @@
-Here you can find ThingsBoard Edge docker image: 
+Here you can find IoT Hub Edge docker image: 
 
 {% if docsPrefix == "pe/edge/" %}
 * [thingsboard/tb-edge-pe](https://hub.docker.com/r/thingsboard/tb-edge-pe){:target="_blank"}

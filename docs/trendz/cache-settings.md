@@ -34,7 +34,7 @@ value from cache instead of reloading data from ThingsBoard.
 For enabling this type of cache - open view settings, navigate to **Caching settings** and enable checkbox **Enable caching**.
 
 When cache is enabled - the system will store aggregated item field data in cache. It can be telemetry, state or calculated field.
-If field value is already in cache - system will reuse it. If it is not there yet, system will load data directly from ThingsBoard and save it in the cache.
+If field value is already in cache - system will reuse it. If it is not there yet, system will load data directly from IoT Hub and save it in the cache.
 
 This cache does not connected to specific visualization and can be reused in case when the same field used in multiple views. 
 
@@ -53,7 +53,7 @@ HOUR field in X axis.
 
 By default, the cache is initialized/updated only when the Build Report button is pressed. It may be critical when a heavy 
 report is generated on a daily\weekly basis and the user loads it for the first time. In this case, there would be no values 
-in cache yet, the system will load data directly from ThingsBoard and as a result - the user will wait few minutes while the report is ready.
+in cache yet, the system will load data directly from IoT Hub and as a result - the user will wait few minutes while the report is ready.
 
 We can trigger periodic cache refresh in the background. In this case, when report required we can be sure that all values already loaded 
 in cache and user will not wait for raw report generation.

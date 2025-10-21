@@ -1,11 +1,11 @@
 {% if docsPrefix == null %}
 {% assign MOBILE_APPLICATION_LINK = "[ThingsBoard Mobile Application](/docs/mobile/)" %}
-{% assign MOBILE_APPLICATION = "ThingsBoard Mobile Application" %}
+{% assign MOBILE_APPLICATION = "IoT Hub Mobile Application" %}
 {% assign GETTING_STARTED = "[Getting started with the ThingsBoard Mobile Application](/docs/mobile/getting-started/)" %}
 {% endif %}
 {% if (docsPrefix == "pe/") or (docsPrefix == "paas/") or (docsPrefix == "paas/eu/") %}
 {% assign MOBILE_APPLICATION_LINK = "[ThingsBoard PE Mobile Application](/docs/pe/mobile/)" %}
-{% assign MOBILE_APPLICATION = "ThingsBoard PE Mobile Application" %}
+{% assign MOBILE_APPLICATION = "IoT Hub PE Mobile Application" %}
 {% assign GETTING_STARTED = "[Getting started with the ThingsBoard PE Mobile Application](/docs/pe/mobile/getting-started/)" %}
 {% endif %}
 
@@ -21,7 +21,7 @@ The Mobile center is divided into tabs for convenient creation and management of
 
 - [Bundle](#bundle): Manage settings for mobile applications included in the bundle. These settings include configuring secure authentication methods for your clients{% if docsPrefix == null %}, and defining the layout{% endif %}{% if docsPrefix == "pe/" or docsPrefix == "paas/" or docsPrefix == "paas/eu/" %}, defining the layout, and managing options for user self-registration{% endif %} within the mobile application.
 - [Applications](/docs/{{docsPrefix}}mobile-center/applications/){:target="_blank"}: Manage your mobile applications - add new ones, edit existing ones, or remove outdated versions.
-- [QR code widget](/docs/{{docsPrefix}}user-guide/ui/mobile-qr-code/){:target="_blank"}: Set up a QR code widget on the ThingsBoard "Home" page to give users easy access to the mobile app.
+- [QR code widget](/docs/{{docsPrefix}}user-guide/ui/mobile-qr-code/){:target="_blank"}: Set up a QR code widget on the IoT Hub "Home" page to give users easy access to the mobile app.
 
 ## Bundle
 
@@ -92,10 +92,10 @@ To add new menu item, follow these steps:
 - Click the "**+ Add specific page**" button at the bottom of the page or between existing menu items;
 - Enter the **name for new menu page**;
 - Select the **page type** from the list:
-  - *Dashboard* - link to a ThingsBoard dashboard.
+  - *Dashboard* - link to a IoT Hub dashboard.
   - *Webview* - link to an external webpage.
-  - *Custom* - link to built-in ThingsBoard pages.
-- Depending on the selected page type, specify a dashboard, or link to an external webpage or ThingsBoard menu item;
+  - *Custom* - link to built-in IoT Hub pages.
+- Depending on the selected page type, specify a dashboard, or link to an external webpage or IoT Hub menu item;
 
 {% if docsPrefix == null %}
 - Click "Add";
@@ -142,7 +142,7 @@ Items that do not fit in the bottom navigation menu will be available under the 
 
 ### Self registration
 
-The **self registration** feature allows the tenant to configure a sign-up page for their clients, allowing them to easily sign up and log in to ThingsBoard with predefined permission configurations.
+The **self registration** feature allows the tenant to configure a sign-up page for their clients, allowing them to easily sign up and log in to IoT Hub with predefined permission configurations.
 
 Configure the self registration form for new clients:
 
@@ -159,16 +159,16 @@ Configure the self registration form for new clients:
 {% include images-gallery.html imageCollection="self-registration-2" %}
 
 - **Captcha properties**. Captcha (Completely Automated Public Turing test to tell Computers and Humans Apart) is an automated test used to distinguish between human users and bots. 
-Using Captcha in ThingsBoard helps prevent the automated creation of fake accounts in the system.
+Using Captcha in IoT Hub helps prevent the automated creation of fake accounts in the system.
 
 To **generate the Captcha**, navigate to the [Google ReCaptcha admin console](https://www.google.com/recaptcha/intro/v3.html){:target="_blank"}:
 - Select which version of reCAPTCHA you will use: v2, v3, or Enterprise.
-- Specify the domain name of your ThingsBoard instance.
+- Specify the domain name of your IoT Hub instance.
 - Copy and securely store the the site key and secret key.
 
 {% include images-gallery.html imageCollection="captcha" %}
 
-**In ThingsBoard**:
+**In IoT Hub**:
 - Select the **Captcha version** to be used.
 - Specify **Captcha site key** - the public key used to render the CAPTCHA on the site.
 - Specify **Captcha secret key** - the private key used for verifying CAPTCHA responses on the server.

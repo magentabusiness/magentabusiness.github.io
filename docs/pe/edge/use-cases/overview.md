@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-pe-edge
-title: ThingsBoard Edge Use Cases
+title: IoT Hub Edge Use Cases
 
 ---
 

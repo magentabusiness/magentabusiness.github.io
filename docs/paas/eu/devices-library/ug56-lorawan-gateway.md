@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect UG56 LoRaWAN® Gateway to ThingsBoard?
+title: How to connect UG56 LoRaWAN® Gateway to IoT Hub?
 category: Other devices
 connectivity: HTTP, MQTT, UDP, NB-IoT, LTE-M, LoRaWAN®
 vendor: Milesight

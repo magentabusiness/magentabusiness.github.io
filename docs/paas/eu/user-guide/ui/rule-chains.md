@@ -3,7 +3,7 @@ layout: docwithnav-paas-eu
 assignees:
 - vparomskiy
 title: Rule Chains
-description: ThingsBoard Rule Chains management
+description: IoT Hub Rule Chains management
 
 create-rule-chain:
     0:

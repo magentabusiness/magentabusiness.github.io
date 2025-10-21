@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-paas-eu
 title: FAQ
-description: ThingsBoard FAQ
+description: IoT Hub FAQ
 
 ---
 

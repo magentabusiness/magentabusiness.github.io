@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-paas-eu
 title: Chart Widgets
-description: ThingsBoard Chart Widgets management
+description: IoT Hub Chart Widgets management
 
 charts-addwidget:
     0:

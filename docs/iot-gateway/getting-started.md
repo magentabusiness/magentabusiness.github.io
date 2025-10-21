@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-gw
-title: Getting started with ThingsBoard IoT Gateway
+title: Getting started with IoT Hub IoT Gateway
 description: Configure MQTT, OPC-UA, and Modbus connectors to establish connections with their respective demo servers in the Docker container and retrieve data.
 
 ---
@@ -8,7 +8,7 @@ description: Configure MQTT, OPC-UA, and Modbus connectors to establish connecti
 * TOC
 {:toc}
 
-The ThingsBoard IoT Gateway is an open-source solution, designed to serve as a bridge between IoT devices connected to 
+The IoT Hub IoT Gateway is an open-source solution, designed to serve as a bridge between IoT devices connected to 
 legacy and third-party systems with ThingsBoard.
 
 This guide covers initial IoT Gateway installation and configuration, we will do the following things:
@@ -19,18 +19,18 @@ This guide covers initial IoT Gateway installation and configuration, we will do
 
 ## Prerequisites
 
-- Before initiating the Gateway setup, ensure that the ThingsBoard server is up and running. The simplest approach is to utilize the [Live Demo](https://demo.thingsboard.io) or [ThingsBoard Cloud](https://thingsboard.cloud). Alternatively, you can install ThingsBoard manually by following the steps outlined in the [Installation Guide](/docs/user-guide/install/installation-options/).
+- Before initiating the Gateway setup, ensure that the IoT Hub server is up and running. The simplest approach is to utilize the [Live Demo](https://demo.thingsboard.io) or [ThingsBoard Cloud](https://thingsboard.cloud). Alternatively, you can install IoT Hub manually by following the steps outlined in the [Installation Guide](/docs/user-guide/install/installation-options/).
 - Before moving forward, ensure Docker is installed and properly configured on your machine. If you haven't installed Docker yet, you can download it from the [official Docker website](https://docs.docker.com/engine/install/) and follow their installation guide for your specific operating system. 
-- If you don't have a dashboard installed, you can download Gateway widget bundle [JSON file here](/docs/iot-gateway/resources/thingsboard-gateway-widget-bundle.json){:target="_blank" download="thingsboard-gateway-widget-bundle.json"} and ThingsBoard IoT Gateways dashboard [JSON file here](/docs/iot-gateway/resources/thingsboard-iot-gateways.json){:target="_blank" download="thingsboard-iot-gateways.json"}. Use this [guide](#optional-import-gateway-widgets-bundle-and-dashboard) to import gateway widgets bundle and dashboard.
+- If you don't have a dashboard installed, you can download Gateway widget bundle [JSON file here](/docs/iot-gateway/resources/thingsboard-gateway-widget-bundle.json){:target="_blank" download="thingsboard-gateway-widget-bundle.json"} and IoT Hub IoT Gateways dashboard [JSON file here](/docs/iot-gateway/resources/thingsboard-iot-gateways.json){:target="_blank" download="thingsboard-iot-gateways.json"}. Use this [guide](#optional-import-gateway-widgets-bundle-and-dashboard) to import gateway widgets bundle and dashboard.
 
-## Step 1. Create new gateway device on ThingsBoard
+## Step 1. Create new gateway device on IoT Hub
 
-First, add a gateway device to your ThingsBoard instance by following these steps:
+First, add a gateway device to your IoT Hub instance by following these steps:
 
 {% assign createNewGatewayDevice = '
     ===
         image: https://img.thingsboard.io/gateway/dashboard/gateway-getting-started-1-ce.png,
-        title: Go to "**Dashboards**" tab and open "**ThingsBoard IoT Gateways**" dashboard.
+        title: Go to "**Dashboards**" tab and open "**IoT Hub IoT Gateways**" dashboard.
     ===
         image: https://img.thingsboard.io/gateway/dashboard/gateway-getting-started-2-ce.png,
         title: Click the "**+**" button, enter the gateway device name (e.g., "My Gateway"), and select the device profile.
@@ -134,7 +134,7 @@ connect to different devices. You can find more information about connectors in 
  - [**SNMP** connector](/docs/iot-gateway/config/snmp/)
  - [**Custom** connector](/docs/iot-gateway/custom/)
 
-More about *ThingsBoard IoT Gateways* Dashboard, you can [read here](/docs/iot-gateway/guides/how-to-enable-remote-configuration/).
+More about *IoT Hub IoT Gateways* Dashboard, you can [read here](/docs/iot-gateway/guides/how-to-enable-remote-configuration/).
 
 ## (Optional) Import gateway widgets bundle and dashboard
 
@@ -155,7 +155,7 @@ First, we have to import gateway widgets bundle, for this purpose, use the follo
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=importWidgetsBundle %} 
 
-To import ThingsBoard IoT Gateways dashboard, follow these steps:
+To import IoT Hub IoT Gateways dashboard, follow these steps:
 
 {% assign importGatewayDashboard = '
     ===
@@ -174,7 +174,7 @@ To import ThingsBoard IoT Gateways dashboard, follow these steps:
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main IoT Hub features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

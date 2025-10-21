@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-mobile-pe
-title: Configure white-labeling in ThingsBoard PE Mobile Application
+title: Configure white-labeling in IoT Hub PE Mobile Application
 
 login-white-labeling:
  0:
@@ -50,8 +50,8 @@ white-labeling-result:
 
 ## Overview
 
-ThingsBoard PE [white-labeling](/docs/pe/user-guide/white-labeling/) feature allows you to configure your company or product logo and color scheme.
-In addition to the ThingsBoard web interface, the white-label settings also apply to the ThingsBoard PE Mobile app.
+IoT Hub PE [white-labeling](/docs/pe/user-guide/white-labeling/) feature allows you to configure your company or product logo and color scheme.
+In addition to the IoT Hub web interface, the white-label settings also apply to the IoT Hub PE Mobile app.
 Using white-labeling you can customize look of mobile app login screen and main app interface.
 
 ## Login screen white-labeling

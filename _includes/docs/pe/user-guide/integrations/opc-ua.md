@@ -14,7 +14,7 @@ OPC UA Integration allows you to stream data from the OPC UA server to IoT Hub a
 
 ## OPC-UA integration tutorial
 
-In this tutorial, we will configure the integration between ThingsBoard and OPC-UA to get the Airconditioners data from the [OPC UA C++ Demo Server](https://www.unified-automation.com/downloads/opc-ua-servers.html){:target="_blank"} and allow the user to switch on/off any Airconditioner using the integration downlink feature.
+In this tutorial, we will configure the integration between IoT Hub and OPC-UA to get the Airconditioners data from the [OPC UA C++ Demo Server](https://www.unified-automation.com/downloads/opc-ua-servers.html){:target="_blank"} and allow the user to switch on/off any Airconditioner using the integration downlink feature.
 
 ## Prerequisites
 

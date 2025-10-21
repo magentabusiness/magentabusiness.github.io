@@ -19,7 +19,7 @@ You can read more about signing key [here](/docs/trendz/settings#signing-key)
 
 Follow these steps to configure the signing key:
 
-1. **Log in to ThingsBoard as a System Administrator**  
+1. **Log in to IoT Hub as a System Administrator**  
 
     ![Login](https://img.thingsboard.io/trendz/signing-key-4.png)
 
@@ -89,7 +89,7 @@ To validate that the signing key was installed correctly, you need to:
 
 **Note:** These actions affect ThingsBoard.
 
-You need to complete the following actions to add all necessary add-ons to ThingsBoard:
+You need to complete the following actions to add all necessary add-ons to IoT Hub:
 
 - **Trendz Widget Bundle:**
     - Click the **Upload bundle** button.
@@ -106,15 +106,15 @@ You need to complete the following actions to add all necessary add-ons to Thing
     - You will see *Settings are up to date* afterward.
     - Read more about Trendz Settings [here](/docs/trendz/settings#trendz-settings).
 
-## Link to ThingsBoard
+## Link to IoT Hub
 
-To simplify the process of adding Trendz views to ThingsBoard dashboards, we have introduced the ability to open the dashboard where the view was added in a new tab. 
-Configure the link to your ThingsBoard instance in Settings to use this feature. Follow these steps:
+To simplify the process of adding Trendz views to IoT Hub dashboards, we have introduced the ability to open the dashboard where the view was added in a new tab. 
+Configure the link to your IoT Hub instance in Settings to use this feature. Follow these steps:
 * Log in to Trendz and navigate to the Settings page.
 
   ![image](https://img.thingsboard.io/trendz/signing-key-1.png)
 
-* Enter the URL of your ThingsBoard instance (e.g., *https://your-link-to-platform*) in the designated field.
+* Enter the URL of your IoT Hub instance (e.g., *https://your-link-to-platform*) in the designated field.
 
   ![image](https://img.thingsboard.io/trendz/link-to-tb.png)
 

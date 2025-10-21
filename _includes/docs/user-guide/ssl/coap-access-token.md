@@ -17,7 +17,7 @@ The coap-client example below demonstrates how to connect to [IoT Hub](https://{
 
 Let's
 review a simple command
-to upload temperature readings using Access Token **YOUR_ACCESS_TOKEN** to ThingsBoard instance **YOUR_TB_HOST**.
+to upload temperature readings using Access Token **YOUR_ACCESS_TOKEN** to IoT Hub instance **YOUR_TB_HOST**.
 See [CoAP API](/docs/{{docsPrefix}}reference/coap-api/) for more details. The command is using plain CoAP without TLS:
 
 ```bash
@@ -30,7 +30,7 @@ The above command requires coap-client library that you can install using the fo
  - **Ubuntu 20.04:** sudo apt install libcoap2-bin
  - **Ubuntu 18.04:** sudo apt install libcoap1-bin
 
-Don't forget to replace **YOUR_TB_HOST** with the host of your ThingsBoard instance and **YOUR_ACCESS_TOKEN** with the access token of your device.
+Don't forget to replace **YOUR_TB_HOST** with the host of your IoT Hub instance and **YOUR_ACCESS_TOKEN** with the access token of your device.
 
 ### DTLS support (One-way TLS)
 
@@ -77,17 +77,17 @@ Since the CoAP client must always provide the CA certificate for verification,
 use the `-R` flag followed by the path to a PEM file containing the trusted root CA certificates.
 
 {% unless docsPrefix contains "paas/" %}
-Follow the [CoAP over DTLS](/docs/{{docsPrefix}}user-guide/coap-over-dtls/) guide to provision server certificate if you are hosting your own ThingsBoard instance.
+Follow the [CoAP over DTLS](/docs/{{docsPrefix}}user-guide/coap-over-dtls/) guide to provision server certificate if you are hosting your own IoT Hub instance.
 {% endunless %}
 
 Once provisioned, you should prepare a CA root certificate in pem format. This certificate will be used by CoAP client to validate the server certificate.
 Save the CA root certificate to your working directory as "**ca-root.pem**".
 
-Now you may use the "**ca.pem**" to setup secure connection to your ThingsBoard instance **YOUR_TB_HOST** and Access Token **YOUR_ACCESS_TOKEN** to authenticate the device to upload telemetry:
+Now you may use the "**ca.pem**" to setup secure connection to your IoT Hub instance **YOUR_TB_HOST** and Access Token **YOUR_ACCESS_TOKEN** to authenticate the device to upload telemetry:
 
 ```bash
 coap-client-openssl -v 6 -m POST  -R ca-root.pem -t "application/json" -e '{"temperature":42}' coaps://YOUR_TB_HOST/api/v1/YOUR_ACCESS_TOKEN/telemetry
 ```
 {: .copy-code}
 
-Don't forget to replace **YOUR_TB_HOST** with the host of your ThingsBoard instance and **YOUR_ACCESS_TOKEN** with the access token of your device.
+Don't forget to replace **YOUR_TB_HOST** with the host of your IoT Hub instance and **YOUR_ACCESS_TOKEN** with the access token of your device.

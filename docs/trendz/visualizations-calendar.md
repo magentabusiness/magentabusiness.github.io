@@ -30,11 +30,11 @@ You can add multiple fields into **Value** section. In this case you can switch 
 
 Trendz calendar view supports date click events. Is is useful when you want to select date of interest and drill down for further analysis.
 
-For example you can create a dashboard in ThingsBoard that contains multiple widgets. All widgets take time range from the dashboard.
+For example you can create a dashboard in IoT Hub that contains multiple widgets. All widgets take time range from the dashboard.
 By configuring date click event on the calendar widget you can set required time range on the dashboard, so all other widgets would automatically update 
 and show data for the selected date.
 
-* Add Trendz calendar view on the ThingsBoard dashboard
+* Add Trendz calendar view on the IoT Hub dashboard
 * Open widget edit mode and switch to **Actions** tab.
 * Press **Add action** button.
 * In **Action source** field select **date-selected**.
@@ -79,7 +79,7 @@ With this custom action we will change dashboard time range to selected date and
 Switch field selector activated when multiple fields are added to the **Value** section. In this cae user can select from the widget what field is shown.
 Trendz View trigger special event when user switch fields. You can trigger required action when switch event triggered.
 
-* Add Trendz calendar view on the ThingsBoard dashboard
+* Add Trendz calendar view on the IoT Hub dashboard
 * Open widget edit mode and switch to **Actions** tab.
 * Press **Add action** button.
 * In **Action source** field select **changed-radio-button**.

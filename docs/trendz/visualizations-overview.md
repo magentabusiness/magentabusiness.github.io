@@ -32,13 +32,13 @@ Trendz provides major visualization types required for analyzing IoT datasets.
 * Select **Date** field from left navigation panel and drop it to the **X axis** section
 * Select any telemetry field from left navigation panel and drop it to the **Y axis** section
 
-At this moment you will see average measurement from all entities in the ThingsBoard
+At this moment you will see average measurement from all entities in the IoT Hub
 
 * Add **Entity Name** to the **Series** section - separate series displayed for each entity
 
 ## Video Tutorial
 
-We are glad to present the series of webinars about ThingsBoard Trendz Analytics functionality. 
+We are glad to present the series of webinars about IoT Hub Trendz Analytics functionality. 
 Learn more about Trendz Analytics features and how it helps to transform the IoT data into value for informed decision-making.
 
 &nbsp; 

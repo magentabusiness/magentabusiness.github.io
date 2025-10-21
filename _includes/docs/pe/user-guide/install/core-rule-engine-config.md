@@ -720,7 +720,7 @@
 			<td>cassandra.socket.connect_timeout</td>
 			<td>CASSANDRA_SOCKET_TIMEOUT</td>
 			<td>5000</td>
-			<td> Sets the timeout, in milliseconds, of a native connection from ThingsBoard to Cassandra. The default value is 5000</td>
+			<td> Sets the timeout, in milliseconds, of a native connection from IoT Hub to Cassandra. The default value is 5000</td>
 		</tr>
 		<tr>
 			<td>cassandra.socket.read_timeout</td>
@@ -4568,31 +4568,31 @@
 		<tr>
 			<td>swagger.title</td>
 			<td>SWAGGER_TITLE</td>
-			<td>ThingsBoard REST API</td>
+			<td>IoT Hub REST API</td>
 			<td> The title on the API doc UI page</td>
 		</tr>
 		<tr>
 			<td>swagger.description</td>
 			<td>SWAGGER_DESCRIPTION</td>
-			<td> ThingsBoard Professional Edition IoT platform REST API documentation.</td>
+			<td> IoT Hub IoT platform REST API documentation.</td>
 			<td> The description on the API doc UI page</td>
 		</tr>
 		<tr>
 			<td>swagger.contact.name</td>
 			<td>SWAGGER_CONTACT_NAME</td>
-			<td>ThingsBoard, Inc.</td>
+			<td>IoT Hub</td>
 			<td> The contact name on the API doc UI page</td>
 		</tr>
 		<tr>
 			<td>swagger.contact.url</td>
 			<td>SWAGGER_CONTACT_URL</td>
-			<td>https://thingsboard.io</td>
+			<td>https://docs.iothub.magenta.at/</td>
 			<td> The contact URL on the API doc UI page</td>
 		</tr>
 		<tr>
 			<td>swagger.contact.email</td>
 			<td>SWAGGER_CONTACT_EMAIL</td>
-			<td>info@thingsboard.io</td>
+			<td>service4iot@magenta.at</td>
 			<td> The contact email on the API doc UI page</td>
 		</tr>
 		<tr>
@@ -5911,7 +5911,7 @@
 </table>
 
 
-##  Mobile application settings for Thingsboard mobile application
+##  Mobile application settings for Iot Hub mobile application
 
 <table>
 	<thead>
@@ -5924,19 +5924,19 @@
 			<td>mobileApp.domain</td>
 			<td>TB_MOBILE_APP_DOMAIN</td>
 			<td>thingsboard.cloud</td>
-			<td> Server domain name for Thingsboard Live mobile application</td>
+			<td> Server domain name for Iot Hub Live mobile application</td>
 		</tr>
 		<tr>
 			<td>mobileApp.googlePlayLink</td>
 			<td>TB_MOBILE_APP_GOOGLE_PLAY_LINK</td>
 			<td>https://play.google.com/store/apps/details?id=org.thingsboard.cloud</td>
-			<td> Link to Google Play store for Thingsboard Live mobile application</td>
+			<td> Link to Google Play store for Iot Hub Live mobile application</td>
 		</tr>
 		<tr>
 			<td>mobileApp.appStoreLink</td>
 			<td>TB_MOBILE_APP_APP_STORE_LINK</td>
 			<td>https://apps.apple.com/ua/app/thingsboard-cloud/id6499209395</td>
-			<td> Link to App Store for Thingsboard Live mobile application</td>
+			<td> Link to App Store for Iot Hub Live mobile application</td>
 		</tr>
 	</tbody>
 </table>

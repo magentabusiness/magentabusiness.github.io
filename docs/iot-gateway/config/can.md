@@ -1,14 +1,14 @@
 ---
 layout: docwithnav-gw
 title: CAN Connector Configuration
-description: CAN protocol support for ThingsBoard IoT Gateway
+description: CAN protocol support for IoT Hub IoT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to get familiar with CAN connector configuration for ThingsBoard IoT Gateway.  
+This guide will help you to get familiar with CAN connector configuration for IoT Hub IoT Gateway.  
 Use [general configuration](/docs/iot-gateway/configuration/) to enable this connector.  
 We will describe connector configuration file below.
 
@@ -187,7 +187,7 @@ CAN connector is provided with built-in uplink/downlink data converters. One can
 *As output data* **the downlink converter** returns CAN payload (array of bytes) for the further sending.  
 
 #### Subsection "attributes" or "timeseries"
-This subsection provides the list of configurations, each of them describes which bytes to get from CAN payload (array of bytes) and how to convert these bytes to a Thingsboard attribute or a time series key.  
+This subsection provides the list of configurations, each of them describes which bytes to get from CAN payload (array of bytes) and how to convert these bytes to a Iot Hub attribute or a time series key.  
 
 | **Parameter** | **Default value**   | **Description**                                                         |
 |:-|:-|-
@@ -265,7 +265,7 @@ where
 * *length* - the number of bytes to get the value
 * *byteorder* - the order of bytes - *big* or *little* (default *big*)
 * *type* - the Python primitive types **bool**, **boolean**, **int**, **long**, **float**, **double** or **string**.
-By types **bool**, **int** and **float** it is meant Thingsboard **boolean**, **long** and **double** types respectively.
+By types **bool**, **int** and **float** it is meant Iot Hub **boolean**, **long** and **double** types respectively.
 **Note**, **float** type value requires 4 bytes and **double** type value requires 8 bytes.
 * *encoding* - **Only for string type** [Encoding](https://docs.python.org/3/library/codecs.html#standard-encodings) of string (default *ascii*).
 * *signed* - **Only for int/long types** indicates whether integer is signed value or not - *signed* or *unsigned* (default *unsigned*)
@@ -312,7 +312,7 @@ On-demand sending is activated after CAN node receives specific data, as specifi
 | **dataInHex** |                        | CAN message payload in the hexadecimal format.                                                    |
 
 #### Subsection "attributeUpdates"
-This subsection provides the list of configurations to subscribe for changes of Thingsboard shared attributes.
+This subsection provides the list of configurations to subscribe for changes of Iot Hub shared attributes.
 
 | **Parameter**              | **Default value**     | **Description**                                                                                                                                                |
 |:-|:-|----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -332,14 +332,14 @@ This subsection provides the list of configurations to subscribe for changes of 
 
 The steps of processing an attribute update are the following:
 
-1. If *dataExpression* is set, [the value](/docs/reference/gateway-mqtt-api/#subscribe-to-attribute-updates-from-the-server) that received from Thingsboard server is modified via Python [eval()](https://docs.python.org/3/library/functions.html#eval) API. The variable *value* is available in *dataExpression*. This is a value of the attribute that was changed.
+1. If *dataExpression* is set, [the value](/docs/reference/gateway-mqtt-api/#subscribe-to-attribute-updates-from-the-server) that received from Iot Hub server is modified via Python [eval()](https://docs.python.org/3/library/functions.html#eval) API. The variable *value* is available in *dataExpression*. This is a value of the attribute that was changed.
 If *dataExpression* is not set, the value is left as it is.
 2. The value from the step 1 is packed to the array of bytes based on its type (deduced by Python [isinstance()](https://docs.python.org/3/library/functions.html#isinstance) API) and [configuration](/docs/iot-gateway/config/can/#subsection-attributeupdates) provided for this attribute. **Note**, *float* type value requires 4 bytes.
 3. If *dataBefore* or/and *dataAfter* are set, they are converted to the arrays of bytes and are added to the *value* bytes (from the step 2) before and after respectively.
 4. Send the final byte array through a CAN bus.
 
 #### Subsection "serverSideRpc"
-This subsection provides the list of configurations to process RPC commands from a ThingsBoard server to a device.
+This subsection provides the list of configurations to process RPC commands from a IoT Hub server to a device.
 
 | **Parameter**            | **Default value**     | **Description**                                                         |
 |:-|:-|-
@@ -408,7 +408,7 @@ So after processing the _setSpeed_ RPC command, CAN payload is as follows:
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:  
+Explore guides related to main IoT Hub features:  
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

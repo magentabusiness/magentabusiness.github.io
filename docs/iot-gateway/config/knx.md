@@ -1,16 +1,16 @@
 ---
 layout: docwithnav-gw
 title: KNX Connector Configuration
-description: KNX API support for ThingsBoard IoT Gateway
+description: KNX API support for IoT Hub IoT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you get familiar with KNX Connector configuration for ThingsBoard IoT Gateway.
+This guide will help you get familiar with KNX Connector configuration for IoT Hub IoT Gateway.
 Use [general configuration guide](/docs/iot-gateway/configuration/) to enable this Connector. The purpose of this 
-Connector is to connect KNX-based devices to ThingsBoard, allowing to process data from KNX devices and control 
+Connector is to connect KNX-based devices to IoT Hub, allowing to process data from KNX devices and control 
 KNX automation systems.
 
 We will describe the connector configuration file below.
@@ -253,7 +253,7 @@ This subsection in the configuration file looks like:
 
 #### Subsection "Attributes" and "Timeseries"
 
-These subsections are used to configure the telemetry and attributes that will be sent to ThingsBoard and provide the
+These subsections are used to configure the telemetry and attributes that will be sent to IoT Hub and provide the
 settings for processing data from KNX devices.
 
 The table below describes the attributes and time series parameters:
@@ -291,7 +291,7 @@ Example of timeseries section:
 
 This configuration section is optional. 
 
-ThingsBoard allows the provisioning of device attributes and fetches some of them from 
+IoT Hub allows the provisioning of device attributes and fetches some of them from 
 the device application. You can treat this as a remote configuration for devices, enabling them to request 
 shared attributes from ThingsBoard. See the [user guide](/docs/user-guide/attributes/) for more details.
 
@@ -321,10 +321,10 @@ This subsection in the configuration file looks like:
 
 ### Section "RPC"
 
-ThingsBoard allows sending [RPC commands](/docs/user-guide/rpc/) to the device that is connected to ThingsBoard 
+IoT Hub allows sending [RPC commands](/docs/user-guide/rpc/) to the device that is connected to IoT Hub 
 directly or via Gateway.
  
-The configuration provided in this section is used for sending RPC requests from ThingsBoard to device. The configuration is 
+The configuration provided in this section is used for sending RPC requests from IoT Hub to device. The configuration is 
 an array of objects, where each object contains the following fields:
 
 | **Parameter**    | **Default value** | **Description**                                                                    |
@@ -357,7 +357,7 @@ See [the guide](/docs/iot-gateway/guides/how-to-use-get-set-rpc-methods) for mor
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main IoT Hub features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

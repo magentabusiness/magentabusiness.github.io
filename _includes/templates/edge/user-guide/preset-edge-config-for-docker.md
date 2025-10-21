@@ -1,5 +1,5 @@
 
-Create a docker compose file for the **ThingsBoard Edge** service within this directory:
+Create a docker compose file for the **IoT Hub Edge** service within this directory:
 
 ```bash
 nano docker-compose.yml
@@ -13,7 +13,7 @@ They contain important credentials, such as **Edge Secret**, **Edge Key**, etc. 
 {% assign presetConfigPE = '
     ===
         image: https://img.thingsboard.io/edge/user-guide/edge-install/4-install-instructions-pe.webp,
-        title: Go to the **Edge management > Instances** section of your **ThingsBoard Professional Edition** instance, and click on the **Instance**. Then, click the **"Install & Connect Instructions"** button.
+        title: Go to the **Edge management > Instances** section of your **IoT Hub Professional Edition** instance, and click on the **Instance**. Then, click the **"Install & Connect Instructions"** button.
     ===
         image: https://img.thingsboard.io/edge/user-guide/edge-install/5-docker-pe.webp,
         title: On the **"Install & Connect Instructions"** pop-up window, select the **"Docker"** tab and **copy the configuration lines**.
@@ -23,7 +23,7 @@ They contain important credentials, such as **Edge Secret**, **Edge Key**, etc. 
 {% assign presetConfigCE = '
     ===
         image: https://img.thingsboard.io/edge/user-guide/edge-install/4-install-instructions.webp,
-        title: Go to the **Edge management > Instances** section of your **ThingsBoard Community Edition** instance, and click on the **Instance**. Then, click the **"Install & Connect Instructions"** button.
+        title: Go to the **Edge management > Instances** section of your **IoT Hub Community Edition** instance, and click on the **Instance**. Then, click the **"Install & Connect Instructions"** button.
     ===
         image: https://img.thingsboard.io/edge/user-guide/edge-install/5-docker.webp,
         title: On the **"Install & Connect Instructions"** pop-up window, select the **"Docker"** tab and **copy the configuration lines**.

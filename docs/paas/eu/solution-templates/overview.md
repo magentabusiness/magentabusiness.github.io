@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-paas-eu
 title: IoT Solution templates overview
-description: ThingsBoard IoT Solution templates overview
+description: IoT Hub IoT Solution templates overview
 browse-solution-templates:
     0:
         image: https://img.thingsboard.io/solution-templates/solution-templates-src-1.png

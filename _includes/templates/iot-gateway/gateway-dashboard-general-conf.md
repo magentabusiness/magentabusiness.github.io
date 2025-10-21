@@ -3,8 +3,8 @@
 General - this tab contains the main settings, namely:
 - Remote Configuration - enables remote configuration and management of the gateway;
 - Remote Shell - enables remote control of the operating system with the gateway from the Remote Shell widget;
-- ThingsBoard host - hostname or IP address of ThingsBoard server;
-- ThingsBoard port - port of MQTT service on ThingsBoard server;
+- IoT Hub host - hostname or IP address of IoT Hub server;
+- IoT Hub port - port of MQTT service on IoT Hub server;
 - Security type (you can read more about them [here](/docs/iot-gateway/configuration/#subsection-security)) - currently 3 types of security are supported for remote configuration:
   - Access Token;
   - TLS + Access Token;

@@ -73,7 +73,7 @@
 		<tr>
 			<td>server.ssl.credentials.keystore.store_password</td>
 			<td>SSL_KEY_STORE_PASSWORD</td>
-			<td>thingsboard</td>
+			<td>iot hub</td>
 			<td> Password used to access the key store</td>
 		</tr>
 		<tr>
@@ -85,7 +85,7 @@
 		<tr>
 			<td>server.ssl.credentials.keystore.key_password</td>
 			<td>SSL_KEY_PASSWORD</td>
-			<td>thingsboard</td>
+			<td>iot hub</td>
 			<td> Password used to access the key</td>
 		</tr>
 		<tr>
@@ -567,14 +567,14 @@
 		<tr>
 			<td>cassandra.cluster_name</td>
 			<td>CASSANDRA_CLUSTER_NAME</td>
-			<td>Thingsboard Cluster</td>
-			<td> Thingsboard cluster name</td>
+			<td>Iot Hub Cluster</td>
+			<td> Iot Hub cluster name</td>
 		</tr>
 		<tr>
 			<td>cassandra.keyspace_name</td>
 			<td>CASSANDRA_KEYSPACE_NAME</td>
-			<td>thingsboard</td>
-			<td> Thingsboard keyspace name</td>
+			<td>iot hub</td>
+			<td> Iot Hub keyspace name</td>
 		</tr>
 		<tr>
 			<td>cassandra.url</td>
@@ -714,7 +714,7 @@
 			<td>cassandra.socket.connect_timeout</td>
 			<td>CASSANDRA_SOCKET_TIMEOUT</td>
 			<td>5000</td>
-			<td> Sets the timeout, in milliseconds, of a native connection from ThingsBoard to Cassandra. The default value is 5000</td>
+			<td> Sets the timeout, in milliseconds, of a native connection from IoT Hub to Cassandra. The default value is 5000</td>
 		</tr>
 		<tr>
 			<td>cassandra.socket.read_timeout</td>
@@ -4166,19 +4166,19 @@
 		<tr>
 			<td>swagger.title</td>
 			<td>SWAGGER_TITLE</td>
-			<td>ThingsBoard REST API</td>
+			<td>IoT Hub REST API</td>
 			<td> The title on the API doc UI page</td>
 		</tr>
 		<tr>
 			<td>swagger.description</td>
 			<td>SWAGGER_DESCRIPTION</td>
-			<td> ThingsBoard open-source IoT platform REST API documentation.</td>
+			<td> IoT Hub open-source IoT platform REST API documentation.</td>
 			<td> The description on the API doc UI page</td>
 		</tr>
 		<tr>
 			<td>swagger.contact.name</td>
 			<td>SWAGGER_CONTACT_NAME</td>
-			<td>ThingsBoard team</td>
+			<td>IoT Hub team</td>
 			<td> The contact name on the API doc UI page</td>
 		</tr>
 		<tr>
@@ -4214,7 +4214,7 @@
 		<tr>
 			<td>swagger.group_name</td>
 			<td>SWAGGER_GROUP_NAME</td>
-			<td>thingsboard</td>
+			<td>iot hub</td>
 			<td> The group name (definition) on the API doc UI page.</td>
 		</tr>
 	</tbody>
@@ -5382,7 +5382,7 @@
 </table>
 
 <!--
-####  Mobile application settings for Thingsboard mobile application
+####  Mobile application settings for Iot Hub mobile application
 
 <table>
 	<thead>
@@ -5395,19 +5395,19 @@
 			<td>mobileApp.domain</td>
 			<td>TB_MOBILE_APP_DOMAIN</td>
 			<td>demo.thingsboard.io</td>
-			<td> Server domain name for Thingsboard Live mobile application</td>
+			<td> Server domain name for Iot Hub Live mobile application</td>
 		</tr>
 		<tr>
 			<td>mobileApp.googlePlayLink</td>
 			<td>TB_MOBILE_APP_GOOGLE_PLAY_LINK</td>
 			<td>https://play.google.com/store/apps/details?id=org.thingsboard.demo.app</td>
-			<td> Link to Google Play store for Thingsboard Live mobile application</td>
+			<td> Link to Google Play store for Iot Hub Live mobile application</td>
 		</tr>
 		<tr>
 			<td>mobileApp.appStoreLink</td>
 			<td>TB_MOBILE_APP_APP_STORE_LINK</td>
 			<td>https://apps.apple.com/us/app/thingsboard-live/id1594355695</td>
-			<td> Link to App Store for Thingsboard Live mobile application</td>
+			<td> Link to App Store for Iot Hub Live mobile application</td>
 		</tr>
 	</tbody>
 </table>

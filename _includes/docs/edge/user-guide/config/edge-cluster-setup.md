@@ -13,7 +13,7 @@ Edge-specific considerations:
 * All **Edge nodes** connect to the **same database**.
 * **Devices** can connect to any node based on load balancing.
 * **Edge nodes** share the workload and maintain local failover.
-* The **Edge Cluster** syncs aggregated data to **ThingsBoard Cloud**.
+* The **Edge Cluster** syncs aggregated data to **IoT Hub Cloud**.
 
 ![edge-cluster](https://img.thingsboard.io/edge/config/edge-cluster.webp){: style="display: block; margin: auto; max-width: 600px; max-height: 600px"}
 
@@ -21,14 +21,14 @@ For more details, see the [microservices architecture](/docs/reference/msa/){: t
 
 #### Prerequisites
 
-**ThingsBoard** microservices run in a **Dockerized environment**. 
+**IoT Hub** microservices run in a **Dockerized environment**. 
 Before starting, make sure that [Docker CE](https://docs.docker.com/install/){: target="_blank"} and [Docker Compose](https://docs.docker.com/compose/install/){: target="_blank"} are installed on your system.
 
 {% include templates/install/docker-install.md %}
 
 {% include templates/install/docker-install-note.md %}
 
-### Step 1. Pull the ThingsBoard Edge image
+### Step 1. Pull the IoT Hub Edge image
 
 [Log in](https://docs.docker.com/engine/reference/commandline/login/){: target="_blank"} to Docker Hub and use the command to pull the image:
 
@@ -48,7 +48,7 @@ docker pull thingsboard/tb-edge:{{ site.release.edge_full_ver }}
 {% endif %}
 
 {% if docsPrefix == "pe/edge/" %}
-### Step 2. Clone ThingsBoard PE Docker compose scripts
+### Step 2. Clone IoT Hub PE Docker compose scripts
 
 ```bash
 git clone -b release-4.0.0 https://github.com/thingsboard/thingsboard-edge-pe-docker-compose.git tb-edge-pe-docker-compose --depth 1
@@ -58,7 +58,7 @@ cd tb-edge-pe-docker-compose
 
 {% else %}
 
-### Step 2. Clone the ThingsBoard Edge CE repository
+### Step 2. Clone the IoT Hub Edge CE repository
 
 ```bash
 git clone -b release-4.0 https://github.com/thingsboard/thingsboard-edge.git --depth 1
@@ -68,15 +68,15 @@ cd thingsboard-edge/docker-edge
 
 {% endif %}
 
-### Step 3. Configure ThingsBoard Edge database and queue service
+### Step 3. Configure IoT Hub Edge database and queue service
 
-Before performing the initial installation, configure the type of database to be used with **ThingsBoard Edge**. To set the database type, change the value of the **DATABASE** variable in the **environment file (.env)** file.
+Before performing the initial installation, configure the type of database to be used with **IoT Hub Edge**. To set the database type, change the value of the **DATABASE** variable in the **environment file (.env)** file.
 
-**ThingsBoard Edge** currently supports two messaging systems/brokers for storing the messages:
+**IoT Hub Edge** currently supports two messaging systems/brokers for storing the messages:
 * **In Memory** queue implementation is not suitable for any sort of cluster deployments.
-* **Kafka** is recommended for production deployments and used by default. This queue is used on most of the ThingsBoard production environments now.
+* **Kafka** is recommended for production deployments and used by default. This queue is used on most of the IoT Hub production environments now.
 
-To edit the **ThingsBoard Edge .env** file, run the following command:
+To edit the **IoT Hub Edge .env** file, run the following command:
 ```bash
 nano .env
 ```
@@ -105,7 +105,7 @@ TB_EDGE_VERSION=latest
 TB_EDGE_NODE_DOCKER_NAME=tb-edge-node
 TB_EDGE_VERSION=latest
 {%- endif -%}
-# Database used by ThingsBoard, can be either postgres (PostgreSQL) or hybrid (PostgreSQL for entities database and Cassandra for timeseries database).
+# Database used by IoT Hub, can be either postgres (PostgreSQL) or hybrid (PostgreSQL for entities database and Cassandra for timeseries database).
 # According to the database type corresponding docker service will be deployed (see docker-compose.postgres.yml, docker-compose.hybrid.yml for details).
 
 DATABASE=postgres
@@ -143,9 +143,9 @@ JAVA_OPTS="-Xmx2048M -Xms2048M -Xss384k -XX:+AlwaysPreTouch"
 * **CLOUD_ROUTING_KEY:** Put your edge key.
 * **CLOUD_ROUTING_SECRET:** Put your edge secret.
 {% if docsPrefix == "pe/edge/" %}
-* **CLOUD_RPC_HOST:** Use _thingsboard.cloud_ / _eu.thingsboard.cloud_ if you connect **Edge** to the [ThingsBoard Cloud (North America)](https://thingsboard.cloud/signup){: target="_blank"}/[ThingsBoard Cloud (Europe)](https://eu.thingsboard.cloud/signup){: target="_blank"} correspondingly, or an **IP address** of the machine with the **ThingsBoard PE Platform**.
+* **CLOUD_RPC_HOST:** Use _thingsboard.cloud_ / _eu.thingsboard.cloud_ if you connect **Edge** to the [ThingsBoard Cloud (North America)](https://thingsboard.cloud/signup){: target="_blank"}/[ThingsBoard Cloud (Europe)](https://eu.thingsboard.cloud/signup){: target="_blank"} correspondingly, or an **IP address** of the machine with the **IoT Hub PE Platform**.
 {% else %}
-* **CLOUD_RPC_HOST:** Use _demo.thingsboard.io_ if you connect **Edge** to the [ThingsBoard Demo](https://demo.thingsboard.io/login){: target="_blank"}, or an **IP address** of the machine with the **ThingsBoard Platform**.
+* **CLOUD_RPC_HOST:** Use _demo.thingsboard.io_ if you connect **Edge** to the [ThingsBoard Demo](https://demo.thingsboard.io/login){: target="_blank"}, or an **IP address** of the machine with the **IoT Hub Platform**.
 {% endif %}
 * **MONITORING_ENABLED:** To start cluster monitoring with [Grafana](https://grafana.com/){: target="_blank"} and/or [Prometheus](https://prometheus.io/){: target="_blank"} services, set the variable to _true_.
 
@@ -162,7 +162,7 @@ By default:
 
 {% include templates/install/docker/docker-compose-setup-volumes.md %}
 
-### Step 5. Install and run ThingsBoard Edge
+### Step 5. Install and run IoT Hub Edge
 
 To run the installation, execute the following command:
 ```bash 
@@ -177,13 +177,13 @@ To start the service, execute the following command:
 {: .copy-code}
 
 {% capture install-and-run-edge %}
-It will take a few minutes to start the services. Once all services are successfully started, open the **ThingsBoard Edge** service
+It will take a few minutes to start the services. Once all services are successfully started, open the **IoT Hub Edge** service
 at **```http://{your-host-ip}```** in the browser (_e.g., [http://localhost](http://localhost){: target="_blank"}_).
-To log in, use **the credentials** from the **ThingsBoard** account.
+To log in, use **the credentials** from the **IoT Hub** account.
 {% endcapture %}
 {% include templates/info-banner.md content=install-and-run-edge %}
 
-Examine edge service logs for errors in case of any issues. To see **ThingsBoard Edge** node logs, execute the following command:
+Examine edge service logs for errors in case of any issues. To see **IoT Hub Edge** node logs, execute the following command:
 ```bash 
 docker-compose logs -f tb-edge1 tb-edge2 tb-edge3
 ```

@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect Rock Pi 4 Model B to ThingsBoard?
+title: How to connect Rock Pi 4 Model B to IoT Hub?
 category: Single-board computers
 chip: Rockchip RK3399
 connectivity: Ethernet, WIFI, Bluetooth

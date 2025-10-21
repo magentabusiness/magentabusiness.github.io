@@ -1,8 +1,8 @@
 {% if docsPrefix == 'pe/' %}
-{% assign appPrefix = "ThingsBoard PE" %}
+{% assign appPrefix = "IoT Hub PE" %}
 {% assign appProject = "flutter_thingsboard_pe_app" %}
 {% else %}
-{% assign appPrefix = "ThingsBoard" %}
+{% assign appPrefix = "IoT Hub" %}
 {% assign appProject = "flutter_thingsboard_app" %}
 {% endif %}
 

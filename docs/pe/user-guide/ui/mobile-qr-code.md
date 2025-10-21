@@ -8,21 +8,21 @@ description: Mobile app QR code guide
 download-app-with-qr-code:
     0:
         image: https://img.thingsboard.io/user-guide/ui/qr-code/qr-code-thingsboard-home-page-1-pe.png
-        title: 'Log into your ThingsBoard account and navigate to the "Home" page. You will find the QR code for connecting the mobile app in the bottom right corner;'
+        title: 'Log into your IoT Hub account and navigate to the "Home" page. You will find the QR code for connecting the mobile app in the bottom right corner;'
     1:
         image: https://img.thingsboard.io/user-guide/ui/qr-code/qr-code-scan-and-install-app-pe.png
-        title: 'Open the camera app on your phone or tablet and point it at the QR code. The phone will automatically scan the code and show the link button. Click this button to open the link to download the <b>ThingsBoard mobile app</b>;'
+        title: 'Open the camera app on your phone or tablet and point it at the QR code. The phone will automatically scan the code and show the link button. Click this button to open the link to download the <b>IoT Hub mobile app</b>;'
     2:
         image: https://img.thingsboard.io/user-guide/ui/qr-code/qr-code-mobile-install-app-pe.png
-        title: 'Install ThingsBoard mobile application;'
+        title: 'Install IoT Hub mobile application;'
     3:
         image: https://img.thingsboard.io/user-guide/ui/qr-code/qr-code-mobile-open-app-1-pe.png
-        title: 'Launch the ThingsBoard mobile app to start using it.'
+        title: 'Launch the IoT Hub mobile app to start using it.'
 
 clicking-button:
     0:
         image: https://img.thingsboard.io/user-guide/ui/qr-code/qr-code-thingsboard-home-page-2-pe.png
-        title: 'Clicking the "App Store" or "Google Play" button in the "Connect mobile app" widget, you will be redirected to the ThingsBoard app page in the respective app store for further downloading to your device.'
+        title: 'Clicking the "App Store" or "Google Play" button in the "Connect mobile app" widget, you will be redirected to the IoT Hub app page in the respective app store for further downloading to your device.'
     1:
         image: https://img.thingsboard.io/user-guide/ui/qr-code/qr-code-button-2-pe.png
         title: 'App Store.'
@@ -33,13 +33,13 @@ clicking-button:
 authorize-with-qr-code:
     0:
         image: https://img.thingsboard.io/user-guide/ui/qr-code/qr-code-mobile-login-with-qr-1-pe.png
-        title: 'Launch the ThingsBoard mobile app on your device and use the QR code scanning feature. Make sure you have the latest version of the app installed;'
+        title: 'Launch the IoT Hub mobile app on your device and use the QR code scanning feature. Make sure you have the latest version of the app installed;'
     2:
         image: https://img.thingsboard.io/user-guide/ui/qr-code/qr-code-scan-and-open-app-pe.png
-        title: 'Scan the QR code on the "Home" page of your ThingsBoard instance using the mobile app. You will find the QR code for connecting the mobile app in the bottom right corner;'
+        title: 'Scan the QR code on the "Home" page of your IoT Hub instance using the mobile app. You will find the QR code for connecting the mobile app in the bottom right corner;'
     3:
         image: https://img.thingsboard.io/user-guide/ui/qr-code/qr-code-mobile-dashboard-1-pe.png
-        title: 'You have successfully logged into the ThingsBoard mobile app with your account.'
+        title: 'You have successfully logged into the IoT Hub mobile app with your account.'
 
 mobile-app-qr-code-widget-settings:
     0:
@@ -49,7 +49,7 @@ mobile-app-qr-code-widget-settings:
 application-settings-default:
     0:
         image: https://img.thingsboard.io/user-guide/ui/qr-code/mobile-app-qr-code-widget-settings-2-pe.png
-        title: 'Leave "Default" applications settings to use the <b>ThingsBoard Cloud</b> mobile application.'
+        title: 'Leave "Default" applications settings to use the <b>IoT Hub Cloud</b> mobile application.'
 
 application-settings-custom:
     0:

@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect ACE MQTT 4G GPS Gateway to ThingsBoard?
+title: How to connect ACE MQTT 4G GPS Gateway to IoT Hub?
 category: Other devices
 connectivity: HTTP, MQTT, Ethernet, WIFI
 vendor: ACE Automation

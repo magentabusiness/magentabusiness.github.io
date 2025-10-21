@@ -1,5 +1,5 @@
 
-{% assign deviceName = page.title | remove: "How to connect " | remove: "to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: "to IoT Hub?" %}
 {% assign deviceVendorLink = "https://store.ncd.io/product/c1d2-industrial-iot-wireless-2-channel-vibration-temperature-sensor-v3" %}
 {% assign thingsboardHost = "https://" | append: {{hostName}} %}
 {% assign officialManualLink = "https://resource.milesight.com/milesight/iot/document/am300-series-user-guide-en.pdf" %}
@@ -19,7 +19,7 @@ Some Vibration Plus Applications:
 • Process Automation and Quality Control in Manufacturing<br>
 • Optimization of Energy Efficiency in Industrial Systems
 
-In this tutorial, we will guide you through the process of setting up the NCD Industrial IoT Wireless Vibration and Temperature Sensor with the Enterprise IIoT Gateway.This includes creating a device, configuring parameters, transmitting sensor data to ThingsBoard via the MQTT protocol, and designing a real-time dashboard for sensor data monitoring and analysis.
+In this tutorial, we will guide you through the process of setting up the NCD Industrial IoT Wireless Vibration and Temperature Sensor with the Enterprise IIoT Gateway.This includes creating a device, configuring parameters, transmitting sensor data to IoT Hub via the MQTT protocol, and designing a real-time dashboard for sensor data monitoring and analysis.
 
 **Enterprise IIoT Gateway Lite**
 
@@ -28,22 +28,21 @@ The Enterprise IIoT Gateway gets, processes, decodes, and transmits data from th
 
 ## Overview
 
-The Industrial IoT Wireless Vibration and Temperature Sensor captures critical field parameters, including temperature and vibration data. Utilizing the robust DigiMesh® industrial protocol, the sensor transmits this data to the Enterprise IIoT Gateway. The gateway, equipped with the NCD Node-RED library, receives, decodes, and filters the data for further processing. Once prepared, the data is transmitted to the ThingsBoard platform via the MQTT protocol. Within ThingsBoard, the data can be queried, analyzed, and visualized in real-time through custom dashboards, providing actionable insights for monitoring and decision-making.
+The Industrial IoT Wireless Vibration and Temperature Sensor captures critical field parameters, including temperature and vibration data. Utilizing the robust DigiMesh® industrial protocol, the sensor transmits this data to the Enterprise IIoT Gateway. The gateway, equipped with the NCD Node-RED library, receives, decodes, and filters the data for further processing. Once prepared, the data is transmitted to the IoT Hub platform via the MQTT protocol. Within IoT Hub, the data can be queried, analyzed, and visualized in real-time through custom dashboards, providing actionable insights for monitoring and decision-making.
 
 ![image](https://img.thingsboard.io/devices-library/ready-to-go-devices/ncd-vibration-temperature-sensor/4-ncd-to-thingsboard-overview.png)
 
 ## Requirements
 
-To transmit data from NCD Industrial IoT sensors to ThingsBoard, certain prerequisites must be met.
+To transmit data from NCD Industrial IoT sensors to IoT Hub, certain prerequisites must be met.
 
-- [ThingsBoard Cloud](https://thingsboard.io/installations/){:target="_blank"} account 
+- [IoT Hub](https://iothub.magenta.at/login){:target="_blank"} account 
 - NCD Industrial IoT Wireless Vibration Temperature Sensor V3
 - NCD Enterprise IIoT Gateway Standard or Lite version:
   - [Enterprise IIoT Gateway](https://store.ncd.io/product/enterprise-iiot-gateway/){:target="_blank"}
   - [Enterprise IIoT Gateway Lite](https://store.ncd.io/product/enterprise-iiot-gateway-lite/){:target="_blank"}
 
 {% capture difference %}
-**Note**: While the ThingsBoard Cloud is used in this example, [ThingsBoard on-premise deployment](/docs/user-guide/install/pe/installation-options/){:target="_blank"} can also be used.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -52,9 +51,9 @@ To transmit data from NCD Industrial IoT sensors to ThingsBoard, certain prerequ
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
-With these components, you can connect the NCD sensor to the Enterprise IIoT Gateway and leverage the built-in Node-RED instance to forward sensor data to ThingsBoard using the MQTT protocol.
+With these components, you can connect the NCD sensor to the Enterprise IIoT Gateway and leverage the built-in Node-RED instance to forward sensor data to IoT Hub using the MQTT protocol.
 
-This tutorial provides a comprehensive walkthrough of the essential configuration steps, including connecting NCD devices, registering them on the platform, setting up a ThingsBoard Cloud account, adding and linking a new gateway, and creating a dashboard to visualize real-time sensor data effectively.
+This tutorial provides a comprehensive walkthrough of the essential configuration steps, including connecting NCD devices, registering them on the platform, setting up a IoT Hub Cloud account, adding and linking a new gateway, and creating a dashboard to visualize real-time sensor data effectively.
 
 ## Configuring the NCD Vibration Sensor and Enterprise IIoT Gateway
 
@@ -112,7 +111,7 @@ The **sensor_data** message includes critical information such as the **firmware
 
 The **sensor_data** message can be identified by the **msg.topic** property. When the sensor transmits a data message, the **msg.topic** is set to **sensor_data** which makes it easier to filter or manage the sensor data. To view the sensor data in the **debug window**, simply click on the message. You should see something like this.
 
-In this tutorial, our primary focus will be on transmitting **RUN sensor mode** and **sensor data** messages to effectively monitor the sensor’s real-time status. We will explore these topics in greater detail later in the tutorial. For now, let’s move on to **ThingsBoard** to configure all the necessary components.
+In this tutorial, our primary focus will be on transmitting **RUN sensor mode** and **sensor data** messages to effectively monitor the sensor’s real-time status. We will explore these topics in greater detail later in the tutorial. For now, let’s move on to **IoT Hub** to configure all the necessary components.
 
 {% assign thingsboardDebugMsgPayload = '
     ===
@@ -122,38 +121,38 @@ In this tutorial, our primary focus will be on transmitting **RUN sensor mode** 
 
 {% include images-gallery.liquid imageCollection=thingsboardDebugMsgPayload %}
 
-## Configuring ThingsBoard Cloud
+## Configuring IoT Hub Cloud
 
-You can find the documentation to help you get started with ThingsBoard Professional Edition, as well as the MQTT Gateway API Reference, available here:
+You can find the documentation to help you get started with IoT Hub Professional Edition, as well as the MQTT Gateway API Reference, available here:
 
 - [Getting Started with ThingsBoard Professional Edition](https://thingsboard.io/docs/paas/eu/getting-started-guides/helloworld/){:target="_blank"}
 - [MQTT Gateway API Reference](https://thingsboard.io/docs/reference/gateway-mqtt-api/){:target="_blank"}
 
-The first step is to [sign in using your ThingsBoard account](https://thingsboard.cloud/login){:target="_blank"}. 
+The first step is to [sign in using your ThingsBoard account](https://thingsboard.cloud/){:target="_blank"}. 
 
 {% assign thingsboardWelcome = '
     ===
         image: https://img.thingsboard.io/devices-library/ready-to-go-devices/ncd-vibration-temperature-sensor/sign-into-thingsboard-1-pe.png,
-        title: The first step is to sign in using your ThingsBoard account.
+        title: The first step is to sign in using your IoT Hub account.
 '
 %}
 
 {% include images-gallery.liquid imageCollection=thingsboardWelcome %}
 
 <br>
-Once you sign in, you will be presented with important resources to help you get started, along with solution templates. Take a moment to explore these to familiarize yourself with the **ThingsBoard** environment.
+Once you sign in, you will be presented with important resources to help you get started, along with solution templates. Take a moment to explore these to familiarize yourself with the **IoT Hub** environment.
 
 {% assign thingsboardWelcome2 = '
     ===
         image: https://img.thingsboard.io/devices-library/ready-to-go-devices/ncd-vibration-temperature-sensor/thingsboard-welcome-1-pe.png,
-        title: Once you sign in, you will be presented with important resources to help you get started, along with solution templates. Take a moment to explore these to familiarize yourself with the ThingsBoard environment.
+        title: Once you sign in, you will be presented with important resources to help you get started, along with solution templates. Take a moment to explore these to familiarize yourself with the IoT Hub environment.
 '
 %}
 
 {% include images-gallery.liquid imageCollection=thingsboardWelcome2 %}
 
 <br>
-The first step is to add a new [device](/docs/{{docsPrefix}}user-guide/ui/devices/){:target="_blank"} to your ThingsBoard instance. To do this, follow thi steps:
+The first step is to add a new [device](/docs/{{docsPrefix}}user-guide/ui/devices/){:target="_blank"} to your IoT Hub instance. To do this, follow thi steps:
 
 {% assign addingIsGatewayDevice = '
     ===
@@ -170,7 +169,7 @@ The first step is to add a new [device](/docs/{{docsPrefix}}user-guide/ui/device
         title: After generating the credentials, use the "**Copy**" button to obtain each value. We recommend saving these values in a temporary file, as we will use them later in the **Node-RED MQTT node** in this guide. Next, click "**Add**".
     ===
         image: https://img.thingsboard.io/devices-library/ready-to-go-devices/ncd-vibration-temperature-sensor/adding-new-is-gateway-device-5-pe.png,
-        title: After this, a new window will appear, allowing you to test the connectivity. However, since we are using a Gateway, a different set of MQTT topics is required for proper integration with the ThingsBoard gateway device. You can skip this step. For now, we will identify the MQTT server to use for the connection: "mqtt.thingsboard.cloud". Click the "**Close**" button to proceed.
+        title: After this, a new window will appear, allowing you to test the connectivity. However, since we are using a Gateway, a different set of MQTT topics is required for proper integration with the IoT Hub gateway device. You can skip this step. For now, we will identify the MQTT server to use for the connection: "mqtt.thingsboard.cloud". Click the "**Close**" button to proceed.
     ===
         image: https://img.thingsboard.io/devices-library/ready-to-go-devices/ncd-vibration-temperature-sensor/adding-new-is-gateway-device-6-pe.png,
         title: We have successfully added a new Gateway configured to use the MQTT protocol. The next step is to configure the MQTT credentials in the Enterprise IIoT Gateway to verify connectivity.
@@ -181,7 +180,7 @@ The first step is to add a new [device](/docs/{{docsPrefix}}user-guide/ui/device
 
 ## Importing and configuring the NCD template flow
 
-The next step is to **import** and **configure** a pre-configured **flow template**. This flow will allow us to filter and format the vibration sensor data before connecting it to the ThingsBoard MQTT broker server and publishing the sensor data. The flow will also set the appropriate topics based on the ThingsBoard MQTT Gateway API reference. To import the flow into your workspace, begin by navigating to the GitHub repository and copying or downloading the RAW JSON file: [ncd-vibration-sensor-t80-to-thingsboard-mqtt.json](/docs/devices-library/resources/ncd-vibration-sensor-t80-to-thingsboard-mqtt.json){:target="_blank"}
+The next step is to **import** and **configure** a pre-configured **flow template**. This flow will allow us to filter and format the vibration sensor data before connecting it to the IoT Hub MQTT broker server and publishing the sensor data. The flow will also set the appropriate topics based on the IoT Hub MQTT Gateway API reference. To import the flow into your workspace, begin by navigating to the GitHub repository and copying or downloading the RAW JSON file: [ncd-vibration-sensor-t80-to-thingsboard-mqtt.json](/docs/devices-library/resources/ncd-vibration-sensor-t80-to-thingsboard-mqtt.json){:target="_blank"}
 
 {% capture difference %}
 **Internal note**: This flow will be on NCD Github repository.
@@ -238,7 +237,7 @@ Next, we will provide a general overview of the function of each node in this fl
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
-**ncd-set-mqtt-topic-connect**: This node sets the MQTT topic for ThingsBoard, which serves to inform the platform that the device is successfully connected to the Gateway.   
+**ncd-set-mqtt-topic-connect**: This node sets the MQTT topic for IoT Hub, which serves to inform the platform that the device is successfully connected to the Gateway.   
 **msg.topic = &#39;v1/gateway/connect&#39;**
 
 ![image](https://img.thingsboard.io/devices-library/ready-to-go-devices/ncd-vibration-temperature-sensor/36-ncd-to-thingsboard-node-red-topic-connect.png)
@@ -249,7 +248,7 @@ Next, we will provide a general overview of the function of each node in this fl
 ![image](https://img.thingsboard.io/devices-library/ready-to-go-devices/ncd-vibration-temperature-sensor/37-ncd-to-thingsboard-node-red-filter-by-type.png)
 
 <br>
-**ncd-attributes**: This is a function node that uses JavaScript code to ensure that a sensor_data message of **type 80** is sent only once after a deployment. The node allows us to define various **sensor attributes**, such as the **address**, **sensor name**, **firmware version**, **node ID**, and **sensor type**. These attributes are then wrapped in the correct format according to the ThingsBoard MQTT Gateway API. Below is the JavaScript code:
+**ncd-attributes**: This is a function node that uses JavaScript code to ensure that a sensor_data message of **type 80** is sent only once after a deployment. The node allows us to define various **sensor attributes**, such as the **address**, **sensor name**, **firmware version**, **node ID**, and **sensor type**. These attributes are then wrapped in the correct format according to the IoT Hub MQTT Gateway API. Below is the JavaScript code:
 
 ```js
 // Retrieve the 'flag' from the context or default to false
@@ -283,7 +282,7 @@ if (!flag) {
 }
 ```
 
-**ncd-set-mqtt-topic-attributes**:  This node sets the MQTT topic for ThingsBoard. The topic is used to update the sensor attributes on ThingsBoard.   
+**ncd-set-mqtt-topic-attributes**:  This node sets the MQTT topic for IoT Hub. The topic is used to update the sensor attributes on IoT Hub.   
 **msg.topic = &#39;v1/gateway/attributes&#39;**
 
 ![image](https://img.thingsboard.io/devices-library/ready-to-go-devices/ncd-vibration-temperature-sensor/38-ncd-to-thingsboard-node-red-topic-atributes.png)
@@ -294,7 +293,7 @@ if (!flag) {
 ![image](https://img.thingsboard.io/devices-library/ready-to-go-devices/ncd-vibration-temperature-sensor/39-ncd-to-thingsboard-node-red-battery.png)
 
 <br>
-**ncd-telemetry**: This is a function node. The JavaScript code extracts the **Sensor MAC address** and **timestamp** data from the msg.payload message. It then retrieves the **sensor_data** message (which includes battery percentage) and wraps it in the correct format for the ThingsBoard MQTT Gateway API. The JavaScript code is as follows:
+**ncd-telemetry**: This is a function node. The JavaScript code extracts the **Sensor MAC address** and **timestamp** data from the msg.payload message. It then retrieves the **sensor_data** message (which includes battery percentage) and wraps it in the correct format for the IoT Hub MQTT Gateway API. The JavaScript code is as follows:
 
 ```js
 // Destructure relevant properties from msg.payload
@@ -319,28 +318,28 @@ msg.payload = {
 return msg;
 ```
 
-**ncd-set-mqtt-topic-telemetry**: this node Set the MQTT ThingsBoard telemetry topic, this topic serves to set the sensor data values on telemetry ThingsBoard.   
+**ncd-set-mqtt-topic-telemetry**: this node Set the MQTT IoT Hub telemetry topic, this topic serves to set the sensor data values on telemetry IoT Hub.   
 **msg.topic = &#39;v1/gateway/telemetry&#39;**
 
 ![image](https://img.thingsboard.io/devices-library/ready-to-go-devices/ncd-vibration-temperature-sensor/40-ncd-to-thingsboard-node-red-topic-telemetry.png)
 
 <br>
-**ncd-to-thingsboard**: This MQTT output node establishes a connection to the MQTT Broker using the required credentials to connect to ThingsBoard, allowing the data generated by the vibration sensor to be published to the ThingsBoard Cloud.
+**ncd-to-thingsboard**: This MQTT output node establishes a connection to the MQTT Broker using the required credentials to connect to IoT Hub, allowing the data generated by the vibration sensor to be published to the IoT Hub Cloud.
 
 ![image](https://img.thingsboard.io/devices-library/ready-to-go-devices/ncd-vibration-temperature-sensor/41-ncd-to-thingsboard-node-red-mqtt-node.png)
 
 <br>
-Once we've reviewed the general functions of each Node-RED node in the flow, the next step is to configure the MQTT out node with the credentials generated in **ThingsBoard**. To access the properties of this node, double-click on the "**ncd-to-ThingsBoard**" node. Once you've opened the properties, the first step is to configure the "**mqtt-broker config node**". To do this, click the "**Add new mqtt-broker config node**" button.
+Once we've reviewed the general functions of each Node-RED node in the flow, the next step is to configure the MQTT out node with the credentials generated in **IoT Hub**. To access the properties of this node, double-click on the "**ncd-to-ThingsBoard**" node. Once you've opened the properties, the first step is to configure the "**mqtt-broker config node**". To do this, click the "**Add new mqtt-broker config node**" button.
 
 ![image](https://img.thingsboard.io/devices-library/ready-to-go-devices/ncd-vibration-temperature-sensor/42-ncd-to-thingsboard-node-red-add-new-mqtt.png)
 
 <br>
-The next step is to set the Server property with the ThingsBoard MQTT Broker server address: "**mqtt.thingsboard.cloud**". For this example, we&#39;ll use the default port, **1883**. Lastly, you need to configure the **Client ID** property, which is generated in ThingsBoard.
+The next step is to set the Server property with the IoT Hub MQTT Broker server address: "**mqtt.thingsboard.cloud**". For this example, we&#39;ll use the default port, **1883**. Lastly, you need to configure the **Client ID** property, which is generated in IoT Hub.
 
 ![image](https://img.thingsboard.io/devices-library/ready-to-go-devices/ncd-vibration-temperature-sensor/43-ncd-to-thingsboard-node-red-client-id.png)
 
 <br>
-The next step is to navigate to the security tab and enter the **Username** and **Password** credentials generated in **ThingsBoard**.
+The next step is to navigate to the security tab and enter the **Username** and **Password** credentials generated in **IoT Hub**.
 
 ![image](https://img.thingsboard.io/devices-library/ready-to-go-devices/ncd-vibration-temperature-sensor/44-ncd-to-thingsboard-node-red-security.png)
 
@@ -360,7 +359,7 @@ To save the changes made within the MQTT out node, click on the "**Done**" icon.
 ![image](https://img.thingsboard.io/devices-library/ready-to-go-devices/ncd-vibration-temperature-sensor/47-ncd-to-thingsboard-node-red-done.png)
 
 <br>
-Once the MQTT credentials are configured, the next time the NCD vibration sensor transmits a message, it will be published to ThingsBoard via MQTT on the corresponding topic. To save and apply the changes made in your Node-RED application, click the "**Deploy**" button located at the top-right corner of the Node-RED editor.
+Once the MQTT credentials are configured, the next time the NCD vibration sensor transmits a message, it will be published to IoT Hub via MQTT on the corresponding topic. To save and apply the changes made in your Node-RED application, click the "**Deploy**" button located at the top-right corner of the Node-RED editor.
 
 ![image](https://img.thingsboard.io/devices-library/ready-to-go-devices/ncd-vibration-temperature-sensor/48-ncd-to-thingsboard-node-red-deploy.png)
 
@@ -384,7 +383,7 @@ To test communication, you can manually **trigger a data transmission** from the
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
-Once a new message is transmitted by the sensor, you should be able to see some messages into the debug window that comes from the "**debug thingsboard**" node, you can identify this messages by the **msg.topic** property:
+Once a new message is transmitted by the sensor, you should be able to see some messages into the debug window that comes from the "**debug iot hub**" node, you can identify this messages by the **msg.topic** property:
 
 - **v1/gateway/connect**   
 - **v1/gateway/attributes**   
@@ -399,7 +398,7 @@ The flow then uses the information from the RUN and sensor_data messages to buil
 ## Connect message
 
 This first message is generated when the **Industrial IoT Wireless Vibration Temperature Sensor** successfully establishes a connection with the **Enterprise IIoT Gateway**. **The Wireless Gateway node** receives the **sensor_mode** message, which contains the connection status of the sensor. The flow then uses a **switch node** to check if the message is a **RUN** message, indicating the sensor is successfully connected and operational.
-If the message is a **RUN** message, the flow extracts the **MAC address** of the sensor and formats the message according to the **ThingsBoard API**. This message is crucial as it informs ThingsBoard that the device is successfully connected to the Gateway, allowing the platform to recognize the sensor and begin receiving telemetry and attribute data for further analysis and visualization.
+If the message is a **RUN** message, the flow extracts the **MAC address** of the sensor and formats the message according to the **IoT Hub API**. This message is crucial as it informs IoT Hub that the device is successfully connected to the Gateway, allowing the platform to recognize the sensor and begin receiving telemetry and attribute data for further analysis and visualization.
 
 ```
 Topic: v1/gateway/connect
@@ -415,9 +414,9 @@ Message: {
 
 ### Attributes message
 
-To build this message, the flow uses the **sensor_data** message, which contains essential sensor data. It extracts key pieces of information such as the **sensor name**, **firmware version**, **node ID**, and **sensor type**. This data is then formatted according to the **ThingsBoard attributes API**, which requires the data to be in key-value pair format. The flow sends this message only once to ThingsBoard.
+To build this message, the flow uses the **sensor_data** message, which contains essential sensor data. It extracts key pieces of information such as the **sensor name**, **firmware version**, **node ID**, and **sensor type**. This data is then formatted according to the **IoT Hub attributes API**, which requires the data to be in key-value pair format. The flow sends this message only once to IoT Hub.
 
-In ThingsBoard, **device attributes** are key-value pairs that are associated with a device. These attributes are used to store important information, such as configuration settings, metadata, and operational details, providing context for the device. By including the sensor's attributes, ThingsBoard can store relevant information like the sensor's name, its version, and other characteristics, which are crucial for monitoring and managing the device efficiently within the platform.
+In IoT Hub, **device attributes** are key-value pairs that are associated with a device. These attributes are used to store important information, such as configuration settings, metadata, and operational details, providing context for the device. By including the sensor's attributes, IoT Hub can store relevant information like the sensor's name, its version, and other characteristics, which are crucial for monitoring and managing the device efficiently within the platform.
 
 ```
 Topic: v1/gateway/attributes
@@ -440,9 +439,9 @@ Message:{
 
 ### Telemetry message
 
-This message contains the real-time **sensor data**, which includes key readings such as **temperature**, **vibration**, and **battery percentage**. The flow formats this data and publishes it to **ThingsBoard** as **telemetry data**. Telemetry data in ThingsBoard is used for real-time monitoring and visualization, enabling users to track the sensor's status and performance over time.
+This message contains the real-time **sensor data**, which includes key readings such as **temperature**, **vibration**, and **battery percentage**. The flow formats this data and publishes it to **IoT Hub** as **telemetry data**. Telemetry data in IoT Hub is used for real-time monitoring and visualization, enabling users to track the sensor's status and performance over time.
 
-By sending this telemetry message, the sensor's data is continuously updated on the ThingsBoard platform, where it can be displayed on dashboards for analysis, triggering alerts, or taking other actions based on the sensor&#39;s readings. This allows for effective monitoring and management of sensor networks in industrial IoT applications.
+By sending this telemetry message, the sensor's data is continuously updated on the IoT Hub platform, where it can be displayed on dashboards for analysis, triggering alerts, or taking other actions based on the sensor&#39;s readings. This allows for effective monitoring and management of sensor networks in industrial IoT applications.
 
 ```
 Topic: v1/gateway/attributes
@@ -464,15 +463,15 @@ Message: {
 
 ![image](https://img.thingsboard.io/devices-library/ready-to-go-devices/ncd-vibration-temperature-sensor/54-ncd-to-thingsboard-debug-sensor-data.png)
 
-## Checking connection to ThingsBoard Cloud
+## Checking connection to IoT Hub 
 
-Now, return to the **ThingsBoard** platform. You will notice that a new device has been automatically added, identified by its **MAC address**. Both the **Enterprise IIoT Gateway** and the **Sensor device** will show an **Active** state. The system will automatically update the device status based on the sensor&#39;s communication.
-You can click on the newly added device to explore its details, **Attributes**, **Latest telemetry**, **Alarms**, **Events**, **Relations**, **Audit Logs**, among others. By reviewing these sections, you can gain deeper insights into the device's status and performance within the ThingsBoard platform.
+Now, return to the **IoT Hub** platform. You will notice that a new device has been automatically added, identified by its **MAC address**. Both the **Enterprise IIoT Gateway** and the **Sensor device** will show an **Active** state. The system will automatically update the device status based on the sensor&#39;s communication.
+You can click on the newly added device to explore its details, **Attributes**, **Latest telemetry**, **Alarms**, **Events**, **Relations**, **Audit Logs**, among others. By reviewing these sections, you can gain deeper insights into the device's status and performance within the IoT Hub platform.
 
 {% assign createdDevice1 = '
     ===
         image: https://img.thingsboard.io/devices-library/ready-to-go-devices/ncd-vibration-temperature-sensor/created-new-device-1-pe.png,
-        title: Now, return to the **ThingsBoard** platform. You will notice that a new device has been automatically added, identified by its **MAC address**. Both the **Enterprise IIoT Gateway** and the **Sensor device** will show an **Active** state. The system will automatically update the device status based on the sensor's communication.
+        title: Now, return to the **IoT Hub** platform. You will notice that a new device has been automatically added, identified by its **MAC address**. Both the **Enterprise IIoT Gateway** and the **Sensor device** will show an **Active** state. The system will automatically update the device status based on the sensor's communication.
 '
 %}
 
@@ -494,7 +493,7 @@ You can click on the "**Attributes**" tab to view the newly added sensor attribu
 
 {% include images-gallery.liquid imageCollection=createdDevice2 %}
 
-You can also view the latest sensor telemetry under the "**Latest telemetry**" tab. This section displays the sensor's real-time data, such as temperature, vibration, and battery percentage. These values are updated every time the sensor transmits data to the ThingsBoard platform. This telemetry data is of primary interest for monitoring the sensor's performance and status. You can use this data to create alarms or build dashboards that visually represent the sensor's real-time measurements. You should see something similar to this, displaying the updated values each time the sensor sends data.
+You can also view the latest sensor telemetry under the "**Latest telemetry**" tab. This section displays the sensor's real-time data, such as temperature, vibration, and battery percentage. These values are updated every time the sensor transmits data to the IoT Hub platform. This telemetry data is of primary interest for monitoring the sensor's performance and status. You can use this data to create alarms or build dashboards that visually represent the sensor's real-time measurements. You should see something similar to this, displaying the updated values each time the sensor sends data.
 
 {% assign createdDevice3 = '
     ===
@@ -505,9 +504,9 @@ You can also view the latest sensor telemetry under the "**Latest telemetry**" t
 
 {% include images-gallery.liquid imageCollection=createdDevice3 %}
 
-## Create a ThingsBoard Dashboard
+## Create a IoT Hub Dashboard
 
-The next step is to create a ThingsBoard [Dashboard](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"}. The **Dashboard** in ThingsBoard allows users to visualize and monitor data collected from IoT devices. Let's create a dashboard and add some [widgets](/docs/{{docsPrefix}}user-guide/widgets/){:target="_blank"} to display a list of entities and their latest NCD Sensor values.
+The next step is to create a IoT Hub [Dashboard](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"}. The **Dashboard** in IoT Hub allows users to visualize and monitor data collected from IoT devices. Let's create a dashboard and add some [widgets](/docs/{{docsPrefix}}user-guide/widgets/){:target="_blank"} to display a list of entities and their latest NCD Sensor values.
 To create a new, empty dashboard, follow these steps:
 
 {% assign addingDashboard = '
@@ -561,10 +560,10 @@ To add more widgets to the dashboard, follow this steps:
         title: You will need to set the "**Device**" property again with the NCD device that we previously added. The next step is to set the "**Data key**" property. Click on the "**Data key**" field, and this will display the list of variables emitted by the NCD vibration sensor. From the list, select the property defined as "**battery_percent**";
     ===
         image: https://img.thingsboard.io/devices-library/ready-to-go-devices/ncd-vibration-temperature-sensor/adding-new-dashboard-13-pe.png,
-        title: We will adjust the layout by selecting the "**Horizontal. Divided**" option under the "**Appearance**" properties. ThingsBoard provides real-time visualization of available layout types for this widget, making it a valuable tool for fine-tuning this property. Click "**Add**";
+        title: We will adjust the layout by selecting the "**Horizontal. Divided**" option under the "**Appearance**" properties. IoT Hub provides real-time visualization of available layout types for this widget, making it a valuable tool for fine-tuning this property. Click "**Add**";
     ===
         image: https://img.thingsboard.io/devices-library/ready-to-go-devices/ncd-vibration-temperature-sensor/adding-new-dashboard-14-pe.png,
-        title: Edit the size and position of the widget according to your needs. To save any changes made to your ThingsBoard dashboard, you should click the "**Save**" button located in the upper right corner.
+        title: Edit the size and position of the widget according to your needs. To save any changes made to your IoT Hub dashboard, you should click the "**Save**" button located in the upper right corner.
 '
 %}
 
@@ -583,6 +582,6 @@ Finally, our dashboard is displayed as follows:
 
 ## Summary
 
-This tutorial explained the basic, step-by-step process of integrating the NCD Industrial IoT Wireless Vibration and Temperature Sensor with ThingsBoard Cloud, enabling you to manage and visualize the vibration and temperature variables sent by the NCD sensor.
+This tutorial explained the basic, step-by-step process of integrating the NCD Industrial IoT Wireless Vibration and Temperature Sensor with IoT Hub Cloud, enabling you to manage and visualize the vibration and temperature variables sent by the NCD sensor.
 
-After successfully connecting the NCD Industrial IoT Wireless Vibration and Temperature Sensor to the ThingsBoard platform, you can expand its functionality by setting up thresholds and alarms for sensor data, enabling notifications via email, SMS, or web when thresholds are exceeded. You can manage users by adding them with specific roles and permissions, allowing customized access to devices and dashboards. 
+After successfully connecting the NCD Industrial IoT Wireless Vibration and Temperature Sensor to the IoT Hub platform, you can expand its functionality by setting up thresholds and alarms for sensor data, enabling notifications via email, SMS, or web when thresholds are exceeded. You can manage users by adding them with specific roles and permissions, allowing customized access to devices and dashboards. 

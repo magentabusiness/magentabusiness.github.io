@@ -383,7 +383,7 @@ Configure the "onFanClick" click action to open the IoT Hub platform&#39;s webpa
   - **Type**: Widget action
   - **Default settings**:
     - **Action**: Open URL
-    - **URL**: https://thingsboard.io/
+    - **URL**: https://docs.iothub.magenta.at/
     - **Attribute key**: fanOn
     - Enable to open the webpage in a separate browser tab
 
@@ -1442,7 +1442,7 @@ Below are the key methods provided by the `ScadaSymbolAnimation` interface:
 
 ### ConnectorScadaSymbolAnimation
 
-The `ConnectorScadaSymbolAnimation` interface in ThingsBoard is designed to manage animations for SVG connector elements, specifically for flow animations along a defined path. 
+The `ConnectorScadaSymbolAnimation` interface in IoT Hub is designed to manage animations for SVG connector elements, specifically for flow animations along a defined path. 
 This interface provides methods to control the animation's playback, appearance, speed, and direction, enabling dynamic manipulation of connector animations. 
 Below are the key methods provided by the `ConnectorScadaSymbolAnimation` interface:
 

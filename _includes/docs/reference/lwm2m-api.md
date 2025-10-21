@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-> Before proceeding, we recommend reviewing the general [Getting Started guide](/docs/{{docsPrefix}}getting-started-guides/helloworld/){:target="_blank"} to become familiar with ThingsBoard basics. Additionally, it is advisable to explore the [Device profiles](/docs/{{docsPrefix}}user-guide/device-profiles/){:target="_blank"} documentation.
+> Before proceeding, we recommend reviewing the general [Getting Started guide](/docs/{{docsPrefix}}getting-started-guides/helloworld/){:target="_blank"} to become familiar with IoT Hub basics. Additionally, it is advisable to explore the [Device profiles](/docs/{{docsPrefix}}user-guide/device-profiles/){:target="_blank"} documentation.
 
 ## LwM2M basics
 
@@ -34,7 +34,7 @@ If the model explicitly includes the <ObjectVersion> tag for a given <ObjectID>,
 
 If the <ObjectVersion> tag is absent, the system sets ObjectVersion = 1.0 when adding the model structure to the device profile.
 
-> ⚠️ **Note**: Important!!! ObjectVersion is always controlled by the ThingsBoard LwM2M transport through the model added to the corresponding device profile.
+> ⚠️ **Note**: Important!!! ObjectVersion is always controlled by the IoT Hub LwM2M transport through the model added to the corresponding device profile.
 
 During LwM2M client registration, the initialization procedure is triggered as defined in the profile configuration: Read (Attributes and/or Telemetry), and Observe of those fields.
 If the ObjectVersion in the profile differs from the ObjectVersion sent by the LwM2M client during registration, all initialization operations for that object will be rejected.
@@ -55,17 +55,17 @@ Example usage of object version syntax when sending requests from the terminal:
 ```
 
 #### Handling object versions when sending requests from the terminal
-If an LwM2M client registered in the ThingsBoard LwM2M transport has ObjectID = 3, ObjectVersion = 1.1, then the request "/3_1.1/0/9" will be successfully processed.
+If an LwM2M client registered in the IoT Hub LwM2M transport has ObjectID = 3, ObjectVersion = 1.1, then the request "/3_1.1/0/9" will be successfully processed.
 
 If an LwM2M client has ObjectID = 3, ObjectVersion = 1.2, and the request is "/3_1.1/0/9", the request will be rejected and return an error with the message:
 "Invalid object version. Required version: 1.1"
 
 ```bash
-  // LwM2M client registered in the ThingsBoard LwM2M transport has ObjectID = 3, ObjectVersion = 1.1
+  // LwM2M client registered in the IoT Hub LwM2M transport has ObjectID = 3, ObjectVersion = 1.1
 "/3_1.1/0/9"    // ok
 "/3_1.2/0/9"    // return error
 
-  // LwM2M client registered in the ThingsBoard LwM2M transport has ObjectID = 3, ObjectVersion = 1.2
+  // LwM2M client registered in the IoT Hub LwM2M transport has ObjectID = 3, ObjectVersion = 1.2
 "/3_1.1/0/9"    // return error
 "/3_1.2/0/9"    // ok
 ````
@@ -99,7 +99,7 @@ To begin, the {% if docsPrefix == "pe/" or docsPrefix == null %}System administr
 
 > **Make sure** that the versions of the LwM2M models you upload match the versions of the LwM2M objects used by your actual devices.
 
-- Log in to your ThingsBoard instance as a System administrator.
+- Log in to your IoT Hub instance as a System administrator.
 - Navigate to the "Resources library" page under the "Resources" section.
 - Click the "+" (Add resource) button in the top-right corner of the window.
 - Upload one or more LwM2M model files.
@@ -157,9 +157,9 @@ To do this, follow these steps:
 
 #### Step 2.3 Configure the Mapping
 
-Now let&#39;s configure how ThingsBoard should process LwM2M object data:
-- The **device object** provides **manufacturer**, **model number**, and **serial number**. Let&#39;s configure ThingsBoard to receive this data as **attributes**.
-- We will observe and collect data such as **radio signal strength**, **link quality**, and **device location**, and store it as **telemetry** in ThingsBoard.
+Now let&#39;s configure how IoT Hub should process LwM2M object data:
+- The **device object** provides **manufacturer**, **model number**, and **serial number**. Let&#39;s configure IoT Hub to receive this data as **attributes**.
+- We will observe and collect data such as **radio signal strength**, **link quality**, and **device location**, and store it as **telemetry** in IoT hub.
 
 > The **Observe** feature in LwM2M allows the server to receive data only when the values change.<br>
   You can also configure conditions for reporting specific resources via LwM2M attributes (covered in the [advanced](#object-and-resource-attributes) section).<br>
@@ -171,8 +171,8 @@ Now let&#39;s configure how ThingsBoard should process LwM2M object data:
 
 To do this, follow these steps:
 - For each selected object:
-  - Check the "**Attributes**" box for any data you want to retrieve when the device connects and store it as ThingsBoard **attributes**.
-  - Check the "**Telemetry**" and/or "**Observe**" boxes if you want the Server to monitor those values, fetch updates, and store them as ThingsBoard **telemetry**.
+  - Check the "**Attributes**" box for any data you want to retrieve when the device connects and store it as IoT Hub **attributes**.
+  - Check the "**Telemetry**" and/or "**Observe**" boxes if you want the Server to monitor those values, fetch updates, and store them as IoT Hub **telemetry**.
 - By default, the **observe strategy** - **Single**. You can choose **observe strategy** - **Composite all** or **Composite by object** to reduce traffic or group resources differently.
 - By default, the **observe strategy** is set to **Single**. You can switch to **Composite all** or **Composite by object** to reduce traffic or to group resources more efficiently.
 - Click "Save" to apply the changes.
@@ -185,7 +185,7 @@ Additionally, the "**Transport configuration**" tab also allows you to configure
 
 ##### Step 2.3.1 Observe strategy
 
-ThingsBoard supports multiple observe strategies that define how LwM2M resources are grouped and monitored.
+IoT Hub supports multiple observe strategies that define how LwM2M resources are grouped and monitored.
 
 - **Single** (default): Each resource is observed individually.  
   _✓ Best accuracy_<br>
@@ -225,7 +225,7 @@ If you perform Observe operations manually (e.g., via terminal), make sure to ac
 We assume you have successfully created a device profile for LwM2M devices in the previous steps.
 Now let&#39;s create a new device, assign it the previously created LwM2M profile, and configure its credentials.
 
-ThingsBoard supports four types of credentials:
+IoT Hub supports four types of credentials:
 - **Pre-Shared Key (PSK)**
 - **Raw Public Key (RPK)**
 - **X.509 Certificate**
@@ -256,7 +256,7 @@ At this point, you should have:
 - Provisioned the LwM2M device and its credentials (as described in the previous step).
 - Built the Eclipse Wakaama [test client](https://github.com/eclipse/wakaama#test-client-example){:target="_blank"}.
 
-Now you are ready to start the client and observe incoming telemetry in ThingsBoard.
+Now you are ready to start the client and observe incoming telemetry in IoT Hub.
 
 <b><font size="4">Launch the test client</font></b>
 
@@ -277,7 +277,7 @@ Run the following command from your terminal:
 <b><font size="4">Monitoring telemetry</font></b>
 
 Once the client connects:
-- The device will register with the ThingsBoard LwM2M transport.
+- The device will register with the IoT Hub LwM2M transport.
 - You will begin to receive telemetry data.
 
 The LwM2M transport implementation also stores the logs of communication with the device into telemetry.
@@ -300,17 +300,17 @@ In the following sections, we will use screenshots of the LwM2M device profile U
 
 ### Reading LwM2M resources into IoT Hub attributes
 
-You may configure a device profile to read and/or observe specific LwM2M resources. When configured, the values of these resources will be stored as device attributes in ThingsBoard.
+You may configure a device profile to read and/or observe specific LwM2M resources. When configured, the values of these resources will be stored as device attributes in IoT Hub.
 
 To store resource as the attribute:
 - Navigate to the "**Transport configuration**" tab of your LwM2M device profile.
 - Locate the desired **LwM2M resource**.
-- Select the "**Attribute**" checkbox to store its value as a ThingsBoard attribute.
+- Select the "**Attribute**" checkbox to store its value as a IoT Hub attribute.
 - Optionally, modify the auto-generated key to define a custom **attribute name**.
 
 > IoT Hub will read the attribute value during device registration (LwM2M "Register" operation) or during registration update (LwM2M "Update" operation).
 
-**Example:** Let&#39;s configure the platform to read the **LwM2M resource** */3/0/2* (Device Serial Number) and store it in ThingsBoard as an attribute named "*serialNumber*".
+**Example:** Let&#39;s configure the platform to read the **LwM2M resource** */3/0/2* (Device Serial Number) and store it in IoT Hub as an attribute named "*serialNumber*".
 
 {% if docsPrefix == null %}
 ![image](/images/lwm2m/read-lwm2m-resources-attributes-ce.png)
@@ -333,25 +333,25 @@ To do this, check the "**Observe**" box for the desired resource. This will subs
 ![image](/images/lwm2m/observe-lwm2m-resources-pe.png)
 {% endif %}
 
-With this setup, the *timezone* attribute in ThingsBoard will always contain the latest value of the *Timezone* resource.
+With this setup, the *timezone* attribute in IoT Hub will always contain the latest value of the *Timezone* resource.
 
-### Write LwM2M resource via ThingsBoard attributes update
+### Write LwM2M resource via IoT Hub attributes update
 
-ThingsBoard enables configuration updates to be pushed to LwM2M devices using [Shared attributes](/docs/{{docsPrefix}}user-guide/attributes/#shared-attributes){:target="_blank"}. 
+IoT Hub enables configuration updates to be pushed to LwM2M devices using [Shared attributes](/docs/{{docsPrefix}}user-guide/attributes/#shared-attributes){:target="_blank"}. 
 These updates can be initiated from various sources, such as:
 - The administration UI
 - A dashboard [widget](/docs/{{docsPrefix}}user-guide/widgets/){:target="_blank"}
 - [The REST API](/docs/{{docsPrefix}}reference/rest-api/){:target="_blank"}
 - [A Rule Engine node](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#rule-node){:target="_blank"}
 
-Once you change the shared attribute, ThingsBoard will search for the mapping between the attribute key and LwM2M resource in the device profile.
+Once you change the shared attribute, IoT Hub will search for the mapping between the attribute key and LwM2M resource in the device profile.
 If the resource is marked as an attribute, platform will send the LwM2M Write operation to the LwM2M client device.
 
 > See the *Timezone* example in the [reading attributes](#reading-lwm2m-resources-into-thingsboard-attributes) section.
 
 ### Read LwM2M resources to time series data
 
-You may configure the device profile to read and observe specific LwM2M resources and store their values as telemetry [time series data](/docs/{{docsPrefix}}user-guide/telemetry/){:target="_blank"} data in ThingsBoard.
+You may configure the device profile to read and observe specific LwM2M resources and store their values as telemetry [time series data](/docs/{{docsPrefix}}user-guide/telemetry/){:target="_blank"} data in IoT Hub.
 
 To store resource as the telemetry:
 - Navigate to the "**Transport configuration**" tab of your LwM2M device profile.
@@ -359,7 +359,7 @@ To store resource as the telemetry:
 - Select the "**Telemetry**" checkbox.
 - Optionally, customize the telemetry key name by changing the auto-generated key.
 
-**For example**, let&#39;s configure the platform to read the LwM2M Resources: */3/0/7* (Power Source Voltage), */3/0/8* (Power Source Current), */3/0/9* (Battery Level), and */3/0/10* (Memory Free), and to store them as time series data in ThingsBoard:
+**For example**, let&#39;s configure the platform to read the LwM2M Resources: */3/0/7* (Power Source Voltage), */3/0/8* (Power Source Current), */3/0/9* (Battery Level), and */3/0/10* (Memory Free), and to store them as time series data in IoT Hub:
 
 {% if docsPrefix == null %}
 ![image](/images/lwm2m/read-lwm2m-resources-time-series-ce.png)
@@ -368,7 +368,7 @@ To store resource as the telemetry:
 ![image](/images/lwm2m/read-lwm2m-resources-time-series-pe.png)
 {% endif %}
 
-### Execute LwM2M operation using the ThingsBoard RPC command
+### Execute LwM2M operation using the IoT Hub RPC command
 
 IoT Hub supports **on-demand execution of LwM2M operations** using its **Remote Procedure Call (RPC)** feature. For simplicity, we often refer to RPCs as "**commands**".
 
@@ -1387,7 +1387,7 @@ To be able to run the update using Object 5, you have to make sure that Object 5
 
 ### Firmware update strategy
 
-ThingsBoard provides multiple strategies to run OTA firmware updates over LwM2M transport:<br>
+IoT Hub provides multiple strategies to run OTA firmware updates over LwM2M transport:<br>
 - Push firmware update as binary file using Object 5 and Resource 0 (Package)<br>
 - Auto-generate unique CoAP URL to download the package and push firmware update as Object 5 and Resource 1 (Package URI)<br>
 - Push firmware update as binary file using Object 19 and Resource 0 (Data)
@@ -1404,7 +1404,7 @@ To select firmware update strategy:
 
 ### Use Object 19 for OTA file metadata [Optional]
 
-ThingsBoard also supports **Object 19**, which enables delivery of **firmware metadata**.
+IoT Hub also supports **Object 19**, which enables delivery of **firmware metadata**.
 
 > ⚠️ This feature is complementary to Object 5, not a replacement.
 
@@ -1416,10 +1416,10 @@ To enable Object 19 usage:
 
 {% include images-gallery.html imageCollection="firmware-update-strategy-2" %}
 
-When this option is enabled, ThingsBoard will:
+When this option is enabled, IoT Hub will:
 
-1. At device connection, ThingsBoard verifies that **Object 19 is supported** by the device.
-2. If present, ThingsBoard creates an instance of Object 19 with **InstanceId** = **65534** (used for firmware metadata).
+1. At device connection, IoT Hub verifies that **Object 19 is supported** by the device.
+2. If present, IoT Hub creates an instance of Object 19 with **InstanceId** = **65534** (used for firmware metadata).
 3. FOTA metadata is sent to this instance as a **Base64-encoded JSON object**.
 
 FOTA metadata JSON structure:
@@ -1482,7 +1482,7 @@ feedback from the device on the status of the update process:
 
 ### Software update strategy
 
-ThingsBoard supports multiple ways to initiate software updates using the LwM2M transport:<br>
+IoT Hub supports multiple ways to initiate software updates using the LwM2M transport:<br>
 - **Push binary file using Object 9 and Resource 2 (Package)**<br>
 - **Auto-generate unique CoAP URL to download the package and push software update using Object 9 and Resource 3 (Package URI)**
 
@@ -1498,7 +1498,7 @@ To select software update strategy:
 
 ### Use Object 19 for OTA file metadata [Optional]
 
-ThingsBoard also supports Object 19 to deliver software update metadata (SOTA):
+IoT Hub also supports Object 19 to deliver software update metadata (SOTA):
 
 > ⚠️ This feature is complementary to Object 5, not a replacement.
 
@@ -1510,10 +1510,10 @@ To enable Object 19 usage:
 
 {% include images-gallery.html imageCollection="software-update-strategy-2" %}
 
-When this option is enabled, ThingsBoard will:
+When this option is enabled, IoT Hub will:
 
-1. At device connection, ThingsBoard verifies that **Object 19 is supported** by the device.
-2. If present, ThingsBoard creates an instance of Object 19 with **InstanceId** = **65535** (used for firmware metadata).
+1. At device connection, IoT Hub verifies that **Object 19 is supported** by the device.
+2. If present, IoT Hub creates an instance of Object 19 with **InstanceId** = **65535** (used for firmware metadata).
 3. SOTA metadata is sent to this instance as a **Base64-encoded JSON object**.
 
 SOTA metadata JSON structure:
@@ -1558,10 +1558,10 @@ This option allows running the software update with the image file located on th
 the server generates a CoAP-URL and  sends it to the client, and the client downloads software image from the external 
 resource directly without transferring image to the server.
 
-## Test OTA using ThingsBoard LwM2M Demo Client
+## Test OTA using IoT Hub LwM2M Demo Client
 
 The [ThingsBoard LwM2M Demo Client](https://github.com/thingsboard/thingsboard.lwm2m.demo.client) is a command-line tool 
-designed to simulate an LwM2M client and connect it to a ThingsBoard server.
+designed to simulate an LwM2M client and connect it to a IoT Hub server.
 
 This client can be used to test OTA firmware and software updates, as it supports:
 

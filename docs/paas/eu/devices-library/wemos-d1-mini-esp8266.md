@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect WeMos D1 Mini based on ESP-12F ESP8266 to ThingsBoard?
+title: How to connect WeMos D1 Mini based on ESP-12F ESP8266 to IoT Hub?
 category: Microcontrollers
 chip: ESP8266
 connectivity: HTTP, MQTT, WIFI

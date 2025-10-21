@@ -8,7 +8,7 @@
 {% if docsPrefix == null or docsPrefix == "pe/" %}
 {{THINGSBOARD_WITH_URL}}{:target="_blank"} {% unless docsPrefix == null %}[White labeling](/docs/{{docsPrefix}}user-guide/white-labeling/){:target="_blank"} feature{% endunless %} allows you to use a custom domain to provide secure user access.
 To achieve this, you need to configure an HAProxy Load Balancer and provide an SSL certificate. [This documentation](/docs/user-guide/install/pe/add-haproxy-ubuntu/){:target="_blank"} will help you do this.
-Once set up, you will be able to access the ThingsBoard platform through your custom domain using a secure (HTTPS) connection.
+Once set up, you will be able to access the IoT Hub platform through your custom domain using a secure (HTTPS) connection.
 {% endif %}
 {% if docsPrefix == "paas/" or docsPrefix == "paas/eu/" %}
 {{THINGSBOARD_WITH_URL}}{:target="_blank"} [White labeling](/docs/{{docsPrefix}}user-guide/white-labeling/){:target="_blank"} feature allows you to use a custom domain to provide a personalized hostname for user access.
@@ -32,7 +32,7 @@ Once done, you can start the procedure of adding a domain.
 
 {% if docsPrefix == "pe/" %}
 {% capture domain_owner_note %}
-Starting from ThingsBoard version 3.9.0, adding your own domain name is available at both the Tenant level and the Customer level.
+Starting from IoT Hub version 3.9.0, adding your own domain name is available at both the Tenant level and the Customer level.
 {% endcapture %}
 {% include templates/info-banner.md content=domain_owner_note %}
 {% endif %}

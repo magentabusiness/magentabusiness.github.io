@@ -15,7 +15,7 @@ Trendz Table view support onRowClick action. You can configure what should happe
 For example, you can save entity to the Dashboard state alias or open new dashboard state.
 
 To enable row click event:
-* Add Trendz Table View on ThingsBoard dashboard.
+* Add Trendz Table View on IoT Hub dashboard.
 * Open widget edit mode and switch to **Actions** tab.
 * Press **Add action** button.
 * In **Action source** field select **On row click**.
@@ -52,7 +52,7 @@ widgetContext.stateController.updateState(stateId, stateParams);
 ```
 ## Configure Date selected action
 
-Trendz Calendar and Anomaly table support date-selected action, allowing you to dynamically update the time window of your ThingsBoard dashboard based on the selected date in either the calendar or the anomaly timerange.
+Trendz Calendar and Anomaly table support date-selected action, allowing you to dynamically update the time window of your IoT Hub dashboard based on the selected date in either the calendar or the anomaly timerange.
 To enable the date-select event:
 1. Add a Trendz View to your dashboard.
 2. Enter widget edit mode and navigate to the Actions tab.
@@ -77,7 +77,7 @@ Our goal is to send a list of energy meters to an alias on the dashboard upon cl
 1. Set the entity type of the entities that you want to send as the alias. In our case it is EM energy meter.
 
    ![image](https://img.thingsboard.io/trendz/set-up-trendz-view.png)
-2. Send this view to the ThingsBoard Dashboard.
+2. Send this view to the IoT Hub Dashboard.
 
 **Step 2. Create New Alias on the Dashboard**
 1. Name the Alias (Remember the alias name for later reference).

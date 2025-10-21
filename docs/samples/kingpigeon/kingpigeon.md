@@ -59,7 +59,7 @@ This article contains instructions on how to configure IoT Hub platform and conn
 <img src="/images/samples/kingpigeon/r4002.png" width="800" alt="step 3">
 <br>
 
-* [Step 2.4] Edit thingsboard configuration.
+* [Step 2.4] Edit iot hub configuration.
 <br/>
 <img src="/images/samples/kingpigeon/r4003.png" width="800"/>
 <br/>1.Choose IoT Hub platform.

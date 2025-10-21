@@ -32,7 +32,7 @@
 
 - Use existing or create new SSH Key that will be used to connect to your instance. Make sure you have access to the SSH Key you have chosen. We will use this key later in the guide to connect to this instance. 
 - Put a meaningful hostname
-- Add "thingsboard" tag, just-in-case, we are not going to use it in this instruction.
+- Add "iot hub" tag, just-in-case, we are not going to use it in this instruction.
 - Finally, click the "Create Droplet" button.
 
 ![image](/images/user-guide/install/digital-ocean-pe/create-final.png)

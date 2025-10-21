@@ -8,7 +8,7 @@ description: IoT Hub End User License Agreement
 <br>
 <p style="text-align: center; font-size: 1.5em; font-weight: bold;">END USER LICENSE AGREEMENT</p>
 
-PLEASE, READ THIS END USER LICENSE AGREEMENT (“AGREEMENT”) VERY CAREFULLY BEFORE CLICKING AN “I AGREE” BUTTON, DOWNLOADING OR USING THINGSBOARD PROFESSIONAL EDITION IOT PLATFORM. IF YOU DO NOT AGREE TO THIS AGREEMENT, PLEASE DO NOT USE THE SOFTWARE
+PLEASE, READ THIS END USER LICENSE AGREEMENT (“AGREEMENT”) VERY CAREFULLY BEFORE CLICKING AN “I AGREE” BUTTON, DOWNLOADING OR USING IOT HUB PROFESSIONAL EDITION IOT PLATFORM. IF YOU DO NOT AGREE TO THIS AGREEMENT, PLEASE DO NOT USE THE SOFTWARE
 
 
 <br>
@@ -33,13 +33,13 @@ DEFINITIONS
 
 **“Offer document”** means the human-readable document with a reference number sent by the Licensor to the Licensee, which contains full terms and conditions of licensing of the Licensee, while the End User License Agreement specifies generic terms.      
 
-**“Software”** means a ThingsBoard closed-source IoT platform that enables rapid development, management and scaling of IoT projects as well as provides a possibility to (i) provision and control devices; (ii) collect and visualize data from devices; (iii) analyze device data and trigger alarms; (iv) transfer device data to other systems; (v) enable use-case specific features using customizable rules and plugins both for online or Closed network deployments. All specific features regarding the Software functionality can be found by the Licensee on the Website.
+**“Software”** means a IoT Hub closed-source IoT platform that enables rapid development, management and scaling of IoT projects as well as provides a possibility to (i) provision and control devices; (ii) collect and visualize data from devices; (iii) analyze device data and trigger alarms; (iv) transfer device data to other systems; (v) enable use-case specific features using customizable rules and plugins both for online or Closed network deployments. All specific features regarding the Software functionality can be found by the Licensee on the Website.
 
 **“Software License fee”** means a payment, which must be contributed, starting from the moment of accepting of this Agreement and which makes it possible for the Licensee (i) to use the Software in compliance with the terms of the License; (ii) to use the support services in the time frame, over which the License fee was contributed.
 
 **“Territory”** means worldwide unless otherwise provided in the Offer document.
 
-**“ThingsBoard Cloud”** means a public managed service cluster offering from the Licensor.
+**“IoT Hub Cloud”** means a public managed service cluster offering from the Licensor.
 
 **“Total License cost”** means a payment for the Software that supports more than 10,000 connected devices.  
 

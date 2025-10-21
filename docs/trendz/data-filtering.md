@@ -26,7 +26,7 @@ empty apartments and focus on apartments located on the second and third floors.
 
 ## Filter Options
 
-You can filter by any field that is present in the ThingsBoard:
+You can filter by any field that is present in the IoT Hub:
 * Asset/Device Name 
 * Asset/Device Label 
 * Asset/Device Owner (Customer) 

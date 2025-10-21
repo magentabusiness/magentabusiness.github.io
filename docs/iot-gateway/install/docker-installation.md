@@ -1,26 +1,26 @@
 ---
 layout: docwithnav-gw
-title: Install ThingsBoard IoT Gateway using Docker Compose
+title: Install IoT Hub IoT Gateway using Docker Compose
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to install and start ThingsBoard Gateway using Docker Compose on Linux or Mac OS.
+This guide will help you to install and start IoT Hub Gateway using Docker Compose on Linux or Mac OS.
 
 ## Prerequisites
 
 - [Install Docker Compose](https://docs.docker.com/compose/){:target="_blank"};
 - You will need to have access to ThingsBoard. The easiest way is to use the [ThingsBoard Demo](https://demo.thingsboard.io/){:target="_blank"} server.
-The alternative option is to install the ThingsBoard locally using the [installation guide](https://thingsboard.io/docs/user-guide/install/installation-options/){:target="_blank"}.
+The alternative option is to install the IoT Hub locally using the [installation guide](https://thingsboard.io/docs/user-guide/install/installation-options/){:target="_blank"}.
 
 ## Download docker-compose file
 
 {% assign downloadConfigurationFile = '
    ===
       image: https://img.thingsboard.io/gateway/install/gateway-download-configuration-file-1-ce.png,
-      title: Go to the "**Dashboards**" page and open the "**ThingsBoard IoT Gateways**" dashboard;
+      title: Go to the "**Dashboards**" page and open the "**IoT Hub IoT Gateways**" dashboard;
    ===
       image: https://img.thingsboard.io/gateway/install/gateway-download-configuration-file-2-ce.png,
       title: Click the "**plus**" icon in the upper right corner to add a new gateway. Input the gateway name, specify the "default" device profile, and click "**Create**";

@@ -20,7 +20,7 @@ Instructions below will describe how to connect MQTT client using X.509 Certific
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
-In particular, there are two strategies that can be used for establishing connection between client and ThingsBoard:
+In particular, there are two strategies that can be used for establishing connection between client and IoT Hub:
 
 - **X.509 Certificate chain** - *recommended*. <br>
   Configure IoT Hub to trust all client certificates from a specific trust anchor (*intermediate certificate*).

@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-mobile-pe
-title: Configure alarm details dashboards in ThingsBoard PE Mobile Application
+title: Configure alarm details dashboards in IoT Hub PE Mobile Application
 
 alarm-dashboard:
  0:

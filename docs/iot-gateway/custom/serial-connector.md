@@ -822,9 +822,9 @@ Docker compose - "tb-gw-logs" volume
 Daemon - "/var/log/thingsboard-gateway/"  
 Python module (pip) - "./logs/"  
 
-### Step 6. Check a result on the ThingsBoard instance
+### Step 6. Check a result on the IoT Hub instance
 
-To check the result, you should connect device, and go to the ThingsBoard UI into "Devices" tab.  
+To check the result, you should connect device, and go to the IoT Hub UI into "Devices" tab.  
 If device connected correctly and has sent some data, you will see device with a name - "SerialDevice1".  
 To check the data - open device and go to the telemetry tab.  
 You should see the telemetry from config (humidity) with some value 48 (Value from example, your value can be different).  

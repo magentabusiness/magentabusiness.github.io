@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect Raspberry Pi Zero W to ThingsBoard?
+title: How to connect Raspberry Pi Zero W to IoT Hub?
 category: Single-board computers
 chip: BCM2835
 connectivity: WIFI, Bluetooth, BLE

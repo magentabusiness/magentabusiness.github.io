@@ -332,7 +332,7 @@ Go to the **Devices** page and find *rpcReceived* telemetry value is "*OK*" on t
 
 ### MQTT retransmission mechanism
 
-The MQTT integration uses ThingsBoard's internal MQTT client.
+The MQTT integration uses IoT Hub's internal MQTT client.
 
 {% if docsPrefix contains "paas" %}
 {% include docs/user-guide/mqtt-retransmission-mechanism.md show-yml-config=false %}

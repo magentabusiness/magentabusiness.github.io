@@ -9,7 +9,7 @@ sudo systemctl stop thingsboard-gateway
 
 Or if you are running it manually in a terminal, stop it using `Ctrl + C`.
 
-### Step 2. Upgrade the ThingsBoard Gateway Package via pip
+### Step 2. Upgrade the IoT Hub Gateway Package via pip
 
 Run the following command in your Python environment:
 

@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-trendz
 title: Getting started with Trendz Analytics
-description: ThingsBoard Trendz - Business Intelligence and Analytics Platform for IoT-powered Business
+description: IoT Hub Trendz - Business Intelligence and Analytics Platform for IoT-powered Business
 
 demo-topology:
   0:
@@ -23,7 +23,7 @@ demo-topology:
 discover-topology:
   0:
     image: https://img.thingsboard.io/trendz/getting-started/topology1.png
-    title: "Once logged in you should click on <b>Discover Topology</b> button to discover ThingsBoard entities."
+    title: "Once logged in you should click on <b>Discover Topology</b> button to discover IoT Hub entities."
   1:
     image: https://img.thingsboard.io/trendz/getting-started/topology2.png
     title: 'When Topology Discovery finished click <b>Finish</b>.'
@@ -57,13 +57,13 @@ first-view:
 add-to-tb:
   0:
     image: https://img.thingsboard.io/trendz/getting-started/add-to-tb-1.png
-    title: "Click the <b>Share to ThingsBoard</b> button and choose <b>Add on New Dashboard</b>."
+    title: "Click the <b>Share to IoT Hub</b> button and choose <b>Add on New Dashboard</b>."
   1:
     image: https://img.thingsboard.io/trendz/getting-started/add-to-tb-2.png
     title: "Set the dashboard name to `Energy consumption`, leave the rest of the settings as default. Click <b>Add</b> button."
   2:
     image: https://img.thingsboard.io/trendz/getting-started/add-to-tb-3.png
-    title: "On the ThingsBoard platform, you will see a new dashboard named `Energy consumption` with a generated alias and Trendz line view."
+    title: "On the IoT Hub platform, you will see a new dashboard named `Energy consumption` with a generated alias and Trendz line view."
 
 create-calculation:
   0:
@@ -195,9 +195,9 @@ ai-assistance:
 The goal of this tutorial is to demonstrate the basic usage of Trendz Analytics. You will learn how to:
 
 * Log in to Trendz for the first time
-* Discover topology from ThingsBoard
+* Discover topology from IoT Hub
 * Create basic visualizations
-* Add a Trendz view to a ThingsBoard dashboard
+* Add a Trendz view to a IoT Hub dashboard
 * Calculate new telemetry based on existing telemetry
 * Predict telemetry using historical data
 * Detect anomalies in telemetry data
@@ -230,7 +230,7 @@ Once the Trendz Service is up and running, you can sign in to the Trendz UI usin
 * Trendz Cloud (Europe): [https://eu.thingsboard.cloud/trendz](https://eu.thingsboard.cloud/trendz)
 * Self-hosted Trendz: [http://localhost:8888](http://localhost:8888)
 
-You can log in using Tenant Administrator credentials from ThingsBoard. Trendz uses ThingsBoard as an authentication service.
+You can log in using Tenant Administrator credentials from ThingsBoard. Trendz uses IoT Hub as an authentication service.
 Any Tenant Administrator or Customer User can sign in to the Trendz UI using the same login/password they use in ThingsBoard.
 
 {% include images-gallery.html imageCollection="discover-topology" %}
@@ -262,16 +262,16 @@ You can find out more about different types of views you can build with Trendz [
 
 {% include images-gallery.html imageCollection="first-view" %}
 
-## Step 3. Add line chart to ThingsBoard Dashboard
+## Step 3. Add line chart to IoT Hub Dashboard
 
-Now we can add this line chart to a ThingsBoard dashboard.
+Now we can add this line chart to a IoT Hub dashboard.
 
-* Click the **Share to ThingsBoard** button and choose **Add on New Dashboard**
+* Click the **Share to IoT Hub** button and choose **Add on New Dashboard**
 * Set the dashboard name to `Energy consumption`; leave the rest of the settings as default. Click the **Add** button.
-* On the ThingsBoard platform, you will see a new dashboard named `Energy consumption` with a generated alias and Trendz line view
+* On the IoT Hub platform, you will see a new dashboard named `Energy consumption` with a generated alias and Trendz line view
   (you can check charts for each building by clicking on each building in the table).  
 
-A new dashboard in ThingsBoard is created, and your chart is there with the ability to filter by building.
+A new dashboard in IoT Hub is created, and your chart is there with the ability to filter by building.
 
 You can find more about sharing views [here](/docs/trendz/embed-visuals)
 
@@ -398,11 +398,11 @@ Trendz supports out-of-the-box anomaly detection tools. Let's explore them by fi
 * Set the name to `Energy Meter Anomaly Model`
 * Click **Build Model**, go to the **Review** tab, and validate the detected anomalies
 
-Now we can set up an anomaly refresh job to automatically find anomalies and create alarms in ThingsBoard for them. To do this, you need to:
+Now we can set up an anomaly refresh job to automatically find anomalies and create alarms in IoT Hub for them. To do this, you need to:
 * Click the **Jobs** button; in the popup window:
   * Enable anomaly model refreshing
-  * Enable saving anomaly data (to ThingsBoard)
-  * Enable anomaly alarms creation (in ThingsBoard)
+  * Enable saving anomaly data (to IoT Hub)
+  * Enable anomaly alarms creation (in IoT Hub)
   * Click the **Save** button
   
 Now, as soon as an anomaly occurs, the anomaly model will detect it and an alert will be created immediately.

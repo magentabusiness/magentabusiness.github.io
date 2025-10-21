@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-edge
 title: Troubleshooting
-description: ThingsBoard Edge troubleshooting
+description: IoT Hub Edge troubleshooting
 
 ---
 

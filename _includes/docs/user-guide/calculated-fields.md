@@ -209,7 +209,7 @@ After clicking the "Add" button, the calculated field will be added to your enti
 
 Let&#39;s check the debug events by clicking the "Events" icon button. The debugging window displays calculated field arguments and the computed result.
 
-> Please note that ThingsBoard stores all debug events for a calculated field during the first 15 minutes after creation. After that, only error events are saved.
+> Please note that IoT Hub stores all debug events for a calculated field during the first 15 minutes after creation. After that, only error events are saved.
 
 {% include images-gallery.html imageCollection="calculated-field-debug-events-2" %}
 
@@ -223,7 +223,7 @@ If these nodes are missing, the result **will not be saved** and will not appear
 ## Data reprocessing
 
 {% if docsPrefix == null %}
-> The **telemetry data reprocessing** feature is available only in [ThingsBoard PE](https://thingsboard.io/docs/user-guide/install/pe/installation-options/){:target="_blank"} and [ThingsBoard Cloud](https://thingsboard.io/installations/choose-region/){:target="_blank"} editions.
+> The **telemetry data reprocessing** feature is available only in [ThingsBoard PE](https://thingsboard.io/docs/user-guide/install/pe/installation-options/){:target="_blank"} editions.
 
 {% endif %}
 
@@ -239,7 +239,7 @@ This is especially useful when you modify existing calculations or add new field
 
 - **Recalculation of historical data** — apply updated logic to previously collected telemetry.
 - **Flexible time range selection** — choose a specific time period for reprocessing.
-- **Store results as telemetry** — processed data is saved in ThingsBoard as telemetry, enabling further use in widgets, rules, or analytics.
+- **Store results as telemetry** — processed data is saved in IoT Hub as telemetry, enabling further use in widgets, rules, or analytics.
 
 {% if docsPrefix == null %}
 Learn how to configure data reprocessing in the [ThingsBoard PE documentation](/docs/pe/user-guide/calculated-fields/#data-reprocessing){:target="_blank"}.
@@ -258,7 +258,7 @@ Learn how to configure data reprocessing in the [ThingsBoard PE documentation](/
 
 <br><b><font size="4">Example of using the data reprocessing feature</font></b>
 
-Let&#39;s say you have a Smart Device that tracks real-time temperature and humidity and sends this data to ThingsBoard.
+Let&#39;s say you have a Smart Device that tracks real-time temperature and humidity and sends this data to IoT Hub.
 At some point, you decide to start calculating the dew point using the Calculated field feature.
 As shown on the widget, that displays time series data for the Smart Device, the dew point was first calculated at 13:44:35. 
 Prior to that, no dew point calculations had been performed.
@@ -477,7 +477,7 @@ By aligning timestamps and filling missing values, merging enables:
 
 ## Export / Import calculated field
 
-You can [export](#export-calculated-field) the calculated field to a JSON file and [import](#import-calculated-field) it into the same or another ThingsBoard instance.
+You can [export](#export-calculated-field) the calculated field to a JSON file and [import](#import-calculated-field) it into the same or another IoT Hub instance.
 
 ### Export calculated field
 
@@ -509,7 +509,7 @@ Steps to import:
 
 **Example 1: Dew point calculation**
 
-Suppose you have a smart device that monitors the current temperature and humidity in real time and sends this data to ThingsBoard. Based on these values, we need to calculate the dew point.
+Suppose you have a smart device that monitors the current temperature and humidity in real time and sends this data to IoT Hub. Based on these values, we need to calculate the dew point.
 
 This mathematical expression calculates the dew point using two arguments: temperature and humidity.
 

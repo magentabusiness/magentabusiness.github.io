@@ -3,7 +3,7 @@ layout: docwithnav-trendz
 title: What is Trendz Analytics
 description: What is Trendz Analytics
 ---
-The ThingsBoard **Trendz** is an Analytics Platform that converts the IoT dataset into insights and simplifies the decision-making process.
+The IoT Hub **Trendz** is an Analytics Platform that converts the IoT dataset into insights and simplifies the decision-making process.
 
 With Trendz you can:
 - Analyse behavior patterns, outliers and trends

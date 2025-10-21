@@ -305,7 +305,7 @@ Map describing available widget action sources ([WidgetActionSource](https://git
 ### Creating simple widgets
 
 The tutorials below show how to create minimal widgets of each type.
-In order to minimize the amount of code, the Angular framework will be used, on which ThingsBoard UI is actually based.
+In order to minimize the amount of code, the Angular framework will be used, on which IoT Hub UI is actually based.
 By the way, you can always use pure JavaScript or jQuery API in your widget code.
 
 #### Latest Values widget

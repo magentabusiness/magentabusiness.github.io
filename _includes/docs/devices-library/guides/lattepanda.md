@@ -1,5 +1,5 @@
 
-{% assign deviceName = page.title | remove: "How to connect " | remove: "to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: "to IoT Hub?" %}
 {% assign prerequisites = "
 - " | append: deviceName | append: "
 - [tb-mqtt-client library](https://pypi.org/project/tb-mqtt-client/)

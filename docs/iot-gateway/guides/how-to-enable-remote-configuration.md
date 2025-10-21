@@ -11,8 +11,8 @@ description:  IoT Gateway Remote Configuration
 This guide overviews all sub-dashboards of Gateway Dashboard for remote configuration.
 
 For purpose of this guide, we will use following things:
-1. Locally installed instance of ThingsBoard platform (How to install you can [read here](/docs/user-guide/install/installation-options/)).
-2. ThingsBoard IoT Gateway (How to install you can [read here](/docs/iot-gateway/installation/)).
+1. Locally installed instance of IoT Hub platform (How to install you can [read here](/docs/user-guide/install/installation-options/)).
+2. IoT Hub IoT Gateway (How to install you can [read here](/docs/iot-gateway/installation/)).
 
 Resources (OPTIONAL):
 1. [Gateway Dashboard](/docs/iot-gateway/resources/thingsboard-gateways-dashboard.json){:target="_blank" download="thingsboard-gateways-dashboard.json"}
@@ -182,11 +182,11 @@ to the Statistics dashboard.
 The dashboard consists of two widgets:
 - Gateway General Chart Statistics - general statistics metrics are displayed here, namely:
   - Sent To Device - total amount of data sent from the gateway to devices;
-  - Send To ThingsBoard - the total amount of data sent from the gateway to ThingsBoard;
-  - Received From ThingsBoard - total amount of data received from RPC and Attribute Updates;
+  - Send To IoT Hub - the total amount of data sent from the gateway to IoT Hub;
+  - Received From IoT Hub - total amount of data received from RPC and Attribute Updates;
   - Converted From Devices - the total number of converted data on the gateway;
-  - Events Produced - the number of events received from ThingsBoard;
-  - Events Sent - total number of events sent to ThingsBoard;
+  - Events Produced - the number of events received from IoT Hub;
+  - Events Sent - total number of events sent to IoT Hub;
   - Received From Devices - total amount of data received from devices.
 - Gateway Custom Statistics - custom statistics are displayed here, you can select a single metric using select. Also, the far right widget will change its type depending on the type of data (if integer/float data is a graph, the other type is a table).
 
@@ -221,7 +221,7 @@ The dashboard consists of 3 widgets:
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main IoT Hub features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

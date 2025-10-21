@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect Contact Tracing Badge to ThingsBoard?
+title: How to connect Contact Tracing Badge to IoT Hub?
 category: Other devices
 connectivity: LoRaWAN®
 vendor: Lansitec

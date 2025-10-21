@@ -151,7 +151,7 @@ Let's configure data map using the following steps:
 {% include images-gallery.liquid imageCollection=dataMapping4 %}
 
 <br>
-"**Requests mapping**" section of the configuration outlines an array that includes all the supported requests for both the gateway and ThingsBoard:
+"**Requests mapping**" section of the configuration outlines an array that includes all the supported requests for both the gateway and IoT Hub:
 - connect requests;
 - disconnect requests;
 - attribute requests;

@@ -3,7 +3,7 @@ layout: docwithnav-paas-eu
 assignees:
 - stitenko
 title: Aliases
-description: ThingsBoard Aliases
+description: IoT Hub Aliases
 
 create-alias:
     0:

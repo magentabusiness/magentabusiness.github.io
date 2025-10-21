@@ -3,7 +3,7 @@ For simplicity, we will provide the device manually using the UI.
 {% assign provisionDeviceCE = '
     ===
         image: /images/helloworld/getting-started-ce/hello-world-1-1-provision-device-1-ce.png,
-        title: Login to your ThingsBoard instance and navigate to the "**Entities**". Then click the "**Devices**" page.
+        title: Login to your IoT Hub instance and navigate to the "**Entities**". Then click the "**Devices**" page.
     ===
         image: /images/helloworld/getting-started-ce/hello-world-1-1-provision-device-2-ce.png,
         title: Click on the "**+**" icon in the top right corner of the table and then select "**Add new device**".

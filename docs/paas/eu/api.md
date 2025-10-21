@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-paas-eu
-title: ThingsBoard API reference
-description: ThingsBoard API reference and supported IoT Protocols
+title: IoT Hub API reference
+description: IoT Hub API reference and supported IoT Protocols
 
 ---
 {% assign docsPrefix = "paas/eu/" %}

@@ -2,10 +2,10 @@
 * TOC
 {:toc}
 
-**Devices** are fundamental IoT entities in ThingsBoard that can **generate telemetry data** (such as temperature, humidity, GPS coordinates, etc.) and **transmit** it to the ThingsBoard platform, as well as respond to Remote Procedure Call (RPC) commands.
+**Devices** are fundamental IoT entities in IoT Hub that can **generate telemetry data** (such as temperature, humidity, GPS coordinates, etc.) and **transmit** it to the IoT Hub platform, as well as respond to Remote Procedure Call (RPC) commands.
 Devices can be either physical (e.g., sensors, controllers, trackers) or virtual (e.g., emulators) network-connected objects that are capable of:
 - **Generating telemetry data** — send measured data such as temperature, humidity, or location.
-- **Transmitting data to the ThingsBoard platform** via [supported protocols](/docs/{{docsPrefix}}reference/protocols/){:target="_blank"} (MQTT, HTTP, CoAP, etc.).
+- **Transmitting data to the IoT Hub platform** via [supported protocols](/docs/{{docsPrefix}}reference/protocols/){:target="_blank"} (MQTT, HTTP, CoAP, etc.).
 - **Responding to RPC commands** — receiving and executing on remote procedure calls sent from the platform.
 
 Each device:
@@ -15,11 +15,11 @@ Each device:
 - can be assigned an [owner](/docs/{{docsPrefix}}user-guide/ui/devices/#manage-owner-and-groups).
 - supports both [attributes](/docs/{{docsPrefix}}user-guide/attributes/){:target="_blank"} (static or semi-static properties) and [telemetry](/docs/{{docsPrefix}}user-guide/telemetry/){:target="_blank"} (time-series data).
 
-> ThingsBoard supports device management functions via both the web UI and the [REST API](/docs/{{docsPrefix}}reference/rest-api/){:target="_blank"}.
+> IoT Hub supports device management functions via both the web UI and the [REST API](/docs/{{docsPrefix}}reference/rest-api/){:target="_blank"}.
 
 <b><font size="4">Practical video course 🎥</font></b>
 
-Explore a hands-on video course that provides detailed explanations on how to create and manage devices in ThingsBoard.
+Explore a hands-on video course that provides detailed explanations on how to create and manage devices in IoT Hub.
 
 > The course includes practical examples to help you better understand how to work with dashboards, resources, and devices, including their configuration and real-world usage.
 
@@ -32,7 +32,7 @@ Explore a hands-on video course that provides detailed explanations on how to cr
 
 ## How to add, edit, and delete device
 
-Tenant administrators and users with appropriate permissions can create, edit, or delete devices in ThingsBoard.
+Tenant administrators and users with appropriate permissions can create, edit, or delete devices in IoT Hub.
 
 ### Adding new device
 
@@ -47,7 +47,7 @@ To add a new device:
 
 Device successfully created and is now available in the list.
 
-A window will immediately open where you can [check the device's connection to ThingsBoard platform](#check-connectivity).
+A window will immediately open where you can [check the device's connection to IoT Hub platform](#check-connectivity).
 This step is optional. For now, let's close this window and return to the connection check in more detail later.
 
 {% include images-gallery.html imageCollection="add-device" %}
@@ -89,7 +89,7 @@ Second way:
 
 ## Check connectivity
 
-To verify if your device is successfully connected to ThingsBoard:
+To verify if your device is successfully connected to IoT Hub:
 - Open the "**Device details**" window and click "**Check connectivity**".
 - Select:
   - [Communication protocol](/docs/{{docsPrefix}}reference/protocols/){:target="_blank"} ([MQTT](/docs/{{docsPrefix}}reference/mqtt-api){:target="_blank"}, [HTTP](/docs/{{docsPrefix}}reference/http-api){:target="_blank"}, etc.)
@@ -160,7 +160,7 @@ Clicking on the device opens a window where you can access and manage various as
 
 ### Copy device Id
 
-To retrieve the device&#39;s unique identifier in ThingsBoard:
+To retrieve the device&#39;s unique identifier in IoT Hub:
 - Open the device&#39;s detail page by clicking on the device name in the list.
 - Click the "**Copy device Id**" button.
 

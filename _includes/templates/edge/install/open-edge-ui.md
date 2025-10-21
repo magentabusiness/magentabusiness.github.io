@@ -8,4 +8,4 @@ Once the **Edge** service is started, open the **Edge UI** at [http://localhost:
 
 {% include templates/edge/bind-port-changed-banner.md %}
 
-Please use your tenant credentials from local Server instance or {{cloudLink}}{: target="_blank"} to log in to the **ThingsBoard Edge**.
+Please use your tenant credentials from local Server instance or {{cloudLink}}{: target="_blank"} to log in to the **IoT Hub Edge**.

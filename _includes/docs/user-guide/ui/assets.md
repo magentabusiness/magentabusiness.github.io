@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-**Asset** is an abstract entity in the IoT system of ThingsBoard that represents any physical object, space, or organizational unit. 
+**Asset** is an abstract entity in the IoT system of IoT Hub that represents any physical object, space, or organizational unit. 
 Examples include a building, room, production area, field, streetlight, substation, or vehicle.
 
 **Key characteristics of an asset:**
@@ -9,15 +9,15 @@ Examples include a building, room, production area, field, streetlight, substati
 - **Can have its own attributes**, such as location, type, or responsible personnel.
 - **Used for grouping** devices and other entities.
 - **Can be part of a hierarchy**, e.g., Substation &#10230; Line &#10230; Streetlight.
-- **Participates in ThingsBoard business logic**, such as rule chains, alarms, and dashboards.
+- **Participates in IoT Hub business logic**, such as rule chains, alarms, and dashboards.
 
 Assets help logically and efficiently structure your IoT project, making it easier to manage and scale.
 
-> ThingsBoard supports asset management functions via both the web UI and the [REST API](/docs/{{docsPrefix}}reference/rest-api/){:target="_blank"}.
+> IoT Hub supports asset management functions via both the web UI and the [REST API](/docs/{{docsPrefix}}reference/rest-api/){:target="_blank"}.
 
 <b><font size="4">Practical video course 🎥</font></b>
 
-Watch the practical video course, which includes a detailed explanation of how to create and use assets in ThingsBoard.
+Watch the practical video course, which includes a detailed explanation of how to create and use assets in IoT Hub.
 
 > The course includes hands-on examples to help you better understand how to manage dashboards, assets, and devices — including their configuration and real-world usage.
 
@@ -30,7 +30,7 @@ Watch the practical video course, which includes a detailed explanation of how t
 
 ## How to create, edit, and delete asset
 
-Tenant administrators and users with appropriate [permissions](/docs/{{docsPrefix}}user-guide/rbac/){:target="_blank"} can create, edit, or delete assets in ThingsBoard.
+Tenant administrators and users with appropriate [permissions](/docs/{{docsPrefix}}user-guide/rbac/){:target="_blank"} can create, edit, or delete assets in IoT Hub.
 
 ### Creating asset
 
@@ -136,7 +136,7 @@ Clicking on an asset opens a window where you can access and manage various aspe
 - Browse asset-related **events**, such as errors, warnings, and other key lifecycle moments.
 - Manage [relationships](/docs/{{docsPrefix}}user-guide/entities-and-relations){:target="_blank"} between this asset and other entities, such as devices, dashboards, etc.
 - Track user actions and changes related to the asset in the [Audit log](/docs/{{docsPrefix}}user-guide/audit-log/){:target="_blank"}.
-- Use the ThingsBoard [Version control](/docs/{{docsPrefix}}user-guide/version-control/){:target="_blank"} system to export and restore the asset as part of Git-based object management.
+- Use the IoT Hub [Version control](/docs/{{docsPrefix}}user-guide/version-control/){:target="_blank"} system to export and restore the asset as part of Git-based object management.
 
 {% if (docsPrefix == "pe/") or (docsPrefix == "paas/") or (docsPrefix == "paas/eu/") %}
 ## Manage owner and groups

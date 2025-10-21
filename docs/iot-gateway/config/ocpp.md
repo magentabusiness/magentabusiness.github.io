@@ -1,14 +1,14 @@
 ---
 layout: docwithnav-gw
 title: OCPP Connector Configuration
-description: OCPP protocol support for ThingsBoard IoT Gateway
+description: OCPP protocol support for IoT Hub IoT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you get familiar with OCPP Connector configuration for ThingsBoard IoT Gateway.
+This guide will help you get familiar with OCPP Connector configuration for IoT Hub IoT Gateway.
 Use [general configuration](/docs/iot-gateway/configuration/) to enable this Connector.
 The purpose of this connector is to communicate between Charge Point and Central System using OCPP protocol.
 
@@ -193,8 +193,8 @@ This subsection contains general settings for processing data interpreted as att
 |:----------------------|:---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | attributes            |                                              | This subsection contains parameters of the incoming message, to be interpreted as attributes for the device.                                                     |
 | ... messageTypeFilter | **MeterValues,**                             | List of allowed message types divided by comma.                                                                                                                  |
-| ... key               | **temp**                                     | Attribute name, to be sent to ThingsBoard instance.                                                                                                              |
-| ... value             | **${meter_value[:].sampled_value[:].value}** | Simple JSON expression, is used for looking up value in the incoming message, which will then be sent to ThingsBoard instance as the value of the key parameter. |
+| ... key               | **temp**                                     | Attribute name, to be sent to IoT Hub instance.                                                                                                              |
+| ... value             | **${meter_value[:].sampled_value[:].value}** | Simple JSON expression, is used for looking up value in the incoming message, which will then be sent to IoT Hub instance as the value of the key parameter. |
 | ---                   |                                              |                                                                                                                                                                  |
 
 This subsection in configuration file looks like:
@@ -222,8 +222,8 @@ This subsection contains general settings for processing data interpreted as tim
 |:----------------------|:---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | timeseries            |                                              | This subsection contains parameters of the incoming message, to be interpreted as telemetry for the device.                                                      |
 | ... messageTypeFilter | **MeterValues,**                             | List of allowed message types divided by comma.                                                                                                                  |
-| ... key               | **temp**                                     | Telemetry name, to be sent to ThingsBoard instance.                                                                                                              |
-| ... value             | **${meter_value[:].sampled_value[:].value}** | Simple JSON expression, is used for looking up value in the incoming message, which will then be sent to ThingsBoard instance as the value of the key parameter. |
+| ... key               | **temp**                                     | Telemetry name, to be sent to IoT Hub instance.                                                                                                              |
+| ... value             | **${meter_value[:].sampled_value[:].value}** | Simple JSON expression, is used for looking up value in the incoming message, which will then be sent to IoT Hub instance as the value of the key parameter. |
 | ---                   |                                              |                                                                                                                                                                  |
 
 This subsection in configuration file looks like:
@@ -240,7 +240,7 @@ This subsection in configuration file looks like:
 
 #### Attribute updates subsection
 
-This configuration section is optional. ThingsBoard allows the provisioning of device attributes and fetches some of them from 
+This configuration section is optional. IoT Hub allows the provisioning of device attributes and fetches some of them from 
 the device application. You can treat this as a remote configuration for devices, enabling them to request 
 shared attributes from ThingsBoard. See [user guide](/docs/reference/mqtt-api/#attributes-api) for more details.
 
@@ -265,9 +265,9 @@ This section in configuration file looks like:
 
 #### Server side RPC subsection
 
-ThingsBoard allows sending RPC commands to the device connected to ThingsBoard directly or via Gateway.
+IoT Hub allows sending RPC commands to the device connected to IoT Hub directly or via Gateway.
 
-Configuration, provided in this section is used for sending RPC requests from ThingsBoard to Charge Point.
+Configuration, provided in this section is used for sending RPC requests from IoT Hub to Charge Point.
 
 | **Parameter**   | **Default value** | **Description**                                                                         |
 |:----------------|:------------------|-----------------------------------------------------------------------------------------|
@@ -290,7 +290,7 @@ This subsection in configuration file looks like:
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main IoT Hub features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

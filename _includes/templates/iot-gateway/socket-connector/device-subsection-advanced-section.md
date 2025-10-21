@@ -2,7 +2,7 @@
 |:--------------|:-------------------|--------------------------------------------------------------------------------------------------------------------|
 | addressFilter | *.*                | Used to filter the allowed IP addresses to connect to the connector.                                               |
 | deviceName    | **Device Example** | Name for the device in ThingsBoard.                                                                                |
-| deviceType    | **default**        | Device type for ThingsBoard, by default this parameter is absent, but you can add it.                              |
+| deviceType    | **default**        | Device type for IoT Hub, by default this parameter is absent, but you can add it.                              |
 | encoding      | **utf-8**          | Encoding used when writing string data to storage.                                                                 |
 | ---           |                    |                                                                                                                    |
 

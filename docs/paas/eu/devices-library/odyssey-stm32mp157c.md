@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect ODYSSEY STM32MP157C to ThingsBoard?
+title: How to connect ODYSSEY STM32MP157C to IoT Hub?
 category: Single-board computers
 chip: STM32MP157C
 connectivity: Ethernet, WIFI, Bluetooth

@@ -8,7 +8,7 @@ redirect_from: "/docs/pe/getting-started-guides/helloworld/"
 step1:
     0:
         image: https://img.thingsboard.io/helloworld/getting-started-pe/hello-world-1-1-provision-device-1-pe.png
-        title: 'Login to your ThingsBoard instance and go to the "Devices" page of the "Entities" section.'
+        title: 'Login to your IoT Hub instance and go to the "Devices" page of the "Entities" section.'
     1:
         image: https://img.thingsboard.io/helloworld/getting-started-pe/hello-world-1-1-provision-device-2-pe.png
         title: 'By default, you navigate to the device group "All". Click on the "+" icon in the top right corner of the table and then select "Add new device" from drop-down menu.'

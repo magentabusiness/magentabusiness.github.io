@@ -6,7 +6,7 @@
 IoT Hub Team has already provisioned a valid certificate for [IoT Hub](https://{{hostName}}/signup){:target="_blank"}.
 {% endif %}
 {% if docsPrefix == null or docsPrefix == "pe/" %}
-Follow the [MQTT over SSL](/docs/{{docsPrefix}}user-guide/mqtt-over-ssl/){:target="_blank"} guide to provision server certificate if you are hosting your own ThingsBoard instance.
+Follow the [MQTT over SSL](/docs/{{docsPrefix}}user-guide/mqtt-over-ssl/){:target="_blank"} guide to provision server certificate if you are hosting your own IoT Hub instance.
 {% endif %}
 
 Once provisioned, you should prepare a CA root certificate in pem format. This certificate will be used by mqtt client to validate the server certificate.

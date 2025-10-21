@@ -2,8 +2,8 @@
 layout: docwithnav
 assignees:
 - zbeacon
-title: How to connect Modbus device to ThingsBoard using the ThingsBoard IoT Gateway
-description: Understand how to connect Modbus device to ThingsBoard using the ThingsBoard IoT Gateway 
+title: How to connect Modbus device to IoT Hub using the IoT Hub IoT Gateway
+description: Understand how to connect Modbus device to IoT Hub using the IoT Hub IoT Gateway 
 
 ---
 
@@ -27,7 +27,7 @@ The info available at this moment:
 | Poll period   | **5 seconds**        | 
 |-|-|
 
-We want to write **temperature** (register address is 0) and **humidity** (register address is 1) as the telemetry to ThingsBoard and **batteryLevel** (register address is 2) as the device client-side attribute.      
+We want to write **temperature** (register address is 0) and **humidity** (register address is 1) as the telemetry to IoT Hub and **batteryLevel** (register address is 2) as the device client-side attribute.      
 
 
 
@@ -95,7 +95,7 @@ About sections of Modbus configuration file you can [read more here](/docs/iot-g
 Let's analyze our settings:
 
 1. General configuration of connector. In this section we have defined main settings (e. g. connector name — Modbus Default Server, port — 5020 etc.). You can read more about available parameters here.
-2. General device configuration. In this section we have defined main settings of our Modbus device (e. g. device name within ThingsBoard — TH_sensor, unit id — 1 etc.). You can read more about available parameters here.
+2. General device configuration. In this section we have defined main settings of our Modbus device (e. g. device name within IoT Hub — TH_sensor, unit id — 1 etc.). You can read more about available parameters here.
 3. Timeseries configuration. In this section we set up temperature and humidity parameters. You can read more about available parameters here.
 4. Attributes configuration. In this section we have defined the settings for batteryLevel attribute within ThingsBoard. You can read more about available parameters here.
 
@@ -142,8 +142,8 @@ TBGatewayService(config_file_path)
 
 ## Step 5. Check information from device
 
-Check data in your ThingsBoard instance.  
-    - Go to the your ThingsBoard instance and login.  
+Check data in your IoT Hub instance.  
+    - Go to the your IoT Hub instance and login.  
     - Go to the "Devices" tab. "TH_sensor" will be there.
     <br>    
     ![](https://img.thingsboard.io/gateway/gateway-modbus-device-added.png)

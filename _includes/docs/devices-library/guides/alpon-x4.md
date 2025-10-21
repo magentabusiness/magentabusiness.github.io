@@ -1,4 +1,4 @@
-{% assign deviceName = page.title | remove: "How to connect " | remove: "to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: "to IoT Hub?" %}
 {% assign deviceVendorLink = "https://sixfab.com/product/alpon-x4" %}
 {% assign thingsboardHost = "https://" | append: {{hostName}} %}
 
@@ -6,25 +6,25 @@
 ![{{deviceName}}](https://img.thingsboard.io/devices-library/{{page.deviceImageFileName}}){: style="float: left; max-width: 200px; max-height: 200px; margin: 0px 10px 0px 0px"}
 [ALPON X4]({{deviceVendorLink}}){: target="_blank"} is a powerful and reliable edge computer for IoT and industrial applications developed by Sixfab. It features cloud management, LTE connectivity, and eSIM support for automatic network switching. Powered by a Raspberry Pi CM4 processor, up to 8GB LPDDR4 RAM, and 32GB eMMC storage, it ensures robust processing for demanding applications. With Cat4 LTE, Wi-Fi 2.4/5GHz, Bluetooth 5.0 BLE, and Gigabit Ethernet, the ALPON X4 guarantees seamless connectivity, even in challenging environments.
 
-Its rugged design operates from -20°C to +60°C, supports flexible power options like USB-PD Type-C, 9-30V DC, and optional PoE+, and offers DIN Rail or Wall Mount for easy deployment. Certified by CE, FCC, Verizon, AT&T, and more, it’s built for global scalability. The ALPON X4 powers industrial automation with PLC and Modbus, enables smart home and remote monitoring via ThingsBoard, supports digital signage, and optimizes energy efficiency for versatile IoT solutions.
+Its rugged design operates from -20°C to +60°C, supports flexible power options like USB-PD Type-C, 9-30V DC, and optional PoE+, and offers DIN Rail or Wall Mount for easy deployment. Certified by CE, FCC, Verizon, AT&T, and more, it’s built for global scalability. The ALPON X4 powers industrial automation with PLC and Modbus, enables smart home and remote monitoring via IoT Hub, supports digital signage, and optimizes energy efficiency for versatile IoT solutions.
 
 ## Prerequisites
 
 To continue with this guide, you will need the following:
 
 - [Sixfab Connect Account](https://connect.sixfab.com){: target="_blank"}
-- [ThingsBoard account]({{ thingsboardHost }}){: target="_blank"}
+- [IoT Hub account]({{ thingsboardHost }}){: target="_blank"}
 
 - **ALPON X4 Device**: Registered and activated on Sixfab Connect with an active internet connection. Refer to the [ALPON X4 Getting Started page](https://docs.sixfab.com/docs/alpon-x4-getting-started){: target="_blank"} setup instructions for details.
-- **Basic Knowledge**: Familiarity with IoT concepts, containerized applications, and ThingsBoard dashboards.
+- **Basic Knowledge**: Familiarity with IoT concepts, containerized applications, and IoT Hub dashboards.
 
-## Create Device on ThingsBoard (Optional)
+## Create Device on IoT Hub (Optional)
 
 The integration can create a device even if there is no device yet, so skip this step if you want.
 
-### Log in to ThingsBoard
+### Log in to IoT Hub
 
-1. Access your [ThingsBoard instance]({{ thingsboardHost }}){: target="_blank"}.
+1. Access your [IoT Hub instance]({{ thingsboardHost }}){: target="_blank"}.
 2. Navigate to **Entities > Devices** in the sidebar.
 ![Create Device on ThingsBoard 1](https://img.thingsboard.io/devices-library/ready-to-go-devices/alpon-x4/1.png)
 
@@ -39,7 +39,7 @@ The integration can create a device even if there is no device yet, so skip this
 
 ## Add Integration and Topic Filter
 
-To transfer data from the ALPON X4 to ThingsBoard via an external MQTT broker, you need to set up an MQTT Integration in ThingsBoard. This integration uses a Topic Filter to specify which MQTT topics to listen to and a Data Converter written in TBEL to process incoming data and map it to the appropriate device.
+To transfer data from the ALPON X4 to IoT Hub via an external MQTT broker, you need to set up an MQTT Integration in IoT Hub. This integration uses a Topic Filter to specify which MQTT topics to listen to and a Data Converter written in TBEL to process incoming data and map it to the appropriate device.
 
 ### Create an MQTT Integration
 
@@ -109,7 +109,7 @@ It will **not** match topics such as:
 
 This structure allows the integration to process data from multiple devices, each using a unique identifier (e.g., `device1`, `sensorA`, `room23`) in the topic.
 
-This setup allows the ALPON X4 to send telemetry data to ThingsBoard via an external MQTT broker, with the integration processing and mapping the data to the correct device based on the topic structure.
+This setup allows the ALPON X4 to send telemetry data to IoT Hub via an external MQTT broker, with the integration processing and mapping the data to the correct device based on the topic structure.
 
 ## Docker Container Setup
 
@@ -145,7 +145,7 @@ CMD ["python3", "/app/mqtt_test.py"]
 
 ### Create the MQTT Test Script
 
-Create a file named `mqtt_test.py` in the same directory as the `Dockerfile`. This script configures the ALPON X4 to publish telemetry data to ThingsBoard via MQTT:
+Create a file named `mqtt_test.py` in the same directory as the `Dockerfile`. This script configures the ALPON X4 to publish telemetry data to IoT Hub via MQTT:
 ```python
 import paho.mqtt.client as mqtt
 import json
@@ -229,16 +229,16 @@ docker build --platform=linux/arm64 -t thingsboard-mqtt-alpon-x4:latest .
 5. Click the “+ Deploy” button to start the container.
 ![Deployment Configuration 2](https://img.thingsboard.io/devices-library/ready-to-go-devices/alpon-x4/11.png)
 
-## Check Data on ThingsBoard
+## Check Data on IoT Hub
 
-Verify that telemetry data is received and displayed in ThingsBoard:
-1. Log in to your ThingsBoard instance.
+Verify that telemetry data is received and displayed in IoT Hub:
+1. Log in to your IoT Hub instance.
 2. Navigate to **Entities > Devices** and select your ALPON X4 device.
 3. Go to the **Latest Telemetry** tab to view the temperature and humidity data sent.
-![Check Data on ThingsBoard 1](https://img.thingsboard.io/devices-library/ready-to-go-devices/alpon-x4/12.png)
+![Check Data on IoT Hub 1](https://img.thingsboard.io/devices-library/ready-to-go-devices/alpon-x4/12.png)
 
 ## Conclusion
 
-This guide demonstrated how to integrate the ALPON X4 with ThingsBoard using MQTT for real-time data collection and device control. By following the steps, you created a device in ThingsBoard, deployed an MQTT client on Sixfab Connect, and verified telemetry data.
+This guide demonstrated how to integrate the ALPON X4 with IoT Hub using MQTT for real-time data collection and device control. By following the steps, you created a device in IoT Hub, deployed an MQTT client on Sixfab Connect, and verified telemetry data.
 
 For further assistance, refer to the [ThingsBoard documentation](https://thingsboard.io/docs/){:.copy-code} or contact [Sixfab support](https://sixfab.com/contact/){:.copy-code}.

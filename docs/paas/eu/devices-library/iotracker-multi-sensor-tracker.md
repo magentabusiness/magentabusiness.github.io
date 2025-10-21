@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect ioTracker Multi-sensor tracker to ThingsBoard?
+title: How to connect ioTracker Multi-sensor tracker to IoT Hub?
 category: Other devices
 connectivity: LoRaWAN®
 vendor: ioThings

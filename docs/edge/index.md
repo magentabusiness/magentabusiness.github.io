@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-edge
-title: ThingsBoard Edge
-description: ThingsBoard Edge to distribute data processing and analysis using edge computing
+title: IoT Hub Edge
+description: IoT Hub Edge to distribute data processing and analysis using edge computing
 
 ---
 

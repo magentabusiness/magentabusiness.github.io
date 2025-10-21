@@ -3,10 +3,10 @@
 
 ## Use case
 
-Let's assume your device is using DHT22 sensor to collect and push temperature readings to ThingsBoard. 
+Let's assume your device is using DHT22 sensor to collect and push temperature readings to IoT Hub. 
 DHT22 sensor is good for -40 to 80°C temperature readings. We want generate Alarms if temperature is out of good range.
 
-In this tutorial we will configure ThingsBoard Rule Engine to 
+In this tutorial we will configure IoT Hub Rule Engine to 
 
 - Create or Update existing Alarm if temperature > 80°C or temperature < -40°C
 - Clear Alarm if temperature > -40°C and < 80°C
@@ -20,7 +20,7 @@ We assume you have completed the following guides and reviewed the articles list
 
 ## Adding the device
 
-Add Device entity in ThingsBoard. Its name is **Thermostat Home** and its type is **Thermostat**.
+Add Device entity in IoT Hub. Its name is **Thermostat Home** and its type is **Thermostat**.
 
 ![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/tutorials/alarms v2/add-device.png)
 

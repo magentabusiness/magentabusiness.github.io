@@ -6,13 +6,13 @@ description: IoT solution for real-time data analysis, anomaly detection, predic
 cloudPlan:
     0:
         image: https://img.thingsboard.io/trendz/cloud-1.webp
-        title: 'Log in to ThingsBoard Cloud account and select “Plan and Billing” menu option. Press “Update Plan” button'
+        title: 'Log in to IoT Hub Cloud account and select “Plan and Billing” menu option. Press “Update Plan” button'
     1:
         image: https://img.thingsboard.io/trendz/cloud-2.webp
-        title: 'Choose “ThingsBoard + Trendz” and select the most suitable plan for you'
+        title: 'Choose “IoT Hub + Trendz” and select the most suitable plan for you'
     2:
         image: https://img.thingsboard.io/trendz/cloud-3.webp
-        title: 'Reload the page to see new “Trendz Analytics” option in your ThingsBoard Menu'
+        title: 'Reload the page to see new “Trendz Analytics” option in your IoT Hub Menu'
 
 selfManagedPlan:
     0:
@@ -105,8 +105,8 @@ selfManagedPlan:
         <main class="accent-circle">
             <div class="content">
                 <h3 class="header">Connect Data</h3>
-                <p class="text">Connect Trendz to the ThingsBoard in few clicks with automatic Topology Discovery.</p>
-                <p class="text">Trendz works with all ThingsBoard products, including Open Source ThingsBoard Community Edition and ThingsBoard Professional Edition.</p>
+                <p class="text">Connect Trendz to the IoT Hub in few clicks with automatic Topology Discovery.</p>
+                <p class="text">Trendz works with all IoT Hub products, including Open Source IoT Hub Community Edition and IoT Hub Professional Edition.</p>
                 <a id="Products_TA_LearnMore2" href="/docs/trendz/connect-thingsboard/" class="button try-pe gtm_button">Learn More</a>
             </div>
             <div class="image-block">
@@ -128,12 +128,12 @@ selfManagedPlan:
                 <div class="text">
                     <span>Share visualized insights with your users by:</span>
                     <ul>
-                        <li>Adding them on ThingsBoard dashboards</li>
+                        <li>Adding them on IoT Hub dashboards</li>
                         <li>Embedding on 3rd party web sites</li>
                         <li>Exporting data into spreadsheets and images</li>
                     </ul>
                 </div>
-                <p class="text">All with respect to ThingsBoard user permissions.</p>
+                <p class="text">All with respect to IoT Hub user permissions.</p>
                 <a id="Products_TA_LearnMore3" href="/docs/trendz/embed-visuals/" class="button try-pe gtm_button">Learn More</a>
             </div>
             <div class="image-block screenshot-block">
@@ -166,12 +166,12 @@ selfManagedPlan:
             <div class="get-started-container">
                 <h3 class="header">Trendz Cloud</h3>
                 <p class="text">Upgrade your plan to gain deeper insights into your data</p>
-                <a href="https://thingsboard.cloud/billing" class="link">Upgrade your ThingsBoard Plan</a>
+                <a href="https://thingsboard.cloud/billing" class="link">Upgrade your IoT Hub Plan</a>
             </div>
             <div class="get-started-container">
                 <h3 class="header">Trendz EU Cloud</h3>
                 <p class="text">Unlock powerful analytics tools by upgrading your plan</p>
-                <a href="https://eu.thingsboard.cloud/billing" class="link">Upgrade your ThingsBoard EU Plan</a>
+                <a href="https://eu.thingsboard.cloud/billing" class="link">Upgrade your IoT Hub EU Plan</a>
             </div>
             <div class="get-started-container">
                 <h3 class="header">Trendz Self-Hosted</h3>

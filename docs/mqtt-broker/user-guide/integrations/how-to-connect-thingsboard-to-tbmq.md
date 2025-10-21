@@ -2,8 +2,8 @@
 layout: docwithnav-mqtt-broker
 assignees:
 - stitenko
-title: Integration with ThingsBoard
-description: Integration guide of TBMQ with ThingsBoard
+title: Integration with IoT Hub
+description: Integration guide of TBMQ with IoT Hub
 
 create-client-credentials:
     0:
@@ -46,7 +46,7 @@ create-integration:
 successful-connection-tbmq-to-thingsboard:
     0:
         image: https://img.thingsboard.io/mqtt-broker/user-guide/integrations/how-to-connect-tbqm-to-thingsboard/tbmq-sessions-1-pe.png
-        title: 'Go to the "Sessions" page in the TBMQ UI. Upon successful establishment of the connection ThingsBoard to TBMQ, we will see a new session and its status - "Connected".'
+        title: 'Go to the "Sessions" page in the TBMQ UI. Upon successful establishment of the connection IoT Hub to TBMQ, we will see a new session and its status - "Connected".'
 
 tbmq-home-page:
     0:

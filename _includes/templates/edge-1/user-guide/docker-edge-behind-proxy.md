@@ -1,7 +1,7 @@
 #### Prerequisites
 
 * Have a proxy server (**HTTP** or **HTTPS**) with its address, port, and credentials (if required).
-* Have **ThingsBoard Edge** installed and running, and **ThingsBoard Cloud** accessible.
+* Have **IoT Hub Edge** installed and running, and **IoT Hub Cloud** accessible.
 * Have [Docker](https://docs.docker.com/engine/install/){: target="_blank"} and [Docker Compose](https://docs.docker.com/compose/install/){: target="_blank"} installed on your machine.
 
 {% capture docker-deployment %}
@@ -54,7 +54,7 @@ docker compose up -d && docker compose logs -f mytbedge
 Once the **Edge** service is started, open the **Edge UI** at [http://localhost:8080](http://localhost:8080){: target="_blank"}. Use the **tenant credentials** to log in.
 
 {% capture docker-deployment %}
-If the Edge HTTP bind port was changed to **18080** during Edge installation, access the **ThingsBoard Edge** instance at [http://localhost:18080](http://localhost:18080){: target="_blank"}.
+If the Edge HTTP bind port was changed to **18080** during Edge installation, access the **IoT Hub Edge** instance at [http://localhost:18080](http://localhost:18080){: target="_blank"}.
 {% endcapture %}
 {% include templates/info-banner.md content=docker-deployment %}
 

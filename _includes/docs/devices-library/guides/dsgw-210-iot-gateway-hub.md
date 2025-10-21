@@ -54,7 +54,7 @@ You can use [IoT Hub](https://{{hostName}}/signup){:target="_blank"} or [install
 
 * [Step 1.1] Register and log in [IoT Hub](https://{{hostName}}/signup){:target="_blank"};
 
-<img src="/images/samples/dusun/dsgw-210-gateways-1.png" alt="Thingsboard login screen">
+<img src="/images/samples/dusun/dsgw-210-gateways-1.png" alt="Iot Hub login screen">
 
 * [Step 1.2] Go to the "Devices" page of the "Entities" section;
 

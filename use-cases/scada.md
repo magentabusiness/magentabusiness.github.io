@@ -20,8 +20,8 @@ contactUsModal: "true"
             </div>
         </div>
         <div class="long">
-            <p>The main advantage of SCADA (Supervisory Control and Data Acquisition) systems is their ability to monitor production processes in real time and respond quickly to deviations. ThingsBoard provides comprehensive tools to collect, process, and visualize data from SCADA components, such as PLCs (Programmable Logic Controllers) and RCUs (Remote Control Units), enabling seamless integration with various industrial processes.</p>
-            <p>To illustrate the flexibility of ThingsBoard's SCADA integration, we have developed the <a href="/docs/pe/solution-templates/swimming-pool-scada-system/">swimming pool management system template</a>. This solution demonstrates how SCADA symbols—such as valves, motors, filters and tanks—can be utilized to create simple yet powerful process control systems. It enables any production process to be visualized on a dashboard, allowing for real-time monitoring of equipment operation and timely detection of alarm signals. The template is designed to accommodate both Traditional and High-Performance SCADA systems.</p>
+            <p>The main advantage of SCADA (Supervisory Control and Data Acquisition) systems is their ability to monitor production processes in real time and respond quickly to deviations. IoT Hub provides comprehensive tools to collect, process, and visualize data from SCADA components, such as PLCs (Programmable Logic Controllers) and RCUs (Remote Control Units), enabling seamless integration with various industrial processes.</p>
+            <p>To illustrate the flexibility of IoT Hub's SCADA integration, we have developed the <a href="/docs/pe/solution-templates/swimming-pool-scada-system/">swimming pool management system template</a>. This solution demonstrates how SCADA symbols—such as valves, motors, filters and tanks—can be utilized to create simple yet powerful process control systems. It enables any production process to be visualized on a dashboard, allowing for real-time monitoring of equipment operation and timely detection of alarm signals. The template is designed to accommodate both Traditional and High-Performance SCADA systems.</p>
         </div>
     </div>
 </section>
@@ -111,27 +111,27 @@ contactUsModal: "true"
     <div class="use-cases-solution-structure-cards">
         <div class="use-cases-solution-structure-card">
             <h3>PLCs and RTUs</h3>
-            <p>Seamlessly integrate your SCADA system with PLCs and RTUs using ThingsBoard integrations and IoT Gateway. Support for Modbus, OPC-UA, BACnet, and other popular protocols ensures reliable real-time data collection and control.</p>
+            <p>Seamlessly integrate your SCADA system with PLCs and RTUs using IoT Hub integrations and IoT Gateway. Support for Modbus, OPC-UA, BACnet, and other popular protocols ensures reliable real-time data collection and control.</p>
         </div>
         <div class="use-cases-solution-structure-card">
             <h3>IoT gateway</h3>
-            <p>ThingsBoard’s IoT Gateway bridges the gap between legacy SCADA devices and modern IoT platforms. It ensures data reliability with built-in local data storage during network outages and supports efficient protocol conversion, secure data transmission, and centralized device management.</p>
+            <p>IoT Hub’s IoT Gateway bridges the gap between legacy SCADA devices and modern IoT platforms. It ensures data reliability with built-in local data storage during network outages and supports efficient protocol conversion, secure data transmission, and centralized device management.</p>
         </div>
         <div class="use-cases-solution-structure-card">
             <h3>Data processing</h3>
-            <p>Unlock actionable insights with ThingsBoard’s robust data processing tools. Perform real-time transformations, apply complex rules, and automate workflows with built-in rule chains and scriptable integrations.</p>
+            <p>Unlock actionable insights with IoT Hub’s robust data processing tools. Perform real-time transformations, apply complex rules, and automate workflows with built-in rule chains and scriptable integrations.</p>
         </div>
         <div class="use-cases-solution-structure-card">
             <h3>Alarm system</h3>
-            <p>Enhance operational awareness with ThingsBoard’s advanced alarm system. Manage incident workflows with features like alarm acknowledgment, clearing, commenting, and configurable escalation rules.</p>
+            <p>Enhance operational awareness with IoT Hub’s advanced alarm system. Manage incident workflows with features like alarm acknowledgment, clearing, commenting, and configurable escalation rules.</p>
         </div>
         <div class="use-cases-solution-structure-card">
             <h3>Notification system</h3>
-            <p>Stay informed with ThingsBoard’s flexible notification system, delivering alerts via email, SMS, Slack, or custom webhooks. Automate critical notifications based on configurable conditions and thresholds.</p>
+            <p>Stay informed with IoT Hub’s flexible notification system, delivering alerts via email, SMS, Slack, or custom webhooks. Automate critical notifications based on configurable conditions and thresholds.</p>
         </div>
         <div class="use-cases-solution-structure-card">
             <h3>IoT dashboards</h3>
-            <p>Visualize your SCADA data with ThingsBoard’s real-time IoT dashboards. Design interactive views using SCADA symbols, customizable widgets, and dynamic updates to monitor and control processes seamlessly.</p>
+            <p>Visualize your SCADA data with IoT Hub’s real-time IoT dashboards. Design interactive views using SCADA symbols, customizable widgets, and dynamic updates to monitor and control processes seamlessly.</p>
         </div>
     </div>
 </section>

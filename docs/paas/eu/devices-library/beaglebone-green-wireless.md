@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect BeagleBone Green Wireless to ThingsBoard?
+title: How to connect BeagleBone Green Wireless to IoT Hub?
 category: Single-board computers
 chip: TI Sitara AM3358BZCZA100
 connectivity: WIFI, Bluetooth

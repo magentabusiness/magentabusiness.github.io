@@ -1,4 +1,4 @@
-{% assign deviceName = page.title | remove: "How to connect " | remove: " to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: " to IoT Hub?" %}
 {% assign deviceVendorLink = "https://www.lansitec.com/products/uwb-asset-management-tracker/" %}
 {% assign thingsboardHost = "https://" | append: hostName %}
 {% assign prerequisites = '
@@ -20,10 +20,6 @@ To continue with this guide we will need the following:
 - [ThingsBoard account]({{ thingsboardHost }}){: target="_blank"}
 
 ## Configuration
-
-Only ThingsBoard Cloud works when using direct communication from this device to ThingsBoard via MQTT.
-
-You may use ThingsBoard PE on-premises or ThingsBoard Cloud when using ThingsBoard Integrations.
 
 To create an integration with a network server please choose first one of the supported network servers:
 

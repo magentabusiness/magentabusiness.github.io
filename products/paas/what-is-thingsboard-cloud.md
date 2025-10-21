@@ -2,8 +2,8 @@
 layout: docwithnav-paas
 assignees:
 - ashvayka
-title: What is ThingsBoard Cloud?
-description: Features and advantages of ThingsBoard Cloud
+title: What is IoT Hub Cloud?
+description: Features and advantages of IoT Hub Cloud
 
 ---
 

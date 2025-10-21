@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect Qualcomm DragonBoard 410C to ThingsBoard?
+title: How to connect Qualcomm DragonBoard 410C to IoT Hub?
 category: Single-board computers
 chip: Qualcomm SnapDragon 410
 connectivity: WIFI, Bluetooth, GPS

@@ -158,7 +158,7 @@ time-series-section-1:
         title: 'Click the "pencil" icon to open the time series configuration;'
     1:
         image: https://img.thingsboard.io/solutions/swimming_pool_scada_system/time-series-section-2-pe.png
-        title: 'Here, you can configure the processing of incoming data. These settings will be interpreted in ThingsBoard as device telemetry data.'
+        title: 'Here, you can configure the processing of incoming data. These settings will be interpreted in IoT Hub as device telemetry data.'
 
 rpc-requests-section-1:
     0:
@@ -166,7 +166,7 @@ rpc-requests-section-1:
         title: 'Click the "pencil" icon to open the RPC requests configuration;'
     1:
         image: https://img.thingsboard.io/solutions/swimming_pool_scada_system/rpc-requests-section-2-pe.png
-        title: 'Here you can configure parameters for remote procedure calls (RPC) from ThingsBoard to the device.'
+        title: 'Here you can configure parameters for remote procedure calls (RPC) from IoT Hub to the device.'
 
 solution-scada-rule-chain:
     0:

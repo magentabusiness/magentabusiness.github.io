@@ -57,7 +57,7 @@ heatpumps-save-anomaly-score-as-telemetry:
 heatpumps-create-anomaly-alert:
   0:
     image: https://img.thingsboard.io/trendz/guide/heatpump_anomalies/heatpump_anomaly_score_alert_create.png
-    title: 'Create anomaly score alert for heat pumps in ThingsBoard device profile'
+    title: 'Create anomaly score alert for heat pumps in IoT Hub device profile'
   1:
     image: https://img.thingsboard.io/trendz/guide/heatpump_anomalies/heatpump_anomaly_score_alert_configuration.png
     title: 'Configure anomaly score alert create and clear rules'
@@ -71,7 +71,7 @@ heatpumps-create-anomaly-alert:
 heatpumps-notify-about-anomalies:
   0:
     image: https://img.thingsboard.io/trendz/guide/heatpump_anomalies/heatpump_open_root_rulechain.png
-    title: 'Open root rule chain in ThingsBoard'
+    title: 'Open root rule chain in IoT Hub'
   1:
     image: https://img.thingsboard.io/trendz/guide/heatpump_anomalies/heatpump_send_email_node_configuration.png
     title: 'Add toEmail rule node to root rule chain'
@@ -111,7 +111,7 @@ for timely intervention and maintenance to prevent further complications and cos
 ## Getting started:
 
 ### Prerequisites
-Heat pump reports telemetry data to ThingsBoard via MQTT protocol. They registered in platform as a device entity. Devices have relation to Apartment asset and apartments assigned to customer account. 
+Heat pump reports telemetry data to IoT Hub via MQTT protocol. They registered in platform as a device entity. Devices have relation to Apartment asset and apartments assigned to customer account. 
 They way how heat pumps provisioned in the system is out of scope of this guide as well as user self registration process. You can find tutorials how to do that in our documentation. 
 
 ### Step 1: Create anomaly detection model
@@ -168,7 +168,7 @@ Now we will create a view that will show all anomalies that where discovered dur
 We have anomaly detection model that can discover anomalies and setup job to rediscover them on fresh data. Final step is to notify maintenance team about detected anomalies.
 To make it happen we need to:
 
-#### Save current anomaly score for heat pump as a telemetry back to ThingsBoard
+#### Save current anomaly score for heat pump as a telemetry back to IoT Hub
 * Create Table view in Trendz
 * Add `heatPump` field into Columns section
 * Add Date FULL_HOUR field into Columns section
@@ -191,9 +191,9 @@ Once view saved, Trendz would schedule background job that will periodically che
 {% include images-gallery.html imageCollection="heatpumps-save-anomaly-score-as-telemetry" %}
 
 #### Configure alert if anomaly score is higher than 50.
-At this moment we already have `heatpumpAnomalyScore` telemetry for each heat pump in the ThingsBoard which tells as how abnormal its current behavior. It means that we can create Alarm Rule in ThignsBoard to raise an alarm if score index is higher than 50.
+At this moment we already have `heatpumpAnomalyScore` telemetry for each heat pump in the IoT Hub which tells as how abnormal its current behavior. It means that we can create Alarm Rule in ThignsBoard to raise an alarm if score index is higher than 50.
 
-* In ThingsBoard open heat pump's device profile and add new Alarm Rule
+* In IoT Hub open heat pump's device profile and add new Alarm Rule
 * Alarm type - **Abnormal behavior**
 * Create alarm rule
   * Severity - `Warning`
@@ -204,9 +204,9 @@ At this moment we already have `heatpumpAnomalyScore` telemetry for each heat pu
 {% include images-gallery.html imageCollection="heatpumps-create-anomaly-alert" %}
 
 #### Send notification once alarm created
-Final step is to send notification to the maintenance team once alarm created. We will use ThingsBoard Rule Engine to send email notification to the maintenance team. If Alarm Rule in device profile raised an alarm, we can catch this event and add steps to send an email.
+Final step is to send notification to the maintenance team once alarm created. We will use IoT Hub Rule Engine to send email notification to the maintenance team. If Alarm Rule in device profile raised an alarm, we can catch this event and add steps to send an email.
 
-* Open Root rule chain in ThingsBoard
+* Open Root rule chain in IoT Hub
 * add `toEmail` rule node after `Device profile` node and connect it with `Alarm Created` relation.
 * Open `toEmail` node settings and configure it to send email to the maintenance team.
   * From template - `info@testmail.org`
@@ -216,7 +216,7 @@ Final step is to send notification to the maintenance team once alarm created. W
 * add `send email` rule node after `toEmail` node and connect it with `Successfull` relation.
 * Save rule chain.
 
-With this configuration ThingsBoard will send notification to the maintenance team once anomaly was detected in heat pumps behavior.
+With this configuration IoT Hub will send notification to the maintenance team once anomaly was detected in heat pumps behavior.
 
 {% include images-gallery.html imageCollection="heatpumps-notify-about-anomalies" %}
 

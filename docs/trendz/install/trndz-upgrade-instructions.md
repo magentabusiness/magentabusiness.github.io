@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-trendz
 title: Upgrade instructions
-description: ThingsBoard Trendz Analytics upgrade instructions
+description: IoT Hub Trendz Analytics upgrade instructions
 
 ---
 
@@ -171,7 +171,7 @@ description: ThingsBoard Trendz Analytics upgrade instructions
                   <a href="#windows-180" id="markdown-toc-windows-180">Windows</a>        
               </li>
               <li>
-                <a href="#tb_widget_bundle-180" id="markdown-toc-tb_widget_bundle-180">Widget Bundle for ThingsBoard</a>        
+                <a href="#tb_widget_bundle-180" id="markdown-toc-tb_widget_bundle-180">Widget Bundle for IoT Hub</a>        
               </li>
           </ul>
         </li> 
@@ -185,7 +185,7 @@ description: ThingsBoard Trendz Analytics upgrade instructions
               <a href="#windows-170" id="markdown-toc-windows-170">Windows</a>        
           </li>
           <li>
-            <a href="#tb_widget_bundle-170" id="markdown-toc-tb_widget_bundle-170">Widget Bundle for ThingsBoard</a>        
+            <a href="#tb_widget_bundle-170" id="markdown-toc-tb_widget_bundle-170">Widget Bundle for IoT Hub</a>        
           </li>
       </ul>
     </li>  
@@ -221,7 +221,7 @@ description: ThingsBoard Trendz Analytics upgrade instructions
               <a href="#windows-150" id="markdown-toc-windows-150">Windows</a>        
           </li>
           <li>
-            <a href="#tb_widget_bundle-150" id="markdown-toc-tb_widget_bundle-150">Widget Bundle for ThingsBoard</a>        
+            <a href="#tb_widget_bundle-150" id="markdown-toc-tb_widget_bundle-150">Widget Bundle for IoT Hub</a>        
           </li>
       </ul>
   </li>          
@@ -300,7 +300,7 @@ sudo service trendz start
 
 #### Trendz Analytics package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.13.2.zip](https://dist.thingsboard.io/trendz-windows-1.13.2.zip).
+Download IoT Hub Trendz Analytics installation package for Windows: [trendz-windows-1.13.2.zip](https://dist.thingsboard.io/trendz-windows-1.13.2.zip).
 
 #### Trendz Analytics service upgrade
 
@@ -312,8 +312,8 @@ net stop trendz
 {: .copy-code}
 
 * Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
+* Remove IoT Hub install dir.
+* Unzip installation archive to IoT Hub install dir.
 * Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
 
 * Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
@@ -383,7 +383,7 @@ sudo service trendz start
 
 #### Trendz Analytics package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.13.1.zip](https://dist.thingsboard.io/trendz-windows-1.13.1.zip).
+Download IoT Hub Trendz Analytics installation package for Windows: [trendz-windows-1.13.1.zip](https://dist.thingsboard.io/trendz-windows-1.13.1.zip).
 
 #### Trendz Analytics service upgrade
 
@@ -395,8 +395,8 @@ net stop trendz
 {: .copy-code}
 
 * Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
+* Remove IoT Hub install dir.
+* Unzip installation archive to IoT Hub install dir.
 * Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
 
 * Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
@@ -465,7 +465,7 @@ sudo service trendz start
 
 #### Trendz Analytics package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.13.0.zip](https://dist.thingsboard.io/trendz-windows-1.13.0.zip).
+Download IoT Hub Trendz Analytics installation package for Windows: [trendz-windows-1.13.0.zip](https://dist.thingsboard.io/trendz-windows-1.13.0.zip).
 
 #### Trendz Analytics service upgrade
 
@@ -477,8 +477,8 @@ net stop trendz
 {: .copy-code}
 
 * Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
+* Remove IoT Hub install dir.
+* Unzip installation archive to IoT Hub install dir.
 * Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
 
 * Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
@@ -544,7 +544,7 @@ sudo service trendz start
 
 #### Trendz Analytics package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.12.0.zip](https://dist.thingsboard.io/trendz-windows-1.12.0.zip).
+Download IoT Hub Trendz Analytics installation package for Windows: [trendz-windows-1.12.0.zip](https://dist.thingsboard.io/trendz-windows-1.12.0.zip).
 
 #### Trendz Analytics service upgrade
 
@@ -556,8 +556,8 @@ net stop trendz
 {: .copy-code}
 
 * Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
+* Remove IoT Hub install dir.
+* Unzip installation archive to IoT Hub install dir.
 * Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
 
 * Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
@@ -623,7 +623,7 @@ sudo service trendz start
 
 #### Trendz Analytics package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.11.2.zip](https://dist.thingsboard.io/trendz-windows-1.11.2.zip).
+Download IoT Hub Trendz Analytics installation package for Windows: [trendz-windows-1.11.2.zip](https://dist.thingsboard.io/trendz-windows-1.11.2.zip).
 
 #### Trendz Analytics service upgrade
 
@@ -635,8 +635,8 @@ net stop trendz
 {: .copy-code}
 
 * Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
+* Remove IoT Hub install dir.
+* Unzip installation archive to IoT Hub install dir.
 * Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
 
 * Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
@@ -702,7 +702,7 @@ sudo service trendz start
 
 #### Trendz Analytics package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.11.1.zip](https://dist.thingsboard.io/trendz-windows-1.11.1.zip).
+Download IoT Hub Trendz Analytics installation package for Windows: [trendz-windows-1.11.1.zip](https://dist.thingsboard.io/trendz-windows-1.11.1.zip).
 
 #### Trendz Analytics service upgrade
 
@@ -714,8 +714,8 @@ net stop trendz
 {: .copy-code}
 
 * Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
+* Remove IoT Hub install dir.
+* Unzip installation archive to IoT Hub install dir.
 * Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
 
 * Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
@@ -806,7 +806,7 @@ Please refer to [**Step 1 of the installation guide**](/docs/trendz/install/wind
 
 #### Trendz Analytics package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.11.0.zip](https://dist.thingsboard.io/trendz-windows-1.11.0.zip).
+Download IoT Hub Trendz Analytics installation package for Windows: [trendz-windows-1.11.0.zip](https://dist.thingsboard.io/trendz-windows-1.11.0.zip).
 
 #### Trendz Analytics service upgrade
 
@@ -818,8 +818,8 @@ net stop trendz
 {: .copy-code}
 
 * Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
+* Remove IoT Hub install dir.
+* Unzip installation archive to IoT Hub install dir.
 * Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
 
 * Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
@@ -885,7 +885,7 @@ sudo service trendz start
 
 #### Trendz Analytics package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.10.3-HF7.zip](https://dist.thingsboard.io/trendz-windows-1.10.3-HF7.zip).
+Download IoT Hub Trendz Analytics installation package for Windows: [trendz-windows-1.10.3-HF7.zip](https://dist.thingsboard.io/trendz-windows-1.10.3-HF7.zip).
 
 #### Trendz Analytics service upgrade
 
@@ -897,8 +897,8 @@ net stop trendz
 {: .copy-code}
 
 * Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
+* Remove IoT Hub install dir.
+* Unzip installation archive to IoT Hub install dir.
 * Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
 
 * Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
@@ -964,7 +964,7 @@ sudo service trendz start
 
 #### Trendz Analytics package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.10.3.zip](https://dist.thingsboard.io/trendz-windows-1.10.3.zip).
+Download IoT Hub Trendz Analytics installation package for Windows: [trendz-windows-1.10.3.zip](https://dist.thingsboard.io/trendz-windows-1.10.3.zip).
 
 #### Trendz Analytics service upgrade
 
@@ -976,8 +976,8 @@ net stop trendz
 {: .copy-code}
 
 * Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
+* Remove IoT Hub install dir.
+* Unzip installation archive to IoT Hub install dir.
 * Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
 
 * Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
@@ -1046,7 +1046,7 @@ sudo service trendz start
 
 #### Trendz Analytics package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.10.2.zip](https://dist.thingsboard.io/trendz-windows-1.10.2.zip).
+Download IoT Hub Trendz Analytics installation package for Windows: [trendz-windows-1.10.2.zip](https://dist.thingsboard.io/trendz-windows-1.10.2.zip).
 
 #### Trendz Analytics service upgrade
 
@@ -1058,8 +1058,8 @@ net stop trendz
 {: .copy-code}
 
 * Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
+* Remove IoT Hub install dir.
+* Unzip installation archive to IoT Hub install dir.
 * Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
 
 * Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
@@ -1125,7 +1125,7 @@ sudo service trendz start
 
 #### Trendz Analytics package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.10.1.zip](https://dist.thingsboard.io/trendz-windows-1.10.1.zip).
+Download IoT Hub Trendz Analytics installation package for Windows: [trendz-windows-1.10.1.zip](https://dist.thingsboard.io/trendz-windows-1.10.1.zip).
 
 #### Trendz Analytics service upgrade
 
@@ -1137,8 +1137,8 @@ net stop trendz
 {: .copy-code}
 
 * Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
+* Remove IoT Hub install dir.
+* Unzip installation archive to IoT Hub install dir.
 * Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
 
 * Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
@@ -1157,7 +1157,7 @@ net start trendz
 {: .copy-code}
 
 #### Trendz Bundle update
-If you are using ThingsBoard v3.5.0 or higher, you alos need to update Trendz bundle in ThingsBoard to use correct Trendz library version in ThingsBoard. 
+If you are using IoT Hub v3.5.0 or higher, you alos need to update Trendz bundle in IoT Hub to use correct Trendz library version in ThingsBoard. 
 Detailed instructions how to do that you can find in [this article](/docs/trendz/trendz-bundle/#thingsboard-35-blank-widget-with-error)
 
 ## Upgrading to 1.10.0
@@ -1208,7 +1208,7 @@ sudo service trendz start
 
 #### Trendz Analytics package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.10.0-HF1.zip](https://dist.thingsboard.io/trendz-windows-1.10.0-HF1.zip).
+Download IoT Hub Trendz Analytics installation package for Windows: [trendz-windows-1.10.0-HF1.zip](https://dist.thingsboard.io/trendz-windows-1.10.0-HF1.zip).
 
 #### Trendz Analytics service upgrade
 
@@ -1220,8 +1220,8 @@ net stop trendz
 {: .copy-code}
 
 * Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
+* Remove IoT Hub install dir.
+* Unzip installation archive to IoT Hub install dir.
 * Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
 
 * Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
@@ -1288,7 +1288,7 @@ sudo service trendz start
 
 #### Trendz Analytics package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.9.2.zip](https://dist.thingsboard.io/trendz-windows-1.9.2.zip).
+Download IoT Hub Trendz Analytics installation package for Windows: [trendz-windows-1.9.2.zip](https://dist.thingsboard.io/trendz-windows-1.9.2.zip).
 
 #### Trendz Analytics service upgrade
 
@@ -1300,8 +1300,8 @@ net stop trendz
 {: .copy-code}
 
 * Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
+* Remove IoT Hub install dir.
+* Unzip installation archive to IoT Hub install dir.
 * Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
 
 * Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
@@ -1362,7 +1362,7 @@ sudo service trendz start
 
 #### Trendz Analytics package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.8.2.zip](https://dist.thingsboard.io/trendz-windows-1.8.2.zip).
+Download IoT Hub Trendz Analytics installation package for Windows: [trendz-windows-1.8.2.zip](https://dist.thingsboard.io/trendz-windows-1.8.2.zip).
 
 #### Trendz Analytics service upgrade
 
@@ -1374,8 +1374,8 @@ net stop trendz
 {: .copy-code}
 
 * Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
+* Remove IoT Hub install dir.
+* Unzip installation archive to IoT Hub install dir.
 * Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
 
 #### Start the service
@@ -1434,7 +1434,7 @@ sudo service trendz start
 
 #### Trendz Analytics package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.8.0.zip](https://dist.thingsboard.io/trendz-windows-1.8.0.zip).
+Download IoT Hub Trendz Analytics installation package for Windows: [trendz-windows-1.8.0.zip](https://dist.thingsboard.io/trendz-windows-1.8.0.zip).
 
 #### Trendz Analytics service upgrade
 
@@ -1446,8 +1446,8 @@ net stop trendz
 {: .copy-code}
 
 * Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
+* Remove IoT Hub install dir.
+* Unzip installation archive to IoT Hub install dir.
 * Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
 
 * Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
@@ -1555,7 +1555,7 @@ sudo service trendz start
 
 #### Trendz Analytics package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.7.0.zip](https://dist.thingsboard.io/trendz-windows-1.7.0.zip).
+Download IoT Hub Trendz Analytics installation package for Windows: [trendz-windows-1.7.0.zip](https://dist.thingsboard.io/trendz-windows-1.7.0.zip).
 
 #### Trendz Analytics service upgrade
 
@@ -1568,8 +1568,8 @@ net stop trendz
 
 * Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
 * Make a backup of previous Trendz Analytics data storage located in \<Trendz install dir\>\data (for ex. C:\trendz\data).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
+* Remove IoT Hub install dir.
+* Unzip installation archive to IoT Hub install dir.
 * Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
 
 Please make sure that you set **SPRING_DATASOURCE_URL**, **SPRING_DATASOURCE_USERNAME** and **SPRING_DATASOURCE_PASSWORD** parameters value
@@ -1611,28 +1611,28 @@ net start trendz
 ```
 {: .copy-code}
 
-### Widget Bundle for ThingsBoard {#tb_widget_bundle-170}
+### Widget Bundle for IoT Hub {#tb_widget_bundle-170}
 
-In Trendz version 1.7.0 Widget Bundle for ThingsBoard was changed. You have to upgrade widget bundle to the latest version to receive latest
+In Trendz version 1.7.0 Widget Bundle for IoT Hub was changed. You have to upgrade widget bundle to the latest version to receive latest
 features introduced in version 1.7.0
 
 #### Download new Widget Bundle
 
-* For ThingsBoard version **3.x** please use 
+* For IoT Hub version **3.x** please use 
 this <a href="https://dist.thingsboard.io/trendz_bundle_tb3.json" download target="_blank">trendz_bundle_tb3</a>
 
 
-* For ThingsBoard version **2.x** please use 
+* For IoT Hub version **2.x** please use 
 this <a href="https://dist.thingsboard.io/trendz_bundle_tb2.json" download target="_blank">trendz_bundle_tb2</a>
 
 #### Replace old Bundle with the new one
 
-* Login to ThingsBoard as tenant administrator
+* Login to IoT Hub as tenant administrator
 * Open **Widgets Library** section
 * Delete old **Trendz Bundle**
 * Import new Trendz Bundle from previous step
 
-Widgets that already added to ThingsBoard dashboard are not affected and should not be changed.
+Widgets that already added to IoT Hub dashboard are not affected and should not be changed.
 
 ## Upgrading to 1.6.0
 
@@ -1676,7 +1676,7 @@ sudo service trendz start
 
 #### Trendz Analytics package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.6.0.zip](https://dist.thingsboard.io/trendz-windows-1.6.0.zip).
+Download IoT Hub Trendz Analytics installation package for Windows: [trendz-windows-1.6.0.zip](https://dist.thingsboard.io/trendz-windows-1.6.0.zip).
 
 #### Trendz Analytics service upgrade
 
@@ -1688,8 +1688,8 @@ net stop trendz
 {: .copy-code}
 
 * Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
+* Remove IoT Hub install dir.
+* Unzip installation archive to IoT Hub install dir.
 * Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
 
 
@@ -1744,7 +1744,7 @@ sudo service trendz start
 
 #### Trendz Analytics package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.5.1.zip](https://dist.thingsboard.io/trendz-windows-1.5.1.zip).
+Download IoT Hub Trendz Analytics installation package for Windows: [trendz-windows-1.5.1.zip](https://dist.thingsboard.io/trendz-windows-1.5.1.zip).
 
 #### Trendz Analytics service upgrade
 
@@ -1756,8 +1756,8 @@ net stop trendz
 {: .copy-code}
 
 * Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
+* Remove IoT Hub install dir.
+* Unzip installation archive to IoT Hub install dir.
 * Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
 
 
@@ -1808,7 +1808,7 @@ sudo service trendz start
 
 #### Trendz Analytics package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.5.0.zip](https://dist.thingsboard.io/trendz-windows-1.5.0.zip).
+Download IoT Hub Trendz Analytics installation package for Windows: [trendz-windows-1.5.0.zip](https://dist.thingsboard.io/trendz-windows-1.5.0.zip).
 
 #### Trendz Analytics service upgrade
 
@@ -1819,8 +1819,8 @@ net stop trendz
 ```
 
 * Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
+* Remove IoT Hub install dir.
+* Unzip installation archive to IoT Hub install dir.
 * Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
 
 
@@ -1830,28 +1830,28 @@ net stop trendz
 net start trendz
 ```
 
-### Widget Bundle for ThingsBoard {#tb_widget_bundle-150}
+### Widget Bundle for IoT Hub {#tb_widget_bundle-150}
 
-In Trendz version 1.5.0 Widget Bundle for ThingsBoard was changed. You have to upgrade widget bundle to the latest version to receive latest
+In Trendz version 1.5.0 Widget Bundle for IoT Hub was changed. You have to upgrade widget bundle to the latest version to receive latest
 features introduced in version 1.5.0
 
 #### Download new Widget Bundle
 
-* For ThingsBoard version **3.x** please use 
+* For IoT Hub version **3.x** please use 
 this <a href="https://dist.thingsboard.io/trendz_bundle_tb3.json" download target="_blank">trendz_bundle_tb3</a>
 
 
-* For ThingsBoard version **2.x** please use 
+* For IoT Hub version **2.x** please use 
 this <a href="https://dist.thingsboard.io/trendz_bundle_tb2.json" download target="_blank">trendz_bundle_tb2</a>
 
 #### Replace old Bundle with the new one
 
-* Login to ThingsBoard as tenant administrator
+* Login to IoT Hub as tenant administrator
 * Open **Widgets Library** section
 * Delete old **Trendz Bundle**
 * Import new Trendz Bundle from previous step
 
-Widgets that already added to ThingsBoard dashboard are not affected and should not be changed.
+Widgets that already added to IoT Hub dashboard are not affected and should not be changed.
 
 ## Upgrading to 1.4.1
 
@@ -1893,7 +1893,7 @@ sudo service trendz start
 
 #### Trendz Analytics package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.4.1.zip](https://dist.thingsboard.io/trendz-windows-1.4.1.zip).
+Download IoT Hub Trendz Analytics installation package for Windows: [trendz-windows-1.4.1.zip](https://dist.thingsboard.io/trendz-windows-1.4.1.zip).
 
 #### Trendz Analytics service upgrade
 
@@ -1903,7 +1903,7 @@ Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-
 net stop trendz
 ```
 
-* Make a backup of previous ThingsBoard Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
+* Make a backup of previous IoT Hub Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
 * Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
 
 
@@ -1951,11 +1951,11 @@ sudo service trendz start
 
 ### Windows {#windows-140}
 
-#### ThingsBoard PE package download
+#### IoT Hub PE package download
 
-Download ThingsBoard PE installation package for Windows: [trendz-windows-1.4.0.zip](https://dist.thingsboard.io/trendz-windows-1.4.0.zip).
+Download IoT Hub PE installation package for Windows: [trendz-windows-1.4.0.zip](https://dist.thingsboard.io/trendz-windows-1.4.0.zip).
 
-#### ThingsBoard PE service upgrade
+#### IoT Hub PE service upgrade
 
 * Stop Trendz service if it is running.
  
@@ -1963,7 +1963,7 @@ Download ThingsBoard PE installation package for Windows: [trendz-windows-1.4.0.
 net stop trendz
 ```
 
-* Make a backup of previous ThingsBoard PE configuration located in \<ThingsBoard install dir\>\conf (for ex. C:\trendz\conf).
+* Make a backup of previous IoT Hub PE configuration located in \<IoT Hub install dir\>\conf (for ex. C:\trendz\conf).
 * Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
 
 

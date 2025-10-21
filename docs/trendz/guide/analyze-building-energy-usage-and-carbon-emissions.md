@@ -65,7 +65,7 @@ co2_emission_card_with_trend:
 building_energy_dashboard:
   0:
     image: https://img.thingsboard.io/trendz/guide/building_energy/building_electricity_dashboard_add_new.png
-    title: 'Create new dashboard in ThingsBoard'
+    title: 'Create new dashboard in IoT Hub'
   1:
     image: https://img.thingsboard.io/trendz/guide/building_energy/building_electricity_dashboard_config.png
     title: 'Set name to - Energy consumption report'
@@ -118,12 +118,12 @@ and integrate carbon emission accounting into everyday business practices.
 * Stacked bar chart to compare energy consumption by source.
 * Stacked bar chart to compare current and previous year with monthly breakdown.
 * Calculate carbon emissions in a building
-* Create ThingsBoard dashboard to visualize data with filtering options
+* Create IoT Hub dashboard to visualize data with filtering options
 
 ## Getting started:
 
 ### Prerequisites
-Energy meters already installed in the building and connected to ThingsBoard via MQTT API. To simplify data aggregation and analysis, each meter has 2 attributes:
+Energy meters already installed in the building and connected to IoT Hub via MQTT API. To simplify data aggregation and analysis, each meter has 2 attributes:
 * `sourceType` - name of energy consumption source (HVAC, lighting, plug loads, elevators, etc.). There are multiple meters with the same source.
 * `area` - name of the area where it is installed  (office, meeting room, hall kitchen, etc.). There are multiple meters in the area.
 
@@ -247,17 +247,17 @@ But we can reverse color schema by enabling `Reverse compariosn colors` in view 
 
 {% include images-gallery.html imageCollection="co2_emission_card_with_trend" %}
 
-### Step 6: Create energy consumption analytic dashboard in ThingsBoard
+### Step 6: Create energy consumption analytic dashboard in IoT Hub
 In final step we will connect all views that we created into 1 interactive dashboard for our users. That dashboard can be shared with all our customers and it will show only data that is relevant to the user. They would be able to use filters to select buildings, 
-consumption sources and areas. We begin with adding all Trendz views that we created on one dashboard in ThingsBoard:
+consumption sources and areas. We begin with adding all Trendz views that we created on one dashboard in IoT Hub:
 
-* In ThingsBoard create dashboard with name **Energy consumption report**
+* In IoT Hub create dashboard with name **Energy consumption report**
 * In Trendz: for each widget that we created in previous steps:
-  * Click on `Share to ThingsBoard` button and copy `Add on Dashboard`.
+  * Click on `Share to IoT Hub` button and copy `Add on Dashboard`.
   * Select **Energy consumption report** dashboard.
   * Enable **Create alias** checkbox.
   * Select `Building` as a filter.
-* Return to ThingsBoard **Energy consumption report** dashboard and tune dashboard layout.
+* Return to IoT Hub **Energy consumption report** dashboard and tune dashboard layout.
 
 Then we would create dashboard aliases that will be used to filter data in the dashboard.
 
@@ -271,7 +271,7 @@ Then we would create dashboard aliases that will be used to filter data in the d
 Finally, we have to add hierarchy widget that will show all buildings/floors/areas in the hotel and allow user to select specific area. Once user would click on entity - **Filtered areas** alias will refresh and load all areas for the selected entity.
 After that all Trendz widgets on the dashboard would be updated because they use **Filtered areas** alias as a datasource. As a result user will see occupancy data for the selected areas.
 
-* Add ThingsBoard table widget `Cards` -> `Entities table` to the dashboard. It will show all buildings that are visible for the user.
+* Add IoT Hub table widget `Cards` -> `Entities table` to the dashboard. It will show all buildings that are visible for the user.
   * Set datasource alias to **All buildings**
   * Latest data key - **Name**
 * Add `On row click` action for entity table widget. It will update `selectedEntity` parameter in the dashboard state.

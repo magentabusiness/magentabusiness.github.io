@@ -1,5 +1,5 @@
 
-{% assign deviceName = page.title | remove: "How to connect " | remove: " to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: " to IoT Hub?" %}
 {% assign deviceVendorLink = "https://weinzierl.de/en/products/knx-ip-multi-io-580/" %}
 {% assign thingsboardHost = "https://" | append: hostName %}
 {% assign prerequisites = '
@@ -155,12 +155,12 @@ The last thing that we need to do is set group objects ability to read and write
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=KnxIpMultiScreenshot5_2 %}
 
-## Creating and configuring ThingsBoard IoT Gateway
+## Creating and configuring IoT Hub IoT Gateway
 
 {% assign creatingGatewayCE = '
     ===
         image: https://img.thingsboard.io/devices-library/ready-to-go-devices/temco-tstat10/temco-tstat10-gateway-configuring-1-ce.png,
-        title: Open the ThingsBoard in your browser and log in. Go to "**Entities**" > "**Gateways**" tab in the sidebar and click on "**+**" button. Fill in "**Name**" and "**Device profile**" fields and click "**Create**" button;
+        title: Open the IoT Hub in your browser and log in. Go to "**Entities**" > "**Gateways**" tab in the sidebar and click on "**+**" button. Fill in "**Name**" and "**Device profile**" fields and click "**Create**" button;
     ===
         image: https://img.thingsboard.io/devices-library/ready-to-go-devices/temco-tstat10/temco-tstat10-gateway-configuring-2-ce.png,
         title: Start gateway using launch command;
@@ -182,7 +182,7 @@ The last thing that we need to do is set group objects ability to read and write
 {% assign creatingGatewayPE = '
     ===
         image: https://img.thingsboard.io/devices-library/ready-to-go-devices/temco-tstat10/temco-tstat10-gateway-configuring-1-pe.png,
-        title: Open the ThingsBoard in your browser and log in. Go to "**Entities**" > "**Gateways**" tab in the sidebar and click on "**+**" button. Fill in "**Name**" and "**Device profile**" fields and click "**Create**" button;
+        title: Open the IoT Hub in your browser and log in. Go to "**Entities**" > "**Gateways**" tab in the sidebar and click on "**+**" button. Fill in "**Name**" and "**Device profile**" fields and click "**Create**" button;
     ===
         image: https://img.thingsboard.io/devices-library/ready-to-go-devices/temco-tstat10/temco-tstat10-gateway-configuring-2-pe.png,
         title: Start gateway using launch command;
@@ -287,7 +287,7 @@ The last thing that we need to do is set group objects ability to read and write
 ```
 {:.copy-code.expandable-10}
 
-## Check data on ThingsBoard
+## Check data on IoT Hub
 
 Once you have successfully done all the steps above and Gateway sent data, you can see it in the device telemetry tab:
 

@@ -1,14 +1,14 @@
 ---
 layout: mobile
-title: ThingsBoard Mobile Application
+title: IoT Hub Mobile Application
 description:
 ---
 
 <section id="intro">
     <main>
-        <h1><a href="/docs/mobile/">ThingsBoard Mobile Application</a> is an open-source <a href="https://github.com/thingsboard/flutter_thingsboard_app">project</a> based on Flutter</h1>
+        <h1><a href="/docs/mobile/">IoT Hub Mobile Application</a> is an open-source <a href="https://github.com/thingsboard/flutter_thingsboard_app">project</a> based on Flutter</h1>
         <h2 class="second">Build your own IoT mobile application with minimum coding efforts</h2>
-        <h3 class="second" style="text-align: center">Powered by ThingsBoard IoT Platform</h3>
+        <h3 class="second" style="text-align: center">Powered by IoT Hub IoT Platform</h3>
     </main>
 </section>
 
@@ -74,7 +74,7 @@ description:
             </div>
             <div class="block dark">
                 <div class="feature-des"><h2>Structured devices navigation</h2>
-                    <p>Browse devices grouped by their type and online status. On ThingsBoard, assign device specific dashboard and image.</p>
+                    <p>Browse devices grouped by their type and online status. On IoT Hub, assign device specific dashboard and image.</p>
                     <a class="read-more-button" href="/docs/mobile/customize-devices/">Read more<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
                 </div>
                 <div class="preview">

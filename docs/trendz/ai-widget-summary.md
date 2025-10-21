@@ -71,20 +71,20 @@ trendz-ai-summary-trendz-set-up-prompt:
 * TOC 
 {:toc}
 
-AI Widget Summary is a dashboard control that turns live ThingsBoard telemetry into an immediate, human-readable answer. 
+AI Widget Summary is a dashboard control that turns live IoT Hub telemetry into an immediate, human-readable answer. 
 When pressed, it collects telemetries and attributes you specify, fills a chosen prompt (from the built-in library or your own), and calls the connected LLM provider. 
 The returned output appears in the widget, giving operators a quick status digest, anomaly explanation, recommended next steps, or any other insight the prompt defines.
 
 Several ways are available for integrating AI summaries with different types of widgets.
 
-## ThingsBoard Widgets
-You can easily integrate custom prompts from Trendz to generate a summary of the data displayed in your ThingsBoard widgets.
-This feature is available starting from **ThingsBoard PE v3.6 and higher**.
+## IoT Hub Widgets
+You can easily integrate custom prompts from Trendz to generate a summary of the data displayed in your IoT Hub widgets.
+This feature is available starting from **IoT Hub PE v3.6 and higher**.
 ### Trendz Summary JS Module
-Depending on your ThingsBoard version, the setup process is slightly different:
+Depending on your IoT Hub version, the setup process is slightly different:
 
-#### ThingsBoard v3.9 and Higher
-Since v3.9, ThingsBoard supports using JS Modules directly in widget actions, making summary configuration straightforward.
+#### IoT Hub v3.9 and Higher
+Since v3.9, IoT Hub supports using JS Modules directly in widget actions, making summary configuration straightforward.
 To set up the Trendz Summary Module:
 * Open the Settings page in the Trendz App.
 * Click the Upload Module button.
@@ -92,10 +92,10 @@ To set up the Trendz Summary Module:
 
 {% include images-gallery.html imageCollection="trendz-js-summary-module-install" %}
 
-Once the module is uploaded, you can easily reference it in the Actions section of your ThingsBoard widget.
+Once the module is uploaded, you can easily reference it in the Actions section of your IoT Hub widget.
 
-#### ThingsBoard v3.6–v3.8
-In earlier ThingsBoard versions (v3.6–v3.8), JS Modules cannot be used directly in widget actions. Instead, you will need to manually copy and paste a provided JavaScript module into your custom action. 
+#### IoT Hub v3.6–v3.8
+In earlier IoT Hub versions (v3.6–v3.8), JS Modules cannot be used directly in widget actions. Instead, you will need to manually copy and paste a provided JavaScript module into your custom action. 
 To download the custom Trendz Summary JavaScript module, use the following link (replace `<your-trendz-host:port>` with the URL of your own Trendz instance):
 ```
 http://<your-trendz-host:port>/apiTrendz/publicApi/download/custom-action-ai-summary.js

@@ -1,12 +1,12 @@
 {% if docsPrefix == 'pe/edge/' %}
-{% assign appPrefix = "ThingsBoard PE" %}
+{% assign appPrefix = "IoT Hub PE" %}
 {% else %}
-{% assign appPrefix = "ThingsBoard" %}
+{% assign appPrefix = "IoT Hub" %}
 {% endif %}
 
 {% include templates/edge/install/copy-edge-credentials.md %}
 
-Edit the **ThingsBoard Edge** configuration file.
+Edit the **IoT Hub Edge** configuration file.
 
 {% if docsPrefix == 'pe/edge/' %}
 

@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect NodeMCU V3 to ThingsBoard?
+title: How to connect NodeMCU V3 to IoT Hub?
 category: Microcontrollers
 chip: ESP8266
 connectivity: HTTP, MQTT, WIFI

@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect Cat-1 Container Tracker to ThingsBoard?
+title: How to connect Cat-1 Container Tracker to IoT Hub?
 category: Other devices
 connectivity: LTE
 vendor: Lansitec

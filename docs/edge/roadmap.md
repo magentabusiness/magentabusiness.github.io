@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-edge
-title: ThingsBoard Edge Roadmap
+title: IoT Hub Edge Roadmap
 description: Upcoming releases
 
 ---

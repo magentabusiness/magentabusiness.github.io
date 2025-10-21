@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect reComputer R1100 to ThingsBoard?
+title: How to connect reComputer R1100 to IoT Hub?
 category: Other devices
 connectivity: Ethernet, WIFI, Bluetooth, 4G, LoRaWAN, Zigbee
 chip: R1100

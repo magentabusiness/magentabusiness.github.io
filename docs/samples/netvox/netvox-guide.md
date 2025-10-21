@@ -1,13 +1,13 @@
 ---
 layout: docwithnav
-title: Netvox LoRaWAN Devices and ThingsBoard
+title: Netvox LoRaWAN Devices and IoT Hub
 
 ---
 
 * TOC
 {:toc}
 
-Netvox has more than 400 LoRaWAN end devices that can be integrated into systems supporting the LoRaWAN protocol and are widely used in IoT solutions. By integrating data from Netvox devices into ThingsBoard, users can easily visualize and monitor data through the ThingsBoard [dashboard](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"}.
+Netvox has more than 400 LoRaWAN end devices that can be integrated into systems supporting the LoRaWAN protocol and are widely used in IoT solutions. By integrating data from Netvox devices into IoT Hub, users can easily visualize and monitor data through the IoT Hub [dashboard](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"}.
 
 ## Register Netvox devices on a third-party platform
 
@@ -84,16 +84,13 @@ Turn on the device and make sure it is connected to the Network Server.
 <br>
 *Please go to the [Netvox devices](#netvox-devices) section or [official Netvox website](http://www.netvox.com.tw/index.html){:target="_blank"} for detailed info about turning on a device.
 
-## Connect the device to ThingsBoard
+## Connect the device to IoT Hub
 
-[Integrations](/docs/{{docsPrefix}}user-guide/integrations/){:target="_blank"} in ThingsBoard is a feature that enables connecting external devices, services, or platforms to ThingsBoard for processing, storing, and visualizing data.
+[Integrations](/docs/{{docsPrefix}}user-guide/integrations/){:target="_blank"} in IoT Hub is a feature that enables connecting external devices, services, or platforms to IoT Hub for processing, storing, and visualizing data.
 
-### Create Integration in ThingsBoard
+### Create Integration in IoT Hub
 
-You will need to have access to ThingsBoard Professional Edition. The easiest way is to use [ThingsBoard Cloud](https://thingsboard.io/installations/choose-region/){:target="_blank"} server.
-The alternative option is to install ThingsBoard using [installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
-
-- Sign up and log in to ThingsBoard;
+- Sign up and log in to IoT Hub;
 - Go to the "**Integrations**" page of the "**Integrations center**" section. Click "**plus**" icon in the upper right corner to add new integration. Select "**The Things Stack Community**" as the integration type. Then, click "**Next**";
 - Use the default function for Decoder and Encoder. Click "**Next**";
 - Next, fill in the fields with your parameters. Enter the third platform’s MQTT account and password. After, press "**Add**" button.
@@ -101,7 +98,7 @@ The alternative option is to install ThingsBoard using [installation guide](/doc
 {% assign createintegration = '
     ===
         image: /images/samples/netvox/netvox-add-integration-1.png,
-        title: Sign up and log in to ThingsBoard. Go to the "**Integrations**" page of the "**Integrations center**" section. Click "**plus**" icon in the upper right corner to add new integration. Select "**The Things Stack Community**" as the integration type. Then, click "**Next**";
+        title: Sign up and log in to IoT Hub. Go to the "**Integrations**" page of the "**Integrations center**" section. Click "**plus**" icon in the upper right corner to add new integration. Select "**The Things Stack Community**" as the integration type. Then, click "**Next**";
     ===
         image: /images/samples/netvox/netvox-add-integration-2.png,
         title: Use the default Decoder function. Click "**Next**";
@@ -135,7 +132,7 @@ The alternative option is to install ThingsBoard using [installation guide](/doc
 
 ### Create Dashboard
 
-A [Dashboard](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"} in ThingsBoard allows users to visualize and monitor data collected from IoT devices.
+A [Dashboard](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"} in IoT Hub allows users to visualize and monitor data collected from IoT devices.
 
 Let&#39;s create a dashboard:
 
@@ -229,7 +226,7 @@ Click to open [the data converters library of ThingsBoard](https://github.com/th
 {% assign adddashboard3 = '
     ===
         image: /images/samples/netvox/4-2-1.png,
-        title: The original document of ThingsBoard data converter.
+        title: The original document of IoT Hub data converter.
 '
 %}
 

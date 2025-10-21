@@ -25,7 +25,7 @@ toc:
     path: /docs/trendz/install/trndz-upgrade-instructions/
   - title: Kubernetes
     path: /docs/trendz/install/trndz-upgrade-instructions-kubernetes/
-- title: Connect Trendz to Thingsboard
+- title: Connect Trendz to Iot Hub
   path: /docs/trendz/connect-thingsboard/
 - title: Configuration properties
   path: /docs/trendz/configuration-properties/

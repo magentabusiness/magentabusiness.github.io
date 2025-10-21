@@ -1,14 +1,14 @@
 ---
 layout: docwithnav-gw
-title: How to configure ThingsBoard IoT Gateway using Configurator
-description: How to configure ThingsBoard IoT Gateway using Configurator
+title: How to configure IoT Hub IoT Gateway using Configurator
+description: How to configure IoT Hub IoT Gateway using Configurator
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to configure your ThingsBoard IoT Gateway using Configurator, especially
+This guide will help you to configure your IoT Hub IoT Gateway using Configurator, especially
 if you used installation via deb package.
 
 ## Step 1 Starting Configurator
@@ -35,7 +35,7 @@ CLI will be saved there.
 
 ## Step 3 Starting Gateway
 
-Finally, you can start your ThingsBoard IoT gateway with the following command:
+Finally, you can start your IoT Hub IoT gateway with the following command:
 ```bash
 thingsboard-gateway
 ```
@@ -43,7 +43,7 @@ thingsboard-gateway
 
 ## Next steps
 
-Explore guides related to the main ThingsBoard features:
+Explore guides related to the main IoT Hub features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

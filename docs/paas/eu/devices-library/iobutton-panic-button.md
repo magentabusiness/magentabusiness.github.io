@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect ioButton Panic button to ThingsBoard?
+title: How to connect ioButton Panic button to IoT Hub?
 category: Other devices
 connectivity: LoRaWAN®
 vendor: ioThings

@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-edge
 title: Frequently Asked Questions
-description: ThingsBoard Edge FAQs
+description: IoT Hub Edge FAQs
 
 ---
 

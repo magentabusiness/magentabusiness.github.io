@@ -72,9 +72,9 @@ def collect_required_data():
     print("\n\n", "="*80, sep="")
     print(" "*10, "\033[1m\033[94mIoT Hub device provisioning without authorization example script. CoAP API\033[0m", sep="")
     print("="*80, "\n\n", sep="")
-    host = input("Please write your ThingsBoard \033[93mhost\033[0m or leave it blank to use default ({{coapHostName}}): ")
+    host = input("Please write your IoT Hub \033[93mhost\033[0m or leave it blank to use default ({{coapHostName}}): ")
     config["host"] = host if host else "{{coapHostName}}"
-    port = input("Please write your ThingsBoard \033[93mCoAP port\033[0m or leave it blank to use default (5683): ")
+    port = input("Please write your IoT Hub \033[93mCoAP port\033[0m or leave it blank to use default (5683): ")
     config["port"] = int(port) if port else 5683
     config["provision_device_key"] = input("Please write \033[93mprovision device key\033[0m: ")
     config["provision_device_secret"] = input("Please write \033[93mprovision device secret\033[0m: ")
@@ -128,10 +128,10 @@ async def process():
                 raise Exception("Request timed out!")
 
             if response:
-                logging.info("[THINGSBOARD CLIENT] Response from Thingsboard.")
+                logging.info("[IOT HUB CLIENT] Response from IoT Hub.")
                 logging.info(response)
             else:
-                raise Exception("[THINGSBOARD CLIENT] Cannot save telemetry with received credentials!")
+                raise Exception("[IOT HUB CLIENT] Cannot save telemetry with received credentials!")
         else:
             logging.error("Failed to get access token from response.")
             logging.error(decoded_response.get("errorMsg"))

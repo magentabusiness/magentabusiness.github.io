@@ -68,21 +68,21 @@ To add a gateway, follow next steps:
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=application %}
 
-### Configure application integration with ThingsBoard
+### Configure application integration with IoT Hub
 
-{% assign thingsboard = '
+{% assign iot hub = '
     ===
         image: https://img.thingsboard.io/devices-library/ready-to-go-devices/lansitec-lorawan/thingsboard-1.png,
-        title: Go to the **Integrations** page, find and select the **ThingsBoard**.
+        title: Go to the **Integrations** page, find and select the **IoT Hub**.
     ===
         image: https://img.thingsboard.io/devices-library/ready-to-go-devices/lansitec-lorawan/thingsboard-2.png,
-        title: Enter **the URL of your ThingsBoard server** and click **Submit** button.
+        title: Enter **the URL of your IoT Hub server** and click **Submit** button.
 '
 %}
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=thingsboard %}
 
-### Create device on ThingsBoard
+### Create device on IoT Hub
 
 {% assign devices = '
     ===

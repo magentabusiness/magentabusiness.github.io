@@ -99,7 +99,7 @@ trendz-assistance-ai-chat-interaction:
 {:toc}
 
 The AI Assistant Widget is an interactive tool that allows users to engage in chat-based sessions for quick data retrieval and analysis. 
-It can be added to a dashboard in ThingsBoard and provides an easy way to ask questions and receive instant responses.
+It can be added to a dashboard in IoT Hub and provides an easy way to ask questions and receive instant responses.
 
 {% include images-gallery.html imageCollection="trendz-assistance-chat-example" %}
 
@@ -109,7 +109,7 @@ It can be added to a dashboard in ThingsBoard and provides an easy way to ask qu
 * **History Tracking:** The widget stores previous questions and answers, allowing users to revisit past queries and view updated responses with the latest data.
 * **Flexible Usage with or without Aliases:**
   * By default, the assistant provides answers based on all data accessible to the user.
-  * Users can configure the widget to focus on specific entities (devices, assets, or groups) using aliases in ThingsBoard.
+  * Users can configure the widget to focus on specific entities (devices, assets, or groups) using aliases in IoT Hub.
   * If an alias is linked, responses will be tailored to the selected entity.
   * If no alias is used, the assistant will still function and provide responses based on general available data.
 * **Dynamic Entity Switching:**

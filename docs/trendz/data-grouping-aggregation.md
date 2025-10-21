@@ -34,7 +34,7 @@ The Relation between entities used to join fields from different Business Entiti
 - time range - last month
 
 
-Trendz will find all available buildings in the ThingsBoard, then all Apartments for each Building and finally all Energy Meters that belong to the apartment.
+Trendz will find all available buildings in the IoT Hub, then all Apartments for each Building and finally all Energy Meters that belong to the apartment.
 After that, for all Energy Meters for each building, Trendz will load all energy telemetry for the last month and sum it. As a result we can see how much energy was consumed by each building.
 
 It is not an exact algorithm description and there are a lot of optimizations performed in the background. But it allows to understand how much complexity handled inside Trendz, so you can focus on analytics but not on data fetching.

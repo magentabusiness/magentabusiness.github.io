@@ -3,7 +3,7 @@
 
 ## Introduction
 
-A **Customer** in ThingsBoard can represent a distinct business entity — either an **individual or an organization** — that **purchases or uses the tenant’s devices and/or assets**. 
+A **Customer** in IoT Hub can represent a distinct business entity — either an **individual or an organization** — that **purchases or uses the tenant’s devices and/or assets**. 
 A customer can also act as a **department or subdivision** within the tenant&#39;s organization.
 Customers can scale from small units to large ecosystems with **many users, sub-customers**, and **a large number of devices and assets**.
 

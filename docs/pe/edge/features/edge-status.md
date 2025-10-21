@@ -7,7 +7,7 @@ edgeInfo:
         image: https://img.thingsboard.io/edge/edge-status.png
 ---
 
-**Edge Info** page introduced to provide user information regarding basic edge configuration and ThingsBoard **PE server information (URL and server version): 
+**Edge Info** page introduced to provide user information regarding basic edge configuration and IoT Hub **PE server information (URL and server version): 
 * Name, ID, Type, Routing Key
 * Connection status with the cloud: **Connected / Disconnected**
 * Maximum amount of allowed devices and assets

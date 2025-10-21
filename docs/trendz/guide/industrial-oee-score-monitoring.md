@@ -82,12 +82,12 @@ and on daily basis we would be able to analyze equipment downtime reasons and id
 ## Getting started:
 
 ### Prerequisites
-Lets take a look at entities that exists in ThingsBoard in scope of the solution that we are discussing. It is important to understand how they are connected between each other and what raw telemetry we receive from sensors. 
+Lets take a look at entities that exists in IoT Hub in scope of the solution that we are discussing. It is important to understand how they are connected between each other and what raw telemetry we receive from sensors. 
 The mechanisms how entities and sensors are provisioned are out of scope of this guide. You can find details how to do that in our documentation. So here is how our domain model looks like:
 
-* `Manufacturing plant` registered in ThingsBoard as an asset. 
-* `Assembly line` registered in ThingsBoard as devices and has a relation to the manufacturing plant asset.
-* On-site Gateway collects data from assembly lines via modbus protocol and sends it to ThingsBoard as a telemetry.
+* `Manufacturing plant` registered in IoT Hub as an asset. 
+* `Assembly line` registered in IoT Hub as devices and has a relation to the manufacturing plant asset.
+* On-site Gateway collects data from assembly lines via modbus protocol and sends it to IoT Hub as a telemetry.
 * Following metrics colelcted from assembly line:
   * `powerUsageWh` - amount of energy consumed by assembly line in Wh
   * `producedParts` - amount of parts produced
@@ -97,7 +97,7 @@ The mechanisms how entities and sensors are provisioned are out of scope of this
 
 ### Step 1: Analyze equipment downtime duration and compute Availability metric
 We have all required information from assembly line to compute how much time it was down and what was the reason. Every 30 seconds we receive energy consumption details from assembly line 
-in the format `{powerUsageWh: 10, ts: 1675421880000}`. Also, each time when equipment is stopped operator select the reason and ThingsBoard receive an event about status change in the format `{status: "stopped", reason: "maintenance", ts: 1675421880000}`.
+in the format `{powerUsageWh: 10, ts: 1675421880000}`. Also, each time when equipment is stopped operator select the reason and IoT Hub receive an event about status change in the format `{status: "stopped", reason: "maintenance", ts: 1675421880000}`.
 
 To analyze how much time assembly line was operational or stopped we will use Trendz **state fields**. State field is a special type of field that can tell how much time equipment was in specific state based on simple boolean condition. So let's start:
 

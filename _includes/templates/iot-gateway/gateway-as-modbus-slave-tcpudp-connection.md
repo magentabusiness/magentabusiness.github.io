@@ -7,7 +7,7 @@
 | deviceName                    | **Modbus_Slave_Example**                | Device name                                                                                                              |
 | deviceType                    | **default**                             | Device type                                                                                                              |
 | pollPeriod                    | **5000**                                | Period in milliseconds for checking the attributes and the telemetry.                                                    |
-| sendDataToThingsBoard         | **false**                               | If set to TRUE, the Gateway will perform autoconfiguration and send values to ThingsBoard every <pollPeriod> millisecond |
+| sendDataToThingsBoard         | **false**                               | If set to TRUE, the Gateway will perform autoconfiguration and send values to IoT Hub every <pollPeriod> millisecond |
 | byteOrder                     | **BIG**                                 | Order of bytes to read.                                                                                                  |
 | unitId                        | **0**                                   | Unit id of the device                                                                                                    |
 |---

@@ -48,11 +48,11 @@ Expected output:
 
 #### Create keyspace
 
-Create *thingsboard* keyspace using following command:
+Create *iot hub* keyspace using following command:
 
 ```bash
     kubectl exec -it cassandra-0 -- bash -c "cqlsh -e \
-                    \"CREATE KEYSPACE IF NOT EXISTS thingsboard \
+                    \"CREATE KEYSPACE IF NOT EXISTS iot hub \
                     WITH replication = { \
                         'class' : 'NetworkTopologyStrategy', \
                         '{{tbCassandraRegion}}' : '3' \

@@ -8,7 +8,7 @@ The table below describes the parameters required to configure TCP connection fo
 | Unit ID                  | **1**             | ID of current slave on Modbus                                                                                   |
 | Device name              | **Temp Sensor**   | Name of the current slave                                                                                       |
 | Device profile           | **default**       | Device profile of the current slave                                                                             |
-| Send data to ThingsBoard | **false**         | If set to **TRUE**, the Gateway will perform autoconfiguration and send values to ThingsBoard every poll period |
+| Send data to IoT Hub | **false**         | If set to **TRUE**, the Gateway will perform autoconfiguration and send values to IoT Hub every poll period |
 | Poll period (ms)         | **5000**          | Period in milliseconds for checking the attributes and the telemetry                                            |
 | ---                      
 

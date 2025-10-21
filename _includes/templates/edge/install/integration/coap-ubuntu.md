@@ -48,7 +48,7 @@ export INTEGRATION_ROUTING_KEY=b75**************************34d
 export INTEGRATION_SECRET=vna**************mik
 ```
 
-Execute the following command to start ThingsBoard integration:
+Execute the following command to start IoT Hub integration:
 
 ```bash
 sudo service tb-coap-integration start

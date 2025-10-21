@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect Raspberry Pi 4 to ThingsBoard?
+title: How to connect Raspberry Pi 4 to IoT Hub?
 category: Single-board computers
 chip: Broadcom BCM2711
 connectivity: HTTP, MQTT, WIFI, BLE

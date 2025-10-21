@@ -54,7 +54,7 @@ The next sample code shows how to instantiate IoT Hub Client, perform login and 
 ```dart
 import 'package:thingsboard_pe_client/thingsboard_client.dart';
 
-// ThingsBoard REST API URL
+// IoT Hub REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {

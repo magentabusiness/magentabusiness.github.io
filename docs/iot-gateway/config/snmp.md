@@ -1,14 +1,14 @@
 ---
 layout: docwithnav-gw
 title: SNMP Connector Configuration
-description: SNMP monitoring support for ThingsBoard IoT Gateway
+description: SNMP monitoring support for IoT Hub IoT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to get familiar with SNMP Connector configuration for ThingsBoard IoT Gateway.  
+This guide will help you to get familiar with SNMP Connector configuration for IoT Hub IoT Gateway.  
 Use [general configuration guide](/docs/iot-gateway/configuration/) to enable this Connector.  
 The purpose of this Connector is to get data from SNMP manager objects and write some data to them.  
 
@@ -187,7 +187,7 @@ Main configuration for the device item should contain the following parameters:
 #### Attributes section
 
 This configuration section contains an array of objects with configuration for data processing. Objects configured here will be processed as device attributes.  
-By default, the gateway uses an uplink converter to send received data from SNMP manager to ThingsBoard, but it is also possible to use a custom converter.  
+By default, the gateway uses an uplink converter to send received data from SNMP manager to IoT Hub, but it is also possible to use a custom converter.  
 
 **Note**: Some configuration parameters in the configuration objects depend on the method being used. You can read more about specific configuration parameters for methods [here](#supported-methods-and-their-configuration)
 
@@ -213,7 +213,7 @@ Configuration section item example:
 #### Telemetry section
 
 This configuration section contains an array of objects with configuration for data processing. Objects configured here will be processed as device telemetry.  
-By default, the gateway uses an uplink converter to send received data from SNMP manager to ThingsBoard, but it is also possible to use a custom converter.  
+By default, the gateway uses an uplink converter to send received data from SNMP manager to IoT Hub, but it is also possible to use a custom converter.  
 
 **Note**: Some configuration parameters in configuration objects depend on used method. You can read more about specific configuration parameters for methods [here](#supported-methods-and-their-configuration)
 
@@ -239,7 +239,7 @@ Configuration section item example:
 #### Attribute update requests section
 
 Configurations in this section are optional.  
-ThingsBoard allows the provision of device attributes and fetches some of them from the device application.
+IoT Hub allows the provision of device attributes and fetches some of them from the device application.
 You can treat this as a remote configuration for devices. Your devices are able to request shared attributes from ThingsBoard.
 See [user guide](/docs/user-guide/attributes/) for more details.
 
@@ -277,9 +277,9 @@ The **attributeUpdates** section will look like:
 
 #### Server side RPC section
 
-ThingsBoard allows sending [RPC commands](/docs/user-guide/rpc/) to the device connected to ThingsBoard directly or via Gateway.
+IoT Hub allows sending [RPC commands](/docs/user-guide/rpc/) to the device connected to IoT Hub directly or via Gateway.
  
-Configuration, provided in this section is used for sending RPC requests from ThingsBoard to the device through the gateway.
+Configuration, provided in this section is used for sending RPC requests from IoT Hub to the device through the gateway.
 
 {% capture rpc_variants %}
 **There are 2 types of the RPC calls:**  
@@ -530,7 +530,7 @@ Supported methods are:
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main IoT Hub features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

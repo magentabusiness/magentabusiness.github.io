@@ -21,7 +21,7 @@ openssl req -new -key privateKey.pem -out certRequest.csr
 {: .copy-code}
 
 {% capture common_name_localhost %}
-If your ThingsBoard server is running locally, ensure you set 'localhost' as the common name (domain name) when generating your certificate. 
+If your IoT Hub server is running locally, ensure you set 'localhost' as the common name (domain name) when generating your certificate. 
 If the server is hosted, use its domain name. 
 
 SSL connections will fail if the certificate's domain name does not match the server's hostname.
@@ -54,6 +54,6 @@ EOL'
 Restart the server to apply the changes:
 
 ```bash
-sudo systemctl restart thingsboard
+sudo systemctl restart iot hub
 ```
 {: .copy-code}

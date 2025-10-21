@@ -38,7 +38,7 @@ You can optionally add the following parameters to reconfigure your IoT Hub inst
 
 ```bash
 export CASSANDRA_CLUSTER_NAME=IoT Hub Cluster
-export CASSANDRA_KEYSPACE_NAME=thingsboard
+export CASSANDRA_KEYSPACE_NAME=iot hub
 export CASSANDRA_URL=127.0.0.1:9042
 export CASSANDRA_USE_CREDENTIALS=false
 export CASSANDRA_USERNAME=

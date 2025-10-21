@@ -1,4 +1,4 @@
-{% assign deviceName = page.title | remove: "How to connect " | remove: " to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: " to IoT Hub?" %}
 {% assign deviceVendorLink = "https://temcocontrols.com/shop/t3-6ct/" %}
 {% assign sensorName = "Temco HUM-W1" %}
 {% assign sensorVendorLink = "https://temcocontrols.com/shop/humidity-and-temp-transmitters-with-waterproof-connector/" %}
@@ -21,7 +21,6 @@ The outputs are available in dry contacts 1amp/output, 0-10V analog, and PNP sin
 
 To continue with this guide, we will need the following:  
 {{ prerequisites }}
-- [ThingsBoard IoT Gateway](/docs/iot-gateway/installation/){: target="_blank"} installed
 - [ThingsBoard account]({{thingsboardInstanceLink}}){: target="_blank"}
 
 ## Devices connection
@@ -47,7 +46,7 @@ over Ethernet. For this purpose, use the following steps:
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=configuringDevice %}
 
-## Creating and configuring ThingsBoard IoT Gateway
+## Creating and configuring IoT Hub IoT Gateway
 
 {% capture configuringgatewaytogglespec %}
 Basic%,%basicConfig%,%templates/device-library/ready-to-go-devices/temco-controls-t3e-6ct-configuring-gateway-basic.md%br%
@@ -55,7 +54,7 @@ Advanced%,%advancedConfig%,%templates/device-library/ready-to-go-devices/temco-c
 
 {% include content-toggle.liquid content-toggle-id="creatingAndConfiguringGateway" toggle-spec=configuringgatewaytogglespec %}
 
-## Check data on ThingsBoard
+## Check data on IoT Hub
 
 Once you have successfully done all the steps above and Gateway sent data, you can see it in the 
 Device Telemetry Tab:
@@ -81,7 +80,7 @@ New Dashboard%,%newDashboard%,%templates/device-library/ready-to-go-devices/gate
 ## Conclusion
 
 With the knowledge in this guide, you can easily connect your Temco T3E-6CT controller with Temperature and humidity 
-sensor to ThingsBoard. After connecting the devices to the gateway, you will be able to see and process the data coming 
-from the devices on the ThingsBoard.
+sensor to IoT Hub. After connecting the devices to the gateway, you will be able to see and process the data coming 
+from the devices on the IoT Hub.
 
 Explore the platform [documentation](/docs/{{page.docsPrefix}}){: target="_blank"} to learn more about key concepts and features.

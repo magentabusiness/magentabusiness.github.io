@@ -5,7 +5,7 @@ Connect to your Redis instance (or container/pod, depending on your setup) and r
 
 `redis-cli flushall`
 
-Please note that this command is applicable only if you use Redis exclusively for IoT Hub. If other applications use Redis, you need to locate the ThingsBoard database and flush only that. The default database index is 0, configurable with REDIS_DB <a style="pointer-events: all;" href="/docs/user-guide/install/config/">ThingsBoard environment value</a>.
+Please note that this command is applicable only if you use Redis exclusively for IoT Hub. If other applications use Redis, you need to locate the IoT Hub database and flush only that. The default database index is 0, configurable with REDIS_DB <a style="pointer-events: all;" href="/docs/user-guide/install/config/">IoT Hub environment value</a>.
 
 `redis-cli`
 

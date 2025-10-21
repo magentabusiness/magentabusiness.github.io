@@ -69,7 +69,7 @@ description: IoT Hub Terms of Use
 
 <p>3.10 With respect to any other Information that you provide to us or collected by us, including Information provided at registration, Information we record pertaining to your activities, and Information provided voluntarily by you, we will not disclose such Information outside of us, our affiliates or our third party service providers unless: i) you request us to do so; ii) your end user has provided consent for us to do so; iii) as provided in these Terms of Use or in accordance with your agreement(s) with us, or iv) to comply with applicable law, legal process or lawful government requests, or in respect of any claims or potential claims brought against us.</p>
 
-<p>3.11 “THINGSBOARD” is a registered trademark in multiple regions. Customer is permitted to state publicly that it is a customer of the Service, consistent with the trademark guidelines. IoT Hub, Inc. may include Customer's name in a list of IoT Hub customers, online or in promotional materials. IoT Hub, Inc. may also verbally reference you as a customer of the Service.</p> 
+<p>3.11 “IOT HUB” is a registered trademark in multiple regions. Customer is permitted to state publicly that it is a customer of the Service, consistent with the trademark guidelines. IoT Hub, Inc. may include Customer's name in a list of IoT Hub customers, online or in promotional materials. IoT Hub, Inc. may also verbally reference you as a customer of the Service.</p> 
 
 <br>
 <p> <b>4. Withdrawal and suspension of the Service</b> </p> 

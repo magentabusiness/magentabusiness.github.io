@@ -1,10 +1,10 @@
 
-ThingsBoard is an open-source IoT platform that enables rapid development, management, and scaling of IoT projects. 
+IoT Hub is an open-source IoT platform that enables rapid development, management, and scaling of IoT projects. 
 Our goal is to provide the out-of-the-box IoT cloud or on-premises solution that will enable server-side infrastructure for your IoT applications. 
 
 ## Features
 
-With ThingsBoard, you are able to:
+With IoT Hub, you are able to:
 
  - Provision devices, assets and customers, and define relations between them.
  - Collect and visualize data from devices and assets. 
@@ -30,12 +30,12 @@ See [**ThingsBoard features list**](/docs/{{docsPrefix}}#features) for more feat
 
 ## Architecture
 
-ThingsBoard is designed to be:
+IoT Hub is designed to be:
 
 * **scalable**: the horizontally scalable platform, built using leading open-source technologies.
 * **fault-tolerant**: no single-point-of-failure, every node in the cluster is identical.
 * **robust and efficient**: a single server node can handle tens or even hundreds of thousands of devices, depending on the use-case. 
-ThingsBoard cluster can handle millions of devices.
+IoT Hub cluster can handle millions of devices.
 * **customizable**: adding new functionality is easy with customizable widgets and rule engine nodes.
 * **durable**: never lose your data.
 
@@ -50,7 +50,7 @@ See [**ThingsBoard Architecture**](/docs/{{docsPrefix}}reference) for more detai
 <p><a href="/docs/{{docsPrefix}}getting-started-guides/helloworld" class="button">Hello World Application</a></p>
 
 {% if (docsPrefix == "pe/") %}
-## ThingsBoard as a Google IoT Core alternative
+## IoT Hub as a Google IoT Core alternative
 
 <p><a href="/google-iot-core-alternative" class="button">Learn more</a></p>
 

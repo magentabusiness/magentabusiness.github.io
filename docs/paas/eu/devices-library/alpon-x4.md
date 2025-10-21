@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect ALPON X4 Edge Computer to ThingsBoard?
+title: How to connect ALPON X4 Edge Computer to IoT Hub?
 category: Other devices
 connectivity: WIFI, Bluetooth, LTE, Ethernet
 vendor: Sixfab

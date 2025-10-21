@@ -1,11 +1,11 @@
 IoT Hub uses **cache** to improve performance and reduce frequent database reads. By default, the deployment uses a **local Valkey cache**. 
-However, ThingsBoard is also compatible with managed services such as **Amazon ElastiCache**.
+However, IoT Hub is also compatible with managed services such as **Amazon ElastiCache**.
 
 Here are the steps to create a **basic ElastiCache Valkey cluster**:
 - Open AWS console and navigate to [ElastiCache Valkey caches](https://console.aws.amazon.com/elasticache#/valkey) and click the "**Create**" button.
 - You can choose the Deployment option **Serverless** or **Design your own cache**.
 - Specify **Valkey Engine version 8.x** and node type with at least 1 GB of RAM.
-- Make sure your **Valkey cluster** is accessible from the **ThingsBoard cluster**. The easiest way to achieve this is by **deploying the Valkey cluster in the same VPC**. We also recommend using **private subnets**. Use your **group ID**.
+- Make sure your **Valkey cluster** is accessible from the **IoT Hub cluster**. The easiest way to achieve this is by **deploying the Valkey cluster in the same VPC**. We also recommend using **private subnets**. Use your **group ID**.
 - Disable the "**Enable automatic backups**" option.
 
 {% include images-gallery.html imageCollection="redisSetup"%}

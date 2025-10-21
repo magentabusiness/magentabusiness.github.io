@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-edge
 title: Edge Cluster Setup
-description: Detailed instructions on how to set up ThingsBoard Edge in a cluster
+description: Detailed instructions on how to set up IoT Hub Edge in a cluster
 
 ---
 {% assign docsPrefix = "edge/" %}

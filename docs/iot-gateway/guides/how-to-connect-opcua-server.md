@@ -25,7 +25,7 @@ The info available at this moment:
 | Device name path      | **${server.deviceName}**          | Relative path from the device object to variable contains device name.    | 
 |-|-|
 
-We want to write **Humidity** ( relative path is **${humidity_value}** ) as the telemetry to ThingsBoard and **batteryLevel** ( relative path is **${Battery.Level}** ) as the device client-side attribute.      
+We want to write **Humidity** ( relative path is **${humidity_value}** ) as the telemetry to IoT Hub and **batteryLevel** ( relative path is **${Battery.Level}** ) as the device client-side attribute.      
 
 
 
@@ -76,7 +76,7 @@ About sections of OPC-UA configuration file you can [read more here](/docs/iot-g
 Let's analyze our settings:
 
 1. General configuration of connector. In this section we have defined main settings (e. g. connector name — OPC-UA Default Server, url — 192.168.1.113:4840/server/ etc.). You can read more about available parameters [here](/docs/iot-gateway/config/opc-ua/#section-server).  
-2. General device configuration. In this section we have defined main settings of our OPC-UA device (e. g. device object in OPC-UA server pattern - Device\\d*$, device name pattern within ThingsBoard — Device\\d*$ etc.). You can read more about available parameters [here](/docs/iot-gateway/config/opc-ua/#section-mapping).  
+2. General device configuration. In this section we have defined main settings of our OPC-UA device (e. g. device object in OPC-UA server pattern - Device\\d*$, device name pattern within IoT Hub — Device\\d*$ etc.). You can read more about available parameters [here](/docs/iot-gateway/config/opc-ua/#section-mapping).  
 3. Attributes configuration. In this section we have defined the settings for batteryLevel attribute within ThingsBoard. You can read more about available parameters [here](/docs/iot-gateway/config/opc-ua/#subsection-attributes).  
 4. Timeseries configuration. In this section we set up temperature and humidity parameters. You can read more about available parameters [here](/docs/iot-gateway/config/opc-ua/#subsection-timeseries).  
 
@@ -123,8 +123,8 @@ TBGatewayService(config_file_path)
 
 ## Step 5. Check information from device
 
-Check data in your ThingsBoard instance.  
-    - Go to the your ThingsBoard instance and login.  
+Check data in your IoT Hub instance.  
+    - Go to the your IoT Hub instance and login.  
     - Go to the "Devices" tab. "Humidity Sensor" will be there.
 <br>    
 Go to the device details, **ATTRIBUTES** tab, there you may see the attribute **batteryLevel** with some value.  

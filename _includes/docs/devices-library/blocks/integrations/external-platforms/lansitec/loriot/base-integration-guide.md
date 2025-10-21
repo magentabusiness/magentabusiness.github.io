@@ -53,9 +53,9 @@ To add a device, you can follow next steps:
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=loriotAddGateway %}
 
-### Create integration in ThingsBoard
+### Create integration in IoT Hub
 
-Next we will create an integration with Loriot inside the ThingsBoard.
+Next we will create an integration with Loriot inside the IoT Hub.
 
 At first, copy the code, we will need it to create the uplink converter:
 

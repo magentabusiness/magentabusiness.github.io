@@ -3,7 +3,7 @@ Please refer to the official [TimescaleDB installation page](https://docs.timesc
 After package installation, you need to create TimescaleDB extension in your IoT Hub database:
 ```bash
 sudo su - postgres
-psql -d thingsboard
+psql -d iot hub
 CREATE EXTENSION IF NOT EXISTS timescaledb;
 \q
 #Then, press “Ctrl+D” to return to main user console.

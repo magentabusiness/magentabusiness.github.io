@@ -1,7 +1,7 @@
 {% if docsPrefix == 'pe/' %}
-{% assign appPrefix = "ThingsBoard PE" %}
+{% assign appPrefix = "IoT Hub PE" %}
 {% else %}
-{% assign appPrefix = "ThingsBoard" %}
+{% assign appPrefix = "IoT Hub" %}
 {% endif %}
 
 * TOC

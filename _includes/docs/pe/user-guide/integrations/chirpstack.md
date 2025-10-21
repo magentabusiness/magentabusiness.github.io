@@ -14,15 +14,12 @@ Additionally, you must connect your device to the network. You can find detailed
 
 ## Create ChirpStack integration
 
-You will need to have access to ThingsBoard Professional Edition. The easiest way is to use [ThingsBoard Cloud](https://thingsboard.io/installations/choose-region/){:target="_blank"} server.
-The alternative option is to install ThingsBoard using [installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
-
 <br>
-Let's move on to setting up the integration between the ThingsBoard platform and ChirpStack.
+Let's move on to setting up the integration between the IoT Hub platform and ChirpStack.
 
 **1. Basic settings**.
 
-- Sign in to your ThingsBoard account.
+- Sign in to your IoT Hub account.
 - Navigate to the "**Integrations**" page under the "**Integrations center**" section. Click "**plus**" button to add a new integration.
 - From the list, select the integration type "**ChirpStack**".
 - If you'd like to monitor events and troubleshoot, enable [debug mode](/docs/user-guide/integrations/#debug-mode){:target="_blank"}.
@@ -39,9 +36,9 @@ Let's move on to setting up the integration between the ThingsBoard platform and
 
 Uplink is necessary in order to convert the incoming data from the device into the required format for displaying them in IoT Hub.
 
-Starting from **ThingsBoard 4.0**, we have simplified the process of writing converters for Loriot integration. You can now easily choose where the message fields from the integration should go (attributes or telemetry) without manually defining this in the decoder function.
+Starting from **IoT Hub 4.0**, we have simplified the process of writing converters for Loriot integration. You can now easily choose where the message fields from the integration should go (attributes or telemetry) without manually defining this in the decoder function.
 
-> **Note**: Converters created before the release of ThingsBoard 4.0 will still be available and will continue to function properly.
+> **Note**: Converters created before the release of IoT Hub 4.0 will still be available and will continue to function properly.
 
 - Enter a name for the converter. It must be unique.
 - To view the events, enable [debug mode](/docs/user-guide/integrations/#debug-mode){:target="_blank"}.
@@ -50,7 +47,7 @@ Starting from **ThingsBoard 4.0**, we have simplified the process of writing con
     - Use the existing script for parsing and transforming data, or provide your own custom script.
 
 {% capture difference %}
-**Note:** The converter shown below will work **only with ThingsBoard versions 3.9 and earlier**.
+**Note:** The converter shown below will work **only with IoT Hub versions 3.9 and earlier**.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 

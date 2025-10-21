@@ -3,7 +3,7 @@ layout: docwithnav-trendz
 assignees:
 - vparomskiy
 title: Trendz Analytics
-description: ThingsBoard Trends - Business Intelligence and Analytics Platform for Iot powered Business
+description: IoT Hub Trends - Business Intelligence and Analytics Platform for Iot powered Business
 ---
 
 Welcome to the Trendz Analytics documentation homepage!

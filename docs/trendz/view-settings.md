@@ -176,7 +176,7 @@ Common to most views:
 
 ## Query Params
 
-Let’s say we have 2 buildings and 2 sensors registered in ThingsBoard with the following relationships:
+Let’s say we have 2 buildings and 2 sensors registered in IoT Hub with the following relationships:
 
 - **Building A** contains **Sensor_1**
 - **Building B** has no sensors
@@ -197,13 +197,13 @@ You can control how the query is built using these parameters:
 - **Topology Entities** – Trendz builds a query plan using the Topology Graph by finding the shortest path between all used entities  
   For complex graphs, shortest path may not be optimal — you can manually define which entities to include
 
-- **Raw data loading** – Load unaggregated data directly from the ThingsBoard
+- **Raw data loading** – Load unaggregated data directly from the IoT Hub
 
 - **Enable multi-root items loading** – Allows multiple root-level entities to be processed in the same view
 
 ## View Mode Fields
 
-These settings apply only when the view is shown in full-screen mode or embedded in a Trendz Widget on the ThingsBoard dashboard. [More details here](/docs/trendz/widget-actions/)
+These settings apply only when the view is shown in full-screen mode or embedded in a Trendz Widget on the IoT Hub dashboard. [More details here](/docs/trendz/widget-actions/)
 
 - **Hide filters** – Hide the filter section
 - **Hide date filters** – Hide the date picker
@@ -212,7 +212,7 @@ These settings apply only when the view is shown in full-screen mode or embedded
 - **Get filter values from URL** – Load filter parameters from browser URL query string
 - **Set filter values to URL** – Save selected filter values into the browser URL
 - **Hidden filters** – Hide specific filters
-- **Row click entities** – On clicking a chart or table item, send the selected entity to ThingsBoard alias  
+- **Row click entities** – On clicking a chart or table item, send the selected entity to IoT Hub alias  
   (commonly used for triggering filter updates in other widgets)  
   [Read more here](/docs/trendz/widget-actions/#configure-onrowclick-action)
 

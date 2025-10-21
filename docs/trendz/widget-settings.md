@@ -21,10 +21,10 @@ trendz-widget-filter-change-event:
 
 ## Trendz widget auto refresh
 
-You can update Trendz widgets on the ThingsBoard dashboard with the frequency you prefer by configuring auto refresh.
+You can update Trendz widgets on the IoT Hub dashboard with the frequency you prefer by configuring auto refresh.
 Here's how to do it:
 
-* Add a widget to the ThingsBoard dashboard.
+* Add a widget to the IoT Hub dashboard.
 * Open the widget's edit mode and go to the Advanced tab.
 * Check the "Update data in real time" checkbox.
 * Choose the desired interval for updating data in real time (in minutes).

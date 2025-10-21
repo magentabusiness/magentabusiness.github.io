@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect NVIDIA Jetson Nano Developer Kit to ThingsBoard?
+title: How to connect NVIDIA Jetson Nano Developer Kit to IoT Hub?
 category: Single-board computers
 chip: NVIDIA CUDA
 connectivity: Ethernet, WIFI, Bluetooth

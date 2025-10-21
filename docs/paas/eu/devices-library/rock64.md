@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect Rock64 to ThingsBoard?
+title: How to connect Rock64 to IoT Hub?
 category: Single-board computers
 chip: Rockchip RK3328
 connectivity: Ethernet

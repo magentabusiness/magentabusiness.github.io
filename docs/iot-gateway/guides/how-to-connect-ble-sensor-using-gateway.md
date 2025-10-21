@@ -110,10 +110,10 @@ In this guide we will use configuration above.
 Let's analyze our settings:
 
 1. General configuration for the connector. In this section we have defined general connector settings, such as connector name ("BLE Connector"), rescan interval (100) etc. You can read more about available parameters [here](/docs/iot-gateway/config/ble/#main-section).  
-2. General device configuration. In this section we have defined general device settings, such as device name in ThingsBoard ("Temperature and humidity sensor"), MAC-address ("4C:65:A8:DF:85:C0") etc. You can read more about available parameters [here](/docs/iot-gateway/config/ble/#device-object-subsection).
+2. General device configuration. In this section we have defined general device settings, such as device name in IoT Hub ("Temperature and humidity sensor"), MAC-address ("4C:65:A8:DF:85:C0") etc. You can read more about available parameters [here](/docs/iot-gateway/config/ble/#device-object-subsection).
 3. Telemetry configuration. In this section we have defined a configuration for temperature and humidity parameters. You can read more about available parameters [here](/docs/iot-gateway/config/ble/#subsection-telemetry).  
 4. Attributes configuration. In this section we have defined that connector will read value from characteristic ("00002A00-0000-1000-8000-00805F9B34FB") and write it as the device client-side attribute ("name") on ThingsBoard. You can read more about available parameters [here](/docs/iot-gateway/config/ble/#subsection-attributes).    
-5. Attribute updates configuration. In this section we have configured the gateway to change the device name when we change shared attribute ("sharedName") in ThingsBoard device. You can read more about available parameters [here](/docs/iot-gateway/config/ble/#subsection-attributeupdates).   
+5. Attribute updates configuration. In this section we have configured the gateway to change the device name when we change shared attribute ("sharedName") in IoT Hub device. You can read more about available parameters [here](/docs/iot-gateway/config/ble/#subsection-attributeupdates).   
 6. Server side rpc configuration. In this section we have configured the gateway to read the device name and return it when we call RPC method ("rpcMethod1") from ThingsBoard. You can read more about available parameters [here](/docs/iot-gateway/config/ble/#subsection-serversiderpc).   
 
 If you have a different device, you should provide your device characteristic identifiers in the configuration json.    
@@ -160,10 +160,10 @@ config_file_path = "YOUR_PATH_HERE"
 TBGatewayService(config_file_path)
 ```
 
-## Step 5. Check information on ThingsBoard
+## Step 5. Check information on IoT Hub
 
-Check data in your ThingsBoard instance, that you have been configured in the [general configuration guide](/docs/iot-gateway/configuration/).  
-    - Go to the your ThingsBoard instance and login.  
+Check data in your IoT Hub instance, that you have been configured in the [general configuration guide](/docs/iot-gateway/configuration/).  
+    - Go to the your IoT Hub instance and login.  
     - Go to the "Devices" tab. "Temperature and Humidity sensor" should be there.
     <br>    
     ![](https://img.thingsboard.io/gateway/temp-hum-sensor.png)
@@ -177,7 +177,7 @@ Go to the device details, **ATTRIBUTES** tab, which contains all client-side att
 
 Let's try to change the device name.
 We should follow several steps:
-1. Create a shared attribute in the device on ThingsBoard, to do this we go to the **ATTRIBUTES** tab, select from a list of attributes option "Shared attributes" instead of "Client attributes", press plus icon, put "sharedName" as Key and "New_name_" as "String value".
+1. Create a shared attribute in the device on IoT Hub, to do this we go to the **ATTRIBUTES** tab, select from a list of attributes option "Shared attributes" instead of "Client attributes", press plus icon, put "sharedName" as Key and "New_name_" as "String value".
 2. Check name of device using "rpcMethod1" from RPC Dashboard or scan devices around using default ability in the device where installed the gateway. 
 
 **Notify:** Some devices can reset their name to default.

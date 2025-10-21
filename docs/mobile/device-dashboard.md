@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-mobile
-title: Configure device details dashboards in ThingsBoard Mobile Application
+title: Configure device details dashboards in IoT Hub Mobile Application
 
 device-dashboard:
  0:

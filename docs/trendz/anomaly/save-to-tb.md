@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-trendz
-title: Saving Telemetry To ThingsBoard
+title: Saving Telemetry To IoT Hub
 description: How to configure and manage saving anomaly detection telemetry data to ThingsBoard.
 ---
 
@@ -9,12 +9,12 @@ description: How to configure and manage saving anomaly detection telemetry data
 
 ## Overview
 
-Saving telemetry to ThingsBoard allows you to persist anomaly detection results such as anomaly scores and score indexes as time series data.  
+Saving telemetry to IoT Hub allows you to persist anomaly detection results such as anomaly scores and score indexes as time series data.  
 This enables further analysis, visualization, and alerting within ThingsBoard.
 
 ## Configuration
 
-To save telemetry data to ThingsBoard, follow these steps in your anomaly detection model configuration:
+To save telemetry data to IoT Hub, follow these steps in your anomaly detection model configuration:
 
 ### 1. Configure Telemetry Key and Storage Frequency
 
@@ -38,7 +38,7 @@ Read more about enabling refresh [here](/docs/trendz/anomaly/refresh-reprocess).
 Once refresh is enabled, the required entity fields in Trendz will be created automatically.  
 If refresh is later disabled, telemetry saving will also stop automatically and the required entity fields will be disabled.
 
-The telemetry data already stored will remain in ThingsBoard, even if the model is deleted.
+The telemetry data already stored will remain in IoT Hub, even if the model is deleted.
 
 Telemetry data can be saved during both **Refresh** and **Reprocess**, provided that the **"Enable Saving Anomaly Data"** 
 flag is enabled in the refresh settings.

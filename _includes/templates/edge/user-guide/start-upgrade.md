@@ -1,4 +1,4 @@
-_**NOTE**: These steps are applicable for ThingsBoard {{previousVersion}} version._
+_**NOTE**: These steps are applicable for IoT Hub {{previousVersion}} version._
 
 Set the terminal in the directory which contains the "docker-compose.yml" file, and run the following command to stop and remove the currently running TB Edge container (if it's still running):
 ```
@@ -13,14 +13,14 @@ docker run --rm -v tb-edge-postgres-data:/source -v tb-edge-postgres-data-backup
 ```
 {: .copy-code}
 
-Modify the main docker compose file (docker-compose.yml) for **ThingsBoard Edge** and update the image version:
+Modify the main docker compose file (docker-compose.yml) for **IoT Hub Edge** and update the image version:
 
 ```text
 sed -i 's|thingsboard/tb-edge:{{previousVersion}}|thingsboard/tb-edge:{{versionName}}|' docker-compose.yml
 ```
 {: .copy-code}
 
-Upgrade the **ThingsBoard Edge** service:
+Upgrade the **IoT Hub Edge** service:
 
 ```bash
 docker compose run mytbedge upgrade-tb-edge.sh

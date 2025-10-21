@@ -3,13 +3,13 @@ layout: docwithnav-paas-eu
 assignees:
 - ashvayka
 title: Working with IoT dashboards
-description: IoT dashboards using ThingsBoard
+description: IoT dashboards using IoT Hub
 redirect_from: "/docs/paas/eu/user-guide/ui/dashboards/"
 
 creating-dashboard:
     0:
         image: https://img.thingsboard.io/user-guide/dashboards/overview/create-dashboard-1-pe.png
-        title: 'Login to your ThingsBoard instance and navigate to the "Dashboards" page through the main menu on the left of the screen. By default, you navigate to the dashboard group "All";'
+        title: 'Login to your IoT Hub instance and navigate to the "Dashboards" page through the main menu on the left of the screen. By default, you navigate to the dashboard group "All";'
     1:
         image: https://img.thingsboard.io/user-guide/dashboards/overview/create-dashboard-2-pe.png
         title: 'Click the "+" sign in the upper right corner of the screen, and select "Create new dashboard" from the drop-down menu;'

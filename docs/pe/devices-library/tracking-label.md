@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect Tracking Label to ThingsBoard?
+title: How to connect Tracking Label to IoT Hub?
 category: Other devices
 connectivity: LoRaWAN®
 vendor: Lansitec

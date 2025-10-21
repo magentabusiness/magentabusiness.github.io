@@ -107,7 +107,7 @@ check-configuration-1:
         title: 'Copy the generated telemetry publishing command.'
     2:
         image: https://img.thingsboard.io/tutorials/telemetry-delta-calculation/check-configuration-3-pe.png
-        title: 'Go to the "Latest telemetry" tab to monitor the incoming data in real time, and execute the copied command in the Terminal to send telemetry to ThingsBoard on behalf of the device. You will see two telemetry data keys: the temperature key with a value of 25, and the deltaTemperature key — the result of processing the temperature value using the calculated field function. Its value is 0 because, so far, only a single telemetry value has been sent to ThingsBoard.'
+        title: 'Go to the "Latest telemetry" tab to monitor the incoming data in real time, and execute the copied command in the Terminal to send telemetry to IoT Hub on behalf of the device. You will see two telemetry data keys: the temperature key with a value of 25, and the deltaTemperature key — the result of processing the temperature value using the calculated field function. Its value is 0 because, so far, only a single telemetry value has been sent to ThingsBoard.'
     3:
         image: https://img.thingsboard.io/tutorials/telemetry-delta-calculation/check-configuration-4-pe.png
         title: 'Send another temperature value, for example, 32. The deltaTemperature value should now be 7, which matches the condition for triggering the alarm.'

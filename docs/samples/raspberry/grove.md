@@ -13,7 +13,7 @@ description: IoT Hub IoT Platform sample for Raspberry Pi Grove Base Hat connect
 
 IoT Hub Community Edition is an open-source server-side platform that allows you to monitor and control IoT devices. 
 It is free for both personal and commercial usage and you can deploy it anywhere. 
-If you are not familiar with the platform yet, we recommend to review [what is thingsboard page](/docs/getting-started-guides/what-is-iothub/) and [getting started guide](/docs/getting-started-guides/helloworld/) at first and then proceed with this tutorial.
+If you are not familiar with the platform yet, we recommend to review [what is IoT Hub page](/docs/getting-started-guides/what-is-iothub/) and [getting started guide](/docs/getting-started-guides/helloworld/) at first and then proceed with this tutorial.
 Within this guide we use [iothub.magenta.at](https://iothub.magenta.at).
 
 This sample application will allow you to collect information from sensors and control Servo, Led of your Raspberry Pi device with Grove Base Hat PCB using IoT Hub web UI. The purpose of this application is to demonstrate IoT Hub and Grove Base Hat PCB integrations.
@@ -86,7 +86,7 @@ By first we need to configure the Raspberry Pi. Please follow this [article](htt
 
 After the configuration we need to install libraries used in the script to the Raspberry Pi.
 
-The following command will install thingsboard python client sdk, it is used for communication with IoT Hub server:
+The following command will install iot hub python client sdk, it is used for communication with IoT Hub server:
 
 
 ```bash
@@ -139,7 +139,7 @@ After this you need to replace the THINGSBOARD_HOST and ACCESS_TOKEN in the scri
 
 ```python
 #
-# Copyright © 2019-2024 The Thingsboard Authors
+# Copyright © 2019-2024 The Iot Hub Authors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.

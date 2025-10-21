@@ -1,6 +1,6 @@
 ---
 layout: use-case
-title: IoT Environment Monitoring solutions with ThingsBoard
+title: IoT Environment Monitoring solutions with IoT Hub
 description: Discover scalable and secure IoT environment monitoring solutions with ThingsBoard. Connect multiple sensors, automate alerts, and gain real-time insights to improve safety, efficiency, and comfort across industrial, commercial, and smart building applications.
 notitle: "true"
 customTitle: "true"
@@ -16,14 +16,14 @@ contactUsModal: "true"
     <div class="about-text">
         <div class="short">
             <div class="block">
-                <p class="text">Environment monitoring plays a vital role in ensuring safety, comfort, and operational efficiency across all types of facilities — from office buildings to industrial sites. ThingsBoard is perfectly suited to address these challenges.</p>
+                <p class="text">Environment monitoring plays a vital role in ensuring safety, comfort, and operational efficiency across all types of facilities — from office buildings to industrial sites. IoT Hub is perfectly suited to address these challenges.</p>
             </div>
             <div class="demo-button">
                 <a id="UseCases_EnvMon_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/dfaef940-8a91-11ec-83d0-83ba2015b874?publicId=4978baf0-8a92-11ec-98f9-ff45c37940c6" class="button gtm_button">View live demo</a>
             </div>
         </div>
         <div class="long">
-            <p>ThingsBoard provides a scalable, reliable, and secure platform for <a href="/docs/pe/solution-templates/temperature-humidity-sensors/">environment monitoring</a>. With built-in support for LoRaWAN, NB-IoT, and Sigfox, it enables efficient integration of numerous low-power sensors over long distances, minimizing infrastructure complexity. The platform supports standard IoT protocols like HTTP, MQTT, CoAP, and LwM2M, making it easy to connect a wide range of devices and scale with your project.</p>
+            <p>IoT Hub provides a scalable, reliable, and secure platform for <a href="/docs/pe/solution-templates/temperature-humidity-sensors/">environment monitoring</a>. With built-in support for LoRaWAN, NB-IoT, and Sigfox, it enables efficient integration of numerous low-power sensors over long distances, minimizing infrastructure complexity. The platform supports standard IoT protocols like HTTP, MQTT, CoAP, and LwM2M, making it easy to connect a wide range of devices and scale with your project.</p>
             <p>Automated features—from real-time alerts on critical changes to forwarding data into external analytics tools—ensure proactive monitoring. Intuitive dashboards, customizable logic, and seamless integrations turn raw environmental data into actionable insights, enabling smarter and faster decisions.</p>        </div>
     </div>
 </section>
@@ -38,7 +38,7 @@ contactUsModal: "true"
     <h2>Solution structure of environment monitoring</h2>
     <div class="about-text">
         <div class="short">
-            <div class="block"> <p class="text">Sensor data is transmitted to ThingsBoard using IoT protocols like HTTP, MQTT, CoAP, and LwM2M, or via integrations with LoRaWAN servers and other platforms.</p>
+            <div class="block"> <p class="text">Sensor data is transmitted to IoT Hub using IoT protocols like HTTP, MQTT, CoAP, and LwM2M, or via integrations with LoRaWAN servers and other platforms.</p>
             </div>
         </div>
         <div class="long">
@@ -280,10 +280,10 @@ contactUsModal: "true"
 
         function getImage(index) {
             const images = [
-                "<img src='https://img.thingsboard.io/usecases/environment-monitoring/environment-monitoring-2.webp' alt='Dashboard with sensor status, critical alarm, and map location of sensors' title='ThingsBoard dashboard showing real-time sensor metrics, alarm status, and their geographic positions on the map'/>",
+                "<img src='https://img.thingsboard.io/usecases/environment-monitoring/environment-monitoring-2.webp' alt='Dashboard with sensor status, critical alarm, and map location of sensors' title='IoT Hub dashboard showing real-time sensor metrics, alarm status, and their geographic positions on the map'/>",
                 "<img src='https://img.thingsboard.io/usecases/environment-monitoring/environment-monitoring-3.webp' alt='Temperature and humidity charts with location of Sensor C1' title='Live monitoring of Sensor C1: temperature and humidity data alongside sensor location on the map'/>",
                 "<img src='https://img.thingsboard.io/usecases/environment-monitoring/environment-monitoring-4.webp' alt='Temperature and humidity charts with location of Sensor T1' title='Sensor T1 real-time readings: temperature and humidity graphs with sensor map marker'/>",
-                "<img src='https://img.thingsboard.io/usecases/environment-monitoring/environment-monitoring-1.webp' alt='Sensor configuration panel with thresholds and map location in ThingsBoard' title='Editing Sensor T1: setting temperature and humidity thresholds and viewing sensor location on the map'/>",
+                "<img src='https://img.thingsboard.io/usecases/environment-monitoring/environment-monitoring-1.webp' alt='Sensor configuration panel with thresholds and map location in IoT Hub' title='Editing Sensor T1: setting temperature and humidity thresholds and viewing sensor location on the map'/>",
             ];
             return images[index];
         }

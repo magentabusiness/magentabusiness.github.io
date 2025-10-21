@@ -7,7 +7,7 @@ description: Getting started with IoT Hub open-source IoT platform and simulated
 step1:
     0:
         image: /images/helloworld/getting-started-ce/hello-world-1-1-provision-device-1-ce.png 
-        title: 'Log in to ThingsBoard and navigate to the "Devices" page of the "Entities" section.'
+        title: 'Log in to IoT Hub and navigate to the "Devices" page of the "Entities" section.'
     1:
         image: /images/helloworld/getting-started-ce/hello-world-1-1-provision-device-2-ce.png 
         title: 'Click on the "+" icon in the top right corner of the table and select "Add new device" from drop-down menu.'
@@ -286,7 +286,7 @@ We will connect and visualize data from the temperature sensor to keep it simple
 
 ## Step 1. Provision Device
 
-Let&#39;s add a device that sends temperature data to ThingsBoard:
+Let&#39;s add a device that sends temperature data to IoT Hub:
 
 {% include images-gallery.html imageCollection="step1" showListImageTitles="true" %}
 
@@ -304,7 +304,7 @@ You will also receive a notification upon adding devices. Click the bell icon (t
 
 ## Step 2. Connect device
 
-Let&#39;s verify your device&#39;s connection to ThingsBoard:
+Let&#39;s verify your device&#39;s connection to IoT Hub:
 
 {% include images-gallery.html imageCollection="step2" showListImageTitles="true" %}
 
@@ -401,13 +401,13 @@ Notifications can be delivered via email, SMS, or integrated third-party systems
 
 Additionally, [ThingsBoard Mobile Application](/docs/mobile/){:target="_blank"} provides instant push notifications directly to your smartphone, ensuring you&#39;re always informed of critical events wherever you are.
 
-Follow [this guide](/docs/mobile/getting-started/){:target="_blank"} to install the ThingsBoard mobile app and set up notifications. 
+Follow [this guide](/docs/mobile/getting-started/){:target="_blank"} to install the IoT Hub mobile app and set up notifications. 
 
 Enjoy exploring IoT Hub!
 
 ## Step 7. Assign device and dashboard to customer
 
-One of the most important ThingsBoard features is the ability to assign Dashboards to Customers. 
+One of the most important IoT Hub features is the ability to assign Dashboards to Customers. 
 You may assign different devices to different customers. Then, you may create a Dashboard(s) and assign it to multiple customers.
 Each customer user will see his own devices and will not be able to see devices or any other data that belongs to a different customer.
 
@@ -449,7 +449,7 @@ You may optionally configure the dashboard to appear just after user logs in to 
 
 #### Step 7.5 Activate customer user
 
-Finally, log in to ThingsBoard as a customer user.
+Finally, log in to IoT Hub as a customer user.
 
 {% include images-gallery.html imageCollection="step75" showListImageTitles="true" %}
 

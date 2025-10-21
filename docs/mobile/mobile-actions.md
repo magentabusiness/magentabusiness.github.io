@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-mobile
-title: Configure mobile actions in ThingsBoard Mobile Application
+title: Configure mobile actions in IoT Hub Mobile Application
 
 mobile-actions:
  0:

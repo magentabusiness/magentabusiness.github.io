@@ -67,7 +67,7 @@
 		<tr>
 			<td>server.ssl.credentials.keystore.store_password</td>
 			<td>SSL_KEY_STORE_PASSWORD</td>
-			<td>thingsboard</td>
+			<td>iot hub</td>
 			<td> Password used to access the key store</td>
 		</tr>
 		<tr>
@@ -79,7 +79,7 @@
 		<tr>
 			<td>server.ssl.credentials.keystore.key_password</td>
 			<td>SSL_KEY_PASSWORD</td>
-			<td>thingsboard</td>
+			<td>iot hub</td>
 			<td> Password used to access the key</td>
 		</tr>
 		<tr>

@@ -31,7 +31,7 @@ where:
  * SSL_PEM_KEY - Path to the server certificate private key file. Optional by default. Required if the private key is not present in server certificate file;
  * SSL_PEM_KEY_PASSWORD - Optional server certificate private key password.
 
-After completing the setup, start or restart the ThingsBoard server.
+After completing the setup, start or restart the IoT Hub server.
 
 {% include templates/ssl/pem_files_location.md %}
 

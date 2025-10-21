@@ -114,12 +114,12 @@ Our application consists of three *.lua* files:
    You need to modify this file in order to setup your wifi network parameters and address of IoT Hub server.
    - your wifi network SSID - name of the wifi network.
    - your wifi network password - password to the network.
-   - thingsboard server IP - host of your thingsboard installation. Use "iothub.magenta.at" if you are using [live demo](https://iothub.magenta.at/) server.
-   - thingsboard mqtt port - 1883 is the default value.
-   - thingsboard access token - DHT11_DEMO_TOKEN is the default value that corresponds to pre-provisioned [demo account](/docs/samples/demo-account/#tenant-devices).
+   - iot hub server IP - host of your iot hub installation. Use "iothub.magenta.at" if you are using [live demo](https://iothub.magenta.at/) server.
+   - iot hub mqtt port - 1883 is the default value.
+   - iot hub access token - DHT11_DEMO_TOKEN is the default value that corresponds to pre-provisioned [demo account](/docs/samples/demo-account/#tenant-devices).
    
    If you are using [live demo](https://iothub.magenta.at/) server - [get the access token](/docs/user-guide/ui/devices/#manage-device-credentials) for pre-provisioned "DHT11 Demo Device".
- - dht11.lua - sending temperature and humidity every 10 seconds to thingsboard server via MQTT protocol.
+ - dht11.lua - sending temperature and humidity every 10 seconds to iot hub server via MQTT protocol.
  - init.lua - initalization file that contains 
 config.lua:
 

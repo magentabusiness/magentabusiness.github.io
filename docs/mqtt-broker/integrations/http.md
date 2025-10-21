@@ -6,7 +6,7 @@ description: TBMQ HTTP integration guide
 tb-endpoint-url:
   0:
     image: https://img.thingsboard.io/mqtt-broker/user-guide/ui/tb-endpoint-url-1.png
-    title: 'In your ThingsBoard Cloud instance navigate to the "Integrations" page and opne HTTP integration details. Then enable debug mode and copy "HTTP endpoint URL".'
+    title: 'In your IoT Hub Cloud instance navigate to the "Integrations" page and opne HTTP integration details. Then enable debug mode and copy "HTTP endpoint URL".'
     
 add-http-integration:
   0:
@@ -20,7 +20,7 @@ add-http-integration:
     title: 'Click "Next" to subscribe to the default topic "tbmq/#".'
   3:
     image: https://img.thingsboard.io/mqtt-broker/user-guide/ui/add-http-integration-4.png
-    title: 'In the field "Endpoint URL" paste the URL from the HTTP integration of your ThingsBoard Cloud.'
+    title: 'In the field "Endpoint URL" paste the URL from the HTTP integration of your IoT Hub Cloud.'
   4:
     image: https://img.thingsboard.io/mqtt-broker/user-guide/ui/add-http-integration-5.png
     title: 'Open "Advanced settings", set "Payload content type" as JSON, and click "Add".'
@@ -36,7 +36,7 @@ send-uplink-message:
 http-integration-result:
   0:
     image: https://img.thingsboard.io/mqtt-broker/user-guide/ui/http-integration-result-1.png
-    title: 'Open ThingsBoard Cloud HTTP integration details page.'
+    title: 'Open IoT Hub Cloud HTTP integration details page.'
   1:
     image: https://img.thingsboard.io/mqtt-broker/user-guide/ui/http-integration-result-2.png
     title: 'Go to the "Events" tab, the message from the TBMQ HTTP integration should be available in the table (if the debug mode was enabled when message was published).'

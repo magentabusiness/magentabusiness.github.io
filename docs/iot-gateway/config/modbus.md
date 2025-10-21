@@ -1,16 +1,16 @@
 ---
 layout: docwithnav-gw
 title: Modbus Connector Configuration
-description: Modbus protocol support for ThingsBoard IoT Gateway
+description: Modbus protocol support for IoT Hub IoT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This comprehensive guide is designed to familiarize you with the Modbus connector configuration for ThingsBoard IoT Gateway. In the following sections, we will provide a detailed description of the connector configuration, covering all aspects necessary for successful implementation and customization.
+This comprehensive guide is designed to familiarize you with the Modbus connector configuration for IoT Hub IoT Gateway. In the following sections, we will provide a detailed description of the connector configuration, covering all aspects necessary for successful implementation and customization.
 
-The Modbus connector is a powerful tool that allows seamless integration between Modbus devices and the ThingsBoard platform.
+The Modbus connector is a powerful tool that allows seamless integration between Modbus devices and the IoT Hub platform.
 
 {% capture difference %}
 **Please note**: 
@@ -93,7 +93,7 @@ Advanced<small></small>%,%advanced%,%templates/iot-gateway/modbus-connector/attr
 
 This configuration section is optional.
 
-ThingsBoard allows to provision device attributes and fetch some of them from the device application. You can treat this as a remote configuration for devices. Your devices are able to request shared attributes from ThingsBoard. See [user guide](https://thingsboard.io/docs/user-guide/attributes/) for more details.
+IoT Hub allows to provision device attributes and fetch some of them from the device application. You can treat this as a remote configuration for devices. Your devices are able to request shared attributes from ThingsBoard. See [user guide](https://thingsboard.io/docs/user-guide/attributes/) for more details.
 
 The "**attributeUpdates**" configuration allows configuring the format of the corresponding attribute request and response messages.
 
@@ -106,8 +106,8 @@ Advanced<small></small>%,%advanced%,%templates/iot-gateway/modbus-connector/attr
 
 ### Subsection "RPC requests"
 
-ThingsBoard allows sending [RPC commands](https://thingsboard.io/docs/user-guide/rpc/) to the device that is connected to ThingsBoard directly or via Gateway.
-Configuration, provided in this section is used for sending RPC requests from ThingsBoard to device.
+IoT Hub allows sending [RPC commands](https://thingsboard.io/docs/user-guide/rpc/) to the device that is connected to IoT Hub directly or via Gateway.
+Configuration, provided in this section is used for sending RPC requests from IoT Hub to device.
 
 Select basic or advanced Modbus configuration:
 
@@ -203,9 +203,9 @@ A list and description of the supported data types for reading/writing data.
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main IoT Hub features:
 
- - [Connect Modbus device](/docs/iot-gateway/guides/how-to-connect-modbus-device/) - how to connect Modbus device using ThingsBoard IoT Gateway
+ - [Connect Modbus device](/docs/iot-gateway/guides/how-to-connect-modbus-device/) - how to connect Modbus device using IoT Hub IoT Gateway
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
  - [Telemetry data collection](/docs/user-guide/telemetry/) - how to collect telemetry data.

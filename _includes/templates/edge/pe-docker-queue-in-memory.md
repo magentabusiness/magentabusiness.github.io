@@ -1,4 +1,4 @@
-For **ThingsBoard Edge** service, create a docker compose file:
+For **IoT Hub Edge** service, create a docker compose file:
 
 ```bash
 nano docker-compose.yml

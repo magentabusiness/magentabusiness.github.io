@@ -2,7 +2,7 @@
 layout: docwithnav-pe
 assignees:
 - ashvayka
-title: ThingsBoard Expression Language (TBEL)
+title: IoT Hub Expression Language (TBEL)
 ---
 
 {% assign docsPrefix = "pe/" %}

@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect OrangePI 2G IoT to ThingsBoard?
+title: How to connect OrangePI 2G IoT to IoT Hub?
 category: Single-board computers
 chip: Allwinner H6
 deviceImageFileName: orangepi2giot.png

@@ -1,7 +1,7 @@
 ---
 layout: use-case
-title: Smart Irrigation with ThingsBoard for Farms and Cities
-description: Discover how ThingsBoard’s smart irrigation solution transforms water management through IoT. Ideal for agriculture, landscaping, urban systems, and research—with real-time monitoring, automation, and analytics at scale.
+title: Smart Irrigation with IoT Hub for Farms and Cities
+description: Discover how IoT Hub’s smart irrigation solution transforms water management through IoT. Ideal for agriculture, landscaping, urban systems, and research—with real-time monitoring, automation, and analytics at scale.
 notitle: "true"
 customTitle: "true"
 includeAdvantages: "true"
@@ -17,15 +17,15 @@ contactUsModal: "true"
     <div class="about-text">
         <div class="short">
             <div class="block">
-                <p class="text">The global challenges of water scarcity, rising agricultural costs, and the need for sustainable farming have made smart irrigation not just a trend, but a necessity. Traditional watering systems often lack responsiveness, leading to water overuse and crop stress. Modern agriculture requires a platform that can bring automation, precision, and adaptability — exactly what ThingsBoard delivers.</p>
+                <p class="text">The global challenges of water scarcity, rising agricultural costs, and the need for sustainable farming have made smart irrigation not just a trend, but a necessity. Traditional watering systems often lack responsiveness, leading to water overuse and crop stress. Modern agriculture requires a platform that can bring automation, precision, and adaptability — exactly what IoT Hub delivers.</p>
             </div>
             <div class="demo-button">
                 <a id="UseCases_SmartIrrigation_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/a4640cc0-8fa9-11ef-baa8-4521077809fd?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>            
             </div>
         </div>
         <div class="long">
-            <p>ThingsBoard IoT Platform is purpose-built to address these needs with its robust architecture, supporting seamless integration of diverse sensors, reliable data collection via MQTT, CoAP, or HTTP, and powerful real-time analytics. By enabling farmers to monitor soil conditions, receive threshold-based alarms, and automate irrigation actions through intuitive rule chains, ThingsBoard ensures optimal water distribution and timely response to changing field conditions.</p>
-            <p>From small farms to enterprise-scale agricultural operations, ThingsBoard scales effortlessly thanks to its edge computing capabilities, multi-tenant model, and rich dashboard customization. It empowers agribusinesses to implement smart irrigation that not only conserves water and boosts yield, but also reduces manual labor, improves traceability, and aligns with long-term sustainability goals.</p>
+            <p>IoT Hub IoT Platform is purpose-built to address these needs with its robust architecture, supporting seamless integration of diverse sensors, reliable data collection via MQTT, CoAP, or HTTP, and powerful real-time analytics. By enabling farmers to monitor soil conditions, receive threshold-based alarms, and automate irrigation actions through intuitive rule chains, IoT Hub ensures optimal water distribution and timely response to changing field conditions.</p>
+            <p>From small farms to enterprise-scale agricultural operations, IoT Hub scales effortlessly thanks to its edge computing capabilities, multi-tenant model, and rich dashboard customization. It empowers agribusinesses to implement smart irrigation that not only conserves water and boosts yield, but also reduces manual labor, improves traceability, and aligns with long-term sustainability goals.</p>
         </div>
     </div>
 </section>
@@ -41,12 +41,12 @@ contactUsModal: "true"
     <div class="about-text">
         <div class="short">
             <div class="block">
-                <p class="text">In the <a href="/docs/pe/solution-templates/smart-irrigation/">smart irrigation</a> setup, soil moisture sensors and water meters are installed in each field zone. These devices continuously collect real-time environmental data such as moisture level, temperature, and water flow. The data is transmitted via lightweight and reliable communication protocols such as MQTT, CoAP, or HTTP directly to the ThingsBoard platform.</p>
+                <p class="text">In the <a href="/docs/pe/solution-templates/smart-irrigation/">smart irrigation</a> setup, soil moisture sensors and water meters are installed in each field zone. These devices continuously collect real-time environmental data such as moisture level, temperature, and water flow. The data is transmitted via lightweight and reliable communication protocols such as MQTT, CoAP, or HTTP directly to the IoT Hub platform.</p>
             </div>
         </div>
         <div class="long">
-            <p>Once received, data is processed by ThingsBoard’s rule engine, stored, and visualized on dashboards. If thresholds are exceeded—like low soil moisture—the platform can automatically trigger irrigation or notify personnel, ensuring timely response and water efficiency.</p>
-            <p>With flexible device provisioning, edge processing, and a multi-tenant architecture, ThingsBoard scales seamlessly from small farms to enterprise operations, supporting both manual oversight and fully automated control.</p>
+            <p>Once received, data is processed by IoT Hub’s rule engine, stored, and visualized on dashboards. If thresholds are exceeded—like low soil moisture—the platform can automatically trigger irrigation or notify personnel, ensuring timely response and water efficiency.</p>
+            <p>With flexible device provisioning, edge processing, and a multi-tenant architecture, IoT Hub scales seamlessly from small farms to enterprise operations, supporting both manual oversight and fully automated control.</p>
         </div>
     </div>
     <div class="scheme">
@@ -58,7 +58,7 @@ contactUsModal: "true"
     <div class="section-header">
         <h2>Smart irrigation dashboard structure</h2>
         <p>
-            The smart irrigation dashboard on ThingsBoard provides a clear, real-time view of irrigation processes. It includes map-based tracking, sensor panels, scheduling tools, and alarm systems—enabling fast decisions, automation, and efficient water use across varied field conditions.
+            The smart irrigation dashboard on IoT Hub provides a clear, real-time view of irrigation processes. It includes map-based tracking, sensor panels, scheduling tools, and alarm systems—enabling fast decisions, automation, and efficient water use across varied field conditions.
         </p>
     </div>
     <div class="dashboard-structure-block">
@@ -139,7 +139,7 @@ contactUsModal: "true"
                         <h3>SI Field 2 dashboard statex</h3>
                     </div>
                     <div class="expansion-content">
-                        <p>Similar to the first field dashboard, this view provides detailed monitoring for another crop zone (corn), showcasing ThingsBoard’s multi-field, multi-crop support. Supporting multiple field dashboards promotes centralized yet granular monitoring for large-scale operations.</p>
+                        <p>Similar to the first field dashboard, this view provides detailed monitoring for another crop zone (corn), showcasing IoT Hub’s multi-field, multi-crop support. Supporting multiple field dashboards promotes centralized yet granular monitoring for large-scale operations.</p>
                     </div>
                 </div>
             </div>
@@ -150,7 +150,7 @@ contactUsModal: "true"
 <section class="applications applications-additional summary-margin section-padding">
     <div class="section-header">
         <h2>Applications of smart irrigation solution</h2>
-        <p>This solution can be effectively used across multiple industries, addressing specific operational needs through real-time data, automation, and scalability powered by the ThingsBoard IoT platform:</p>
+        <p>This solution can be effectively used across multiple industries, addressing specific operational needs through real-time data, automation, and scalability powered by the IoT Hub IoT platform:</p>
     </div>
     <div class="applications-container-large">
         <div class="text-row-top">
@@ -227,7 +227,7 @@ contactUsModal: "true"
 <section class="summary">
     <div class="summary-text">
         <h2>Summary of smart irrigation</h2>
-        <p>The smart irrigation solution built on ThingsBoard empowers users to manage irrigation processes intelligently, reduce water waste, and maintain crop health with precision. Leveraging real-time data collection, powerful automation, and rich visualizations, it enables scalable deployments across diverse sectors—from agriculture to urban landscapes. With its flexible architecture and low-code configurability, the solution can be rapidly deployed, customized, and expanded as needs grow.</p>
+        <p>The smart irrigation solution built on IoT Hub empowers users to manage irrigation processes intelligently, reduce water waste, and maintain crop health with precision. Leveraging real-time data collection, powerful automation, and rich visualizations, it enables scalable deployments across diverse sectors—from agriculture to urban landscapes. With its flexible architecture and low-code configurability, the solution can be rapidly deployed, customized, and expanded as needs grow.</p>
     </div>
     <div class="summary-icon">
         <img src="https://img.thingsboard.io/usecases/health-care/summary.svg" alt="Text summary icon" title="Text summary icon">
@@ -351,14 +351,14 @@ contactUsModal: "true"
 
         function getImage(index) {
             const images = [
-                "<img src='https://img.thingsboard.io/usecases/smart-irrigation/smart-irrigation-1.webp' data-bg='#F9FAFF' alt='Satellite view of crop fields with real-time moisture levels and chart in ThingsBoard' title='Soil moisture monitoring for wheat and corn fields using ThingsBoard'/>",
-                "<img src='https://img.thingsboard.io/usecases/smart-irrigation/smart-irrigation-2.webp' data-bg='#A9AAAC' alt='Field configuration form for setting crop type and moisture range in ThingsBoard' title='Add a new field and define crop type and soil moisture thresholds'/>",
-                "<img src='https://img.thingsboard.io/usecases/smart-irrigation/smart-irrigation-3.webp' data-bg='#A9AAAC' alt='Edit field details with boundary selection and moisture settings in ThingsBoard' title='Update field boundaries and soil moisture limits for precision farming'/>",
-                "<img src='https://img.thingsboard.io/usecases/smart-irrigation/smart-irrigation-4.webp' data-bg='#F9FAFF' alt='Dashboard showing irrigation status, alarms, field map, and moisture statistics in ThingsBoard' title='Irrigation and soil monitoring dashboard for smart agriculture'/>",
-                "<img src='https://img.thingsboard.io/usecases/smart-irrigation/smart-irrigation-5.webp' data-bg='#A9AAAC' alt='Dialog to add a new soil moisture sensor on the map in ThingsBoard' title='Register a new soil moisture sensor and assign a label'/>",
+                "<img src='https://img.thingsboard.io/usecases/smart-irrigation/smart-irrigation-1.webp' data-bg='#F9FAFF' alt='Satellite view of crop fields with real-time moisture levels and chart in IoT Hub' title='Soil moisture monitoring for wheat and corn fields using IoT Hub'/>",
+                "<img src='https://img.thingsboard.io/usecases/smart-irrigation/smart-irrigation-2.webp' data-bg='#A9AAAC' alt='Field configuration form for setting crop type and moisture range in IoT Hub' title='Add a new field and define crop type and soil moisture thresholds'/>",
+                "<img src='https://img.thingsboard.io/usecases/smart-irrigation/smart-irrigation-3.webp' data-bg='#A9AAAC' alt='Edit field details with boundary selection and moisture settings in IoT Hub' title='Update field boundaries and soil moisture limits for precision farming'/>",
+                "<img src='https://img.thingsboard.io/usecases/smart-irrigation/smart-irrigation-4.webp' data-bg='#F9FAFF' alt='Dashboard showing irrigation status, alarms, field map, and moisture statistics in IoT Hub' title='Irrigation and soil monitoring dashboard for smart agriculture'/>",
+                "<img src='https://img.thingsboard.io/usecases/smart-irrigation/smart-irrigation-5.webp' data-bg='#A9AAAC' alt='Dialog to add a new soil moisture sensor on the map in IoT Hub' title='Register a new soil moisture sensor and assign a label'/>",
                 "<img src='https://img.thingsboard.io/usecases/smart-irrigation/smart-irrigation-6.webp' data-bg='#A9AAAC' alt='Form to create an automated irrigation schedule based on consumption or time' title='Define irrigation rules by water usage or duration for field automation'/>",
-                "<img src='https://img.thingsboard.io/usecases/smart-irrigation/smart-irrigation-7.webp' data-bg='#F9FAFF' alt='Active and cleared alarms for soil moisture and battery levels in ThingsBoard' title='View and manage critical alerts from field sensors in the irrigation system'/>",
-                "<img src='https://img.thingsboard.io/usecases/smart-irrigation/smart-irrigation-8.webp' data-bg='#F9FAFF' alt='Dashboard view for a second field showing multiple active alarms and irrigation tasks' title='Monitor critical issues and manage irrigation for corn field using ThingsBoard'/>"
+                "<img src='https://img.thingsboard.io/usecases/smart-irrigation/smart-irrigation-7.webp' data-bg='#F9FAFF' alt='Active and cleared alarms for soil moisture and battery levels in IoT Hub' title='View and manage critical alerts from field sensors in the irrigation system'/>",
+                "<img src='https://img.thingsboard.io/usecases/smart-irrigation/smart-irrigation-8.webp' data-bg='#F9FAFF' alt='Dashboard view for a second field showing multiple active alarms and irrigation tasks' title='Monitor critical issues and manage irrigation for corn field using IoT Hub'/>"
             ];
             return images[index];
         }

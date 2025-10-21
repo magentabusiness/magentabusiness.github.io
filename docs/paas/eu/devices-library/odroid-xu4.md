@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect ODROID-XU4 to ThingsBoard?
+title: How to connect ODROID-XU4 to IoT Hub?
 category: Single-board computers
 chip: Samsung Exynos5422
 connectivity: Ethernet

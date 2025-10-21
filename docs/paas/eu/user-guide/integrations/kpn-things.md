@@ -69,10 +69,10 @@ kpn-things-configure-4:
         title: 'Go to "Destinations" in left menu and click on the "Add new Destination" button;'
     1:
         image: https://img.thingsboard.io/user-guide/integrations/kpn/kpn-things-configure-15-pe.png
-        title: 'Find the "ThingsBoard" destination type, and click on "Choose ThingsBoard" button;'
+        title: 'Find the "IoT Hub" destination type, and click on "Choose IoT Hub" button;'
     2:
         image: https://img.thingsboard.io/user-guide/integrations/kpn/kpn-things-configure-16-pe.png
-        title: 'Set a name for your destination. Paste "HTTP endpoint URL" from ThingsBoard integration page to "HTTP endpoint URL" field. Now, click on the "Generate" button, and save generated value. We will use it on ThingsBoard. Finally, click on the "Add ThingsBoard Destination" button.'
+        title: 'Set a name for your destination. Paste "HTTP endpoint URL" from IoT Hub integration page to "HTTP endpoint URL" field. Now, click on the "Generate" button, and save generated value. We will use it on ThingsBoard. Finally, click on the "Add IoT Hub Destination" button.'
 
 kpn-things-configure-5:
     0:

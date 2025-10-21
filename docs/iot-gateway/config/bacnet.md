@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-gw
 title: BACnet Connector Configuration
-description: BACnet protocol support for ThingsBoard IoT Gateway
+description: BACnet protocol support for IoT Hub IoT Gateway
 
 ---
 
@@ -34,13 +34,13 @@ This configuration section contains general connector settings, such as:
   - **Enable remote logging** - enables remote logging for the connector;
   - **Logging level** - logging level for local and remote logs: INFO, DEBUG, WARNING, ERROR, CRITICAL, NONE, TRACE;
 - **Send data only on change** - sends data only if it has changed since the last check, otherwise – data will be sent after every check;
-- **Report strategy** - strategy for sending data to ThingsBoard:
-  - **Report period** - period for sending data to ThingsBoard in milliseconds;
+- **Report strategy** - strategy for sending data to IoT Hub:
+  - **Report period** - period for sending data to IoT Hub in milliseconds;
   - **Type** - type of the report strategy:
-    - **On report period** - sends data to ThingsBoard after the report period;
-    - **On value change** - sends data to ThingsBoard when the value changes;
-    - **On value change or report period** - sends data to ThingsBoard when the value changes or after the report period;
-    - **On received** - sends data to ThingsBoard after receiving data from the device (default strategy).
+    - **On report period** - sends data to IoT Hub after the report period;
+    - **On value change** - sends data to IoT Hub when the value changes;
+    - **On value change or report period** - sends data to IoT Hub when the value changes or after the report period;
+    - **On received** - sends data to IoT Hub after receiving data from the device (default strategy).
 
 {% capture difference %}
 Additional information about the report strategy can be found [here](/docs/iot-gateway/features-overview/report-strategy){:target="_blank"}.
@@ -91,7 +91,7 @@ Advanced<small></small>%,%advanced%,%templates/iot-gateway/bacnet-connector/devi
 
 This configuration subsection is optional.
 
-ThingsBoard allows the provisioning of device attributes and fetches some of them from the device application. 
+IoT Hub allows the provisioning of device attributes and fetches some of them from the device application. 
 You can treat this as a remote configuration for devices, enabling them to request shared attributes from 
 ThingsBoard. See [user guide](/docs/user-guide/attributes/) for more details.
 
@@ -105,7 +105,7 @@ Advanced<small></small>%,%advanced%,%templates/iot-gateway/bacnet-connector/devi
 
 This configuration subsection is optional.
 
-ThingsBoard allows sending RPC commands to devices connected directly to ThingsBoard or via Gateway.
+IoT Hub allows sending RPC commands to devices connected directly to IoT Hub or via Gateway.
 
 {% capture subsectiondevicerpc %}
 Basic<small></small>%,%basic%,%templates/iot-gateway/bacnet-connector/device-rpc-basic-section.md%br%
@@ -164,7 +164,7 @@ the name of object and the number of this object on the device.
 
 Tested and supported objects:  
 
-| **BACnet object id** | **ThingsBoard object id** |
+| **BACnet object id** | **IoT Hub object id** |
 |----------------------|---------------------------|
 | **Binary input**     | **binaryInput**           |
 | **Binary output**    | **binaryOutput**          |
@@ -204,7 +204,7 @@ etc.
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main IoT Hub features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

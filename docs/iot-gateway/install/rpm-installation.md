@@ -1,10 +1,10 @@
 ---
 layout: docwithnav-gw
-title: Install ThingsBoard IoT Gateway as package.
+title: Install IoT Hub IoT Gateway as package.
 
 ---
 
-This guide will help you to install ThingsBoard IoT Gateway on CentOS or RHEL.
+This guide will help you to install IoT Hub IoT Gateway on CentOS or RHEL.
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ wget https://github.com/thingsboard/thingsboard-gateway/releases/latest/download
 
 ## Step 2. Install the gateway using yum
 
-Install ThingsBoard IoT Gateway as package and run it as daemon uses the following command:<br><br>
+Install IoT Hub IoT Gateway as package and run it as daemon uses the following command:<br><br>
 
 ```bash
 sudo yum install -y ./python3-thingsboard-gateway.rpm
@@ -35,13 +35,13 @@ systemctl status thingsboard-gateway
 ```
 {: .copy-code}
 
-You may notice some errors in the output. However, it is expected, since gateway is not configured to connect to ThingsBoard yet:
+You may notice some errors in the output. However, it is expected, since gateway is not configured to connect to IoT Hub yet:
 
 ```text
 ... python3[7563]: ''2019-12-26 09:31:15' - ERROR - mqtt_connector - 181 - Default Broker connection FAIL with error 5 not authorised!'
 ... python3[7563]: ''2019-12-26 09:31:15' - DEBUG - mqtt_connector - 186 - "Default Broker" was disconnected.'
-... python3[7563]: ''2019-12-26 09:31:16' - DEBUG - tb_client - 78 - connecting to ThingsBoard'
-... python3[7563]: ''2019-12-26 09:31:17' - DEBUG - tb_client - 78 - connecting to ThingsBoard'
+... python3[7563]: ''2019-12-26 09:31:16' - DEBUG - tb_client - 78 - connecting to IoT Hub'
+... python3[7563]: ''2019-12-26 09:31:17' - DEBUG - tb_client - 78 - connecting to IoT Hub'
 ```
 
 ## Step 4. Configure the gateway 
@@ -55,7 +55,7 @@ systemctl restart thingsboard-gateway
 
 ## Offline Build Version
 
-The Offline Build is a special variant of the ThingsBoard Gateway package designed for installation and execution without 
+The Offline Build is a special variant of the IoT Hub Gateway package designed for installation and execution without 
 internet access. Also, the offline build allows you to use any connector without installing dependencies in runtime. 
 It contains all necessary dependencies bundled in advance, including:
 - A prebuilt Python virtual environment.
@@ -66,7 +66,7 @@ This ensures seamless deployment in air-gapped, offline, or restricted-network e
 
 ### Example of usage
 
-A company runs all their infrastructure inside a private datacenter. Their ThingsBoard Gateway needs to connect to 
+A company runs all their infrastructure inside a private datacenter. Their IoT Hub Gateway needs to connect to 
 OPC-UA and MQTT sources inside the network but cannot access the internet due to strict firewall rules.
 
 ### Prerequisites
@@ -97,7 +97,7 @@ wget https://github.com/thingsboard/thingsboard-gateway/releases/latest/download
 
 #### Step 2. Install the gateway using yum
 
-Install ThingsBoard IoT Gateway as package and run it as daemon uses the following command:<br><br>
+Install IoT Hub IoT Gateway as package and run it as daemon uses the following command:<br><br>
 
 ```bash
 sudo yum install -y ./python3.11-thingsboard-gateway-offline.rpm
@@ -116,7 +116,7 @@ systemctl status thingsboard-gateway
 - **Wrong Python version**
 
   The installer will show a detailed guide for installing the required version.
-- **Need to remove installed ThingsBoard IoT Gateway after fixing Python**
+- **Need to remove installed IoT Hub IoT Gateway after fixing Python**
 
   When the required Python version is installed, remove the previously installed Gateway package using:
 

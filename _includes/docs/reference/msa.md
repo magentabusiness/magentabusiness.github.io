@@ -104,7 +104,7 @@ until it is processed by the rule engine. IoT Hub also uses Kafka for some API c
 IoT Hub caches assets, entity views, devices, device credentials, device sessions and entity relations.
 
 ##### Redis
-[Redis](https://redis.io/) is source-available (under [RSALv2](https://redis.io/legal/rsalv2-agreement/) and [SSPLv1](https://redis.io/legal/server-side-public-license-sspl/)) in-memory data structure store used by ThingsBoard for caching.
+[Redis](https://redis.io/) is source-available (under [RSALv2](https://redis.io/legal/rsalv2-agreement/) and [SSPLv1](https://redis.io/legal/server-side-public-license-sspl/)) in-memory data structure store used by IoT Hub for caching.
 
 ##### Valkey
 [Valkey](https://valkey.io/) is an open-source (BSD licensed), in-memory data structure store that could be used as a drop-in replacement for Redis.

@@ -1,9 +1,9 @@
-bigheader: "ThingsBoard Edge Documentation"
+bigheader: "IoT Hub Edge Documentation"
 abstract: "Distribute data processing and analysis using edge computing."
 toc:
-- title: ThingsBoard Edge
+- title: IoT Hub Edge
   path: /docs/edge/
-- title: What is ThingsBoard Edge?
+- title: What is IoT Hub Edge?
   path: /docs/edge/getting-started-guides/what-is-edge/
 - title: Key concepts
   section:

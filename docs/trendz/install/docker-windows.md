@@ -2,8 +2,8 @@
 layout: docwithnav-trendz
 assignees:
 - ashvayka
-title: Installing ThingsBoard Trendz Analytics using Docker (Windows)
-description: Installing ThingsBoard Trendz Analytics using Docker (Windows)
+title: Installing IoT Hub Trendz Analytics using Docker (Windows)
+description: Installing IoT Hub Trendz Analytics using Docker (Windows)
 
 ---
 
@@ -95,7 +95,7 @@ volumes:
 
 Where: 
     
-- `TB_API_URL` - url for connecting to ThingsBoard Rest API (for example http://10.5.0.11:8080). Note that ThingsBoard IP address should be resolvable from Trendz docker container
+- `TB_API_URL` - url for connecting to IoT Hub Rest API (for example http://10.5.0.11:8080). Note that IoT Hub IP address should be resolvable from Trendz docker container
 - `PUT_YOUR_LICENSE_SECRET_HERE` - placeholder for your license secret obtained on the first step
 - `8888:8888`            - connect local port 8888 to exposed internal HTTP port 8888
 - `mytrendz-data:/data`   - mounts the volume `mytrendz-data` to Trendz data directory
@@ -130,13 +130,13 @@ After executing this command you can open `http://{your-host-ip}:8888` in you br
    
 ### Authentication
 
-For first authentication you need to use **Tenant Administrator** credentials from your **ThingsBoard**
+For first authentication you need to use **Tenant Administrator** credentials from your **IoT Hub**
 
-Trendz uses ThingsBoard as an authentication service. During first sign in ThingsBoard service should be also available 
+Trendz uses IoT Hub as an authentication service. During first sign in IoT Hub service should be also available 
 to validate credentials.
 
 ## Post-installation steps
-It is essential to follow these [instructions](/docs/trendz/post-installation-steps) to fully use all features, such as saving telemetry to ThingsBoard and adding Trendz views to dashboards.
+It is essential to follow these [instructions](/docs/trendz/post-installation-steps) to fully use all features, such as saving telemetry to IoT Hub and adding Trendz views to dashboards.
 
 ## Detaching, stop and start commands
 

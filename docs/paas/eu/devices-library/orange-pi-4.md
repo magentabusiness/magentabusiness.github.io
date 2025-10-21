@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect Orange Pi 4 to ThingsBoard?
+title: How to connect Orange Pi 4 to IoT Hub?
 category: Single-board computers
 chip: Rockchip RK3399
 connectivity: Ethernet, WIFI, Bluetooth

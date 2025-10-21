@@ -2,8 +2,8 @@
 layout: docwithnav-trendz
 assignees:
 - ashvayka
-title: Installing ThingsBoard Trendz Analytics on Ubuntu
-description: Installing ThingsBoard Trendz Analytics on Ubuntu
+title: Installing IoT Hub Trendz Analytics on Ubuntu
+description: Installing IoT Hub Trendz Analytics on Ubuntu
 
 ---
 
@@ -55,25 +55,25 @@ sudo nano /etc/trendz/conf/trendz.conf
 Add the following lines to the configuration file and put your license secret:
 
 ```bash
-# License secret obtained from ThingsBoard License Portal (https://license.thingsboard.io)
+# License secret obtained from IoT Hub License Portal (https://license.thingsboard.io)
 export TRENDZ_LICENSE_SECRET=YOUR_LICENSE_SECRET_HERE
 ```
 
-## Step 4. Configure connection with ThingsBoard Platform
+## Step 4. Configure connection with IoT Hub Platform
 
-You can connect Trendz Analytics to the ThingsBoard Community Edition or ThingsBoard Professional Edition.
+You can connect Trendz Analytics to the IoT Hub Community Edition or IoT Hub Professional Edition.
 
-Edit ThingsBoard configuration file
+Edit IoT Hub configuration file
 ```bash 
 sudo nano /etc/trendz/conf/trendz.conf
 ``` 
 {: .copy-code}
 
-Add ThingsBoard REST API URL that would be used for communicating with ThingsBoard Platform. In most cases, when Trendz installed
-in the same server with ThingsBoard, API_URL would be **http://localhost:8080**. Otherwise you should use ThingsBoard domain name.
+Add IoT Hub REST API URL that would be used for communicating with IoT Hub Platform. In most cases, when Trendz installed
+in the same server with IoT Hub, API_URL would be **http://localhost:8080**. Otherwise you should use IoT Hub domain name.
 
 ```bash
-# ThingsBoard URL that will be used by Trendz
+# IoT Hub URL that will be used by Trendz
 export TB_API_URL=http://localhost:8080
 ```
 {: .copy-code}
@@ -207,9 +207,9 @@ the server or with a domain name. Also, check that port 8888 opened for public a
 
 ### Authentication
 
-For first authentication you need to use **Tenant Administrator** credentials from your **ThingsBoard**
+For first authentication you need to use **Tenant Administrator** credentials from your **IoT Hub**
 
-Trendz uses ThingsBoard as an authentication service. During first sign in ThingsBoard service should be also available 
+Trendz uses IoT Hub as an authentication service. During first sign in IoT Hub service should be also available 
 to validate credentials.
 
 ## Step 9. HTTPS configuration
@@ -217,7 +217,7 @@ to validate credentials.
 You may want to configure HTTPS access using HAProxy. 
 This is possible in case you are hosting Trendz in the cloud and have a valid DNS name assigned to your instance.
 
-**Trendz and ThingsBoard hosted on same server**
+**Trendz and IoT Hub hosted on same server**
 
 Use this section if HAProxy/Let’s Encrypt already installed in the server and HTTPS enabled for ThingsBoard.
 
@@ -261,8 +261,8 @@ https://new-trendz-domain.com
 
 Please follow this [guide](/docs/user-guide/install/pe/add-haproxy-ubuntu) to install HAProxy and generate valid SSL certificate using Let's Encrypt.
 
-## Step 10. Host ThingsBoard and Trendz on the same domain
-ThingsBoard and Trendz can share same domain name. In this case ThingsBoard web page would be loaded using following link:
+## Step 10. Host IoT Hub and Trendz on the same domain
+IoT Hub and Trendz can share same domain name. In this case IoT Hub web page would be loaded using following link:
 
 ```bash
 https://{my-domain}/
@@ -291,7 +291,7 @@ use_backend tb-trendz if trendz_acl
 ```
 
 ## Post-installation steps
-It is essential to follow these [instructions](/docs/trendz/post-installation-steps) to fully use all features, such as saving telemetry to ThingsBoard and adding Trendz views to dashboards.
+It is essential to follow these [instructions](/docs/trendz/post-installation-steps) to fully use all features, such as saving telemetry to IoT Hub and adding Trendz views to dashboards.
 
 ## Troubleshooting
 

@@ -12,7 +12,7 @@ description: Documentation for configuring anomaly refresh and reprocess tasks i
 
 ## Anomaly Refresh
 
-Anomaly refresh is a feature that enables the system to automatically detect ongoing anomalies, save them to ThingsBoard, or create alarms based on them.
+Anomaly refresh is a feature that enables the system to automatically detect ongoing anomalies, save them to IoT Hub, or create alarms based on them.
 
 To access anomaly refresh settings, click the **"JOBS"** button. You will see the following options:
 
@@ -22,9 +22,9 @@ To access anomaly refresh settings, click the **"JOBS"** button. You will see th
 
 * **Choose Items:** Select the items (e.g., devices or assets) on which the refresh will be performed.
 
-* **Enable Saving Anomaly Data:** If enabled, anomaly score and anomaly score index will be saved to ThingsBoard using
+* **Enable Saving Anomaly Data:** If enabled, anomaly score and anomaly score index will be saved to IoT Hub using
   the telemetry key specified in the [Input section](/docs/trendz/anomaly/overview#input-tab).  
-  Read more about saving telemetry to ThingsBoard [here](/docs/trendz/anomaly/save-to-tb).
+  Read more about saving telemetry to IoT Hub [here](/docs/trendz/anomaly/save-to-tb).
 
 * **Enable Anomaly Alarms Creation:** If enabled, alarms will be created for detected anomalies.  
   Read more about creating anomaly-driven alarms [here](/docs/trendz/anomaly/alarms).
@@ -45,9 +45,9 @@ To access reprocess settings, go to the **Task** tab and click the **"Run Reproc
 * **Items for Anomaly Reprocess:** Devices or assets to process during the reprocess.
 * **Enable Anomaly Creation Toggle:** If enabled, alarms will be automatically created for anomalies found during reprocess.
 * **Enable Saving Telemetry Toggle:** If enabled, telemetry will be saved to ThingsBoard. This toggle could be enabled only if 
-  refresh and saving telemetry to ThingsBoard is enabled for the current anomaly model.
+  refresh and saving telemetry to IoT Hub is enabled for the current anomaly model.
 
-**Note:** Telemetry will only be saved to ThingsBoard if anomaly refresh is enabled *and* the **Enable Saving Anomaly Data** toggle is active in anomaly refresh settings.
+**Note:** Telemetry will only be saved to IoT Hub if anomaly refresh is enabled *and* the **Enable Saving Anomaly Data** toggle is active in anomaly refresh settings.
 **Note:** During reprocess, all previously saved anomalies in the selected time range for the selected items (for the current model) will be overwritten.
 
 

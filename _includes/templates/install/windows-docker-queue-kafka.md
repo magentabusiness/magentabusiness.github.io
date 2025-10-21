@@ -18,7 +18,7 @@ services:
     ports:
       - "5432"
     environment:
-      POSTGRES_DB: thingsboard
+      POSTGRES_DB: iot hub
       POSTGRES_PASSWORD: postgres
     volumes:
       - postgres-data:/var/lib/postgresql/data

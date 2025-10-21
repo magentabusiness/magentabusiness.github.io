@@ -2,8 +2,8 @@
 layout: docwithnav
 assignees:
 - stitenko
-title: Energy Meter monitoring with ThingsBoard IoT Platform
-description: Energy Meter monitoring with ThingsBoard IoT Platform
+title: Energy Meter monitoring with IoT Hub IoT Platform
+description: Energy Meter monitoring with IoT Hub IoT Platform
 hidetoc: "true"
 
 ---
@@ -13,27 +13,27 @@ hidetoc: "true"
 
 ![image](https://img.thingsboard.io/samples/digicom/head1.png)
 
-Digicom devices are designed to interoperate with ThingsBoard IoT platforms by providing the necessary settings and functionalities to be easily integrated, allowing you to create dashboards where data and telemetry can be displayed and monitored.
+Digicom devices are designed to interoperate with IoT Hub IoT platforms by providing the necessary settings and functionalities to be easily integrated, allowing you to create dashboards where data and telemetry can be displayed and monitored.
 
-This tutorial is intended to be an integration guide focused on setting up a professional monitoring application, covering the basic aspects of your Digicom device and the corresponding ThingsBoard configuration using the MQTT protocol integration
+This tutorial is intended to be an integration guide focused on setting up a professional monitoring application, covering the basic aspects of your Digicom device and the corresponding IoT Hub configuration using the MQTT protocol integration
 
 ![image](https://img.thingsboard.io/samples/digicom/scenario1.png)
 
-The described scenario includes your Digicom device being connected to an MQTT broker and ThingsBoard being subscribed to those data streams through an MQTT integration, thus converting the payloads into its message format through a specific Data Converter.
+The described scenario includes your Digicom device being connected to an MQTT broker and IoT Hub being subscribed to those data streams through an MQTT integration, thus converting the payloads into its message format through a specific Data Converter.
 
 Before you start: To make this tutorial work, you need:
 - A Digicom device like DRN500 or DRN3000 Multifunction Routers with firmware release 1.10 or newer
-- A ThingsBoard instance on Cloud or Premise with a publicly reachable address
+- A IoT Hub instance on Cloud or Premise with a publicly reachable address
 
-## ThingsBoard setup
+## IoT Hub setup
 
-First of all, activate your ThingsBoard account, whether it is on Cloud or Premise. You can find detailed instructions on how to install and set up your personal ThingsBoard instance in the More References and Guides chapter. 
+First of all, activate your IoT Hub account, whether it is on Cloud or Premise. You can find detailed instructions on how to install and set up your personal IoT Hub instance in the More References and Guides chapter. 
 
 Log in and get ready for your configuration!
 
 ## Create the MQTT integration
 
-We will start by defining the data ingress section. [MQTT Integration](/docs/{{docsPrefix}}user-guide/integrations/mqtt/){:target="_blank"} allows to connect to external MQTT brokers, subscribe to data streams from those brokers and convert any type of payload from your devices to ThingsBoard message format. Its typical use is whenever your devices are already connected to external MQTT broker or any other IoT platform or connectivity provider with MQTT based back-end.
+We will start by defining the data ingress section. [MQTT Integration](/docs/{{docsPrefix}}user-guide/integrations/mqtt/){:target="_blank"} allows to connect to external MQTT brokers, subscribe to data streams from those brokers and convert any type of payload from your devices to IoT Hub message format. Its typical use is whenever your devices are already connected to external MQTT broker or any other IoT platform or connectivity provider with MQTT based back-end.
 
 Go to the "**Integrations center**" section -> "**Integrations**" page and click "**plus**" button to create new integration. Select type "**MQTT**". Click "**Next**";
 
@@ -237,7 +237,7 @@ Log in into your device. Enter **Username** and **Password**. Then, click "**Log
 ![image](https://img.thingsboard.io/samples/digicom/log1.png)
 
 <br>
-This guide will use the Modbus functionalities to read from an Electric Energy Meter and transmit that data to ThingsBoard through the MQTT protocol.
+This guide will use the Modbus functionalities to read from an Electric Energy Meter and transmit that data to IoT Hub through the MQTT protocol.
 We will concentrate on the Modbus and MQTT setup sections, assuming that the device is already correctly configured for Internet access and that the Modbus physical connections are correctly carried out.   
 Select "**Modbus**" – "**COM Configuration**" from the drop-down menu.
 
@@ -261,7 +261,7 @@ Set the Modbus Master profile to **enabled**, set **Name**, **ID**, **Connection
 ![image](https://img.thingsboard.io/samples/digicom/Immagine-14.png)
 
 <br>
-Now we will define 4 sample sets of data values (Voltage, Current, Frequency and kVA) be read from the Energy Meter and sent to ThingsBoard as timeseries, for later representation and dashboarding.   
+Now we will define 4 sample sets of data values (Voltage, Current, Frequency and kVA) be read from the Energy Meter and sent to IoT Hub as timeseries, for later representation and dashboarding.   
 Click on "**Requests**" button.
 
 ![image](https://img.thingsboard.io/samples/digicom/slave1.png)
@@ -310,12 +310,12 @@ Click on "**Reboot**" and **confirm**.
 
 ![image](https://img.thingsboard.io/samples/digicom/reb2.png)
 
-Wait for the device to become operational again, then go back to ThingsBoard account and check the device appearing in the "**Devices**" page.
+Wait for the device to become operational again, then go back to IoT Hub account and check the device appearing in the "**Devices**" page.
 
 ## Check the device
 
 Go to the "**Devices**" page of the "**Entities**" section from menu bar on the left.
-A new [device](/docs/{{docsPrefix}}user-guide/ui/devices/){:target="_blank"} should appear as soon as it has published the first data to the external MQTT broker on which ThingsBoard is connected too.
+A new [device](/docs/{{docsPrefix}}user-guide/ui/devices/){:target="_blank"} should appear as soon as it has published the first data to the external MQTT broker on which IoT Hub is connected too.
 
 ![image](https://img.thingsboard.io/samples/digicom/check-device-1.png)
 
@@ -334,7 +334,7 @@ So, with those data in the system we can now proceed and create a simple Dashboa
 
 ## Create a Dashboard
 
-ThingsBoard offers a powerful feature – the ability to create and customize interactive visualizations, also known as [Dashboards](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"}. These dashboards are instruments for monitoring and managing your data and devices efficiently.
+IoT Hub offers a powerful feature – the ability to create and customize interactive visualizations, also known as [Dashboards](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"}. These dashboards are instruments for monitoring and managing your data and devices efficiently.
 
 Navigate to the "**Dashboards**" page through the main menu on the left of the screen. Click the "**+**" sign in the upper right corner of the screen, and select "**Create new dashboard**" from the drop-down menu.
 In the opened dialog, it is necessary to enter a dashboard title, description is optional. Click "**Add**".
@@ -381,7 +381,7 @@ Once you have completed the configuration, click "**Save**" to save the dashboar
 
 ## More references and guides
 
-You may find more online documentation and guides on how to work with ThingsBoard, create [customers](/docs/{{docsPrefix}}user-guide/ui/customers/){:target="_blank"}, [users](/docs/{{docsPrefix}}user-guide/ui/users/){:target="_blank"}, and [assets](/docs/{{docsPrefix}}user-guide/ui/assets/){:target="_blank"}, and make your [dashboards](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"} even more powerful and professional!
+You may find more online documentation and guides on how to work with IoT Hub, create [customers](/docs/{{docsPrefix}}user-guide/ui/customers/){:target="_blank"}, [users](/docs/{{docsPrefix}}user-guide/ui/users/){:target="_blank"}, and [assets](/docs/{{docsPrefix}}user-guide/ui/assets/){:target="_blank"}, and make your [dashboards](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"} even more powerful and professional!
 
 ## Next steps
 

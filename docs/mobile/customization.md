@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-mobile
-title: Customize ThingsBoard Mobile Application
+title: Customize IoT Hub Mobile Application
 
 ---
 

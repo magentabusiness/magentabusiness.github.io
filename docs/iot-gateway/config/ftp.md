@@ -1,14 +1,14 @@
 ---
 layout: docwithnav-gw
 title: FTP Connector Configuration
-description: FTP protocol support for ThingsBoard IoT Gateway
+description: FTP protocol support for IoT Hub IoT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to get familiar with FTP Connector configuration for ThingsBoard IoT Gateway.
+This guide will help you to get familiar with FTP Connector configuration for IoT Hub IoT Gateway.
 Use [general configuration](/docs/iot-gateway/configuration/) to enable this Connector. 
 The purpose of this Connector is to connect to an external FTP server and get data from files from specific paths. 
 The connector is also able to push data to FTP server files based on the updates/commands from ThingsBoard.
@@ -316,7 +316,7 @@ Let's look at how we can configure this section for different file extensions:
 
 
 This configuration section is optional.
-ThingsBoard allows the provisioning of device attributes and fetches some of them from the device application. You can treat this as a remote configuration for devices, enabling them to request shared attributes from ThingsBoard. See [user guide](/docs/user-guide/attributes/) for more details.
+IoT Hub allows the provisioning of device attributes and fetches some of them from the device application. You can treat this as a remote configuration for devices, enabling them to request shared attributes from ThingsBoard. See [user guide](/docs/user-guide/attributes/) for more details.
 
 The “attributeRequests” configuration allows you to configure the format of the corresponding attribute data that will be written to the specific files.
 
@@ -343,9 +343,9 @@ This section in configuration file looks like this:
 
 ### Server side RPC commands
 
-ThingsBoard allows for sending RPC commands to devices connected directly to ThingsBoard or via Gateway.
+IoT Hub allows for sending RPC commands to devices connected directly to IoT Hub or via Gateway.
 
-Configuration, provided in this section uses for sending RPC requests from ThingsBoard to device.
+Configuration, provided in this section uses for sending RPC requests from IoT Hub to device.
 
 | **Parameter**    | **Default value**                           | **Description**                                                                                                                                                          |
 |:-----------------|:--------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -424,7 +424,7 @@ Your response should contain the data you wrote to the file as in the image belo
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main IoT Hub features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

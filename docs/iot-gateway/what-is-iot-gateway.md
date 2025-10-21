@@ -1,19 +1,19 @@
 ---
 layout: docwithnav-gw
-title: What is ThingsBoard IoT Gateway?
-description: Features and advantages of ThingsBoard IoT Gateway
+title: What is IoT Hub IoT Gateway?
+description: Features and advantages of IoT Hub IoT Gateway
 
 ---
 
-The ThingsBoard **IoT Gateway** is an open-source solution that allows you to integrate devices connected to legacy and third-party systems with ThingsBoard.  
+The IoT Hub **IoT Gateway** is an open-source solution that allows you to integrate devices connected to legacy and third-party systems with ThingsBoard.  
 
-ThingsBoard is an open-source IoT platform for data collection, processing, visualization, and device management. See [**What is ThingsBoard?**](/docs/getting-started-guides/what-is-thingsboard/) if you are new platform user.
+IoT Hub is an open-source IoT platform for data collection, processing, visualization, and device management. See [**What is ThingsBoard?**](/docs/getting-started-guides/what-is-thingsboard/) if you are new platform user.
 
 <object width="95%" data="https://img.thingsboard.io/gateway/python-gateway-animd-ff.svg"></object>
 
 ## Gateway features
 
-The ThingsBoard IoT Gateway provides the following features:
+The IoT Hub IoT Gateway provides the following features:
 
  - [**MQTT** connector](/docs/iot-gateway/config/mqtt/) to control, configure and collect data from IoT devices that are connected to external MQTT brokers using existing protocols.
  - [**OPC-UA** connector](/docs/iot-gateway/config/opc-ua/) to collect data from IoT devices that are connected to OPC-UA servers.
@@ -32,14 +32,14 @@ The ThingsBoard IoT Gateway provides the following features:
  - [**KNX** connector](/docs/iot-gateway/config/knx/) to collect data from IoT devices that are connected through KNX protocol.
  - [**Custom** connector](/docs/iot-gateway/custom/) to collect data from IoT devices that are connected by different protocols. (You can create your own connector for the required protocol).
  - **Persistence** of collected data to guarantee data delivery in case of network or hardware failures.
- - **Automatic reconnect** to the ThingsBoard cluster.
+ - **Automatic reconnect** to the IoT Hub cluster.
  - Simple yet powerful **mapping** of incoming data and messages **to unified format**.
 
 
 ## Architecture
 
 The IoT Gateway is a software component that is designed to run on a Linux based microcomputers that support **Python 3.7+**.
-The main components of ThingsBoard IoT Gateway are listed below.
+The main components of IoT Hub IoT Gateway are listed below.
 
 **Connector**
 
@@ -52,10 +52,10 @@ It is possible to define your own connector using the [customization guide](/doc
 
 **Converter**   
  
-Converters are responsible for converting data from protocol specific format to/from ThingsBoard format.
+Converters are responsible for converting data from protocol specific format to/from IoT Hub format.
 Converters are invoked by Connectors. Converters are often specific to protocol supported by Connector.
-There are uplink and downlink converters. The uplink converter is used to convert data from specific protocol to ThingsBoard format.
-The downlink converter is used to convert messages from ThingsBoard to specific protocol format.
+There are uplink and downlink converters. The uplink converter is used to convert data from specific protocol to IoT Hub format.
+The downlink converter is used to convert messages from IoT Hub to specific protocol format.
 
 It is possible to define your own converter using the [customization guide](/docs/iot-gateway/custom/#step-4-define-converter-implementation/).
 
@@ -67,16 +67,16 @@ Both implementations make sure that your device data is eventually delivered in 
 In-memory queue minimizes the IO operations but may lose messages in case of gateway process restart.  
 Persistent file storage survives the restart of the process but executes IO operations to the file system.
 
-**ThingsBoard Client**
+**IoT Hub Client**
 
-The Gateway communicates to ThingsBoard via MQTT protocol and uses API described [here](/docs/reference/gateway-mqtt-api/).
-ThingsBoard Client is a separate thread that polls Event Storage and delivers messages once connection to ThingsBoard is active.  
-ThingsBoard Client supports monitoring of the connectivity, batching the events for performance improvement and many other features.
+The Gateway communicates to IoT Hub via MQTT protocol and uses API described [here](/docs/reference/gateway-mqtt-api/).
+IoT Hub Client is a separate thread that polls Event Storage and delivers messages once connection to IoT Hub is active.  
+IoT Hub Client supports monitoring of the connectivity, batching the events for performance improvement and many other features.
 
 **Gateway Service**
 
-The Gateway Service is responsible for bootstrapping the Connectors, Event Storage and ThingsBoard Client. 
-This Service collects and periodically reports statistics to ThingsBoard about incoming messages and connected devices.
+The Gateway Service is responsible for bootstrapping the Connectors, Event Storage and IoT Hub Client. 
+This Service collects and periodically reports statistics to IoT Hub about incoming messages and connected devices.
 Gateway Service persists list of connected devices to be able to re-subscribe to device configuration updates in case of the restart of the gateway. 
 
 ## Project Roadmap

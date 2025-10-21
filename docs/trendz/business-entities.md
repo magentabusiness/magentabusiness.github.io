@@ -6,7 +6,7 @@ title: Business Entities
 description: Business Entities 
 ---
 
-This guide describes how Trendz uses entities from ThingsBoard, like asset, device, relation, etc.
+This guide describes how Trendz uses entities from IoT Hub, like asset, device, relation, etc.
 
 * TOC
 {:toc}
@@ -23,7 +23,7 @@ The Relation between entities used to join fields from different Business Entiti
 
 ## How it works
 
-Now let's check how Trendz resolves data from ThingsBoard using following report: we are using only 2 fields from Smart Building topology: 
+Now let's check how Trendz resolves data from IoT Hub using following report: we are using only 2 fields from Smart Building topology: 
 
 - `building name` that belongs to the Building Asset
 - `energy` telemetry, that belongs to the Energy Meter Device
@@ -42,7 +42,7 @@ It is not an exact algorithm description and there are a lot of optimizations pe
 
 ## Managing Relations Between Business Entities
 
-ThingsBoard allows users to create multiple relationships between devices and assets without limitations. In Trendz Analytics, however, relationships are established between business entities (device/asset profiles) based on the underlying ThingsBoard relations. 
+IoT Hub allows users to create multiple relationships between devices and assets without limitations. In Trendz Analytics, however, relationships are established between business entities (device/asset profiles) based on the underlying IoT Hub relations. 
 This approach introduces some constraints on how relations are handled within Trendz, specifically regarding the number of allowable relations between device/asset profiles.
 
 In Trendz Analytics, a key constraint exists: **only one relation type is permitted between device/asset profiles**. This limitation is necessary to ensure a stable sequence of item loading. 

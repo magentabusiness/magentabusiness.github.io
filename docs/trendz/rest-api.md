@@ -41,7 +41,7 @@ Where
 All requests should contain jwt token for authorization. It should be added as query parameter or in HTTP Headers. 
 In both cases parameter name is `jwt`.
 
-You can get JWT token from ThingsBoard Rest API 
+You can get JWT token from IoT Hub Rest API 
 
 Request: 
 
@@ -114,9 +114,9 @@ Here is an example:
 Keys inside filters object should match filter name in View and value contains array of values that should be applied to filter field.
 
 
-## Usage in custom ThingsBoard widgets
+## Usage in custom IoT Hub widgets
 
-If you need a custom widget with specific logic, you can use Trendz Rest API for loading required data and ThingsBoard custom widgets functionality for creating required visualization.
+If you need a custom widget with specific logic, you can use Trendz Rest API for loading required data and IoT Hub custom widgets functionality for creating required visualization.
 Here is an example that describes how to load data from Trendz API, apply dashboard time and set filter values from widget datasource.
 
 ```javascript
@@ -219,8 +219,8 @@ self.onDestroy = function() {
 
 ```
 
-* `self.onInit` - standard ThingsBoard widget lifecycle event. Called when widget first initialized.
-* `self.onDataUpdated` - standard ThingsBoard widget lifecycle event. Called when widget datasource or alias updated.
+* `self.onInit` - standard IoT Hub widget lifecycle event. Called when widget first initialized.
+* `self.onDataUpdated` - standard IoT Hub widget lifecycle event. Called when widget datasource or alias updated.
 * `buildTrendzRequest` - initialize request object to Trendz API. Set time range form dashboard time window if required. Set filters for the request.
 * `applyFilters` - read data from datasource and apply it as a filter for Trendz API request.
 * `applyDashboardTime` - apply time range form dashboard time window to the Trendz API request.

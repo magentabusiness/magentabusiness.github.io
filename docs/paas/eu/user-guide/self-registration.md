@@ -10,8 +10,8 @@ description:
 * TOC
 {:toc}
 
-ThingsBoard self-registration feature allows tenant to configure sign-up page for its customers to be able to simply sign-up and login to the ThingsBoard with predefined permission configurations.
-This feature was introduced in ThingsBoard PE 2.4.1.
+IoT Hub self-registration feature allows tenant to configure sign-up page for its customers to be able to simply sign-up and login to the IoT Hub with predefined permission configurations.
+This feature was introduced in IoT Hub PE 2.4.1.
 
 This documentation page contains complete use case configuration example.
 
@@ -24,9 +24,9 @@ Let’s start with the prerequisites.
 
 ## Prerequisites
 
-### Step 1. Assign DNS record to your ThingsBoard IP address
+### Step 1. Assign DNS record to your IoT Hub IP address
 
-We also need a valid **DNS name** to be assigned to your ThingsBoard instance.
+We also need a valid **DNS name** to be assigned to your IoT Hub instance.
 You can use any domain registrar, if you don't have a domain.
 If you do have the domain name, contact your system administrator to issue sub-domain, for example iot.mycompany.com.
 
@@ -42,12 +42,12 @@ Copy-paste the site key and secret to the safe place.
 
 ### Prerequisites summary
 
-We have prepared a ThingsBoard Prototype instance running on DigitalOcean.
+We have prepared a IoT Hub Prototype instance running on DigitalOcean.
 Specific domain name: srd.thingsboard.io (srd stands for “self registration demo”) to server’s IP address: 46.101.146.242.
 
 ![image](https://img.thingsboard.io/user-guide/self-registration/digitalocean.png)
 
-## ThingsBoard configuration
+## IoT Hub configuration
 
 ### Step 3. Create new User Roles
 

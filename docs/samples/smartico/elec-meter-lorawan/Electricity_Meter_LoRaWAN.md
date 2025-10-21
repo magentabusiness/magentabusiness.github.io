@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
 title: Electricity Three Phase Smart Meter "Smartico E307" telemetry upload
-description: ThingsBoard IoT Platform sample for electricity data upload over MQTT using Smart Meter "Smartico E307".
+description: IoT Hub IoT Platform sample for electricity data upload over MQTT using Smart Meter "Smartico E307".
 hidetoc: "true"
 ---
 

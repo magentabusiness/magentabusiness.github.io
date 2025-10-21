@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect UG65 LoRaWAN® Semi-Industrial Gateway to ThingsBoard?
+title: How to connect UG65 LoRaWAN® Semi-Industrial Gateway to IoT Hub?
 category: Other devices
 connectivity: HTTP, MQTT, UDP, LTE, 4G, 3G, LoRaWAN®
 vendor: Milesight

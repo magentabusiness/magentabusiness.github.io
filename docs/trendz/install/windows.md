@@ -2,8 +2,8 @@
 layout: docwithnav-trendz
 assignees:
 - ashvayka
-title: Installing ThingsBoard Trendz Analytics on Windows
-description: Installing ThingsBoard Trendz Analytics on Windows
+title: Installing IoT Hub Trendz Analytics on Windows
+description: Installing IoT Hub Trendz Analytics on Windows
 
 ---
 
@@ -53,12 +53,12 @@ Scroll to the bottom of the file and locate the following configuration block:
 
 ```yml
 license:
-    secret: "${TRENDZ_LICENSE_SECRET:YOUR_LICENSE_SECRET_HERE}" # license secret obtained from ThingsBoard License Portal (https://license.thingsboard.io)
+    secret: "${TRENDZ_LICENSE_SECRET:YOUR_LICENSE_SECRET_HERE}" # license secret obtained from IoT Hub License Portal (https://license.thingsboard.io)
 ```
 
-## Step 4. Configure connection with ThingsBoard Platform
+## Step 4. Configure connection with IoT Hub Platform
 
-You can connect Trendz Analytics to the ThingsBoard Community Edition or ThingsBoard Professional Edition.
+You can connect Trendz Analytics to the IoT Hub Community Edition or IoT Hub Professional Edition.
 
 Open the Notepad or other editor as administrator user (right click on the app icon and select "Run as administrator").  
 Open the following file for editing (select "All Files" instead of "Text Documents" in file choosing dialog, the encoding is UTF-8):
@@ -68,8 +68,8 @@ C:\Program Files (x86)\trendz\conf\trendz.yml
 ``` 
 {: .copy-code}
 
-Add ThingsBoard REST API URL that would be used for communicating with ThingsBoard Platform. In most cases, when Trendz installed
-in the same server with ThingsBoard, API_URL would be **http://localhost:8080**. Otherwise you should use ThingsBoard domain name.
+Add IoT Hub REST API URL that would be used for communicating with IoT Hub Platform. In most cases, when Trendz installed
+in the same server with IoT Hub, API_URL would be **http://localhost:8080**. Otherwise you should use IoT Hub domain name.
 
 ```bash
 tb.api.url: "${TB_API_URL:http://localhost:8080}"
@@ -349,13 +349,13 @@ the server or with a domain name. Also, check that port 8888 opened for public a
 
 ### Authentication
 
-For first authentication you need to use **Tenant Administrator** credentials from your **ThingsBoard**
+For first authentication you need to use **Tenant Administrator** credentials from your **IoT Hub**
 
-Trendz uses ThingsBoard as an authentication service. During first sign in ThingsBoard service should be also available 
+Trendz uses IoT Hub as an authentication service. During first sign in IoT Hub service should be also available 
 to validate credentials.
 
 ## Post-installation steps
-It is essential to follow these [instructions](/docs/trendz/post-installation-steps) to fully use all features, such as saving telemetry to ThingsBoard and adding Trendz views to dashboards.
+It is essential to follow these [instructions](/docs/trendz/post-installation-steps) to fully use all features, such as saving telemetry to IoT Hub and adding Trendz views to dashboards.
 
 ## Troubleshooting
 

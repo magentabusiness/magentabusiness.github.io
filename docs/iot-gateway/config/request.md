@@ -1,14 +1,14 @@
 ---
 layout: docwithnav-gw
 title: Request Connector Configuration
-description: HTTP protocol support for ThingsBoard IoT Gateway
+description: HTTP protocol support for IoT Hub IoT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to get familiar with Request Connector configuration for ThingsBoard IoT Gateway.  
+This guide will help you to get familiar with Request Connector configuration for IoT Hub IoT Gateway.  
 Use [general configuration guide](/docs/iot-gateway/configuration/) to enable this Connector.  
 The purpose of this Connector is to connect to external HTTP(S) API endpoints and get data from them.  
 Connector is also able to push data to external HTTP(S) API based on the updates/commands from ThingsBoard.    
@@ -213,7 +213,7 @@ custom<small>Recommended if bytes or anything else will be received in response<
 ### Attribute update section
 
 Configuration in this section are optional.  
-ThingsBoard allows to provision device attributes and fetch some of them from the device application.
+IoT Hub allows to provision device attributes and fetch some of them from the device application.
 You can treat this as a remote configuration for devices. Your devices are able to request shared attributes from ThingsBoard.
 See [user guide](/docs/user-guide/attributes/) for more details.
 
@@ -256,9 +256,9 @@ The **attributeUpdates** section will look like:
 
 ### Server side RPC section
 
-ThingsBoard allows sending [RPC commands](/docs/user-guide/rpc/) to the device that is connected to ThingsBoard directly or via Gateway.
+IoT Hub allows sending [RPC commands](/docs/user-guide/rpc/) to the device that is connected to IoT Hub directly or via Gateway.
  
-Configuration, provided in this section uses for sending RPC requests from ThingsBoard to device.
+Configuration, provided in this section uses for sending RPC requests from IoT Hub to device.
 
 | **Parameter**                 | **Default value**                                                 | **Description**                                                                       |
 |:-|:-|-
@@ -313,7 +313,7 @@ Examples for both methods provided below.
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main IoT Hub features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect Radxa Rock Pro to ThingsBoard?
+title: How to connect Radxa Rock Pro to IoT Hub?
 category: Single-board computers
 chip: Rockchip RK3188
 connectivity: WIFI, Bluetooth, Ethernet

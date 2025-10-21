@@ -1,4 +1,4 @@
-In table below described parameters to configure authorization of IoT gateway on ThingsBoard platform.  
+In table below described parameters to configure authorization of IoT gateway on IoT Hub platform.  
 
 |**Parameter**|**Default value**|**Description**|
 |:-|:-|-

@@ -1,7 +1,7 @@
 ---
 layout: use-case
-title: How to Track Your Fleet in Real Time with the ThingsBoard IoT Platform
-description: Track, analyze, and optimize your fleet in real time with the ThingsBoard IoT platform. Unlock smarter operations across logistics, transport, and service industries.
+title: How to Track Your Fleet in Real Time with the IoT Hub IoT Platform
+description: Track, analyze, and optimize your fleet in real time with the IoT Hub IoT platform. Unlock smarter operations across logistics, transport, and service industries.
 notitle: "true"
 customTitle: "true"
 includeAdvantages: "true"
@@ -16,14 +16,14 @@ contactUsModal: "true"
     <div class="about-text">
         <div class="short">
             <div class="block">
-                <p class="text">Managing a fleet today means more than just tracking locations — it’s about real-time control, smart decisions, and operational speed. The ThingsBoard IoT platform makes this possible by uniting tracking, analytics, and automation in one powerful solution, helping companies eliminate blind spots and stay ahead in a fast-paced industry.</p>
+                <p class="text">Managing a fleet today means more than just tracking locations — it’s about real-time control, smart decisions, and operational speed. The IoT Hub IoT platform makes this possible by uniting tracking, analytics, and automation in one powerful solution, helping companies eliminate blind spots and stay ahead in a fast-paced industry.</p>
             </div>
             <div class="demo-button">
                 <a id="UseCases_FleetTracking_ViewLiveDemo" target="_blank" href="https://demo.thingsboard.io/dashboard/3d0bf910-ee09-11e6-b619-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0" class="button gtm_button">View live demo</a>
             </div>
         </div>
         <div class="long">
-            <p>The ThingsBoard IoT platform supports industry-standard protocols and seamless device integration, enabling continuous collection, processing, and visualization of data from every vehicle in your fleet. Critical alarms like speeding, breakdowns, or fuel drops are detected automatically, triggering alarms and actions that help you stay in control — without manual intervention.</p>
+            <p>The IoT Hub IoT platform supports industry-standard protocols and seamless device integration, enabling continuous collection, processing, and visualization of data from every vehicle in your fleet. Critical alarms like speeding, breakdowns, or fuel drops are detected automatically, triggering alarms and actions that help you stay in control — without manual intervention.</p>
             <p>As a result, the ThingsBoard-based IoT fleet tracking system helps businesses boost efficiency, ensure safety, and make smarter, data-driven decisions. From daily operations to long-term planning, you get the visibility and automation needed to scale with confidence — whether you're running public transit, logistics, or service delivery fleets.</p>        
         </div>
     </div>
@@ -44,7 +44,7 @@ contactUsModal: "true"
             </div>
         </div>
         <div class="long">
-            <p>The ThingsBoard IoT platform receives this data and registers each device as a unique entity. Real-time processing is handled by the built-in Rule Engine, which detects critical alarms like speeding, fuel drops, or prolonged stops.</p>
+            <p>The IoT Hub IoT platform receives this data and registers each device as a unique entity. Real-time processing is handled by the built-in Rule Engine, which detects critical alarms like speeding, fuel drops, or prolonged stops.</p>
             <p>Once processed, the data is presented on interactive dashboards, offering maps, performance graphs, and detailed alarm logs.</p>
         </div>
     </div>
@@ -57,7 +57,7 @@ contactUsModal: "true"
     <div class="section-header">
         <h2>IoT fleet tracking dashboard structure</h2>
         <p>
-            The ThingsBoard dashboard for <a href="/docs/pe/solution-templates/fleet-tracking/">fleet tracking</a> is intuitive and organized into several key components that provide full visibility into fleet operations.
+            The IoT Hub dashboard for <a href="/docs/pe/solution-templates/fleet-tracking/">fleet tracking</a> is intuitive and organized into several key components that provide full visibility into fleet operations.
         </p>
     </div>
     <div class="dashboard-structure-block">
@@ -207,7 +207,7 @@ contactUsModal: "true"
 <section class="summary">
     <div class="summary-text">
         <h2>Summary of IoT fleet tracking</h2>
-        <p>The IoT fleet tracking system powered by ThingsBoard provides real-time visibility into fleet operations, enabling automated alarms, insightful analytics, and seamless integration with business systems. This scalable solution helps organizations optimize performance, reduce costs, and make smarter, data-driven decisions through a reliable and flexible IoT platform.</p>
+        <p>The IoT fleet tracking system powered by IoT Hub provides real-time visibility into fleet operations, enabling automated alarms, insightful analytics, and seamless integration with business systems. This scalable solution helps organizations optimize performance, reduce costs, and make smarter, data-driven decisions through a reliable and flexible IoT platform.</p>
     </div>
     <div class="summary-icon">
         <img src="https://img.thingsboard.io/usecases/health-care/summary.svg" alt="Text summary icon" title="Text summary icon">
@@ -331,12 +331,12 @@ contactUsModal: "true"
 
         function getImage(index) {
             const images = [
-                "<img src='https://img.thingsboard.io/usecases/fleet-tracking/fleet-tracking-1.webp' alt='ThingsBoard interface showing bus status, speed, fuel level, and location on the map' title='Real-time bus monitoring using ThingsBoard platform'/>",
-                "<img src='https://img.thingsboard.io/usecases/fleet-tracking/fleet-tracking-2.webp' alt='ThingsBoard interface showing historical route and movement playback for Bus A on the map' title='Bus A route playback and history visualization in ThingsBoard' data-bg='#A4A4A4'/>",
-                "<img src='https://img.thingsboard.io/usecases/fleet-tracking/fleet-tracking-3.webp' alt='ThingsBoard dashboard displaying real-time and historical data for Bus A, including speed, fuel level, route history, and critical events' title='Real-time telemetry dashboard for Bus A in ThingsBoard'/>",
-                "<img src='https://img.thingsboard.io/usecases/fleet-tracking/fleet-tracking-4.webp' alt='ThingsBoard dashboard displaying Bus B speed, fuel level, historical route, and tracking events including critical speed limit violations' title='Bus B telemetry and route analytics dashboard in ThingsBoard'/>",
-                "<img src='https://img.thingsboard.io/usecases/fleet-tracking/fleet-tracking-5.webp' alt='ThingsBoard dashboard showing Bus C with zero speed, constant fuel level, stop event warning, and static location on the map' title='Bus C status monitoring and stop event tracking in ThingsBoard'/>",
-                "<img src='https://img.thingsboard.io/usecases/fleet-tracking/fleet-tracking-6.webp' alt='ThingsBoard dashboard showing Bus D with full fuel level, no movement, stop warning, and current location on the map' title='Bus D refueling status and stop alert monitoring in ThingsBoard'/>"
+                "<img src='https://img.thingsboard.io/usecases/fleet-tracking/fleet-tracking-1.webp' alt='IoT Hub interface showing bus status, speed, fuel level, and location on the map' title='Real-time bus monitoring using IoT Hub platform'/>",
+                "<img src='https://img.thingsboard.io/usecases/fleet-tracking/fleet-tracking-2.webp' alt='IoT Hub interface showing historical route and movement playback for Bus A on the map' title='Bus A route playback and history visualization in IoT Hub' data-bg='#A4A4A4'/>",
+                "<img src='https://img.thingsboard.io/usecases/fleet-tracking/fleet-tracking-3.webp' alt='IoT Hub dashboard displaying real-time and historical data for Bus A, including speed, fuel level, route history, and critical events' title='Real-time telemetry dashboard for Bus A in IoT Hub'/>",
+                "<img src='https://img.thingsboard.io/usecases/fleet-tracking/fleet-tracking-4.webp' alt='IoT Hub dashboard displaying Bus B speed, fuel level, historical route, and tracking events including critical speed limit violations' title='Bus B telemetry and route analytics dashboard in IoT Hub'/>",
+                "<img src='https://img.thingsboard.io/usecases/fleet-tracking/fleet-tracking-5.webp' alt='IoT Hub dashboard showing Bus C with zero speed, constant fuel level, stop event warning, and static location on the map' title='Bus C status monitoring and stop event tracking in IoT Hub'/>",
+                "<img src='https://img.thingsboard.io/usecases/fleet-tracking/fleet-tracking-6.webp' alt='IoT Hub dashboard showing Bus D with full fuel level, no movement, stop warning, and current location on the map' title='Bus D refueling status and stop alert monitoring in IoT Hub'/>"
             ];
             return images[index];
         }

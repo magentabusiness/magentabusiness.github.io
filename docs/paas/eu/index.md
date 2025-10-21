@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-paas-eu
-title: ThingsBoard EU Cloud
-description: ThingsBoard Cloud documentation - learn about the platform and get your IoT projects running on ThingsBoard
+title: IoT Hub EU Cloud
+description: IoT Hub Cloud documentation - learn about the platform and get your IoT projects running on IoT Hub
 ---
 
 {% assign docsPrefix = "paas/eu/" %}

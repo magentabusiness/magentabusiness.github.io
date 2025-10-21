@@ -30,7 +30,7 @@ After this you can find the following messages in your [logs](#logs):
 
 ### Read logs
 
-Regardless of the deployment type, ThingsBoard Edge logs stored in the following directory:
+Regardless of the deployment type, IoT Hub Edge logs stored in the following directory:
 
 ```bash
 /var/log/tb-edge
@@ -47,7 +47,7 @@ Docker-Compose Deployment%,%docker-compose%,%templates/edge/troubleshooting/logs
 
 ### Enable certain logs
 
-ThingsBoard provides the ability to enable/disable logging for certain parts of the system depending on what information do you need for troubleshooting.
+IoT Hub provides the ability to enable/disable logging for certain parts of the system depending on what information do you need for troubleshooting.
 
 You can do this by modifying <b>logback.xml</b> file. As logs itself, it is stored in the following directory:
 
@@ -111,7 +111,7 @@ These metrics exposed at the path: `https://<yourhostname>/actuator/prometheus` 
 
 Some internal state metrics can be exposed by the Spring Actuator using Prometheus.
 
-Here's the list of metrics ThingsBoard pushes to Prometheus.
+Here's the list of metrics IoT Hub pushes to Prometheus.
 
 ### <b>tb-edge</b> metrics:
 - <i>attributes_queue_${index_of_queue}</i> (statsNames - <i>totalMsgs, failedMsgs, successfulMsgs</i>): stats about writing <b>attributes</b> to the database.
@@ -168,11 +168,11 @@ Here's the list of metrics ThingsBoard pushes to Prometheus.
         </a>
         <a href="https://stackoverflow.com/questions/tagged/thingsboard">
             <span class="phrase-heading">Stack Overflow</span>
-            <p>The ThingsBoard team will also monitor posts tagged thingsboard. If there aren’t any existing questions that help, please ask a new one!</p>
+            <p>The IoT Hub team will also monitor posts tagged thingsboard. If there aren’t any existing questions that help, please ask a new one!</p>
         </a>
     </div>
 </section>
 
-If your problem isn't answered by any of the guides above, feel free to contact ThingsBoard team.
+If your problem isn't answered by any of the guides above, feel free to contact IoT Hub team.
 
 <a class="button" href="/docs/contact-us/">Contact us</a>

@@ -202,7 +202,7 @@ create-client:
         title: 'Go to the "Clients" page in the left-hand menu, and click the "Create client" button;'
     1:
         image: /images/user-guide/oauth-2-support/keycloak/create-client-2.png
-        title: 'Enter "thingsboard" as the client ID. Leave the client type as "OpenID Connect". Click "Next";'
+        title: 'Enter "iot hub" as the client ID. Leave the client type as "OpenID Connect". Click "Next";'
     2:
         image: /images/user-guide/oauth-2-support/keycloak/create-client-3.png
         title: 'Turn on "Client authentication" option. Confirm that "Standard flow" is enabled. Click "Next";'

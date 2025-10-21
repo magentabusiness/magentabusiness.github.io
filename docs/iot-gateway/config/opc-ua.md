@@ -1,17 +1,17 @@
 ---
 layout: docwithnav-gw
 title: OPC-UA Connector Configuration
-description: OPC-UA protocol support for ThingsBoard IoT Gateway
+description: OPC-UA protocol support for IoT Hub IoT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This documentation will help you set up the OPC-UA connector for the ThingsBoard IoT Gateway. We'll explain the configuration 
+This documentation will help you set up the OPC-UA connector for the IoT Hub IoT Gateway. We'll explain the configuration 
 parameters in simple terms to make it easy for you to understand and follow. The OPC-UA (Open Platform Communications 
 Unified Architecture) is a machine-to-machine communication protocol for industrial automation, and this connector 
-allows seamless integration with the ThingsBoard platform.
+allows seamless integration with the IoT Hub platform.
 Use [general configuration](/docs/iot-gateway/configuration/) to enable this extension.
 
 We will describe the connector configuration below.
@@ -44,13 +44,13 @@ This configuration section contains general connector settings, such as:
   - **Enable remote logging** - enables remote logging for the connector;
   - **Logging level** - logging level for local and remote logs: NONE, ERROR, CRITICAL, WARNING, INFO, DEBUG, TRACE;
 - **Send data only on change** - sends data only it has changed since the last check, otherwise – data will be sent after every check;
-- **Report strategy** - strategy for sending data to ThingsBoard:
-  - **Report period** - period for sending data to ThingsBoard in milliseconds;
+- **Report strategy** - strategy for sending data to IoT Hub:
+  - **Report period** - period for sending data to IoT Hub in milliseconds;
   - **Type** - type of the report strategy:
-    - **On report period** - sends data to ThingsBoard after the report period;
-    - **On value change** - sends data to ThingsBoard when the value changes;
-    - **On value change and report period** - sends data to ThingsBoard when the value changes or after the report period;
-    - **On received** - sends data to ThingsBoard after receiving data from the device (default strategy).
+    - **On report period** - sends data to IoT Hub after the report period;
+    - **On value change** - sends data to IoT Hub when the value changes;
+    - **On value change and report period** - sends data to IoT Hub when the value changes or after the report period;
+    - **On received** - sends data to IoT Hub after receiving data from the device (default strategy).
 
 {% capture difference %}
 Additional information about the report strategy can be found [here](/docs/iot-gateway/features-overview/report-strategy){:target="_blank"}.
@@ -98,7 +98,7 @@ Advanced<small></small>%,%advanced%,%templates/iot-gateway/opcua-connector/opcua
 ### Subsection "Attributes" and "Time series"
 
 The configuration in this subsection provides settings for processing data from OPC-UA node. These settings will be 
-interpreted in ThingsBoard platform instance as attributes/time series of the device.
+interpreted in IoT Hub platform instance as attributes/time series of the device.
 
 {% capture opcuaattrandtimeseriessection %}
 Basic<small></small>%,%basic%,%templates/iot-gateway/opcua-connector/opcua-attr-and-time-series-basic-section.md%br%
@@ -107,9 +107,9 @@ Advanced<small></small>%,%advanced%,%templates/iot-gateway/opcua-connector/opcua
 
 ### Subsection "Attribute updates"
 
-This subsection contains configuration for attribute updates request from ThingsBoard platform instance.
+This subsection contains configuration for attribute updates request from IoT Hub platform instance.
 
-ThingsBoard allows the provisioning of device attributes and fetches some of them from
+IoT Hub allows the provisioning of device attributes and fetches some of them from
 the device application. You can treat this as a remote configuration for devices, enabling them to request 
 shared attributes from ThingsBoard. See [user guide](/docs/user-guide/attributes/) for more details.
 
@@ -121,7 +121,7 @@ Advanced<small></small>%,%advanced%,%templates/iot-gateway/opcua-connector/devic
 
 ### Subsection "RPC methods"
 
-ThingsBoard allows sending RPC commands to devices connected directly to ThingsBoard or via Gateway.
+IoT Hub allows sending RPC commands to devices connected directly to IoT Hub or via Gateway.
 
 {% capture subsectiondevicerpc %}
 Basic<small></small>%,%basic%,%templates/iot-gateway/opcua-connector/device-rpc-basic-section.md%br%
@@ -238,7 +238,7 @@ byte string (`b`), and GUID (`g`). Below is an explanation of each identifier ty
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main IoT Hub features:
  - [ThingsBoard IoT Gateway Features](/docs/iot-gateway/features/)
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

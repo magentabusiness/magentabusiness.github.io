@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect UP Squared Pro AI Edge to ThingsBoard?
+title: How to connect UP Squared Pro AI Edge to IoT Hub?
 category: Single-board computers
 chip: Intel Atom x7-E3950 Processor
 connectivity: Ethernet, WIFI, Bluetooth

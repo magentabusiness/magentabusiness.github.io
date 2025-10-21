@@ -1,11 +1,11 @@
 
-{% assign deviceName = page.title | remove: "How to connect " | remove: "to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: "to IoT Hub?" %}
 {% assign deviceVendorLink = "https://www.iotracker.eu/iotracker" %}
 {% assign thingsboardHost = "https://" | append: hostName %}
 {% assign prerequisites = '
 - <a href="' | append: deviceVendorLink | append: '" target="_blank">' | append: deviceName | append: '</a>
 - LoRaWAN® gateway (in our case [UG56 LoRaWAN® Gateway](/docs/pe/devices-library/ug56-lorawan-gateway/){:target="_blank"})
-- Configured integration on networks server and ThingsBoard
+- Configured integration on networks server and IoT Hub
 - [Network Server account](#device-connection)
 '
  %}
@@ -62,9 +62,9 @@ Loriot
 {% include /docs/devices-library/blocks/basic/thingsboard-add-lorawan-device-through-integration-block.liquid target-integration-types=targetIntegrationTypes %}
 
 
-## Check data on ThingsBoard
+## Check data on IoT Hub
 
-After the device is connected to the network server and ThingsBoard, you can check received and converted data on the platform for this device.  
+After the device is connected to the network server and IoT Hub, you can check received and converted data on the platform for this device.  
 
 To do this, open **Entities** menu section and select **Devices**.  
 Click on the device name to open the device details page.  

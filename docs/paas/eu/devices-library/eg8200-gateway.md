@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect EG8200 Gateway to ThingsBoard?
+title: How to connect EG8200 Gateway to IoT Hub?
 category: Other devices
 connectivity: WIFI, LTE, 4G, 5G, RS485, LAN
 vendor: IOTRouter

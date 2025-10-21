@@ -24,7 +24,7 @@ If you have any questions or run into issues, the TBMQ team is here to help. You
     </div>
     <div class="col-12 col-sm-6 col-lg col-xxl-6 col-4xl mb-4">
         <a class="feature-card" href="/docs/contact-us/?subject=TBMQ">
-            <img class="feature-logo" src="https://img.thingsboard.io/feature-logo/thingsboard-logo.svg" alt="Thingsboard logo">
+            <img class="feature-logo" src="https://img.thingsboard.io/feature-logo/thingsboard-logo.svg" alt="Iot Hub logo">
             <div class="feature-title">Contact Us</div>
             <div class="feature-text">
                 For direct assistance, fill out the contact form and our team will get back to you.

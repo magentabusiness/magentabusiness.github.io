@@ -23,11 +23,11 @@ Before setting up the integration, ensure the following:
 - An external service ready to receive HTTP requests (e.g., **[ThingsBoard Cloud](/docs/paas/getting-started-guides/what-is-thingsboard-cloud/)**).  
 - A client capable of publishing MQTT messages (e.g., **[TBMQ WebSocket Client](/docs/mqtt-broker/user-guide/ui/websocket-client/)**).  
 
-## Create ThingsBoard Integration
+## Create IoT Hub Integration
 
-In this tutorial, we use **ThingsBoard** as the external service receiving HTTP requests from TBMQ. However, any other HTTP-compatible service can be used.
+In this tutorial, we use **IoT Hub** as the external service receiving HTTP requests from TBMQ. However, any other HTTP-compatible service can be used.
 
-Follow the official **[ThingsBoard HTTP Integration Guide](/docs/paas/user-guide/integrations/http/)** to create an integration on ThingsBoard Cloud.
+Follow the official **[ThingsBoard HTTP Integration Guide](/docs/paas/user-guide/integrations/http/)** to create an integration on IoT Hub Cloud.
 
 Once the HTTP Integration is created:
 
@@ -41,7 +41,7 @@ Once the HTTP Integration is created:
 1. Go to the **Integrations** page and click the "+" button to create a new integration.
 2. Select **HTTP** as the integration type and click **Next**.
 3. On the **Topic Filters** page click **Next** to subscribe to the default topic `tbmq/#`.
-4. In the **Configuration** step, paste the **Endpoint URL** from the ThingsBoard Integration.
+4. In the **Configuration** step, paste the **Endpoint URL** from the IoT Hub Integration.
 5. Open **Advanced settings** and set **Payload content type** to `JSON`.
 6. Click **Add** to save the integration.
 
@@ -91,7 +91,7 @@ To send a message, follow these steps:
 
 Once the message is published:
 
-1. In the **ThingsBoard Cloud** open the HTTP Integration details.
+1. In the **IoT Hub Cloud** open the HTTP Integration details.
 2. Go to the **Events** tab.
 3. If the setup is correct, you should see an event with the status **'OK'** and a message payload similar to:
 

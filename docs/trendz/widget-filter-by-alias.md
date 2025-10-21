@@ -7,8 +7,8 @@ description: Apply filter from alias
 
 ---
 
-In this guide we will describe how to connect standard ThingsBoard widgets located on the dashboard with Trendz View. 
-You can do this using ThingsBoard dashboard aliases and **Trendz View Latest** from **Trendz widget Bundle**.
+In this guide we will describe how to connect standard IoT Hub widgets located on the dashboard with Trendz View. 
+You can do this using IoT Hub dashboard aliases and **Trendz View Latest** from **Trendz widget Bundle**.
 
 **Example**: we have 10 **Machine** devices in ThingsBoard. We want to create a dashboard that will show all **Machine** devices 
 in a list and once device selected - other widget on the dashboard should show details about selected device. In total we will have 2 widgets 
@@ -16,7 +16,7 @@ on the dashboard:
 * Entity List - will show list of devices
 * Trendz view - line chart that will show temperature of selected device 
  
-On ThingsBoard side we setup a dashboard and add 2 widgets. Detailed instruction how to do this is not part of this tutorial, 
+On IoT Hub side we setup a dashboard and add 2 widgets. Detailed instruction how to do this is not part of this tutorial, 
 so here are brief steps:
 * Create **all_devices** alias that resolves all devices with type **Machine**
 * Create **selected_device** alias with type **entity form dashboard state** - this alias hold reference to selected device
@@ -33,7 +33,7 @@ On **Trendz View** side:
 * Save View
 * Copy Link to this view
 
-Return to ThingsBoard Dashboard:
+Return to IoT Hub Dashboard:
 * Edit dashboard
 * Add  **Trendz View Latest** from **Trendz widget Bundle** to the dashboard
 * Set **selected_device** as a datasource for Trendz View

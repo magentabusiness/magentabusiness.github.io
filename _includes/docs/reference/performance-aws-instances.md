@@ -25,9 +25,9 @@ We have also included instructions to replicate the tests. Links to the instruct
 Additional tool set we use for our tests:
 [Postgres](/docs/reference/performance/tools/postgres-pgadmin-monitoring/),
 [Java](/docs/reference/performance/tools/java-jmx-monitoring/) and
-[ThingsBoard](/docs/reference/performance/tools/thingsboard-performance-charts/) used to visualize the performance.
+[IoT Hub](/docs/reference/performance/tools/thingsboard-performance-charts/) used to visualize the performance.
 
-As an output we will analyse the ThingsBoard rule engine [statistics](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#rule-engine-statistics) dashboard and fancy API usage stats.
+As an output we will analyse the IoT Hub rule engine [statistics](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#rule-engine-statistics) dashboard and fancy API usage stats.
 
 Note: Each IoT use case is different and may impact the performance numbers.
 The tests cover the main functionality of data ingestion and alarm generation.

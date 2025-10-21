@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-edge
-title: What is ThingsBoard Edge?
-description: ThingsBoard Edge features, FAQ
+title: What is IoT Hub Edge?
+description: IoT Hub Edge features, FAQ
 redirect_from: "/docs/user-guide/edge-computing/"
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-pe-edge
-title: ThingsBoard Edge Professional Edition Roadmap
+title: IoT Hub Edge Professional Edition Roadmap
 description: Upcoming releases
 
 ---

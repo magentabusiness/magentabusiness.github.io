@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-mobile-pe
-title: Getting started with ThingsBoard PE Mobile Application
-description: ThingsBoard PE Mobile Application - starting point for your IoT mobile product
+title: Getting started with IoT Hub PE Mobile Application
+description: IoT Hub PE Mobile Application - starting point for your IoT mobile product
 
 ---
 

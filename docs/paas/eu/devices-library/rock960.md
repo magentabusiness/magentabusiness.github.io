@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect Rock960 to ThingsBoard?
+title: How to connect Rock960 to IoT Hub?
 category: Single-board computers
 chip: Rockchip RK3399
 connectivity: WIFI, Bluetooth, Ethernet

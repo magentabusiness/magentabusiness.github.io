@@ -19,16 +19,16 @@ docker run -it -v tb-pe-opc-ua-integration-logs:/var/log/tb-opc-ua-integration `
 
 Where: 
 
-- **mytbedge:** The host name of the ThingsBoard Edge service.
+- **mytbedge:** The host name of the IoT Hub Edge service.
 - **9090:** The integration port. It is configured by the INTEGRATIONS_RPC_PORT environment variable in the tb-edge.yml file.
 - **YOUR_ROUTING_KEY:** Replace it with the actual **integration routing key** obtained in [Step 3](/docs/pe/edge/user-guide/integrations/remote-integrations/#step-3-save-remote-integration-credentials){: target="_blank"}.
 - **YOUR_SECRET:** Replace it with the actual **integration secret** obtained in [Step 3](/docs/pe/edge/user-guide/integrations/remote-integrations/#step-3-save-remote-integration-credentials){: target="_blank"}.
 - **docker run:** The command to run this container.
-- **-it:** Attaches a terminal session with current ThingsBoard remote integration process output.
-- **-v tb-pe-opc-ua-integration-logs:/var/log/tb-opc-ua-integration:** Mounts the host's dir **~/.tb-pe-opc-ua-integration-logs** to ThingsBoard remote integration logs directory.
+- **-it:** Attaches a terminal session with current IoT Hub remote integration process output.
+- **-v tb-pe-opc-ua-integration-logs:/var/log/tb-opc-ua-integration:** Mounts the host's dir **~/.tb-pe-opc-ua-integration-logs** to IoT Hub remote integration logs directory.
 - **--name tb-pe-opc-ua-integration:** The friendly local name of this machine.
 - **--network edge_docker_default:** The network name in which the **mytbedge** service operates.
-- **--restart always:** The command automatically starts ThingsBoard Integration if the system reboots and restarts in case of failure.
+- **--restart always:** The command automatically starts IoT Hub Integration if the system reboots and restarts in case of failure.
 - **thingsboard/tb-pe-opc-ua-integration:{{ site.release.pe_full_ver }}:** The docker image.
 
 After executing this command, you can open the logs located here: **~/.tb-pe-opc-ua-integration-logs**.
@@ -38,7 +38,7 @@ To keep the container running in the background but detach from the session term
 
 #### Reattaching, stop and start commands
 
-To reattach to the terminal (to see ThingsBoard remote integration logs), run:
+To reattach to the terminal (to see IoT Hub remote integration logs), run:
 
 ```
 docker attach tb-pe-opc-ua-integration

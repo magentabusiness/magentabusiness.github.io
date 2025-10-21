@@ -17,7 +17,7 @@ Useful methods, that may be helpful for custom connector implementation, from th
 
 #### send_to_storage
 
-This method allows you to send data to the ThingsBoard instance.
+This method allows you to send data to the IoT Hub instance.
 
 |Argument|Description|
 |-|-|
@@ -29,7 +29,7 @@ Returns True if data was sent successfully, otherwise False.
 
 #### send_rpc_reply
 
-This method allows you to send a response to the RPC request from the ThingsBoard instance.
+This method allows you to send a response to the RPC request from the IoT Hub instance.
 
 | Argument | Default value | Description |  
 |-|---------------|-|  
@@ -45,7 +45,7 @@ No return value.
 
 #### add_device
 
-This method allows you to add a device to the gateway, and it sends "CONNECT" to the ThingsBoard instance.
+This method allows you to add a device to the gateway, and it sends "CONNECT" to the IoT Hub instance.
 
 | Argument | Default value | Description |
 |-|-|-|
@@ -57,7 +57,7 @@ Returns True if the device was added successfully, otherwise False.
 
 #### del_device
 
-This method allows you to delete a device from the gateway, and it sends "DISCONNECT" to the ThingsBoard instance.
+This method allows you to delete a device from the gateway, and it sends "DISCONNECT" to the IoT Hub instance.
 
 | Argument | Default value | Description |
 |-|-|-|
@@ -297,14 +297,14 @@ converted_data.add_to_attributes(attribute_datapoint_key, received_value_attr)
 
 # ...
 
-# Send data to the ThingsBoard instance. (gateway is an instance of TBGatewayService, provided to connector on initialization)
+# Send data to the IoT Hub instance. (gateway is an instance of TBGatewayService, provided to connector on initialization)
 gateway.send_to_storage(connector_name, connector_id, converted_data)
 
 ```
 
 The result of the example above will be ConvertedData object with telemetry and attribute.  
-Data, collected in telemetry and attribute, will be sent to the ThingsBoard instance due to the report strategy configuration.  
-In the example, telemetry will be sent to the ThingsBoard instance on change or every 60 seconds, and attribute will be sent only on change.
+Data, collected in telemetry and attribute, will be sent to the IoT Hub instance due to the report strategy configuration.  
+In the example, telemetry will be sent to the IoT Hub instance on change or every 60 seconds, and attribute will be sent only on change.
 
 ### Attributes
 
@@ -457,12 +457,12 @@ Realization of converter methods depends on it's type - **Uplink** or **Downlink
 
 ##### Uplink converter convert method
 
-This method is used to convert data from the device to the ThingsBoard instance.  
+This method is used to convert data from the device to the IoT Hub instance.  
 It is good to return [**ConvertedData**](#converteddata) object(Depends on realization, but send_to_storage method from gateway service expects [**ConvertedData**](#converteddata) object).  
 
 ##### Downlink converter convert method
 
-This method is used to convert data from the ThingsBoard instance to the device.  
+This method is used to convert data from the IoT Hub instance to the device.  
 Incoming data is a dictionary with key/value pairs that represent the data that should be sent to the device.  
 This type of converter usually used for converting RPC or attribute updates from the platform instance to the device.  
 Returned value may depend on realization of the converter.  

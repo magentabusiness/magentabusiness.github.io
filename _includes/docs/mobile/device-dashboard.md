@@ -1,7 +1,7 @@
 {% if docsPrefix == 'pe/' %}
-{% assign appPrefix = "ThingsBoard PE" %}
+{% assign appPrefix = "IoT Hub PE" %}
 {% else %}
-{% assign appPrefix = "ThingsBoard" %}
+{% assign appPrefix = "IoT Hub" %}
 {% endif %}
 
 {{appPrefix}} allows configuring device details dashboard to be displayed when tapping on the device with the specific type.

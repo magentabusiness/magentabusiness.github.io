@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-mobile-pe
-title: Customize device icons in ThingsBoard PE Mobile Application
+title: Customize device icons in IoT Hub PE Mobile Application
 
 device-image:
  0:

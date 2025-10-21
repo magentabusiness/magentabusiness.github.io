@@ -35,7 +35,7 @@ predictive-maintenance-save-remaining-time-as-telemetry:
 predictive-maintenance-create-alarm:
   0:
     image: https://img.thingsboard.io/trendz/guide/predictive_maintenance/Predict_remaining_open_machine_device_St3_1.png
-    title: 'Go to Alarm rules section in ThingsBoard'
+    title: 'Go to Alarm rules section in IoT Hub'
   1:
     image: https://img.thingsboard.io/trendz/guide/predictive_maintenance/Predict_remaining_create_alarm_rule_St3_2.png
     title: 'Define Alarm that will be raised when remaining time less than 14 days'
@@ -52,7 +52,7 @@ predictive-maintenance-create-alarm:
 predictive-maintenance-notify-maintenance-team:
   0:
     image: https://img.thingsboard.io/trendz/guide/predictive_maintenance/Predict_remaining_open_root_rule_chain_St4_1.png
-    title: 'Go to default rule chain in ThingsBoard'
+    title: 'Go to default rule chain in IoT Hub'
   1:
     image: https://img.thingsboard.io/trendz/guide/predictive_maintenance/Predict_remaining_to_email_St4_2.png
     title: 'Add toEmail node with email properties'
@@ -90,7 +90,7 @@ allowing us to keep our machines running efficiently and reducing unplanned down
 * Create a forecast for the amount of caps produced by each machine using Trendz Analytics.
 * Calculate the number of days remaining until each machine produces 500,000 caps.
 * Save the calculated remaining days as machine telemetry.
-* Create an alarm in ThingsBoard if remaining time less than 14 days.
+* Create an alarm in IoT Hub if remaining time less than 14 days.
 * Send email to the maintenance team once alarm created.
 
 ### Key outcomes
@@ -102,7 +102,7 @@ allowing us to keep our machines running efficiently and reducing unplanned down
 
 ### Prerequisites
 
-Assembly machines already connected to ThingsBoard via OPC-UA integration and telemetry data is available in ThingsBoard. You can find more details how to do this in our [connectivity guides](https://thingsboard.io/docs/pe/guides/#AnchorIDConnectYourDevice).
+Assembly machines already connected to IoT Hub via OPC-UA integration and telemetry data is available in ThingsBoard. You can find more details how to do this in our [connectivity guides](https://thingsboard.io/docs/pe/guides/#AnchorIDConnectYourDevice).
 Equipment reports a lot of useful telemetry data, but for this use case we will use only `capsProduced` telemetry.
 
 
@@ -158,14 +158,14 @@ We need to tell how frequently we want to execute calculation function. In our c
 * Set default time range to **Last 7 days**
 * Save view with name **Machine maintenance remaining days forecast job**
 
-Once view saved, Trendz would schedule background job that will periodically execute calculation function and save result as telemetry of the machine. On each run Trendz would fetch new data from ThingsBoard and execute calculation function on it.
+Once view saved, Trendz would schedule background job that will periodically execute calculation function and save result as telemetry of the machine. On each run Trendz would fetch new data from IoT Hub and execute calculation function on it.
 
 {% include images-gallery.html imageCollection="predictive-maintenance-save-remaining-time-as-telemetry" %}
 
 ### Step 3: Create alarm if remaining time less than 14 days
-At this moment we already have `capsForecast` telemetry for each machine in the ThingsBoard which tells as how many days left until next maintenance. It means that we can create Alarm Rule in ThignsBoard to raise an alarm if remaining time less than 14 days.
+At this moment we already have `capsForecast` telemetry for each machine in the IoT Hub which tells as how many days left until next maintenance. It means that we can create Alarm Rule in ThignsBoard to raise an alarm if remaining time less than 14 days.
 
-* In ThingsBoard open machine's device profile and add new Alarm Rule
+* In IoT Hub open machine's device profile and add new Alarm Rule
 * Alarm type - **Maintenance required**
 * Create alarm rule
   * Severity - `Warning`
@@ -173,14 +173,14 @@ At this moment we already have `capsForecast` telemetry for each machine in the 
 * Clear alarm rule
   * Condition - `capsForecast` is greater than `14`
 
-Once alarm rule created, ThingsBoard will raise an alarm if remaining time less than 14 days and clear it once remaining time greater than 14 days.
+Once alarm rule created, IoT Hub will raise an alarm if remaining time less than 14 days and clear it once remaining time greater than 14 days.
 
 {% include images-gallery.html imageCollection="predictive-maintenance-create-alarm" %}
 
 ### Step 4: Send notification once alarm created
-Final step is to send notification to the maintenance team once alarm created. We will use ThingsBoard Rule Engine to send email notification to the maintenance team. If Alarm Rule in device profile raised an alarm, we can catch this event and add steps to send an email.
+Final step is to send notification to the maintenance team once alarm created. We will use IoT Hub Rule Engine to send email notification to the maintenance team. If Alarm Rule in device profile raised an alarm, we can catch this event and add steps to send an email.
 
-* Open Root rule chain in ThingsBoard
+* Open Root rule chain in IoT Hub
 * add `toEmail` rule node after `Device profile` node and connect it with `Alarm Created` relation.
 * Open `toEmail` node settings and configure it to send email to the maintenance team.
   * `From template` - info@testmail.org
@@ -190,7 +190,7 @@ Final step is to send notification to the maintenance team once alarm created. W
 * add `send email` rule node after `toEmail` node and connect it with `Successfull` relation.
 * Save rule chain.
 
-With this configuration ThingsBoard will send notification to the maintenance team once alarm created.
+With this configuration IoT Hub will send notification to the maintenance team once alarm created.
 
 {% include images-gallery.html imageCollection="predictive-maintenance-notify-maintenance-team" %}
 

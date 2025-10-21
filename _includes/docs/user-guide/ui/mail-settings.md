@@ -5,11 +5,11 @@ This document provides step-by-step instructions for configuring the mail server
 Using email allows you to send [notifications](/docs/{{docsPrefix}}user-guide/notifications/){:target="_blank"}, password recovery messages, scheduled reports, and other important system messages.
 
 {% if docsPrefix == null %}
-ThingsBoard system administrator defines global mail server settings, which apply to all customers.
+IoT Hub system administrator defines global mail server settings, which apply to all customers.
 {% endif %}
 {% if docsPrefix == "pe/" %}
 
-ThingsBoard allows configuring the mail server at two levels:
+IoT Hub allows configuring the mail server at two levels:
 
 - System administrator level – Defines global SMTP settings that apply to all tenants unless overridden.
 - Tenant administrator level – Allows individual tenants to set up their own SMTP settings, overriding the global configuration if needed.
@@ -28,17 +28,17 @@ By default, if a Tenant mail server is not configured, the system will use the s
 
 Following steps are required to configure Mail server settings:
 {% if docsPrefix == null %}
-**Step 1.** Log in to your ThingsBoard instance WEB UI as system administrator;
+**Step 1.** Log in to your IoT Hub instance WEB UI as system administrator;
 
 **Step 2.** Go to the "Mail server" tab on the "Settings" page. You will be taken directly to the mail server settings;
 {% endif %}
 {% if docsPrefix == "pe/" %}
-**Step 1.** Log in to your ThingsBoard instance WEB UI;
+**Step 1.** Log in to your IoT Hub instance WEB UI;
 
 **Step 2.** Go to the "Mail server" tab on the "Settings" page. If you are logged in as a sysadmin, you will be taken directly to the mail server settings. If you are logged in as a tenant administrator, uncheck the "Use System Mail Server Settings" option to configure your own mail server settings;
 {% endif %}
 {% if docsPrefix == "paas/" or docsPrefix == "paas/eu/" %}
-**Step 1.** Log in to your ThingsBoard instance WEB UI;
+**Step 1.** Log in to your IoT Hub instance WEB UI;
 
 **Step 2.** Go to the "Mail server" tab on the "Settings" page. Uncheck the "Use System Mail Server Settings" option to configure your own mail server settings;
 {% endif %}

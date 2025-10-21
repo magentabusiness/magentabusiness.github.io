@@ -7,7 +7,7 @@ A custom converter is converter written for some device:
 | type                        | **custom**                         | Provides information to connector that custom converter will be uses for converting data from response.                                  |
 | extension                   | **CustomRequestUplinkConverter**   | Name of custom converter class.                                                                                                       |
 | extension-config            |                                    | This subsection is a configuration for the custom converter. In default example it contains setting for parsing response string.      |
-| key                         | **Totaliser**                      | In this example value "Totaliser" will be interpreted as a telemetry key in ThingsBoard instance.                                     |
+| key                         | **Totaliser**                      | In this example value "Totaliser" will be interpreted as a telemetry key in IoT Hub instance.                                     |
 | type                        | **float**                          | In this example type of the data.                                                                                                     |
 | fromByte                    | **0**                              | In this example start byte position in the response string.                                                                           |
 | toByte                      | **4**                              | In this example start byte position in the response string.                                                                           |

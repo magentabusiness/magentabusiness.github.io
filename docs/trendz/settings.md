@@ -17,7 +17,7 @@ To access settings, go to the **Settings** page by clicking the **“Settings”
 
 ### Signing Key
 
-For the application to function properly, it must authenticate with ThingsBoard on behalf of a user. This is required 
+For the application to function properly, it must authenticate with IoT Hub on behalf of a user. This is required 
 for background operations such as:
 
 - Sending generated telemetry
@@ -25,7 +25,7 @@ for background operations such as:
 
 Storing user credentials in application memory is not secure. Instead, Trendz supports a secure mechanism using a 
 **JWT signing key**, which should be stored in configuration files. It is expected that Trendz is installed on a 
-secured server (as is ThingsBoard and similar systems).
+secured server (as is IoT Hub and similar systems).
 
 You can alternatively store the signing key in the Trendz database automatically, but this method is **not recommended** due to security concerns.
 
@@ -45,7 +45,7 @@ Scroll to the bottom of the **Settings** page to find the **Signing Key** panel.
 
 Follow these steps to configure the signing key:
 
-1. **Log in to ThingsBoard as a System Administrator**  
+1. **Log in to IoT Hub as a System Administrator**  
    ![Login](https://img.thingsboard.io/trendz/signing-key-4.png)
 
 2. Go to **Security → General**  
@@ -96,7 +96,7 @@ Follow these steps to configure the signing key:
 
 ### Trendz Widget Bundle
 
-Uploading the Trendz Widget Bundle is **required** to enable view sharing from Trendz to ThingsBoard dashboards.  
+Uploading the Trendz Widget Bundle is **required** to enable view sharing from Trendz to IoT Hub dashboards.  
 *(Learn how to use widgets after installation [here](/docs/trendz/embed-visuals))*
 
 In the **Trendz Widget Bundle** section, you’ll see one of the following status indicators:
@@ -115,7 +115,7 @@ In the **Trendz Widget Bundle** section, you’ll see one of the following statu
 
 ### Trendz JS Summary Module
 
-Uploading the Trendz JS Summary Module is **recommended** for configuring AI Widget Summaries across ThingsBoard widgets.  
+Uploading the Trendz JS Summary Module is **recommended** for configuring AI Widget Summaries across IoT Hub widgets.  
 *(Learn how to configure AI Widget Summaries [here](/docs/trendz/ai-widget-summary))*
 
 Check the status under the **Trendz JS Summary Module** section:

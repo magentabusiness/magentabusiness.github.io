@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect Orange Pi Plus 2E to ThingsBoard?
+title: How to connect Orange Pi Plus 2E to IoT Hub?
 category: Single-board computers
 chip: Allwinner H3
 connectivity: Ethernet, WIFI, Bluetooth

@@ -53,7 +53,7 @@ toc:
       path: /docs/trendz/anomaly/build/
     - title: Anomaly Refresh & Reprocess
       path: /docs/trendz/anomaly/refresh-reprocess/
-    - title: Saving Telemetry to ThingsBoard
+    - title: Saving Telemetry to IoT Hub
       path: /docs/trendz/anomaly/save-to-tb/
     - title: Anomaly Visualization
       path: /docs/trendz/anomaly/visualization/
@@ -65,7 +65,7 @@ toc:
       path: /docs/trendz/calculated-fields/
     - title: Batch calculations
       path: /docs/trendz/batch-calculated-fields/
-    - title: Save metric to ThingsBoard
+    - title: Save metric to IoT Hub
       path: /docs/trendz/save-calculated-to-thingsboard/
     - title: Calculate time to value
       path: /docs/trendz/calculate-time-to-value/
@@ -77,7 +77,7 @@ toc:
       path: /docs/trendz/predict-with-python-models/
     - title: Predict remaining time
       path: /docs/trendz/predict-remaining-time/
-    - title: Save predictions into ThingsBoard
+    - title: Save predictions into IoT Hub
       path: /docs/trendz/prediction-save-to-tb/
 - title: AI Features
   section:

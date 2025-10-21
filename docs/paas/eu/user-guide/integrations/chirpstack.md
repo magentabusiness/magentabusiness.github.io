@@ -37,7 +37,7 @@ configure-chirpstack-integration:
 device:
     0:
         image: https://img.thingsboard.io/user-guide/integrations/chirpstack/device-created-1-pe.png
-        title: 'When your device sends an uplink message, a new device will appear in the ThingsBoard user interface.'
+        title: 'When your device sends an uplink message, a new device will appear in the IoT Hub user interface.'
 
 uplink-message-in-integration:
     0:

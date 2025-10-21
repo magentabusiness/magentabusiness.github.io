@@ -2,8 +2,8 @@
 layout: docwithnav-trendz
 assignees:
 - vparomskiy
-title: Save calculated values as a telemetry into ThingsBoard
-description: Save calculated values as a telemetry into ThingsBoard
+title: Save calculated values as a telemetry into IoT Hub
+description: Save calculated values as a telemetry into IoT Hub
 
 save-calc-to-tb:
   0:
@@ -16,7 +16,7 @@ save-calc-to-tb:
 
 Calculated fields in Trendz offer the ability to compute various metrics based on existing telemetry and attributes.
 These metrics can serve different purposes, from visualization in reports to triggering actions or reuse in other computations.
-What's more, Trendz allows you to save these calculated metrics as device or asset telemetry back to ThingsBoard, enhancing the functionality of your IoT application.
+What's more, Trendz allows you to save these calculated metrics as device or asset telemetry back to IoT Hub, enhancing the functionality of your IoT application.
 Let's explore a few examples of how this feature can be utilized:
 
 * By using the calculated metrics as input parameters for further calculations or predictions, you can enhance the accuracy and effectiveness of subsequent analyses.
@@ -30,7 +30,7 @@ Let's explore a few examples of how this feature can be utilized:
 
 ## Calculation Jobs
 
-When you save a calculated field, it can be activated to initiate two main tasks and store the data in ThingsBoard as telemetry:
+When you save a calculated field, it can be activated to initiate two main tasks and store the data in IoT Hub as telemetry:
 1. *Reprocess Historical Data:*
 * This task runs once to analyze the data within the chosen time frame.
 * It starts immediately after activation.
@@ -51,7 +51,7 @@ To schedule a task for saving calculation results, follow these steps:
 
 ### Storing Calculations as Telemetry
 
-When these settings are saved, your calculations are recorded in ThingsBoard as telemetry with a key name prefixed by \_ECD_, and the status of the calculation is set to “enabled”
+When these settings are saved, your calculations are recorded in IoT Hub as telemetry with a key name prefixed by \_ECD_, and the status of the calculation is set to “enabled”
 
 The data generated appears in the construction of view fields in the list of business entities under the name assigned to the calculation at the time of creation and,
 if activated, will be updated according to the specified frequency when creating the task. The created calculation will appear in the view fields under the name given to the calculation during its creation.

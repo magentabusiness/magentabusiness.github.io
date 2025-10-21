@@ -8,7 +8,7 @@ description: Supported LwM2M API Reference for IoT Devices
 upload-models:
     0:
         image: /images/lwm2m/upload-lwm2m-models-1-ce.png
-        title: 'Log in to your ThingsBoard PE instance as a System administrator. Navigate to the "Resources library" page under the "Resources" section. Click the "+" (Add resource) button in the top-right corner of the window.'
+        title: 'Log in to your IoT Hub PE instance as a System administrator. Navigate to the "Resources library" page under the "Resources" section. Click the "+" (Add resource) button in the top-right corner of the window.'
     1:
         image: /images/lwm2m/upload-lwm2m-models-2-ce.png
         title: 'Upload one or more LwM2M model files. Click "Add" to complete the upload.'
@@ -58,12 +58,12 @@ configure-mapping:
 configure-mapping-observe-strategy:
     0:
         image: /images/lwm2m/configure-mapping-observe-strategy-1-ce.png
-        title: 'ThingsBoard supports multiple observe strategies that define how LwM2M resources are grouped and monitored.'
+        title: 'IoT Hub supports multiple observe strategies that define how LwM2M resources are grouped and monitored.'
 
 device-credentials:
     0:
         image: /images/lwm2m/device-credentials-lwm2m-1-ce.png
-        title: 'ThingsBoard supports four types of credentials: "Pre-Shared Key (PSK)", "Raw Public Key (RPK)", "X.509 Certificate" and "No Security".'
+        title: 'IoT Hub supports four types of credentials: "Pre-Shared Key (PSK)", "Raw Public Key (RPK)", "X.509 Certificate" and "No Security".'
 
 no-security-credentials:
     0:

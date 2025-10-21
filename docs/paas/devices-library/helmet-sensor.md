@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect Helmet Sensor to ThingsBoard?
+title: How to connect Helmet Sensor to IoT Hub?
 category: Other devices
 connectivity: LoRaWAN®
 vendor: Lansitec

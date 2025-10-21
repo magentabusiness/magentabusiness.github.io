@@ -88,10 +88,10 @@ In this case system will sum all cell values for each column and show total valu
 
 ## On row click action
 Trendz Table view support onRowClick action. You can configure what should happen when user click on a Row in a table 
-when it is embedded into ThingsBoard Dashobard. For example you can save entity to the Dashboard state alias or open new dashboard state.
+when it is embedded into IoT Hub Dashobard. For example you can save entity to the Dashboard state alias or open new dashboard state.
 
 To enable row click event:
-* Add Trendz Table View on ThingsBoard dashboard.
+* Add Trendz Table View on IoT Hub dashboard.
 * Open widget edit mode and switch to **Actions** tab.
 * Press **Add action** button.
 * In **Action source** field select **On row click**.

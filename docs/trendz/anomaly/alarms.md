@@ -11,7 +11,7 @@ description: How to configure alarms triggered by anomaly detection, including a
 ## Overview
 
 Trendz supports automatic creation of alarms based on detected anomalies. This feature allows users to react to abnormal 
-behavior in real time by integrating with ThingsBoard's native alarm system. Alarms can be created during both 
+behavior in real time by integrating with IoT Hub's native alarm system. Alarms can be created during both 
 **Refresh** and **Reprocess** tasks, depending on your configuration.
 
 ## Enabling Alarm Creation

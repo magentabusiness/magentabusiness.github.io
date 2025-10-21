@@ -1,7 +1,7 @@
 ---
 layout: use-case
-title: Smart Water Metering with ThingsBoard IoT Platform
-description: Discover how ThingsBoard enables real-time water monitoring, automated alerts, and consumption analytics with a scalable IoT water metering solution for utilities, buildings, and agriculture.
+title: Smart Water Metering with IoT Hub IoT Platform
+description: Discover how IoT Hub enables real-time water monitoring, automated alerts, and consumption analytics with a scalable IoT water metering solution for utilities, buildings, and agriculture.
 notitle: "true"
 customTitle: "true"
 includeAdvantages: "true"
@@ -17,13 +17,13 @@ contactUsModal: "true"
     <div class="about-text">
         <div class="short">
             <div class="block">
-                <p class="text">Water is one of our most critical resources, and managing its distribution and consumption is key for sustainable urban development, utility cost control, and infrastructure maintenance. For this purpose, the ThingsBoard platform is an ideal choice, offering powerful capabilities for real-time monitoring, alarms, visualization, and analytics.</p>
+                <p class="text">Water is one of our most critical resources, and managing its distribution and consumption is key for sustainable urban development, utility cost control, and infrastructure maintenance. For this purpose, the IoT Hub platform is an ideal choice, offering powerful capabilities for real-time monitoring, alarms, visualization, and analytics.</p>
             </div>
             <div class="demo-button">
                 <a id="UseCases_WaterMeter_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/aff5f200-8b48-11ec-a344-c767c1ab1bb8?publicId=4978baf0-8a92-11ec-98f9-ff45c37940c6" class="button gtm_button">View live demo</a>            </div>
             </div>
         <div class="long">
-            <p>Traditional water metering methods often fall short in providing real-time data, accurate billing, and predictive maintenance insights. By leveraging connected sensors and intelligent dashboards, organizations can unlock powerful insights into water usage, detect anomalies like leaks, and automate alarm systems. At the core of these solutions is ThingsBoard, a flexible IoT platform enabling the collection, processing, and visualization of telemetry data from water meters in real time.</p>
+            <p>Traditional water metering methods often fall short in providing real-time data, accurate billing, and predictive maintenance insights. By leveraging connected sensors and intelligent dashboards, organizations can unlock powerful insights into water usage, detect anomalies like leaks, and automate alarm systems. At the core of these solutions is IoT Hub, a flexible IoT platform enabling the collection, processing, and visualization of telemetry data from water meters in real time.</p>
             <p>This ThingsBoard-powered <a href="/docs/pe/solution-templates/water-metering/">water metering solution</a> provides complete real-time visibility into water usage, instant response to anomalies, and valuable analytics for long-term infrastructure planning. Scalable across municipalities, residential complexes, and commercial facilities, it offers a powerful tool for smart and efficient water resource management.</p>
         </div>
     </div>
@@ -40,7 +40,7 @@ contactUsModal: "true"
     <div class="about-text">
         <div class="short">
             <div class="block">
-                <p class="text">ThingsBoard seamlessly integrates with IoT-enabled water meters that collect real-time data on consumption, temperature, and battery level, sending it over wireless networks such as LoRaWAN, NB-IoT, and LTE for processing.</p>
+                <p class="text">IoT Hub seamlessly integrates with IoT-enabled water meters that collect real-time data on consumption, temperature, and battery level, sending it over wireless networks such as LoRaWAN, NB-IoT, and LTE for processing.</p>
             </div>
         </div>
         <div class="long">
@@ -56,7 +56,7 @@ contactUsModal: "true"
     <div class="section-header">
         <h2>Dashboard structure of water metering solution</h2>
         <p>
-            The ThingsBoard water metering dashboard is structured into dedicated states, each focusing on a key aspect of system monitoring, control, and analysis. Below is a breakdown of each state with its purpose and content:        
+            The IoT Hub water metering dashboard is structured into dedicated states, each focusing on a key aspect of system monitoring, control, and analysis. Below is a breakdown of each state with its purpose and content:        
         </p>
     </div>
     <div class="dashboard-structure-block">
@@ -137,7 +137,7 @@ contactUsModal: "true"
                         <h3>Customer-specific dashboards</h3>
                     </div>
                     <div class="expansion-content">
-                        <p>ThingsBoard provides individual dashboards tailored for end customers, allowing them to monitor only their assigned water meters. This ensures data privacy while empowering users with full visibility into their personal consumption, device status, and alert history.</p>
+                        <p>IoT Hub provides individual dashboards tailored for end customers, allowing them to monitor only their assigned water meters. This ensures data privacy while empowering users with full visibility into their personal consumption, device status, and alert history.</p>
                     </div>
                 </div>
             </div>
@@ -147,7 +147,7 @@ contactUsModal: "true"
                         <h3>Rule chains: data processing logic</h3>
                     </div>
                     <div class="expansion-content">
-                        <p>The backend logic of the solution is driven by ThingsBoard rule chains, which handle incoming telemetry from devices and automate alarm routing, threshold checks, and notification dispatch. These visual flowcharts allow platform administrators to customize workflows based on device status, tenant or customer settings, and alarm types, ensuring flexibility and scalability of the solution.</p>
+                        <p>The backend logic of the solution is driven by IoT Hub rule chains, which handle incoming telemetry from devices and automate alarm routing, threshold checks, and notification dispatch. These visual flowcharts allow platform administrators to customize workflows based on device status, tenant or customer settings, and alarm types, ensuring flexibility and scalability of the solution.</p>
                     </div>
                 </div>
             </div>
@@ -235,7 +235,7 @@ contactUsModal: "true"
 <section class="summary">
     <div class="summary-text">
         <h2>Summary of water metering solution</h2>
-        <p>With a low-code approach, intuitive dashboards, and comprehensive alerting mechanisms, ThingsBoard serves as a cornerstone for digital transformation in water resource management. Whether you're scaling for a city or optimizing a single facility, this solution adapts to your needs— one drop at a time.</p>
+        <p>With a low-code approach, intuitive dashboards, and comprehensive alerting mechanisms, IoT Hub serves as a cornerstone for digital transformation in water resource management. Whether you're scaling for a city or optimizing a single facility, this solution adapts to your needs— one drop at a time.</p>
     </div>
     <div class="summary-icon">
         <img src="https://img.thingsboard.io/usecases/health-care/summary.svg" alt="Text summary icon" title="Text summary icon">
@@ -359,14 +359,14 @@ contactUsModal: "true"
         function getImage(index) {
             const images = [
                 "<img src='https://img.thingsboard.io/usecases/water-metering/water-metering-1.webp' alt='IoT water monitoring dashboard with real-time meter data, consumption chart, and alert notifications' title='IoT-based smart water metering dashboard for real-time monitoring and consumption analytics'/>",
-                "<img src='https://img.thingsboard.io/usecases/water-metering/water-metering-2.webp' alt='hingsBoard IoT dashboard for water metering with real-time consumption graph, smart devices, and meter analytics' title='Smart water consumption tracking with ThingsBoard IoT platform — daily usage trends, device status, and meter readings'/>",
-                "<img src='https://img.thingsboard.io/usecases/water-metering/water-metering-6.webp' alt='ThingsBoard interface for editing smart water meter device details with active alerts and status overview' title='Edit IoT water meter device information and monitor active consumption alarms in ThingsBoard' data-bg='#A4A4A4'/>",
-                "<img src='https://img.thingsboard.io/usecases/water-metering/water-metering-7.webp' alt='ThingsBoard customer management interface displaying smart water metering clients with contact details' title='Manage smart water metering customers in ThingsBoard with email, address, and contact information'/>",
-                "<img src='https://img.thingsboard.io/usecases/water-metering/water-metering-4.webp' alt='IoT water metering dashboard with critical alerts for exceeded consumption thresholds and real-time device data in ThingsBoard' title='ThingsBoard IoT platform showing critical smart meter alerts and active status of water monitoring devices'/>",
-                "<img src='https://img.thingsboard.io/usecases/water-metering/water-metering-5.webp' alt='hingsBoard alarm configuration panel showing system thresholds and email or SMS notification settings' title='Configure smart alarm thresholds and notification channels in ThingsBoard IoT platform'/>",
-                "<img src='https://img.thingsboard.io/usecases/water-metering/water-metering-3.webp' alt='Detailed IoT water meter monitoring on ThingsBoard dashboard with usage graph, location map, alerts, and installation info' title='ThingsBoard smart metering dashboard showing real-time water usage, device alerts, and geolocation tracking'/>",
-                "<img src='https://img.thingsboard.io/usecases/water-metering/water-metering-8.webp' alt='ThingsBoard dashboard with water meter consumption data, leakage indicators, and active customer alarms' title='Monitor water meter status and customer-specific consumption alerts in ThingsBoard IoT platform'/>",
-                "<img src='https://img.thingsboard.io/usecases/water-metering/water-metering-9.webp' alt='ThingsBoard rule chain flow diagram for water consumption processing and alarm generation' title='IoT rule chain in ThingsBoard for calculating consumption, managing alarms, and posting telemetry'/>"
+                "<img src='https://img.thingsboard.io/usecases/water-metering/water-metering-2.webp' alt='hingsBoard IoT dashboard for water metering with real-time consumption graph, smart devices, and meter analytics' title='Smart water consumption tracking with IoT Hub IoT platform — daily usage trends, device status, and meter readings'/>",
+                "<img src='https://img.thingsboard.io/usecases/water-metering/water-metering-6.webp' alt='IoT Hub interface for editing smart water meter device details with active alerts and status overview' title='Edit IoT water meter device information and monitor active consumption alarms in IoT Hub' data-bg='#A4A4A4'/>",
+                "<img src='https://img.thingsboard.io/usecases/water-metering/water-metering-7.webp' alt='IoT Hub customer management interface displaying smart water metering clients with contact details' title='Manage smart water metering customers in IoT Hub with email, address, and contact information'/>",
+                "<img src='https://img.thingsboard.io/usecases/water-metering/water-metering-4.webp' alt='IoT water metering dashboard with critical alerts for exceeded consumption thresholds and real-time device data in IoT Hub' title='IoT Hub IoT platform showing critical smart meter alerts and active status of water monitoring devices'/>",
+                "<img src='https://img.thingsboard.io/usecases/water-metering/water-metering-5.webp' alt='hingsBoard alarm configuration panel showing system thresholds and email or SMS notification settings' title='Configure smart alarm thresholds and notification channels in IoT Hub IoT platform'/>",
+                "<img src='https://img.thingsboard.io/usecases/water-metering/water-metering-3.webp' alt='Detailed IoT water meter monitoring on IoT Hub dashboard with usage graph, location map, alerts, and installation info' title='IoT Hub smart metering dashboard showing real-time water usage, device alerts, and geolocation tracking'/>",
+                "<img src='https://img.thingsboard.io/usecases/water-metering/water-metering-8.webp' alt='IoT Hub dashboard with water meter consumption data, leakage indicators, and active customer alarms' title='Monitor water meter status and customer-specific consumption alerts in IoT Hub IoT platform'/>",
+                "<img src='https://img.thingsboard.io/usecases/water-metering/water-metering-9.webp' alt='IoT Hub rule chain flow diagram for water consumption processing and alarm generation' title='IoT rule chain in IoT Hub for calculating consumption, managing alarms, and posting telemetry'/>"
             ];
             return images[index];
         }

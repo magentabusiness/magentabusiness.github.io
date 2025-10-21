@@ -44,7 +44,7 @@ export INTEGRATION_ROUTING_KEY=b75**************************34d
 export INTEGRATION_SECRET=vna**************mik
 ```
 
-Start the ThingsBoard integration:
+Start the IoT Hub integration:
 
 ```bash
 sudo service tb-opc-ua-integration start

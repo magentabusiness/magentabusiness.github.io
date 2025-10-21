@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect OrangePI Zero to ThingsBoard?
+title: How to connect OrangePI Zero to IoT Hub?
 category: Single-board computers
 chip: Allwinner H2+
 deviceImageFileName: orangepizero.png

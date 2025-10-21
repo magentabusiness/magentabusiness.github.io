@@ -9,8 +9,8 @@ Here are the steps to create a **basic Kafka MSK cluster**:
 - Specify a **name for your cluster** and select "**Cluster type**" - "**Provisioned**", which will allow you to specify the **number of brokers and storage volume**.
 - Select **Apache Kafka version 3.8.x** to use **Express brokers** or **version 4.0.x** for **Standard brokers**.
 - Choose **kafka.m7.large** or similar instance types.
-- Select the **storage size** for the broker (with the default ThingsBoard partition settings, Kafka can use up to **100 GB**).
-- Make sure your **MSK instance is accessible** from the **ThingsBoard cluster**. The easiest way to achieve this is by **deploying the MSK instance in the same VPC**.
+- Select the **storage size** for the broker (with the default IoT Hub partition settings, Kafka can use up to **100 GB**).
+- Make sure your **MSK instance is accessible** from the **IoT Hub cluster**. The easiest way to achieve this is by **deploying the MSK instance in the same VPC**.
   We also recommend using **private subnets**, as this will make it virtually impossible to accidentally expose the instance to the **Internet**.
 - Use the **default security settings**. Make sure that "**Plaintext" mode** is enabled.
 - Use either the "**Basic monitoring**" or "**Enhanced topic-level monitoring**" settings.

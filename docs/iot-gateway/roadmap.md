@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-gw
-title: ThingsBoard IoT Gateway Roadmap
-description: Architecture of ThingsBoard IoT Gateway
+title: IoT Hub IoT Gateway Roadmap
+description: Architecture of IoT Hub IoT Gateway
 
 ---
 

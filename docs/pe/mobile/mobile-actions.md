@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-mobile-pe
-title: Configure mobile actions in ThingsBoard PE Mobile Application
+title: Configure mobile actions in IoT Hub PE Mobile Application
 
 mobile-actions:
  0:

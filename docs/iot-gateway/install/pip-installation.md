@@ -6,7 +6,7 @@ title: IoT Gateway Pip installation.
 
 ## Package manager installation
 
-To install ThingsBoard Gateway as python module, you should follow steps below:  
+To install IoT Hub Gateway as python module, you should follow steps below:  
 
 **1. Install required libraries to the system with apt:**  
 
@@ -15,7 +15,7 @@ sudo apt install python3-dev python3-pip libglib2.0-dev
 ```
 {: .copy-code}
 
-**2. Install ThingsBoard Gateway module with pip:**  
+**2. Install IoT Hub Gateway module with pip:**  
 
 ```bash
 sudo pip3 install thingsboard-gateway
@@ -74,12 +74,12 @@ Where `YOUR_USER` is a user who will run the gateway.
 
 **5. Configure gateway:**
 
-First, add a gateway device to your ThingsBoard instance by following these steps:
+First, add a gateway device to your IoT Hub instance by following these steps:
 
 {% assign createNewGatewayDevice = '
   ===
     image: https://img.thingsboard.io/gateway/dashboard/gateway-getting-started-1-ce.png,
-    title: Go to the "**Dashboards**" page and open the "**ThingsBoard IoT Gateways**" dashboard;
+    title: Go to the "**Dashboards**" page and open the "**IoT Hub IoT Gateways**" dashboard;
   ===
     image: https://img.thingsboard.io/gateway/dashboard/gateway-getting-started-2-ce.png,
     title: Click the "**plus**" icon in the upper right corner to add a new gateway. Input the gateway name (e.g., "My Gateway"), and select the default device profile. Click "Create".

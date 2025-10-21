@@ -206,7 +206,7 @@ Please note that in order to achieve maximum performance, **TBMQ uses several qu
         </a>
         <a href="https://stackoverflow.com/questions/tagged/thingsboard">
             <span class="phrase-heading">Stack Overflow</span>
-            <p>The IoT Hub team actively monitors posts that are tagged with "thingsboard" on the user forum. If you can't find an existing question that addresses your issue, feel free to ask a new one. Our team will be happy to assist you.</p>
+            <p>The IoT Hub team actively monitors posts that are tagged with "iot hub" on the user forum. If you can't find an existing question that addresses your issue, feel free to ask a new one. Our team will be happy to assist you.</p>
         </a>
     </div>
 </section>

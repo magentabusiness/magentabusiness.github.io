@@ -270,7 +270,7 @@ Here is an example of Outbound Message **payload**
 {% endhighlight %}
 
 
-More details about Alarms in the Thingsboard can be found in [this tutorial](/docs/{{docsPrefix}}user-guide/alarms/)
+More details about Alarms in the Iot Hub can be found in [this tutorial](/docs/{{docsPrefix}}user-guide/alarms/)
 
 You can see the real life example, where this node is used, in the next tutorial:
 
@@ -423,7 +423,7 @@ Here is an example of Outbound Message **payload**
 }
 {% endhighlight %}
 
-More details about Alarms in the Thingsboard can be found in [this tutorial](/docs/{{docsPrefix}}user-guide/alarms/)
+More details about Alarms in the Iot Hub can be found in [this tutorial](/docs/{{docsPrefix}}user-guide/alarms/)
 
 You can see the real life example, where this node is used, in the next tutorial:
 
@@ -675,7 +675,7 @@ Configuration:
 - **Use system reports server** - if set, [Reports Server](/docs/{{peDocsPrefix}}user-guide/reporting/#reports-server) endpoint URL will be taken from system configuration (**thingsboard.yml**).
 - **Reports server endpoint URL** - endpoint URL of [Reports Server](/docs/{{peDocsPrefix}}user-guide/reporting/#reports-server).
 - **Use report config from message** - if set, report generation configuration will be taken from incoming message body.
-- **Base URL** - base URL of ThingsBoard UI that should be accessible by Report Server.
+- **Base URL** - base URL of IoT Hub UI that should be accessible by Report Server.
 - **Dashboard** - dashboard that will be used for report generation.
 - **Dashboard state parameter value** - used to specify target dashboard state for report generation. Can be set automatically by clicking on right most button of the field and invoking **Select dashboard state** dialog.
 - **Timezone** - timezone in which target dashboard will be presented in report.
@@ -853,7 +853,7 @@ Configuration:
 
 ![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/nodes/action-log.png)
 
-Transform incoming Message with configured JavaScript function to String and log final value into the Thingsboard log file.
+Transform incoming Message with configured JavaScript function to String and log final value into the Iot Hub log file.
 
 **INFO** log level is used for logging.
 
@@ -1083,7 +1083,7 @@ Message will be routed via **Failure** chain in the following cases:
 - Request id is not present in the Message metadata
 - Inbound Message payload is empty
 
-For more details how RPC works in the Thingsboard, please read [RPC capabilities](/docs/{{docsPrefix}}user-guide/rpc/) Article.
+For more details how RPC works in the Iot Hub, please read [RPC capabilities](/docs/{{docsPrefix}}user-guide/rpc/) Article.
 
 You can see the real life example, where this node is used, in the next tutorial:
 
@@ -1134,7 +1134,7 @@ Message will be routed via **Failure** chain in the following cases:
 
 Otherwise Message will be routed via **Success** chain.
 
-For more details how RPC works in the Thingsboard, please read [RPC capabilities](/docs/{{docsPrefix}}user-guide/rpc/) article.
+For more details how RPC works in the Iot Hub, please read [RPC capabilities](/docs/{{docsPrefix}}user-guide/rpc/) article.
 
 ## Save attributes node
 

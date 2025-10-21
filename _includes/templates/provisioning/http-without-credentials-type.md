@@ -103,7 +103,7 @@ if __name__ == '__main__':
     received_token = decoded_response.get("credentialsValue")
     if received_token is not None:
         response = post('%s:%i/api/v1/%s/telemetry' % (THINGSBOARD_HOST, THINGSBOARD_PORT, received_token,), dumps(to_publish))
-        print("[THINGSBOARD CLIENT] Response code from IoT Hub.")
+        print("[IOT HUB CLIENT] Response code from IoT Hub.")
         print(response.status_code)
     else:
         print("Failed to get access token from response.")

@@ -27,7 +27,7 @@ white-labeling:
         title: 'Go to the "White Labeling" page, then navigate to the "Login" tab. Enter the domain name and the base URL in the corresponding fields. Don&#39;t forget to check the box "Prohibit to use hostname from the client request headers". Then save all changes;'
     1:
         image: /images/user-guide/domain/domain-login-1.png
-        title: 'Now you can use your domain name to access ThingsBoard Cloud Web UI and services. Try to login by entering the chosen domain name in the browser address line.'
+        title: 'Now you can use your domain name to access IoT Hub Cloud Web UI and services. Try to login by entering the chosen domain name in the browser address line.'
 
 domainDetails:
     0:
@@ -35,7 +35,7 @@ domainDetails:
         title: 'To view a registered domain details click "Domain details" button on the "Domain" tab;'
     1:
         image: /images/user-guide/domain/domain-details-step-2.png
-        title: 'ThingsBoard Cloud will automatically renew the certificate earlier than 30 days before it expires, no action is required from your part unless you change or delete the domain CNAME record.'
+        title: 'IoT Hub Cloud will automatically renew the certificate earlier than 30 days before it expires, no action is required from your part unless you change or delete the domain CNAME record.'
 
 deleteDomain:
     0:

@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect Coral Dev Board to ThingsBoard?
+title: How to connect Coral Dev Board to IoT Hub?
 category: Single-board computers
 chip: Google Edge TPU ML
 connectivity: WIFI, Bluetooth

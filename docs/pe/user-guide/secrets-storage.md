@@ -14,7 +14,7 @@ creating-secret:
         title: 'Select secret type: Text or File. Next, enter the secret&#39;s name and its text value (for the "Text" type) or upload a certificate file (for the "File" type). Then, click "Add".'
     2:
         image: https://img.thingsboard.io/user-guide/security/secrets-storage/creating-secret-3-pe.png
-        title: 'ThingsBoard automatically encrypts Secret values using the AES-256 encryption algorithm.'
+        title: 'IoT Hub automatically encrypts Secret values using the AES-256 encryption algorithm.'
 
 update-secret-value:
     0:

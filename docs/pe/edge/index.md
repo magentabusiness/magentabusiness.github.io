@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-edge
-title: ThingsBoard PE Edge
-description: ThingsBoard PE Edge to distribute data processing and analysis using edge computing
+title: IoT Hub PE Edge
+description: IoT Hub PE Edge to distribute data processing and analysis using edge computing
 
 
 ---

@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-gw
 title: IoT Gateway Configuration
-description: Installation structure and configuration of ThingsBoard IoT Gateway 
+description: Installation structure and configuration of IoT Hub IoT Gateway 
 
 ---
 
@@ -41,7 +41,7 @@ Please see default directory structure below for daemon installation.
     connector.log                                 - Connector logs.
     service.log                                   - Main gateway service logs.
     storage.log                                   - Storage logs.
-    tb_connection.log                             - Logs for connection to the ThingsBoard instance.
+    tb_connection.log                             - Logs for connection to the IoT Hub instance.
 ```
 
 ## Environmental variables
@@ -60,7 +60,7 @@ environment variables within a Docker Compose file. Here’s how you can achieve
 ```yaml
 version: '3.4'
 services:
-  # ThingsBoard IoT Gateway Service Configuration
+  # IoT Hub IoT Gateway Service Configuration
   tb-gateway:
     image: thingsboard/tb-gateway
     container_name: tb-gateway
@@ -77,28 +77,28 @@ In the example above, we set the "**host.docker.internal**" as a host, **1883** 
 as an access token for the gateway using the "**TB_GW_HOST**", "**TB_GW_PORT**" and "**TB_GW_ACCESS_TOKEN**" 
 environment variables, respectively.
 
-The following environmental variables can be used to configure the ThingsBoard IoT Gateway:
+The following environmental variables can be used to configure the IoT Hub IoT Gateway:
 
 | **ENV variable**     | **Default value**             | **Description**                                                                   |
 |----------------------|-------------------------------|-----------------------------------------------------------------------------------|
-| TB_GW_HOST           | **host.docker.internal**      | Hostname or IP address of ThingsBoard server.                                     |
-| TB_GW_PORT           | **1883**                      | Port of MQTT service on ThingsBoard server.                                       |
-| TB_GW_ACCESS_TOKEN   | **YOUR_ACCESS_TOKEN**         | Access token for the gateway from ThingsBoard server.                             |
+| TB_GW_HOST           | **host.docker.internal**      | Hostname or IP address of IoT Hub server.                                     |
+| TB_GW_PORT           | **1883**                      | Port of MQTT service on IoT Hub server.                                       |
+| TB_GW_ACCESS_TOKEN   | **YOUR_ACCESS_TOKEN**         | Access token for the gateway from IoT Hub server.                             |
 | TB_GW_CA_CERT        |                               | Path to CA certificate file.                                                      |
 | TB_GW_PRIVATE_KEY    |                               | Path to private key file.                                                         |
 | TB_GW_CERT           |                               | Path to certificate file.                                                         |
-| TB_GW_CLIENT_ID      |                               | MQTT client id for the gateway form ThingsBoard server.                           |
-| TB_GW_USERNAME       |                               | MQTT username for the gateway form ThingsBoard server.                            |
-| TB_GW_PASSWORD       |                               | MQTT password for the gateway form ThingsBoard server.                            |
-| TB_GW_RATE_LIMITS    | **15:1,300:60,**              | Messages rate limit to ThingsBoard server in `MESSSAGE_COUNT:TIME,` format.       |
-| TB_GW_DP_RATE_LIMITS | **15:1,300:60,**              | Data points rate limit to ThingsBoard server in `DATA_POINTS_COUNT:TIME,` format. |
+| TB_GW_CLIENT_ID      |                               | MQTT client id for the gateway form IoT Hub server.                           |
+| TB_GW_USERNAME       |                               | MQTT username for the gateway form IoT Hub server.                            |
+| TB_GW_PASSWORD       |                               | MQTT password for the gateway form IoT Hub server.                            |
+| TB_GW_RATE_LIMITS    | **15:1,300:60,**              | Messages rate limit to IoT Hub server in `MESSSAGE_COUNT:TIME,` format.       |
+| TB_GW_DP_RATE_LIMITS | **15:1,300:60,**              | Data points rate limit to IoT Hub server in `DATA_POINTS_COUNT:TIME,` format. |
 | TB_GW_LOGS_PATH      | **/thingsboard_gateway/logs** | Path to the logs folder.                                                          |
 
 ## General configuration file
 
-The main configuration file that is used for connection to ThingsBoard platform instance and enable/disable connectors. 
+The main configuration file that is used for connection to IoT Hub platform instance and enable/disable connectors. 
 
-The example configuration file provided below sets a connection to the ThingsBoard instance located at 
+The example configuration file provided below sets a connection to the IoT Hub instance located at 
 thingsboard.cloud and utilizes memory file storage, which is set up to hold a maximum of 100,000 records. There are 4 
 different connectors active. If you prefer to use only one, simply remove the others from the configuration.
 
@@ -107,7 +107,7 @@ different connectors active. If you prefer to use only one, simply remove the ot
 {% capture genConf %}
 
 {
-  "thingsboard": {
+  "iot hub": {
     "host": "thingsboard.cloud",
     "port": 1883,
     "remoteShell": false,
@@ -182,25 +182,25 @@ different connectors active. If you prefer to use only one, simply remove the ot
 
 ### Sections in config file
 
-+ **thingsboard** -- Configuration for connecting to ThingsBoard platform.
++ **iot hub** -- Configuration for connecting to IoT Hub platform.
   - *security* -- Configuration for type of encryption and authorization.
 + **storage** -- Configuration for local storage of incoming data from devices.
 + **connectors** -- Array of Connectors and their configuration to use.
 
-### Connection to ThingsBoard
+### Connection to IoT Hub
 
 |**Parameter**             | **Default value**                            | **Description**                                                                         |
 |---                       |---                                           |-----------------------------------------------------------------------------------------|
-| ***thingsboard***        |                                              | Configuration for connection to server.                                                 |
-| host                     | **thingsboard.cloud**                        | Hostname or IP address of ThingsBoard server.                                           |
-| port                     | **1883**                                     | Port of MQTT service on ThingsBoard server.                                             |
+| ***iot hub***        |                                              | Configuration for connection to server.                                                 |
+| host                     | **thingsboard.cloud**                        | Hostname or IP address of IoT Hub server.                                           |
+| port                     | **1883**                                     | Port of MQTT service on IoT Hub server.                                             |
 | qos                      | **1**                                        | QoS levels 0 (at most once) and 1 (at least once).                                      |
 | minPackSendDelayMS       | **200**                                      | Delay between sending packets (Decreasing this setting results in increased CPU usage). |
 | minPackSizeToSend        | **500**                                      | Minimum size of packs to send.                                                          |
 
 #### Subsection "statistics"
 
-This subsection is used to configure collecting statistics data and sending them to ThingsBoard Gateway device attributes.
+This subsection is used to configure collecting statistics data and sending them to IoT Hub Gateway device attributes.
 
 |**Parameter**|**Default value**| **Description**                                                                |
 |:-|:-|--------------------------------------------------------------------------------
@@ -386,7 +386,7 @@ There are 4 options of provisioning configuration (you can read more about provi
 
 ### Storage configuration
 
-Configs in storage subsection provides configuration for saving incoming data before it will be send to ThingsBoard platform.
+Configs in storage subsection provides configuration for saving incoming data before it will be send to IoT Hub platform.
   
 There are 3 variants for this section: memory or file.
 1. **Memory** storage - Received data saving to the RAM memory.

@@ -9,7 +9,7 @@ You can refer to the TBMQ documentation to set up the broker and understand its 
 <div class="doc-features row mt-4">
     <div class="col-12 col-sm-6 col-lg col-xxl-6 col-4xl mb-4">
         <a class="feature-card" href="/docs/mqtt-broker/getting-started-guides/what-is-thingsboard-mqtt-broker/">
-            <img class="feature-logo" src="/images/feature-logo/thingsboard-logo.svg" alt="Thingsboard logo">
+            <img class="feature-logo" src="/images/feature-logo/thingsboard-logo.svg" alt="Iot Hub logo">
             <div class="feature-title">What is TBMQ?</div>
             <div class="feature-text">
                 <ul>

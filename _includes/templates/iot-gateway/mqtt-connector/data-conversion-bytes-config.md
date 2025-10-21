@@ -9,12 +9,12 @@ message from the broker, following the rules described in this subsection:
 | timeout                 | **60000**         | Timeout for triggering "Device Disconnected" event.                                                              |
 | attributes:             |                   | This subsection contains parameters of the incoming message, to be interpreted as attributes for the device.     |
 | ... type                | **raw**           | Type of incoming data for a current attribute.                                                                   |
-| ... key                 | **temp**          | Attribute name, to be sent to ThingsBoard instance.                                                              |
-| ... value               | **[:]**           | Final view of data that will be sent to ThingsBoard, [:] - will replace to device data using python slice rules. |
+| ... key                 | **temp**          | Attribute name, to be sent to IoT Hub instance.                                                              |
+| ... value               | **[:]**           | Final view of data that will be sent to IoT Hub, [:] - will replace to device data using python slice rules. |
 | timeseries:             |                   | This subsection contains parameters of the incoming message, to be interpreted as telemetry for the device.      |
 | ... type                | **raw**           | Type of incoming data for a current telemetry.                                                                   |
-| ... key                 | **rawData**       | Telemetry name, to be sent to ThingsBoard instance.                                                              |
-| ... value               | **[4:]**          | Final view of data that will be sent to ThingsBoard, [:] - will replace to device data using python slice rules. |
+| ... key                 | **rawData**       | Telemetry name, to be sent to IoT Hub instance.                                                              |
+| ... value               | **[4:]**          | Final view of data that will be sent to IoT Hub, [:] - will replace to device data using python slice rules. |
 | ---                     
 
 {% capture difference %}

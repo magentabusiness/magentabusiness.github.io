@@ -43,7 +43,7 @@ customize-login-page:
 verify-result-customize-login-page:
     0:
         image: https://img.thingsboard.io/user-guide/white-labeling/login-tab-3.png
-        title: 'Now, use your custom domain name to access the ThingsBoard web interface login page and verify the result of your configuration.'
+        title: 'Now, use your custom domain name to access the IoT Hub web interface login page and verify the result of your configuration.'
 
 ---
 

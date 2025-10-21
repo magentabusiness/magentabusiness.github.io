@@ -196,7 +196,7 @@ Response:
 ```
 {: .copy-code}
 
-It is expected result. **Controller A** sends RPC call to the ThingsBoard with method **getCurrentTemperature**. 
+It is expected result. **Controller A** sends RPC call to the IoT Hub with method **getCurrentTemperature**. 
 Message was routed via configured rule chain and latest telemetry of the related thermostat were fetched and returned in the response.
 
 If we try to submit request with unknown method:
@@ -206,7 +206,7 @@ curl -v -X POST http://demo.thingsboard.io/api/v1/ZcHBHbptBqxgV1A6Qrtx/rpc --hea
 ```
 {: .copy-code}
 
-we will see message in the ThingsBoard log file:
+we will see message in the IoT Hub log file:
 
 <br>
 
@@ -221,6 +221,6 @@ Incoming metadata:
 
 <br>
 <br>
-For more details how RPC works in the ThingsBoard, please read [RPC capabilities](/docs/{{docsPrefix}}user-guide/rpc/) Article.
+For more details how RPC works in the IoT Hub, please read [RPC capabilities](/docs/{{docsPrefix}}user-guide/rpc/) Article.
 <br>
 <br>

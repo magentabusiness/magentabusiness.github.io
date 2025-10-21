@@ -81,7 +81,7 @@ This section allows you to define the scope and parameters for the prediction mo
 
 **Item:** Select the specific item (e.g., a particular device or asset) within the entity to focus your analysis.
 
-**Key:** The identifier under which the prediction telemetry data is saved in ThingsBoard with prefix _EPD_. For example if we set key as *energy_forecast* the telemetry will be saved in ThingsBoard under *_EPD_energy_forecast* key.
+**Key:** The identifier under which the prediction telemetry data is saved in IoT Hub with prefix _EPD_. For example if we set key as *energy_forecast* the telemetry will be saved in IoT Hub under *_EPD_energy_forecast* key.
 
 **Timerange for Model Training:** Define the historical data period that the model will use for training. For example, you can set a timerange of the past 3 months or 1 year, depending on the availability and relevance of data. 
 
@@ -99,7 +99,7 @@ This section helps you define how the prediction is calculated:
 * *Multivariable Prophet* - evolves from the Prophet forecast model, enabling the simultaneous prediction of interconnected time series. This becomes particularly advantageous when dealing with numerous interconnected variables that warrant predictive insights.
 * *Arima* - combines autoregressive and moving average aspects to anticipate upcoming values founded on historical observations. This approach adeptly accommodates trends and seasonal variations ingrained within the dataset.
 * *Linear Regression* - a fundamental statistical method, comes into play to anticipate a dependent variable’s trajectory grounded in one or more independent variables. This technique establishes a linear connection between variables, forming the foundation for making forecasts.
-* *Custom Model* - you can write our own multivariable time series prediction model using any Python libraries. In this case you provide a model source and Trendz is responsible for inserting input dataset from ThingsBoard and process forecasted output.
+* *Custom Model* - you can write our own multivariable time series prediction model using any Python libraries. In this case you provide a model source and Trendz is responsible for inserting input dataset from IoT Hub and process forecasted output.
 
 **Segment Strategy:**  Trendz prediction models perform specific data preprocessing to align input telemetry data into the required format. This process includes filling gaps, aggregating data by a specified time unit, and applying aggregation functions.
 
@@ -267,7 +267,7 @@ After configuring all the settings:
 
 {% include images-gallery.html imageCollection="trendz-forecasting-energy-example" %}
 
-### Saving telemetry to ThingsBoard
+### Saving telemetry to IoT Hub
 
 * If the accuracy is satisfactory, and you want to use this prediction as new telemetry, you need to record it as telemetry  in ThingsBoard. To do this:
   * Activate the **JOBS** button in the upper-right corner of the screen.

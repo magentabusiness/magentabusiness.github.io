@@ -54,9 +54,9 @@ Once message is pushed by the rule engine, IoT Hub invokes assigned [**Downlink 
  
 ## Uplink data converter
 
-The primary function of the Uplink data converter is to parse the payload of incoming messages from devices (e.g., MQTT, HTTP, CoAP, or other protocols) and convert it into a format that ThingsBoard can process.
+The primary function of the Uplink data converter is to parse the payload of incoming messages from devices (e.g., MQTT, HTTP, CoAP, or other protocols) and convert it into a format that IoT Hub can process.
 
-Starting from ThingsBoard version 4.0, we have simplified the process of writing converters for certain integrations that receive payload messages with the same structure.
+Starting from IoT Hub version 4.0, we have simplified the process of writing converters for certain integrations that receive payload messages with the same structure.
 You can now easily choose where the message fields from the integration should go (attributes or telemetry) without manually defining this in the decoder function.
 
 This feature applies to uplink converters for the following integrations:
@@ -68,7 +68,7 @@ This feature applies to uplink converters for the following integrations:
 - **ThingPark**
 - **ThingPark Enterprise**
 
-> Converters created before the release of ThingsBoard 4.0 will still be available and will continue to function properly.
+> Converters created before the release of IoT Hub 4.0 will still be available and will continue to function properly.
 
 ### Generic Uplink data converter
 
@@ -178,7 +178,7 @@ This allows you to compare and verify how the decoded data is ultimately interpr
 
 {% capture difference %}
 **NOTE**: Starting version 2.4.2, IoT Hub also support optional **customerName** and **groupName**.
-Those parameters will cause ThingsBoard to automatically create customer and/or entity group and assign those entities to the customer and/or group.
+Those parameters will cause IoT Hub to automatically create customer and/or entity group and assign those entities to the customer and/or group.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -281,7 +281,7 @@ In this case, the last downlink message originated by rule engine will be stored
 
 ### Example
 
-Let&#39;s assume an example where temperature and humidity upload frequency attributes are updated via ThingsBoard REST API and 
+Let&#39;s assume an example where temperature and humidity upload frequency attributes are updated via IoT Hub REST API and 
 you would like to push this update to an external MQTT broker (TTN, Mosquitto, AWS IoT, etc.). 
 You may also want to include the "firmwareVersion" attribute value that was configured long time ago and is not present in this particular request.
 The topic to push the update should contain the device name.
@@ -302,7 +302,7 @@ The full rule chain configuration is available [**here**](/docs/user-guide/resou
 
 ## Converters library
 
-ThingsBoard Converters library is a built-in collection of ready-to-use uplink decoder functions for over 100 devices, supporting six popular LoRaWAN network servers.   
+IoT Hub Converters library is a built-in collection of ready-to-use uplink decoder functions for over 100 devices, supporting six popular LoRaWAN network servers.   
 It significantly simplifies integration setup with various sensors and vendors.
 
 Currently, the converters library is supported by the following integrations: [ChirpStack](/docs/{{peDocsPrefix}}user-guide/integrations/chirpstack/){:target="_blank"}, [Loriot](/docs/{{peDocsPrefix}}user-guide/integrations/loriot/){:target="_blank"}, [The Things Stack Community](/docs/{{peDocsPrefix}}user-guide/integrations/ttn/){:target="_blank"}, [The Things Stack Industries](/docs/{{peDocsPrefix}}user-guide/integrations/tti/){:target="_blank"}, **ThingPark**, and **ThingPark Enterprise**.   
@@ -336,14 +336,14 @@ To access the Converters library:
 
 {% include images-gallery.liquid imageCollection=convertersLibrary %}
 
-The Converters library is open-source and actively maintained by the ThingsBoard team. It is hosted on GitHub at the [following link](https://github.com/thingsboard/data-converters){:target="_blank"}.
+The Converters library is open-source and actively maintained by the IoT Hub team. It is hosted on GitHub at the [following link](https://github.com/thingsboard/data-converters){:target="_blank"}.
 
 {% if docsPrefix == "pe/" %}
 <br>**Using a custom converters repository**
 
-You can [configure](/docs/user-guide/install/pe/how-to-change-config/){:target="_blank"} ThingsBoard to use your own repository with personalized decoders for your specific devices instead of using the default converters library.
+You can [configure](/docs/user-guide/install/pe/how-to-change-config/){:target="_blank"} IoT Hub to use your own repository with personalized decoders for your specific devices instead of using the default converters library.
 
-Set new environment variables in ThingsBoard configuration file to define your custom repository and branch:
+Set new environment variables in IoT Hub configuration file to define your custom repository and branch:
 
 ```text
 export TB_INTEGRATIONS_CONVERTERS_LIBRARY_REPO_URL=https://github.com/my-github-account/my-repo-name.git
@@ -353,11 +353,11 @@ export TB_INTEGRATIONS_CONVERTERS_LIBRARY_REPO_BRANCH=my-branch
 where
 
 ㅤ**&#42; TB_INTEGRATIONS_CONVERTERS_LIBRARY_REPO_URL** – URL of your GitHub (or other Git-based) repository<br>
-ㅤ**&#42; TB_INTEGRATIONS_CONVERTERS_LIBRARY_REPO_BRANCH** – The branch name you want ThingsBoard to pull the converters from (e.g., main, develop, or any custom branch name)
+ㅤ**&#42; TB_INTEGRATIONS_CONVERTERS_LIBRARY_REPO_BRANCH** – The branch name you want IoT Hub to pull the converters from (e.g., main, develop, or any custom branch name)
 
 ![image](https://img.thingsboard.io/user-guide/integrations/overview/terminal-custom-repo-converters-library.png)
 
-Once configured, ThingsBoard will pull device decoder functions directly from your custom Git repository.
+Once configured, IoT Hub will pull device decoder functions directly from your custom Git repository.
 {% endif %}
 
 ## Debug mode
@@ -369,37 +369,37 @@ These settings can be combined or completely disabled.
 
 ## Deployment options
 
-ThingsBoard Integration has two deployment options: embedded and remote. See details and architecture diagrams below.
+IoT Hub Integration has two deployment options: embedded and remote. See details and architecture diagrams below.
 
 ### Embedded integrations
 
-Embedded integration is running in the main ThingsBoard server process. Basically it is part of a monolith deployment scenario.
+Embedded integration is running in the main IoT Hub server process. Basically it is part of a monolith deployment scenario.
 
 Pros:
-* simplifies deployment of new integration (just few clicks on ThingsBoard UI);
+* simplifies deployment of new integration (just few clicks on IoT Hub UI);
 * minimize latency for message delivery;
 
 Cons:
-* consume resources allocated to main ThingsBoard process: network connections, OS threads and CPU cycles;
+* consume resources allocated to main IoT Hub process: network connections, OS threads and CPU cycles;
 * low level of isolation;
-* can&#39;t access local MQTT brokers or OPC-UA servers if ThingsBoard is deployed in the cloud.
+* can&#39;t access local MQTT brokers or OPC-UA servers if IoT Hub is deployed in the cloud.
 
 <object width="100%" data="https://img.thingsboard.io/user-guide/integrations/embeded-integrations-overview.svg"></object>
 
 ### Remote integrations
 
-Remote integration become available since ThingsBoard PE v2.4.1 and enables new deployment scenario.
+Remote integration become available since IoT Hub PE v2.4.1 and enables new deployment scenario.
 One can install remote integration in the local network and stream data to the cloud.
 
 Let&#39;s assume you have local MQTT broker or OPC-UA server deployed on-premises.
-Those brokers and/or servers don&#39;t have dedicated external IP address, so ThingsBoard instance in the cloud can&#39;t connect to them directly.
+Those brokers and/or servers don&#39;t have dedicated external IP address, so IoT Hub instance in the cloud can&#39;t connect to them directly.
 However, you can install remote integration close to this server, in the same local network.
 This integration will connect to the broker/server, pull the data and store it in the local file system.
-Remote integration will stream the data to the ThingsBoard instance deployed in the cloud once the internet connection is available.
+Remote integration will stream the data to the IoT Hub instance deployed in the cloud once the internet connection is available.
 
 Pros:
 * enables integration with servers deployed in the local network;
-* isolates the integration process from main ThingsBoard process;
+* isolates the integration process from main IoT Hub process;
 
 Cons:
 * requires installation of a separate package;

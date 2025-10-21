@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-gw
 title: MQTT Connector Configuration
-description: MQTT protocol support for ThingsBoard IoT Gateway
+description: MQTT protocol support for IoT Hub IoT Gateway
 redirect_from: 
   - "/docs/iot-gateway/mqtt/"  
   - "/docs/iot-gateway/resources/mqtt-gui-extension-configuration.json"
@@ -11,7 +11,7 @@ redirect_from:
 * TOC
 {:toc}
 
-This guide will help you to get familiar with MQTT Connector configuration for ThingsBoard IoT Gateway.
+This guide will help you to get familiar with MQTT Connector configuration for IoT Hub IoT Gateway.
 Use [general configuration](/docs/iot-gateway/configuration/) to enable this Connector. 
 The purpose of this Connector is to connect to an external MQTT broker and subscribe to data feed from devices. 
 The connector is also able to push data to MQTT brokers based on the updates/commands from ThingsBoard. 
@@ -172,7 +172,7 @@ mosquitto_pub -h 127.0.0.1 -p 1883 -t "sensor/data" -m '{"serialNumber": "SN-001
 ![image](https://img.thingsboard.io/gateway/mqtt-message-with-timestampField.png)
 {: refdef}
 
-The device will be created and displayed in ThingsBoard based on the passed parameters.
+The device will be created and displayed in IoT Hub based on the passed parameters.
 {:refdef: style="text-align: center;"}
 ![image](https://img.thingsboard.io/gateway/mqtt-created-device-1.png)
 {: refdef}
@@ -183,7 +183,7 @@ The device will be created and displayed in ThingsBoard based on the passed para
 
 ## Requests mapping
 
-This section of the configuration outlines an array that includes all the supported requests for both the gateway and ThingsBoard:
+This section of the configuration outlines an array that includes all the supported requests for both the gateway and IoT Hub:
 
 - connect requests;
 - disconnect requests;
@@ -203,8 +203,8 @@ Below we go through all the supported requests for both Gateway and ThingsBoard.
 
 ### Subsection "Connect request"
 
-ThingsBoard allows sending RPC commands and notifications about device attribute updates to the device. 
-But in order to send them, the platform needs to know if the target device is connected and what gateway or session is used to connect the device at the moment. If your device is constantly sending telemetry data - ThingsBoard already knows how to push notifications. 
+IoT Hub allows sending RPC commands and notifications about device attribute updates to the device. 
+But in order to send them, the platform needs to know if the target device is connected and what gateway or session is used to connect the device at the moment. If your device is constantly sending telemetry data - IoT Hub already knows how to push notifications. 
 If your device just connects to MQTT broker and waits for commands/updates, you need to send a message to the Gateway and inform that device is connected to the broker.
 
 Also, it is possible to configure where to get the device name: from the topic or from the message body.
@@ -230,7 +230,7 @@ mosquitto_pub -h 127.0.0.1 -p 1883 -t "sensor/connect" -m '{"serialNumber": "SN-
 ![image](https://img.thingsboard.io/gateway/mqtt-message-connect.png)
 {: refdef}
 
-Your ThingsBoard instance will get information from the broker about last connecting time of the device. You can see this information under the "Server attributes" scope in the "Attributes" tab.
+Your IoT Hub instance will get information from the broker about last connecting time of the device. You can see this information under the "Server attributes" scope in the "Attributes" tab.
 
 {:refdef: style="text-align: center;"}
 ![image](https://img.thingsboard.io/gateway/mqtt-connect-device.png)
@@ -263,7 +263,7 @@ mosquitto_pub -h 127.0.0.1 -p 1883 -t "sensor/disconnect" -m '{"serialNumber": "
 ![image](https://img.thingsboard.io/gateway/mqtt-message-disconnect.png)
 {: refdef}
 
-Your ThingsBoard instance will get information from the broker about last disconnecting time of the device. You can see this information under the "Server attributes" scope in the "Attributes" tab.
+Your IoT Hub instance will get information from the broker about last disconnecting time of the device. You can see this information under the "Server attributes" scope in the "Attributes" tab.
 
 {:refdef: style="text-align: center;"}
 ![image](https://img.thingsboard.io/gateway/mqtt-disconnect-device.png)
@@ -273,7 +273,7 @@ Your ThingsBoard instance will get information from the broker about last discon
 
 This configuration section is optional.
 
-In order to request client-side or shared device attributes to ThingsBoard server node, Gateway allows sending
+In order to request client-side or shared device attributes to IoT Hub server node, Gateway allows sending
 attribute requests.
 
 Select basic or advanced MQTT configuration:
@@ -287,7 +287,7 @@ Advanced<small></small>%,%advanced%,%templates/iot-gateway/mqtt-connector/attrib
 ### Subsection "Attribute updates"
 
 This configuration section is optional.  
-ThingsBoard allows to provision device attributes and fetch some of them from the device application.
+IoT Hub allows to provision device attributes and fetch some of them from the device application.
 You can treat this as a remote configuration for devices. Your devices are able to request shared attributes from ThingsBoard.
 See [user guide](/docs/user-guide/attributes/) for more details.
 
@@ -303,7 +303,7 @@ Advanced<small></small>%,%advanced%,%templates/iot-gateway/mqtt-connector/attrib
 
 **Let's look at an example.**
 
-Run the command below to start the *mosquitto_sub* client, subscribing to the topic "sensor/SN-001/firmwareVersion" of the local broker. Start waiting for new messages from ThingsBoard server to broker.
+Run the command below to start the *mosquitto_sub* client, subscribing to the topic "sensor/SN-001/firmwareVersion" of the local broker. Start waiting for new messages from IoT Hub server to broker.
 
 ```bash
 mosquitto_sub -h 127.0.0.1 -p 1883 -t sensor/SN-001/firmwareVersion
@@ -314,7 +314,7 @@ mosquitto_sub -h 127.0.0.1 -p 1883 -t sensor/SN-001/firmwareVersion
 ![image](https://img.thingsboard.io/gateway/mqtt-mosquitto-sub-wait-1.png)
 {: refdef}
 
-Update device attribute value on the ThingsBoard server following these steps:
+Update device attribute value on the IoT Hub server following these steps:
 - Open the "Devices" page;
 - Click on your device and navigate to the "Attributes" tab;
 - Choose "Shared attributes" scope and click on the "pencil" icon next to *"firmwareVersion"* attribute.
@@ -335,7 +335,7 @@ The firmware version has been updated to "1.2".
 ![image](https://img.thingsboard.io/gateway/mqtt-update-attribute-3.png)
 {: refdef}
 
-Broker received new message from the ThingsBoard server about updating attribute "FirmwareVersion" to "1.2".
+Broker received new message from the IoT Hub server about updating attribute "FirmwareVersion" to "1.2".
 
 {:refdef: style="text-align: center;"}
 ![image](https://img.thingsboard.io/gateway/mqtt-mosquitto-sub-get-1.png)
@@ -343,8 +343,8 @@ Broker received new message from the ThingsBoard server about updating attribute
 
 ### Server side RPC commands
 
-ThingsBoard allows sending [RPC commands](/docs/user-guide/rpc/) to the device that is connected to ThingsBoard directly or via Gateway.
-Configuration, provided in this section is used for sending RPC requests from ThingsBoard to device.
+IoT Hub allows sending [RPC commands](/docs/user-guide/rpc/) to the device that is connected to IoT Hub directly or via Gateway.
+Configuration, provided in this section is used for sending RPC requests from IoT Hub to device.
 
 Select basic or advanced MQTT configuration:
 
@@ -593,7 +593,7 @@ Example of MQTT Connector configuration file:
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main IoT Hub features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

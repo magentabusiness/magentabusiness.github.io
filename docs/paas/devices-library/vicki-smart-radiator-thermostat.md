@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect Vicki Smart Radiator Thermostat to ThingsBoard?
+title: How to connect Vicki Smart Radiator Thermostat to IoT Hub?
 category: Other devices
 connectivity: LoRaWAN®
 vendor: MClimate

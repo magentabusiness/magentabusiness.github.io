@@ -1,7 +1,7 @@
 {% if docsPrefix == 'pe/edge/' %}
-{% assign appPrefix = "ThingsBoard PE" %}
+{% assign appPrefix = "IoT Hub PE" %}
 {% else %}
-{% assign appPrefix = "ThingsBoard" %}
+{% assign appPrefix = "IoT Hub" %}
 {% endif %}
 
 Open the Notepad or other editor as administrator user (right click on the app icon and select "Run as administrator").  
@@ -76,9 +76,9 @@ cloud:
 {% endif %}
 
 {% capture local-deployment %}
-If ThingsBoard Edge is set to run on the same machine where the **{{appPrefix}}** server is operating, you need to update additional configuration parameters to prevent port collision between the ThingsBoard server and ThingsBoard Edge.
+If IoT Hub Edge is set to run on the same machine where the **{{appPrefix}}** server is operating, you need to update additional configuration parameters to prevent port collision between the IoT Hub server and IoT Hub Edge.
 
-Please locate and change next parameters in ThingsBoard Edge configuration file (**C:\Program Files (x86)\tb-edge\conf\tb-edge.yml**):
+Please locate and change next parameters in IoT Hub Edge configuration file (**C:\Program Files (x86)\tb-edge\conf\tb-edge.yml**):
 <br>
 <br>**...**
 <br>**port: "${HTTP_BIND_PORT:18080}"**

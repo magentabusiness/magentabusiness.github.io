@@ -14,7 +14,7 @@ Here are the steps to update the default Edge "Root Rule Chain" with the provide
 
 {% include images-gallery.html imageCollection="updateRootRuleChain" showListImageTitles="true" %}
 
-Now let's open ThingsBoard **Edge** UI to see updated Root Rule Chain:
+Now let's open IoT Hub **Edge** UI to see updated Root Rule Chain:
 
 {% include images-gallery.html imageCollection="updateRootRuleChainEdge" showListImageTitles="true" %}
 

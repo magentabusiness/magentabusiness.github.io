@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-> Before proceeding, we recommend reviewing the general [Getting Started guide](/docs/{{docsPrefix}}getting-started-guides/helloworld/){:target="_blank"} to become familiar with ThingsBoard basics. Additionally, it is advisable to explore the [Device profiles](/docs/{{docsPrefix}}user-guide/device-profiles/){:target="_blank"} documentation.
+> Before proceeding, we recommend reviewing the general [Getting Started guide](/docs/{{docsPrefix}}getting-started-guides/helloworld/){:target="_blank"} to become familiar with IoT Hub basics. Additionally, it is advisable to explore the [Device profiles](/docs/{{docsPrefix}}user-guide/device-profiles/){:target="_blank"} documentation.
 
 ## Sparkplug basics
 
@@ -47,7 +47,7 @@ structures that can be represented in folder structures with metrics which are o
 spBv1.0/Sparkplug Group 1/NBIRTH /Sparkplug Node 1/Sparkplug Device 1
 ````
 
-#### Sparkplug B Message Type in The Thingsboard
+#### Sparkplug B Message Type in The Iot Hub
 
 | Type      | Description                                            |
 |:----------|:-------------------------------------------------------|
@@ -293,7 +293,7 @@ The attribute values for "*Outputs/LEDs/Green*" and "*Device Control/Scan Rate*"
 {"MyFloat":123.345}      // by default if from Device "DCMD"  will be added
 ```
 
-#### Update Metrics  using the ThingsBoard RPC command from server to MQTT EON/Device
+#### Update Metrics  using the IoT Hub RPC command from server to MQTT EON/Device
 
 IoT Hub supports on-demand update to metrics of the Sparkplug EoN Node or Device using RPC(Remote Procedure Call) feature. We also use term "command" instead of RPC for simplicity.
 You can send the command using REST API, dashboard widget, rule engine, or custom script.

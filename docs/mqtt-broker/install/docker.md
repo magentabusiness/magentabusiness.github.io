@@ -44,7 +44,7 @@ Key configuration points for TBMQ in docker-compose file:
 - `restart: always` - automatically start TBMQ in case of system reboot and restart in case of failure;
 - `SECURITY_MQTT_BASIC_ENABLED: "true"` - enables MQTT basic security. **Note**: by default security is disabled.
 
-**Note**: In case the TBMQ is being installed on the same host where ThingsBoard is already running, the following issue can be seen:
+**Note**: In case the TBMQ is being installed on the same host where IoT Hub is already running, the following issue can be seen:
 
 ```
 Error response from daemon: ... Bind for 0.0.0.0:1883 failed: port is already allocated
@@ -114,7 +114,7 @@ Here is the complete docker compose file with the Redis configuration prior to t
 
 ```yaml
 #
-# Copyright © 2016-2024 The Thingsboard Authors
+# Copyright © 2016-2024 The Iot Hub Authors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.

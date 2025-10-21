@@ -2,18 +2,18 @@
 {:toc}
 
 In IoT Hub, a **User** is an entity with credentials to access the platform.   
-Users in [ThingsBoard Professional Edition](https://thingsboard.io/products/thingsboard-pe/){:target="_blank"} benefit from an extended [access control model](/docs/{{docsPrefix}}user-guide/rbac/){:target="_blank"} that enables the creation of flexible, multi-level organizational structures with fine-grained control over entities, resources, dashboards, and more.
+Users in [IoT Hub](https://iothub.magenta.at/login){:target="_blank"} benefit from an extended [access control model](/docs/{{docsPrefix}}user-guide/rbac/){:target="_blank"} that enables the creation of flexible, multi-level organizational structures with fine-grained control over entities, resources, dashboards, and more.
 
 **Key characteristics of users:**
 - **Ownership**: Each user belongs to a specific [Tenant](/docs/{{docsPrefix}}user-guide/ui/tenants/){:target="_blank"} or [Customer](/docs/{{docsPrefix}}user-guide/ui/customers/){:target="_blank"}.
 - **Access control**: A [Role-Based Access Control (RBAC)](/docs/{{docsPrefix}}user-guide/rbac/){:target="_blank"} model defines user permissions, including rights to read, write, and manage entities, resources, dashboards, and more.
 - **User groups**: A user can belong to one or more user [groups](/docs/{{docsPrefix}}user-guide/groups/){:target="_blank"}, which simplifies bulk permission management.
 
-This model allows ThingsBoard to scale efficiently for large organizations and IoT projects with multiple users and complex access requirements.
+This model allows IoT Hub to scale efficiently for large organizations and IoT projects with multiple users and complex access requirements.
 
 ## Creating new user
 
-To create a new user in ThingsBoard:
+To create a new user in IoT Hub:
 - Log in as a **Tenant Administrator** or **Customer Administrator**.
 - Navigate to the "**Users**" section from the left-hand menu.
 - Click the "**Add user**" button in the top-right corner.
@@ -89,13 +89,13 @@ The user will be removed from all user groups, including the special "<b>All</b>
 
 ## User group
 
-A **User group** is a mechanism for grouping users who share the same level of access to ThingsBoard resources. It enables centralized management of access to entities, dashboards, widgets, and more.
+A **User group** is a mechanism for grouping users who share the same level of access to IoT Hub resources. It enables centralized management of access to entities, dashboards, widgets, and more.
 
 > A single user can belong to multiple user groups simultaneously.
 
 > Each group defines roles and permissions, which are inherited by all its members.
 
-In ThingsBoard PE, predefined user groups are automatically created for each level (Tenant / Customer):
+In IoT Hub, predefined user groups are automatically created for each level (Tenant / Customer):
 
 - For **Tenant level**:
   - **Tenant Administrators** – includes users with full access to all tenant resources.

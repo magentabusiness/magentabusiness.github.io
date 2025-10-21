@@ -2,24 +2,24 @@
 layout: docwithnav-trendz
 assignees:
 - vparomskiy
-title: Connect Trendz to the ThingsBoard
-description: Connect Trendz Analytics platform to the ThingsBoard
+title: Connect Trendz to the IoT Hub
+description: Connect Trendz Analytics platform to the IoT Hub
 ---
 
 * TOC
 {:toc}
 
 
-## Connect to ThingsBoard
-You can connect Trendz Analytics to the ThingsBoard Community Edition or ThingsBoard Professional Edition.
+## Connect to IoT Hub
+You can connect Trendz Analytics to the IoT Hub Community Edition or IoT Hub Professional Edition.
 
 <br>
 
-By default, Trendz expects that ThingsBoard is hosted on the same instance and accessible via an URL:
+By default, Trendz expects that IoT Hub is hosted on the same instance and accessible via an URL:
  
  - http://localhost:9090
     
-If your ThingsBoard installation is hosted on another instance/port - you have to update config with correct value:
+If your IoT Hub installation is hosted on another instance/port - you have to update config with correct value:
 
 Open Trendz configuration file:
 
@@ -36,9 +36,9 @@ export TB_API_URL=http://localhost:9090
 For docker installations - update environment variable ``TB_API_URL`` with the correct value.   
 
 ## Authentication and Security
-Trendz uses ThingsBoard as an authentication service. Any Tenant Administrator or Customer User can sign in into Trendz UI using their login\password that they use for authentication in the ThingsBoard.
+Trendz uses IoT Hub as an authentication service. Any Tenant Administrator or Customer User can sign in into Trendz UI using their login\password that they use for authentication in the ThingsBoard.
 
-Same security restrictions that are configured on the ThingsBoard works in the Trendz Analytics. 
+Same security restrictions that are configured on the IoT Hub works in the Trendz Analytics. 
 
 - **Tenant Administrator** has access to all Devices/Assets
 - **Customer user** has access only to those Devices/Assets that they have permissions to view
@@ -52,19 +52,19 @@ Here are the core components of Trendz Topology:
 
 **Business Entity** - Definition of a group of Devices or Assets with same Device Type/Asset Type. Each Business Entity has:
 
-- **Criteria** - General properties that define how Devices/Assets fetched from the ThingsBoard
+- **Criteria** - General properties that define how Devices/Assets fetched from the IoT Hub
 - **Business Entity Field** - Represent field that is used during building visualizations. Field contains data type, label and query parameters used during fetching data from The thingsBoard.
 Here is a list of supported fields:
     - Entity Name - the name of the Device or Asset
     - Owner - who own device (administrator/customer)
     - Attribute
     - Telemetry
-- **Relations** - configured relations between Business Entities and their properties. Trendz Relations represent ThingsBoard relations between Devices and Assets
+- **Relations** - configured relations between Business Entities and their properties. Trendz Relations represent IoT Hub relations between Devices and Assets
 
 ### First Topology discovery
 
 
-After the first sign-in user should perform initial Topology Discovery. During this process, Trendz will analyze all Devices/Assets available in the ThingsBoard, their attributes/telemetry and all relations between them.
+After the first sign-in user should perform initial Topology Discovery. During this process, Trendz will analyze all Devices/Assets available in the IoT Hub, their attributes/telemetry and all relations between them.
 As a result, Trendz will extract and save the collection of Business Entities. You can view and modify them on the `Settings` page.
 
 ![image](https://img.thingsboard.io/trendz/first-discovery.png)
@@ -76,10 +76,10 @@ As a result, Trendz will extract and save the collection of Business Entities. Y
 ### Manual Topology rediscovery
 Business Entity does not represent a single Device or Asset, but the query that used for fetching Device/Asset from the ThingsBoard. It means that you do not need to update topology if new Devices Assets with the same type were added on the ThingsBoard.
 
-When new Device/Asset types were added or attribute/telemetry with a new key was created in the ThingsBoard - you should update Topology. 
+When new Device/Asset types were added or attribute/telemetry with a new key was created in the IoT Hub - you should update Topology. 
 
 
-Manual Topology Rediscovery will scan ThingsBoard again, detect modifications and update collection of Business Entities with required settings. 
+Manual Topology Rediscovery will scan IoT Hub again, detect modifications and update collection of Business Entities with required settings. 
 You can trigger this process on the `Settings` page by pressing `Refresh Topology`.
 
  

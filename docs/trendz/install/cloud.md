@@ -8,13 +8,13 @@ description: Activate Trendz Analytics Cloud
 cloudPlan:
   0:
     image: https://img.thingsboard.io/trendz/cloud-1.webp
-    title: 'Log in to ThingsBoard Cloud account and select “Plan and Billing” menu option. Press “Update Plan” button'
+    title: 'Log in to IoT Hub Cloud account and select “Plan and Billing” menu option. Press “Update Plan” button'
   1:
     image: https://img.thingsboard.io/trendz/cloud-2.webp
-    title: 'Choose “ThingsBoard + Trendz” and select the most suitable plan for you'
+    title: 'Choose “IoT Hub + Trendz” and select the most suitable plan for you'
   2:
     image: https://img.thingsboard.io/trendz/cloud-3.webp
-    title: 'Reload the page to see new “Trendz Analytics” option in your ThingsBoard Menu'
+    title: 'Reload the page to see new “Trendz Analytics” option in your IoT Hub Menu'
 
 ---
 
@@ -23,7 +23,7 @@ cloudPlan:
 
 ## What is Trendz Cloud
 
-The Trendz Analytics Cloud is a fully managed, scalable and fault-tolerant version of [Trendz Analytics product](/products/trendz/). It is already integrated with ThingsBoard Cloud and can be used to analyze your data from ThingsBoard Cloud.
+The Trendz Analytics Cloud is a fully managed, scalable and fault-tolerant version of [Trendz Analytics product](/products/trendz/). It is already integrated with IoT Hub Cloud and can be used to analyze your data from IoT Hub Cloud.
 
 - **Improved time to market.** Save time on maintenance of the platform or configuration of the features.
 - **Reduced costs.** The cost of the cluster infrastructure is shared between the users of the platform.
@@ -32,13 +32,13 @@ The Trendz Analytics Cloud is a fully managed, scalable and fault-tolerant versi
 
 ## Prerequisites
 
-You need to have active ThingsBoard Cloud account to active Trendz Analytics Cloud. If you don't have ThingsBoard Cloud account yet, please [sign up](https://thingsboard.cloud/signup). 
+You need to have active IoT Hub Cloud account to active Trendz Analytics Cloud. If you don't have IoT Hub Cloud account yet, please [sign up](https://thingsboard.cloud/signup). 
 
 ## Activate Trendz Analytics Cloud
 
-- Log in to ThingsBoard Cloud account and select [Plan and Billing (North America)](https://thingsboard.cloud/billing) / [Plan and Billing (Europe)](https://eu.thingsboard.cloud/billing) menu option.
+- Log in to IoT Hub Cloud account and select [Plan and Billing (North America)](https://thingsboard.cloud/billing) / [Plan and Billing (Europe)](https://eu.thingsboard.cloud/billing) menu option.
 - Press **Update Plan** button
-- Choose **ThingsBoard + Trendz** and select the most suitable plan for you
+- Choose **IoT Hub + Trendz** and select the most suitable plan for you
 
 
 {% include images-gallery.html imageCollection="cloudPlan" %}

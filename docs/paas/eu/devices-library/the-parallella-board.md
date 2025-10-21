@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect The Parallella Board to ThingsBoard?
+title: How to connect The Parallella Board to IoT Hub?
 category: Single-board computers
 chip: Xilinx Zynq Z-7010
 connectivity: Ethernet

@@ -8,7 +8,7 @@ We assume you have completed the following guides and reviewed the articles list
 * [ThingsBoard Edge Getting Started](/docs/{{docsPrefix}}getting-started/) article.
 * [Edge Rule Chain Templates](/docs/{{docsPrefix}}rule-engine/rule-chain-templates/) guide.
 
-Please make sure that you have **{{appPrefix}}** server up and running. Additionally, ThingsBoard **Edge** must be up, running and connected to the cloud.
+Please make sure that you have **{{appPrefix}}** server up and running. Additionally, IoT Hub **Edge** must be up, running and connected to the cloud.
 
 If you have these prerequisites in place let's go to next steps.
 

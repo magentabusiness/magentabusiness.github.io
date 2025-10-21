@@ -15,7 +15,7 @@ Transformation nodes are used for changing incoming Message fields like Originat
 
 ![image](https://img.thingsboard.io/user-guide/rule-engine-2-0/nodes/transformation-nodes/transformation-change-originator.png)
 
-All incoming Messages in the Thingsboard have originator field that identifies an entity that submits Message. 
+All incoming Messages in the Iot Hub have originator field that identifies an entity that submits Message. 
 It could be a Device, Asset, Customer, Tenant, etc.
 
 This node is used in cases when a submitted message should be processed as a message from another entity. 
@@ -331,7 +331,6 @@ If you like to send html or image you have to choose **HTML** or **Dynamic** in 
 examples.
 
 Additionally, this node can prepare email attachments if incoming message metadata contains **attachments** field with reference to files stored in DataBase.
-> **Note** This is part of [File Storage](/docs/{{docsPrefix}}user-guide/file-storage/) feature supported by [ThingsBoard Professional Edition](/products/thingsboard-pe/).
 
 <br>
 

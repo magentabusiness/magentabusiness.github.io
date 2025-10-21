@@ -54,11 +54,11 @@ Now we need to configure application on The Things Stack. To do this please foll
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=addIntegrationSteps %}
 
-Now we can move to ThingsBoard to configure integration.  
+Now we can move to IoT Hub to configure integration.  
 
-### Create integration in ThingsBoard
+### Create integration in IoT Hub
 
-Next we will create "**The Things Stack**" (TTS) integration inside the ThingsBoard.
+Next we will create "**The Things Stack**" (TTS) integration inside the IoT Hub.
 
 At first, copy the code, we will need it to create the uplink converter:
 

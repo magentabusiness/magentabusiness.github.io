@@ -413,20 +413,20 @@ To connect the gateway and transmit data to ChirpStack, follow these steps:
 %}
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=solarApplication %}
 
-### Configure Application Integration with ThingsBoard
+### Configure Application Integration with IoT Hub
 
 {% assign solarThingsboard = '
     ===
         image: https://img.thingsboard.io/samples/lansitec/thingsboard-1.png,
-        title: Go to the **Integrations** page and click on **ThingsBoard**.
+        title: Go to the **Integrations** page and click on **IoT Hub**.
     ===
         image: https://img.thingsboard.io/samples/lansitec/thingsboard-2.png,
-        title: Enter your **ThingsBoard server** address and click **Submit**.
+        title: Enter your **IoT Hub server** address and click **Submit**.
 '
 %}
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=solarThingsboard %}
 
-## Create device on ThingsBoard
+## Create device on IoT Hub
 
 {% assign solarDevices = '
     ===
@@ -453,6 +453,6 @@ To connect the gateway and transmit data to ChirpStack, follow these steps:
 
 ## Conclusion
 
-With the information provided in this guide, you can easily connect your Solar Bluetooth Gateway and transmit data to ThingsBoard.
+With the information provided in this guide, you can easily connect your Solar Bluetooth Gateway and transmit data to IoT Hub.
 
 For further learning about key concepts and features, explore the platform&#39;s [documentation](/docs/pe/){:target="_blank"}. You can also configure [alarm rules](/docs/pe/user-guide//device-profiles/#alarm-rules){:target="_blank"}{:target="_blank"} or set up [dashboards](/docs/pe/user-guide//dashboards/){:target="_blank"}.

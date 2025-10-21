@@ -5,15 +5,15 @@ logo: /images/thingsboard_logo.png
 url: https://magentabusiness.github.io
 
 twitter:
-  username: thingsboard
+  username: IoT Hub
 
 social:
   name: IoT Hub
-  links:
-    - https://twitter.com/thingsboard
-    - https://github.com/thingsboard/thingsboard
-    - https://www.facebook.com/thingsboard
-    - https://www.youtube.com/channel/thingsboard
+#  links:
+#    - https://twitter.com/thingsboard
+#    - https://github.com/thingsboard/thingsboard
+#    - https://www.facebook.com/thingsboard
+#    - https://www.youtube.com/channel/thingsboard
 
 seo:
   type: WebSite
@@ -56,9 +56,9 @@ defaults:
       path: ""
     values:
       image:
-        path: /images/thingsboard_logo.png
-        twitter: /images/thingsboard_logo.png
-        facebook: /images/thingsboard_logo.png
+        path: /images/IoT_4_512.png
+        twitter: /images/IoT_4_512.png
+        facebook: /images/IoT_4_512.png
       version: "v1.0"
       githubbranch: "master"
       docsbranch: "master"

@@ -1,18 +1,18 @@
 ---
 layout: docwithnav-gw
-title: How to enable remote logging feature on ThingsBoard IoT Gateway
-description: How to enable remote logging feature on ThingsBoard IoT Gateway
+title: How to enable remote logging feature on IoT Hub IoT Gateway
+description: How to enable remote logging feature on IoT Hub IoT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to enable remote logging and read logs from ThingsBoard IoT Gateway on your ThingsBoard platform instance.  
+This guide will help you to enable remote logging and read logs from IoT Hub IoT Gateway on your IoT Hub platform instance.  
 
 For purpose of this guide, we will use following things:
-1. Locally installed instance of ThingsBoard platform (How to install you can [read here](/docs/user-guide/install/installation-options/)).
-2. ThingsBoard IoT Gateway (How to install you can [read here](/docs/iot-gateway/installation/)).
+1. Locally installed instance of IoT Hub platform (How to install you can [read here](/docs/user-guide/install/installation-options/)).
+2. IoT Hub IoT Gateway (How to install you can [read here](/docs/iot-gateway/installation/)).
 
 ## Step 1. Remote logging activation and setting the logging level
 
@@ -61,12 +61,12 @@ To do this we use following steps:
   - Choose **Timeseries table** Card widget and add it to the Dashboard. It can be either the new one or the existing dashboard.
   ![](https://img.thingsboard.io/gateway/create-new-dashboard-for-logs.png)
 
-  - As a result now we can monitor the status of the gateway device from ThingsBoard environment.
+  - As a result now we can monitor the status of the gateway device from IoT Hub environment.
   ![](https://img.thingsboard.io/gateway/logs-dashboard.png) 
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main IoT Hub features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

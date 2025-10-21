@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect PINE A64 to ThingsBoard?
+title: How to connect PINE A64 to IoT Hub?
 category: Single-board computers
 chip: Allwinner A64
 connectivity: Ethernet, WIFI, Bluetooth

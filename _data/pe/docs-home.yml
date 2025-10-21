@@ -289,7 +289,7 @@ toc:
       path: /docs/pe/user-guide/csv-xls-data-export/
     - title: File storage
       path: /docs/pe/user-guide/file-storage/
-    - title: ThingsBoard Expression Language (TBEL)
+    - title: IoT Hub Expression Language (TBEL)
       path: /docs/pe/user-guide/tbel/
       new: true
 - title: Security
@@ -375,7 +375,7 @@ toc:
 #      path: /docs/pe/user-guide/contribution/how-to-contribute-your-device-integration-guide/
     - title: Rule Node development
       path: /docs/pe/user-guide/contribution/rule-node-development/
-    - title: Widgets development (ThingsBoard v3.x)
+    - title: Widgets development (IoT Hub v3.x)
       section:
         - title: Overview
           path: /docs/pe/user-guide/contribution/widgets-development/
@@ -385,7 +385,7 @@ toc:
           path: /docs/pe/user-guide/contribution/ui/custom-subscriptions/
         - title: Advanced widget development
           path: /docs/pe/user-guide/contribution/ui/advanced-development/
-    - title: Widgets development (ThingsBoard v2.x)
+    - title: Widgets development (IoT Hub v2.x)
       path: /docs/pe/user-guide/contribution/widgets-development-before-3.0/
 #- title: Troubleshooting
 #  path: /docs/pe/user-guide/troubleshooting/

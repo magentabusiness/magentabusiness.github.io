@@ -67,7 +67,7 @@ Anomaly fields are ideal for building flexible visualizations across time and de
 
 ## Anomaly Business Entity Fields
 
-Available **only when "Save to TB" is enabled** (See [this section](/docs/trendz/anomaly/save-to-tb.md) for more on saving to ThingsBoard).
+Available **only when "Save to TB" is enabled** (See [this section](/docs/trendz/anomaly/save-to-tb.md) for more on saving to IoT Hub).
 
 To use:
 1. Open any view.
@@ -85,9 +85,9 @@ Use the following guidance to choose the right tool for visualizing and analyzin
 
 - **If you want a simple, plug-and-play anomaly visualization:**  
   - Use **Anomaly Report**.
-- **If you need flexible visualizations and don’t want to save anomalies to ThingsBoard:**  
+- **If you need flexible visualizations and don’t want to save anomalies to IoT Hub:**  
   - Use **Anomaly Fields**.
-- **If you need fine control over which anomalies are saved to ThingsBoard:** 
+- **If you need fine control over which anomalies are saved to IoT Hub:** 
   - Use **Anomaly Business Entity Fields**.
 
 ## Next Steps

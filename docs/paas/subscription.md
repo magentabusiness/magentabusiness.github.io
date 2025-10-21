@@ -9,7 +9,7 @@ redirect_from: "/products/paas/subscription/"
 cancel-my-subscription:
     0:
         image: /images/subscriptions/cancel-my-subscription-1-paas-eu.png
-        title: 'Log in to ThingsBoard Cloud as a Tenant Administrator. After logging in, go to account settings by clicking the three-dot icon in the upper-right corner of the screen and selecting "Account" from the dropdown menu;'
+        title: 'Log in to IoT Hub Cloud as a Tenant Administrator. After logging in, go to account settings by clicking the three-dot icon in the upper-right corner of the screen and selecting "Account" from the dropdown menu;'
     1:
         image: /images/subscriptions/cancel-my-subscription-2-paas-eu.png
         title: 'Under the "Profile" tab, click the orange "Delete account" button;'
@@ -465,14 +465,14 @@ The white-labeling feature is available for **Prototype** and **Startup** subscr
 
 ## How to cancel my subscription?
 
-To terminate your ThingsBoard Cloud subscription, follow these steps:
+To terminate your IoT Hub Cloud subscription, follow these steps:
 
-- Log in to ThingsBoard Cloud as Tenant Administrator;
+- Log in to IoT Hub Cloud as Tenant Administrator;
 - Go to account settings by clicking the **three-dot icon** in the upper-right corner of the screen and selecting "**Account**" from the dropdown menu;
 - Under the "**Profile**" tab, click the orange "**Delete account**" button;
 - Follow the instructions to cancel your subscription;
 - Confirm the action by clicking the "**I understand the consequences, delete account**" button.
 
-In the future, the subscription termination button will be moved to the "**Plan and billing**" page in the ThingsBoard navigation menu.
+In the future, the subscription termination button will be moved to the "**Plan and billing**" page in the IoT Hub navigation menu.
 
 {% include images-gallery.html imageCollection="cancel-my-subscription" %}

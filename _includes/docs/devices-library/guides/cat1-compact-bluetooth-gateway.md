@@ -1,4 +1,4 @@
-{% assign deviceName = page.title | remove: "How to connect " | remove: " to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: " to IoT Hub?" %}
 {% assign deviceVendorLink = "https://www.lansitec.com/products/cat-1-badge-tracker/" %}
 {% assign thingsboardHost = "https://" | append: hostName %}
 {% assign prerequisites = '
@@ -20,8 +20,7 @@ To continue with this guide we will need the following:
 
 ## Configuration
 
-You will need to have access to ThingsBoard Professional Edition. The easiest way is to use [ThingsBoard Cloud](https://thingsboard.io/installations/choose-region/){:target="_blank"} server.
-The alternative option is to install ThingsBoard using [installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
+You will need to have access to IoT Hub. 
 
 {% include /docs/devices-library/blocks/integrations/external-platforms/lansitec/cat1/create-device-on-thingsboard.md %}
 

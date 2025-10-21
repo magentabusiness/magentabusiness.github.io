@@ -29,11 +29,11 @@ Where:
 - `YOUR_ROUTING_KEY` - placeholder for your **integration key** obtained on [create remote integration in ThingsBoard](#create-remote-integration-in-thingsboard);
 - `YOUR_SECRET` - placeholder for your **integration secret** obtained on [create remote integration in ThingsBoard](#create-remote-integration-in-thingsboard);
 - `docker run`              - run this container;
-- `-it`                     - attach a terminal session with current ThingsBoard process output;
+- `-it`                     - attach a terminal session with current IoT Hub process output;
 - `-p 5683:5683/udp` - connect local udp port 5683 to exposed internal 5683 udp port for the integration.
-- `-v ~/.tb-pe-coap-integration-logs:/var/log/tb-coap-integration`   - mounts the host's dir `~/.tb-pe-coap-integration-logs` to ThingsBoard logs directory;
+- `-v ~/.tb-pe-coap-integration-logs:/var/log/tb-coap-integration`   - mounts the host's dir `~/.tb-pe-coap-integration-logs` to IoT Hub logs directory;
 - `--name tb-pe-coap-integration`             - friendly local name of this machine;
-- `--restart always`        - automatically start ThingsBoard Integration in case of system reboot and restart in case of failure.;
+- `--restart always`        - automatically start IoT Hub Integration in case of system reboot and restart in case of failure.;
 - `thingsboard/tb-pe-coap-integration:{{ site.release.pe_full_ver }}`          - docker image.
 
 After executing this command you can open logs which are located here `~/.tb-pe-coap-integration-logs`. 
@@ -46,7 +46,7 @@ You can detach from session terminal with **`Ctrl-p`**+**`Ctrl-q`** - the contai
 
 - **Reattaching, stop and start commands**
 
-To reattach to the terminal (to see ThingsBoard logs) run:
+To reattach to the terminal (to see IoT Hub logs) run:
 
 ```
 docker attach tb-pe-coap-integration

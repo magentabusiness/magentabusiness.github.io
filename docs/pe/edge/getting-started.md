@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-edge
-title: Getting started with ThingsBoard PE Edge
-description: Getting started with ThingsBoard PE Edge
+title: Getting started with IoT Hub PE Edge
+description: Getting started with IoT Hub PE Edge
 
 step1:
     0:
@@ -80,7 +80,7 @@ step3:
 step4:
   0:
         image: https://img.thingsboard.io/pe/edge/getting-started/step-2-item-1-pe.webp
-        title: 'Navigate to the <b>Devices</b> section to confirm that the newly created device, "My New Device", has been published to the <b>ThingsBoard Server (Cloud)</b>.'
+        title: 'Navigate to the <b>Devices</b> section to confirm that the newly created device, "My New Device", has been published to the <b>IoT Hub Server (Cloud)</b>.'
   1:
         image: https://img.thingsboard.io/pe/edge/getting-started/step-2-item-2-pe.webp
         title: 'Click on the "My New Device" to open the <b>"Device details"</b> page and select the <b>"Relations"</b> tab. Switch the direction from <b>"From"</b> to <b>"To"</b> to view the relation to the Edge that provisioned this device.'
@@ -88,7 +88,7 @@ step4:
 step5Server:
     0:
         image: https://img.thingsboard.io/pe/edge/getting-started/step-5-item-1-pe.webp
-        title: 'Create a new dashboard on the <b>ThingsBoard Server</b>. Click the <b>"Dashboard details"</b> icon to view details;'
+        title: 'Create a new dashboard on the <b>IoT Hub Server</b>. Click the <b>"Dashboard details"</b> icon to view details;'
     1:
         image: https://img.thingsboard.io/pe/edge/getting-started/step-5-item-2-pe.webp
         title: 'Click the <b>"Manage owner and groups"</b> button;'
@@ -114,7 +114,7 @@ step5Server:
 step5Edge:
     0:
         image: https://img.thingsboard.io/pe/edge/getting-started/step-5-item-10-pe.webp
-        title: 'Go to the <b>Dashboards</b> section and open the dashboard you have created on the <b>ThingsBoard Professional Edition Server</b>'    
+        title: 'Go to the <b>Dashboards</b> section and open the dashboard you have created on the <b>IoT Hub Professional Edition Server</b>'    
     1:
         image: https://img.thingsboard.io/pe/edge/getting-started/step-5-item-11-pe.webp
         title: 'Verify that these are the same widgets that you have added on the Cloud.'
@@ -126,7 +126,7 @@ step5Edge:
 
 {% assign docsPrefix = "pe/edge/" %}
 
-{% assign currentThingsBoardVersion = "ThingsBoard Professional Edition" %}
+{% assign currentThingsBoardVersion = "IoT Hub Professional Edition" %}
 
 {% include templates/edge/getting-started/introduction.md %}
 
@@ -155,7 +155,7 @@ step5Edge:
 
 ## Your Feedback
 
-Congratulations! You have successfully completed the initial configuration steps for **ThingsBoard Edge**. Now you can send new telemetry readings and they will appear on the dashboard immediately.
+Congratulations! You have successfully completed the initial configuration steps for **IoT Hub Edge**. Now you can send new telemetry readings and they will appear on the dashboard immediately.
 
 Help us improve by providing your feedback at [GitHub/Issues](https://github.com/thingsboard/thingsboard-edge/issues){: target="_blank"} or through the ["Contact us"](https://thingsboard.io/docs/contact-us/){: target="_blank"} form.
 We would also greatly appreciate it if you could star our project on [GitHub](https://github.com/thingsboard/thingsboard-edge){: target="_blank"}!

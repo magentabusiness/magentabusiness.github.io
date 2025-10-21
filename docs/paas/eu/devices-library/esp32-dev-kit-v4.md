@@ -1,6 +1,6 @@
 ---
 layout: devices-library-article
-title: How to connect ESP32 Dev Kit C V4 to ThingsBoard?
+title: How to connect ESP32 Dev Kit C V4 to IoT Hub?
 category: Microcontrollers
 chip: ESP32
 connectivity: HTTP, MQTT, WIFI, Bluetooth

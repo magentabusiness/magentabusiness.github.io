@@ -239,36 +239,6 @@
 "/docs/user-guide/ui/entity-views":
   url: "/docs/user-guide/entity-views/"
   redirect_from: "/docs/user-guide/ui/entity-views"
-"/docs/user-guide/install/cluster/aws-cluster-setup":
-  url: "/docs/user-guide/install/cluster/aws-eks-setup/"
-  redirect_from: "/docs/user-guide/install/cluster/aws-cluster-setup"
-"/docs/user-guide/install/kubernetes/":
-  url: "/docs/user-guide/install/cluster/aws-eks-setup/"
-  redirect_from: "/docs/user-guide/install/kubernetes/"
-"/docs/user-guide/install/aws-marketplace-pe/":
-  url: "/docs/user-guide/install/pe/aws-marketplace/"
-  redirect_from: "/docs/user-guide/install/aws-marketplace-pe/"
-"/docs/user-guide/install/pe/docker-cassandra/":
-  url: "/docs/user-guide/install/pe/cluster/docker-compose-setup/"
-  redirect_from: "/docs/user-guide/install/pe/docker-cassandra/"
-"/docs/pe/user-guide/install/cluster-setup/":
-  url: "/docs/user-guide/install/pe/cluster-setup/"
-  redirect_from: "/docs/pe/user-guide/install/cluster-setup/"
-"/docs/pe/user-guide/install/config/":
-  url: "/docs/user-guide/install/pe/config/"
-  redirect_from: "/docs/pe/user-guide/install/config/"
-"/docs/pe/user-guide/install/docker-windows/":
-  url: "/docs/user-guide/install/pe/docker-windows/"
-  redirect_from: "/docs/pe/user-guide/install/docker-windows/"
-"/docs/pe/user-guide/install/docker/":
-  url: "/docs/user-guide/install/pe/docker/"
-  redirect_from: "/docs/pe/user-guide/install/docker/"
-"/docs/user-guide/install/pe/gcp2/":
-  url: "/docs/user-guide/install/pe/gcp-marketplace/"
-  redirect_from: "/docs/user-guide/install/pe/gcp2/"
-"/docs/pe/user-guide/install/installation-options/":
-  url: "/docs/user-guide/install/pe/installation-options/"
-  redirect_from: "/docs/pe/user-guide/install/installation-options/"
 "/docs/user-guide/queue":
   url: "/docs/user-guide/rule-engine-2-5/queues/"
   redirect_from: "/docs/user-guide/queue"

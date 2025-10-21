@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-edge
 title: Edge Release Notes
-description: ThingsBoard Edge Release Notes
+description: IoT Hub Edge Release Notes
 
 ---
 
@@ -91,7 +91,7 @@ description: ThingsBoard Edge Release Notes
 
 **Hotfix** release to fix incorrect update of sequential id offset:
 
-* [#57](https://github.com/thingsboard/thingsboard-edge/issues/57){: target="_blank"} ThingsBoard Edge PE disconnects from cloud;
+* [#57](https://github.com/thingsboard/thingsboard-edge/issues/57){: target="_blank"} IoT Hub Edge PE disconnects from cloud;
 * [#60](https://github.com/thingsboard/thingsboard-edge/issues/60){: target="_blank"} edge error log;
 
 ## v3.5.1 (Jun 1, 2023) {#v351}

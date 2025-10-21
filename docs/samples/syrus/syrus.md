@@ -107,7 +107,7 @@ _############ START MQTT EVENT ###########_
 
 define variable constant_1 1
 
-define fieldset thingsboard
+define fieldset iot hub
 fields="ident":$modem.imei,position.context.lat:$gnss.latitude,position.context.lng:$gnss.longitude,
 position.value:$variables.constant_1,"position.direction":$gnss.heading,"position.hdop":$gnss.hdop,
 "position.pdop":$gnss.pdop,"position.vdop":$gnss.vdop,"position.speed":$gnss.mph,
@@ -119,24 +119,24 @@ position.value:$variables.constant_1,"position.direction":$gnss.heading,"positio
 "can.fuel.rate":$ecu.fuel_rate,"can.engine.hours":$ecu.hours_total,"can.ambient.temp":$ecu.ambient_air_temp,
 "can.oil.pressure":$ecu.oil_pressure
 
-define group thingsboard
+define group iot hub
 
-set destinations group=thingsboard thingsboard
+set destinations group=iot hub iot hub
 
 define tracking_resolution thingsboard_tracking 5m 25deg 1000mts
 
 define signal ignitionON min_duration=5s $io.ign == true
 define signal ignitionOFF min_duration=5s $io.ign == false
 
-define event ignitionONmqtt group=thingsboard fieldset=thingsboard ack=seq label=ignonmqtt code=102 trigger=ignitionON
-define event ignitionOFFmqtt group=thingsboard fieldset=thingsboard ack=seq label=ignoffmqtt code=103 trigger=ignitionOFF
+define event ignitionONmqtt group=iot hub fieldset=iot hub ack=seq label=ignonmqtt code=102 trigger=ignitionON
+define event ignitionOFFmqtt group=iot hub fieldset=iot hub ack=seq label=ignoffmqtt code=103 trigger=ignitionOFF
  
 _# Define tracking event, a single tracking resolution signal that can be controlled by different actions
 
-define event trackingOffMqtt group=thingsboard fieldset=thingsboard ack=seq label=prdtst code=100 trigger=@tracking_resolution.thingsboard_tracking.signal,ignitionOFF,and
-define event trackingOnMqtt group=thingsboard fieldset=thingsboard ack=seq label=trckpnt code=101 trigger=@tracking_resolution.thingsboard_tracking.time,ignitionON,and
-define event trackingHeadingMqtt group=thingsboard fieldset=thingsboard ack=seq label=heading code=140 trigger=@tracking_resolution.thingsboard_tracking.heading,ignitionON,and
-define event trackingDistanceMqtt group=thingsboard fieldset=thingsboard ack=seq label=distance code=141 trigger=@tracking_resolution.thingsboard_tracking.distance,ignitionON,and
+define event trackingOffMqtt group=iot hub fieldset=iot hub ack=seq label=prdtst code=100 trigger=@tracking_resolution.thingsboard_tracking.signal,ignitionOFF,and
+define event trackingOnMqtt group=iot hub fieldset=iot hub ack=seq label=trckpnt code=101 trigger=@tracking_resolution.thingsboard_tracking.time,ignitionON,and
+define event trackingHeadingMqtt group=iot hub fieldset=iot hub ack=seq label=heading code=140 trigger=@tracking_resolution.thingsboard_tracking.heading,ignitionON,and
+define event trackingDistanceMqtt group=iot hub fieldset=iot hub ack=seq label=distance code=141 trigger=@tracking_resolution.thingsboard_tracking.distance,ignitionON,and
 
 
 _############ END MQTT EVENT ###########_

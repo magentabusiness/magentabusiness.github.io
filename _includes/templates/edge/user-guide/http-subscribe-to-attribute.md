@@ -10,7 +10,7 @@ http(s)://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/attributes/updates
 {: .copy-code}
 
 * **/attributes/updates** The endpoint that is used to fetch the updates of device attributes.
-* Replace the **$THINGSBOARD_HOST_NAME** with the actual hostname or IP address of your ThingsBoard Edge instance.
+* Replace the **$THINGSBOARD_HOST_NAME** with the actual hostname or IP address of your IoT Hub Edge instance.
 
 {% assign accessTokenPE = '
     ===
@@ -42,14 +42,14 @@ curl -v -X GET http(s)://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/attributes/
 
 #### Publish Time-Series or Attribute Message.
 
-To publish client-side device attributes to the **ThingsBoard Edge**, send a POST request to the following URL:
+To publish client-side device attributes to the **IoT Hub Edge**, send a POST request to the following URL:
 
 ```bash
 http(s)://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/attributes
 ```
 {: .copy-code}
 
-* **$THINGSBOARD_HOST_NAME:** The actual hostname or IP address of your ThingsBoard Edge instance
+* **$THINGSBOARD_HOST_NAME:** The actual hostname or IP address of your IoT Hub Edge instance
 * **$ACCESS_TOKEN:** The actual access token of the device.
 
 Publish client-side attributes update

@@ -206,7 +206,7 @@ notitle: "true"
                         <select class="cdu-form-control" name="subject">
                             <option value="Custom Development" selected>Custom Development</option>
                             <option value="Technical Support">Technical Support</option>
-                            <option value="ThingsBoard Products">IoT Hub Products</option>
+                            <option value="IoT Hub Products">IoT Hub Products</option>
                             <option value="Deployment Options">Deployment Options</option>
                             <option value="Training">Training</option>
                             <option value="Professional Services">Professional Services</option>

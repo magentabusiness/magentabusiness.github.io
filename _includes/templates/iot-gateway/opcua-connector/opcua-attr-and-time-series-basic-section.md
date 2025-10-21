@@ -25,12 +25,12 @@ To add new time series or attribute key, follow these steps:
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=attrAndTimeseries %}
 
 You can enable a specific report strategy for each time series or attribute. This strategy defines how often  
-data is sent to the ThingsBoard server. The following strategies are available:
+data is sent to the IoT Hub server. The following strategies are available:
 
-- **On report period** - sends data to ThingsBoard after the report period;
-- **On value change** - sends data to ThingsBoard when the value changes;
-- **On value change and report period** - sends data to ThingsBoard when the value changes or after the report period;
-- **On received** - sends data to ThingsBoard after receiving data from the device (default strategy).
+- **On report period** - sends data to IoT Hub after the report period;
+- **On value change** - sends data to IoT Hub when the value changes;
+- **On value change and report period** - sends data to IoT Hub when the value changes or after the report period;
+- **On received** - sends data to IoT Hub after receiving data from the device (default strategy).
 
 ![image](https://img.thingsboard.io/gateway/opc-ua-connector/opc-ua-gateway-configuring-10-ce.png)
 

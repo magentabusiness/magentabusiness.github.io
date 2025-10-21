@@ -2,8 +2,8 @@
 layout: docwithnav-trendz
 assignees:
   - vparomskiy
-title: ThingsBoard Trendz Analytics installation options
-description: ThingsBoard Trendz Analytics installation instructions for various operation systems
+title: IoT Hub Trendz Analytics installation options
+description: IoT Hub Trendz Analytics installation instructions for various operation systems
 notitle: "true"
 ---
 
@@ -12,7 +12,7 @@ notitle: "true"
        <div class="install-options-hero">
           <div class="container">
             <div class="install-options-hero-content">
-                <h1>ThingsBoard Trendz Analytics installation options</h1>
+                <h1>IoT Hub Trendz Analytics installation options</h1>
             </div>
             <div class="deployment-container">
                 <div class="deployment-div">

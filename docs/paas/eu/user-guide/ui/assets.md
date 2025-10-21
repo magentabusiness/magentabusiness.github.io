@@ -3,7 +3,7 @@ layout: docwithnav-paas-eu
 assignees:
 - stitenko
 title: Assets
-description: Thingsboard IoT Asset management
+description: Iot Hub IoT Asset management
 
 creating-asset:
     0:

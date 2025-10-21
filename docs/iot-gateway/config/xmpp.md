@@ -1,14 +1,14 @@
 ---
 layout: docwithnav-gw
 title: XMPP Connector Configuration
-description: XMPP protocol support for ThingsBoard IoT Gateway
+description: XMPP protocol support for IoT Hub IoT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you get familiar with XMPP Connector configuration for ThingsBoard IoT Gateway.
+This guide will help you get familiar with XMPP Connector configuration for IoT Hub IoT Gateway.
 Use [general configuration](/docs/iot-gateway/configuration/) to enable this Connector.
 The purpose of this connector is to collect data from IoT devices using XMPP protocol.
 
@@ -131,10 +131,10 @@ This object configuration section includes the parameters for processing incomin
 | deviceTypeExpression | **${sensorType}**             | JSON-path expression, is used for looking the device type.                                                                                                       |
 | attributes           |                               | This subsection contains parameters of the incoming requests, that will be interpreted as attributes for the device.                                             |
 | ... key              | **temperature**               | Name for attribute in ThingsBoard.                                                                                                                               |
-| ... value            | **${temp}**                   | Simple JSON expression, is used for looking up value in the incoming message, which will then be sent to ThingsBoard instance as the value of the key parameter. |
+| ... value            | **${temp}**                   | Simple JSON expression, is used for looking up value in the incoming message, which will then be sent to IoT Hub instance as the value of the key parameter. |
 | timeseries           |                               | This subsection contains parameters of the incoming message, that will be interpreted as telemetry for the device.                                               |
 | ... key              | **humidity**                  | Name for telemetry in ThingsBoard.                                                                                                                               |
-| ... value            | **${hum}**                    | Simple JSON expression, is used for looking up value in the incoming message, which will then be sent to ThingsBoard instance as the value of the key parameter. |
+| ... value            | **${hum}**                    | Simple JSON expression, is used for looking up value in the incoming message, which will then be sent to IoT Hub instance as the value of the key parameter. |
 | ---                  |                               |                                                                                                                                                                  |
 
 Example:
@@ -164,7 +164,7 @@ Example:
 
 #### Attribute updates subsection
 
-This configuration section is optional. ThingsBoard allows the provisioning of device attributes and fetches some of them from 
+This configuration section is optional. IoT Hub allows the provisioning of device attributes and fetches some of them from 
 the device application. You can treat this as a remote configuration for devices, enabling them to request 
 shared attributes from ThingsBoard. See [user guide](/docs/reference/mqtt-api/#attributes-api) for more details.
 
@@ -189,9 +189,9 @@ This section in configuration file looks like:
 
 #### Server side RPC subsection
 
-ThingsBoard allows sending RPC commands to the device connected to ThingsBoard directly or via Gateway.
+IoT Hub allows sending RPC commands to the device connected to IoT Hub directly or via Gateway.
 
-Configuration, provided in this section is used for sending RPC requests from ThingsBoard to the device.
+Configuration, provided in this section is used for sending RPC requests from IoT Hub to the device.
 
 | **Parameter**   | **Default value** | **Description**                                                                   |
 |:----------------|:------------------|-----------------------------------------------------------------------------------|
@@ -214,7 +214,7 @@ This subsection in configuration file looks like:
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main IoT Hub features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

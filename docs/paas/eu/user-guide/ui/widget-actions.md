@@ -3,7 +3,7 @@ layout: docwithnav-paas-eu
 assignees:
 - ashvayka
 title: Widget actions
-description: ThingsBoard Dashboard Widget Actions
+description: IoT Hub Dashboard Widget Actions
 
 add-new-action-1:
     0:
@@ -250,7 +250,7 @@ open-url-2:
         title: 'After saving the changes, you can see an icon in the upper right part of the widget. Click this icon;'
     1:
         image: https://img.thingsboard.io/user-guide/ui/widgets/actions/guide/types/open-url-6-pe.png
-        title: 'You will be transferred to the URL specified in the action. In our case, it&#39;s the "Working with ThingsBoard widgets" documentation page.'
+        title: 'You will be transferred to the URL specified in the action. In our case, it&#39;s the "Working with IoT Hub widgets" documentation page.'
 
 data-source-for-action:
     0:
@@ -692,7 +692,7 @@ mob-layout-4:
 mob-layout-5:
     0:
         image: https://img.thingsboard.io/user-guide/ui/widgets/actions/guide/mob-layout-19-pe.png
-        title: 'Open this dashboard in your ThingsBoard PE Mobile Application. In the "Entity table" widget click a row of any entity. You will be moved directly to the "Time series chart" widget where you can see the details of the selected entity of the main widget.'
+        title: 'Open this dashboard in your IoT Hub PE Mobile Application. In the "Entity table" widget click a row of any entity. You will be moved directly to the "Time series chart" widget where you can see the details of the selected entity of the main widget.'
 
 entityfromwidget:
     0:

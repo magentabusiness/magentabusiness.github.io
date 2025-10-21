@@ -11,7 +11,7 @@ description: Supported REST API Reference for server-side integration of your ja
  
 ## REST Client
 
-The ThingsBoard REST API Client helps you interact with ThingsBoard REST API from your Java application.
+The IoT Hub REST API Client helps you interact with IoT Hub REST API from your Java application.
 With Rest Client you can programmatically create assets, devices, customers, users and other entities and their relations in ThingsBoard.
  
 The recommended method for installing the Rest Client is with a build automation tool, like Maven. 
@@ -47,10 +47,10 @@ In order to download the REST Client dependency, you should add the following re
 {: .copy-code}
 ### Basic Usage
 
-The next sample code shows how to instantiate ThingsBoard Client, perform login and get user details of current logged in user.
+The next sample code shows how to instantiate IoT Hub Client, perform login and get user details of current logged in user.
 
 ```java
-// ThingsBoard REST API URL
+// IoT Hub REST API URL
 String url = "http://localhost:8080";
 
 // Default Tenant Administrator credentials
@@ -75,7 +75,7 @@ client.close();
 #### Fetch tenant devices
 The following sample code shows how to fetch tenant devices via page link.
 ```java
-// ThingsBoard REST API URL
+// IoT Hub REST API URL
 String url = "http://localhost:8080";
 
 // Default Tenant Administrator credentials
@@ -104,7 +104,7 @@ client.close();
 #### Fetch tenant dashboards
 The following sample code shows how to fetch tenant dashboards via page link.
 ```java
-// ThingsBoard REST API URL
+// IoT Hub REST API URL
 String url = "http://localhost:8080";
 
 // Default Tenant Administrator credentials
@@ -133,7 +133,7 @@ client.close();
 #### Fetch customer devices
 The following sample code shows how to fetch customer devices via page link.
 ```java
-// ThingsBoard REST API URL
+// IoT Hub REST API URL
 String url = "http://localhost:8080";
 // Perform login with default Customer User credentials
 String username = "customer@thingsboard.org";
@@ -162,7 +162,7 @@ client.close();
 
 The following sample code shows how to use Entity Data Query API to count total devices, total active devices.
 ```java
-// ThingsBoard REST API URL
+// IoT Hub REST API URL
 String url = "http://localhost:8080";
 
 // Perform login with default Customer User credentials
@@ -211,7 +211,7 @@ client.close();
 The following sample code shows how to use Entity Data Query API to get all active devices.
 
 ```java
-// ThingsBoard REST API URL
+// IoT Hub REST API URL
 String url = "http://localhost:8080";
 
 // Perform login with default Customer User credentials
@@ -275,7 +275,7 @@ client.close();
 
 The following sample code demonstrates basic concepts of device management API (add/get/delete device, get/save device attributes).
 ```java
-// ThingsBoard REST API URL
+// IoT Hub REST API URL
 String url = "http://localhost:8080";
 
 // Perform login with default Customer User credentials
@@ -323,5 +323,5 @@ client.close();
 {: .copy-code}
 
 #### More examples
-You can find the example to learn how to use ThingsBoard REST Client **[here](https://github.com/thingsboard/tb-ce-rest-client-example)**.
+You can find the example to learn how to use IoT Hub REST Client **[here](https://github.com/thingsboard/tb-ce-rest-client-example)**.
 

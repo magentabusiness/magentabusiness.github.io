@@ -3,7 +3,7 @@ layout: docwithnav-paas-eu
 assignees:
 - ashvayka
 title: Customers
-description: ThingsBoard Customers management
+description: IoT Hub Customers management
 
 customer-add-new-pe:
     0:

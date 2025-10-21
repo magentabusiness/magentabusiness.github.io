@@ -1,7 +1,7 @@
 * TOC
   {:toc}
 
-ThingsBoard provides interactive REST API documentation via [Swagger UI](https://swagger.io/){:target="_blank"}. This tool allows you to explore available API methods, understand their parameters, and execute API requests directly from your browser.
+IoT Hub provides interactive REST API documentation via [Swagger UI](https://swagger.io/){:target="_blank"}. This tool allows you to explore available API methods, understand their parameters, and execute API requests directly from your browser.
 
 ## Where to find Swagger UI?
 
@@ -25,28 +25,28 @@ http://$THINGSBOARD_HOST:PORT/swagger-ui.html
 ```
 {: .copy-code}
 
-&#42;Replace **$THINGSBOARD_HOST:PORT** with your actual ThingsBoard server address.
+&#42;Replace **$THINGSBOARD_HOST:PORT** with your actual IoT Hub server address.
 
 For example, you may browse Community Edition demo server API documentation using the [Swagger UI link](https://demo.thingsboard.io/swagger-ui.html){:target="_blank"}.
 {% endif %}
 {% if docsPrefix == "paas/" %}
 Every [ThingsBoard Cloud](https://thingsboard.cloud/){:target="_blank"} instance has its own Swagger UI page.   
-Browse ThingsBoard Cloud REST API documentation by clicking the button below:
+Browse IoT Hub Cloud REST API documentation by clicking the button below:
 
 <br>
-<p><a href="https://thingsboard.cloud/swagger-ui.html" target="_blank" class="n-button add-device">ThingsBoard Cloud REST API documentation</a></p>
+<p><a href="https://thingsboard.cloud/swagger-ui.html" target="_blank" class="n-button add-device">IoT Hub Cloud REST API documentation</a></p>
 {% endif %}
 {% if docsPrefix == "paas/eu/" %}
 Every [ThingsBoard EU Cloud](https://eu.thingsboard.cloud/){:target="_blank"} instance has its own Swagger UI page.   
-Browse ThingsBoard EU Cloud REST API documentation by clicking the button below:
+Browse IoT Hub EU Cloud REST API documentation by clicking the button below:
 
 <br>
-<p><a href="https://eu.thingsboard.cloud/swagger-ui.html" target="_blank" class="n-button add-device">ThingsBoard EU Cloud REST API documentation</a></p>
+<p><a href="https://eu.thingsboard.cloud/swagger-ui.html" target="_blank" class="n-button add-device">IoT Hub EU Cloud REST API documentation</a></p>
 {% endif %}
 
 ## How to authenticate in Swagger UI?
 
-- If you are already logged in via the main ThingsBoard login page, Swagger UI will automatically use your credentials.
+- If you are already logged in via the main IoT Hub login page, Swagger UI will automatically use your credentials.
 - You can manually authenticate or authorize as a different user using the "**Authorize**" button in the top-right corner of the Swagger page. Enter the username and password. Then, click "Authorize".
 
 {% include images-gallery.html imageCollection="swagger-ui" %}
@@ -77,7 +77,7 @@ Default token expiration:
 ## How to obtain a JWT token?
 
 {% if docsPrefix == null or docsPrefix == "pe/" %}
-To obtain a JWT token for the user "tenant@thingsboard.org" with password "tenant" on "$THINGSBOARD_URL" (actual ThingsBoard server address), execute the following command:
+To obtain a JWT token for the user "tenant@thingsboard.org" with password "tenant" on "$THINGSBOARD_URL" (actual IoT Hub server address), execute the following command:
 
 ```text
 curl -X POST --header 'Content-Type: application/json' \
@@ -126,7 +126,7 @@ X-Authorization: Bearer $YOUR_JWT_TOKEN
 
 ## Additional tools
 
-For easier integration with the ThingsBoard API, you can use ThingsBoard team client libraries:
+For easier integration with the IoT Hub API, you can use IoT Hub team client libraries:
 
 - [Java REST API Client](/docs/{{docsPrefix}}reference/rest-client/){:target="_blank"} – client library written in Java to simplify consumption of the REST API.
 - [Python REST API Client](/docs/{{docsPrefix}}reference/python-rest-client/){:target="_blank"} – client library written in Python to simplify the consumption of the REST API.

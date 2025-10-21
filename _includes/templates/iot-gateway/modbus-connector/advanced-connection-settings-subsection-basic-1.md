@@ -10,7 +10,7 @@ You can configure additional settings like: TLS connection, polling time, byte o
 | Retries on invalid                  | **true**           | Retrying sending data to the master if it is failed                           |
 | Poll period (ms)                    | **5000**           | Period in milliseconds to check the attributes and the telemetry on the slave |
 | Connect attempt time (ms)           | **5000**           | A waiting period in milliseconds before connecting to the master              |
-| Connect attempt count               | **5**              | The number of connection attempts made through the ThingsBoard gateway        |
+| Connect attempt count               | **5**              | The number of connection attempts made through the IoT Hub gateway        |
 | Wait after failed attempts (ms)     | **300000**         | A waiting period in milliseconds before trying to send data to the master     |
 | ---                                 
 

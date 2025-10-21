@@ -1,22 +1,22 @@
 ---
 layout: docwithnav-gw
-title: How to enable remote shell feature on ThingsBoard IoT Gateway
-description: How to enable remote shell feature on ThingsBoard IoT Gateway
+title: How to enable remote shell feature on IoT Hub IoT Gateway
+description: How to enable remote shell feature on IoT Hub IoT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to enable remote shell feature and control operation system with ThingsBoard IoT Gateway from your ThingsBoard platform instance.  
+This guide will help you to enable remote shell feature and control operation system with IoT Hub IoT Gateway from your IoT Hub platform instance.  
 
 For purpose of this guide, we will use following things:
-1. Instance of ThingsBoard platform (How to install you can [read here](/docs/user-guide/install/installation-options/)). For this guide we will use [thingsboard.cloud](https://thingsboard.cloud)
-2. Installed and configured ThingsBoard IoT Gateway (How to install you can [read here](/docs/iot-gateway/installation/)).
+1. Instance of IoT Hub platform (How to install you can [read here](/docs/user-guide/install/installation-options/)). For this guide we will use [thingsboard.cloud](https://thingsboard.cloud)
+2. Installed and configured IoT Hub IoT Gateway (How to install you can [read here](/docs/iot-gateway/installation/)).
 
 ## Step 1. Remote shell activation
 
- - To activate remote shell in ThingsBoard IoT Gateway you should add or change parameter **remoteShell** to **true** in the section **thingsboard** in the general configuration file (**tb_gateway.yaml**);
+ - To activate remote shell in IoT Hub IoT Gateway you should add or change parameter **remoteShell** to **true** in the section **iot hub** in the general configuration file (**tb_gateway.yaml**);
 
   ![](https://img.thingsboard.io/gateway/charhe-remote-shell-parameter.png)
   <br>
@@ -33,10 +33,10 @@ For purpose of this guide, we will use following things:
 
  - Restart the gateway with the new configuration.
 
-Example of the **thingsboard** section in the general configuration file:
+Example of the **iot hub** section in the general configuration file:
 ```json
 {
-  "thingsboard": {
+  "iot hub": {
     "host": "thingsboard.cloud",
     "port": 1883,
     "security": {
@@ -94,7 +94,7 @@ To do this we use following steps:
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main IoT Hub features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
