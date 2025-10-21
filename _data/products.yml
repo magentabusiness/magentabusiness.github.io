@@ -68,7 +68,7 @@
 #  docsPrefix: /docs/pe/mobile/
 #  getStarted: /docs/pe/mobile/getting-started/
 #- title: Cloud
-#  fulltitle: IoT Hub Cloud
+#  fulltitle: IoT Hub
 #  description: IoT Hub Documentation
 #  tag: paas
 #  icon: /images/thingsboard-c-icon.svg

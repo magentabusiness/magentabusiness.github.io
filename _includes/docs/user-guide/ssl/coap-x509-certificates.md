@@ -4,7 +4,7 @@
 X.509 Certificates are used to setup [mutual](https://en.wikipedia.org/wiki/Mutual_authentication) (two-way) authentication for CoAP over DTLS.
 It is similar to [access token](/docs/{{docsPrefix}}user-guide/access-token/) authentication, but uses X.509 Certificate instead of token.
 
-Instructions below will describe how to connect CoAP client using X.509 Certificate to IoT Hub Cloud.
+Instructions below will describe how to connect CoAP client using X.509 Certificate to IoT Hub.
 
 ## Step 1. Generate Client certificate
 
@@ -34,7 +34,7 @@ Alternatively, the same can be done through the [REST API](/docs/{{docsPrefix}}r
 {% include templates/coap-dtls/coap-client-dtls.md %}
 
 Finally, run the example script below to validate DTLS with X.509 Certificate auth and subscribe for shared attributes updates:
-The coap-client example below demonstrates how to connect to [IoT Hub Cloud](https://{{hostName}}/signup) or to any other IoT Hub CoAP server that has valid and trusted certificate.
+The coap-client example below demonstrates how to connect to [IoT Hub](https://{{hostName}}/signup) or to any other IoT Hub CoAP server that has valid and trusted certificate.
 
 ```bash
 coap-client-openssl -v 9 -c cert.pem  -j key.pem -m POST \

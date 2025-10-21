@@ -49,7 +49,7 @@ Example:
 ```
 You can learn more about working with telemetry data [here](/{{peDocsPrefix}}docs/user-guide/telemetry/){: target="_blank"}.
 
-By default, **IoT Hub Edge** synchronizes telemetry data with the **IoT Hub Cloud**. 
+By default, **IoT Hub Edge** synchronizes telemetry data with the **IoT Hub**. 
 During an internet outage, telemetry is stored **locally** and sent to the **Cloud** once the connection is restored.
 
 ### Relations

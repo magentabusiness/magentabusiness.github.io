@@ -11,10 +11,10 @@ download-app-with-qr-code:
         title: 'Log into your IoT Hub account and navigate to the "Home" page. You will find the QR code for connecting the mobile app in the bottom right corner;'
     1:
         image: /images/user-guide/ui/qr-code/qr-code-scan-and-install-app-paas.png
-        title: 'Open the camera app on your phone or tablet and point it at the QR code. The phone will automatically scan the code and show the link button. Click this button to open the link to download the <b>IoT Hub Cloud mobile app</b>;'
+        title: 'Open the camera app on your phone or tablet and point it at the QR code. The phone will automatically scan the code and show the link button. Click this button to open the link to download the <b>IoT Hub mobile app</b>;'
     2:
         image: /images/user-guide/ui/qr-code/qr-code-mobile-install-app-paas.png
-        title: 'Install IoT Hub Cloud mobile application;'
+        title: 'Install IoT Hub mobile application;'
     3:
         image: /images/user-guide/ui/qr-code/qr-code-mobile-open-app-1-paas.png
         title: 'Launch the IoT Hub mobile app to start using it.'
@@ -33,13 +33,13 @@ clicking-button:
 authorize-with-qr-code:
     0:
         image: /images/user-guide/ui/qr-code/qr-code-mobile-login-with-qr-1-paas.png
-        title: 'Launch the IoT Hub Cloud mobile app on your device and use the QR code scanning feature. Make sure you have the latest version of the app installed;'
+        title: 'Launch the IoT Hub mobile app on your device and use the QR code scanning feature. Make sure you have the latest version of the app installed;'
     2:
         image: /images/user-guide/ui/qr-code/qr-code-scan-and-open-app-pe.png
         title: 'Scan the QR code on the "Home" page of your IoT Hub instance using the mobile app. You will find the QR code for connecting the mobile app in the bottom right corner;'
     3:
         image: /images/user-guide/ui/qr-code/qr-code-mobile-dashboard-1-paas.png
-        title: 'You have successfully logged into the IoT Hub Cloud mobile app with your account.'
+        title: 'You have successfully logged into the IoT Hub mobile app with your account.'
 
 mobile-app-qr-code-widget-settings:
     0:
@@ -49,7 +49,7 @@ mobile-app-qr-code-widget-settings:
 application-settings-default:
     0:
         image: /images/user-guide/ui/qr-code/mobile-app-qr-code-widget-settings-2-pe.png
-        title: 'Leave "Default" applications settings to use the <b>IoT Hub Cloud</b> mobile application.'
+        title: 'Leave "Default" applications settings to use the <b>IoT Hub</b> mobile application.'
 
 application-settings-custom:
     0:

@@ -2,14 +2,14 @@
 layout: docwithnav-paas
 assignees:
 - ashvayka
-title: IoT Hub Cloud Subscription plans definition
+title: IoT Hub Subscription plans definition
 description: Features and advantages of subscription payment model
 redirect_from: "/products/paas/subscription/"
 
 cancel-my-subscription:
     0:
         image: /images/subscriptions/cancel-my-subscription-1-paas-eu.png
-        title: 'Log in to IoT Hub Cloud as a Tenant Administrator. After logging in, go to account settings by clicking the three-dot icon in the upper-right corner of the screen and selecting "Account" from the dropdown menu;'
+        title: 'Log in to IoT Hub as a Tenant Administrator. After logging in, go to account settings by clicking the three-dot icon in the upper-right corner of the screen and selecting "Account" from the dropdown menu;'
     1:
         image: /images/subscriptions/cancel-my-subscription-2-paas-eu.png
         title: 'Under the "Profile" tab, click the orange "Delete account" button;'
@@ -458,16 +458,16 @@ where "**K**" means 1 thousand, "**M**" means 1 million, "**B**" means 1 billion
 ## White labeling
 
 IoT Hub web interface allows you to configure your company or product logo and color scheme in 2 minutes with zero coding efforts and no service restart required. 
-See feature [documentation](/docs/{{docsPrefix}}user-guide/white-labeling/) for more details. IoT Hub Cloud extends white-labeling feature with ability to configure own domain name easily. 
+See feature [documentation](/docs/{{docsPrefix}}user-guide/white-labeling/) for more details. IoT Hub extends white-labeling feature with ability to configure own domain name easily. 
 See [managing domain](/products/{{docsPrefix}}domains/) for more details.
 
 The white-labeling feature is available for **Prototype** and **Startup** subscription plans.
 
 ## How to cancel my subscription?
 
-To terminate your IoT Hub Cloud subscription, follow these steps:
+To terminate your IoT Hub subscription, follow these steps:
 
-- Log in to IoT Hub Cloud as Tenant Administrator;
+- Log in to IoT Hub as Tenant Administrator;
 - Go to account settings by clicking the **three-dot icon** in the upper-right corner of the screen and selecting "**Account**" from the dropdown menu;
 - Under the "**Profile**" tab, click the orange "**Delete account**" button;
 - Follow the instructions to cancel your subscription;

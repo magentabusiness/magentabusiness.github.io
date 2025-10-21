@@ -27,7 +27,7 @@ You will require the following items:
 
 ## Create device on IoT Hub
 
-**1. In our example, we use IoT Hub Cloud**
+**1. In our example, we use IoT Hub**
 
 Create an account and then [log in](https://thingsboard.cloud/login){:target="_blank"}.
 
@@ -45,7 +45,7 @@ Go to the "**Devices**" page of the "**Entities**" section, click on the "**+**"
 
 <br>**4. Copy and save the Access token**
 
-It will be needed in further device configuration for connecting to IoT Hub cloud.
+It will be needed in further device configuration for connecting to IoT Hub.
 
 ![access token](/images/devices-library/basic/single-board-computers/raspberry-pi-cm4/access_token.png)
 

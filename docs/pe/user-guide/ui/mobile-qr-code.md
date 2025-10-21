@@ -49,7 +49,7 @@ mobile-app-qr-code-widget-settings:
 application-settings-default:
     0:
         image: /images/user-guide/ui/qr-code/mobile-app-qr-code-widget-settings-2-pe.png
-        title: 'Leave "Default" applications settings to use the <b>IoT Hub Cloud</b> mobile application.'
+        title: 'Leave "Default" applications settings to use the <b>IoT Hub</b> mobile application.'
 
 application-settings-custom:
     0:

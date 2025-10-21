@@ -1,7 +1,7 @@
 #### Prerequisites
 
 * Have a proxy server (**HTTP** or **HTTPS**) with its address, port, and credentials (if required).
-* Have **IoT Hub Edge** installed and running, and **IoT Hub Cloud** accessible.
+* Have **IoT Hub Edge** installed and running, and **IoT Hub** accessible.
 * Have [Docker](https://docs.docker.com/engine/install/){: target="_blank"} and [Docker Compose](https://docs.docker.com/compose/install/){: target="_blank"} installed on your machine.
 
 {% capture docker-deployment %}

@@ -18,7 +18,7 @@ When deployed in remote locations with unreliable internet connections, **Edge**
 
 ## Prerequisites
 * Have [Docker](https://docs.docker.com/engine/install/){: target="_blank"} installed
-* The **IoT Hub Cloud** Account (Demo, Professional edition, or Community edition)
+* The **IoT Hub** Account (Demo, Professional edition, or Community edition)
 * Any Linux-based **IoT Gateway** device
 
 ## Step 1. Creating a New Edge Instance

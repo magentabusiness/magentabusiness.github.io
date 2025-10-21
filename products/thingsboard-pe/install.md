@@ -54,7 +54,7 @@ hidetoc: "true"
         <div class="tab-panel">
             <div id="trial-marketplace" class="choose-marketplace">
                 <p>
-                    Signup for free month trial on IoT Hub Cloud
+                    Signup for free month trial on IoT Hub
                 </p>
                 <div class="marketplace" style="padding-bottom: 10px;">
                     <div id="pe-cloud-trial" class="pricing-image-wrapper clickable" style="max-width: 50%;">
@@ -64,7 +64,7 @@ hidetoc: "true"
                 </div>
                 <div style="font-size: 20px;">
                 <p style="padding-top: 20px; font-size: 20px;">
-                    IoT Hub Cloud is a shared enviroment with multiple limitations, such as:
+                    IoT Hub is a shared enviroment with multiple limitations, such as:
                 </p>
                 <ul style="margin: 10px 10px 10px 60px;">
                     <li>amount of active device connections</li>

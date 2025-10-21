@@ -7,7 +7,7 @@ The client must specify the access token as a username in MQTT connect message.
 
 ## Plain MQTT (without SSL)
 
-Let's review a simple command to upload temperature readings using Access Token *YOUR_ACCESS_TOKEN* to IoT Hub Cloud.
+Let's review a simple command to upload temperature readings using Access Token *YOUR_ACCESS_TOKEN* to IoT Hub.
 See [MQTT API](/docs/{{docsPrefix}}reference/mqtt-api/) for more details. The command is using plain MQTT without TLS:
 
 ```bash

@@ -105,7 +105,7 @@ To provision the **IoT Hub Gateway**:
 {% assign iotGWdashboardPE = '
     ===
         image: /images/devices-library/edge/recomputer-r1000/1.1-create-group-pe.webp,
-        title: Log in to the [IoT Hub Cloud account](https://iothub.magenta.at/){: target="_blank"}, navigate to the **Dashboards** section and select the **"Group"** tab. Click the **"+"** icon to add a new group. In the **"Add entity group"** pop-up window, enter the group name in the **"Name"** field and click the **"Add"** button.
+        title: Log in to the [IoT Hub account](https://iothub.magenta.at/){: target="_blank"}, navigate to the **Dashboards** section and select the **"Group"** tab. Click the **"+"** icon to add a new group. In the **"Add entity group"** pop-up window, enter the group name in the **"Name"** field and click the **"Add"** button.
     ===
         image: /images/devices-library/edge/recomputer-r1000/1.2-click-details-dashboard-pe.webp,
         title: Then, select the **"All"** tab and find the **"IoT Hub IoT Gateways"** dashboard. The **"IoT Hub IoT Gateways"** dashboard is one of the pre-created, out-of-the-box dashboards available. Click the **"Dashboard details"** button.

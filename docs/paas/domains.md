@@ -3,7 +3,7 @@ layout: docwithnav-paas
 assignees:
 - ashvayka
 title: Managing domain
-description: Domain managing through IoT Hub Cloud
+description: Domain managing through IoT Hub
 redirect_from: "/products/paas/domains/"
 
 register-domain:
@@ -23,7 +23,7 @@ register-domain:
 login-with-domain:
     0:
         image: /images/user-guide/domain/domain-login-1-paas.png
-        title: 'Now you can use your domain name to access IoT Hub Cloud web interface and services. Try to login by entering the chosen domain name in the browser address line.'
+        title: 'Now you can use your domain name to access IoT Hub web interface and services. Try to login by entering the chosen domain name in the browser address line.'
     
 domain-details:
     0:

@@ -68,7 +68,7 @@ google-credentials-for-oauth-1:
 google-configuration-of-thingsboard-google-1:
     0:
         image: /images/user-guide/oauth-2-support/google/configuration-of-thingsboard/google-configuration-of-thingsboard-1-paas.png
-        title: 'Login to your IoT Hub Cloud account. Go to the "OAuth 2.0" page of the "Security" section. While on the "Domains" tab, click the "plus" icon;'
+        title: 'Login to your IoT Hub account. Go to the "OAuth 2.0" page of the "Security" section. While on the "Domains" tab, click the "plus" icon;'
     1:
         image: /images/user-guide/oauth-2-support/google/configuration-of-thingsboard/google-configuration-of-thingsboard-2-paas.png
         title: 'Enter your domain name or IP address of your IoT Hub instance. Click "Create new" in the "OAuth 2.0 clients" section to add a new one.'
@@ -133,10 +133,10 @@ auth0-credentials-1:
 oauth0-configuration-of-thingsboard-1:
     0:
         image: /images/user-guide/oauth-2-support/google/configuration-of-thingsboard/google-configuration-of-thingsboard-1-paas.png
-        title: 'Login to your IoT Hub Cloud account. Go to the "OAuth 2.0" page of the "Security" section. While on the "Domains" tab, click the "plus" icon;'
+        title: 'Login to your IoT Hub account. Go to the "OAuth 2.0" page of the "Security" section. While on the "Domains" tab, click the "plus" icon;'
     1:
         image: /images/user-guide/oauth-2-support/google/configuration-of-thingsboard/google-configuration-of-thingsboard-2-paas.png
-        title: 'Enter your domain name of your IoT Hub Cloud instance. Click "Create new" in the "OAuth 2.0 clients" section to add a new one.'
+        title: 'Enter your domain name of your IoT Hub instance. Click "Create new" in the "OAuth 2.0 clients" section to add a new one.'
 
 oauth0-configuration-of-thingsboard-2:
     0:
@@ -257,7 +257,7 @@ create-password:
 keycloak-add-thingsboard-oauth-client-1:
     0:
         image: /images/user-guide/oauth-2-support/keycloak/keycloak-configuration-of-thingsboard-1-paas.png
-        title: 'Login to your IoT Hub Cloud account. Navigate to the "OAuth 2.0 clients" tab, and click "plus" icon to add a new client;'
+        title: 'Login to your IoT Hub account. Navigate to the "OAuth 2.0 clients" tab, and click "plus" icon to add a new client;'
     1:
         image: /images/user-guide/oauth-2-support/keycloak/keycloak-configuration-of-thingsboard-2-paas.png
         title: 'Enter "Keycloak" as the title. Select the "Custom" from the dropdown menu as the authentication provider. Now enter the "Client ID" and "Client secret" using the values retrieved from the Keycloak console. In the "General" block of the "Advanced settings" section, fill in all the necessary URLs. The client authentication method should be set to "POST". Enter "Keycloak" as the provider label. Add the following scopes in the scope field: "openid", "email", "profile";'

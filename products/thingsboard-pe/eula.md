@@ -39,7 +39,7 @@ DEFINITIONS
 
 **“Territory”** means worldwide unless otherwise provided in the Offer document.
 
-**“IoT Hub Cloud”** means a public managed service cluster offering from the Licensor.
+**“IoT Hub”** means a public managed service cluster offering from the Licensor.
 
 **“Total License cost”** means a payment for the Software that supports more than 10,000 connected devices.  
 

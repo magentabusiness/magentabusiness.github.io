@@ -3,11 +3,11 @@
 
 ## Overview
 
-**IoT Hub** offers two distinct deployment options: **IoT Hub Edge** and **IoT Hub Cloud**.
+**IoT Hub** offers two distinct deployment options: **IoT Hub Edge** and **IoT Hub**.
 
 **IoT Hub Edge** is designed specifically for local, distributed data processing, enabling data analysis and management directly at the source of data generation. This approach allows for local processing, storage, and immediate response to critical situations, even without a continuous connection to the central server. For more information, see the [What is ThingsBoard Edge](/docs/{{docsPrefix}}getting-started-guides/what-is-edge/){: target="_blank"} article.
 
-In contrast, **IoT Hub Cloud** is a fully managed, scalable, and fault-tolerant platform hosted in the cloud. The devices connected to the cloud transfer data over the internet. It is perfect for centralized data collection, processing, and management. For more information, see the [What is ThingsBoard](/docs/{{docsPrefix}}getting-started-guides/what-is-edge/){: target="_blank"} article.
+In contrast, **IoT Hub** is a fully managed, scalable, and fault-tolerant platform hosted in the cloud. The devices connected to the cloud transfer data over the internet. It is perfect for centralized data collection, processing, and management. For more information, see the [What is ThingsBoard](/docs/{{docsPrefix}}getting-started-guides/what-is-edge/){: target="_blank"} article.
 
 ### The Key Differences Between Edge and Cloud 
 
@@ -26,11 +26,11 @@ Although **Edge is designed similarly to Cloud**, the main difference lies **in 
 
 ## Synchronization Architecture
 
-**IoT Hub Edge** and **IoT Hub Cloud** communicate using the [gRPC (Remote Procedure Call) protocol](https://grpc.io/){: target="_blank"}. This communication channel allows for efficient data synchronization between edge devices and the cloud server, enabling a seamless flow of messages while minimizing overhead and latency.
+**IoT Hub Edge** and **IoT Hub** communicate using the [gRPC (Remote Procedure Call) protocol](https://grpc.io/){: target="_blank"}. This communication channel allows for efficient data synchronization between edge devices and the cloud server, enabling a seamless flow of messages while minimizing overhead and latency.
 
 To optimize this process, messages are serialized using [Protocol Buffers (ProtoBuf)](https://github.com/protocolbuffers/protobuf){: target="_blank"}.
 
-All messages sent from **IoT Hub Edge** to **IoT Hub Cloud** are stored in a local **PostgreSQL** table **(cloud_event table)** prior to transmission. Starting with the **3.9 release**, these events can be stored in **Kafka topics** (in case Kafka is used as a queue). This allows **IoT Hub Edge** to operate without connectivity to the Cloud. Once a connection is established, all messages in the local **cloud_event/ts_cloud_event tables (or Kafka topic)** are sent to the **Cloud** and marked as successfully transferred.
+All messages sent from **IoT Hub Edge** to **IoT Hub** are stored in a local **PostgreSQL** table **(cloud_event table)** prior to transmission. Starting with the **3.9 release**, these events can be stored in **Kafka topics** (in case Kafka is used as a queue). This allows **IoT Hub Edge** to operate without connectivity to the Cloud. Once a connection is established, all messages in the local **cloud_event/ts_cloud_event tables (or Kafka topic)** are sent to the **Cloud** and marked as successfully transferred.
 
 To view the list of messages transferred from the **Cloud** to the **Edge**, go to the **Edge management > Instances** section of your Cloud (Server), click on the **Edge** and select the **"Downlinks"** tab:
 

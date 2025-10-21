@@ -31,10 +31,10 @@ For example, you may browse Community Edition demo server API documentation usin
 {% endif %}
 {% if docsPrefix == "paas/" %}
 Every [ThingsBoard Cloud](https://thingsboard.cloud/){:target="_blank"} instance has its own Swagger UI page.   
-Browse IoT Hub Cloud REST API documentation by clicking the button below:
+Browse IoT Hub REST API documentation by clicking the button below:
 
 <br>
-<p><a href="https://thingsboard.cloud/swagger-ui.html" target="_blank" class="n-button add-device">IoT Hub Cloud REST API documentation</a></p>
+<p><a href="https://thingsboard.cloud/swagger-ui.html" target="_blank" class="n-button add-device">IoT Hub REST API documentation</a></p>
 {% endif %}
 {% if docsPrefix == "paas/eu/" %}
 Every [ThingsBoard EU Cloud](https://eu.thingsboard.cloud/){:target="_blank"} instance has its own Swagger UI page.   

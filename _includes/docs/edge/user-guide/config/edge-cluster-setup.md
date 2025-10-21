@@ -13,7 +13,7 @@ Edge-specific considerations:
 * All **Edge nodes** connect to the **same database**.
 * **Devices** can connect to any node based on load balancing.
 * **Edge nodes** share the workload and maintain local failover.
-* The **Edge Cluster** syncs aggregated data to **IoT Hub Cloud**.
+* The **Edge Cluster** syncs aggregated data to **IoT Hub**.
 
 ![edge-cluster](/images/edge/config/edge-cluster.webp){: style="display: block; margin: auto; max-width: 600px; max-height: 600px"}
 

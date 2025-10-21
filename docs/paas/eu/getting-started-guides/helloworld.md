@@ -2,7 +2,7 @@
 layout: docwithnav-paas-eu
 assignees:
 - ashvayka
-title: Getting Started with IoT Hub Cloud
+title: Getting Started with IoT Hub
 description: Getting started with IoT Hub open-source IoT platform and simulated IoT devices
 
 step1:

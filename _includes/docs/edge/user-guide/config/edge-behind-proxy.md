@@ -3,7 +3,7 @@
 
 ### Overview
 
-Installing **Edge** behind a [proxy](https://en.wikipedia.org/wiki/Proxy_server){: target="_blank"} means that the **Edge** instance cannot directly access the internet and all communication to **IoT Hub Cloud** or any other external service is routed through a **proxy server**.
+Installing **Edge** behind a [proxy](https://en.wikipedia.org/wiki/Proxy_server){: target="_blank"} means that the **Edge** instance cannot directly access the internet and all communication to **IoT Hub** or any other external service is routed through a **proxy server**.
 
 Compare:
 * **Without Proxy** (direct connection):

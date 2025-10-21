@@ -27,7 +27,7 @@ Before setting up the integration, ensure the following:
 
 In this tutorial, we use **IoT Hub** as the external service receiving HTTP requests from TBMQ. However, any other HTTP-compatible service can be used.
 
-Follow the official **[ThingsBoard HTTP Integration Guide](/docs/paas/user-guide/integrations/http/)** to create an integration on IoT Hub Cloud.
+Follow the official **[IoT Hub HTTP Integration Guide](/docs/paas/user-guide/integrations/http/)** to create an integration on IoT Hub.
 
 Once the HTTP Integration is created:
 
@@ -91,7 +91,7 @@ To send a message, follow these steps:
 
 Once the message is published:
 
-1. In the **IoT Hub Cloud** open the HTTP Integration details.
+1. In the **IoT Hub** open the HTTP Integration details.
 2. Go to the **Events** tab.
 3. If the setup is correct, you should see an event with the status **'OK'** and a message payload similar to:
 

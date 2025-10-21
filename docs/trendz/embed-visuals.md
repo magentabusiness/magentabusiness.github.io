@@ -15,7 +15,7 @@ or external sites. In this guide, you will learn how to do this.
 
 ## Prerequisites
 
-You should [import Trendz widget bundle into ThingsBoard](/docs/trendz/trendz-bundle#Import-Trendz-bundle-into-ThingsBoard). If you are using IoT Hub Cloud - you should already have required bundle imported into ThingsBoard.
+You should [import Trendz widget bundle into ThingsBoard](/docs/trendz/trendz-bundle#Import-Trendz-bundle-into-ThingsBoard). If you are using IoT Hub - you should already have required bundle imported into ThingsBoard.
 
 ## Add visualization on IoT Hub Dashboard
 

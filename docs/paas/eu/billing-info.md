@@ -3,7 +3,7 @@ layout: docwithnav-paas-eu
 assignees:
 - ashvayka
 title: Plan and billing
-description: Billing options via IoT Hub Cloud
+description: Billing options via IoT Hub
 subscription:
     0:
         image: /images/cloud/subscription.png
@@ -35,7 +35,7 @@ upcomingInvoice:
 * TOC
 {:toc}
 
-The **IoT Hub Cloud** allows customers to easily purchase subscription plans online. The online payment processing is secured by [Stripe](https://stripe.com/), which allows both credit and debit cards. IoT Hub Inc. has no access to your card data.
+The **IoT Hub** allows customers to easily purchase subscription plans online. The online payment processing is secured by [Stripe](https://stripe.com/), which allows both credit and debit cards. IoT Hub Inc. has no access to your card data.
 You can easily pay for the subscription online, without manual paperwork.
 
 Notice: payments are non-refundable.

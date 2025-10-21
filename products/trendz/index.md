@@ -6,7 +6,7 @@ description: IoT solution for real-time data analysis, anomaly detection, predic
 cloudPlan:
     0:
         image: /images/trendz/cloud-1.webp
-        title: 'Log in to IoT Hub Cloud account and select “Plan and Billing” menu option. Press “Update Plan” button'
+        title: 'Log in to IoT Hub account and select “Plan and Billing” menu option. Press “Update Plan” button'
     1:
         image: /images/trendz/cloud-2.webp
         title: 'Choose “IoT Hub + Trendz” and select the most suitable plan for you'

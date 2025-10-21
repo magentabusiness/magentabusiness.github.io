@@ -44,7 +44,7 @@ Alternatively, the same can be done through the [REST API](/docs/{{docsPrefix}}r
 
 ### Step 4. Test the connection
 
-Execute the following command to upload temperature readings to IoT Hub Cloud using secure channel:
+Execute the following command to upload temperature readings to IoT Hub using secure channel:
 
 {% if docsPrefix contains 'paas/' %}
 ```bash
