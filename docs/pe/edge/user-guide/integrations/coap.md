@@ -182,7 +182,7 @@ The payload type selection should be based on the device's capabilities and the 
 
 ### Create the integration and the converter templates
 
-Only the **IoT Hub Professional Edition** creates converters and integration templates.
+Only the **IoT Hub** creates converters and integration templates.
 
 So please use [**ThingsBoard Cloud**](https://thingsboard.cloud/signup){: target="_blank"} or [**install**](/docs/user-guide/install/pe/installation-options/){: target="_blank"} your own platform instance to log in as a **Tenant administrator**.
 

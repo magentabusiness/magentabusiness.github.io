@@ -197,7 +197,7 @@ description: Explore powerful IoT data visualization with ThingsBoard. Build int
                 </div>
                 <div class="card">
                     <div class="content">
-                        <h4><a href="/docs/getting-started-guides/helloworld-pe/#step-7-share-dashboard-with-customers">In IoT Hub Professional Edition</a></h4>
+                        <h4><a href="/docs/getting-started-guides/helloworld-pe/#step-7-share-dashboard-with-customers">In IoT Hub</a></h4>
                         <p>You can fully control access to dashboards with advanced RBAC and white labeling—enabling flexible, secure, and branded data visualization for your customers.</p>
                     </div>
                 </div>

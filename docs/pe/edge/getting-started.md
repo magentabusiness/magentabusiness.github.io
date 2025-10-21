@@ -114,7 +114,7 @@ step5Server:
 step5Edge:
     0:
         image: /images/pe/edge/getting-started/step-5-item-10-pe.webp
-        title: 'Go to the <b>Dashboards</b> section and open the dashboard you have created on the <b>IoT Hub Professional Edition Server</b>'    
+        title: 'Go to the <b>Dashboards</b> section and open the dashboard you have created on the <b>IoT Hub Server</b>'    
     1:
         image: /images/pe/edge/getting-started/step-5-item-11-pe.webp
         title: 'Verify that these are the same widgets that you have added on the Cloud.'
@@ -126,7 +126,7 @@ step5Edge:
 
 {% assign docsPrefix = "pe/edge/" %}
 
-{% assign currentThingsBoardVersion = "IoT Hub Professional Edition" %}
+{% assign currentThingsBoardVersion = "IoT Hub" %}
 
 {% include templates/edge/getting-started/introduction.md %}
 

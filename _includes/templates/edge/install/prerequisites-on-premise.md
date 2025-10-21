@@ -1,4 +1,4 @@
-{% if currentThingsBoardVersion == "IoT Hub Professional Edition" %}
+{% if currentThingsBoardVersion == "IoT Hub" %}
 {% assign peDocsPrefix = "pe/" %}
 {% endif %}
 

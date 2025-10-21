@@ -109,7 +109,7 @@ Additionally, the users have access to data from the devices available to them d
 
 - User Group 3 has been assigned the role of "Access to all resources". This role grants permissions for creating, editing, and deleting all entities such as devices, dashboards, assets, and customers.
 
-In IoT Hub Professional Edition, there are two types of roles: [Generic](/docs/{{docsPrefix}}user-guide/rbac/#generic-roles) and [Group](/docs/{{docsPrefix}}user-guide/rbac/#group-roles). Each role type has its own permissions.
+In IoT Hub, there are two types of roles: [Generic](/docs/{{docsPrefix}}user-guide/rbac/#generic-roles) and [Group](/docs/{{docsPrefix}}user-guide/rbac/#group-roles). Each role type has its own permissions.
 
 ### Creating a new role
 

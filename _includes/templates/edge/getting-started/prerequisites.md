@@ -1,4 +1,4 @@
-{% if currentThingsBoardVersion == "IoT Hub Professional Edition" %}
+{% if currentThingsBoardVersion == "IoT Hub" %}
 {% assign appPrefix = "Professional Edition" %}
 {% else %}
 {% assign appPrefix = "Community Edition" %}
@@ -19,7 +19,7 @@ If for any reason you are unable to access and/or use **Edge preset configuratio
 
 ### Accessing User Interfaces: URLs and Credentials
 
-{% if currentThingsBoardVersion == "IoT Hub Professional Edition" %}
+{% if currentThingsBoardVersion == "IoT Hub" %}
 {% assign peDocsPrefix = "pe/" %}
 {% capture contenttogglespec %}
 IoT Hub<br><small>Connect Edge to<br>https://thingsboard.cloud</small>%,%cloud%,%templates/edge/pe-cloud.md%br%

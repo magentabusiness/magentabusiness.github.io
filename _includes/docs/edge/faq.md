@@ -214,7 +214,7 @@ Please <a href="/docs/contact-us/" target="_blank">contact us</a> if you have an
 
 
 ### How do I start a free trial?
-<p>The Edge free trial license key provided when you create Edge instance inside <a href="/pricing/" target="_blank">IoT Hub Professional Edition</a> or <a href="/pricing/?product=thingsboard-cloud" target="_blank">Cloud</a>. 
+<p>The Edge free trial license key provided when you create Edge instance inside <a href="/pricing/" target="_blank">IoT Hub</a> or <a href="/pricing/?product=thingsboard-cloud" target="_blank">Cloud</a>. 
 This key is only active for <b>30 days</b> after activation. 
 To obtain the permanent license key for Edge, please navigate to the <a href="/pricing/?section=thingsboard-edge" target="_blank">pricing page</a> and select the best licensing option for your case.</p>
 

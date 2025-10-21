@@ -3,8 +3,9 @@ import os
 import re
 import argparse
 
-# Ищем "IoT" + пробелы + "Hub" + пробелы + "CE" как отдельные слова (без учета регистра)
-PATTERN = re.compile(r"\bIoT\s+Hub\s+CE\b", re.IGNORECASE)
+# Правильно: \s и \u00A0 (неразрывный пробел)
+WS = r"[\s\u00A0]+"
+PATTERN = re.compile(rf"\bIoT{WS}Hub{WS}Professional{WS}Edition\b", re.IGNORECASE)
 REPLACEMENT = "IoT Hub"
 
 DEFAULT_EXTS = (
@@ -14,7 +15,6 @@ DEFAULT_EXTS = (
     ".css", ".scss", ".txt",
     ".py", ".xml", ".liquid"
 )
-
 DEFAULT_EXCLUDE_DIRS = {".git", ".hg", ".svn", "node_modules", "dist", "build", ".idea", ".vscode"}
 
 def process_file(path: str, dry_run: bool, create_backup: bool) -> int:
@@ -42,13 +42,13 @@ def process_file(path: str, dry_run: bool, create_backup: bool) -> int:
 
     if create_backup:
         try:
-            os.replace(path, path + ".bak")  # быстрый бэкап
+            os.replace(path, path + ".bak")
             with open(path, "w", encoding="utf-8") as f:
                 f.write(new_content)
         except Exception as e:
             print(f"[ERROR] Backup/write failed for {path}: {e}")
             if os.path.exists(path + ".bak"):
-                os.replace(path + ".bak", path)  # откат
+                os.replace(path + ".bak", path)
             return 0
     else:
         try:
@@ -65,12 +65,12 @@ def main():
     ap = argparse.ArgumentParser(
         description="Replace 'IoT Hub' (case-insensitive, whole words) with 'IoT Hub' across a project."
     )
-    ap.add_argument("--root", default=".", help="Корневая директория (по умолчанию текущая).")
-    ap.add_argument("--exts", nargs="*", default=list(DEFAULT_EXTS), help="Список расширений для обработки.")
-    ap.add_argument("--dry-run", action="store_true", help="Показать совпадения без записи изменений.")
+    ap.add_argument("--root", default=".", help="Корневая директория обхода.")
+    ap.add_argument("--exts", nargs="*", default=list(DEFAULT_EXTS), help="Обрабатываемые расширения.")
+    ap.add_argument("--dry-run", action="store_true", help="Показать совпадения без записи.")
     ap.add_argument("--backup", action="store_true", help="Создавать .bak рядом с изменёнными файлами.")
     ap.add_argument("--exclude-dirs", nargs="*", default=list(DEFAULT_EXCLUDE_DIRS),
-                    help="Каталоги, которые нужно пропустить.")
+                    help="Исключаемые каталоги по имени.")
     args = ap.parse_args()
 
     total_files = 0

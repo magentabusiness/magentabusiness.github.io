@@ -61,7 +61,7 @@ export TRENDZ_LICENSE_SECRET=YOUR_LICENSE_SECRET_HERE
 
 ## Step 4. Configure connection with IoT Hub Platform
 
-You can connect Trendz Analytics to the IoT Hub Community Edition or IoT Hub Professional Edition.
+You can connect Trendz Analytics to the IoT Hub Community Edition or IoT Hub.
 
 Edit IoT Hub configuration file
 ```bash 

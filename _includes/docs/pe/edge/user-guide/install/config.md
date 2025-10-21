@@ -4778,7 +4778,7 @@
 		<tr>
 			<td>swagger.description</td>
 			<td>SWAGGER_DESCRIPTION</td>
-			<td> IoT Hub Professional Edition IoT platform REST API documentation.</td>
+			<td> IoT Hub IoT platform REST API documentation.</td>
 			<td> The description on the API doc UI page</td>
 		</tr>
 		<tr>

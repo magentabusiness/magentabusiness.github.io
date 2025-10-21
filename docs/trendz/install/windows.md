@@ -58,7 +58,7 @@ license:
 
 ## Step 4. Configure connection with IoT Hub Platform
 
-You can connect Trendz Analytics to the IoT Hub Community Edition or IoT Hub Professional Edition.
+You can connect Trendz Analytics to the IoT Hub Community Edition or IoT Hub.
 
 Open the Notepad or other editor as administrator user (right click on the app icon and select "Run as administrator").  
 Open the following file for editing (select "All Files" instead of "Text Documents" in file choosing dialog, the encoding is UTF-8):

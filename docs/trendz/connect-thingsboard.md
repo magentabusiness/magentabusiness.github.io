@@ -11,7 +11,7 @@ description: Connect Trendz Analytics platform to the IoT Hub
 
 
 ## Connect to IoT Hub
-You can connect Trendz Analytics to the IoT Hub Community Edition or IoT Hub Professional Edition.
+You can connect Trendz Analytics to the IoT Hub Community Edition or IoT Hub.
 
 <br>
 

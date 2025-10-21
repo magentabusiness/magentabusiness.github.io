@@ -123,7 +123,7 @@ In this tutorial, our primary focus will be on transmitting **RUN sensor mode** 
 
 ## Configuring IoT Hub
 
-You can find the documentation to help you get started with IoT Hub Professional Edition, as well as the MQTT Gateway API Reference, available here:
+You can find the documentation to help you get started with IoT Hub, as well as the MQTT Gateway API Reference, available here:
 
 - [Getting Started with ThingsBoard Professional Edition](https://thingsboard.io/docs/paas/eu/getting-started-guides/helloworld/){:target="_blank"}
 - [MQTT Gateway API Reference](https://thingsboard.io/docs/reference/gateway-mqtt-api/){:target="_blank"}

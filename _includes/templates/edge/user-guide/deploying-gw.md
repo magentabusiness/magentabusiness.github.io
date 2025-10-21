@@ -3,7 +3,7 @@ To deploy the **IoT Hub Gateway**:
 {% assign iotGWdashboardPE = '
     ===
         image: /images/edge/user-guide/edge-install/6-dashboard-group-pe.webp,
-        title: Log in to the **IoT Hub Professional Edition** instance and go to the **Dashboards** section and select the **"Group"** tab. Click the **"+"** icon to add a new group. In the **"Add entity group"** pop-up window, enter the group name in the **"Name"** field and click the **"Add"** button.
+        title: Log in to the **IoT Hub** instance and go to the **Dashboards** section and select the **"Group"** tab. Click the **"+"** icon to add a new group. In the **"Add entity group"** pop-up window, enter the group name in the **"Name"** field and click the **"Add"** button.
     ===
         image: /images/edge/user-guide/edge-install/7-all-dashboards-pe.webp,
         title: Then, select the **"All"** tab and find the **"IoT Hub IoT Gateways"** dashboard. The **"IoT Hub IoT Gateways"** dashboard is one of the pre-created, out-of-the-box dashboards available. Click the **"Dashboard details"** button.
