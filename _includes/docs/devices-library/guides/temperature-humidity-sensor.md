@@ -18,7 +18,7 @@ Lansitec sensor family is fully compatible and plug-andplay for LoRaWAN network 
 
 To continue with this guide we will need the following:
 {{prerequisites}}
-- [ThingsBoard account]({{ thingsboardHost }}){: target="_blank"}
+- [IoT Hub account]({{ thingsboardHost }}){: target="_blank"}
 
 ## Configuration
 

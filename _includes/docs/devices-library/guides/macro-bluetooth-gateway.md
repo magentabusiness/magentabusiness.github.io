@@ -17,7 +17,7 @@ It is powered by 38,000mAh industrial battery with a standby time as long as 7 y
 
 To continue with this guide we will need the following:
 {{prerequisites}}
-- [ThingsBoard account]({{ thingsboardHost }}){: target="_blank"}
+- [IoT Hub account]({{ thingsboardHost }}){: target="_blank"}
 
 ## Configuration
 

@@ -128,7 +128,7 @@ You can find the documentation to help you get started with IoT Hub, as well as 
 - [Getting Started with ThingsBoard Professional Edition](https://docs.iothub.magenta.at/docs/paas/eu/getting-started-guides/helloworld/){:target="_blank"}
 - [MQTT Gateway API Reference](https://docs.iothub.magenta.at/docs/reference/gateway-mqtt-api/){:target="_blank"}
 
-The first step is to [sign in using your ThingsBoard account](https://iothub.magenta.at/){:target="_blank"}. 
+The first step is to [sign in using your IoT Hub account](https://iothub.magenta.at/){:target="_blank"}. 
 
 {% assign thingsboardWelcome = '
     ===

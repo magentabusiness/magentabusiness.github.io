@@ -15,7 +15,7 @@ It has 5-year battery life (30 minutes report interval) and IP68 enclosure and i
 
 To continue with this guide we will need the following:
 {{prerequisites}}
-- [ThingsBoard account]({{ thingsboardHost }}){: target="_blank"}
+- [IoT Hub account]({{ thingsboardHost }}){: target="_blank"}
 
 ## Configuration
 

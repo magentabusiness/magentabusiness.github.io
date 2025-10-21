@@ -17,7 +17,7 @@ The built-in 600mAh rechargeable battery makes it last about 10 hours when not p
 
 To continue with this guide we will need the following:
 {{prerequisites}}
-- [ThingsBoard account]({{ thingsboardHost }}){: target="_blank"}
+- [IoT Hub account]({{ thingsboardHost }}){: target="_blank"}
 
 ## Configuration
 

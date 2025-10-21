@@ -25,7 +25,7 @@ Wi-Fi version supports Bacnet IP and Modbus IP.
 
 To continue with this guide, we will need the following:  
 {{ prerequisites }}
-- [ThingsBoard account]({{thingsboardInstanceLink}}){: target="_blank"}
+- [IoT Hub account]({{thingsboardInstanceLink}}){: target="_blank"}
 
 ## Devices connection
 

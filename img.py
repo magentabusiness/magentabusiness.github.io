@@ -2,8 +2,8 @@
 import os
 import argparse
 
-OLD = "https://docs.iothub.magenta.at/"
-NEW = "https://docs.iothub.magenta.at/"
+OLD = "IoT Hub account"
+NEW = "IoT Hub account"
 
 TEXT_EXTS = (
     ".md", ".markdown", ".html", ".htm",

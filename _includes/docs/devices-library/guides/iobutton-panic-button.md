@@ -30,7 +30,7 @@ By default, the ioButton sends a heartbeat message every 4 hours.
 
 To continue with this guide we will need the following:  
 {{ prerequisites }}
-- [ThingsBoard account]({{ thingsboardHost }}){: target="_blank"}
+- [IoT Hub account]({{ thingsboardHost }}){: target="_blank"}
 
 
 ## Device connection

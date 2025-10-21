@@ -19,7 +19,7 @@ To continue with this guide we will need the following:
 - Coupling relay for Multi IO
 - [ETS software](https://support.knx.org/hc/en-us/articles/4409114300178-ETS-v5-7-7){: target="_blank"} installed
 - [ThingsBoard IoT Gateway](https://docs.iothub.magenta.at/docs/iot-gateway/installation/){: target="_blank"} installed
-- [ThingsBoard account]({{ thingsboardHost }}){: target="_blank"}
+- [IoT Hub account]({{ thingsboardHost }}){: target="_blank"}
 
 ## Devices connection
 

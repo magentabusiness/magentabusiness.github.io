@@ -18,7 +18,7 @@ With configurable heartbeat intervals and operating modes, plus support for FOTA
 
 To continue with this guide we will need the following:
 {{prerequisites}}
-- [ThingsBoard account]({{ thingsboardHost }}){: target="_blank"}
+- [IoT Hub account]({{ thingsboardHost }}){: target="_blank"}
 
 ## Configuration
 

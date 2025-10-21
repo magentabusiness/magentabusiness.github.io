@@ -21,7 +21,7 @@ The outputs are available in dry contacts 1amp/output, 0-10V analog, and PNP sin
 
 To continue with this guide, we will need the following:  
 {{ prerequisites }}
-- [ThingsBoard account]({{thingsboardInstanceLink}}){: target="_blank"}
+- [IoT Hub account]({{thingsboardInstanceLink}}){: target="_blank"}
 
 ## Devices connection
 

@@ -16,7 +16,7 @@ Powered by a 38,000 mAh low-discharge-rate battery, the gateway offers a battery
 
 To continue with this guide we will need the following:
 {{prerequisites}}
-- [ThingsBoard account]({{ thingsboardHost }}){: target="_blank"}
+- [IoT Hub account]({{ thingsboardHost }}){: target="_blank"}
 
 ## Configuration
 
