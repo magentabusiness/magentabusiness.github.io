@@ -145,7 +145,7 @@ JAVA_OPTS="-Xmx2048M -Xms2048M -Xss384k -XX:+AlwaysPreTouch"
 {% if docsPrefix == "pe/edge/" %}
 * **CLOUD_RPC_HOST:** Use _thingsboard.cloud_ / _eu.thingsboard.cloud_ if you connect **Edge** to the [ThingsBoard Cloud (North America)](https://thingsboard.cloud/signup){: target="_blank"}/[ThingsBoard Cloud (Europe)](https://eu.thingsboard.cloud/signup){: target="_blank"} correspondingly, or an **IP address** of the machine with the **IoT Hub Platform**.
 {% else %}
-* **CLOUD_RPC_HOST:** Use _demo.thingsboard.io_ if you connect **Edge** to the [ThingsBoard Demo](https://demo.thingsboard.io/login){: target="_blank"}, or an **IP address** of the machine with the **IoT Hub Platform**.
+* **CLOUD_RPC_HOST:** Use _demo.thingsboard.io_ if you connect **Edge** to the [ThingsBoard Demo](https://iothub.magenta.at/login){: target="_blank"}, or an **IP address** of the machine with the **IoT Hub Platform**.
 {% endif %}
 * **MONITORING_ENABLED:** To start cluster monitoring with [Grafana](https://grafana.com/){: target="_blank"} and/or [Prometheus](https://prometheus.io/){: target="_blank"} services, set the variable to _true_.
 

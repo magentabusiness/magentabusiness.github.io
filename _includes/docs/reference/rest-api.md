@@ -27,7 +27,7 @@ http://$THINGSBOARD_HOST:PORT/swagger-ui.html
 
 &#42;Replace **$THINGSBOARD_HOST:PORT** with your actual IoT Hub server address.
 
-For example, you may browse Community Edition demo server API documentation using the [Swagger UI link](https://demo.thingsboard.io/swagger-ui.html){:target="_blank"}.
+For example, you may browse Community Edition demo server API documentation using the [Swagger UI link](https://iothub.magenta.at/swagger-ui.html){:target="_blank"}.
 {% endif %}
 {% if docsPrefix == "paas/" %}
 Every [ThingsBoard Cloud](https://thingsboard.cloud/){:target="_blank"} instance has its own Swagger UI page.   

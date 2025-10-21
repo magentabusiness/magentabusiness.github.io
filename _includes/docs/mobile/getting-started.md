@@ -9,7 +9,7 @@
 {% assign appPrefix = "IoT Hub" %}
 {% assign appRepo = "https://github.com/thingsboard/flutter_thingsboard_app.git" %}
 {% assign appProject = "flutter_thingsboard_app" %}
-{% assign cloudApp = "[Live Demo](https://demo.thingsboard.io/signup)" %}
+{% assign cloudApp = "[Live Demo](https://iothub.magenta.at/signup)" %}
 {% assign cloudEndpoint = "https://demo.thingsboard.io" %}
 {% assign flutterAppVer = site.release.ce_flutter_app_ver %}
 {% endif %}
@@ -25,7 +25,7 @@ Welcome! This guide will walk you through building and setting up a custom {{app
 - You will need to have access to IoT Hub. The easiest way is to use [ThingsBoard Cloud](https://thingsboard.io/installations/choose-region/){:target="_blank"} server.
 The alternative option is to install IoT Hub using [installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
 {% else %}  
-- You will need to have access to ThingsBoard. The easiest way is to use [Live Demo](https://demo.thingsboard.io/signup){:target="_blank"}. 
+- You will need to have access to ThingsBoard. The easiest way is to use [Live Demo](https://iothub.magenta.at/signup){:target="_blank"}. 
 The alternative option is to install IoT Hub using [installation guide](/docs/user-guide/install/installation-options/){:target="_blank"}.
 {% endif %}
 

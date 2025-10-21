@@ -13,7 +13,7 @@ This guide will help you to install and start IoT Hub Gateway using Docker on Wi
 ## Prerequisites
 
 - [Install Docker Toolbox for Windows](https://docker-docs.uclv.cu/toolbox/toolbox_install_windows/){:target="_blank"};
-- You will need to have access to ThingsBoard. The easiest way is to use the [ThingsBoard Demo](https://demo.thingsboard.io/){:target="_blank"} server. 
+- You will need to have access to ThingsBoard. The easiest way is to use the [ThingsBoard Demo](https://iothub.magenta.at/){:target="_blank"} server. 
 The alternative option is to install the IoT Hub locally using the [installation guide](https://thingsboard.io/docs/user-guide/install/installation-options/){:target="_blank"}.
 
 ## Download docker-compose file

@@ -26,7 +26,7 @@ As such, you cannot share IoT Hub Edge between multiple tenants, and devices fro
 In such scenarios, separate IoT Hub Edge instances would need to be provisioned for each tenant.
 {% else %}
 With IoT Hub Edge, data analysis and management is brought to the edge, where data generation happens. 
-It synchronizes effortlessly with IoT Hub, whether it's a [demo](https://demo.thingsboard.io/){: target="_blank"} or an on-premise installation, according to your business requirements.
+It synchronizes effortlessly with IoT Hub, whether it's a [demo](https://iothub.magenta.at/){: target="_blank"} or an on-premise installation, according to your business requirements.
 
 IoT Hub Edge CE is designed for a **single** tenant and/or **single** customer. 
 Sharing IoT Hub Edge between multiple tenants or customers is not feasible, and devices from different tenants or customers cannot be connected to a single IoT Hub Edge.

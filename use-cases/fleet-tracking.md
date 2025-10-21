@@ -19,7 +19,7 @@ contactUsModal: "true"
                 <p class="text">Managing a fleet today means more than just tracking locations — it’s about real-time control, smart decisions, and operational speed. The IoT Hub IoT platform makes this possible by uniting tracking, analytics, and automation in one powerful solution, helping companies eliminate blind spots and stay ahead in a fast-paced industry.</p>
             </div>
             <div class="demo-button">
-                <a id="UseCases_FleetTracking_ViewLiveDemo" target="_blank" href="https://demo.thingsboard.io/dashboard/3d0bf910-ee09-11e6-b619-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0" class="button gtm_button">View live demo</a>
+                <a id="UseCases_FleetTracking_ViewLiveDemo" target="_blank" href="https://iothub.magenta.at/dashboard/3d0bf910-ee09-11e6-b619-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0" class="button gtm_button">View live demo</a>
             </div>
         </div>
         <div class="long">
@@ -311,7 +311,7 @@ contactUsModal: "true"
                 <div class=image>${getImage(0)}</div>
             </div>
             <div class="buttons-block">
-                <a id="UseCases_FleetTracking_ViewLiveDemo" target="_blank" href="https://demo.thingsboard.io/dashboard/3d0bf910-ee09-11e6-b619-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0" class="button gtm_button">View live demo</a>
+                <a id="UseCases_FleetTracking_ViewLiveDemo" target="_blank" href="https://iothub.magenta.at/dashboard/3d0bf910-ee09-11e6-b619-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0" class="button gtm_button">View live demo</a>
                 <a id="UseCases_FleetTracking_ContactUs" target="_blank" href="/docs/contact-us/?subject=Custom%20Development" class="button contact-us gtm_button">Contact us</a>
             </div>`;
 
