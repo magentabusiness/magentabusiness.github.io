@@ -23,7 +23,7 @@ Locate the following configuration block:
 
 ```bash
 # UNCOMMENT NEXT LINES AND PUT YOUR CONNECTION PARAMETERS:
-# export RPC_HOST=thingsboard.cloud
+# export RPC_HOST=iothub.magenta.at
 # export RPC_PORT=9090
 # export INTEGRATION_ROUTING_KEY=YOUR_INTEGRATION_KEY
 # export INTEGRATION_SECRET=YOUR_INTEGRATION_SECRET

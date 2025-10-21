@@ -245,7 +245,7 @@
 			<td>cloud.rpc.host</td>
 			<td>CLOUD_RPC_HOST</td>
 			<td>localhost</td>
-			<td> Hostname or IP of the IoT Hub platform, e.g. thingsboard.cloud, iothub.magenta.at, X.X.X.X or localhost</td>
+			<td> Hostname or IP of the IoT Hub platform, e.g. iothub.magenta.at, iothub.magenta.at, X.X.X.X or localhost</td>
 		</tr>
 		<tr>
 			<td>cloud.rpc.port</td>
@@ -6296,13 +6296,13 @@
 		<tr>
 			<td>mobileApp.domain</td>
 			<td>TB_MOBILE_APP_DOMAIN</td>
-			<td>thingsboard.cloud</td>
+			<td>iothub.magenta.at</td>
 			<td> Server domain name for Iot Hub Live mobile application</td>
 		</tr>
 		<tr>
 			<td>mobileApp.googlePlayLink</td>
 			<td>TB_MOBILE_APP_GOOGLE_PLAY_LINK</td>
-			<td>https://play.google.com/store/apps/details?id=org.thingsboard.cloud</td>
+			<td>https://play.google.com/store/apps/details?id=org.iothub.magenta.at</td>
 			<td> Link to Google Play store for Iot Hub Live mobile application</td>
 		</tr>
 		<tr>

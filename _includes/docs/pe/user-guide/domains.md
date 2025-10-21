@@ -26,7 +26,7 @@ This feature is primarily intended for Web UI access, so some services, such as 
 
 In order to use your own host name instead of **{{THINGSBOARD_HOST}}** you must register it first. To do this, follow these steps:
 
-First, on your DNS provider&#39;s website, you must add a canonical record for your domain to map it with eu.thingsboard.cloud{% if docsPrefix == "pe/" %}, and add **SSL certificate**{% endif %}. See [How to Create a CNAME Record For Your Domain](#how-to-create-a-cname-record) for details.
+First, on your DNS provider&#39;s website, you must add a canonical record for your domain to map it with eu.iothub.magenta.at{% if docsPrefix == "pe/" %}, and add **SSL certificate**{% endif %}. See [How to Create a CNAME Record For Your Domain](#how-to-create-a-cname-record) for details.
 
 Once done, you can start the procedure of adding a domain. 
 
@@ -148,7 +148,7 @@ Correct output should look like that:
 ```bash
 ...
 ;; ANSWER SECTION:
-mycompany.thingsboard.space. 3600 IN	CNAME	eu.thingsboard.cloud
+mycompany.thingsboard.space. 3600 IN	CNAME	eu.iothub.magenta.at
 ...
 ```
 

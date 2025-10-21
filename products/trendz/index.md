@@ -171,7 +171,7 @@ selfManagedPlan:
             <div class="get-started-container">
                 <h3 class="header">Trendz EU Cloud</h3>
                 <p class="text">Unlock powerful analytics tools by upgrading your plan</p>
-                <a href="https://eu.thingsboard.cloud/billing" class="link">Upgrade your IoT Hub EU Plan</a>
+                <a href="https://eu.iothub.magenta.at/billing" class="link">Upgrade your IoT Hub EU Plan</a>
             </div>
             <div class="get-started-container">
                 <h3 class="header">Trendz Self-Hosted</h3>

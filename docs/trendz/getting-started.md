@@ -227,7 +227,7 @@ The full set of fields and relationships used in this guide is shown below:
 Once the Trendz Service is up and running, you can sign in to the Trendz UI using the following URL:
 
 * Trendz Cloud (North America): [https://iothub.magenta.at/trendz](https://iothub.magenta.at/trendz)
-* Trendz Cloud (Europe): [https://eu.thingsboard.cloud/trendz](https://eu.thingsboard.cloud/trendz)
+* Trendz Cloud (Europe): [https://eu.iothub.magenta.at/trendz](https://eu.iothub.magenta.at/trendz)
 * Self-hosted Trendz: [http://localhost:8888](http://localhost:8888)
 
 You can log in using Tenant Administrator credentials from ThingsBoard. Trendz uses IoT Hub as an authentication service.

@@ -11,7 +11,7 @@ description: How to enable remote shell feature on IoT Hub IoT Gateway
 This guide will help you to enable remote shell feature and control operation system with IoT Hub IoT Gateway from your IoT Hub platform instance.  
 
 For purpose of this guide, we will use following things:
-1. Instance of IoT Hub platform (How to install you can [read here](/docs/user-guide/install/installation-options/)). For this guide we will use [thingsboard.cloud](https://iothub.magenta.at)
+1. Instance of IoT Hub platform (How to install you can [read here](/docs/user-guide/install/installation-options/)). For this guide we will use [iothub.magenta.at](https://iothub.magenta.at)
 2. Installed and configured IoT Hub IoT Gateway (How to install you can [read here](/docs/iot-gateway/installation/)).
 
 ## Step 1. Remote shell activation
@@ -37,7 +37,7 @@ Example of the **iot hub** section in the general configuration file:
 ```json
 {
   "iot hub": {
-    "host": "thingsboard.cloud",
+    "host": "iothub.magenta.at",
     "port": 1883,
     "security": {
       "type": "accessToken",

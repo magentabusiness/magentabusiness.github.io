@@ -31,7 +31,7 @@ This enhancement makes logging in faster and more secure, offering a user-friend
 If the {{THINGSBOARD_MOBILE_APP}} has not been installed yet, scanning the QR code will redirect the user to the application marketplace (available on [Google Play](https://play.google.com/store/apps/details?id=org.thingsboard.demo.app){:target="_blank"} and [App Store](https://apps.apple.com/us/app/thingsboard-live/id1594355695){:target="_blank"}).
 {% endif %}
 {% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}
-If the {{THINGSBOARD_MOBILE_APP}} has not been installed yet, scanning the QR code will redirect the user to the application marketplace (available on [Google Play](https://play.google.com/store/apps/details?id=org.thingsboard.cloud){:target="_blank"} and [App Store](https://apps.apple.com/us/app/thingsboard-cloud/id6499209395){:target="_blank"}).
+If the {{THINGSBOARD_MOBILE_APP}} has not been installed yet, scanning the QR code will redirect the user to the application marketplace (available on [Google Play](https://play.google.com/store/apps/details?id=org.iothub.magenta.at){:target="_blank"} and [App Store](https://apps.apple.com/us/app/thingsboard-cloud/id6499209395){:target="_blank"}).
 {% endif %}
 
 Just follow these simple steps to get started:
@@ -72,10 +72,10 @@ Two types of application are available for tenant: default and custom.
 * **Default**. Using the default app means using officially published {{OFFICIALLY_PUBLISHED_APPLICATION}} mobile application (available on [Google Play](https://play.google.com/store/apps/details?id=org.thingsboard.demo.app){:target="_blank"} and [App Store](https://apps.apple.com/us/app/thingsboard-live/id1594355695){:target="_blank"}).
 {% endif %}
 {% if docsPrefix == "pe/" %}
-* **Default**. Using the default app means using officially published {{OFFICIALLY_PUBLISHED_APPLICATION}} mobile application (available on [Google Play](https://play.google.com/store/apps/details?id=org.thingsboard.cloud){:target="_blank"} and [App Store](https://apps.apple.com/us/app/thingsboard-cloud/id6499209395){:target="_blank"}).
+* **Default**. Using the default app means using officially published {{OFFICIALLY_PUBLISHED_APPLICATION}} mobile application (available on [Google Play](https://play.google.com/store/apps/details?id=org.iothub.magenta.at){:target="_blank"} and [App Store](https://apps.apple.com/us/app/thingsboard-cloud/id6499209395){:target="_blank"}).
 {% endif %}
 {% if docsPrefix contains "paas/" %}
-* **Default**. Using the default app means using officially published {{OFFICIALLY_PUBLISHED_APPLICATION}} mobile application (available on [Google Play](https://play.google.com/store/apps/details?id=org.thingsboard.cloud){:target="_blank"} and [App Store](https://apps.apple.com/us/app/thingsboard-cloud/id6499209395){:target="_blank"}).
+* **Default**. Using the default app means using officially published {{OFFICIALLY_PUBLISHED_APPLICATION}} mobile application (available on [Google Play](https://play.google.com/store/apps/details?id=org.iothub.magenta.at){:target="_blank"} and [App Store](https://apps.apple.com/us/app/thingsboard-cloud/id6499209395){:target="_blank"}).
 {% endif %}
 
 {% include images-gallery.html imageCollection="application-settings-default" %}

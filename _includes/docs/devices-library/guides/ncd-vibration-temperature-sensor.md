@@ -169,7 +169,7 @@ The first step is to add a new [device](/docs/{{docsPrefix}}user-guide/ui/device
         title: After generating the credentials, use the "**Copy**" button to obtain each value. We recommend saving these values in a temporary file, as we will use them later in the **Node-RED MQTT node** in this guide. Next, click "**Add**".
     ===
         image: /images/devices-library/ready-to-go-devices/ncd-vibration-temperature-sensor/adding-new-is-gateway-device-5-pe.png,
-        title: After this, a new window will appear, allowing you to test the connectivity. However, since we are using a Gateway, a different set of MQTT topics is required for proper integration with the IoT Hub gateway device. You can skip this step. For now, we will identify the MQTT server to use for the connection: "mqtt.thingsboard.cloud". Click the "**Close**" button to proceed.
+        title: After this, a new window will appear, allowing you to test the connectivity. However, since we are using a Gateway, a different set of MQTT topics is required for proper integration with the IoT Hub gateway device. You can skip this step. For now, we will identify the MQTT server to use for the connection: "mqtt.iothub.magenta.at". Click the "**Close**" button to proceed.
     ===
         image: /images/devices-library/ready-to-go-devices/ncd-vibration-temperature-sensor/adding-new-is-gateway-device-6-pe.png,
         title: We have successfully added a new Gateway configured to use the MQTT protocol. The next step is to configure the MQTT credentials in the Enterprise IIoT Gateway to verify connectivity.
@@ -334,7 +334,7 @@ Once we've reviewed the general functions of each Node-RED node in the flow, the
 ![image](/images/devices-library/ready-to-go-devices/ncd-vibration-temperature-sensor/42-ncd-to-thingsboard-node-red-add-new-mqtt.png)
 
 <br>
-The next step is to set the Server property with the IoT Hub MQTT Broker server address: "**mqtt.thingsboard.cloud**". For this example, we&#39;ll use the default port, **1883**. Lastly, you need to configure the **Client ID** property, which is generated in IoT Hub.
+The next step is to set the Server property with the IoT Hub MQTT Broker server address: "**mqtt.iothub.magenta.at**". For this example, we&#39;ll use the default port, **1883**. Lastly, you need to configure the **Client ID** property, which is generated in IoT Hub.
 
 ![image](/images/devices-library/ready-to-go-devices/ncd-vibration-temperature-sensor/43-ncd-to-thingsboard-node-red-client-id.png)
 

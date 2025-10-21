@@ -36,7 +36,7 @@ You need to have active IoT Hub account to active Trendz Analytics Cloud. If you
 
 ## Activate Trendz Analytics Cloud
 
-- Log in to IoT Hub account and select [Plan and Billing (North America)](https://iothub.magenta.at/billing) / [Plan and Billing (Europe)](https://eu.thingsboard.cloud/billing) menu option.
+- Log in to IoT Hub account and select [Plan and Billing (North America)](https://iothub.magenta.at/billing) / [Plan and Billing (Europe)](https://eu.iothub.magenta.at/billing) menu option.
 - Press **Update Plan** button
 - Choose **IoT Hub + Trendz** and select the most suitable plan for you
 

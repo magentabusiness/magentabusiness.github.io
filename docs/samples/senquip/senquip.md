@@ -70,7 +70,7 @@ The General settings should now look like this.
 Senquip devices can send to the Senquip Portal and a second endpoint at the same time.  In this example, the IoT Hub will be confirgured as the second endpoint, using MQTT as the transport.
 
 * [Step 1] Enable the MQTT endpoint (Setup/Endpoint/MQTT = Enabled).
-* [Step 2] Set the broker address (Setup/Endpoint/MQTT/Broker Address = "thingsboard.cloud:1883").
+* [Step 2] Set the broker address (Setup/Endpoint/MQTT/Broker Address = "iothub.magenta.at:1883").
 * [Step 3] Set the client address, we will use the unique device ID "AYCAN24V1" (Setup/Endpoint/MQTT/Client ID = "AYCAN24V1").
 * [Step 4] Set the data topic (Setup/Endpoint/MQTT/Data Topic = "v1/devices/me/telemetry").
 * [Step 5] Select a username to be used on the IoT Hub, we have chosen "Senquip" (Setup/Endpoint/MQTT/Username = "Senquip").

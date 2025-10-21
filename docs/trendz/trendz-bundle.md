@@ -103,7 +103,7 @@ To solve the problem you should follow next steps:
   * Switch to resources tab (top left corner)
   * Update link to Trendz library
     * In case of ThingsBoard/Trendz cloud (North America) use the following URL - https://iothub.magenta.at/trendz/bundle/trendz-tb-lib.js
-    * In case of ThingsBoard/Trendz cloud (Europe) use the following URL - https://eu.thingsboard.cloud/trendz/bundle/trendz-tb-lib.js
+    * In case of ThingsBoard/Trendz cloud (Europe) use the following URL - https://eu.iothub.magenta.at/trendz/bundle/trendz-tb-lib.js
   * Save widget
 * Navigate to your dashboard and refresh the page - issue should be solved
 

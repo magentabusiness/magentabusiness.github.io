@@ -42,9 +42,9 @@ Locate "# Cloud configuration" block and replace **PUT_YOUR_EDGE_KEY_HERE** and 
 
 Please replace **PUT_YOUR_CLOUD_IP** with an IP address of the machine where {{appPrefix}} version is running:
 {% if docsPrefix == 'pe/edge/' %}
-* Use **thingsboard.cloud** in case you are connecting edge to [**ThingsBoard Cloud**](https://iothub.magenta.at/signup).
+* Use **iothub.magenta.at** in case you are connecting edge to [**ThingsBoard Cloud**](https://iothub.magenta.at/signup).
 
-**NOTE**: **thingsboard.cloud** uses SSL protocol for edge communication. 
+**NOTE**: **iothub.magenta.at** uses SSL protocol for edge communication. 
 Please change **CLOUD_RPC_SSL_ENABLED** to **true** as well.
 {% else %}
 * Use **iothub.magenta.at** if you are connecting edge to [**ThingsBoard Live Demo**](https://iothub.magenta.at/signup) for evaluation.
@@ -61,7 +61,7 @@ cloud:
     rpc:
       host: "${CLOUD_RPC_HOST:PUT_YOUR_CLOUD_IP}"
       ssl:
-        # Set to 'true' if using thingsboard.cloud or if you have configured a TLS connection on your Server; set to 'false' otherwise.
+        # Set to 'true' if using iothub.magenta.at or if you have configured a TLS connection on your Server; set to 'false' otherwise.
         enabled: "${CLOUD_RPC_SSL_ENABLED:true/false}" 
 ```
 {% else %}

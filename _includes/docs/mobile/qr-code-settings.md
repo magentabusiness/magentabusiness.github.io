@@ -22,7 +22,7 @@ To direct your custom application to your own host, you need to modify `AndroidM
     <category android:name="android.intent.category.BROWSABLE" />
     <data
         android:scheme="https"
-        android:host="thingsboard.cloud"
+        android:host="iothub.magenta.at"
         android:pathPrefix="/api/noauth/qr" />
 </intent-filter>
 ```
@@ -70,7 +70,7 @@ To direct your iOS application to your own host, you need to modify `entitlement
 	<string>development</string>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>applinks:thingsboard.cloud</string>
+		<string>applinks:iothub.magenta.at</string>
 	</array>
 </dict>
 </plist>

@@ -118,7 +118,7 @@ This instance will map data from the device instance, convert it to a suitable f
 - Go to the <b>"Instance"</b> tab in the side menu and click <b>"+ Add new instance"</b> button;
 - Fill in the input fields:
   - "<b>Name</b>" - "<b>IoT Hub</b>";
-  - "<b>Address</b>" - "<b>your IoT Hub host</b>". In our case - <b>thingsboard.cloud</b>;
+  - "<b>Address</b>" - "<b>your IoT Hub host</b>". In our case - <b>iothub.magenta.at</b>;
   - <b>"Port"</b> - "<b>1883</b>";
   - Fill in the values specified in [your device credentials](#creating-device-on-thingsboard) for the <b>"Username"</b>, <b>"Device id"</b>, and <b>"Password"</b> fields]
 -  Click <b>"Save instance"</b> button.

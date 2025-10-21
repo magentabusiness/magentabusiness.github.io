@@ -16,7 +16,7 @@ It is similar to [access token](/docs/{{docsPrefix}}user-guide/access-token/){:t
 Instructions below will describe how to connect MQTT client using X.509 Certificate to IoT Hub.
 
 {% capture difference %}
-**Pay attention!** [EU ThingsBoard Cloud](https://eu.thingsboard.cloud/signup){:target="_blank"} has a separate domain for MQTT traffic. It cannot be white-labeled. If you want an encrypted traffic via MQTT, the device should refer to the corresponding host — **eu.mqtt.thingsboard.cloud**
+**Pay attention!** [EU ThingsBoard Cloud](https://eu.iothub.magenta.at/signup){:target="_blank"} has a separate domain for MQTT traffic. It cannot be white-labeled. If you want an encrypted traffic via MQTT, the device should refer to the corresponding host — **eu.mqtt.iothub.magenta.at**
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 

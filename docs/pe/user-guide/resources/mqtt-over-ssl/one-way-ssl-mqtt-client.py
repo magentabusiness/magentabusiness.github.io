@@ -25,7 +25,7 @@ def collect_required_data():
     print(" " * 20, "IoT Hub one way RPC example script.", sep="")
     print("=" * 80, "\n\n", sep="")
     host = input("Please write your IoT Hub host or leave it blank to use default (iothub.magenta.at): ")
-    config["host"] = host if host else "mqtt.thingsboard.cloud"
+    config["host"] = host if host else "mqtt.iothub.magenta.at"
     if config["host"] != "mqtt.iothub.magenta.at":
         ca_cert = input(
             "Please write path to your server public certificate or leave it blank to use default (mqttserver.pub.pem): ")

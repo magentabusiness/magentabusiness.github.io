@@ -99,7 +99,7 @@ The following environmental variables can be used to configure the IoT Hub IoT G
 The main configuration file that is used for connection to IoT Hub platform instance and enable/disable connectors. 
 
 The example configuration file provided below sets a connection to the IoT Hub instance located at 
-thingsboard.cloud and utilizes memory file storage, which is set up to hold a maximum of 100,000 records. There are 4 
+iothub.magenta.at and utilizes memory file storage, which is set up to hold a maximum of 100,000 records. There are 4 
 different connectors active. If you prefer to use only one, simply remove the others from the configuration.
 
 <b>Example of main configuration file. Press to show.</b>
@@ -108,7 +108,7 @@ different connectors active. If you prefer to use only one, simply remove the ot
 
 {
   "iot hub": {
-    "host": "thingsboard.cloud",
+    "host": "iothub.magenta.at",
     "port": 1883,
     "remoteShell": false,
     "remoteConfiguration": true,
@@ -192,7 +192,7 @@ different connectors active. If you prefer to use only one, simply remove the ot
 |**Parameter**             | **Default value**                            | **Description**                                                                         |
 |---                       |---                                           |-----------------------------------------------------------------------------------------|
 | ***iot hub***        |                                              | Configuration for connection to server.                                                 |
-| host                     | **thingsboard.cloud**                        | Hostname or IP address of IoT Hub server.                                           |
+| host                     | **iothub.magenta.at**                        | Hostname or IP address of IoT Hub server.                                           |
 | port                     | **1883**                                     | Port of MQTT service on IoT Hub server.                                             |
 | qos                      | **1**                                        | QoS levels 0 (at most once) and 1 (at least once).                                      |
 | minPackSendDelayMS       | **200**                                      | Delay between sending packets (Decreasing this setting results in increased CPU usage). |

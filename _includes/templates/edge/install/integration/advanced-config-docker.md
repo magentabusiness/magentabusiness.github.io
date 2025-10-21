@@ -44,7 +44,7 @@ executors:
 
 rpc:
   # Host of the IoT Hub server
-  host: "${RPC_HOST:thingsboard.cloud}"
+  host: "${RPC_HOST:iothub.magenta.at}"
   # Port of the IoT Hub server
   port: "${RPC_PORT:9090}"
   # No reply timeout
