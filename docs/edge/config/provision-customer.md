@@ -11,10 +11,10 @@ description: Provision Customer from cloud to edge
 
 IoT Hub Edge user access managements depends on the cloud version.
  
-#### IoT Hub CE User Access management
+#### IoT Hub User Access management
 
 ##### Tenant Administrator users
-Once IoT Hub Edge connected to IoT Hub CE cloud every tenant administrator user will be transferred to edge and any of these users will be able to login into IoT Hub Edge UI.
+Once IoT Hub Edge connected to IoT Hub cloud every tenant administrator user will be transferred to edge and any of these users will be able to login into IoT Hub Edge UI.
 
 Tenant Administrator user is able to create or remove devices on the edge. 
 

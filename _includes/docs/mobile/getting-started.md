@@ -226,7 +226,7 @@ Next, we will walk through step-by-step how to create a Firebase project, and wi
 
 {% capture difference %}
 **Please note:**
-for IoT Hub CE, only the system administrator can configure mobile settings. For IoT Hub - the tenant can use the system administrator&#39;s configuration or specify their own.
+for IoT Hub, only the system administrator can configure mobile settings. For IoT Hub - the tenant can use the system administrator&#39;s configuration or specify their own.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 

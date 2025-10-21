@@ -10,7 +10,7 @@ Role-Based Access Control (RBAC) allows to create and grant advanced access by a
 RBAC roles refer to the levels of access that users may have. Access to resources can be limited to specific operations, such as viewing, creating, writing, or deleting data. 
 Similarly, you can restrict access to sensitive information, increasing business security.
 
-<!-- ## IoT Hub CE vs PE security features comparison
+<!-- ## IoT Hub vs PE security features comparison
 
 ### IoT Hub
 

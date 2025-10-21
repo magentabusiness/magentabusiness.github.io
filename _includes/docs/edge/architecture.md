@@ -5,7 +5,7 @@
 {% assign appPrefix = "IoT Hub" %}
 {% assign cloudDocsPrefix = "pe/" %}
 {% else %}
-{% assign appPrefix = "IoT Hub CE" %}
+{% assign appPrefix = "IoT Hub" %}
 {% endif %}
 
 ## Introduction
@@ -45,7 +45,7 @@ For enhanced security, a **gRPC** connection can be established on top of **SSL/
 IoT Hub Edge offers MQTT, HTTP, and CoAP-based APIs available for your device applications/firmware. 
 Each protocol API is provided by a distinct component within IoT Hub Edge's "Transport Layer".
 
-IoT Hub Edge supports standard IoT Hub CE/PE device communication protocols:
+IoT Hub Edge supports standard IoT Hub/PE device communication protocols:
 
 * The HTTP Transport component provides device APIs as described [here](/docs/{{docsPrefix}}reference/http-api/);
 * The MQTT Transport component provides device APIs as explained [here](/docs/{{docsPrefix}}reference/mqtt-api/), and it also enables gateway APIs as detailed [here](/docs/{{docsPrefix}}reference/gateway-mqtt-api/);

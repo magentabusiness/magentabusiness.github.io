@@ -3,8 +3,8 @@ import os
 import re
 import argparse
 
-# Ищем "IoT" + пробелы + "Hub" + пробелы + "Cloud" как отдельные слова (без учета регистра)
-PATTERN = re.compile(r"\bIoT\s+Hub\s+Cloud\b", re.IGNORECASE)
+# Ищем "IoT" + пробелы + "Hub" + пробелы + "CE" как отдельные слова (без учета регистра)
+PATTERN = re.compile(r"\bIoT\s+Hub\s+CE\b", re.IGNORECASE)
 REPLACEMENT = "IoT Hub"
 
 DEFAULT_EXTS = (
@@ -32,24 +32,23 @@ def process_file(path: str, dry_run: bool, create_backup: bool) -> int:
     if dry_run:
         for m in matches:
             line_no = content.count("\n", 0, m.start()) + 1
-            snippet_left = content[max(0, m.start()-40):m.start()]
-            snippet_mid  = content[m.start():m.end()]
-            snippet_right= content[m.end():m.end()+40]
-            print(f"{path}:{line_no}: …{snippet_left}{snippet_mid}{snippet_right}…")
+            left  = content[max(0, m.start()-40):m.start()]
+            mid   = content[m.start():m.end()]
+            right = content[m.end():m.end()+40]
+            print(f"{path}:{line_no}: …{left}{mid}{right}…")
         return len(matches)
 
     new_content = PATTERN.sub(REPLACEMENT, content)
 
     if create_backup:
         try:
-            # Бэкап рядом с файлом
-            os.replace(path, path + ".bak")
+            os.replace(path, path + ".bak")  # быстрый бэкап
             with open(path, "w", encoding="utf-8") as f:
                 f.write(new_content)
         except Exception as e:
             print(f"[ERROR] Backup/write failed for {path}: {e}")
             if os.path.exists(path + ".bak"):
-                os.replace(path + ".bak", path)
+                os.replace(path + ".bak", path)  # откат
             return 0
     else:
         try:
@@ -67,8 +66,7 @@ def main():
         description="Replace 'IoT Hub' (case-insensitive, whole words) with 'IoT Hub' across a project."
     )
     ap.add_argument("--root", default=".", help="Корневая директория (по умолчанию текущая).")
-    ap.add_argument("--exts", nargs="*", default=list(DEFAULT_EXTS),
-                    help="Список расширений для обработки.")
+    ap.add_argument("--exts", nargs="*", default=list(DEFAULT_EXTS), help="Список расширений для обработки.")
     ap.add_argument("--dry-run", action="store_true", help="Показать совпадения без записи изменений.")
     ap.add_argument("--backup", action="store_true", help="Создавать .bak рядом с изменёнными файлами.")
     ap.add_argument("--exclude-dirs", nargs="*", default=list(DEFAULT_EXCLUDE_DIRS),
@@ -82,9 +80,7 @@ def main():
     exts = tuple(args.exts)
 
     for subdir, dirnames, files in os.walk(args.root):
-        # исключаем каталоги по имени
         dirnames[:] = [d for d in dirnames if d not in ex_dirs]
-
         for name in files:
             if not name.endswith(exts):
                 continue

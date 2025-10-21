@@ -40,7 +40,7 @@ To create a new **Edge**:
 {% assign addEdge = '
     ===
         image: /images/edge/installation-add-edge-item-1.png,
-        title: Sign in to your **IoT Hub CE** instance and navigate to the **Edge Management > Instances** section. Click the **"+"** icon in the top right corner and select the **"Add new edge"** option.
+        title: Sign in to your **IoT Hub** instance and navigate to the **Edge Management > Instances** section. Click the **"+"** icon in the top right corner and select the **"Add new edge"** option.
     ===
         image: /images/edge/installation-add-edge-item-2.png,
         title: Enter a name for the Edge you are creating. For example, "My New Edge". Click the **"Add"** button to confirm the addition of the **Edge instance**.

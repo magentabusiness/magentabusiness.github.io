@@ -7,7 +7,7 @@ However, most of the real-life use cases also require the support of advanced an
   
 This tutorial will demonstrate how you can:
 
- - route telemetry device data from IoT Hub to Kafka topic using the built-in rule engine capabilities (works for both IoT Hub CE and PE).
+ - route telemetry device data from IoT Hub to Kafka topic using the built-in rule engine capabilities (works for both IoT Hub and PE).
  - aggregate data from multiple devices using a simple Kafka Streams application.
  - push results of the analytics back to IoT Hub for persistence and visualization using IoT Hub Kafka Integration.
 
