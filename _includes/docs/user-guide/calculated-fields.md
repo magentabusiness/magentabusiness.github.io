@@ -223,7 +223,7 @@ If these nodes are missing, the result **will not be saved** and will not appear
 ## Data reprocessing
 
 {% if docsPrefix == null %}
-> The **telemetry data reprocessing** feature is available only in [ThingsBoard PE](https://thingsboard.io/docs/user-guide/install/pe/installation-options/){:target="_blank"} editions.
+> The **telemetry data reprocessing** feature is available only in [ThingsBoard PE](https://docs.iothub.magenta.at/docs/user-guide/install/pe/installation-options/){:target="_blank"} editions.
 
 {% endif %}
 

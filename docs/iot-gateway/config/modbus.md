@@ -93,7 +93,7 @@ Advanced<small></small>%,%advanced%,%templates/iot-gateway/modbus-connector/attr
 
 This configuration section is optional.
 
-IoT Hub allows to provision device attributes and fetch some of them from the device application. You can treat this as a remote configuration for devices. Your devices are able to request shared attributes from ThingsBoard. See [user guide](https://thingsboard.io/docs/user-guide/attributes/) for more details.
+IoT Hub allows to provision device attributes and fetch some of them from the device application. You can treat this as a remote configuration for devices. Your devices are able to request shared attributes from ThingsBoard. See [user guide](https://docs.iothub.magenta.at/docs/user-guide/attributes/) for more details.
 
 The "**attributeUpdates**" configuration allows configuring the format of the corresponding attribute request and response messages.
 
@@ -106,7 +106,7 @@ Advanced<small></small>%,%advanced%,%templates/iot-gateway/modbus-connector/attr
 
 ### Subsection "RPC requests"
 
-IoT Hub allows sending [RPC commands](https://thingsboard.io/docs/user-guide/rpc/) to the device that is connected to IoT Hub directly or via Gateway.
+IoT Hub allows sending [RPC commands](https://docs.iothub.magenta.at/docs/user-guide/rpc/) to the device that is connected to IoT Hub directly or via Gateway.
 Configuration, provided in this section is used for sending RPC requests from IoT Hub to device.
 
 Select basic or advanced Modbus configuration:

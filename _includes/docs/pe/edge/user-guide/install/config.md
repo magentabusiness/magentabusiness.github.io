@@ -661,7 +661,7 @@
 		<tr>
 			<td>ui.solution_templates.docs_base_url</td>
 			<td>UI_SOLUTION_TEMPLATES_DOCS_BASE_URL</td>
-			<td>https://thingsboard.io/docs/pe</td>
+			<td>https://docs.iothub.magenta.at/docs/pe</td>
 			<td> Base URL for solution templates docs</td>
 		</tr>
 	</tbody>

@@ -16,4 +16,4 @@ Allow: /*.svg
 Allow: /*.jpeg
 Allow: /*.gif
 
-SITEMAP: https://thingsboard.io/sitemap.xml
+SITEMAP: https://docs.iothub.magenta.at/sitemap.xml

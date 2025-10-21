@@ -135,4 +135,4 @@ Now we have a visualizing dashboard for displaying data and controlling the DO (
 By following this guide, you can easily integrate Elastel IIoT gateways with IoT Hub. Elastel’s easy-to-use web UI and IoT Hub’s powerful visualization tools make the edge-to-cloud connection seamless.
 
 - Learn more about [**Elastel Edge Devices**](https://www.elastel.com/products/){:target="_blank"}.
-- Explore IoT Hub [**Documentation**](https://thingsboard.io/docs/pe/){:target="_blank"} for advanced features and concepts.
+- Explore IoT Hub [**Documentation**](https://docs.iothub.magenta.at/docs/pe/){:target="_blank"} for advanced features and concepts.

@@ -241,4 +241,4 @@ Verify that telemetry data is received and displayed in IoT Hub:
 
 This guide demonstrated how to integrate the ALPON X4 with IoT Hub using MQTT for real-time data collection and device control. By following the steps, you created a device in IoT Hub, deployed an MQTT client on Sixfab Connect, and verified telemetry data.
 
-For further assistance, refer to the [ThingsBoard documentation](https://thingsboard.io/docs/){:.copy-code} or contact [Sixfab support](https://sixfab.com/contact/){:.copy-code}.
+For further assistance, refer to the [IoT Hub documentation](https://docs.iothub.magenta.at/docs/){:.copy-code} or contact [Sixfab support](https://sixfab.com/contact/){:.copy-code}.

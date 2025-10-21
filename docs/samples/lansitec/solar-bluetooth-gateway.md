@@ -20,7 +20,7 @@ To continue with this guide we will need the following:
 - [LoRaWAN Gateway](https://www.lansitec.com/products/outdoor-lorawan-gateway/){:target="_blank"}
 - [Bluetooth beacon](https://www.lansitec.com/products/bluetooth-beacon/){:target="_blank"}
 - [Network Server account](https://www.chirpstack.io/){:target="_blank"}
-- [ThingsBoard account](https://thingsboard.io/installations/choose-region/){:target="_blank"}
+- [ThingsBoard account](https://docs.iothub.magenta.at/installations/choose-region/){:target="_blank"}
 
 ## Configuration
 

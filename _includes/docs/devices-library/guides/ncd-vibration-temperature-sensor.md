@@ -125,8 +125,8 @@ In this tutorial, our primary focus will be on transmitting **RUN sensor mode** 
 
 You can find the documentation to help you get started with IoT Hub, as well as the MQTT Gateway API Reference, available here:
 
-- [Getting Started with ThingsBoard Professional Edition](https://thingsboard.io/docs/paas/eu/getting-started-guides/helloworld/){:target="_blank"}
-- [MQTT Gateway API Reference](https://thingsboard.io/docs/reference/gateway-mqtt-api/){:target="_blank"}
+- [Getting Started with ThingsBoard Professional Edition](https://docs.iothub.magenta.at/docs/paas/eu/getting-started-guides/helloworld/){:target="_blank"}
+- [MQTT Gateway API Reference](https://docs.iothub.magenta.at/docs/reference/gateway-mqtt-api/){:target="_blank"}
 
 The first step is to [sign in using your ThingsBoard account](https://iothub.magenta.at/){:target="_blank"}. 
 

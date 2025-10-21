@@ -141,7 +141,7 @@ Interested in the **Edge Professional Edition**? Explore the IoT Hub Edge docume
 
 Congratulations! You have successfully completed the initial configuration steps for **IoT Hub Edge**. Now you can send new telemetry readings and they will appear on the dashboard immediately.
 
-Help us improve by providing your feedback at [GitHub/Issues](https://github.com/thingsboard/thingsboard-edge/issues){: target="_blank"} or through the ["Contact us"](https://thingsboard.io/docs/contact-us/){: target="_blank"} form.
+Help us improve by providing your feedback at [GitHub/Issues](https://github.com/thingsboard/thingsboard-edge/issues){: target="_blank"} or through the ["Contact us"](https://docs.iothub.magenta.at/docs/contact-us/){: target="_blank"} form.
 We would also greatly appreciate it if you could star our project on [GitHub](https://github.com/thingsboard/thingsboard-edge){: target="_blank"}!
 
 ## Next steps

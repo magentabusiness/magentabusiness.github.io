@@ -51,7 +51,7 @@ IoT Hub Team has already provisioned a valid certificate for [{{hostLabel}}](htt
 Please download the CA root certificate using this [**link**](/docs/{{docsPrefix}}user-guide/resources/coap-over-dtls/ca-root.pem) and save it to your working directory as "**ca-root.pem**".
 
 ```bash
-wget https://thingsboard.io/docs/{{docsPrefix}}user-guide/resources/coap-over-dtls/ca-root.pem
+wget https://docs.iothub.magenta.at/docs/{{docsPrefix}}user-guide/resources/coap-over-dtls/ca-root.pem
 ```
 {: .copy-code}
 

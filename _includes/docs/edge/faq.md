@@ -95,7 +95,7 @@ If this is required, you'll need to provision multiple <b>IoT Hub Edge</b> insta
 
 ### How many devices can IoT Hub Edge support? 
 {% if docsPrefix == 'pe/edge/' %}
-<p>The number of connected devices depends on your <a href="https://thingsboard.io/pricing/?section=thingsboard-edge" target="_blank">subscription plan</a>.</p>
+<p>The number of connected devices depends on your <a href="https://docs.iothub.magenta.at/pricing/?section=thingsboard-edge" target="_blank">subscription plan</a>.</p>
 <p>Some plans offer 'Unlimited Devices and Assets, thus there are no soft limits on creating devices and assets on the edge side.</p>
 {% else %}
 <p><b>IoT Hub Edge</b> doesn’t impose a fixed limit on the number of devices you can connect.</p>

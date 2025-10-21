@@ -50,7 +50,7 @@ To continue with this guide we will need the following:
 ### IoT Hub configuration
 
 The configuration steps in IoT Hub are shown below, we will demonstrate on the {{hostName}} server.
-You can use [IoT Hub](https://{{hostName}}/signup){:target="_blank"} or [install](https://thingsboard.io/docs/user-guide/install/pe/installation-options/){:target="_blank"} your own platform instance.
+You can use [IoT Hub](https://{{hostName}}/signup){:target="_blank"} or [install](https://docs.iothub.magenta.at/docs/user-guide/install/pe/installation-options/){:target="_blank"} your own platform instance.
 
 * [Step 1.1] Register and log in [IoT Hub](https://{{hostName}}/signup){:target="_blank"};
 

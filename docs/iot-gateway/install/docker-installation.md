@@ -13,7 +13,7 @@ This guide will help you to install and start IoT Hub Gateway using Docker Compo
 
 - [Install Docker Compose](https://docs.docker.com/compose/){:target="_blank"};
 - You will need to have access to ThingsBoard. The easiest way is to use the [ThingsBoard Demo](https://iothub.magenta.at/){:target="_blank"} server.
-The alternative option is to install the IoT Hub locally using the [installation guide](https://thingsboard.io/docs/user-guide/install/installation-options/){:target="_blank"}.
+The alternative option is to install the IoT Hub locally using the [installation guide](https://docs.iothub.magenta.at/docs/user-guide/install/installation-options/){:target="_blank"}.
 
 ## Download docker-compose file
 

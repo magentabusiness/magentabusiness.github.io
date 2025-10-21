@@ -102,7 +102,7 @@ allowing us to keep our machines running efficiently and reducing unplanned down
 
 ### Prerequisites
 
-Assembly machines already connected to IoT Hub via OPC-UA integration and telemetry data is available in ThingsBoard. You can find more details how to do this in our [connectivity guides](https://thingsboard.io/docs/pe/guides/#AnchorIDConnectYourDevice).
+Assembly machines already connected to IoT Hub via OPC-UA integration and telemetry data is available in ThingsBoard. You can find more details how to do this in our [connectivity guides](https://docs.iothub.magenta.at/docs/pe/guides/#AnchorIDConnectYourDevice).
 Equipment reports a lot of useful telemetry data, but for this use case we will use only `capsProduced` telemetry.
 
 

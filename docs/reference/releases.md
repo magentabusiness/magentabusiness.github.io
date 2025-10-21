@@ -759,7 +759,7 @@ Minor release with the following improvements and bug fixes:
 
 ## v3.6.3 (Mar 18, 2024) {#v363}
 
-For an overview of the main improvements, check out the [**ThingsBoard 3.6.3 release**](https://thingsboard.io/blog/thingsboard-release-3-6-3-announcement/) blog post.
+For an overview of the main improvements, check out the [**ThingsBoard 3.6.3 release**](https://docs.iothub.magenta.at/blog/thingsboard-release-3-6-3-announcement/) blog post.
 
 **Major Improvements**
 
@@ -1593,7 +1593,7 @@ Minor release with the following features and bug fixes:
 **Minor** release with the following improvements and bug fixes:
 
 * Core:
-  * Improved performance and stability of the [Device State Service](https://thingsboard.io/docs/user-guide/device-connectivity-status/);
+  * Improved performance and stability of the [Device State Service](https://docs.iothub.magenta.at/docs/user-guide/device-connectivity-status/);
   * [#6983](https://github.com/thingsboard/thingsboard/pull/6983) Fixed start up failure due to Spring circular dependencies;
   * [#6923](https://github.com/thingsboard/thingsboard/pull/6923) Replaced deprecated StringUtils usages with in-repository implementation;
   * [#6959](https://github.com/thingsboard/thingsboard/pull/6959) Fixed auto-convertion of string values that start with '0' to double in EntityDataAdapter;
