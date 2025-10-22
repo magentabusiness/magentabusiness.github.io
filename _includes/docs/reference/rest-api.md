@@ -1,5 +1,5 @@
 * TOC
-  {:toc}
+{:toc}
 
 IoT Hub provides interactive REST API documentation via [Swagger UI](https://swagger.io/){:target="_blank"}. This tool allows you to explore available API methods, understand their parameters, and execute API requests directly from your browser.
 

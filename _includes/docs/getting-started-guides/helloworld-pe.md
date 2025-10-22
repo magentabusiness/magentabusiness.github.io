@@ -19,8 +19,8 @@ For simplicity, we&#39;ll visualize data from a temperature sensor.
 As an example, let&#39;s add a device that will transmit the following data to IoT Hub platform: the device&#39;s name and temperature readings as telemetry.
 
 To add a new device, follow these steps:
- 
-{% include images-gallery.html imageCollection="step1" showListImageTitles="true" %} 
+
+{% include images-gallery.html imageCollection="step1" showListImageTitles="true" %}
 
 You will also receive a notification upon adding devices. Click the bell icon (top right) to view notifications.
 
@@ -51,18 +51,14 @@ Let&#39;s create a dashboard and add three widgets to it in order to display a l
 
 ### Step 3.1 Create an empty dashboard
 
+To create a new dashboard, follow these steps:
+
 {% include images-gallery.html imageCollection="step31" showListImageTitles="true" %}
 
-### Step 3.2 Add entity alias
+### Step 3.2 Add an Entities table widget
 
-Alias is a reference to a single entity or a group of entities that are used in the widgets.
-Alias may be static or dynamic. For simplicity, we will use "Single entity" alias reference the one and only entity ("My New Device" in our case).
-It is possible to configure an alias that references multiple devices. For example, devices of a certain type or related to a certain asset. 
-You may learn more about different aliases [here](/docs/{{docsPrefix}}user-guide/ui/aliases/).
-
-{% include images-gallery.html imageCollection="step32" showListImageTitles="true" %}   
-
-### Step 3.3 Add table widget
+The "Entities table" widget displays a list of entities and their latest values.
+The list of entities corresponds to selected devices or other entities, and filters with the ability of additional full-text search and pagination options.
 
 To add the table widget we need to select it from the widget library. Widgets are grouped into widget bundles.
 Each widget has a data source. This is how the widget "knows" what data to display.
@@ -70,12 +66,12 @@ To see the latest value of our "temperature" data that we sent during step 2, we
 
 Let&#39;s add your first widget:
 
-Congratulations! You have added the first widget. Now you are able to send a new telemetry reading and it will immediately appear in the table. 
+{% include images-gallery.html imageCollection="step32" showListImageTitles="true" %}
 
 Congratulations! You&#39;ve added your first widget.
 
-In the "Entities table" widget, there are two columns. 
-The first column displays the device&#39;s name, and the second column displays the value of the "temperature" key (device telemetry). 
+In the "Entities table" widget, there are two columns.
+The first column displays the device&#39;s name, and the second column displays the value of the "temperature" key (device telemetry).
 So, each column corresponds to an added key.
 
 Now you are able to send a new telemetry reading (as in [Step 1](#step-1-provision-device)), and it will immediately appear in the table.
@@ -84,23 +80,37 @@ Now you are able to send a new telemetry reading (as in [Step 1](#step-1-provisi
 
 Chart widgets allow you to display time series data with customizable line charts and bar charts.
 
-To add the chart widget we need to select it from the widget library. 
+To add the chart widget we need to select it from the widget library.
 Chart widget displays multiple historical values of the same data key ("temperature" in our case).
 We should also configure the time window to use the chart widget.
 
+{% include images-gallery.html imageCollection="step33" showListImageTitles="true" %}
+
+Congratulations! You have added the chart widget. Now you are able to send a new telemetry reading, and it will immediately appear in the chart.
+
+You can also adjust the time interval for displaying data in the widget, change the aggregation function, and specify the grouping interval.
+To do this, open the [Time window](/docs/{{docsPrefix}}user-guide/dashboards/#time-window){:target="_blank"} and make the necessary adjustments. Update the time window settings by clicking the "Update" button.
+
+{% include images-gallery.html imageCollection="step33_2" %}
+
+### Step 3.4 Add an Alarms table widget
+
+The alarms table widget displays alarms related to the specified entity in the certain time window.
+Alarm widget is configured by specifying an entity as the alarm source, and the corresponding alarm fields.
+
 {% include images-gallery.html imageCollection="step34" showListImageTitles="true" %}
 
-Now it&#39;s time to configure alarm rules and raise some alarms. 
+Now it&#39;s time to configure alarm rules and raise some alarms.
 
-> **Note:** in this documentation, we are using a single device as a data source for the widgets. 
+> **Note:** in this documentation, we are using a single device as a data source for the widgets.
 To use dynamic entities (for example, devices of a certain type or related to a certain asset) as data source, you should use the alias.
-Alias is a reference to a single entity or a group of entities that are used in the widgets. 
+Alias is a reference to a single entity or a group of entities that are used in the widgets.
 You may learn more [about different aliases here](/docs/{{docsPrefix}}user-guide/ui/aliases/){:target="_blank"}.
 
 ## Step 4. Configure alarm rules
 
 We&#39;ll use the [alarm rules](/docs/{{docsPrefix}}user-guide/device-profiles/#alarm-rules){:target="_blank"} feature to define a rule that triggers an alarm when the temperature exceeds 25 °C.
-Alarm rules are configured in the [device profile](/docs/{{docsPrefix}}user-guide/device-profiles/){:target="_blank"} used by the target device. 
+Alarm rules are configured in the [device profile](/docs/{{docsPrefix}}user-guide/device-profiles/){:target="_blank"} used by the target device.
 
 In our example, "My new device" uses the "default" device profile. While it&#39;s best practice to create separate profiles for each device type, we&#39;ll skip that step here for simplicity.
 
@@ -113,6 +123,8 @@ Now, our alarm rule is active (see [Step 4](#step-4-configure-alarm-rules)), and
 
 {% include images-gallery.html imageCollection="step5" showListImageTitles="true" %}
 
+We also recommend reviewing alarm rule [examples](/docs/{{docsPrefix}}user-guide/device-profiles/#alarm-rules){:target="_blank"} and documentation about [alarm notifications](/docs/{{docsPrefix}}user-guide/device-profiles/#notifications-about-alarms){:target="_blank"}.
+
 ## Step 6. Alarm notifications
 
 The IoT Hub [Notification center](/docs/{{docsPrefix}}user-guide/notifications/){:target="_blank"} allows personalized notifications to end-users regarding device activities, environmental changes, or events in your IoT ecosystem, and more.
@@ -120,37 +132,38 @@ Notifications can be delivered via email, SMS, or integrated third-party systems
 
 {% include images-gallery.html imageCollection="notification-center" %}
 
-Additionally, [IoT Hub Mobile Application](/docs/pe/mobile/){:target="_blank"} provides instant push notifications directly to your smartphone, ensuring you&#39;re always informed of critical events wherever you are.
+[//]: # (Additionally, [ThingsBoard PE Mobile Application]&#40;/docs/pe/mobile/&#41;{:target="_blank"} provides instant push notifications directly to your smartphone, ensuring you&#39;re always informed of critical events wherever you are.)
 
-Follow [this guide](/docs/pe/mobile/getting-started/){:target="_blank"} to install the IoT Hub mobile app and set up notifications.
+[//]: # ()
+[//]: # (Follow [this guide]&#40;/docs/pe/mobile/getting-started/&#41;{:target="_blank"} to install the ThingsBoard mobile app and set up notifications.)
 
 Enjoy exploring IoT Hub!
 
 ## Step 7. Share dashboard with customers
 
 One of the most important IoT Hub features is the ability to create end-user dashboards.
-Each Customer User should see his own devices and should not be able to see devices or any other data that belongs to a different customer. 
+Each Customer User should see his own devices and should not be able to see devices or any other data that belongs to a different customer.
 
 We have already created the Device (see [Step 1](#step-1-provision-device)), the Dashboard and added widgets to it (see [Step 3](#step-3-create-dashboard)).
 Now it&#39;s time to create a Customer and a Customer User and make sure they will have access to the device&#39;s data and the dashboard.
 There are two options for how Tenant Administrator can give access to a certain Entity (Device, Dashboard, Asset, etc.) for a Customer:
 
-* A. Make Customer become the owner of the entity. This option is useful to ensure that only this customer can access the device and its data (see [Step 7.2](#step-72-change-owner-of-the-device)).
+* A. Assign the Customer as the owner of the entity. This option is useful to ensure that only this customer can access the device and its data (see [Step 7.2](#step-72-change-owner-of-the-device)).
 * B. Share the entity with the Customer. This option is useful to share a single dashboard with multiple customers (see [Step 7.3](#step-73-share-the-dashboard)).
- 
-#### Step 7.1 Create customer
+
+#### Step 7.1 Create a customer
 
 Let&#39;s create a customer with the title "My New Customer". Please see the instructions below:
 
 {% include images-gallery.html imageCollection="step71" showListImageTitles="true" %}
 
-#### Step 7.2 Change owner of the device
+### Step 7.2 Change owner of the device
 
 Let&#39;s assign the Customer as the owner of the device. We will also create a group of devices and add our device to this group.
 
 {% include images-gallery.html imageCollection="step72" showListImageTitles="true" %}
 
-#### Step 7.3 Share the dashboard
+Make sure that the device is assigned to your customer.
 
 {% include images-gallery.html imageCollection="step72_1" showListImageTitles="true" %}
 
@@ -178,13 +191,13 @@ You may optionally configure the dashboard to appear just after user logs in to 
 
 {% include images-gallery.html imageCollection="step74" showListImageTitles="true" %}
 
-#### Step 7.5 Activate customer user
+### Step 7.5 Activate the customer user
 
 Finally, log in to IoT Hub as a customer user.
 
 - Paste the previously copied link into a new browser tab and press the "Enter" key. Now create a password by entering it twice and clicking "Create Password".
 - You are now logged in as a customer user. Since this user has read-only access, you can view device data and its alarms, but you cannot acknowledge or clear them.   
-To learn more about permissions and role-based access control (RBAC), click [here](/docs/{{docsPrefix}}user-guide/rbac/){:target="_blank"}.
+  To learn more about permissions and role-based access control (RBAC), click [here](/docs/{{docsPrefix}}user-guide/rbac/){:target="_blank"}.
 
 {% include images-gallery.html imageCollection="step75" %}
 
@@ -192,7 +205,7 @@ To learn more about permissions and role-based access control (RBAC), click [her
 
 {% assign currentGuide = "GettingStartedGuides" %}{% include templates/multi-project-guides-banner.md %}
 
-<!-- ## IoT Hub white-labeling guide
+## Your feedback
 
-Don&#39;t hesitate to star IoT Hub on [github](https://github.com/thingsboard/thingsboard){:target="_blank"} to help us spread the word. 
+[//]: # (Don&#39;t hesitate to star ThingsBoard on [github]&#40;https://github.com/thingsboard/thingsboard&#41;{:target="_blank"} to help us spread the word.)
 If you have any questions about this sample, please [contact us](/docs/contact-us/){:target="_blank"}.
