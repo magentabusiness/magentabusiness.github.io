@@ -21,7 +21,7 @@ The most important reason is security and the ability to control every aspect of
 Besides, most UDFs are relatively simple functions that transform or filter data, and we want to find a more effective way to execute them.   
 
 Our search for existing Script/Expression Language (EL) implementations led us to the [MVEL](https://github.com/mvel/mvel).
-The IoT Hub Expression Language (TBEL) is basically a [fork](https://github.com/thingsboard/tbel) of MVEL with some important security constraints, 
+The ThingsBoard Expression Language (TBEL) is basically a [fork](https://github.com/thingsboard/tbel) of MVEL with some important security constraints, 
 built-in memory management, and frequently used helper functions that are specific to IoT Hub.
  
 ### TBEL vs Nashorn

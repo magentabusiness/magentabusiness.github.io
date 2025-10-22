@@ -2,7 +2,7 @@
 layout: docwithnav-paas
 assignees:
 - ashvayka
-title: IoT Hub Expression Language (TBEL)
+title: ThingsBoard Expression Language (TBEL)
 ---
 
 {% assign docsPrefix = "paas/" %}

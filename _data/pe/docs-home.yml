@@ -19,10 +19,8 @@ toc:
     path: /docs/pe/solution-templates/smart-office/
   - title: SCADA Oil & Gas Drilling system
     path: /docs/pe/solution-templates/scada-drilling-system/
-    new: true
   - title: SCADA Energy management
     path: /docs/pe/solution-templates/scada-energy-management/
-    new: true
   - title: Fleet tracking
     path: /docs/pe/solution-templates/fleet-tracking/
   - title: Fuel Level Monitoring
@@ -55,7 +53,6 @@ toc:
     path: /docs/pe/user-guide/telemetry/
   - title: Calculated fields
     path: /docs/pe/user-guide/calculated-fields/
-    new: true
   - title: Alarms
     path: /docs/pe/user-guide/alarms/
   - title: Remote commands to devices
@@ -73,11 +70,9 @@ toc:
     path: /docs/pe/user-guide/ui/aliases/
   - title: Unit conversion
     path: /docs/pe/user-guide/ui/unit-conversion/
-    new: true
   - title: Layouts
     path: /docs/pe/user-guide/ui/layouts/
   - title: SCADA
-    new: true
     section:
       - title: Overview
         path: /docs/pe/user-guide/scada/
@@ -95,7 +90,6 @@ toc:
         path: /docs/pe/user-guide/ui/chart-widget/
       - title: Map widgets
         path: /docs/pe/user-guide/widgets/map-widgets/
-        new: true
       - title: Entities table widget
         path: /docs/pe/user-guide/ui/entity-table-widget/
       - title: Advanced data key configuration
@@ -166,7 +160,6 @@ toc:
     path: /docs/user-guide/contribution/rule-node-development/
   - title: Templatization
     path: /docs/pe/user-guide/templatization/
-    new: true
 - title: White labeling
   section:
     - title: Overview
@@ -231,7 +224,6 @@ toc:
     path: /docs/user-guide/integrations/tuya/
   - title: Particle
     path: /docs/user-guide/integrations/particle/
-    new: true
   - title: Apache Pulsar
     path: /docs/user-guide/integrations/apache-pulsar/
   - title: AWS SQS
@@ -258,8 +250,8 @@ toc:
       path: /docs/pe/user-guide/ui/mobile-qr-code/
 - title: Other features
   section:
-    - title: Edge computing
-      path: /docs/pe/user-guide/edge-computing/
+#    - title: Edge computing
+#      path: /docs/pe/user-guide/edge-computing/
     - title: Device connectivity status
       path: /docs/pe/user-guide/device-connectivity-status/
     - title: Claiming devices
@@ -268,7 +260,6 @@ toc:
       path: /docs/pe/user-guide/device-provisioning/
     - title: Image gallery
       path: /docs/pe/user-guide/image-gallery/
-      new: true
     - title: Entity views
       path: /docs/pe/user-guide/entity-views/
     - title: API limits
@@ -289,9 +280,8 @@ toc:
       path: /docs/pe/user-guide/csv-xls-data-export/
     - title: File storage
       path: /docs/pe/user-guide/file-storage/
-    - title: IoT Hub Expression Language (TBEL)
+    - title: ThingsBoard Expression Language (TBEL)
       path: /docs/pe/user-guide/tbel/
-      new: true
 - title: Security
   section:
   - title: Security settings
@@ -304,7 +294,6 @@ toc:
     path: /docs/pe/user-guide/rbac/
   - title: Secrets storage
     path: /docs/pe/user-guide/secrets-storage/
-    new: true
   - title: Two-factor authentication
     path: /docs/pe/user-guide/two-factor-authentication/
   - title: OAuth 2.0

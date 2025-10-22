@@ -297,7 +297,7 @@ toc:
       path: /docs/paas/eu/user-guide/csv-xls-data-export/
     - title: File storage
       path: /docs/paas/eu/user-guide/file-storage/
-    - title: IoT Hub Expression Language (TBEL)
+    - title: ThingsBoard Expression Language (TBEL)
       path: /docs/paas/eu/user-guide/tbel/
       new: true
 - title: Security
