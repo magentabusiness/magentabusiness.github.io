@@ -4,11 +4,11 @@
 To subscribe to changes in shared device attributes, send a GET request to the following URL:
 
 ```bash
-coap://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/attributes
+coap://iothub.magenta.at/api/v1/$ACCESS_TOKEN/attributes
 ```
 {: .copy-code}
 
-* Replace the **$THINGSBOARD_HOST_NAME** with the actual hostname or IP address of your IoT Hub Edge instance.
+* Replace the **iothub.magenta.at** with the actual hostname or IP address of your IoT Hub Edge instance.
 
 {% assign accessTokenPE = '
     ===
@@ -32,7 +32,7 @@ coap://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/attributes
 
 Execute the command:
 ```bash
-coap get -o coap://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/attributes
+coap get -o coap://iothub.magenta.at/api/v1/$ACCESS_TOKEN/attributes
 ```
 {: .copy-code}
 
@@ -43,16 +43,16 @@ Once shared attribute will be changed by one of the server-side components (REST
 To publish client-side device attributes to the **IoT Hub Edge**, send a POST request to the following URL:
 
 ```bash
-coap://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/attributes
+coap://iothub.magenta.at/api/v1/$ACCESS_TOKEN/attributes
 ```
 {: .copy-code}
 
-* **$THINGSBOARD_HOST_NAME:** The actual hostname or IP address of your IoT Hub Edge instance
+* **iothub.magenta.at:** The actual hostname or IP address of your IoT Hub Edge instance
 * **$ACCESS_TOKEN:** The actual access token of the device.
 
 Publish client-side attributes update using data from [**new-attributes-values.json**](/docs/reference/resources/new-attributes-values.json){: target="_blank"} file:
 
 ```bash
-cat new-attributes-values.json | coap post coap://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/attributes
+cat new-attributes-values.json | coap post coap://iothub.magenta.at/api/v1/$ACCESS_TOKEN/attributes
 ```
 {: .copy-code}

@@ -58,4 +58,4 @@ TBMQ is licensed under Apache 2.0 License. It is free for both personal and comm
  
 ## How to get support?
 
-You can use troubleshooting instructions and community resources or [contact us](mailto:service4iot@magenta.at).
+You can use troubleshooting instructions and community resources or [service4iot@magenta.at](mailto:service4iot@magenta.at).

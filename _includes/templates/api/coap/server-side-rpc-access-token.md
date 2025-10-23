@@ -2,12 +2,12 @@ Send GET request with observe flag to the following URL:
 
 {% if docsPrefix == null or docsPrefix == "pe/"%}
 ```shell
-coap://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/rpc
+coap://iothub.magenta.at/api/v1/$ACCESS_TOKEN/rpc
 ```
 {: .copy-code}
 
 Where
-- **$THINGSBOARD_HOST_NAME** is your localhost, or the platform address;
+- **iothub.magenta.at** is your localhost, or the platform address;
 - **$ACCESS_TOKEN** is device access token.
 
 {% endif %}
@@ -53,7 +53,7 @@ and can reply to them using POST request to the following URL:
 
 {% if docsPrefix == null or docsPrefix == "pe/"%}
 ```shell
-coap://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/rpc/{$id}
+coap://iothub.magenta.at/api/v1/$ACCESS_TOKEN/rpc/{$id}
 ```
 {: .copy-code}
 {% endif %}
@@ -81,10 +81,10 @@ Where **$id** is an integer request identifier.
 - Use **RPC debug terminal** widget in your IoT Hub instance;
 
 {% if docsPrefix == null or docsPrefix == "pe/" %}
-- Subscribe to RPC commands from the server using the command below. To do this, in the first terminal window send GET request with observe flag. Don't forget to replace <code>$THINGSBOARD_HOST_NAME</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token:
+- Subscribe to RPC commands from the server using the command below. To do this, in the first terminal window send GET request with observe flag. Don't forget to replace <code>iothub.magenta.at</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token:
 
 ```shell
-coap-client -m get coap://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/rpc -s 100 -B 100
+coap-client -m get coap://iothub.magenta.at/api/v1/$ACCESS_TOKEN/rpc -s 100 -B 100
 ```
 {: .copy-code}
 {% endif %}
@@ -120,7 +120,7 @@ The "`B`" options stands for break (the operation will be break after desired ti
 
 {% if docsPrefix == null or docsPrefix == "pe/" %}
 ```shell
-coap-client -f rpc-response.json -m post coap://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/rpc/1
+coap-client -f rpc-response.json -m post coap://iothub.magenta.at/api/v1/$ACCESS_TOKEN/rpc/1
 ```
 {: .copy-code}
 {% endif %}

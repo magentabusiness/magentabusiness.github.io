@@ -97,10 +97,10 @@ Let&#39;s look at an example where we use custom MQTT topic filters to publish t
 Publish time-series data using the following command:
 
 {% if docsPrefix == null or docsPrefix == "pe/" %}
-> Don&#39;t forget to replace `$THINGSBOARD_HOST_NAME` with your actual host name.
+> Don&#39;t forget to replace `iothub.magenta.at` with your actual host name.
 
 ```bash
-mosquitto_pub -h $THINGSBOARD_HOST_NAME -t /telemetry -i "c1" -u "t1" -P "secret" -m "{humidity:10.3}"
+mosquitto_pub -h iothub.magenta.at -t /telemetry -i "c1" -u "t1" -P "secret" -m "{humidity:10.3}"
 ```
 {: .copy-code}
 {% endif %}
@@ -119,13 +119,13 @@ Transmitted data will be displayed in the "**Latest telemetry**" tab of the devi
 <br>
 If you use the standard MQTT device topic filters configuration, you can publish time series and attributes using the commands below.
 
-{% if (docsPrefix == null) or (docsPrefix == "pe/") %}> Don&#39;t forget to replace `$THINGSBOARD_HOST_NAME` with your actual host name.{% endif %}
+{% if (docsPrefix == null) or (docsPrefix == "pe/") %}> Don&#39;t forget to replace `iothub.magenta.at` with your actual host name.{% endif %}
 
 Command for publish **timeseries data**:
 {% if (docsPrefix == null) or (docsPrefix == "pe/") %}
 
 ```bash
-mosquitto_pub -h $THINGSBOARD_HOST_NAME -t v1/devices/me/telemetry -i "c1" -u "t1" -P "secret" -m "{humidity:10.3}"
+mosquitto_pub -h iothub.magenta.at -t v1/devices/me/telemetry -i "c1" -u "t1" -P "secret" -m "{humidity:10.3}"
 ```
 {: .copy-code}
 {% endif %}
@@ -139,7 +139,7 @@ mosquitto_pub -h {{mqttHostName}} -t v1/devices/me/telemetry -i "c1" -u "t1" -P 
 Command for update **attributes**:
 {% if (docsPrefix == null) or (docsPrefix == "pe/") %}
 ```bash
-mosquitto_pub -h $THINGSBOARD_HOST_NAME -t v1/devices/me/attributes -i "c1" -u "t1" -P "secret" -m "{"firmwareVersion": "1.3"}"
+mosquitto_pub -h iothub.magenta.at -t v1/devices/me/attributes -i "c1" -u "t1" -P "secret" -m "{"firmwareVersion": "1.3"}"
 ```
 {: .copy-code}
 {% endif %}

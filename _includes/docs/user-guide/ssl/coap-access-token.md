@@ -17,11 +17,11 @@ The coap-client example below demonstrates how to connect to [IoT Hub](https://{
 
 Let's
 review a simple command
-to upload temperature readings using Access Token **YOUR_ACCESS_TOKEN** to IoT Hub instance **YOUR_TB_HOST**.
+to upload temperature readings using Access Token **YOUR_ACCESS_TOKEN** to IoT Hub instance **iothub.magenta.at**.
 See [CoAP API](/docs/{{docsPrefix}}reference/coap-api/) for more details. The command is using plain CoAP without TLS:
 
 ```bash
-coap-client -v 6 -m POST coap://YOUR_TB_HOST:5683/api/v1/YOUR_ACCESS_TOKEN/telemetry -t json -e "{temperature:25}"
+coap-client -v 6 -m POST coap://iothub.magenta.at:5683/api/v1/YOUR_ACCESS_TOKEN/telemetry -t json -e "{temperature:25}"
 ```
 {: .copy-code}
 
@@ -30,7 +30,7 @@ The above command requires coap-client library that you can install using the fo
  - **Ubuntu 20.04:** sudo apt install libcoap2-bin
  - **Ubuntu 18.04:** sudo apt install libcoap1-bin
 
-Don't forget to replace **YOUR_TB_HOST** with the host of your IoT Hub instance and **YOUR_ACCESS_TOKEN** with the access token of your device.
+Don't forget to replace **iothub.magenta.at** with the host of your IoT Hub instance and **YOUR_ACCESS_TOKEN** with the access token of your device.
 
 ### DTLS support (One-way TLS)
 
@@ -83,11 +83,11 @@ Follow the [CoAP over DTLS](/docs/{{docsPrefix}}user-guide/coap-over-dtls/) guid
 Once provisioned, you should prepare a CA root certificate in pem format. This certificate will be used by CoAP client to validate the server certificate.
 Save the CA root certificate to your working directory as "**ca-root.pem**".
 
-Now you may use the "**ca.pem**" to setup secure connection to your IoT Hub instance **YOUR_TB_HOST** and Access Token **YOUR_ACCESS_TOKEN** to authenticate the device to upload telemetry:
+Now you may use the "**ca.pem**" to setup secure connection to your IoT Hub instance **iothub.magenta.at** and Access Token **YOUR_ACCESS_TOKEN** to authenticate the device to upload telemetry:
 
 ```bash
-coap-client-openssl -v 6 -m POST  -R ca-root.pem -t "application/json" -e '{"temperature":42}' coaps://YOUR_TB_HOST/api/v1/YOUR_ACCESS_TOKEN/telemetry
+coap-client-openssl -v 6 -m POST  -R ca-root.pem -t "application/json" -e '{"temperature":42}' coaps://iothub.magenta.at/api/v1/YOUR_ACCESS_TOKEN/telemetry
 ```
 {: .copy-code}
 
-Don't forget to replace **YOUR_TB_HOST** with the host of your IoT Hub instance and **YOUR_ACCESS_TOKEN** with the access token of your device.
+Don't forget to replace **iothub.magenta.at** with the host of your IoT Hub instance and **YOUR_ACCESS_TOKEN** with the access token of your device.

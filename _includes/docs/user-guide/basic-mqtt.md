@@ -1,10 +1,10 @@
 {% if docsPrefix == null %}
-{% assign YOUR_TB_HOST = "* **YOUR_TB_HOST** with the host of your IoT Hub instance;" %}
+{% assign YOUR_TB_HOST = "* **iothub.magenta.at** with the host of your IoT Hub instance;" %}
 {% assign TB_HOST = "10.7.0.223" %}
 {% assign PEM_CERTIFICATE = "root-ca.pem" %}
 {% endif %}
 {% if docsPrefix == "pe/" %}
-{% assign YOUR_TB_HOST = "* **YOUR_TB_HOST** with the host of your IoT Hub instance;" %}
+{% assign YOUR_TB_HOST = "* **iothub.magenta.at** with the host of your IoT Hub instance;" %}
 {% assign TB_HOST = "10.7.3.177" %}
 {% assign PEM_CERTIFICATE = "root-ca.pem" %}
 {% endif %}
@@ -32,7 +32,7 @@ The command is using plain MQTT without TLS:
 
 {% if (docsPrefix == "pe/") or (docsPrefix == null) %}
 ```bash
-mosquitto_pub -d -q 1 -h "YOUR_TB_HOST" -p "1883" -t "v1/devices/me/telemetry" -i "YOUR_CLIENT_ID" -m {"temperature":25}
+mosquitto_pub -d -q 1 -h "iothub.magenta.at" -p "1883" -t "v1/devices/me/telemetry" -i "YOUR_CLIENT_ID" -m {"temperature":25}
 ```
 {: .copy-code}
 {% endif %}
@@ -75,7 +75,7 @@ Let's review a simple command to publish telemetry readings using MQTT client us
 
 {% if (docsPrefix == "pe/") or (docsPrefix == null) %}
 ```bash
-mosquitto_pub -d -q 1 -h "YOUR_TB_HOST" -p "1883" -t "v1/devices/me/telemetry" -u "YOUR_CLIENT_USERNAME" -P "YOUR_CLIENT_PASSWORD" -m {"temperature":25}
+mosquitto_pub -d -q 1 -h "iothub.magenta.at" -p "1883" -t "v1/devices/me/telemetry" -u "YOUR_CLIENT_USERNAME" -P "YOUR_CLIENT_PASSWORD" -m {"temperature":25}
 ```
 {: .copy-code}
 {% endif %}
@@ -117,7 +117,7 @@ Let's review a simple command to publish telemetry readings using MQTT client ID
 
 {% if (docsPrefix == "pe/") or (docsPrefix == null) %}
 ```bash
-mosquitto_pub -d -q 1 -h "YOUR_TB_HOST" -p "1883" -t "v1/devices/me/telemetry" -i "YOUR_CLIENT_ID" -u "YOUR_CLIENT_USERNAME" -P "YOUR_CLIENT_PASSWORD" -m {"temperature":25}
+mosquitto_pub -d -q 1 -h "iothub.magenta.at" -p "1883" -t "v1/devices/me/telemetry" -i "YOUR_CLIENT_ID" -u "YOUR_CLIENT_USERNAME" -P "YOUR_CLIENT_PASSWORD" -m {"temperature":25}
 ```
 {: .copy-code}
 {% endif %}
@@ -176,11 +176,11 @@ Once you have successfully executed the command, you should see the published "t
 {% include images-gallery.html imageCollection="mqtts-options-2" %}
 
 <br>
-Example of a generated command to publish telemetry using the *{{PEM_CERTIFICATE}}* certificate, {% unless docsPrefix contains 'paas/' %}host of your IoT Hub instance (YOUR_TB_HOST),{% endunless %} client id (YOUR_CLIENT_ID), and client username and password (YOUR_CLIENT_USERNAME / YOUR_CLIENT_PASSWORD) of the selected device:
+Example of a generated command to publish telemetry using the *{{PEM_CERTIFICATE}}* certificate, {% unless docsPrefix contains 'paas/' %}host of your IoT Hub instance (iothub.magenta.at),{% endunless %} client id (YOUR_CLIENT_ID), and client username and password (YOUR_CLIENT_USERNAME / YOUR_CLIENT_PASSWORD) of the selected device:
 
 {% if (docsPrefix == "pe/") or (docsPrefix == null) %}
 ```bash
-mosquitto_pub -d -q 1 --cafile {{PEM_CERTIFICATE}} -h YOUR_TB_HOST -p 8883 -t v1/devices/me/telemetry -i "YOUR_CLIENT_ID" -u "YOUR_CLIENT_USERNAME" -P "YOUR_CLIENT_PASSWORD" -m {"temperature":25}
+mosquitto_pub -d -q 1 --cafile {{PEM_CERTIFICATE}} -h iothub.magenta.at -p 8883 -t v1/devices/me/telemetry -i "YOUR_CLIENT_ID" -u "YOUR_CLIENT_USERNAME" -P "YOUR_CLIENT_PASSWORD" -m {"temperature":25}
 ```
 {: .copy-code}
 {% endif %}

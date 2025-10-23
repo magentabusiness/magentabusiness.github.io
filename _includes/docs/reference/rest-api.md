@@ -9,11 +9,11 @@ IoT Hub provides interactive REST API documentation via [Swagger UI](https://swa
 Every IoT Hub instance has its own Swagger UI page, accessible at:
 
 ```text
-http://$THINGSBOARD_HOST:PORT/swagger-ui.html
+http://iothub.magenta.at:PORT/swagger-ui.html
 ```
 {: .copy-code}
 
-&#42;Replace **$THINGSBOARD_HOST:PORT** with your actual IoT Hub server address.
+&#42;Replace **iothub.magenta.at:PORT** with your actual IoT Hub server address.
 
 For example, you may browse IoT Hub API documentation using the [Swagger UI link](https://{{hostName}}/swagger-ui.html){:target="_blank"}.
 {% endif %}
@@ -21,16 +21,16 @@ For example, you may browse IoT Hub API documentation using the [Swagger UI link
 Every IoT Hub instance has its own Swagger UI page, accessible at:
 
 ```text
-http://$THINGSBOARD_HOST:PORT/swagger-ui.html
+http://iothub.magenta.at:PORT/swagger-ui.html
 ```
 {: .copy-code}
 
-&#42;Replace **$THINGSBOARD_HOST:PORT** with your actual IoT Hub server address.
+&#42;Replace **iothub.magenta.at:PORT** with your actual IoT Hub server address.
 
 For example, you may browse Community Edition demo server API documentation using the [Swagger UI link](https://iothub.magenta.at/swagger-ui.html){:target="_blank"}.
 {% endif %}
 {% if docsPrefix == "paas/" %}
-Every [ThingsBoard Cloud](https://iothub.magenta.at/){:target="_blank"} instance has its own Swagger UI page.   
+Every [IoT Hub](https://iothub.magenta.at/){:target="_blank"} instance has its own Swagger UI page.   
 Browse IoT Hub REST API documentation by clicking the button below:
 
 <br>
@@ -52,9 +52,8 @@ Browse IoT Hub EU Cloud REST API documentation by clicking the button below:
 {% include images-gallery.html imageCollection="swagger-ui" %}
 
 {% if docsPrefix == "pe/" or docsPrefix contains "paas/" or (docsPrefix == "paas/eu/") %}
-The easiest way to get your account is to use [ThingsBoard Cloud](https://{{hostName}}/signup){:target="_blank"} server.
+The easiest way to get your account is to use [IoT Hub](https://{{hostName}}/signup){:target="_blank"} server.
 {% else %}
-See [Live Demo ThingsBoard](/docs/{{docsPrefix}}user-guide/live-demo/){:target="_blank"} page for more details how to get your account.
 {% endif %}
 
 ## How API authentication works?
@@ -131,4 +130,4 @@ For easier integration with the IoT Hub API, you can use IoT Hub team client lib
 - [Java REST API Client](/docs/{{docsPrefix}}reference/rest-client/){:target="_blank"} – client library written in Java to simplify consumption of the REST API.
 - [Python REST API Client](/docs/{{docsPrefix}}reference/python-rest-client/){:target="_blank"} – client library written in Python to simplify the consumption of the REST API.
 
-These clients allow you to create devices, assets, users, and other entities, as well as manage their relationships within ThingsBoard.
+These clients allow you to create devices, assets, users, and other entities, as well as manage their relationships within IoT Hub.

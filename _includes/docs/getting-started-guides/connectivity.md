@@ -42,7 +42,8 @@ Most of the protocols above support JSON, Protobuf or own data format. This is t
 IoT Hub IoT Gateway helps to connect devices that are located in the local network and do not have access to the internet or use specific non-IP protocols.
 IoT Gateway supports MQTT, OPC-UA, Modbus, BLE, HTTP, CAN, BACnet, ODBC, SNMP and other protocols.
 The gateway converts the data from devices to internal IoT Hub format and upload it over MQTT to the platform.
-See [What is IoT Gateway?](/docs/iot-gateway/what-is-iot-gateway/) for more info.
+
+[//]: # (See [What is IoT Gateway?]&#40;/docs/iot-gateway/what-is-iot-gateway/&#41; for more info.)
 
 ## LoRaWAN
 
@@ -61,4 +62,4 @@ IoT Hub supports Sigfox [integration](/docs/{{peDocsPrefix}}user-guide/integrati
 ## NB IoT and other protocols
 
 IoT Hub supports many [Integrations](/docs/{{peDocsPrefix}}user-guide/integrations/) that cover most of the devices on the market.
-Please [contact us](https://www.magenta.at/business/iot/kontakt) if you need help to connect your device.
+Please [service4iot@magenta.at](mailto:service4iot@magenta.at) if you need help to connect your device.

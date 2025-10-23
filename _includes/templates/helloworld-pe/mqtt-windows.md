@@ -26,14 +26,14 @@ mosquitto_pub -d -q 1 -h "{{mqttHostName}}" -p "1883" -t "v1/devices/me/telemetr
 
 {% else %}
 
-Open the Terminal and replace $THINGSBOARD_HOST_NAME and $ACCESS_TOKEN with corresponding values.
+Open the Terminal and replace iothub.magenta.at and $ACCESS_TOKEN with corresponding values.
 
 ```bash
-mosquitto_pub -d -q 1 -h "$THINGSBOARD_HOST_NAME" -p "1883" -t "v1/devices/me/telemetry" -u "$ACCESS_TOKEN" -m {"temperature":25}
+mosquitto_pub -d -q 1 -h "iothub.magenta.at" -p "1883" -t "v1/devices/me/telemetry" -u "$ACCESS_TOKEN" -m {"temperature":25}
 ```
 {: .copy-code}
 
-For example, $THINGSBOARD_HOST_NAME reference your local installation, $ACCESS_TOKEN is ABC123:
+For example, iothub.magenta.at reference your local installation, $ACCESS_TOKEN is ABC123:
 
 ```bash
 mosquitto_pub -d -q 1 -h "localhost" -p "1883" -t "v1/devices/me/telemetry" -u "ABC123" -m {"temperature":25}

@@ -1,1 +1,1 @@
-mqtt sub -v -h "$THINGSBOARD_HOST_NAME" -t "v1/devices/me/attributes" -u '$ACCESS_TOKEN'
+mqtt sub -v -h "iothub.magenta.at" -t "v1/devices/me/attributes" -u '$ACCESS_TOKEN'

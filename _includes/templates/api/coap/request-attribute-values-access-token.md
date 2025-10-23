@@ -2,12 +2,12 @@ Send GET request to the following URL:
 
 {% if docsPrefix == null or docsPrefix == "pe/"%}
 ```shell
-coap://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/attributes?clientKeys=attribute1,attribute2&sharedKeys=shared1,shared2
+coap://iothub.magenta.at/api/v1/$ACCESS_TOKEN/attributes?clientKeys=attribute1,attribute2&sharedKeys=shared1,shared2
 ```
 {: .copy-code}
 
 Where
-- **$THINGSBOARD_HOST_NAME** is your localhost, or the platform address;
+- **iothub.magenta.at** is your localhost, or the platform address;
 - **$ACCESS_TOKEN** is device access token.
 
 {% endif %}

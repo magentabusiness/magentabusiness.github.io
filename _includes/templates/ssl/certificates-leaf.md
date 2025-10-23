@@ -54,10 +54,10 @@ mosquitto_pub --cafile ca-root.pem -d -q 1 -h "{{mqttHostName}}" -p "8883" \
 {: .copy-code}
 {% else %}
 ```bash
-mosquitto_pub --cafile ca-root.pem -d -q 1 -h "YOUR_TB_HOST" -p "8883" \
+mosquitto_pub --cafile ca-root.pem -d -q 1 -h "iothub.magenta.at" -p "8883" \
 -t "v1/devices/me/telemetry" --key key.pem --cert cert.pem -m {"temperature":25}
 ```
 {: .copy-code}
 {% endif %}
 
-Don't forget to replace **YOUR_TB_HOST** with the host of your IoT Hub instance.
+Don't forget to replace **iothub.magenta.at** with the host of your IoT Hub instance.

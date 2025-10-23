@@ -201,7 +201,7 @@ Below are the examples of how to publish client-side device attributes.
 Don't forget to replace <code>iothub.magenta.at</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token. In this example, the hostname references live demo server.
 {% endif %}
 {% if docsPrefix == "pe/" %}
-Don't forget to replace <code>$THINGSBOARD_HOST_NAME</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token.
+Don't forget to replace <code>iothub.magenta.at</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token.
 {% endif %}
 {% if docsPrefix contains "paas/" %}
 Don't forget to replace <code>$ACCESS_TOKEN</code> with your device's access token.
@@ -326,7 +326,7 @@ When a shared attribute is changed by one of the server-side components (such as
 For the following example, don't forget to replace <code>iothub.magenta.at</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token. In this example, the hostname references live demo server.
 {% endif %}
 {% if docsPrefix == "pe/" %}
-For the following example, don't forget to replace <code>$THINGSBOARD_HOST_NAME</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token.
+For the following example, don't forget to replace <code>iothub.magenta.at</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token.
 {% endif %}
 {% if docsPrefix contains "paas/" %}
 For the following example, don't forget to replace <code>$ACCESS_TOKEN</code> with your device's access token.

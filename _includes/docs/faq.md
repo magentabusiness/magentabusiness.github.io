@@ -68,4 +68,4 @@ It is free for both personal and commercial usage and you can deploy it anywhere
 
 ## How to get support?
 
-You can use troubleshooting instructions and community resources or [contact us](mailto:service4iot@magenta.at).
+You can use troubleshooting instructions and community resources or [service4iot@magenta.at](mailto:service4iot@magenta.at).

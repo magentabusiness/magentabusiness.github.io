@@ -2,11 +2,11 @@ Send GET request with Observe option to the following URL:
 
 {% if docsPrefix == null or docsPrefix == "pe/"%}
 ```shell
-coap://$THINGSBOARD_HOST_NAME/api/v1/attributes
+coap://iothub.magenta.at/api/v1/attributes
 ```
 {: .copy-code}
 
-Where **$THINGSBOARD_HOST_NAME** is your localhost, or the platform address.
+Where **iothub.magenta.at** is your localhost, or the platform address.
 
 {% endif %}
 {% if docsPrefix == null %}

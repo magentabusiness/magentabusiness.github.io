@@ -2,12 +2,12 @@ Send POST request to the following URL:
 
 {% if docsPrefix == null or docsPrefix == "pe/"%}
 ```shell
-coap://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/rpc
+coap://iothub.magenta.at/api/v1/$ACCESS_TOKEN/rpc
 ```
 {: .copy-code}
 
 Where
-- **$THINGSBOARD_HOST_NAME** is your localhost, or the platform address;
+- **iothub.magenta.at** is your localhost, or the platform address;
 - **$ACCESS_TOKEN** is device access token.
 
 {% endif %}
@@ -47,10 +47,10 @@ return {msg: {time:String(new Date())}, metadata: metadata, msgType: msgType};
 - Save the "[rpc-client-request.json](/docs/reference/resources/rpc-client-request.json)" file to your PC;
 
 {% if docsPrefix == null or docsPrefix == "pe/" %}
-- Now, send request to the server using the command below. Don't forget to replace <code>$THINGSBOARD_HOST_NAME</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token:
+- Now, send request to the server using the command below. Don't forget to replace <code>iothub.magenta.at</code> with your host and <code>$ACCESS_TOKEN</code> with your device's access token:
 
 ```shell
-cat rpc-client-request.json | coap post coap://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/rpc
+cat rpc-client-request.json | coap post coap://iothub.magenta.at/api/v1/$ACCESS_TOKEN/rpc
 ```
 {: .copy-code}
 {% endif %}

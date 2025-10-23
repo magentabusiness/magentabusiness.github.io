@@ -2,12 +2,12 @@ The CoAP client has to issue the GET request to
 
 {% if docsPrefix == null or docsPrefix == "pe/"%}
 ```shell
-coap get coap://$THINGSBOARD_HOST_NAME/api/v1/firmware?title=$TITLE&version=$VERSION
+coap get coap://iothub.magenta.at/api/v1/firmware?title=$TITLE&version=$VERSION
 ```
 {: .copy-code}
 
 Where
-- **$THINGSBOARD_HOST_NAME** is your localhost, or the platform address;
+- **iothub.magenta.at** is your localhost, or the platform address;
 - **$TITLE** is the firmware title;
 - **$VERSION** is the version of the target firmware.
 

@@ -6,12 +6,12 @@ To facilitate communication with **IoT Hub Edge** using **MQTT**, we recommend i
 
 To subscribe to shared device attribute changes, send the SUBSCRIBE message:
 ```bash
-mosquitto_sub -d -h $THINGSBOARD_HOST_NAME -t "v1/devices/me/attributes" -u "$ACCESS_TOKEN"
+mosquitto_sub -d -h iothub.magenta.at -t "v1/devices/me/attributes" -u "$ACCESS_TOKEN"
 ```
 {: .copy-code}
 
 * **v1/devices/me/attributes:** This is a topic on IoT Hub Edge. It allows the device to listen for any updates related to its attributes from the cloud.
-* Replace the **$THINGSBOARD_HOST_NAME** with the actual hostname or IP address of your IoT Hub Edge instance. 
+* Replace the **iothub.magenta.at** with the actual hostname or IP address of your IoT Hub Edge instance. 
     
 {% assign accessTokenPE = '
   ===
@@ -40,18 +40,18 @@ To publish client-side device attributes to the **IoT Hub Edge**, send a PUBLISH
 You can publish the telemetry data:
 
 ```bash
-mosquitto_pub -d -h $THINGSBOARD_HOST_NAME -t "v1/devices/me/attributes" -u "$ACCESS_TOKEN" -m "{"attribute1": "value1", "attribute2": true}"
+mosquitto_pub -d -h iothub.magenta.at -t "v1/devices/me/attributes" -u "$ACCESS_TOKEN" -m "{"attribute1": "value1", "attribute2": true}"
 ```
 {: .copy-code}
 
 * **v1/devices/me/attributes:** The topic to which the telemetry data is published.
-* **$THINGSBOARD_HOST_NAME:** The actual hostname or IP address of your IoT Hub Edge instance
+* **iothub.magenta.at:** The actual hostname or IP address of your IoT Hub Edge instance
 * **$ACCESS_TOKEN:** The actual access token of the device.
 * **{"attribute1": "value1", "attribute2": true}** The telemetry data.
 
 You can also publish client-side attributes update using data from [**new-attributes-values.json**](/docs/reference/resources/new-attributes-values.json){: target="_blank"} file:
 
 ```bash
-mosquitto_pub -d -h $THINGSBOARD_HOST_NAME -t "v1/devices/me/attributes" -u "$ACCESS_TOKEN" -f "new-attributes-values.json"
+mosquitto_pub -d -h iothub.magenta.at -t "v1/devices/me/attributes" -u "$ACCESS_TOKEN" -f "new-attributes-values.json"
 ```
 {: .copy-code}
