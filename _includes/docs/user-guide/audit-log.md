@@ -19,8 +19,6 @@ There are several API calls that allow to fetch entities related to particular u
 {% unless docsPrefix contains "paas/" %}
 ## General configuration
 
-System administrator is able to configure audit log levels using [thingsboard.yml](/docs/user-guide/install/{{docsPrefix}}config/). You can find sample configuration below:
-
 ```yaml
 # Audit log parameters
 audit_log:

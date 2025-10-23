@@ -6,8 +6,7 @@ The IoT Hub **Guides** can help you to get familiar with IoT Hub platform.
 : Provides overview of the platform functionality and classical Hello World guide.
 
 {% unless docsPrefix == 'paas/' %}
-[**Installation guide**](/docs/{{docsPrefix}}user-guide/install/installation-options/)
-: Covers IoT Hub platform installation in a single-node or cluster mode.
+
 {% endunless %}
 
 [**Working with device attributes**](/docs/{{docsPrefix}}user-guide/attributes/)

@@ -83,7 +83,6 @@ IoT Hub uses following topics:
  * **tb_rule_engine**: to push messages from Transport or IoT Hub Core to Rule Engine. Messages include incoming telemetry, device states, entity lifecycle events, etc.
 
 {% capture difference %}
-**Note:** All topic properties including names and number of partitions are [configurable](/docs/user-guide/install/{{docsPrefix}}config/){:target="_blank"} via thingsboard.yml or environment variables. 
 Since IoT Hub 3.4 we can configure Rule Engine queues by the UI, see the [documentation](/docs/{{docsPrefix}}user-guide/rule-engine-2-5/queues/){:target="_blank"}.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
@@ -141,8 +140,6 @@ Platform supports three database options at the moment:
 It is possible to use HSQLDB for local development purposes. **We do not recommend to use HSQLDB** for anything except running tests and launching dev instance that has minimum possible load.
 * **Hybrid (PostgreSQL + Cassandra)** - Stores all entities in PostgreSQL database and timeseries data in Cassandra database. 
 * **Hybrid (PostgreSQL + TimescaleDB)** - Stores all entities in PostgreSQL database and timeseries data in Timescale database. 
-
-It is possible to configure this options using **thingsboard.yml** file. See database [configuration](/docs/user-guide/install/{{docsPrefix}}config/) page for more details.
 
 ```yaml
 database:

@@ -497,7 +497,6 @@ If groups don't exist, this group will be created automatically.
 
 {% capture difference %}
 **Please note:**
-The **Parent customer name pattern** and **User groups name pattern** configurations available only in [IoT Hub](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 

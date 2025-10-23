@@ -21,13 +21,10 @@ Let's consider more about these settings below.
 This group of settings allows the System Administrator to configure a maximum number of entities that each Tenant is able to create.
 
 {% if docsPrefix == null %}
-**[IoT Hub Community](/docs/user-guide/install/installation-options/)** supports limits for the following entities: devices, dashboards, assets, users, customers, and rule chains.
 
-**[IoT Hub Professional](/docs/user-guide/install/pe/installation-options/)** supports limits for everything listed above and as well additional constraint support for the following entities: integrations, converters, and scheduler events.
 {% endif %}
 
 {% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}
-**[IoT Hub](/docs/user-guide/install/pe/installation-options/)** supports limits for the following entities: devices, dashboards, assets, users, integrations, scheduler events, customers, rule chains, and converters.
 {% endif %}
 
 {% include images-gallery.html imageCollection="entityLimits" %}
@@ -132,7 +129,6 @@ and assign for a particular Tenant, or update existing tenant profile.
 This will instruct Rule Engine to subscribe to specific message queue topics that contain data for corresponding tenants.
 
 You might as well set up a separate Rule Engine instance that will be responsible for tenants of specific tenant profiles only.
-See [configuration parameters](/docs/user-guide/install/config/#thingsboard-service-parameters).
 
 ### Queue configuration for isolated tenants
 

@@ -15,7 +15,6 @@ In IoT Hub a customer user cannot create their own customers, users, or subcusto
 <br>
 In **IoT Hub** customer user can create other customers, users and subcustomers.
 To try this functionality, use the [IoT Hub](https://{{hostName}}/signup) server.
-The alternative option is to install IoT Hub locally using this [installation guide](/docs/user-guide/install/pe/installation-options/)
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 

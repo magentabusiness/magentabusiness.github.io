@@ -21,13 +21,7 @@ Welcome! This guide will walk you through building and setting up a custom {{app
 
 ## Prerequisites
 
-{% if docsPrefix == "pe/" or docsPrefix == "paas/" or docsPrefix == "paas/eu/" %}
-- You will need to have access to IoT Hub. The easiest way is to use [ThingsBoard Cloud](https://docs.iothub.magenta.at/installations/choose-region/){:target="_blank"} server.
-The alternative option is to install IoT Hub using [installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
-{% else %}  
-- You will need to have access to ThingsBoard. The easiest way is to use [Live Demo](https://iothub.magenta.at/signup){:target="_blank"}. 
-The alternative option is to install IoT Hub using [installation guide](/docs/user-guide/install/installation-options/){:target="_blank"}.
-{% endif %}
+- You will need to have access to IoT Hub.
 
 > **Note**: The mobile app requires {{appPrefix}} platform version **3.9.0** or later to work properly.
 

@@ -19,10 +19,6 @@ Before you start any implementation please wait from the IoT Hub team to comment
 
 To build and run IoT Hub instance make sure that you have **Java** and **Maven** installed onto your system.
 
-Please refer to [**Building from sources**](/docs/user-guide/install/building-from-source) section where [**Java**](/docs/user-guide/install/building-from-source/#java) and [**Maven**](/docs/user-guide/install/building-from-source/#maven) install processes are described.
-
-To run integration and black-box tests **docker** and **docker-compose** required, please, refer to the [Running tests](/docs/user-guide/install/building-from-source/#tips-and-tricks) section.
-
 ## Fork and build IoT Hub repository
 
 Once you have completed installation of required tools please fork official [**IoT Hub repository**](https://github.com/thingsboard/thingsboard).
@@ -67,11 +63,6 @@ Once PostgreSQL is installed you may want to create a new user or set the passwo
 
 ### [Optional] NoSQL Database for timeseries data: Cassandra
 
-Please refer to appropriate section where you find instructions on how to install cassandra:
-
- - [Cassandra installation on **Linux**](/docs/user-guide/install/linux/#cassandra)
- - [Cassandra installation on **Windows**](/docs/user-guide/install/windows/#cassandra)
-
 Edit IoT Hub configuration file: 
 
 ```text
@@ -87,7 +78,6 @@ database:
 ```
 
 **NOTE:** If your Cassandra server is installed on the remote machine or it is bind to custom interface/port, you need to specify it in thingsboard.yml as well.
-Please, refer to the [**configuration guide**](/docs/user-guide/install/config/) for the detailed description of **thingsboard.yml** file and what properties are used for cassandra connection configuration.
 
 After the thingsboard.yml file was updated, please rebuild the application module so that the updated thingsboard.yml gets populated to the target directory:
 

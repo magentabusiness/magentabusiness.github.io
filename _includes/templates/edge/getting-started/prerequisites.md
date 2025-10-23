@@ -13,7 +13,7 @@
 {% include templates/edge/install/tb-server-pre-configured-install-instructions.md %}
 
 {% capture local-deployment %}
-If for any reason you are unable to access and/or use **Edge preset configurations**, please refer to the [manual installation instructions](/docs/user-guide/install/{{docsPrefix}}installation-options/){: target="_blank"}.
+If for any reason you are unable to access and/or use **Edge preset configurations**.
 {% endcapture %}
 {% include templates/info-banner.md content=local-deployment %}
 

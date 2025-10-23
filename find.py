@@ -5,35 +5,33 @@ import argparse
 import os
 import re
 import sys
+from typing import Iterable
 
-URL_HOSTS = ("YOUR_HOST", "THINGSBOARD_HOST")
-TARGET_HOST = "iothub.magenta.at"
-
-# Подходит под http/https/ws/wss/mqtt и прочие схемы с // ; сохраняем схему/порт/путь
-URL_PATTERN = re.compile(
-    r'(?P<scheme>[A-Za-z][A-Za-z0-9+\-.]*:)?//'
-    r'(?P<host>YOUR_HOST|THINGSBOARD_HOST)'
-    r'(?P<port>:\d+)?'
-    r'(?P<path>[^\s"\'\)\],<>\u00A0]*)'  # до пробела/закрывающих скобок/кавычек/знаков пункт.
+INSTALL_RE_DEFAULT = re.compile(r'/install/')
+LINK_GUESS_RE = re.compile(
+    r'''(?ix)
+    (                              # любое из:
+       href\s*=\s*["'][^"']*["']   #   HTML: href="..."`
+     | \[[^\]]*\]\([^)]+\)         #   Markdown: [text](url)
+     | https?://\S+                #   Явный URL http/https
+     | \b(?:mailto|ftp|ws|wss|mqtt)://\S+  # другие схемы
+    )
+    '''
 )
 
-# Для подсветки/поиска «голых» вхождений вне URL (предупреждение)
-BARE_TOKEN_PATTERN = re.compile(r'\b(?:YOUR_HOST|THINGSBOARD_HOST)\b')
-
 DEFAULT_EXCLUDE_DIRS = {
-    ".git", ".hg", ".svn", ".idea", ".vscode", "node_modules", "dist", "build", "_site", ".venv", "venv", ".mypy_cache"
+    ".git", ".hg", ".svn", ".idea", ".vscode",
+    "node_modules", "dist", "build", "_site",
+    ".venv", "venv", ".mypy_cache", ".cache"
 }
 
-# Файлы, которые заведомо бинарные — пропускаем
 BINARY_EXTS = {
-    ".png", ".jpg", ".jpeg", ".gif", ".bmp", ".svgz",
-    ".webp", ".ico",
-    ".pdf", ".zip", ".tar", ".gz", ".bz2", ".7z", ".rar",
+    ".png", ".jpg", ".jpeg", ".gif", ".bmp", ".svgz", ".webp", ".ico",
+    ".pdf", ".zip", ".tar", ".gz", ".bz2", ".xz", ".7z", ".rar",
     ".woff", ".woff2", ".ttf", ".otf",
     ".mp3", ".mp4", ".mov", ".avi", ".mkv",
 }
 
-# Текстовые расширения, если хотите ужесточить охват
 TEXT_EXTS = {
     ".md", ".markdown", ".html", ".htm", ".liquid",
     ".yml", ".yaml", ".json", ".csv", ".xml",
@@ -46,144 +44,104 @@ TEXT_EXTS = {
 
 def is_binary_path(path: str) -> bool:
     _, ext = os.path.splitext(path)
-    if ext.lower() in BINARY_EXTS:
-        return True
-    # Простая эвристика: если нет расширения, считаем текстовым
-    return False
+    return ext.lower() in BINARY_EXTS
 
 def should_scan_file(path: str, strict_text_only: bool) -> bool:
     if is_binary_path(path):
         return False
     if strict_text_only:
         _, ext = os.path.splitext(path)
-        return ext.lower() in TEXT_EXTS or ext == ""
+        return (ext.lower() in TEXT_EXTS) or (ext == "")
     return True
 
-def replace_urls(content: str):
-    """Возвращает (new_content, replacements, url_hits, bare_hits)"""
-    replacements = []
-
-    def _sub(match: re.Match):
-        scheme = match.group("scheme") or ""
-        port = match.group("port") or ""
-        path = match.group("path") or ""
-        old_full = match.group(0)
-        new_full = f"{scheme}//{TARGET_HOST}{port}{path}"
-        if old_full != new_full:
-            # Сохраним небольшой контекст для лога
-            start = max(match.start() - 60, 0)
-            end = min(match.end() + 60, len(content))
-            context_before = content[start:match.start()]
-            context_after = content[match.end():end]
-            replacements.append({
-                "old": old_full,
-                "new": new_full,
-                "context": f"...{context_before}>>>{old_full}<<<{context_after}..."
-            })
-        return new_full
-
-    new_content, url_hits = URL_PATTERN.subn(_sub, content)
-
-    # «Голые» вхождения — предупредим, но не меняем, чтобы не ломать переменные/текст
-    bare_hits = len(BARE_TOKEN_PATTERN.findall(new_content))
-
-    return new_content, replacements, url_hits, bare_hits
-
-def process_file(path: str, apply: bool, encoding="utf-8"):
+def read_lines(path: str) -> Iterable[str]:
+    # Сначала пробуем UTF-8, затем latin-1 (чтобы не падать на экзотике)
     try:
-        with open(path, "r", encoding=encoding, errors="strict") as f:
-            original = f.read()
+        with open(path, "r", encoding="utf-8", errors="strict") as f:
+            for line in f:
+                yield line.rstrip("\n")
+        return
     except UnicodeDecodeError:
-        # Попробуем как latin-1, чтобы хотя бы просканировать
-        try:
-            with open(path, "r", encoding="latin-1") as f:
-                original = f.read()
-        except Exception:
-            return None
+        pass
+    try:
+        with open(path, "r", encoding="latin-1") as f:
+            for line in f:
+                yield line.rstrip("\n")
+    except Exception:
+        return
 
-    new_content, replacements, url_hits, bare_hits = replace_urls(original)
+def clip(s: str, start: int, end: int, margin: int = 80) -> str:
+    """Обрезает строку вокруг [start:end] с небольшими полями, чтобы вывод был читабельным."""
+    left = max(0, start - margin)
+    right = min(len(s), end + margin)
+    prefix = "…" if left > 0 else ""
+    suffix = "…" if right < len(s) else ""
+    return prefix + s[left:right] + suffix
 
-    wrote = False
-    if apply and url_hits > 0 and new_content != original:
-        with open(path, "w", encoding="utf-8") as f:
-            f.write(new_content)
-        wrote = True
-
-    return {
-        "path": path,
-        "url_hits": url_hits,
-        "bare_hits": bare_hits,
-        "wrote": wrote,
-        "replacements": replacements
-    }
+def scan_file(path: str, rx: re.Pattern, only_links: bool, print_pointer: bool):
+    results = []
+    for lineno, line in enumerate(read_lines(path), start=1):
+        for m in rx.finditer(line):
+            if only_links and not LINK_GUESS_RE.search(line):
+                continue
+            span = m.span()
+            snippet = clip(line, span[0], span[1])
+            pointer = ""
+            if print_pointer:
+                # Стрелочка под совпадением (с учётом обрезки)
+                left = max(0, span[0] - max(0, span[0] - max(0, span[0] - 80)))
+                caret_pos = span[0] - (span[0] - min(span[0], max(0, span[0] - 80)))
+                pointer = " " * caret_pos + "^" * max(1, span[1] - span[0])
+            results.append((lineno, span[0] + 1, snippet, pointer))
+    return results
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Заменяет в URL хосты YOUR_HOST/THINGSBOARD_HOST на iothub.magenta.at (с сохранением схемы/порта/пути). По умолчанию — dry-run."
+    p = argparse.ArgumentParser(
+        description="Ищет ВСЕ упоминания '/install/' в проекте (в любом контексте)."
     )
-    parser.add_argument("root", nargs="?", default=".", help="Корень проекта (по умолчанию текущая директория)")
-    parser.add_argument("--apply", action="store_true", help="Применить изменения (по умолчанию только отчёт)")
-    parser.add_argument("--strict-text", action="store_true",
-                        help="Сканировать только текстовые файлы по списку расширений")
-    parser.add_argument("--exclude-dir", action="append", default=[],
-                        help="Доп. каталоги для исключения (можно указывать несколько)")
-    parser.add_argument("--print-context", action="store_true",
-                        help="Печатать контекст для каждого найденного URL")
-    args = parser.parse_args()
+    p.add_argument("root", nargs="?", default=".", help="Корень проекта (по умолчанию текущая директория)")
+    p.add_argument("--ignore-case", action="store_true", help="Нечувствительный к регистру поиск")
+    p.add_argument("--strict-text", action="store_true", help="Сканировать только текстовые файлы по списку расширений")
+    p.add_argument("--exclude-dir", action="append", default=[], help="Доп. каталоги для исключения (можно несколько)")
+    p.add_argument("--only-links", action="store_true", help="Показывать только строки, где '/install/' внутри ссылок (HTML/Markdown/URL)")
+    p.add_argument("--print-pointer", action="store_true", help="Печатать указатель под совпадением (^)")
+    args = p.parse_args()
+
+    rx = INSTALL_RE_DEFAULT if not args.ignore_case else re.compile(r'/install/', re.IGNORECASE)
 
     exclude_dirs = set(DEFAULT_EXCLUDE_DIRS) | set(args.exclude_dir)
 
+    total_hits = 0
     total_files = 0
-    total_url_hits = 0
-    total_bare_hits = 0
-    total_written = 0
-    any_changes = False
 
     for dirpath, dirnames, filenames in os.walk(args.root):
-        # Фильтруем каталоги
         dirnames[:] = [d for d in dirnames if d not in exclude_dirs and not d.startswith(".git")]
         for fname in filenames:
             path = os.path.join(dirpath, fname)
             if not should_scan_file(path, args.strict_text):
                 continue
-            total_files += 1
-            result = process_file(path, apply=args.apply)
-            if not result:
+
+            matches = scan_file(path, rx, only_links=args.only_links, print_pointer=args.print_pointer)
+            if not matches:
                 continue
 
-            if result["url_hits"] or result["bare_hits"]:
-                any_changes = True
-                total_url_hits += result["url_hits"]
-                total_bare_hits += result["bare_hits"]
-                if result["wrote"]:
-                    total_written += 1
-
-                print("─" * 80)
-                print(f"Файл: {result['path']}")
-                if result["url_hits"]:
-                    print(f"  URL-совпадений: {result['url_hits']}"
-                          f"{'  (записано)' if result['wrote'] else '  (dry-run)'}")
-                    if args.print_context:
-                        for rep in result["replacements"]:
-                            print("  - OLD:", rep["old"])
-                            print("    NEW:", rep["new"])
-                            print("    CTX:", rep["context"])
-                if result["bare_hits"]:
-                    print(f"  Предупреждение: найдено {result['bare_hits']} «голых» упоминаний "
-                          f"{URL_HOSTS} вне URL. Они не изменялись.")
+            total_files += 1
+            print("—" * 90)
+            print(f"Файл: {path}")
+            for lineno, col, snippet, pointer in matches:
+                total_hits += 1
+                print(f"  [{lineno}:{col}] {snippet}")
+                if args.print_pointer and pointer:
+                    print(f"            {pointer}")
 
     print("\nИТОГО")
-    print("─" * 80)
-    print(f"Просканировано файлов: {total_files}")
-    print(f"Найдено URL-совпадений: {total_url_hits}")
-    print(f"Найдено «голых» упоминаний вне URL: {total_bare_hits}")
-    if args.apply:
-        print(f"Файлов изменено: {total_written}")
-    else:
-        print("Режим: dry-run (изменения не записывались). Добавьте --apply для записи.")
+    print("—" * 90)
+    print(f"Файлов с совпадениями: {total_files}")
+    print(f"Всего совпадений: {total_hits}")
 
-    if not any_changes:
-        print("Совпадений не найдено.")
+    # Если нужно, чтобы CI валился при найденных совпадениях, раскомментируй:
+    # if total_hits > 0:
+    #     sys.exit(1)
 
 if __name__ == "__main__":
     try:

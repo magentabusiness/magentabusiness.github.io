@@ -20,7 +20,6 @@ Let’s start with the prerequisites.
 ### Step 1. Install IoT Hub in the cloud 
 
 We will need a running IoT Hub instance with white-labeling feature enabled. 
-You can easily deploy your own IoT Hub instance using the [installation instructions](/docs/user-guide/install/pe/installation-options/). 
 Note that your instance should run in the cloud, and have public IP address assigned to it.
 
 ### Step 2. Assign DNS record to your IoT Hub IP address
@@ -31,7 +30,7 @@ If you do have the domain name, contact your system administrator to issue sub-d
 
 ### Step 3. Setup HTTPS access to your IoT Hub instance
 
-Please note the HAProxy installation instructions in the [post install steps](/docs/user-guide/install/pe/ubuntu/#post-installation-steps). 
+Please note the HAProxy installation instructions in the post install steps. 
 They are available for Linux distributions and Docker. You can easily issue a valid Let's Encrypt certificate and setup HTTPS for your IoT Hub instance.
 
 ### Step 4. ReCAPTCHA v2

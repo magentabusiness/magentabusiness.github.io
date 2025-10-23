@@ -1,4 +1,4 @@
-{% assign THINGSBOARD_WITH_URL = "[IoT Hub](/docs/user-guide/install/pe/installation-options/)" %}
+{% assign THINGSBOARD_WITH_URL = "[IoT Hub](https://iothub.magenta.at/)" %}
 {% assign THINGSBOARD_HOST = "IP address" %}
 {% assign THINGSBOARD_URL = "IoT Hub" %}
 
@@ -6,12 +6,12 @@
 {:toc}
 
 {% if docsPrefix == null or docsPrefix == "pe/" %}
-{{THINGSBOARD_WITH_URL}}{:target="_blank"} {% unless docsPrefix == null %}[White labeling](/docs/{{docsPrefix}}user-guide/white-labeling/){:target="_blank"} feature{% endunless %} allows you to use a custom domain to provide secure user access.
-To achieve this, you need to configure an HAProxy Load Balancer and provide an SSL certificate. [This documentation](/docs/user-guide/install/pe/add-haproxy-ubuntu/){:target="_blank"} will help you do this.
+{{THINGSBOARD_WITH_URL}} {% unless docsPrefix == null %}[White labeling](/docs/{{docsPrefix}}user-guide/white-labeling/){:target="_blank"} feature{% endunless %} allows you to use a custom domain to provide secure user access.
+To achieve this, you need to configure an HAProxy Load Balancer and provide an SSL certificate. 
 Once set up, you will be able to access the IoT Hub platform through your custom domain using a secure (HTTPS) connection.
 {% endif %}
 {% if docsPrefix == "paas/" or docsPrefix == "paas/eu/" %}
-{{THINGSBOARD_WITH_URL}}{:target="_blank"} [White labeling](/docs/{{docsPrefix}}user-guide/white-labeling/){:target="_blank"} feature allows you to use a custom domain to provide a personalized hostname for user access.
+{{THINGSBOARD_WITH_URL}} [White labeling](/docs/{{docsPrefix}}user-guide/white-labeling/){:target="_blank"} feature allows you to use a custom domain to provide a personalized hostname for user access.
 When you register a valid domain, {{THINGSBOARD_URL}} automatically requests an SSL certificate and manages future certificate renewals.
 After domain registration, you will be able to access the platform via your domain name using a secure (HTTPS) connection. 
 This feature is primarily intended for Web UI access, so some services, such as MQTT or CoAP transports, may not be available through your custom domain name.
@@ -44,10 +44,10 @@ Registering your own domain name is available at both the Tenant level and the C
 {% endif %}
 
 {% if docsPrefix == "pe/" or docsPrefix == "paas/" or docsPrefix == "paas/eu/" %}
-- Log in to your {{THINGSBOARD_WITH_URL}}{:target="_blank"} account;
+- Log in to your {{THINGSBOARD_WITH_URL}} account;
 {% endif %}
 {% if docsPrefix == null %}
-- Log in to {{THINGSBOARD_WITH_URL}}{:target="_blank"} account as system administrator;
+- Log in to {{THINGSBOARD_WITH_URL}} account as system administrator;
 {% endif %}
 
 {% include images-gallery.html imageCollection="register-domain" showListImageTitles="true" %}

@@ -1,7 +1,7 @@
 Download installation package:
 
 ```bash
-wget https://dist.iothub.magenta.at/tb-tcp-udp-integration-{{ site.release.pe_ver }}.rpm
+wget https://dist.thingsboard.io/tb-tcp-udp-integration-{{ site.release.pe_ver }}.rpm
 ```
 {: .copy-code}
 

@@ -1,9 +1,9 @@
 {% if page.url contains 'upgrade-instructions' %}
-Before upgrading **IoT Hub Edge**, ensure that **IoT Hub Server** is [updated to the latest version](/docs/user-guide/install/{{docsPrefix}}upgrade-instructions/){: target="_blank"}.
+Before upgrading **IoT Hub Edge**, ensure that **IoT Hub Server** is updated to the latest version.
 
 Additionally, verify that the **IoT Hub Edge** and **IoT Hub Server** versions **are compatible**.
 {% else %}
-Before installing **IoT Hub Edge**, ensure that **IoT Hub Server** is [installed](/docs/user-guide/install/{{peDocsPrefix}}installation-options/){: target="_blank"} and [updated](/docs/user-guide/install/{{peDocsPrefix}}upgrade-instructions/){: target="_blank"} to the latest version.
+Before installing **IoT Hub Edge**, ensure that **IoT Hub Server** is installed and updated to the latest version.
 
 Additionally, verify that the **IoT Hub Edge** and **IoT Hub Server** versions **are compatible**.
 {% endif %}
@@ -16,7 +16,7 @@ _**IoT Hub Edge 3.8.0** works with **IoT Hub Server 3.8.0** and two later versio
 
 * **IoT Hub Edge version X.Y.Z** <span style="color:red">**does not work**</span> with **older** IoT Hub Server versions.
 
-_**IoT Hub Edge 3.9.1** does not support **IoT Hub Server 3.8.0** or any **earlier versions**. In such cases, the **IoT Hub Server** must be [upgraded to the latest version](/docs/user-guide/install/{{peDocsPrefix}}upgrade-instructions/){: target="_blank"} first._
+_**IoT Hub Edge 3.9.1** does not support **IoT Hub Server 3.8.0** or any **earlier versions**. In such cases, the **IoT Hub Server** must be upgraded to the latest version first._
 
 {% endcapture %}
 {% include templates/warn-banner.md content=update_server_first %}

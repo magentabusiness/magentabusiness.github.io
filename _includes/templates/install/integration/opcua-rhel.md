@@ -1,7 +1,7 @@
 Download installation package:
 
 ```bash
-wget https://dist.iothub.magenta.at/tb-opc-ua-integration-{{ site.release.pe_ver }}.rpm
+wget https://dist.thingsboard.io/tb-opc-ua-integration-{{ site.release.pe_ver }}.rpm
 ```
 {: .copy-code}
 

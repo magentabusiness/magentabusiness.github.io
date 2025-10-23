@@ -30,7 +30,7 @@ In order to store and visualize the results of the analytics, we are going to cr
 
 The following services must be up and running:
 
-* IoT Hub v2.4.2+ [instance](/docs/user-guide/install/pe/installation-options/)
+* IoT Hub v2.4.2+
 * Kafka [server](https://kafka.apache.org/23/documentation/streams/quickstart#quickstart_streams_download)
 
 ## Step 1. Rule Chain configuration

@@ -1,7 +1,7 @@
 Download installation package:
 
 ```bash
-wget https://dist.iothub.magenta.at/tb-http-integration-{{ site.release.pe_ver }}.deb
+wget https://dist.thingsboard.io/tb-http-integration-{{ site.release.pe_ver }}.deb
 ```
 {: .copy-code}
 

@@ -341,8 +341,6 @@ The Converters library is open-source and actively maintained by the IoT Hub tea
 {% if docsPrefix == "pe/" %}
 <br>**Using a custom converters repository**
 
-You can [configure](/docs/user-guide/install/pe/how-to-change-config/){:target="_blank"} IoT Hub to use your own repository with personalized decoders for your specific devices instead of using the default converters library.
-
 Set new environment variables in IoT Hub configuration file to define your custom repository and branch:
 
 ```text

@@ -3,8 +3,7 @@
 
 This guide will help you to get familiar with IoT Hub configuration files and parameters. We **recommend** to
 configure IoT Hub using environment variables. This way you do not need to merge the configuration files when new
-platform release arrives. List of available configuration parameters and corresponding environment variables is
-located {% if docsPrefix == null %}[here](/docs/user-guide/install/config/){% endif %}{% if docsPrefix == "pe/" %}[here](/docs/user-guide/install/pe/config/){% endif %}.
+platform release arrives.
 
 ## How to change configuration parameters?
 

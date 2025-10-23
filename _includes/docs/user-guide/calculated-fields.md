@@ -223,7 +223,6 @@ If these nodes are missing, the result **will not be saved** and will not appear
 ## Data reprocessing
 
 {% if docsPrefix == null %}
-> The **telemetry data reprocessing** feature is available only in [ThingsBoard PE](https://docs.iothub.magenta.at/docs/user-guide/install/pe/installation-options/){:target="_blank"} editions.
 
 {% endif %}
 
@@ -242,7 +241,7 @@ This is especially useful when you modify existing calculations or add new field
 - **Store results as telemetry** — processed data is saved in IoT Hub as telemetry, enabling further use in widgets, rules, or analytics.
 
 {% if docsPrefix == null %}
-Learn how to configure data reprocessing in the [ThingsBoard PE documentation](/docs/pe/user-guide/calculated-fields/#data-reprocessing){:target="_blank"}.
+Learn how to configure data reprocessing in the [IoT Hub documentation](/docs/pe/user-guide/calculated-fields/#data-reprocessing){:target="_blank"}.
 {% endif %}
 
 {% if docsPrefix == "pe/" or docsPrefix == "paas/" or docsPrefix == "paas/eu/" %}

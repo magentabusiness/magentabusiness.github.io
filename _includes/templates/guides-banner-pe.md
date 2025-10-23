@@ -2,7 +2,6 @@
 - [Getting started guides](/docs/pe/guides/#AnchorIDGettingStartedGuides) - These guides provide quick overview of main IoT Hub features. Designed to be completed in 15-30 minutes.
 {% endif %}
 {% if currentGuide != "InstallationGuides" %}
-- [Installation guides](/docs/user-guide/install/pe/installation-options/) - Learn how to set up IoT Hub on various available operating systems.
 {% endif %}
 <!-- {% if currentGuide != "InstallationGuides" %}
 - [Installation guides](/docs/user-guide/install/pe/installation-options/) - Learn how to setup IoT Hub on various available operating systems.

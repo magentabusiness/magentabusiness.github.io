@@ -32,7 +32,7 @@ However, you can customize caching behavior through environment variables:
 
 These configurations control the Time To Live (TTL) for your system and tenant images in a user's browser cache.
 Setting a longer TTL improves load time for repeated visits and reduces server load, while a shorter TTL ensures users receive more frequent content updates.
-Adjust these settings based on the update frequency of your images. How to do it, read [here](/docs/user-guide/install/{{docsPrefix}}how-to-change-config/).
+Adjust these settings based on the update frequency of your images.
 
 Additionally, the system administrator can set restrictions on the maximum size of a single image and the total size of images by configuring [tenant profiles](/docs/{{docsPrefix}}user-guide/tenant-profiles/#files-limits).
 Values are specified in bytes.

@@ -20,7 +20,6 @@ To understand how the Swimming Pool SCADA system template works, let's start by 
 ## Install solution template
 
 You will need to have access to IoT Hub. The easiest way is to use IoT Hub server.
-The alternative option is to install IoT Hub using [installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
 
 - Go to the "**Solution templates**" page. Find "**Swimming Pool SCADA system**" and click "**Install**" to start the installation process.
 - Configuration instructions for this solution will be provided — follow the steps as instructed.

@@ -15,8 +15,6 @@ You can find more information on the dedicated page.
 {% if docsPrefix contains 'paas/' %}
 We recommend to follow the [getting started guide](/docs/{{docsPrefix}}getting-started-guides/helloworld/).
 {% else %}
-We recommend to [install](/docs/user-guide/install/{{docsPrefix}}installation-options/) IoT Hub locally on your laptop or PC using Docker
-and follow the [getting started guide](/docs/{{docsPrefix}}getting-started-guides/helloworld/).
 {% endif %}
 
 ## What can I do with IoT Hub?
@@ -25,14 +23,6 @@ IoT Hub provides out-of-the-box IoT solution that will enable server-side infras
 You can find more information by browsing [guides](/docs/{{docsPrefix}}user-guide/) and [hardware samples](/docs/{{docsPrefix}}guides/#AnchorIDHardwareSamples)
 
 {% unless docsPrefix contains 'paas/' %}
-## Where can I host IoT Hub?
-
-You can host IoT Hub in the cloud, on-premises or locally on your laptop, PC or even Raspberry Pi. We recommend to get started with Docker installation
-
-- [Linux & Mac OS](/docs/user-guide/install/{{docsPrefix}}docker/)
-- [Windows](/docs/user-guide/install/{{docsPrefix}}docker-windows/)
-
-You can also take a look at [cluster setup](/docs/user-guide/install/{{docsPrefix}}cluster-setup/) guide.
 {% endunless %}
 
 ## How to connect my device?

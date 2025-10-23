@@ -19,7 +19,6 @@ Note, that you have to upgrade versions one by one (for example 4.0.0 -> 4.0.1 -
 `# upgrading to v3.9.0...`<br>
 `./docker-upgrade-tb.sh --fromVersion=3.8.1`
 
-See [Upgrade Instructions](/docs/user-guide/install/{{docsPrefix}}upgrade-instructions) for valid <code style="color:black">"fromVersion"</code> values.
 {% endcapture %}
 {% include templates/info-banner.md content=from-version-note %}
 
@@ -28,7 +27,7 @@ See [Upgrade Instructions](/docs/user-guide/install/{{docsPrefix}}upgrade-instru
 You can also migrate from Community Edition (CE) to Professional Edition (PE) using `docker-upgrade-tb.sh` script:
 
 1. Upgrade to the latest CE version.
-2. Merge your configuration with [the latest PE Docker Compose scripts](https://github.com/thingsboard/thingsboard-pe-docker-compose/tree/release-{{ site.release.ce_ver }}). Do not forget to [configure the license key](/docs/user-guide/install/pe/cluster/docker-compose-setup/#step-3-obtain-your-license-key).
+2. Merge your configuration with [the latest PE Docker Compose scripts](https://github.com/thingsboard/thingsboard-pe-docker-compose/tree/release-{{ site.release.ce_ver }}). 
 3. Run the following upgrade script to migrate database data from CE to PE:
 ```bash
 ./docker-upgrade-tb.sh --fromVersion=CE

@@ -3425,7 +3425,6 @@ Main features:
  - Introduced support of a **microservices** architecture and deployment options. 
    See [microservices](/docs/reference/msa/) architecture page and [deployment](https://github.com/thingsboard/thingsboard/blob/master/docker/README.md) tips for more details;
  - Improved **docker images** to be able to launch IoT Hub with a single command. 
-   See [Linux or MacOS](/docs/user-guide/install/docker/) and [Windows](/docs/user-guide/install/docker-windows/) installation pages; 
  - Added [**Entity Views**](/docs/user-guide/entity-views/) feature to allow to 
  limit the degree of exposure of the Device or Asset telemetry and attributes to the Customers;
  - Added IoT Hub [**JavaScript Executor**](/docs/reference/msa/#javascript-executor-microservices) microservice to isolate execution of rule engine scripts from the main rule engine components and flow;
@@ -3450,7 +3449,7 @@ Additional features:
  - Updated Italian locale;
  - Improved logging;
  - Introduced package-lock.json for msa packages with correct dependencies;
- - Introduced new Cassandra and PostgreSQL based [**AMIs**](/docs/user-guide/install/aws/).
+ - Introduced new Cassandra and PostgreSQL based **AMIs**.
 
 Websockets:
 

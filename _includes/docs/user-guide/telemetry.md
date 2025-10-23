@@ -114,12 +114,10 @@ For example, you may store "raw" data for 3 month and aggregated data for 3 year
 Data retention policy and configuration depends on the chosen [storage](#data-storage).
 
 Cassandra supports time-to-live(TTL) parameter for each inserted row.
-That is why, you may [configure](/docs/user-guide/install/{{docsPrefix}}config/) default TTL parameter on a system level, using 'TS_KV_TTL' environment variable.
 You may overwrite the default value in the "Save Timeseries" rule node or using "TTL" metadata field of your message.
 This allows you to optimize storage consumption.
 
 PostgreSQL and Timescale does not support time-to-live(TTL) parameter for each inserted row.
-That is why, you may only [configure](/docs/user-guide/install/{{docsPrefix}}config/) periodic time-series data cleanup routine using 'SQL_TTL_*' environment variables. 
 {% endif %}
 
 ## Data durability

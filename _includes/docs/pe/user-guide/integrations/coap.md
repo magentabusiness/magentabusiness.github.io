@@ -16,7 +16,7 @@ Please review the integration diagram to learn more.
 In this tutorial, we will show you how CoAP integration works as part of **tb-core** service with **NO SECURE** security mode selected. In order to do this we will use: 
 
 {% if docsPrefix == "pe/" %}
-- The instance of [IoT Hub](/docs/user-guide/install/pe/installation-options/) installed locally;
+- The instance of IoT Hub installed locally;
 {% endif %}
 
 - [coap-client](https://manpages.ubuntu.com/manpages/focal/man5/coap-client.5.html) utility which is intended to simulate CoAP client that will connect to CoAP integration;

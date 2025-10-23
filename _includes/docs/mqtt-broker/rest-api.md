@@ -9,7 +9,7 @@ After installing TBMQ, you can explore the REST API using the Swagger UI.
 Access the Swagger UI by opening the following URL:
 
 ``` 
-http(s)://YOUR_HOST:PORT/swagger-ui/
+http(s)://iothub.magenta.at:PORT/swagger-ui/
 ```
 
 For local installation use the next URL:

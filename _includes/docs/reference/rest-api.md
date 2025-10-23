@@ -66,7 +66,7 @@ When you login to the platform, your username and password is exchanged to the p
 - **Refresh Token** – used to obtain a new access token when the current one expires.
 
 {% if docsPrefix == "pe/" or docsPrefix == null %}
-The expiration time of main and refresh tokens is [configurable](/docs/user-guide/install/{{docsPrefix}}config/){:target="_blank"} in system settings via **JWT_TOKEN_EXPIRATION_TIME** and **JWT_REFRESH_TOKEN_EXPIRATION_TIME** parameters.
+The expiration time of main and refresh tokens is configurable in system settings via **JWT_TOKEN_EXPIRATION_TIME** and **JWT_REFRESH_TOKEN_EXPIRATION_TIME** parameters.
 {% endif %}
 
 Default token expiration:

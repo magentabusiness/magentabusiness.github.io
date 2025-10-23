@@ -216,7 +216,6 @@ Stats descriptions:
 You can import preconfigured Grafana dashboards from [here](https://github.com/thingsboard/thingsboard/tree/master/docker/monitoring/grafana/provisioning/dashboards). 
 **Note:** Depending on the cluster configuration you may need to make changes to the dashboards.
 
-Also, you can view Grafana dashboards after deploying IoT Hub docker-compose cluster configuration (for more information please follow [this guide](/docs/user-guide/install/{{docsPrefix}}cluster/docker-compose-setup/)).
 Make sure that `MONITORING_ENABLED` environment variable is set to `true`. 
 After deployment, you will be able to reach Prometheus at `http://localhost:9090` and Grafana at `http://localhost:3000` (default login is `admin` and password `foobar`).
 
