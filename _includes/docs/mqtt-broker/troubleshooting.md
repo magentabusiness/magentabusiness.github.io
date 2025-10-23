@@ -213,4 +213,4 @@ Please note that in order to achieve maximum performance, **TBMQ uses several qu
 
 If you are unable to find a solution to your problem from any of the guides provided above, please do not hesitate to contact the IoT Hub team for further assistance.
 
-<a class="button" href="/docs/contact-us/">Contact us</a>
+<a class="button" href="mailto:service4iot@magenta.at">Contact us</a>

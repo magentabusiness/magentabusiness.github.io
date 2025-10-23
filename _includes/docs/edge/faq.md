@@ -186,13 +186,13 @@ See <a href="/docs/user-guide/install/pe/edge/installation-options/" target="_bl
 In order to activate the software you will need to obtain the license key. 
 Instruction how to obtain and use the license key is provided in the installation guide. 
 See <a href="https://www.youtube.com/watch?v=dK-QDFGxWek" target="_blank">How-to get pay-as-you-go</a> subscription or <a href="https://www.youtube.com/watch?v=dK-QDFGxWek" target="_blank">How-to get perpetual license</a> for more details. 
-Please <a href="/docs/contact-us/" target="_blank">contact us</a> if you have any questions or require support.</p>
+Please <a href="mailto:service4iot@magenta.at" target="_blank">contact us</a> if you have any questions or require support.</p>
 
 ### How can I contact IoT Hub support for billing-related issues?
-<p>You can use the <a href="/docs/contact-us/" target="_blank">contact us</a> form and select the "Other" topic. Our account managers will assist you with any billing-related issues.</p>
+<p>You can use the <a href="mailto:service4iot@magenta.at" target="_blank">contact us</a> form and select the "Other" topic. Our account managers will assist you with any billing-related issues.</p>
 
 ### Do you offer 24/7 customer support?
-<p>Yes, we do provide 24/7 support. If this is what you're looking for, please <a href="/docs/contact-us/" target="_blank">contact us</a> for a more detailed discussion about your specific needs.</p>
+<p>Yes, we do provide 24/7 support. If this is what you're looking for, please <a href="mailto:service4iot@magenta.at" target="_blank">contact us</a> for a more detailed discussion about your specific needs.</p>
 
 {% else %}
 ### What should I do if I find a bug in Community Edition?
@@ -210,7 +210,7 @@ Please <a href="/docs/contact-us/" target="_blank">contact us</a> if you have an
 ## Upgrading to the Professional Edition
 
 ### Can I upgrade from the Community Edition to a paid edition?
-<p>Yes, upgrading is straightforward. Contact the <a href="/docs/contact-us/" target="_blank">IoT Hub Sales Team</a> or visit the <a href="/pricing/?section=thingsboard-edge" target="_blank">Pricing Page</a> to select a suitable paid plan. The transition will be guided to ensure data integrity and feature migration.</p>
+<p>Yes, upgrading is straightforward. Contact the <a href="mailto:service4iot@magenta.at" target="_blank">IoT Hub Sales Team</a> or visit the <a href="/pricing/?section=thingsboard-edge" target="_blank">Pricing Page</a> to select a suitable paid plan. The transition will be guided to ensure data integrity and feature migration.</p>
 
 
 ### How do I start a free trial?

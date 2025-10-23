@@ -240,14 +240,14 @@ toc:
   section:
   - title: Kafka Streams
     path: /docs/pe/samples/analytics/kafka-streams/
-- title: Mobile center
-  section:
-    - title: Overview
-      path: /docs/pe/mobile-center/mobile-center/
-    - title: Applications
-      path: /docs/pe/mobile-center/applications/
-    - title: Mobile application QR code
-      path: /docs/pe/user-guide/ui/mobile-qr-code/
+#- title: Mobile center
+#  section:
+#    - title: Overview
+#      path: /docs/pe/mobile-center/mobile-center/
+#    - title: Applications
+#      path: /docs/pe/mobile-center/applications/
+#    - title: Mobile application QR code
+#      path: /docs/pe/user-guide/ui/mobile-qr-code/
 - title: Other features
   section:
 #    - title: Edge computing

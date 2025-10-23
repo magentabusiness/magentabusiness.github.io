@@ -254,18 +254,18 @@ toc:
       path: /docs/trendz/
     - title: Kafka Streams
       path: /docs/paas/samples/analytics/kafka-streams/
-- title: Mobile center
-  section:
-    - title: Overview
-      path: /docs/paas/mobile-center/mobile-center/
-    - title: Applications
-      path: /docs/paas/mobile-center/applications/
-    - title: Mobile application QR code
-      path: /docs/paas/user-guide/ui/mobile-qr-code/
+#- title: Mobile center
+#  section:
+#    - title: Overview
+#      path: /docs/paas/mobile-center/mobile-center/
+#    - title: Applications
+#      path: /docs/paas/mobile-center/applications/
+#    - title: Mobile application QR code
+#      path: /docs/paas/user-guide/ui/mobile-qr-code/
 - title: Other features
   section:
-    - title: Edge computing
-      path: /docs/pe/user-guide/edge-computing/
+#    - title: Edge computing
+#      path: /docs/pe/user-guide/edge-computing/
     - title: Device connectivity status
       path: /docs/paas/user-guide/device-connectivity-status/
     - title: Claiming devices

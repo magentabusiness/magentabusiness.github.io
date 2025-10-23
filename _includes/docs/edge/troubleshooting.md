@@ -175,4 +175,4 @@ Here's the list of metrics IoT Hub pushes to Prometheus.
 
 If your problem isn't answered by any of the guides above, feel free to contact IoT Hub team.
 
-<a class="button" href="/docs/contact-us/">Contact us</a>
+<a class="button" href="mailto:service4iot@magenta.at">Contact us</a>

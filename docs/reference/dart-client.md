@@ -5,8 +5,8 @@ description: IoT Hub API client library for Dart developers
 
 ---
 {% assign dartClientVer = site.release.ce_dart_client_ver %}
- * TOC
- {:toc}
+* TOC
+{:toc}
 
 ## Overview
 

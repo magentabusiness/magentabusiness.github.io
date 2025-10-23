@@ -152,7 +152,7 @@ mycompany.thingsboard.space. 3600 IN	CNAME	eu.iothub.magenta.at
 ...
 ```
 
-If all the things are correct, but some issue still persists - please [contact us](https://docs.iothub.magenta.at/docs/contact-us/){:target="_blank"} for further support.
+If all the things are correct, but some issue still persists - please [contact us](mailto:service4iot@magenta.at) for further support.
 
 ## Next step
 

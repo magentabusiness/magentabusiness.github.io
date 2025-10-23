@@ -6,8 +6,8 @@ title: REST Client
 description: Supported REST API Reference for server-side integration of your java projects
 
 ---
- * TOC
- {:toc}
+* TOC
+{:toc}
  
 ## REST Client
 

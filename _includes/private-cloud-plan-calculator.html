@@ -599,7 +599,7 @@
               <span>Total monthly price:</span>
               <span>${formatCurrency(totalPrice)}<span class="tooltip">${icon}<span class="tooltip-text">${totalPriceTooltip}</span></span></span>
             </div>
-            <a id="contactUs" class="button" href="/docs/contact-us/">Contact Us</a>`;
+            <a id="contactUs" class="button" href="mailto:service4iot@magenta.at">Contact Us</a>`;
 
         updateContactAndClipboard(results, inputs);
         document.getElementById('copyButton').addEventListener('click', (e) => copyToClipboard(e.currentTarget));
@@ -628,7 +628,7 @@
               ${createResultItem('Estimated storage needed', `${formatNumber(totalStorageNeededInGB, 2)} GB`)}
             </div>
             <p class="contact-us-text">Please contact our sales team for a custom Enterprise solution.</p>
-            <a id="contactUs" class="button" href="/docs/contact-us/">Contact Us</a>`;
+            <a id="contactUs" class="button" href="mailto:service4iot@magenta.at">Contact Us</a>`;
 
         updateContactAndClipboard({
             isEnterprise: true,

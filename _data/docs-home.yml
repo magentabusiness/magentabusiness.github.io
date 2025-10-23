@@ -222,18 +222,18 @@ toc:
   section:
   - title: Kafka Streams
     path: /docs/samples/analytics/kafka-streams/
-- title: Mobile center
-  section:
-    - title: Overview
-      path: /docs/mobile-center/mobile-center/
-    - title: Applications
-      path: /docs/mobile-center/applications/
-    - title: Mobile application QR code
-      path: /docs/user-guide/ui/mobile-qr-code/
+#- title: Mobile center
+#  section:
+#    - title: Overview
+#      path: /docs/mobile-center/mobile-center/
+#    - title: Applications
+#      path: /docs/mobile-center/applications/
+#    - title: Mobile application QR code
+#      path: /docs/user-guide/ui/mobile-qr-code/
 - title: Other features
   section:
-    - title: Edge computing
-      path: /docs/user-guide/edge-computing/
+#    - title: Edge computing
+#      path: /docs/user-guide/edge-computing/
     - title: Device connectivity status
       path: /docs/user-guide/device-connectivity-status/
     - title: Claiming devices

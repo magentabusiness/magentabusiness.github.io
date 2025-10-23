@@ -503,4 +503,4 @@ Finally, log in to IoT Hub as a customer user.
 ## Your feedback
 
 [//]: # (Don&#39;t hesitate to star ThingsBoard on [github]&#40;https://github.com/thingsboard/thingsboard&#41;{:target="_blank"} to help us spread the word.)
-If you have any questions about this sample, please [contact us](/docs/contact-us/){:target="_blank"}.
+If you have any questions about this sample, please [contact us](mailto:service4iot@magenta.at).
