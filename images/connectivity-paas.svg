@@ -6,28 +6,28 @@
 	.st0{fill:#FFFFFF;stroke:#28232D;}
 	.st1{fill:#28232D;}
 	.st2{fill:#FFFFFF;}
-	.st3{fill:none;stroke:#305680;stroke-opacity:0.4;}
+	.st3{fill:none;stroke:#e20074;stroke-opacity:0.4;}
 	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#28232D;}
 	.st5{fill:#FFFFFF;stroke:#B7B7B7;stroke-linecap:round;stroke-dasharray:5,5;}
 	.st6{fill:#1F8B4D;}
 	.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
-	.st8{fill:#305680;}
+	.st8{fill:#e20074;}
 	.st9{font-family:'OpenSans-SemiBold';}
 	.st10{font-size:12px;}
 	.st11{font-family:'OpenSans-Regular';}
 	.st12{opacity:0;}
-	.st13{fill:none;stroke:#305680;stroke-width:3;}
+	.st13{fill:none;stroke:#e20074;stroke-width:3;}
 	.st14{fill:none;stroke:#28232D;stroke-width:3;}
 	.st15{fill:#FFFFFF;stroke:#1F8B4D;stroke-width:3;}
 	.st16{fill-rule:evenodd;clip-rule:evenodd;fill:#1F8B4D;}
-	.st17{fill:#FFFFFF;stroke:#305680;stroke-width:3;}
-	.st18{fill-rule:evenodd;clip-rule:evenodd;fill:#305680;}
+	.st17{fill:#FFFFFF;stroke:#e20074;stroke-width:3;}
+	.st18{fill-rule:evenodd;clip-rule:evenodd;fill:#e20074;}
 	.st19{font-size:12.5px;}
 	.st20{fill:#FFFFFF;stroke:#28232D;}
 </style>
 <style>
 	svg .magic:hover {
-	stroke: #305680;
+	stroke: #e20074;
 	stroke-width: 3px;
 	 }
 	svg .black_magic:hover {

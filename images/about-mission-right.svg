@@ -146,7 +146,7 @@
 <path fill-rule="evenodd" clip-rule="evenodd" d="M124 144V86H125V144H124Z" fill="black"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M21 144V86H22V144H21Z" fill="black"/>
 </g>
-<path d="M102 20H133V21H102V20Z" fill="#305680"/>
+<path d="M102 20H133V21H102V20Z" fill="#e20074"/>
 <defs>
 <clipPath id="clip0">
 <rect width="176" height="97" fill="white" transform="translate(10 53)"/>
