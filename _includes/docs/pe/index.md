@@ -34,17 +34,6 @@
             </div>
         </a>
     </div>
-{% if docsPrefix == 'pe/' %}
-    <div class="{{firstRowItemClasses}} mb-4">
-        <a class="feature-card" href="/docs/user-guide/install/pe/installation-options/">
-            <img class="feature-logo" src="/images/feature-logo/install.svg" alt="Install icon">
-            <div class="feature-title">Installation</div>
-            <div class="feature-text">
-                Learn how to install and upgrade platform.
-            </div>
-        </a>
-    </div>
-{% endif %}
     <div class="{{faqItemClasses}} mb-4">
         <a class="feature-card" href="/docs/{{docsPrefix}}faq/">
             <img class="feature-logo" src="/images/feature-logo/faq.svg" alt="Question icon">
