@@ -3,7 +3,7 @@
   url: "/docs/getting-started-guides/helloworld-pe/"
   redirect_from: "/docs/pe/getting-started-guides/helloworld/"
 "/docs/user-guide/overview/":
-  url: "/docs/getting-started-guides/what-is-thingsboard/"
+  url: "/docs/getting-started-guides/what-is-iothub/"
   redirect_from: "/docs/user-guide/overview/"
 "/products/paas/billing-info/":
   url: "/docs/paas/billing-info/"

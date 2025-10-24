@@ -171,7 +171,6 @@ Browse other [samples](/docs/samples/) or explore guides related to main IoT Hub
 
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
  - [Data Visualization](/docs/guides/#AnchorIDDataVisualization) - how to visualize collected data.
- - [Data Analytics](/docs/guides/#AnchorIDDataAnalytics) - how to collect telemetry data.
  - [Rule Engine](/docs/user-guide/rule-engine-2-0/re-getting-started/) - how to use rule engine to analyze data from devices.
  - [Using RPC capabilities](/docs/user-guide/rule-engine-2-0/tutorials/rpc-request-tutorial/) - how to send commands to/from devices.
 

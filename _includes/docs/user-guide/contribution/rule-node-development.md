@@ -519,55 +519,89 @@ public class TbCacheExampleNode implements TbNode {
 
 ## Step 4. Import custom rule nodes to your IoT Hub instance
 
-Once you have finished coding of the rule node, execute the build command again:
+Please get in touch with [service4iot@magenta.at](mailto:service4iot@magenta.at).
 
-```bash
-mvn clean install
-```  
+[//]: # (Once you have finished coding of the rule node, execute the build command again:)
 
-Then, locate the jar-file to your IoT Hub project as dependency library. The result of the build is located here:
- 
-```bash
-target/rule-engine-1.0.0-custom-nodes.jar
-```
+[//]: # ()
+[//]: # (```bash)
 
-Now you are ready to add the jar-file with your rule nodes to your IoT Hub instance:
-{% unless docsPrefix %}
-* Use Step 4.1 if your IoT Hub is installed as a service. 
-* Use Step 4.2 if your IoT Hub is built from sources and launched locally from your IDE
+[//]: # (mvn clean install)
 
-### Step 4.1 Add JAR file to IoT Hub installed as a service
-{% endunless %}
+[//]: # (```  )
 
- - first, you need to execute the following command to copy jar-file to IoT Hub extensions:
+[//]: # ()
+[//]: # (Then, locate the jar-file to your IoT Hub project as dependency library. The result of the build is located here:)
 
-```bash
-sudo cp rule-engine-1.0.0-custom-nodes.jar /usr/share/thingsboard/extensions/
-```
+[//]: # ( )
+[//]: # (```bash)
 
- - next, execute the following to change the owner to IoT Hub:
+[//]: # (target/rule-engine-1.0.0-custom-nodes.jar)
 
-```bash
-sudo chown thingsboard:thingsboard /usr/share/thingsboard/extensions/*
-```
+[//]: # (```)
 
-Restart IoT Hub service:
+[//]: # ()
+[//]: # (Now you are ready to add the jar-file with your rule nodes to your IoT Hub instance:)
 
-```bash
-sudo service thingsboard restart
-```
+[//]: # ({% unless docsPrefix %})
 
-**Once IoT Hub was restarted you need to clear browser cache and refresh the web page to reload UI of Rule Nodes**
+[//]: # (* Use Step 4.1 if your IoT Hub is installed as a service. )
 
-{% unless docsPrefix %}
-### Step 4.2 Add JAR file to local IoT Hub launched using IDE
+[//]: # (* Use Step 4.2 if your IoT Hub is built from sources and launched locally from your IDE)
 
- - See separate instructions for [IDEA](https://www.jetbrains.com/help/idea/library.html#add-library-to-module-dependencies) and [Eclipse](https://help.eclipse.org/luna/index.jsp?topic=%2Forg.eclipse.jst.j2ee.doc.user%2Ftopics%2Ftjimpapp.html).
- 
-Restart IoT Hub server-side container. Please, refer to the following link to see how to do this: [Running server-side container](/docs/{{docsPrefix}}user-guide/contribution/how-to-contribute/#running-server-side-container). 
- 
-**Once IoT Hub was restarted you need to clear browser cache and refresh the web page to reload UI of Rule Nodes**
-{% endunless %}
+[//]: # ()
+[//]: # (### Step 4.1 Add JAR file to IoT Hub installed as a service)
+
+[//]: # ({% endunless %})
+
+[//]: # ()
+[//]: # ( - first, you need to execute the following command to copy jar-file to IoT Hub extensions:)
+
+[//]: # ()
+[//]: # (```bash)
+
+[//]: # (sudo cp rule-engine-1.0.0-custom-nodes.jar /usr/share/thingsboard/extensions/)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # ( - next, execute the following to change the owner to IoT Hub:)
+
+[//]: # ()
+[//]: # (```bash)
+
+[//]: # (sudo chown thingsboard:thingsboard /usr/share/thingsboard/extensions/*)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (Restart IoT Hub service:)
+
+[//]: # ()
+[//]: # (```bash)
+
+[//]: # (sudo service thingsboard restart)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (**Once IoT Hub was restarted you need to clear browser cache and refresh the web page to reload UI of Rule Nodes**)
+
+[//]: # ()
+[//]: # ({% unless docsPrefix %})
+
+[//]: # (### Step 4.2 Add JAR file to local IoT Hub launched using IDE)
+
+[//]: # ()
+[//]: # ( - See separate instructions for [IDEA]&#40;https://www.jetbrains.com/help/idea/library.html#add-library-to-module-dependencies&#41; and [Eclipse]&#40;https://help.eclipse.org/luna/index.jsp?topic=%2Forg.eclipse.jst.j2ee.doc.user%2Ftopics%2Ftjimpapp.html&#41;.)
+
+[//]: # ( )
+[//]: # (Restart IoT Hub server-side container. Please, refer to the following link to see how to do this: [Running server-side container]&#40;/docs/{{docsPrefix}}user-guide/contribution/how-to-contribute/#running-server-side-container&#41;. )
+
+[//]: # ( )
+[//]: # (**Once IoT Hub was restarted you need to clear browser cache and refresh the web page to reload UI of Rule Nodes**)
+
+[//]: # ({% endunless %})
 
 ## Step 5. Add your custom package name to thingsboard.yml
 

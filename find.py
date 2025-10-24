@@ -4,8 +4,8 @@ import tkinter as tk
 from tkinter import scrolledtext, font, messagebox
 
 # --- НАСТРОЙКИ ---
-OLD_STRING = "$THINGSBOARD_HOST"
-NEW_STRING = "iothub.magenta.at"
+OLD_STRING = "what-is-thingsboard"
+NEW_STRING = "what-is-iothub"
 PROJECT_DIR = '.'
 CONTEXT_LINES = 2
 EXCLUDE_DIRS = {

@@ -11,7 +11,7 @@
 
 {% capture tb-open-source %}
 IoT Hub is an open-source IoT platform that provides a robust suite of features for data collection, processing, visualization, and device management.
-If you are a new platform user, we suggest reading [**What is ThingsBoard?**](/docs/getting-started-guides/what-is-thingsboard/){: target="_blank"} before proceeding with IoT Hub Edge.  
+If you are a new platform user, we suggest reading [**What is ThingsBoard?**](/docs/getting-started-guides/what-is-iothub/){: target="_blank"} before proceeding with IoT Hub Edge.  
 {% endcapture %}
 {% include templates/info-banner.md content=tb-open-source %}
 

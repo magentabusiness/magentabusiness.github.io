@@ -62,4 +62,4 @@ IoT Hub supports Sigfox [integration](/docs/{{peDocsPrefix}}user-guide/integrati
 ## NB IoT and other protocols
 
 IoT Hub supports many [Integrations](/docs/{{peDocsPrefix}}user-guide/integrations/) that cover most of the devices on the market.
-Please [service4iot@magenta.at](mailto:service4iot@magenta.at) if you need help to connect your device.
+Please [contact us - service4iot@magenta.at](mailto:service4iot@magenta.at) if you need help to connect your device.

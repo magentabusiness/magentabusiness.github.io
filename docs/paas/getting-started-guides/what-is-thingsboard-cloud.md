@@ -10,8 +10,8 @@ redirect_from: "/products/paas/what-is-thingsboard-cloud/"
 {% assign docsPrefix = "paas/" %}
 {% include get-hosts-name.html docsTag="paas" %}
 
-The [**ThingsBoard Cloud**](/products/paas/) is a fully managed, scalable and fault-tolerant platform for your IoT applications.
-IoT Hub is for everyone who would like to use [ThingsBoard](/docs/{{docsPrefix}}getting-started-guides/what-is-thingsboard/) but don't want to host their own instance of the platform.
+The [**IoT Hub**](/products/paas/) is a fully managed, scalable and fault-tolerant platform for your IoT applications.
+IoT Hub is for everyone who would like to use [IoT Hub](/docs/{{docsPrefix}}getting-started-guides/what-is-iothub/) but don't want to host their own instance of the platform.
 As a platform user, you get a [tenant account](/docs/{{docsPrefix}}user-guide/entities-and-relations/) with certain entity and API [limits](/docs/{{docsPrefix}}user-guide/tenant-profiles/#entity-limits)
 that are defined based on the [subscription plan](/docs/{{docsPrefix}}subscription/).      
 

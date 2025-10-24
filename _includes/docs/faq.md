@@ -10,12 +10,16 @@ If this is your first experience with the platform we recommend to review [what-
 and [getting started guide](/docs/{{docsPrefix}}getting-started-guides/helloworld/).
 You can find more information on the dedicated page.
 
-## How do I get started?
+[//]: # (## How do I get started?)
 
-{% if docsPrefix contains 'paas/' %}
-We recommend to follow the [getting started guide](/docs/{{docsPrefix}}getting-started-guides/helloworld/).
-{% else %}
-{% endif %}
+[//]: # ()
+[//]: # ({% if docsPrefix contains 'paas/' %})
+
+[//]: # (We recommend to follow the [getting started guide]&#40;/docs/{{docsPrefix}}getting-started-guides/helloworld/&#41;.)
+
+[//]: # ({% else %})
+
+[//]: # ({% endif %})
 
 ## What can I do with IoT Hub?
 
@@ -61,11 +65,13 @@ For example, small commodity hardware cluster can support [several millions](/do
 
 The data is stored in [Cassandra](https://cassandra.apache.org/) database. Cassandra suites well for storage and querying of time-series data and provides high availability and fault-tolerance.
 
-## What license type does IoT Hub use?
+[//]: # (## What license type does IoT Hub use?)
 
-IoT Hub is licensed under [Apache 2.0 License](https://en.wikipedia.org/wiki/Apache_License#Version_2.0).
-It is free for both personal and commercial usage and you can deploy it anywhere.
+[//]: # ()
+[//]: # (IoT Hub is licensed under [Apache 2.0 License]&#40;https://en.wikipedia.org/wiki/Apache_License#Version_2.0&#41;.)
+
+[//]: # (It is free for both personal and commercial usage and you can deploy it anywhere.)
 
 ## How to get support?
 
-You can use troubleshooting instructions and community resources or [service4iot@magenta.at](mailto:service4iot@magenta.at).
+You can use troubleshooting instructions and community resources or [contact us - service4iot@magenta.at](mailto:service4iot@magenta.at).

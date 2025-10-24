@@ -9,64 +9,60 @@ toc:
   path: /docs/getting-started-guides/connectivity/
 - title: Key concepts
   section:
-  - title: Entities and relations
-    path: /docs/user-guide/entities-and-relations/
-  - title: Tenant profiles
-    path: /docs/user-guide/tenant-profiles/
-  - title: Device profiles
-    path: /docs/user-guide/device-profiles/
-  - title: Asset profiles
-    path: /docs/user-guide/asset-profiles/
-  - title: Attributes
-    path: /docs/user-guide/attributes/
-  - title: Time-series data
-    path: /docs/user-guide/telemetry/
-  - title: Calculated fields
-    path: /docs/user-guide/calculated-fields/
-    new: true
-  - title: Alarms
-    path: /docs/user-guide/alarms/
-  - title: Remote commands to devices
-    path: /docs/user-guide/rpc/
-  - title: OTA updates
-    path: /docs/user-guide/ota-updates/
-  - title: Notification center
-    path: /docs/user-guide/notifications/
+    - title: Entities and relations
+      path: /docs/user-guide/entities-and-relations/
+    - title: Tenant profiles
+      path: /docs/user-guide/tenant-profiles/
+    - title: Device profiles
+      path: /docs/user-guide/device-profiles/
+    - title: Asset profiles
+      path: /docs/user-guide/asset-profiles/
+    - title: Attributes
+      path: /docs/user-guide/attributes/
+    - title: Time-series data
+      path: /docs/user-guide/telemetry/
+    - title: Calculated fields
+      path: /docs/user-guide/calculated-fields/
+    - title: Alarms
+      path: /docs/user-guide/alarms/
+    - title: Remote commands to devices
+      path: /docs/user-guide/rpc/
+    - title: OTA updates
+      path: /docs/user-guide/ota-updates/
+    - title: Notification center
+      path: /docs/user-guide/notifications/
 - title: Dashboards
   section:
-  - title: Overview
-    path: /docs/user-guide/dashboards/
-  - title: Aliases
-    path: /docs/user-guide/ui/aliases/
-  - title: Unit conversion
-    path: /docs/user-guide/ui/unit-conversion/
-    new: true
-  - title: Layouts
-    path: /docs/user-guide/ui/layouts/
-  - title: SCADA
-    new: true
-    section:
-      - title: Overview
-        path: /docs/user-guide/scada/
-      - title: SCADA symbols development guide
-        path: /docs/user-guide/scada/scada-symbols-dev-guide/
-  - title: Widgets
-    section:
-      - title: Overview
-        path: /docs/user-guide/widgets/
-      - title: Widget actions
-        path: /docs/user-guide/ui/widget-actions/
-      - title: Widgets library
-        path: /docs/user-guide/ui/widget-library/
-      - title: Chart widgets
-        path: /docs/user-guide/ui/chart-widget/
-      - title: Map widgets
-        path: /docs/user-guide/widgets/map-widgets/
-        new: true
-      - title: Entities table widget
-        path: /docs/user-guide/ui/entity-table-widget/
-      - title: Advanced data key configuration
-        path: /docs/user-guide/ui/advanced-data-key-configuration/
+    - title: Overview
+      path: /docs/user-guide/dashboards/
+    - title: Aliases
+      path: /docs/user-guide/ui/aliases/
+    - title: Unit conversion
+      path: /docs/user-guide/ui/unit-conversion/
+    - title: Layouts
+      path: /docs/user-guide/ui/layouts/
+    - title: SCADA
+      section:
+        - title: Overview
+          path: /docs/user-guide/scada/
+        - title: SCADA symbols development guide
+          path: /docs/user-guide/scada/scada-symbols-dev-guide/
+    - title: Widgets
+      section:
+        - title: Overview
+          path: /docs/user-guide/widgets/
+        - title: Widget actions
+          path: /docs/user-guide/ui/widget-actions/
+        - title: Widgets library
+          path: /docs/user-guide/ui/widget-library/
+        - title: Chart widgets
+          path: /docs/user-guide/ui/chart-widget/
+        - title: Map widgets
+          path: /docs/user-guide/widgets/map-widgets/
+        - title: Entities table widget
+          path: /docs/user-guide/ui/entity-table-widget/
+        - title: Advanced data key configuration
+          path: /docs/user-guide/ui/advanced-data-key-configuration/
 - title: Rule engine
   section:
     - title: Getting Started
@@ -139,89 +135,88 @@ toc:
       path: /docs/user-guide/contribution/rule-node-development/
     - title: Templatization
       path: /docs/user-guide/templatization/
-      new: true
 - title: White labeling
   section:
     - title: Overview
       path: /docs/pe/user-guide/white-labeling/
-    # - title: Self-registration
-    #   path: /docs/pe/user-guide/self-registration/
+    - title: Self-registration
+      path: /docs/pe/user-guide/self-registration/
     - title: Mail templates
       path: /docs/pe/user-guide/mail-templates/
     - title: Custom translation
       path: /docs/pe/user-guide/custom-translation/
     - title: Custom menu
       path: /docs/pe/user-guide/custom-menu/
-      new: true
 - title: Integrations
   section:
-  - title: Overview
-    path: /docs/user-guide/integrations/
-  - title: Remote Integrations
-    path: /docs/user-guide/integrations/remote-integrations/
-  - title: HTTP
-    path: /docs/user-guide/integrations/http/
-  - title: MQTT
-    path: /docs/user-guide/integrations/mqtt/
-  - title: CoAP
-    path: /docs/user-guide/integrations/coap/
-  - title: Kafka
-    path: /docs/user-guide/integrations/kafka/
-  - title: OPC-UA
-    path: /docs/user-guide/integrations/opc-ua/
-  - title: ThingPark
-    path: /docs/user-guide/integrations/thingpark/
-  - title: The Things Stack Community
-    path: /docs/user-guide/integrations/ttn/
-  - title: The Things Stack Industries
-    path: /docs/user-guide/integrations/tti/
-  - title: KPN Things
-    path: /docs/user-guide/integrations/kpn-things/
-  - title: Loriot
-    path: /docs/user-guide/integrations/loriot/
-  - title: ChirpStack
-    path: /docs/user-guide/integrations/chirpstack/
-  - title: AWS IoT
-    path: /docs/user-guide/integrations/aws-iot/
-  - title: AWS Kinesis
-    path: /docs/user-guide/integrations/aws-kinesis/
-  - title: IBM Watson
-    path: /docs/user-guide/integrations/ibm-watson-iot/
-  - title: Azure Event Hub
-    path: /docs/user-guide/integrations/azure-event-hub/
-  - title: Azure Service Bus
-    path: /docs/user-guide/integrations/azure-service-bus/
-  - title: Azure IoT Hub
-    path: /docs/user-guide/integrations/azure-iot-hub/
-  - title: TCP
-    path: /docs/user-guide/integrations/tcp/
-  - title: UDP
-    path: /docs/user-guide/integrations/udp/
-  - title: SigFox
-    path: /docs/user-guide/integrations/sigfox/
-  - title: Ocean Connect
-    path: /docs/user-guide/integrations/ocean-connect/
-  - title: Tuya
-    path: /docs/user-guide/integrations/tuya/
-  - title: Particle
-    path: /docs/user-guide/integrations/particle/
-    new: true
-  - title: Apache Pulsar
-    path: /docs/user-guide/integrations/apache-pulsar/
-  - title: AWS SQS
-    path: /docs/user-guide/integrations/aws-sqs/
-  - title: RabbitMQ
-    path: /docs/user-guide/integrations/rabbitmq/
-  - title: T-Mobile – IoT CDP
-    path: /docs/user-guide/integrations/t-mobile-iot-cdp/
-  - title: Custom Integration development guide
-    path: /docs/user-guide/integrations/custom/
-  - title: Notifications and Alarms on your smartphone using Telegram Bot
-    path: /docs/user-guide/rule-engine-2-0/tutorials/integration-with-telegram-bot/
+    - title: Overview
+      path: /docs/user-guide/integrations/
+    - title: Remote Integrations
+      path: /docs/user-guide/integrations/remote-integrations/
+    - title: HTTP
+      path: /docs/user-guide/integrations/http/
+    - title: MQTT
+      path: /docs/user-guide/integrations/mqtt/
+    - title: CoAP
+      path: /docs/user-guide/integrations/coap/
+    - title: Kafka
+      path: /docs/user-guide/integrations/kafka/
+    - title: OPC-UA
+      path: /docs/user-guide/integrations/opc-ua/
+    - title: ThingPark
+      path: /docs/user-guide/integrations/thingpark/
+    - title: The Things Stack Community
+      path: /docs/user-guide/integrations/ttn/
+    - title: The Things Stack Industries
+      path: /docs/user-guide/integrations/tti/
+    - title: KPN Things
+      path: /docs/user-guide/integrations/kpn-things/
+    - title: Loriot
+      path: /docs/user-guide/integrations/loriot/
+    - title: ChirpStack
+      path: /docs/user-guide/integrations/chirpstack/
+    - title: AWS IoT
+      path: /docs/user-guide/integrations/aws-iot/
+    - title: AWS Kinesis
+      path: /docs/user-guide/integrations/aws-kinesis/
+    - title: IBM Watson
+      path: /docs/user-guide/integrations/ibm-watson-iot/
+    - title: Azure Event Hub
+      path: /docs/user-guide/integrations/azure-event-hub/
+    - title: Azure Service Bus
+      path: /docs/user-guide/integrations/azure-service-bus/
+    - title: Azure IoT Hub
+      path: /docs/user-guide/integrations/azure-iot-hub/
+    - title: TCP
+      path: /docs/user-guide/integrations/tcp/
+    - title: UDP
+      path: /docs/user-guide/integrations/udp/
+    - title: SigFox
+      path: /docs/user-guide/integrations/sigfox/
+#    - title: Ocean Connect
+#      path: /docs/user-guide/integrations/ocean-connect/
+    - title: Tuya
+      path: /docs/user-guide/integrations/tuya/
+    - title: Particle
+      path: /docs/user-guide/integrations/particle/
+    - title: Apache Pulsar
+      path: /docs/user-guide/integrations/apache-pulsar/
+    - title: AWS SQS
+      path: /docs/user-guide/integrations/aws-sqs/
+    - title: RabbitMQ
+      path: /docs/user-guide/integrations/rabbitmq/
+    - title: T-Mobile – IoT CDP
+      path: /docs/user-guide/integrations/t-mobile-iot-cdp/
+    - title: Custom Integration development guide
+      path: /docs/user-guide/integrations/custom/
+    - title: Notifications and Alarms on your smartphone using Telegram Bot
+      path: /docs/user-guide/rule-engine-2-0/tutorials/integration-with-telegram-bot/
 - title: Analytics
   section:
-  - title: Kafka Streams
-    path: /docs/samples/analytics/kafka-streams/
+#    - title: Trendz Analytics
+#      path: /docs/trendz/
+    - title: Kafka Streams
+      path: /docs/samples/analytics/kafka-streams/
 #- title: Mobile center
 #  section:
 #    - title: Overview
@@ -242,7 +237,6 @@ toc:
       path: /docs/user-guide/device-provisioning/
     - title: Image gallery
       path: /docs/user-guide/image-gallery/
-      new: true
     - title: Entity views
       path: /docs/user-guide/entity-views/
     - title: API limits
@@ -267,7 +261,6 @@ toc:
       path: /docs/pe/user-guide/file-storage/
     - title: ThingsBoard Expression Language (TBEL)
       path: /docs/user-guide/tbel/
-      new: true
 - title: Security
   section:
     - title: Security settings
@@ -294,56 +287,56 @@ toc:
           path: /docs/user-guide/ssl/http-access-token/
     - title: MQTT transport
       section:
-      - title: MQTT over SSL
-        path: /docs/user-guide/mqtt-over-ssl/
-      - title: Device authentication options
-        path: /docs/user-guide/device-credentials/
-      - title: Access token based authentication
-        path: /docs/user-guide/access-token/
-      - title: Basic MQTT credentials
-        path: /docs/user-guide/basic-mqtt/
-      - title: X.509 certificate based authentication
-        path: /docs/user-guide/certificates/
+        - title: MQTT over SSL
+          path: /docs/user-guide/mqtt-over-ssl/
+        - title: Device authentication options
+          path: /docs/user-guide/device-credentials/
+        - title: Access token based authentication
+          path: /docs/user-guide/access-token/
+        - title: Basic MQTT credentials
+          path: /docs/user-guide/basic-mqtt/
+        - title: X.509 certificate based authentication
+          path: /docs/user-guide/certificates/
     - title: CoAP transport
       section:
-      - title: CoAP over DTLS
-        path: /docs/user-guide/coap-over-dtls/
-      - title: Access token based authentication
-        path: /docs/user-guide/ssl/coap-access-token/
-      - title: X.509 certificate based authentication
-        path: /docs/user-guide/ssl/coap-x509-certificates/
+        - title: CoAP over DTLS
+          path: /docs/user-guide/coap-over-dtls/
+        - title: Access token based authentication
+          path: /docs/user-guide/ssl/coap-access-token/
+        - title: X.509 certificate based authentication
+          path: /docs/user-guide/ssl/coap-x509-certificates/
     - title: LwM2M transport
       section:
         - title: LwM2M over DTLS
           path: /docs/user-guide/ssl/lwm2m-over-dtls/
 - title: Administration UI
   section:
-  - title: Tenants
-    path: /docs/user-guide/ui/tenants/
-  - title: Customers
-    path: /docs/user-guide/ui/customers/
-  - title: Users
-    path: /docs/user-guide/ui/users/
-  - title: Assets
-    path: /docs/user-guide/ui/assets/
-  - title: Devices
-    path: /docs/user-guide/ui/devices/
-  - title: Rule chains
-    path: /docs/user-guide/ui/rule-chains/
-  - title: Dashboards
-    path: /docs/user-guide/ui/dashboards/
-  - title: Entity groups
-    path: /docs/pe/user-guide/groups/
-  - title: SMS provider settings
-    path: /docs/user-guide/ui/sms-provider-settings/
-  - title: Slack settings
-    path: /docs/user-guide/ui/slack-settings/
-  - title: Microsoft Teams settings
-    path: /docs/user-guide/ui/microsoft-teams-settings/
-  - title: Mail server
-    path: /docs/user-guide/ui/mail-settings/
-  - title: JWT security settings
-    path: /docs/user-guide/ui/jwt-security-settings/
+    - title: Tenants
+      path: /docs/user-guide/ui/tenants/
+    - title: Customers
+      path: /docs/user-guide/ui/customers/
+    - title: Users
+      path: /docs/user-guide/ui/users/
+    - title: Assets
+      path: /docs/user-guide/ui/assets/
+    - title: Devices
+      path: /docs/user-guide/ui/devices/
+    - title: Rule chains
+      path: /docs/user-guide/ui/rule-chains/
+    - title: Dashboards
+      path: /docs/user-guide/ui/dashboards/
+    - title: Entity groups
+      path: /docs/pe/user-guide/groups/
+    - title: SMS provider settings
+      path: /docs/user-guide/ui/sms-provider-settings/
+    - title: Slack settings
+      path: /docs/user-guide/ui/slack-settings/
+    - title: Microsoft Teams settings
+      path: /docs/user-guide/ui/microsoft-teams-settings/
+    - title: Mail server
+      path: /docs/user-guide/ui/mail-settings/
+    - title: JWT security settings
+      path: /docs/user-guide/ui/jwt-security-settings/
 - title: Contribution guide
   section:
     - title: How to contribute
