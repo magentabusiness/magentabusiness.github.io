@@ -44,9 +44,9 @@
       video: false
       pe: false
     - path: /docs/pe/user-guide/advanced-guides-for-working-with-dashboard/advanced-dashboard-guide-lesson-4/
-      title: Lesson 4. Adding customers & sharing or changing ownership of assets.
-      subtitle: "Explore this guide to learn how to: grant access to the dashboard by assigning ownership or shared access to specific entities (such as devices, assets, etc.) to different clients; create customer and customer users."
-      keywords: customer user share change owner helloworld
+      title: Lesson 4. Alarm management
+      subtitle: "Explore this guide to learn how to: create alarm rules, and handle alarms using the Alarms widget."
+      keywords: alarm alarms widget helloworld
       video: false
       pe: false
     - path: /docs/pe/user-guide/advanced-guides-for-working-with-dashboard/advanced-dashboard-guide-lesson-5/
@@ -89,6 +89,12 @@
       keywords: coap connect
       pe: false
       video: false
+#    - path: /docs/iot-gateway/getting-started/
+#      title: Connect devices through ThingsBoard IoT Gateway
+#      subtitle: Learn how to deploy IoT Gateway in your local network and route messages from your devices to the cloud.
+#      keywords: gateway connect
+#      pe: false
+#      video: false
     - path: /docs/user-guide/integrations/
       title: IoT Hub Integrations basics
       subtitle: Learn about IoT Hub Integrations feature and how you can use it to connect devices and apps that use custom payload formats.
@@ -105,85 +111,71 @@
       title: Connect devices with custom payload using IoT Hub HTTP Integration
       subtitle: Convert existing protocols and payload formats to IoT Hub message format.
       keywords: http connect
-      pe: true
       video: true
     - path: /docs/user-guide/integrations/mqtt/
       title: Connect devices with custom payload using IoT Hub MQTT Integration.
       subtitle: Connect to external brokers and consume MQTT data stream
       keywords: mqtt connect
-      pe: true
       video: true
     - path: /docs/user-guide/integrations/kafka/
       title: Connect devices with custom payload using IoT Hub Kafka Integration.
       subtitle: Connect to external brokers and consume Kafka data stream
       keywords: kafka connect
-      pe: true
       video: true
     - path: /docs/user-guide/integrations/sigfox/
       title: Connect SigFox devices using TB PE Integration
       subtitle: Learn how to route messages from Sigfox backend to IoT Hub and decode binary device payloads.
       keywords: sigfox connect
-      pe: true
       video: true
     - path: /docs/user-guide/integrations/ttn/
       title: Connect LoRaWAN devices using TheThingsStack
       subtitle: Learn how to route messages from TheThingsStack backend to IoT Hub and vise-versa.
       keywords: ttn connect
-      pe: true
       video: false
     - path: /docs/user-guide/integrations/opc-ua/
       title: Connect OPC-UA servers to IoT Hub
       subtitle: Learn how to connect OPC-UA devices to IoT Hub.
       keywords: opcua connect
-      pe: true
       video: true
     - path: /docs/user-guide/integrations/thingpark/
       title: Connect LoRaWAN devices using Actility ThingPark
       subtitle: Learn how to route messages from ThingPark to IoT Hub and vise-versa.
       keywords:
-      pe: true
       video: false
     - path: /docs/user-guide/integrations/aws-iot/
       title: Connect devices through AWS IoT
       subtitle: Learn how to connect to AWS IoT broker, transform the incoming messages and generate the downlinks using IoT Hub.
       keywords:
-      pe: true
       video: true
     - path: /docs/user-guide/integrations/aws-kinesis/
       title: Connect devices through AWS Kinesis
       subtitle: Learn how to connect to AWS Kinesis stream, transform the incoming messages and generate the downlinks using IoT Hub.
       keywords:
-      pe: true
       video: false
     - path: /docs/user-guide/integrations/ibm-watson-iot/
       title: Connect devices through IBM Watson IoT
       subtitle: Learn how to connect to IBM Watson IoT broker, transform the incoming messages and generate the downlinks using IoT Hub.
       keywords:
-      pe: true
       video: true
     - path: /docs/user-guide/integrations/azure-event-hub/
       title: Connect devices through Azure Event Hub
       subtitle: Learn how to connect to Azure Event Hub, transform the incoming messages and generate the downlinks using IoT Hub.
       keywords:
-      pe: true
       video: true
     - path: /docs/user-guide/integrations/azure-iot-hub/
       title: Connect devices through Azure IoT Hub
       subtitle: Learn how to connect to Azure IoT Hub and transform the incoming messages using IoT Hub.
       keywords:
-      pe: true
       video: false
     - path: /docs/user-guide/integrations/tcp/
       title: Devices uses TCP protocol
       subtitle: How to connect to IoT Hub TCP-server, transform the incoming messages and generate the downlinks using IoT Hub.
       keywords: Connect TCP devices
-      pe: true
       video: true
     - path: /docs/user-guide/integrations/udp/
       title: Devices uses UDP protocol
       subtitle: How to connect to IoT Hub UDP-server, transform the incoming messages and generate the downlinks using IoT Hub.
       keywords: Connect UDP devices
-      pe: true
       video: true
     - path: /docs/samples/tektelic/
       title: Connect Tektelic LoRaWAN sensors using TEKTELIC KONA Core Network Server
@@ -195,13 +187,11 @@
       title: Connect smart devices through Tuya Smart
       subtitle: Learn how to connect smart devices using Tuya Smart to IoT Hub.
       keywords:
-      pe: true
       video: false
     - path: /docs/samples/sia-connect/
       title: Connect OPC-UA devices through SIA Connect
       subtitle: Learn how to connect OPC-UA devices using the SIA Connect to the IoT Hub.
       keywords:
-      pe: true
       video: false
 - title: Data visualization
   subtitle: These guides contain instructions how to configure complex IoT Hub dashboards
@@ -254,11 +244,9 @@
     - path: /docs/pe/tutorials/telemetry-delta-calculation/
       title: Telemetry delta calculation
       subtitle: Learn how to calculate telemetry delta readings using the Calculated fields feature.
-      pe: true
     - path: /docs/pe/tutorials/function-based-on-telemetry-from-two-devices/
       title: Data function based on telemetry from 2 devices
       subtitle: Learn how to generate a new telemetry value based on telemetry readings from multiple devices using the Calculated fields feature.
-      pe: true
     - path: /docs/user-guide/rule-engine-2-0/tutorials/transform-incoming-telemetry/
       title: Transform incoming telemetry
       subtitle: Learn how to configure Rule Engine to transform incoming telemetry based on JavaScript function before it is stored to the database.
@@ -310,12 +298,10 @@
       title: Add & remove devices to group dynamically
       subtitle: Learn how to how to dynamically add & remove device from the device group based on incoming data from device.
       keys: device group dynamic relation
-      pe: true
     - path: /docs/user-guide/integrations/send-data-external-mqtt-brokers/
       title: Send data to external MQTT brokers
       subtitle: Connect to external brokers and send MQTT data stream
       keys: mqtt connect
-      pe: true
     - path: /docs/pe/user-guide/rule-engine-2-5/tutorials/queues-for-synchronization/
       title: Using queues for synchronization
       subtitle: Learn how to use Rule Engine 2.5 queues for message processing synchronization.
@@ -332,17 +318,15 @@
       title: Aggregate incoming data stream
       subtitle: Calculate total water consumption in the building based on readings from multiple water meters within a building.
       keywords: aggregation water meter analytics rule engine
-      pe: true
     - path: /docs/user-guide/rule-engine-2-0/tutorials/aggregate-latest-data/
       title: Aggregate latest telemetry values periodically
       subtitle: Calculate average temperature in the warehouse based on readings from multiple temperature sensors.
       keywords: average temperature analytics rule engine
-      pe: true
-    - path: /docs/trendz/prediction/
-      title: Predict timeseries
-      subtitle: Build prediction model based on vibration of water pump
-      keywords: analytics forecast prediction
-      pe: false
+#    - path: /docs/trendz/prediction/
+#      title: Predict timeseries
+#      subtitle: Build prediction model based on vibration of water pump
+#      keywords: analytics forecast prediction
+#      pe: false
 #- title: Pushing data to external systems
 #  subtitle: lorem ipsum dolor
 #  section:
@@ -412,13 +396,11 @@
       title: Learn how to connect your SODAQ Universal Tracker to IoT Hub
       subtitle: Learn how to connect your SODAQ Universal Tracker to IoT Hub via T-Mobile – IoT CDP Integration.
       keywords: NB IoT, NB-IoT, T-Mobile, SODAQ, 5G
-      pe: true
       video: false
     - path: /docs/user-guide/integrations/sodaq-udp
       title: Learn how to connect your SODAQ Universal Tracker to IoT Hub
       subtitle: Learn how to connect your SODAQ Universal Tracker to IoT Hub via UDP Integration.
       keywords: NB IoT, NB-IoT, T-Mobile, SODAQ, 5G
-      pe: true
       video: false
     - path: /docs/samples/ble/raspberry-esp32-xiaomi-sensor-htu21d
       title: IoT Hub BLE Demo with Raspberry PI, ESP32, Xiaomi MI and HTU21D sensors
@@ -452,22 +434,18 @@
     - path: /docs/pe/user-guide/white-labeling/
       title: White-labeling
       subtitle: Learn how to configure your company or product logo and color scheme in 2 minutes with zero coding efforts.
-      pe: true
       video: true
     - path: /docs/pe/user-guide/groups/
       title: Device and Asset groups
       subtitle: Learn how to work with entity groups and perform bulk operations
-      pe: true
       video: true
     - path: /docs/pe/user-guide/scheduler/
       title: Scheduler
       subtitle: Learn how to schedule various types of events and trigger actions.
-      pe: true
       video: true
     - path: /docs/pe/user-guide/reporting/
       title: Reporting
       subtitle: Learn how to schedule and generate reports based on existing dashboards.
-      pe: true
       video: true
 
 - title: OAuth 2.0
@@ -475,18 +453,18 @@
   id: OAuth
   paaspage: "false"
   section:
-  - path: /docs/pe/user-guide/oauth-2-support/#login-with-google
-    title: Google OAuth example
-    subtitle: Learn how to step-by-step setup OAuth with Google.
-  - path: /docs/pe/user-guide/oauth-2-support/#login-with-auth0
-    title: OAuth0 OAuth example
-    subtitle: Learn how to step-by-step setup OAuth with OAuth0.
-  - path: /docs/pe/user-guide/oauth-2-support
-    title: OAuth0 Okta example
-    subtitle: Learn how to step-by-step setup OAuth with Okta.
-  - path: /docs/pe/user-guide/oauth-2-support
-    title: OAuth0 Azure Active Directory example
-    subtitle: Learn how to step-by-step setup OAuth with Azure Active Directory.
+    - path: /docs/pe/user-guide/oauth-2-support/#login-with-google
+      title: Google OAuth example
+      subtitle: Learn how to step-by-step setup OAuth with Google.
+    - path: /docs/pe/user-guide/oauth-2-support/#login-with-auth0
+      title: OAuth0 OAuth example
+      subtitle: Learn how to step-by-step setup OAuth with OAuth0.
+    - path: /docs/pe/user-guide/oauth-2-support
+      title: OAuth0 Okta example
+      subtitle: Learn how to step-by-step setup OAuth with Okta.
+    - path: /docs/pe/user-guide/oauth-2-support
+      title: OAuth0 Azure Active Directory example
+      subtitle: Learn how to step-by-step setup OAuth with Azure Active Directory.
 
 - title: Contribution and Development
   subtitle: Learn how to contribute to IoT Hub, customize & develop custom widgets and rule nodes
