@@ -37,7 +37,3 @@ data will be sent to the IoT Hub server. The following strategies are available:
 
 ![image](/images/gateway/bacnet-connector/bacnet-gateway-configuring-10-ce.png)
 
-{% capture difference %}
-Additional information about the report strategy can be found [here](/docs/iot-gateway/features-overview/report-strategy){:target="_blank"}.
-{% endcapture %}
-{% include templates/info-banner.md content=difference %}

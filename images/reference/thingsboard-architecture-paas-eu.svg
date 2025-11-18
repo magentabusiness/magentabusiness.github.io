@@ -3694,8 +3694,7 @@ opacity: 1;
        fill="#ffffff00"
        id="path1773" />
   </a>
-  <a
-     xlink:href="/docs/iot-gateway/what-is-iot-gateway/"
+  <span
      target="_parent"
      xlink:title="What is ThingsBoard IoT Gateway?"
      id="a1779">
@@ -3709,7 +3708,7 @@ opacity: 1;
        stroke-linecap="round"
        fill="#ffffff00"
        id="rect1777" />
-  </a>
+  </span>
   <a
      xlink:href="/docs/pe/reference/msa/#transport-microservices"
      target="_parent"

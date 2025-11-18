@@ -176,7 +176,7 @@ while True:
 ## Using Gateway APIs
 
 **TBGatewayMqttClient** extends **TBDeviceMqttClient**, thus has access to all its APIs as a regular device.   
-Besides, gateway is able to represent multiple devices connected to it. For example, sending telemetry or attributes on behalf of other, constrained, device. See more info about the gateway [**here**](/docs/iot-gateway/).  
+Besides, gateway is able to represent multiple devices connected to it. For example, sending telemetry or attributes on behalf of other, constrained, device.   
 
 ### Telemetry and attributes sending 
 

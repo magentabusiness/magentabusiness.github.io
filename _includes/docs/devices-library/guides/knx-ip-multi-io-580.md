@@ -18,7 +18,7 @@ To continue with this guide we will need the following:
 - [Multi IO Extension Shutter 592](https://weinzierl.de/en/products/multi-io-extension-shutter-592/){: target="_blank"}
 - Coupling relay for Multi IO
 - [ETS software](https://support.knx.org/hc/en-us/articles/4409114300178-ETS-v5-7-7){: target="_blank"} installed
-- [ThingsBoard IoT Gateway](https://docs.iothub.magenta.at/docs/iot-gateway/installation/){: target="_blank"} installed
+- ThingsBoard IoT Gateway installed
 - [IoT Hub account]({{ thingsboardHost }}){: target="_blank"}
 
 ## Devices connection

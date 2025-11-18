@@ -411,7 +411,7 @@ node mqtt-js-rpc-from-server.js
 {% include images-gallery.html imageCollection="server-side-rpc" %}
 
 In case your MQTT device is a gateway, IoT Hub will send a server-side RPC (notification) about changes on provisioned device entities.  
-Your MQTT gateway device will receive a service RPC about removal or renaming of device to [properly resolve such events](/docs/iot-gateway/how-device-removing-renaming-works/). 
+Your MQTT gateway device will receive a service RPC about removal or renaming of device to properly resolve such events. 
 
 ### Client-side RPC
 

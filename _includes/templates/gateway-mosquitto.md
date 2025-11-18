@@ -5,4 +5,4 @@ We will use Mosquitto MQTT broker for the demonstration purposes. See Mosquitto 
 Since we use IoT Hub [demo instance](https://iothub.magenta.at/signup) hosted in the cloud, we will install Mosquitto MQTT broker locally and use the default service configuration.
 
 If you decide to use other MQTT broker that is deployed to the external host or has specific security configuration, please edit **mqtt-config.json** file and modify connection parameters.
-See MQTT extension [configuration guide](/docs/iot-gateway/mqtt/) for more details.
+See MQTT extension configuration guide for more details.

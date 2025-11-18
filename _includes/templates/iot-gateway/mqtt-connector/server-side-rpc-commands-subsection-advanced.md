@@ -62,4 +62,3 @@ Here is an example of an RPC request (rpc-request.json) that needs to be sent fr
 Also, every telemetry and attribute parameter has built-in GET and SET RPC methods out of the box, so you don’t need to configure
 it manually. To use them, make sure you set all the required parameters (in the case of MQTT Connector, these are the following:
 **requestTopicExpression**, **responseTopicExpression**, **responseTimeout**, **valueExpression**).
-See [the guide](/docs/iot-gateway/guides/how-to-use-get-set-rpc-methods).

@@ -12,7 +12,7 @@ hidetoc: "true"
 
 {% include templates/what-is-iothub.md %}
 
-This sample demo performs collection of temperature and humidity values produced by BLE broadcasting devices and further visualization on the real-time web dashboard. In this example we use [HTU21D](https://www.sparkfun.com/products/13763) connected to [ESP32](https://espressif.com/en/products/hardware/esp32/overview) and  "Xiaomi Smart Temperature & Humidity Sensor". The purpose of this application is to demonstrate IoT Hub [data collection API](/docs/user-guide/telemetry/) , [visualization capabilities](/docs/user-guide/visualization/), [gateway API](/docs/iot-gateway/what-is-iot-gateway/) and the capabilities of [Bluetooth Low Energy](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy) protocol, which you can use with both custom and mass-produce devices.
+This sample demo performs collection of temperature and humidity values produced by BLE broadcasting devices and further visualization on the real-time web dashboard. In this example we use [HTU21D](https://www.sparkfun.com/products/13763) connected to [ESP32](https://espressif.com/en/products/hardware/esp32/overview) and  "Xiaomi Smart Temperature & Humidity Sensor". The purpose of this application is to demonstrate IoT Hub [data collection API](/docs/user-guide/telemetry/) , [visualization capabilities](/docs/user-guide/visualization/), gateway API and the capabilities of [Bluetooth Low Energy](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy) protocol, which you can use with both custom and mass-produce devices.
 
 Data is collected by a python script that is running on [Raspberry Pi](https://en.wikipedia.org/wiki/Raspberry_Pi). It pushes data to IoT Hub server via MQTT protocol by using  [IoT Hub MQTT client Python SDK](https://github.com/thingsboard/thingsboard-python-client-sdk) library. Data is visualized using built-in customizable dashboard. Demo that is running on Raspberry Pi is written in Python which is quite simple and easy to understand.
 
@@ -196,7 +196,7 @@ sudo pip3 install tb-ble-adapter
 ```
 
 ## Device provisioning
-Run python script **before** importing dashboard. For this you have to [**create**](/docs/iot-gateway/getting-started/) gateway device and specify it in command arguments:
+Run python script **before** importing dashboard. For this you have to **create** gateway device and specify it in command arguments:
 ```
 sudo tb_ble_adapter -t $GATEWAY_ACCESS_TOKEN
 ```

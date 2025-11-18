@@ -210,7 +210,7 @@ Also, you can see how to:
 
  - [Send Email](/docs/user-guide/rule-engine-2-0/tutorials/send-email/) guide.
 
- - [Notifications and Alarms on your smartphone using Telegram Bot](/docs/iot-gateway/integration-with-telegram-bot/) guide.
+ - Notifications and Alarms on your smartphone using Telegram Bot guide.
 
 ## Next steps
 

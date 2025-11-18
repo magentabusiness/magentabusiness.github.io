@@ -359,7 +359,7 @@ opacity: 1;
 </g>
 </a>
 
-<a xlink:href="/docs/iot-gateway/what-is-iot-gateway/" target="_parent" xlink:title="What is ThingsBoard IoT Gateway?">
+<span xlink:title="What is ThingsBoard IoT Gateway?">
 <g class="black_magic" opacity="0">
 <rect x="913.5" y="625.5" width="158" height="52" rx="6" fill="white" stroke="#e20074" stroke-width="3"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M927 646C926.448 646 926 646.448 926 647V650C926 650.552 926.448 651 927 651H937C937.552 651 938 650.552 938 650V647C938 646.448 937.552 646 937 646H927ZM929 648.5C929 648.776 928.776 649 928.5 649C928.224 649 928 648.776 928 648.5C928 648.224 928.224 648 928.5 648C928.776 648 929 648.224 929 648.5ZM930.5 649C930.776 649 931 648.776 931 648.5C931 648.224 930.776 648 930.5 648C930.224 648 930 648.224 930 648.5C930 648.776 930.224 649 930.5 649Z" fill="#e20074"/>
@@ -369,7 +369,7 @@ opacity: 1;
 <text fill="#28232D" xml:space="preserve" style="white-space: pre" font-family="Open Sans" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="948" y="663.655">IoT Gateway</tspan></text>
 <text fill="#28232D" xml:space="preserve" style="white-space: pre" font-family="Open Sans" font-size="12" letter-spacing="0em"><tspan x="948" y="647.655">ThingsBoard&#10;</tspan></text>
 </g>
-</a>
+</span>
 
 <a xlink:href="/docs/user-guide/integrations/mqtt/" target="_parent" xlink:title="MQTT Broker">
 <g class="black_magic" opacity="0">

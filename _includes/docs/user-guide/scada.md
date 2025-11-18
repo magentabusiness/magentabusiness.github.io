@@ -6,7 +6,7 @@
 
 [SCADA](https://en.wikipedia.org/wiki/SCADA) (Supervisory Control and Data Acquisition) refers to an architecture used to monitor and control various machines and manufacturing processes. 
 In this system, IoT Hub serves as the supervisory computer element, gathering data from various PLCs (Programmable Logic Controllers) and RTUs (Remote Terminal Units), 
-often with the assistance of the [IoT Gateway](/docs/iot-gateway/what-is-iot-gateway/){:target="_blank"} software or physical gateway devices. 
+often with the assistance of the IoT Gateway{:target="_blank"} software or physical gateway devices. 
 Additionally, IoT Hub offers robust [alarm](/docs/{{docsPrefix}}user-guide/alarms/){:target="_blank"} and [notification](/docs/{{docsPrefix}}user-guide/notifications/){:target="_blank"} systems, which are essential components of any IoT system.
 
 Starting from release 3.8.0, IoT Hub introduces support for SCADA-like HMI dashboards, which we will cover in this documentation.

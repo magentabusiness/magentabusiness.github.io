@@ -408,7 +408,7 @@ Learn how to configure integration to run remotely using [this guide](/docs/{{pe
 
 ## Platform Integrations vs IoT Gateway
 
-Experienced IoT Hub users may notice that functionality of Integrations feature partially overlap with functionality of [IoT Gateway](/docs/iot-gateway/what-is-iot-gateway/){:target="_blank"}.
+Experienced IoT Hub users may notice that functionality of Integrations feature partially overlap with functionality of IoT Gateway.
 However, there are key differences between these two systems/features:
 
   - IoT Gateway is designed for local network deployments, Integrations are designed for server-to-server integrations.

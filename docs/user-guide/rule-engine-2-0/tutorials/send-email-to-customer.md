@@ -245,7 +245,7 @@ Please refer to the links under the **See Also** section to see how to do this.
 
 ## See Also
 
-- [Notifications and Alarms on your smartphone using Telegram Bot](/docs/iot-gateway/integration-with-telegram-bot/) guide
+- Notifications and Alarms on your smartphone using Telegram Bot guide
 
 - [Create alarm with details](/docs/user-guide/rule-engine-2-0/tutorials/create-clear-alarms-with-details/) guide.
 

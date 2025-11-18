@@ -7,7 +7,7 @@
 SCADA (Supervisory Control And Data Acquisition) is a complex software system for managing automated processes that collects and processes data in real time.
 
 Based on IoT Hub, a Swimming Pool SCADA system template has been implemented. It's designed to monitor and control swimming pool components.
-Sensors data in the local network is collected and sent via the Modbus protocol to the [IoT Gateway](/docs/iot-gateway/what-is-iot-gateway/){:target="_blank"}. The Gateway communicates with IoT Hub through the MQTT protocol, ensuring continuous devices connectivity and data transmission to the SCADA system.
+Sensors data in the local network is collected and sent via the Modbus protocol to the IoT Gateway. The Gateway communicates with IoT Hub through the MQTT protocol, ensuring continuous devices connectivity and data transmission to the SCADA system.
 IoT Hub acts as the core of the SCADA system, storing data from devices in a database, processing it, visualizing the information, and sending control commands to the devices.
 
 <br>
@@ -113,18 +113,18 @@ We'll examine the configuration parameters using the "Main intake valve" device 
 
 In this template, we're using an emulator to simulate devices and their telemetry data.
 The host `host.docker.internal` and port `5021` are specific to your Modbus device. If you need to connect actual devices, replace the host and port values with the real ones.
-A detailed description of other parameters, such as Method, Unit ID, and others, can be found on the [Modbus Connector configuration](/docs/iot-gateway/config/modbus/#subsection-slaves){:target="_blank"} page.
+A detailed description of other parameters, such as Method, Unit ID, and others, can be found on the Modbus Connector configuration page.
 
 {% include images-gallery.html imageCollection="gateway-master-connections-2" %}
 
 Scroll down to the "Time series" section. Here, you can configure the processing of incoming data. These settings will be interpreted in IoT Hub as device telemetry data. 
-To open the time series configuration, click the pencil icon. For more details on each parameter and setting in the "Time series" section, refer to the [Modbus time series settings](/docs/iot-gateway/config/modbus/#key-settings-for-timeseries){:target="_blank"} documentation.
+To open the time series configuration, click the pencil icon. For more details on each parameter and setting in the "Time series" section, refer to the Modbus time series settings{:target="_blank"} documentation.
 
 {% include images-gallery.html imageCollection="time-series-section-1" %}
 
 In the "RPC Requests" section, you can configure parameters for remote procedure calls (RPC) from IoT Hub to the device. 
 This section is necessary for sending commands and receiving responses from the device. 
-For detailed information on each parameter in "RPC Requests", refer to the [Modbus RPC settings](/docs/iot-gateway/config/modbus/#key-settings-for-rpc){:target="_blank"}  documentation.
+For detailed information on each parameter in "RPC Requests", refer to the Modbus RPC settings documentation.
 
 {% include images-gallery.html imageCollection="rpc-requests-section-1" %}
 

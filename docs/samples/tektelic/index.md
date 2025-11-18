@@ -16,7 +16,7 @@ This guide describes how to stream data from TEKTELIC KONA Core Network Server t
 
  To start it necessary to have:
  - [Smart Room Sensor](https://tektelic.com/products/sensors/comfort-base-smart-room-sensor/).
- - [KONA Micro IoT Gateway](https://tektelic.com/products/gateways/kona-micro-iot-gateway/).
+ - KONA Micro IoT Gateway.
  - Customer account at [EU instance](https://lorawan-ns-eu.tektelic.com) TEKTELIC KONA Core Network Server.
  To get an account contact [Tektelic support](mailto:support@tektelic.com).
 

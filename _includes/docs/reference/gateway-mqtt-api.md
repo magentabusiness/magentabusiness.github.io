@@ -8,8 +8,6 @@ The Gateway is a special type of device in IoT Hub that is able to act as a brid
 Gateway API provides the ability to exchange data between **multiple devices** and the platform using **single MQTT connection**.
 The Gateway also acts as a IoT Hub device and can leverage existing [MQTT Device API](/docs/{{docsPrefix}}reference/mqtt-api/) to report stats, receive configuration updates and much more.
 
-The API listed below is used by [**IoT Hub open-source IoT Gateway**](/docs/iot-gateway/what-is-iot-gateway/).
-
 ## Basic MQTT API
 
 Please refer to generic [MQTT Device API](/docs/{{docsPrefix}}reference/mqtt-api/) to get information about data format, authentication options, etc.

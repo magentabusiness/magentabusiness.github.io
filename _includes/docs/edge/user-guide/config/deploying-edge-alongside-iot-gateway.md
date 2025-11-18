@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-The [ThingsBoard Edge](/docs/{{docsPrefix}}getting-started-guides/what-is-edge/){: target="_blank"} can be run alongside the [ThingsBoard IoT Gateway](/docs/iot-gateway/what-is-iot-gateway/){: target="_blank"}. 
+The [ThingsBoard Edge](/docs/{{docsPrefix}}getting-started-guides/what-is-edge/){: target="_blank"} can be run alongside the ThingsBoard IoT Gateway{: target="_blank"}. 
 This approach can create a robust, decentralized IoT architecture due to **Edge's** ability to process data at its source and **IoT Gateway's** extended list of communication protocols.
 
 ## How Does It Work?

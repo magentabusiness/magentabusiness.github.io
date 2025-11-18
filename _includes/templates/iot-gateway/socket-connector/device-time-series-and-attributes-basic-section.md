@@ -37,7 +37,3 @@ data is sent to the IoT Hub server. The following strategies are available:
 
 ![image](/images/gateway/socket-connector/socket-adding-device-9-ce.png)
 
-{% capture difference %}
-Additional information about the report strategy can be found [here](/docs/iot-gateway/features-overview/report-strategy){:target="_blank"}.
-{% endcapture %}
-{% include templates/info-banner.md content=difference %}

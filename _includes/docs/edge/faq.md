@@ -67,7 +67,7 @@ If this is required, you'll need to provision multiple <b>IoT Hub Edge</b> insta
 <p>Depending on your database approach, there are two options. If you've chosen a <b>hybrid approach</b>, the time-series data will be stored in <b>Cassandra</b>. Otherwise, the data is stored in the <b>PostgreSQL</b> database, which is well suited for storing and querying entities and local time-series data.</p>
 
 ### What should I do if I have legacy devices to connect? 
-<p>If you have legacy devices that don't natively speak one of the protocols supported by <b>IoT Hub Edge</b> (such as MQTT, CoAP, or HTTP), you can still connect them by installing <a href="/docs/iot-gateway/" target="_blank">IoT Hub IoT Gateway</a>. It will act as a bridge between your legacy devices and <b>IoT Hub Edge</b>.</p>
+<p>If you have legacy devices that don't natively speak one of the protocols supported by <b>IoT Hub Edge</b> (such as MQTT, CoAP, or HTTP), you can still connect them by installing IoT Hub IoT Gateway. It will act as a bridge between your legacy devices and <b>IoT Hub Edge</b>.</p>
 <p><b>IoT Hub IoT Gateway</b> is available out-of-the-box and requires no additional fees.</p>
 
 
@@ -143,7 +143,7 @@ Since <b>IoT Hub Edge</b> is designed with remote locations with potentially low
 
 ### How can I connect my device?
 <p><b>IoT Hub Edge</b> supports various protocols, including <a href="/docs/{{docsPrefix}}reference/mqtt-api" target="_blank">MQTT</a>, <a href="/docs/{{docsPrefix}}reference/coap-api" target="_blank">CoAP</a>, <a href="/docs/{{docsPrefix}}reference/http-api" target="_blank">HTTP</a>, and <a href="/docs/{{docsPrefix}}reference/lwm2m-api" target="_blank">LwM2M</a>.</p>
-<p>Legacy devices can be connected to the platform via <a href="/docs/iot-gateway/what-is-iot-gateway/" target="_blank">IoT Hub Gateway</a>. More information is available on the <a href="/docs/{{docsPrefix}}reference/protocols/" target="_blank">connectivity</a> page.</p>
+<p>Legacy devices can be connected to the platform via IoT Hub Gateway. More information is available on the <a href="/docs/{{docsPrefix}}reference/protocols/" target="_blank">connectivity</a> page.</p>
 {% if docsPrefix == 'pe/edge/' %}
 <p>You can also use the <a href="/docs/user-guide/integrations/" target="_blank">IoT Hub Integrations</a> to connect devices from different sources and with custom payloads to the edge.</p>
 {% endif %}

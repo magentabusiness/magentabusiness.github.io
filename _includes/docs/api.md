@@ -12,7 +12,7 @@ Device API is grouped by supported communication protocols:
 * [**LWM2M API**](/docs/{{docsPrefix}}reference/lwm2m-api)
 * [**SNMP API**](/docs/{{docsPrefix}}reference/snmp-api)
 
-[**Gateway MQTT API**](/docs/{{docsPrefix}}reference/gateway-mqtt-api) allows you to connect **existing** devices to the platform using **[IoT Hub Gateway](/docs/iot-gateway/what-is-iot-gateway/)**
+[**Gateway MQTT API**](/docs/{{docsPrefix}}reference/gateway-mqtt-api) allows you to connect **existing** devices to the platform using **IoT Hub Gateway**
 or implement your own gateway.
 
 {% if docsPrefix != "edge/" and docsPrefix != "pe/edge/" %}
