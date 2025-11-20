@@ -54,7 +54,7 @@ The next sample code shows how to instantiate IoT Hub Client, perform login and 
 String url = "http://localhost:8080";
 
 // Default Tenant Administrator credentials
-String username = "tenant@thingsboard.org";
+String username = "tenant@magenta.com";
 String password = "tenant";
 
 // Creating new rest client and auth with credentials
@@ -79,7 +79,7 @@ The following sample code shows how to fetch tenant devices via page link.
 String url = "http://localhost:8080";
 
 // Default Tenant Administrator credentials
-String username = "tenant@thingsboard.org";
+String username = "tenant@magenta.com";
 String password = "tenant";
 
 // Creating new rest client and auth with credentials
@@ -108,7 +108,7 @@ The following sample code shows how to fetch tenant dashboards via page link.
 String url = "http://localhost:8080";
 
 // Default Tenant Administrator credentials
-String username = "tenant@thingsboard.org";
+String username = "tenant@magenta.com";
 String password = "tenant";
 
 // Creating new rest client and auth with credentials
@@ -166,7 +166,7 @@ The following sample code shows how to use Entity Data Query API to count total 
 String url = "http://localhost:8080";
 
 // Perform login with default Customer User credentials
-String username = "tenant@thingsboard.org";
+String username = "tenant@magenta.com";
 String password = "tenant";
 RestClient client = new RestClient(url);
 client.login(username, password);
@@ -215,7 +215,7 @@ The following sample code shows how to use Entity Data Query API to get all acti
 String url = "http://localhost:8080";
 
 // Perform login with default Customer User credentials
-String username = "tenant@thingsboard.org";
+String username = "tenant@magenta.com";
 String password = "tenant";
 RestClient client = new RestClient(url);
 client.login(username, password);

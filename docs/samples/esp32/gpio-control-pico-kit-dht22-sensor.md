@@ -73,7 +73,7 @@ This step contains instructions that are necessary to connect your device to IoT
 Open IoT Hub Web UI (http://localhost:8080) in browser and login as tenant administrator.
 If you loaded the demo data during TB installation, the next credentials can be used:
 
- - login: tenant@thingsboard.org
+ - login: tenant@magenta.com
  - password: tenant
 
 Go to "Devices" section. Click "+" button and create a device with the name "ESP32 Pico Device". Set "Device type" to "default".
@@ -180,7 +180,7 @@ Finally, open IoT Hub Web UI. You can access this dashboard by logging in as a t
 
 In case of local installation (if the demo data was added during TB installation):
 
- - login: tenant@thingsboard.org
+ - login: tenant@magenta.com
  - password: tenant
 
 In case of live-demo server:

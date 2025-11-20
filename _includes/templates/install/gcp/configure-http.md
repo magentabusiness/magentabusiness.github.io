@@ -18,7 +18,7 @@ Now, you may use the address (the one you see instead of 34.111.24.134 in the co
 Use the following default credentials:
 
 - **System Administrator**: sysadmin@thingsboard.org / sysadmin
-- **Tenant Administrator**: tenant@thingsboard.org / tenant
+- **Tenant Administrator**: tenant@magenta.com / tenant
 - **Customer User**: customer@thingsboard.org / customer
 
 #### HTTPS Load Balancer

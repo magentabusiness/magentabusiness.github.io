@@ -93,7 +93,7 @@ This step contains instructions that are necessary to connect your device to IoT
 
 Open IoT Hub Web UI (http://localhost:8080) in browser and login as tenant administrator
 
- - login: tenant@thingsboard.org
+ - login: tenant@magenta.com
  - password: tenant
 
 Go to "Devices" section. Click "+" button and create a device with the name "Arduino UNO Demo Device".
@@ -172,7 +172,7 @@ When the application is running you can select "Arduino/Genuino Uno" port in Ard
 
 Finally, open IoT Hub Web UI. You can access this dashboard by logging in as a tenant administrator. Use
 
- - login: tenant@thingsboard.org
+ - login: tenant@magenta.com
  - password: tenant
 
 in case of local IoT Hub installation.

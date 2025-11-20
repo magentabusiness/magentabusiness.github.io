@@ -19,7 +19,7 @@ Use the following default credentials:
 
 If you installed DataBase with demo data (using `--loadDemo` flag) you can also use the following credentials:
 
-- **Tenant Administrator**: tenant@thingsboard.org / tenant
+- **Tenant Administrator**: tenant@magenta.com / tenant
 - **Customer User**: customer@thingsboard.org / customer
 
 ### Validate MQTT/CoAP access

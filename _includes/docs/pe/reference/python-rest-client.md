@@ -43,7 +43,7 @@ logging.basicConfig(level=logging.DEBUG,
 url = "http://localhost:8080"
 
 # Default Tenant Administrator credentials
-username = "tenant@thingsboard.org"
+username = "tenant@magenta.com"
 password = "tenant"
 
 
@@ -147,7 +147,7 @@ logging.basicConfig(level=logging.DEBUG,
 url = "http://localhost:8080"
 
 # Default Tenant Administrator credentials
-username = "tenant@thingsboard.org"
+username = "tenant@magenta.com"
 password = "tenant"
 
 
@@ -189,7 +189,7 @@ logging.basicConfig(level=logging.DEBUG,
 url = "http://localhost:8080"
 
 # Default Tenant Administrator credentials
-username = "tenant@thingsboard.org"
+username = "tenant@magenta.com"
 password = "tenant"
 
 
@@ -228,7 +228,7 @@ logging.basicConfig(level=logging.DEBUG,
 url = "https://iothub.magenta.at"
 
 # Default Tenant Administrator credentials
-username = "tenant@thingsboard.org"
+username = "tenant@magenta.com"
 password = "tenant"
 
 
@@ -311,7 +311,7 @@ logging.basicConfig(level=logging.DEBUG,
 # IoT Hub REST API URL
 url = "http://localhost:8080"
 # Default Tenant Administrator credentials
-username = "tenant@thingsboard.org"
+username = "tenant@magenta.com"
 password = "tenant"
 
 

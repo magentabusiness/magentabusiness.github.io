@@ -113,7 +113,7 @@ You can access this dashboard by logging in as a tenant administrator.
 
 In case of local installation:
  
- - login: tenant@thingsboard.org
+ - login: tenant@magenta.com
  - password: tenant
 
 In case of live-demo server:

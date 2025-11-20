@@ -23,7 +23,7 @@ Default system administrator account:
 
 Default tenant administrator account:
 
- - login - **tenant@thingsboard.org**.
+ - login - **tenant@magenta.com**.
  - password - **tenant**.
  
 Demo tenant customers:

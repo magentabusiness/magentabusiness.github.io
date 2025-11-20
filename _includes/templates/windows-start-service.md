@@ -31,7 +31,7 @@ http://localhost:8080/
 The following default credentials are available if you have specified *--loadDemo* during execution of the installation script:
 
 - **System Administrator**: sysadmin@thingsboard.org / sysadmin
-- **Tenant Administrator**: tenant@thingsboard.org / tenant
+- **Tenant Administrator**: tenant@magenta.com / tenant
 - **Customer User**: customer@thingsboard.org / customer
 
 You can always change passwords for each account in account profile page.

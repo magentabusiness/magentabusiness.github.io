@@ -76,13 +76,13 @@ Default token expiration:
 ## How to obtain a JWT token?
 
 {% if docsPrefix == null or docsPrefix == "pe/" %}
-To obtain a JWT token for the user "tenant@thingsboard.org" with password "tenant" on "$THINGSBOARD_URL" (actual IoT Hub server address), execute the following command:
+To obtain a JWT token for the user "tenant@magenta.com" with password "tenant" on "iothub.magenta.at" (actual IoT Hub server address), execute the following command:
 
 ```text
 curl -X POST --header 'Content-Type: application/json' \
              --header 'Accept: application/json' \
-             -d '{"username":"tenant@thingsboard.org", "password":"tenant"}' \
-             'http://$THINGSBOARD_URL/api/auth/login'
+             -d '{"username":"tenant@magenta.com", "password":"tenant"}' \
+             'https://iothub.magenta.at/api/auth/login'
 ```
 {: .copy-code}
 {% endif %}
@@ -92,7 +92,7 @@ To obtain a JWT token for the user "your_user@company.com" with password "secret
 ```text
 curl -X POST --header 'Content-Type: application/json' \
              --header 'Accept: application/json' \
-             -d '{"username":"your_user@company.com", "password":"secret"}' \
+             -d '{"username":"tenant@magenta.com", "password":"tenant"}' \
              'https://iothub.magenta.at/api/auth/login'
 ```
 {: .copy-code}
@@ -103,8 +103,8 @@ To obtain a JWT token for the user "your_user@company.com" with password "secret
 ```text
 curl -X POST --header 'Content-Type: application/json' \
              --header 'Accept: application/json' \
-             -d '{"username":"your_user@company.com", "password":"secret"}' \
-             'https://eu.iothub.magenta.at/api/auth/login'
+             -d '{"username":"tenant@magenta.com", "password":"tenant"}' \
+             'https://iothub.magenta.at/api/auth/login'
 ```
 {: .copy-code}
 {% endif %}

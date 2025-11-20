@@ -1,7 +1,7 @@
 ### IoT Hub performance charts
 
 Open your browser and go http://localhost:8080/dashboards and login. Use your instance IP address instead.  
-Default login for demo instance is `tenant@thingsboard.org`, password is `tenant`.
+Default login for demo instance is `tenant@magenta.com`, password is `tenant`.
 
 ![IoT Hub dashboard list with Rule Engine Statistics](/images/reference/performance-aws-instances/method/chart-examples/performance_test_thingsboard_dashboard_list.png "IoT Hub dashboard list with Rule Engine Statistics")
 

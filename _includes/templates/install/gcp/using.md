@@ -32,7 +32,7 @@ Use the following default credentials:
 
 If you installed database with demo data (using `--loadDemo` flag) you can also use the following credentials:
 
-- **Tenant Administrator**: tenant@thingsboard.org / tenant
+- **Tenant Administrator**: tenant@magenta.com / tenant
 - **Customer User**: customer@thingsboard.org / customer
 
 In case of any issues you can examine service logs for errors. For example to see IoT Hub node logs execute the following command:

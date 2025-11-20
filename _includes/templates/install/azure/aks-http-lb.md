@@ -12,7 +12,7 @@ See links/instructions below on how to configure each of the suggested options.
 Now, you may use the address (the one you see instead of 34.111.24.134 in the command output) to access HTTP web UI (port 80) and connect your devices via HTTP API Use the following default credentials:
 
 - **System Administrator**: sysadmin@thingsboard.org / sysadmin
-- **Tenant Administrator**: tenant@thingsboard.org / tenant
+- **Tenant Administrator**: tenant@magenta.com / tenant
 - **Customer User**: customer@thingsboard.org / customer
 
 ### HTTPS Load Balancer

@@ -2,5 +2,5 @@ Once **Edge** is installed, you’ll be able to access the interface via [http:/
 This URL will be referred to as **EDGE_URL** throughout the rest of this tutorial.
 
 To log in, use the same credentials as **SERVER_URL**:
-* **Username:** tenant@thingsboard.org
+* **Username:** tenant@magenta.com
 * **Password:** tenant

@@ -70,7 +70,7 @@ void main() async {
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@thingsboard.org', 'tenant'));
+    await tbClient.login(LoginRequest('tenant@magenta.com', 'tenant'));
 
     print('isAuthenticated=${tbClient.isAuthenticated()}');
 
@@ -109,7 +109,7 @@ void main() async {
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@thingsboard.org', 'tenant'));
+    await tbClient.login(LoginRequest('tenant@magenta.com', 'tenant'));
 
     var pageLink = PageLink(10);
     PageData<DeviceInfo> devices;
@@ -147,7 +147,7 @@ void main() async {
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@thingsboard.org', 'tenant'));
+    await tbClient.login(LoginRequest('tenant@magenta.com', 'tenant'));
 
     var pageLink = PageLink(10);
     PageData<DashboardInfo> dashboards;
@@ -225,7 +225,7 @@ void main() async {
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@thingsboard.org', 'tenant'));
+    await tbClient.login(LoginRequest('tenant@magenta.com', 'tenant'));
 
     // Create entity filter to get all devices
     var entityFilter = EntityTypeFilter(entityType: EntityType.DEVICE);
@@ -293,7 +293,7 @@ void main() async {
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@thingsboard.org', 'tenant'));
+    await tbClient.login(LoginRequest('tenant@magenta.com', 'tenant'));
 
     // Create entity filter to get only devices
     var entityFilter = EntityTypeFilter(entityType: EntityType.DEVICE);
@@ -372,7 +372,7 @@ void main() async {
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@thingsboard.org', 'tenant'));
+    await tbClient.login(LoginRequest('tenant@magenta.com', 'tenant'));
 
     var deviceName = 'My test device';
 
@@ -437,7 +437,7 @@ void main() async {
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@thingsboard.org', 'tenant'));
+    await tbClient.login(LoginRequest('tenant@magenta.com', 'tenant'));
 
     var deviceName = 'My test device';
 

@@ -31,7 +31,7 @@ In order to download the REST Client dependency, you should add the following re
 <repositories>
     <repository>
         <id>thingsboard</id>
-        <url>https://repo.iothub.magenta.at/artifactory/libs-release-public</url>
+        <url>https://repo.thingsboard.io/artifactory/libs-release-public</url>
     </repository>
 </repositories>
 ```
@@ -45,7 +45,7 @@ The next sample code shows how to instantiate IoT Hub Client, perform login and 
 String url = "http://localhost:8080";
 
 // Default Tenant Administrator credentials
-String username = "tenant@thingsboard.org";
+String username = "tenant@magenta.com";
 String password = "tenant";
 
 // Creating new rest client and auth with credentials
@@ -72,7 +72,7 @@ The following sample code shows how to get allowed permissions of current logged
 String url = "http://localhost:8080";
 
 // Perform login with default Customer User credentials
-String username = "tenant@thingsboard.org";
+String username = "tenant@magenta.com";
 String password = "tenant";
 RestClient client = new RestClient(url);
 client.login(username, password);
@@ -95,7 +95,7 @@ The following sample code shows how to fetch tenant devices via page link.
 String url = "http://localhost:8080";
 
 // Default Tenant Administrator credentials
-String username = "tenant@thingsboard.org";
+String username = "tenant@magenta.com";
 String password = "tenant";
 
 // Creating new rest client and auth with credentials
@@ -124,7 +124,7 @@ The following sample code shows how to fetch tenant dashboards via page link.
 String url = "http://localhost:8080";
 
 // Default Tenant Administrator credentials
-String username = "tenant@thingsboard.org";
+String username = "tenant@magenta.com";
 String password = "tenant";
 
 // Creating new rest client and auth with credentials
@@ -155,7 +155,7 @@ The following sample code shows how to fetch entity groups.
 String url = "http://localhost:8080";
 
 // Perform login with default Customer User credentials
-String username = "tenant@thingsboard.org";
+String username = "tenant@magenta.com";
 String password = "tenant";
 RestClient client = new RestClient(url);
 client.login(username, password);
@@ -181,7 +181,7 @@ The following sample code shows how to use Entity Data Query API to count total 
 String url = "http://localhost:8080";
 
 // Perform login with default Customer User credentials
-String username = "tenant@thingsboard.org";
+String username = "tenant@magenta.com";
 String password = "tenant";
 RestClient client = new RestClient(url);
 client.login(username, password);
@@ -230,7 +230,7 @@ The following sample code shows how to use Entity Data Query API to get all acti
 String url = "http://localhost:8080";
 
 // Perform login with default Customer User credentials
-String username = "tenant@thingsboard.org";
+String username = "tenant@magenta.com";
 String password = "tenant";
 RestClient client = new RestClient(url);
 client.login(username, password);
@@ -356,7 +356,7 @@ Tenant tenant = new Tenant();
 tenant.setTitle("Test Tenant");
 tenant = restClient.saveTenant(tenant);
 
-final String tenantUsername = "testtenant@thingsboard.org";
+final String tenantUsername = "testtenant@magenta.com";
 final String tenantPassword = "testtenant";
 
 // Created User for Tenant

@@ -137,7 +137,7 @@ java -jar application/target/thingsboard-${VERSION}-boot.jar
 
 Navigate to http://localhost:4200/ or http://localhost:8080/ and login into IoT Hub using demo data credentials:
 
- - *login* **tenant@thingsboard.org**
+ - *login* **tenant@magenta.com**
  - *password* **tenant**
 
 Make sure that you are able to login and everything has started correctly.

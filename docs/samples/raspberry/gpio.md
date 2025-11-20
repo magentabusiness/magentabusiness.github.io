@@ -81,7 +81,7 @@ In order to simplify this guide, we have included "Raspberry PI GPIO Demo Dashbo
 You still can modify this dashboard: tune, add, delete widgets, etc.
 You can access this dashboard by logging in as a tenant administrator. Use
 
- - login: tenant@thingsboard.org
+ - login: tenant@magenta.com
  - password: tenant
  
 in case of local IoT Hub installation.
