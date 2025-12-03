@@ -30,12 +30,53 @@
 Any access technology (public Internet, WIFI,LTE,5G,GPRS ..)
 #### Protocol Endpoints  
 
-| Protocol     | DNS-Name                     | IP-Addresses                                   | Ports          | Encryption  | 
-| ------------|------------------------------|------------------------------------------------|----------------| ------------|
-| LwM2M       | lwm2m.iothub.test.magenta.at | 3.67.146.165                                   | **5686** / UDP | DTLS        |
-| LwM2M<br>Bootstrap | lwm2m.iothub.test.magenta.at | 3.67.146.165                                   | **5688** / UDP | DTLS        |
-| CoAP        | coap.iothub.test.magenta.at  | 3.67.146.165                                   | **5684** / UDP | DTLS        |
-| MQTTS       | iothub.test.magenta.at       | 3.76.108.3<br>18.157.231.197<br>18.199.114.20  | **8883** / TCP | SSL/TLS     |
-| HTTPS       | iothub.test.magenta.at       | 3.76.108.3<br>18.157.231.197<br>18.199.114.20  | **443**  / TCP | SSL/TLS     |
+<table>
+  <thead>
+    <tr>
+      <th>Protocol</th>
+      <th style="width: 300px">DNS-Name</th>
+      <th>IP-Addresses</th>
+      <th>Ports</th>
+      <th>Encryption</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LwM2M</td>
+      <td>lwm2m.iothub.test.magenta.at</td>
+      <td>3.67.146.165</td>
+      <td><strong>5686</strong> / UDP</td>
+      <td>DTLS</td>
+    </tr>
+    <tr>
+      <td>LwM2M<br>Bootstrap</td>
+      <td>lwm2m.iothub.test.magenta.at</td>
+      <td>3.67.146.165</td>
+      <td><strong>5688</strong> / UDP</td>
+      <td>DTLS</td>
+    </tr>
+    <tr>
+      <td>CoAP</td>
+      <td>coap.iothub.test.magenta.at</td>
+      <td>3.67.146.165</td>
+      <td><strong>5684</strong> / UDP</td>
+      <td>DTLS</td>
+    </tr>
+    <tr>
+      <td>MQTTS</td>
+      <td>iothub.test.magenta.at</td>
+      <td>3.76.108.3<br>18.157.231.197<br>18.199.114.20</td>
+      <td><strong>8883</strong> / TCP</td>
+      <td>SSL/TLS</td>
+    </tr>
+    <tr>
+      <td>HTTPS</td>
+      <td>iothub.test.magenta.at</td>
+      <td>3.76.108.3<br>18.157.231.197<br>18.199.114.20</td>
+      <td><strong>443</strong>  / TCP</td>
+      <td>SSL/TLS</td>
+    </tr>
+  </tbody>
+</table>
 
 
