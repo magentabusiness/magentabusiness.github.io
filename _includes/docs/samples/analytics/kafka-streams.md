@@ -7,7 +7,7 @@ However, most of the real-life use cases also require the support of advanced an
   
 This tutorial will demonstrate how you can:
 
- - route telemetry device data from IoT Hub to Kafka topic using the built-in rule engine capabilities (works for both IoT Hub CE and PE).
+ - route telemetry device data from IoT Hub to Kafka topic using the built-in rule engine capabilities (works for both IoT Hub and PE).
  - aggregate data from multiple devices using a simple Kafka Streams application.
  - push results of the analytics back to IoT Hub for persistence and visualization using IoT Hub Kafka Integration.
 
@@ -26,14 +26,14 @@ We will analyze real-time data from multiple devices using [Kafka Streams](https
 
 In order to store and visualize the results of the analytics, we are going to create three virtual solar module devices for each solar panel. 
 
-### Prerequisites
+## Prerequisites
 
 The following services must be up and running:
 
-* IoT Hub v2.4.2+ [instance](/docs/user-guide/install/pe/installation-options/)
+* IoT Hub v2.4.2+
 * Kafka [server](https://kafka.apache.org/23/documentation/streams/quickstart#quickstart_streams_download)
 
-### Step 1. Rule Chain configuration
+## Step 1. Rule Chain configuration
 
 During this step we will configure three generator nodes that will produce simulated data for testing during development. 
 Typically, you don't need them in production, but it is very useful for debugging. We will generate data for 3 modules and one panel. 
@@ -71,7 +71,7 @@ Notice the absence of errors in debug log:
 
 ![image](/images/samples/analytics/kafka-streams/check-no-errors.png)
 
-### Step 2. Launch Kafka Streams application.
+## Step 2. Launch Kafka Streams application.
 
 During this step we will download and launch sample application that analyze raw data from "solar-module-raw" 
 and produce valuable insights about module degradations. 
@@ -83,7 +83,7 @@ The results of anomaly calculations are pushed to the "anomalies-topic".
 IoT Hub subscribed to this topic using Kafka Integration, generate alarms and store anomalies to the database.
 
 
-#### Download the sample application
+### Download the sample application
 
 Feel free to grab the [code from the IoT Hub repository](https://github.com/thingsboard/kafka-streams-example) and build the project with maven:
 
@@ -93,7 +93,7 @@ mvn clean install
 
 Go ahead and add that maven project to your favorite IDE. 
 
-#### Dependencies review
+### Dependencies review
 
 Main dependencies that are used in the project:
 
@@ -109,7 +109,7 @@ Main dependencies that are used in the project:
 </dependencies>
 ```
 
-#### Source code review
+### Source code review
 
 The Kafka Streams Application logic is concentrated mainly in the [SolarConsumer](https://github.com/thingsboard/kafka-streams-example/blob/master/src/main/java/org/thingsboard/kafka/SolarConsumer.java) class.
 
@@ -279,11 +279,11 @@ private static boolean isAnomalyModule(SolarModuleAggregatorJoiner module) {
 ...SolarConsumer - ANOMALY module: [1572447660|Panel 1|Module 3]: sumPower:21.0 panelAvg:27.0 deviance:4.2
 ```
 
-### Step 3. Configure the Kafka Integration.
+## Step 3. Configure the Kafka Integration.
 
 Let's configure IoT Hub to subscribe to the “solar-module-anomalies” topic and create alarms. We will use Kafka Integration that is available since IoT Hub v2.4.2.
 
-#### Configure Uplink Converter
+### Configure Uplink Converter
 
 Before setting up a Kafka integration, you need to create the Uplink data converter. The uplink data converter is responsible for parsing the incoming anomalies data. 
 
@@ -356,7 +356,7 @@ function decodeToJson(payload) {
 }
 
 return result;
-``` 
+```
 {: .copy-code}
 
 The purpose of the decoder function is to parse the incoming data and metadata to a format that IoT Hub can consume. 
@@ -365,20 +365,20 @@ The purpose of the decoder function is to parse the incoming data and metadata t
 
 ![image](/images/samples/analytics/kafka-streams/add-converter.png)
 
-#### Configure Kafka Integration
- 
-Let's create kafka integration that will subscribe to “solar-module-anomalies” topic. 
+### Configure Kafka Integration
+
+Let's create kafka integration that will subscribe to “solar-module-anomalies” topic.
 
 ![image](/images/samples/analytics/kafka-streams/add-integration.png)
 
-### Step 4. Configure Rule Engine to raise Alarms.
+## Step 4. Configure Rule Engine to raise Alarms.
 
 Follow existing "[Create and Clear Alarms](/docs/user-guide/rule-engine-2-0/tutorials/create-clear-alarms/)" guide to raise the alarm 
 based on the "anomaly" boolean flag in the incoming telemetry and use 
 "[Send email on alarm](/docs/user-guide/rule-engine-2-0/tutorials/send-email/)" guide to send email notifications.
 Explore other [guides](/docs/{{docsPrefix}}guides/) to learn mode. 
 
-### Step 5. Remove debug messages logging
+## Step 5. Remove debug messages logging
 
 Although the Debug mode is very useful for development and troubleshooting, leaving it enabled in production mode may tremendously increase the disk space, used by the database, because all the debugging data is stored there. 
 It is highly recommended to turn the Debug mode off when done debugging. 

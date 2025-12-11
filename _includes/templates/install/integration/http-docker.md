@@ -15,7 +15,7 @@ mkdir -p ~/.tb-pe-http-integration-logs && sudo chown -R 799:799 ~/.tb-pe-http-i
 Execute the following command to run the integration:
 
 ```bash
-docker run -it -v ~/.tb-pe-http-integration-logs:/var/log/tb-http-integration \
+docker run -it -p 8082:8082 -v ~/.tb-pe-http-integration-logs:/var/log/tb-http-integration \
 -e "RPC_HOST=iothub.magenta.at" -e "RPC_PORT=9090" \
 -e "INTEGRATION_ROUTING_KEY=YOUR_ROUTING_KEY"  -e "INTEGRATION_SECRET=YOUR_SECRET" \
 --name my-tb-pe-http-integration --restart always thingsboard/tb-pe-http-integration:{{ site.release.pe_full_ver }}
@@ -23,11 +23,11 @@ docker run -it -v ~/.tb-pe-http-integration-logs:/var/log/tb-http-integration \
 {: .copy-code}
 
 Where: 
-    
+
 - `iothub.magenta.at` - is the host name of your IoT Hub instance;
-- `9090` - is the port of your IoT Hub instance. It is configured in thingsboard.yml using INTEGRATIONS_RPC_PORT env variable;    
-- `YOUR_ROUTING_KEY` - placeholder for your integration routing key obtained on [Step 3](/docs/user-guide/integrations/remote-integrations/#step-3-save-remote-integration-credentials);
-- `YOUR_SECRET` - placeholder for your integration secret obtained on [Step 3](/docs/user-guide/integrations/remote-integrations/#step-3-save-remote-integration-credentials);
+- `9090` - is the port of your IoT Hub instance. It is configured in thingsboard.yml using INTEGRATIONS_RPC_PORT env variable;
+- `YOUR_ROUTING_KEY` - placeholder for your integration routing key obtained on [create remote integration in IoT Hub](#create-remote-integration-in-thingsboard);
+- `YOUR_SECRET` - placeholder for your integration secret obtained on [create remote integration in IoT Hub](#create-remote-integration-in-thingsboard);
 - `docker run`              - run this container;
 - `-it`                     - attach a terminal session with current IoT Hub process output;
 - `-v ~/.tb-pe-http-integration-logs:/var/log/tb-http-integration`   - mounts the host's dir `~/.tb-pe-http-integration-logs` to IoT Hub logs directory;
@@ -38,11 +38,10 @@ Where:
 After executing this command you can open logs which are located here `~/.tb-pe-http-integration-logs`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
-<br/>
-
+{% capture difference %}
 You can detach from session terminal with **`Ctrl-p`**+**`Ctrl-q`** - the container will keep running in the background.
-
-<br/>
+{% endcapture %}
+{% include templates/info-banner.md content=difference %}
 
 - **Reattaching, stop and start commands**
 
@@ -66,4 +65,3 @@ To start the container:
 docker start tb-pe-http-integration
 ```
 {: .copy-code}
-

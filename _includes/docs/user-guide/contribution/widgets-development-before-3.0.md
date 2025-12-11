@@ -1,10 +1,3 @@
----
-layout: docwithnav-pe
-assignees:
-- ikulikov
-title: Widgets Development Guide Before 3.0
-
----
 
 * TOC
 {:toc}
@@ -255,7 +248,7 @@ For other widget types like [RPC](/docs/{{docsPrefix}}user-guide/ui/widget-libra
 
 #### Timewindow functions
 
-Object with timewindow functions used to manage widget data time frame. Can by used by [Time-series](/docs/{{docsPrefix}}user-guide/ui/widget-library/#time-series) or [Alarm](/docs/{{docsPrefix}}user-guide/ui/widget-library/#alarm-widget) widgets.
+Object with time window functions used to manage widget data time frame. Can by used by [Time-series](/docs/{{docsPrefix}}user-guide/ui/widget-library/#time-series) or [Alarm](/docs/{{docsPrefix}}user-guide/ui/widget-library/#alarm-widget) widgets.
 
 | **Function**                                        | **Description**                                                                        |
 |-----------------------------------------------------|----------------------------------------------------------------------------------------|
@@ -524,15 +517,15 @@ self.onInit = function() {
         commandPromise.then(
             function success(response) {
                 if (oneWayElseTwoWay) {
-                    self.ctx.$scope.rpcCommandResponse = "Command was successfully received by device.<br/> No response body because of one way command mode.";
+                    self.ctx.$scope.rpcCommandResponse = "Command was successfully received by device.<br> No response body because of one way command mode.";
                 } else {
-                    self.ctx.$scope.rpcCommandResponse = "Response from device:<br/>";                    
+                    self.ctx.$scope.rpcCommandResponse = "Response from device:<br>";                    
                     self.ctx.$scope.rpcCommandResponse += angular.toJson(response);
                 }
             },
             function fail(rejection) {
-                self.ctx.$scope.rpcCommandResponse = "Failed to send command to the device:<br/>"
-                self.ctx.$scope.rpcCommandResponse += "Status: " + rejection.status + "<br/>";
+                self.ctx.$scope.rpcCommandResponse = "Failed to send command to the device:<br>"
+                self.ctx.$scope.rpcCommandResponse += "Status: " + rejection.status + "<br>";
                 self.ctx.$scope.rpcCommandResponse += "Status text: '" + rejection.statusText + "'";
             }
             
@@ -874,7 +867,7 @@ import TbFlot from '../widget/lib/flot-widget';
 
 ```
 
-Another example is "Timeseries table" widget (from "Cards" Widgets Bundle) that uses Angular directive [**tb-timeseries-table-widget**](https://github.com/thingsboard/thingsboard/tree/master/ui/src/app/widget/lib/timeseries-table-widget.js) which is registered as dependency of **'thingsboard.api.widget'** Angular module inside **widget.service.js**.
+Another example is "Timeseries table" widget (from "Cards" Widgets Bundle) that uses Angular directive [**tb-timeseries-table-widget**](https://github.com/thingsboard/thingsboard/blob/v2.5.5/ui/src/app/widget/lib/timeseries-table-widget.js) which is registered as dependency of **'thingsboard.api.widget'** Angular module inside **widget.service.js**.
 Thereby this directive becomes available for use inside the widget template HTML. 
 
 ```javascript

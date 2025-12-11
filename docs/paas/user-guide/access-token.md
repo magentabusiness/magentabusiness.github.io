@@ -1,11 +1,12 @@
 ---
 layout: docwithnav-paas
 assignees:
-- vsosliuk
-title: Access Token based authentication
+- ashvayka
+title: Access Token authentication for MQTT
 description: IoT Hub Access Token based authentication.
 
 ---
 
 {% assign docsPrefix = "paas/" %}
-{% include docs/user-guide/access-token.md %}
+{% include get-hosts-name.html docsPrefix=docsPrefix %}
+{% include docs/user-guide/cloud-access-token.md %}

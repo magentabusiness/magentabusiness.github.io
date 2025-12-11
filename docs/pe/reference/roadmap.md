@@ -7,9 +7,9 @@ description: IoT Hub architecture
 
 The product roadmap listed below covers only main features and does not cover small improvements and bug fixes.         
 
-### v3.4
- 
-Everything in CE 3.4, plus:
+## v4.2
 
-  * Numerous usability improvements;
-  * New integrations, widgets and rule nodes;
+Everything in [CE 4.2](/docs/reference/roadmap/#v42).
+
+* AI-Powered IoT Solution Architect;
+* Report Service 2.0;

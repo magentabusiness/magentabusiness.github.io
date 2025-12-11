@@ -7,7 +7,7 @@ description:
 <section id="intro">
 	<main>
 		<h1 class="intro_title">The <a href="/docs/edge/what-is-edge/">IoT Hub Edge</a> is a IoT Hub's software product for edge computing</h1>
-        <p class="labeling">It allows bringing data analysis and management to the edge, while seamlessly synchronizing with the cloud (IoT Hub CE/PE).</p>
+        <p class="labeling">It allows bringing data analysis and management to the edge, while seamlessly synchronizing with the cloud (IoT Hub/PE).</p>
 	</main>
 </section>
 

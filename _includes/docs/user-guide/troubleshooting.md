@@ -1,3 +1,5 @@
+* TOC
+{:toc}
 
 ## Possible performance issues
 
@@ -7,7 +9,7 @@ Here we will describe different possible scenarios of what may go wrong.
 No Message Processing%,%no-message-processing%,%templates/troubleshooting/scenarios/no-message-processing.md%br%
 Growing Latency For Messages%,%growing-latency%,%templates/troubleshooting/scenarios/growing-latency.md{% endcapture %}
 
-{% include content-toggle.html content-toggle-id="scenario" toggle-spec=contenttogglespecscenario %}
+{% include content-toggle.liquid content-toggle-id="scenario" toggle-spec=contenttogglespecscenario %}
 
 ## Troubleshooting instruments and tips
 
@@ -52,14 +54,13 @@ After this you can find the following messages in your [logs](#logs):
 2021-03-24 17:01:21,028 [tb-rule-engine-consumer-24-thread-3] INFO  o.t.s.s.q.TbMsgPackProcessingContext - [Main][3f6debf0-8cc0-11eb-bcd9-d343878c0c7f] execution count: 1. [RuleChain: Thermostat|RuleNode: Message Type Switch(3f6debf0-8cc0-11eb-bcd9-d343878c0c7f)]
 ```
 
-### Clearing Redis Cache
+### Clearing Redis/Valkey Cache
 
-**Note:** This can be used only if Redis is selected as a cache.
+**Note:** This can be used only if Redis or Valkey is selected as a cache.
 
-It is possible that the data inside the cache somehow got corrupted. Regardless of the reason, it is always safe to clear cache, IoT Hub will just refill it at the runtime.
-To clear Redis cache you need to log into the server/container/pod with Redis on it and call <code>redis-cli FLUSHALL</code> command.
+It is possible that the data inside the cache has become corrupted. Regardless of the reason, it is always safe to clear the cache — IoT Hub will simply refill it at runtime. To clear the cache, you need to log into the server/container/pod where it is deployed, open the application command-line tool (<code>redis-cli</code> for Redis and <code>valkey-cli</code> for Valkey), and run the <code>FLUSHALL</code>command. To clear the cache in Sentinel mode, access the master container and execute the cache-clearing command.
 
-So if you are struggling with identifying the reason of some problem, you can safely clear Redis cache to make sure it isn't the reason of the issue.
+So if you are struggling with identifying the reason of some problem, you can safely clear cache to make sure it isn't the reason of the issue.
 
 
 ## Logs
@@ -79,7 +80,7 @@ Standalone Deployment%,%standalone%,%templates/troubleshooting/logs/view-logs/st
 Docker-Compose Deployment%,%docker-compose%,%templates/troubleshooting/logs/view-logs/docker-compose-view-logs.md%br%
 Kubernetes Deployment%,%kubernetes%,%templates/troubleshooting/logs/view-logs/kubernetes-view-logs.md{% endcapture %}
 
-{% include content-toggle.html content-toggle-id="deploymentType" toggle-spec=contenttogglespecdeploymenttype %}
+{% include content-toggle.liquid content-toggle-id="deploymentType" toggle-spec=contenttogglespecdeploymenttype %}
 
 
 ### Enable certain logs
@@ -132,12 +133,12 @@ To enable/disable logging for some part of the system you need to add proper <co
 
 Different deployment tools provide different ways to update logs:
 
-{% capture contenttogglespecdeploymenttype %}
+{% capture contenttogglespecdeploymenttype2 %}
 Standalone Deployment%,%standalone%,%templates/troubleshooting/logs/enable-logs/standalone-enable-logs.md%br%
 Docker-Compose Deployment%,%docker-compose%,%templates/troubleshooting/logs/enable-logs/docker-compose-enable-logs.md%br%
 Kubernetes Deployment%,%kubernetes%,%templates/troubleshooting/logs/enable-logs/kubernetes-enable-logs.md{% endcapture %}
 
-{% include content-toggle.html content-toggle-id="deploymentType" toggle-spec=contenttogglespecdeploymenttype %}
+{% include content-toggle.liquid content-toggle-id="deploymentType" toggle-spec=contenttogglespecdeploymenttype2 %}
 
 
 ## Metrics
@@ -154,7 +155,7 @@ Some internal state metrics can be exposed by the Spring Actuator using Promethe
 
 Here's the list of metrics IoT Hub pushes to Prometheus.
 
-#### <b>tb-node</b> metrics:
+### <b>tb-node</b> metrics
 - <i>attributes_queue_${index_of_queue}</i> (statsNames - <i>totalMsgs, failedMsgs, successfulMsgs</i>): stats about writing <b>attributes</b> to the database. 
 Note that there are several queues (threads) for persisting attributes in order to reach maximum performance.
 - <i>ruleEngine_${name_of_queue}</i> (statsNames - <i>totalMsgs, failedMsgs, successfulMsgs, tmpFailed, failedIterations, successfulIterations, timeoutMsgs, tmpTimeout</i>): 
@@ -182,7 +183,7 @@ Note that there are several queues (threads) for persisting attributes in order 
 - <i>attributes_cache</i> (results - <i>hit, miss</i>): stats about how much attribute requests went to the cache
 
 
-#### <b>transport</b> metrics:
+### <b>transport</b> metrics
 - <i>transport</i> (statsNames - <i>totalMsgs, failedMsgs, successfulMsgs</i>): stats about requests received by Transport from TB nodes 
 - <i>ruleEngine_producer</i> (statsNames - <i>totalMsgs, failedMsgs, successfulMsgs</i>): stats about pushing messages from Transport to the Rule Engine.
 - <i>core_producer</i> (statsNames - <i>totalMsgs, failedMsgs, successfulMsgs</i>): stats about pushing messages from Transport to the TB node Device actor.
@@ -191,13 +192,13 @@ Note that there are several queues (threads) for persisting attributes in order 
 
 <b>Some metrics depends on the type of the database you are using to persist timeseries data.</b>
 
-#### PostgreSQL-specific metrics:
+### PostgreSQL-specific metrics
 - <i>ts_latest_queue_${index_of_queue}</i> (statsNames - <i>totalMsgs, failedMsgs, successfulMsgs</i>): stats about writing <b>latest telemetry</b> to the database. 
 Note that there are several queues (threads) in order to reach maximum performance.
 - <i>ts_queue_${index_of_queue}</i> (statsNames - <i>totalMsgs, failedMsgs, successfulMsgs</i>): stats about writing <b>telemetry</b> to the database. 
 Note that there are several queues (threads) in order to reach maximum performance.
 
-#### Cassandra-specific metrics:
+### Cassandra-specific metrics
 - <i>rateExecutor_currBuffer</i>: number of messages that are currently being persisted inside the Cassandra.
 - <i>rateExecutor_tenant</i> (for each present <i>tenantId</i>): number of requests that got rate-limited
 - <i>rateExecutor</i> (statsNames - <i>totalAdded, totalRejected, totalLaunched, totalReleased, totalFailed, totalExpired, totalRateLimited</i>)
@@ -215,7 +216,6 @@ Stats descriptions:
 You can import preconfigured Grafana dashboards from [here](https://github.com/thingsboard/thingsboard/tree/master/docker/monitoring/grafana/provisioning/dashboards). 
 **Note:** Depending on the cluster configuration you may need to make changes to the dashboards.
 
-Also, you can view Grafana dashboards after deploying IoT Hubs docker-compose cluster configuration (for more information please follow [this guide](/docs/user-guide/install/cluster/docker-compose-setup/)).
 Make sure that `MONITORING_ENABLED` environment variable is set to `true`. 
 After deployment, you will be able to reach Prometheus at `http://localhost:9090` and Grafana at `http://localhost:3000` (default login is `admin` and password `foobar`).
 
@@ -247,13 +247,9 @@ For OAuth2 configuration click [here](/docs/{{docsPrefix}}user-guide/oauth-2-sup
 
 <section id="talkToUs">
     <div id="gettingHelp">
-        <a href="https://gitter.im/thingsboard/chat">
-            <h1>Community chat</h1>
-            <p>Our Gitter channel is the best way to contact our engineers and share your ideas with them.</p>
-        </a>
-        <a href="https://groups.google.com/forum/#!forum/thingsboard">
-            <h1>Q&A forum</h1>
-            <p>Our user forum is a great place to go for community support.</p>
+        <a href="https://github.com/thingsboard/thingsboard">
+            <span class="phrase-heading">Github Project</span>
+            <p>Check out the project and consider contributing.</p>
         </a>
         <a href="http://stackoverflow.com/questions/tagged/thingsboard">
             <h1>Stack Overflow</h1>

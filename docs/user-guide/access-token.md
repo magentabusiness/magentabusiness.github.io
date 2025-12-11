@@ -1,10 +1,11 @@
 ---
 layout: docwithnav-pe
 assignees:
-- vsosliuk
-title: Access Token based authentication
+- ashvayka
+title: Access Token based authentication for MQTT
 description: IoT Hub Access Token based authentication.
 
 ---
 
+{% include get-hosts-name.html %}
 {% include docs/user-guide/access-token.md %}

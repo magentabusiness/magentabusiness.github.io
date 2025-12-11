@@ -5,16 +5,16 @@
 Rule Engine is an easy to use framework for building event-based workflows. There are 3 main components:
 
 - **Message** - any incoming event. It can be an incoming data from devices, device life-cycle event, REST API event, RPC request, etc.
-- **Rule Node** - a function that is executed on an incoming message. There are many different Node types that can filter, transform or execute some action on incoming Message. 
+- **Rule Node** - a function that is executed on an incoming message. There are many different Node types that can filter, transform or execute some action on incoming Message.
 - **Rule Chain** - nodes are connected with each other with relations, so the outbound message from rule node is sent to next connected rule nodes.
 
 
-## Typical Use Cases 
+## Typical Use Cases
 IoT Hub Rule Engine is a highly customizable framework for complex event processing. Here are some common use cases that one can configure via IoT Hub Rule Chains:
 
 - Data validation and modification for incoming telemetry or attributes before saving to the database.
 - Copy telemetry or attributes from devices to related assets so you can aggregate telemetry. For example data from multiple devices can be aggregated
-in related Asset.
+  in related Asset.
 - Create/Update/Clear alarms based on defined conditions.
 - Trigger actions based on device life-cycle events. For example, create alerts if Device is Online/Offline.
 - Load additional data required for processing. For example, load temperature threshold value for a device that is defined in Device's Customer or Tenant attribute.
@@ -25,86 +25,182 @@ in related Asset.
 - Integrate with external pipelines like Kafka, Spark, AWS services, etc.
 
 ## Hello-World Example
-Let’s assume your device is using DHT22 sensor to collect and push temperature to the IoT Hub. 
+Let’s assume your device is using DHT22 sensor to collect and push temperature to the IoT Hub.
 DHT22 sensor can measure temperature from -40°C to +80°C.
 
 In this tutorial we will configure IoT Hub Rule Engine to store all temperature within -40 to 80°C range and log all other readings to the system log.
 
-#### Adding temperature validation node 
+### Adding temperature validation node
 In IoT Hub UI go to **Rule Chains** section and open **Root Rule Chain**.
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/initial-root-chain-magenta.png)
+{% if docsPrefix == null %}
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/initial-root-chain-ce.png)
+{% endif %}
+{% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/initial-root-chain-pe.png)
+{% endif %}
 
-Drag and Drop **Script Filter** rule node to the chain. Node configuration window will be opened. We will use this script for data validation:
+Drag and Drop **Script Filter** rule node to the chain. Node configuration window will be opened.
 
-{% highlight javascript %}
-return typeof msg.temperature === 'undefined' 
-        || (msg.temperature >= -40 && msg.temperature <= 80);
-{% endhighlight %}
+{% include templates/tbel-vs-js.md %}
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/script-config-magenta.png)
+{% capture scriptfunctionfilterconfig %}
+TBEL<small>Recommended</small>%,%accessToken%,%templates/rule-engine/getting-started/script-function-filter-tbel.md%br%
+JavaScript<small></small>%,%anonymous%,%templates/rule-engine/getting-started/script-function-filter-java.md{% endcapture %}
+
+{% include content-toggle.liquid content-toggle-id="scriptfunctionfilterconfig" toggle-spec=scriptfunctionfilterconfig %}
 
 If temperature property not defined or temperature is valid - script will return **True**, otherwise it will return **False**.
 If script returns **True** incoming message will be routed to the next nodes that are connected with **True** relation.
- 
-Now we want that all **telemetry requests** pass through this validation script. We need to remove the existing **Post Telemetry** 
+
+Now we want that all **telemetry requests** pass through this validation script. We need to remove the existing **Post Telemetry**
 relation between **Message Type Switch** node and **Save Telemetry** node:
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/remove-relation.png)
-  
-And connect **Message Type Switch** node with **Script Filter** node using **Post Telemetry** relation:
-   
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/realtion-window-magenta.png)
+{% if docsPrefix == null %}
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/remove-relation-ce.png)
+{% endif %}
+{% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/remove-relation-pe.png)
+{% endif %}
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/connect-script.png)
+And connect **Message Type Switch** node with **Script Filter** node using **Post Telemetry** relation:
+
+{% if docsPrefix == null %}
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/realtion-window-ce.png)
+{% endif %}
+{% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/realtion-window-pe.png)
+{% endif %}
+
+{% if docsPrefix == null %}
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/connect-script-ce.png)
+{% endif %}
+{% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/connect-script-pe.png)
+{% endif %}
+
 
 Next, we need to connect **Script Filter** node with **Save Telemetry** node using **True** relation. So all valid telemetry will be saved:
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/script-to-save.png)
+{% if docsPrefix == null %}
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/script-to-save-ce.png)
+{% endif %}
+{% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/script-to-save-pe.png)
+{% endif %}
 
 Also, we will connect **Script Filter** node with **Log Other** node using **False** relation. So that all not valid telemetry will be logged in the system log:
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/false-log.png)
+{% if docsPrefix == null %}
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/false-log-ce.png)
+{% endif %}
+{% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/false-log-pe.png)
+{% endif %}
 
-**Press Save button to apply changes.**
+Press Save button to apply changes.
 
-#### Validate results
-For validating results we will need to create Device and submit telemetry to the IoT Hub. 
-So go to **Devices** section and create new Device:
+### Validate results
+For validating results we will need to create Device and submit telemetry to the IoT Hub. So go to **Devices** section and create new Device:
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/create-device-magenta.png)
+{% if docsPrefix == null %}
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/create-device-ce.png)
+{% endif %}
+{% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/create-device-pe.png)
+{% endif %}
 
 For posting device telemetry we will use [Rest API](/docs/{{docsPrefix}}reference/http-api/#telemetry-upload-api). To do this this we will need to
-copy device access token from the device **Thermostat Home**. 
+copy device access token from the device **DHT22**.
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/copy-access-token-magenta.png)
+{% if docsPrefix == null %}
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/copy-access-token-ce.png)
+{% endif %}
+{% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/copy-access-token-pe.png)
+{% endif %}
 
-Lets post temperature = 99. We will see that telemetry **was not** added in Device **Latest Telemetry** section:
+<br>
+Use terminal for will send a message with temperature readings  = 99. Replace **$ACCESS_TOKEN** with actual device token.
 
-{% highlight bash %}
+{% if docsPrefix == null %}
+```bash
 curl -v -X POST -d '{"temperature":99}' https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
-{% endhighlight %}
+```
+{: .copy-code}
 
-***you need to replace $ACCESS_TOKEN with actual device token**
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/terminal-demo-2.png)
+{% endif %}
+{% if docsPrefix == "pe/" %}
+```bash
+curl -v -X POST -d '{"temperature":99}' https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
+```
+{: .copy-code}
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/empty-telemetry-magenta.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/terminal-localhost-2.png)
+{% endif %}
+{% if docsPrefix contains "paas/" %}
+```bash
+curl -v -X POST -d '{"temperature":99}' {{httpsUrl}}/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
+```
+{: .copy-code}
 
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/terminal-cloud-2.png)
+{% endif %}
 
-Lets post temperature = 24. We will see that telemetry was saved successfully.
+We will see that telemetry **was not** added in Device **Latest Telemetry** section:
 
-{% highlight bash %}
+{% if docsPrefix == null %}
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/empty-telemetry-ce.png)
+{% endif %}
+{% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/empty-telemetry-pe.png)
+{% endif %}
+
+<br>
+
+Now send a message with temperature readings = 24.
+
+{% if docsPrefix == null %}
+```bash
 curl -v -X POST -d '{"temperature":24}' https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
-{% endhighlight %}
+```
+{: .copy-code}
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/saved-ok-magenta.png)
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/terminal-demo-1.png)
+{% endif %}
+{% if docsPrefix == "pe/" %}
+```bash
+curl -v -X POST -d '{"temperature":24}' https://iothub.magenta.at/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
+```
+{: .copy-code}
+
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/terminal-localhost-1.png)
+{% endif %}
+{% if docsPrefix contains "paas/" %}
+```bash
+curl -v -X POST -d '{"temperature":24}' {{httpsUrl}}/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
+```
+{: .copy-code}
+
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/terminal-cloud-1.png)
+{% endif %}
+
+We will see that telemetry was saved successfully.
+
+{% if docsPrefix == null %}
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/saved-ok-ce.png)
+{% endif %}
+{% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/saved-ok-pe.png)
+{% endif %}
 
 
-## See Also:
+## See Also
 
 You can use the next links for learning more about IoT Hub Rule Engine:
 
 - [Rule Engine Overview](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/)
-- [Rule Engine Architecture](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/architecture/)
 - [Debug Node Execution](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#debugging)
 - [Validate incoming telemetry](/docs/user-guide/rule-engine-2-0/tutorials/validate-incoming-telemetry/)
 - [Transform incoming telemetry](/docs/user-guide/rule-engine-2-0/tutorials/transform-incoming-telemetry/)
@@ -117,8 +213,8 @@ You can use the next links for learning more about IoT Hub Rule Engine:
 - [Add & remove devices to group dynamically](/docs/user-guide/rule-engine-2-0/tutorials/add-devices-to-group/)
 - [Aggregate incoming data stream](/docs/user-guide/rule-engine-2-0/tutorials/aggregate-incoming-data-stream/)
 
-<br/>
-<br/>
+<br>
+<br>
 
 ## Next steps
 

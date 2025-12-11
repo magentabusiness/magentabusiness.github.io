@@ -1,25 +1,26 @@
 ---
 layout: docwithnav-pe
 title: Dart API Client
-description: Thingsboard API client library for Dart developers
+description: IoT Hub API client library for Dart developers
 
 ---
- * TOC
- {:toc}
+{% assign dartClientVer = site.release.ce_dart_client_ver %}
+* TOC
+{:toc}
 
 ## Overview
 
-[Dart Thingsboard API Client](https://pub.dev/packages/thingsboard_client) package is a [Dart](https://dart.dev/) library
-providing model objects and services to communicate with Thingsboard platform using [RESTful APIs](/docs/reference/rest-api/) and WebSocket protocol.
-With Dart Client you can programmatically access Thingsboard API to manage [entities](/docs/user-guide/entities-and-relations/),
+[Dart IoT Hub API Client](https://pub.dev/packages/thingsboard_client) package is a [Dart](https://dart.dev/) library
+providing model objects and services to communicate with IoT Hub platform using [RESTful APIs](/docs/reference/rest-api/) and WebSocket protocol.
+With Dart Client you can programmatically access IoT Hub API to manage [entities](/docs/user-guide/entities-and-relations/),
 query [telemetry data](/docs/user-guide/telemetry/) and get real-time updates via [WebSocket API](/docs/user-guide/telemetry/#websocket-api).
-The Dart Thingsboard API Client is also a part of Thingsboard Mobile Application.
+The Dart IoT Hub API Client is also a part of IoT Hub Mobile Application.
 
-The version of the Dart Thingsboard API Client depends on the version of the platform that you are using.
+The version of the Dart IoT Hub API Client depends on the version of the platform that you are using.
 
-## Installing Dart Thingsboard API Client (Community Edition)
+## Installing Dart IoT Hub API Client (Community Edition)
 
-To use Dart Thingsboard API Client package in your Dart/Flutter project run this command:
+To use Dart IoT Hub API Client package in your Dart/Flutter project run this command:
 
 With Dart:
 
@@ -39,7 +40,7 @@ This will add a line like this to your package's pubspec.yaml (and run an implic
 
 ```yaml
 dependencies:
-  thingsboard_client: ^1.0.1
+  thingsboard_client: ^{{dartClientVer}}
 ```
 {: .copy-code}
 
@@ -54,22 +55,22 @@ import 'package:thingsboard_client/thingsboard_client.dart';
 
 ### Basic Usage
 
-The next sample code shows how to instantiate Thingsboard Client, perform login and get user details of current logged in user.
+The next sample code shows how to instantiate IoT Hub Client, perform login and get user details of current logged in user.
 
 ```dart
 import 'package:thingsboard_client/thingsboard_client.dart';
 
-// Thingsboard REST API URL
+// IoT Hub REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of Thingsboard API Client
+    // Create instance of IoT Hub API Client
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@thingsboard.org', 'tenant'));
+    await tbClient.login(LoginRequest('tenant@magenta.com', 'tenant'));
 
     print('isAuthenticated=${tbClient.isAuthenticated()}');
 
@@ -98,17 +99,17 @@ The following sample code shows how to fetch tenant devices via page link.
 ```dart
 import 'package:thingsboard_client/thingsboard_client.dart';
 
-// Thingsboard REST API URL
+// IoT Hub REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of Thingsboard API Client
+    // Create instance of IoT Hub API Client
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@thingsboard.org', 'tenant'));
+    await tbClient.login(LoginRequest('tenant@magenta.com', 'tenant'));
 
     var pageLink = PageLink(10);
     PageData<DeviceInfo> devices;
@@ -136,17 +137,17 @@ The following sample code shows how to fetch tenant dashboards via page link.
 ```dart
 import 'package:thingsboard_client/thingsboard_client.dart';
 
-// Thingsboard REST API URL
+// IoT Hub REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of Thingsboard API Client
+    // Create instance of IoT Hub API Client
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@thingsboard.org', 'tenant'));
+    await tbClient.login(LoginRequest('tenant@magenta.com', 'tenant'));
 
     var pageLink = PageLink(10);
     PageData<DashboardInfo> dashboards;
@@ -174,13 +175,13 @@ The following sample code shows how to fetch customer devices via page link.
 ```dart
 import 'package:thingsboard_client/thingsboard_client.dart';
 
-// Thingsboard REST API URL
+// IoT Hub REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of Thingsboard API Client
+    // Create instance of IoT Hub API Client
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Customer User credentials
@@ -214,17 +215,17 @@ The following sample code shows how to use Entity Data Query API to count total 
 ```dart
 import 'package:thingsboard_client/thingsboard_client.dart';
 
-// Thingsboard REST API URL
+// IoT Hub REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of Thingsboard API Client
+    // Create instance of IoT Hub API Client
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@thingsboard.org', 'tenant'));
+    await tbClient.login(LoginRequest('tenant@magenta.com', 'tenant'));
 
     // Create entity filter to get all devices
     var entityFilter = EntityTypeFilter(entityType: EntityType.DEVICE);
@@ -282,17 +283,17 @@ The following sample code shows how to use Entity Data Query API to get all acti
 ```dart
 import 'package:thingsboard_client/thingsboard_client.dart';
 
-// Thingsboard REST API URL
+// IoT Hub REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of Thingsboard API Client
+    // Create instance of IoT Hub API Client
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@thingsboard.org', 'tenant'));
+    await tbClient.login(LoginRequest('tenant@magenta.com', 'tenant'));
 
     // Create entity filter to get only devices
     var entityFilter = EntityTypeFilter(entityType: EntityType.DEVICE);
@@ -361,17 +362,17 @@ The following sample code demonstrates basic concepts of device management API (
 ```dart
 import 'package:thingsboard_client/thingsboard_client.dart';
 
-// Thingsboard REST API URL
+// IoT Hub REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of Thingsboard API Client
+    // Create instance of IoT Hub API Client
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@thingsboard.org', 'tenant'));
+    await tbClient.login(LoginRequest('tenant@magenta.com', 'tenant'));
 
     var deviceName = 'My test device';
 
@@ -426,17 +427,17 @@ import 'dart:math';
 
 import 'package:thingsboard_client/thingsboard_client.dart';
 
-// Thingsboard REST API URL
+// IoT Hub REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of Thingsboard API Client
+    // Create instance of IoT Hub API Client
     var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@thingsboard.org', 'tenant'));
+    await tbClient.login(LoginRequest('tenant@magenta.com', 'tenant'));
 
     var deviceName = 'My test device';
 
@@ -459,7 +460,7 @@ void main() async {
       EntityKey(type: EntityKeyType.ENTITY_FIELD, key: 'createdTime')
     ];
 
-    // Prepare list of queried device timeseries
+    // Prepare list of queried device time series
     var deviceTelemetry = <EntityKey>[
       EntityKey(type: EntityKeyType.TIME_SERIES, key: 'temperature'),
       EntityKey(type: EntityKeyType.TIME_SERIES, key: 'humidity')
@@ -477,7 +478,7 @@ void main() async {
                     type: EntityKeyType.ENTITY_FIELD, key: 'createdTime'),
                 direction: EntityDataSortOrderDirection.DESC)));
 
-    // Create timeseries subscription command to get data for 'temperature' and 'humidity' keys for last hour with realtime updates
+    // Create time series subscription command to get data for 'temperature' and 'humidity' keys for last hour with realtime updates
     var currentTime = DateTime.now().millisecondsSinceEpoch;
     var timeWindow = Duration(hours: 1).inMilliseconds;
 
@@ -486,7 +487,7 @@ void main() async {
         startTs: currentTime - timeWindow,
         timeWindow: timeWindow);
 
-    // Create subscription command with entities query and timeseries subscription
+    // Create subscription command with entities query and time series subscription
     var cmd = EntityDataCmd(query: devicesQuery, tsCmd: tsCmd);
 
     // Create subscription with provided subscription command
@@ -536,6 +537,6 @@ void main() async {
 
 #### More examples
 
-You can find more examples to learn how to use Dart Thingsboard API Client **[here](https://github.com/thingsboard/dart_thingsboard_client/tree/master/example)**.
+You can find more examples to learn how to use Dart IoT Hub API Client **[here](https://github.com/thingsboard/dart_thingsboard_client/tree/master/example)**.
 
 

@@ -7,4 +7,5 @@ description: IoT asset management using IoT Hub entities and relations feature
 
 ---
 
+{% include get-hosts-name.html %}
 {% include docs/user-guide/entities-and-relations.md %}

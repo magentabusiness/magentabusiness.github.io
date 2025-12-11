@@ -1,0 +1,1 @@
+coap get -o coap://iothub.magenta.at/api/v1/$ACCESS_TOKEN/attributes

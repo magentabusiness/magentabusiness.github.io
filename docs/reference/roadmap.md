@@ -1,0 +1,24 @@
+---
+layout: docwithnav
+title: IoT Hub Roadmap
+description: IoT Hub architecture
+
+---
+
+The product roadmap listed below covers only main features and does not cover small improvements and bug fixes.
+
+## IoT Hub
+
+### v4.2
+
+* Ability to disable tenants;
+* Partitioning of Attributes and Time Series Data into different PostgreSQL database instances to improve scalability;
+
+See active development in progress [here](https://github.com/thingsboard/thingsboard/tree/{{ site.release.branch_major_next }}) and work on latest release bug fixes [here](https://github.com/thingsboard/thingsboard/tree/master).
+
+### Upcoming releases
+
+* Support of revocable API keys instead of JWT tokens for programmatic REST API access;
+* Improvements to IoT Gateway;
+* Ability to save dashboard parameters (time intervals, etc) per user;
+* JavaScript Device/Gateway SDK;

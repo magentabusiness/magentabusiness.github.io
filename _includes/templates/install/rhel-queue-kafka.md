@@ -1,10 +1,10 @@
-#### Kafka Installation
+#### Docker installation
 
-[Apache Kafka](https://kafka.apache.org/) is an open-source stream-processing software platform.
+Install Docker for [CentOS/RHEL](https://docs.docker.com/engine/install/centos/)
 
-##### Install Kafka
+{% include templates/install/docker-install-note.md %}
 
-We recommend to use Kafka in Docker container, use this [instruction](https://github.com/wurstmeister/kafka-docker) for installing.
+{% include templates/install/queue-kafka-in-docker.md %}
 
 ##### IoT Hub Configuration
 

@@ -9,11 +9,11 @@ description: IoT Hub IoT Platform sample for Raspberry Pi Grove Base Hat connect
 * TOC
 {:toc}
 
-## Introduction 
+## Introduction
 
-IoT Hub Community Edition is an open-source server-side platform that allows you to monitor and control IoT devices. 
+IoT Hub is an open-source server-side platform that allows you to monitor and control IoT devices. 
 It is free for both personal and commercial usage and you can deploy it anywhere. 
-If you are not familiar with the platform yet, we recommend to review [what is thingsboard page](/docs/getting-started-guides/what-is-iothub/) and [getting started guide](/docs/getting-started-guides/helloworld/) at first and then proceed with this tutorial.
+If you are not familiar with the platform yet, we recommend to review [what is IoT Hub page](/docs/getting-started-guides/what-is-iothub/) and [getting started guide](/docs/getting-started-guides/helloworld/) at first and then proceed with this tutorial.
 Within this guide we use [iothub.magenta.at](https://iothub.magenta.at).
 
 This sample application will allow you to collect information from sensors and control Servo, Led of your Raspberry Pi device with Grove Base Hat PCB using IoT Hub web UI. The purpose of this application is to demonstrate IoT Hub and Grove Base Hat PCB integrations.
@@ -28,7 +28,7 @@ At the end we will get the following result:
 <br>
 <br>
 
-<img src="/images/samples/raspberry/grove/grove-image.gif"/>
+<img src="/images/samples/raspberry/grove/grove-image.gif" alt="grove image">
 
 
 </div>
@@ -86,7 +86,7 @@ By first we need to configure the Raspberry Pi. Please follow this [article](htt
 
 After the configuration we need to install libraries used in the script to the Raspberry Pi.
 
-The following command will install thingsboard python client sdk, it is used for communication with IoT Hub server: 
+The following command will install iot hub python client sdk, it is used for communication with IoT Hub server:
 
 
 ```bash
@@ -120,7 +120,7 @@ sudo python3 ./Seeed_Python_DHT/setup.py install
 
 ## Application source code
 
-Our application consists of a single python script that is well documented. You will need to modify THINGSBOARD_HOST constant to match your IoT Hub server installation IP address or hostname.
+Our application consists of a [single python script](/docs/samples/raspberry/resources/tb_grove.py) that is well documented. You will need to modify THINGSBOARD_HOST constant to match your IoT Hub server installation IP address or hostname.
 
 Also we need say to IoT Hub that we want to connect this device and get the device ACCESS_TOKEN, which will be used in the script.
 <b>Log in to your environment</b> — <b>Device groups</b> — <b>Add device group</b>  — <b>Add new device</b> (e.g. Device 1 with type grove) — <b>Open device details</b> — <b>Copy access token</b>.
@@ -132,12 +132,28 @@ Also we need say to IoT Hub that we want to connect this device and get the devi
 ![image](/images/samples/raspberry/grove/create-access-token.gif)
 
 
-<br> 
+<br>
 
 
 After this you need to replace the THINGSBOARD_HOST and ACCESS_TOKEN in the script below, with your values. In case you use Live demo, populate <b>iothub.magenta.at</b> as THINGSBOARD_HOST
 
 ```python
+#
+# Copyright © 2019-2024 The Iot Hub Authors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
 import logging
 import time
 from tb_device_mqtt import TBDeviceMqttClient, TBPublishInfo
@@ -157,8 +173,8 @@ logging.basicConfig(level=logging.INFO,
 
 log = logging.getLogger(__name__)
 
-thingsboard_server = 'THINGSBOARD_HOST'
-access_token = 'ACCESS_TOKEN'
+THINGSBOARD_SERVER = 'THINGSBOARD_HOST'
+ACCESS_TOKEN = 'ACCESS_TOKEN'
 
 
 def main():
@@ -166,7 +182,7 @@ def main():
     # Grove - Servo connected to PWM port
     servo = GroveServo(12)
     servo_angle = 90
-    
+
     # Grove - mini PIR motion pir_sensor connected to port D5
     pir_sensor = GroveMiniPIRMotionSensor(5)
 
@@ -201,7 +217,7 @@ def main():
             client.send_rpc_reply(request_id, servo_angle)
 
     # Connecting to IoT Hub
-    client = TBDeviceMqttClient(thingsboard_server, access_token)
+    client = TBDeviceMqttClient(THINGSBOARD_SERVER, username=ACCESS_TOKEN)
     client.set_server_side_rpc_request_handler(on_server_side_rpc_request)
     client.connect()
 
@@ -272,12 +288,12 @@ if __name__ == '__main__':
     main()
 
 ```
-{: .copy-code}
+{:.copy-code.expandable-20}
 
 
 ## Data Visualization and Control
 
-To configure dashboard you should login into IoT Hub environment. 
+To configure dashboard you should login into IoT Hub environment.
 
 To proceed with this step, please download a [grove_seeed_studio.json](/docs/samples/raspberry/resources/grove_seeed_studio.json) file, which contains preconfigured dashboard for this script.
 Once logged in, open Dashboards, click on the plus button in the bottom right corner of the screen and select the "Import dashboard" icon. Select recently downloaded file of dashboard configuration. Now you must edit the alias of Grove widget you should do this by pressing on the pen icon. Select the Filter type parameter as "Single entity", set Type as "Device" and from the list of devices  - select your GROVE device.
@@ -312,9 +328,9 @@ Browse other [samples](/docs/samples) or explore guides related to main IoT Hub 
  - [Using RPC capabilities](/docs/user-guide/rpc/) - how to send commands to/from devices.
  - [Rule Engine](/docs/user-guide/rule-engine/) - how to use rule engine to analyze data from devices.
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
- 
+
 {% include templates/feedback.md %}
-  
+
 {% include socials.html %}
 
 ## Next steps

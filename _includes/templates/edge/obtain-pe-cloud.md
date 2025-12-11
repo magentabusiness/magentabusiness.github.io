@@ -1,4 +1,5 @@
-The easiest way is to use [**IoT Hub**](https://iothub.magenta.at/signup) server.
-<br/>
-The alternative option is to install IoT Hub server that supports edge functionality on-premise.
-Please visit [Install PE](/docs/user-guide/install/pe/installation-options/) to install **3.3** version or higher of server that supports edge functionality.
+
+{% capture contenttogglespec %}
+IoT Hub%,%cloud%,%templates/edge/install/prerequisites-pe-cloud.md%br%
+Local Server%,%on-premise%,%templates/edge/install/prerequisites-on-premise.md{% endcapture %}
+{% include content-toggle.liquid content-toggle-id="cloudType" toggle-spec=contenttogglespec %}

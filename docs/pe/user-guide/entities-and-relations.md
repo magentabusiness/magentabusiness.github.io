@@ -8,4 +8,5 @@ description: IoT asset management using IoT Hub entities and relations feature
 ---
 
 {% assign docsPrefix = "pe/" %}
+{% include get-hosts-name.html docsPrefix=docsPrefix %}
 {% include docs/user-guide/entities-and-relations.md %}

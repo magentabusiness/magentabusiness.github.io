@@ -1,31 +1,38 @@
-{% include templates/edge/prerequisites.md %}
-
-##### Provisioning edge on cloud and installation
-
-Additionally, you will need to have IoT Hub **Edge** up and running and connected to the {{currentIoT HubVersion}} server.
-
-{% if currentIoT HubVersion == "IoT Hub" %}
-To provision IoT Hub **Edge** on {{currentIoT HubVersion}} server please visit this guide [Provision IoT Hub Edge on {{currentIoT HubVersion}} server](/docs/edge/provision-edge-on-server-pe/).
-{% endif %}
-{% if currentIoT HubVersion == "IoT Hub Community Edition" %}
-To provision IoT Hub **Edge** on {{currentIoT HubVersion}} server please visit this guide [Provision IoT Hub Edge on {{currentIoT HubVersion}} server](/docs/edge/provision-edge-on-server-ce/).
+{% if currentThingsBoardVersion == "IoT Hub" %}
+{% assign appPrefix = "Professional Edition" %}
+{% else %}
+{% assign appPrefix = "Community Edition" %}
 {% endif %}
 
-Once IoT Hub **Edge** provisioned on {{currentIoT HubVersion}} server please follow [Installation Guide](/docs/edge/install/installation-options/) - this guide will help you to install IoT Hub **Edge** and connect it to {{currentIoT HubVersion}} server.
+{% include templates/edge/install/prerequisites.md %}
 
-{% if currentIoT HubVersion == "IoT Hub" %}
+### Edge Installation and Configuration
+
+#### Guided Installation with IoT Hub Server Pre-configured Instructions
+
+{% include templates/edge/install/tb-server-pre-configured-install-instructions.md %}
+
+{% capture local-deployment %}
+If for any reason you are unable to access and/or use **Edge preset configurations**.
+{% endcapture %}
+{% include templates/info-banner.md content=local-deployment %}
+
+### Accessing User Interfaces: URLs and Credentials
+
+{% if currentThingsBoardVersion == "IoT Hub" %}
+{% assign peDocsPrefix = "pe/" %}
 {% capture contenttogglespec %}
-Cloud<br/><small>Connect edge to https://iothub.magenta.at</small>%,%ce%,%templates/edge/pe-cloud.md%br%
-On-premise server<br/><small>Connect edge to on-premise instance</small>%,%pe%,%templates/edge/on-premise-cloud.md{% endcapture %}
-{% include content-toggle.html content-toggle-id="cloudType" toggle-spec=contenttogglespec %}
+IoT Hub<br><small>Connect Edge to<br>https://iothub.magenta.at</small>%,%cloud%,%templates/edge/pe-cloud.md%br%
+On-premise Server<br><small>Connect Edge to local server</small>%,%on-premise%,%templates/edge/on-premise-cloud.md{% endcapture %}
+{% include content-toggle.liquid content-toggle-id="cloudType" toggle-spec=contenttogglespec %}
 {% endif %}
-{% if currentIoT HubVersion == "IoT Hub Community Edition" %}
-{% capture contenttogglespec %}
-Live Demo<br/><small>Connect edge to https://iothub.magenta.at</small>%,%ce%,%templates/edge/ce-cloud.md%br%
-On-premise server<br/><small>Connect edge to on-premise instance</small>%,%pe%,%templates/edge/on-premise-cloud.md{% endcapture %}
-{% include content-toggle.html content-toggle-id="cloudType" toggle-spec=contenttogglespec %}
+{% if currentThingsBoardVersion == "IoT Hub" %}
+{% capture contenttogglespec2 %}
+Live Demo<br><small>Connect Edge to<br>https://iothub.magenta.at</small>%,%cloud%,%templates/edge/ce-cloud.md%br%
+On-premise Server<br><small>Connect Edge to local server</small>%,%on-premise%,%templates/edge/on-premise-cloud.md{% endcapture %}
+{% include content-toggle.liquid content-toggle-id="cloudType" toggle-spec=contenttogglespec2 %}
 {% endif %}
 
-{% include templates/edge/bind-port-changed-banner.md %} 
+{% include templates/edge/oauth2-not-supported.md %}
 
-We are going to refer to this URL as **http://EDGE_URL** below in tutorial.
+{% include templates/edge/bind-port-changed-banner.md %}

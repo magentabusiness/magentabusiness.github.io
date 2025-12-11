@@ -1,9 +1,10 @@
-Please refer to the official [TimescaleDB installation page](https://docs.timescale.com/latest/getting-started/installation/windows/installation-windows) on Windows and follow the instructions in accordance with your installed PostgreSQL version.
+Please refer to the official [TimescaleDB installation page](https://docs.timescale.com/self-hosted/latest/install/installation-windows/) on Windows and follow the instructions in accordance with your installed PostgreSQL version.
 
 After package installation, you need to create TimescaleDB extension in your IoT Hub database:
 1. Run PSQL console: Start Menu → PostgreSQL → SQL Shell (psql);
-2. Login to your "thingsboard" database;
+2. Login to your "iot hub" database;
 3. Run the command:
 ```bash 
 CREATE EXTENSION IF NOT EXISTS timescaledb;
 ```
+{: .copy-code}

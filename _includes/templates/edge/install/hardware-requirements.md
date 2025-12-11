@@ -1,6 +1,6 @@
-#### Edge hardware requirements
-Hardware requirements depend on an amount of devices connected to the edge and GUI usage locally. 
+### Edge Hardware Requirements
 
-To run IoT Hub Edge ***without*** heavily usage of GUI (local dashboards, device management etc.) and relatively small amount of devices (under 100) on a single machine you will need at least 1GB of RAM.
-
-To run IoT Hub Edge ***with*** heavily usage of GUI (local dashboards, device management etc.) and with 100+ devices on a single machine we recommend having at least 4GB of RAM.
+The hardware requirements for **IoT Hub Edge** are determined by the number of connected devices and the intensity of interactions with the platform interface.
+To ensure optimal performance, we recommend the following:
+* **At least 1GB of RAM (Light workload):** It is suitable for minimal interactions with the platform interface, such as dashboards and device management, and fewer than 100 connected devices.
+* **At least 4GB of RAM (Heavy workload):** This configuration is suitable for intense platform interactions and 100+ devices connected to a single machine.

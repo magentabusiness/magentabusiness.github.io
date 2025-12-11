@@ -8,4 +8,5 @@ description: Remote control of IoT devices from the IoT Hub IoT cloud using RPC 
 ---
 
 {% assign docsPrefix = "paas/" %}
+{% include get-hosts-name.html docsPrefix=docsPrefix %}
 {% include docs/user-guide/rpc.md %}

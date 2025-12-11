@@ -1,9 +1,7 @@
 ---
 layout: docwithnav-paas
 title: Trip animation widget
-description: Trip animation widget guide 
-
+description: Trip animation widget guide
+redirect_from: "/docs/paas/user-guide/ui/widgets/trip-animation-widget/"
+redirect_to: "/docs/user-guide/widgets/map-widgets/"
 ---
-
-{% assign docsPrefix = "paas/" %}
-{% include docs/user-guide/ui/trip-animation-widget.md %}

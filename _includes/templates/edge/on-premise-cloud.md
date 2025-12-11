@@ -1,7 +1,6 @@
-Server UI will be available using the URL: [http://localhost:8080](http://localhost:8080).
-You may use username **tenant@thingsboard.org** and password **tenant**.
+Once **Edge** is installed, you’ll be able to access the interface via [http://localhost:18080](http://localhost:18080){:target="_blank"}. 
+This URL will be referred to as **EDGE_URL** throughout the rest of this tutorial.
 
-We are going to refer to this URL as **http://SERVER_URL** below in tutorial.
-
-IoT Hub **Edge** UI will be available using the URL: [http://localhost:18080](http://localhost:18080).
-You can use the same username **tenant@thingsboard.org** and password **tenant** to login.
+To log in, use the same credentials as **SERVER_URL**:
+* **Username:** tenant@magenta.com
+* **Password:** tenant

@@ -1,3 +1,5 @@
-Please select **Handler Type** as **JSON**
+![image](/images/user-guide/integrations/tcp/tcp-handler-configuration-json.png)
 
-![image](/images/user-guide/integrations/tcp/json-handler-configuration.png)
+<br>
+
+![image](/images/user-guide/integrations/tcp/tcp-integration-setup-json-4-pe.png)

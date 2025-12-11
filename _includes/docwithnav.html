@@ -1,21 +1,32 @@
 {% assign siteData = site.data %}
 {% assign searchPath = "/docs/search/?q=" %}
 {% assign docsTag = include.docsTag %}
+{% assign cssTag = include.cssTag %}
 {% if docsTag %}
-   {% assign siteData = site.data[docsTag] %}
-   {% assign searchPath = "/docs/" | append: docsTag %}
-   {% assign searchPath = searchPath | append: "/search/?q=" %}
+    {% assign siteData = site.data[docsTag] %}
+    {% if docsTag == "edge-pe" %}
+        {% assign searchPath = "/docs/" | append: "pe/edge" %}
+    {% elsif docsTag == "mobile-pe" %}
+        {% assign searchPath = "/docs/" | append: "pe/mobile" %}
+    {% elsif docsTag == "paas-eu" %}
+        {% assign searchPath = "/docs/" | append: "paas/eu" %}
+    {% else %}
+        {% assign searchPath = "/docs/" | append: docsTag %}
+    {% endif %}
+    {% assign searchPath = searchPath | append: "/search/?q=" %}
 {% else %}
    {% assign docsTag = "ce" %}
 {% endif %}
+{% assign foundProduct = site.data.products | where: "tag", docsTag %}
+{% assign productInfo = foundProduct[0] %}
 {% for thistoc in siteData.globals.tocs %}{% if foundTOC %}{% break %}{% else %}{% assign tree = siteData[thistoc].toc %}{% include tocsearch.html %}{% endif %}{% endfor %}
 {% for override in siteData.overrides.overrides %}{% if page.path contains override.path %}{% assign notitle = "true" %}{% endif %}{% endfor %}
 {% if siteData[foundTOC].notitle == "true" or page.notitle == "true" %}{% assign notitle = "true" %}{% endif %}
 
 <!Doctype html>
-<html id="docs" class="{{siteData[foundTOC].bigheader}}">
+<html id="docs" class="{{siteData[foundTOC].bigheader}} {{productInfo.tag}}">
 
-{% include head-header.html docsTag=docsTag %}
+{% include head-header.html docsTag=docsTag cssTag=cssTag %}
 
 <!-- <div id="searchBox">
     <input type="text" id="search" placeholder="Search" onkeydown="if (event.keyCode==13) window.location.replace('{{ searchPath }}' + this.value)">
@@ -116,7 +127,7 @@
   <div id="docsContent" class="{{ docContentClassList }}">
       <div id="table-of-contents">
           {% if hasTocContent == "true" %}
-              <h4>On this page</h4>
+            <span>On this page</span>
           {% endif %}
       </div>
       <div id="top-spacer"></div>
@@ -141,71 +152,7 @@
 </style>
 <script>
     jqueryDefer(function () {
-        $(document).on('selectionchange',function() {
-        // $(document).mouseup(function () {
-            $('.clipboard-btn').removeClass('noChars');
-            var selectedChars = getSelectedText();
-            // $('#numberChars').html(selectedChars.length);
-            if (selectedChars == 0) {
-                $('.clipboard-btn').addClass('noChars');
-            }
-        });
-    });
-    function getSelectedText() {
-        var text;
-        if (window.getSelection) {
-            text = window.getSelection().toString();
-        } else if (document.getSelection) {
-            text = document.getSelection();
-        } else if (document.selection) {
-            text = document.selection.createRange().text;
-        }
-        return text;
-    }
-</script>
-<script>
-    jqueryDefer(function () {
         $(document).ready(function () {
-            var allCodeBlocksElements = $(".copy-code");
-            allCodeBlocksElements.each(function (i) {
-                var codeBlock = $(this);
-                if (!codeBlock.hasClass('highlighter-rouge')) {
-                    codeBlock = codeBlock.find('.highlighter-rouge');
-                }
-                codeBlock.each(function () {
-                    var block = codeBlock.find('pre.highlight > code .rouge-code');
-                    var currentId = "codeblock" + (i + 1);
-                    block.attr('id', currentId);
-                    var clipButton = $('<button class="clipboard-btn" data-clipboard-target="#' + currentId + '"><p>Copy to clipboard</p><div><img src="/images/copy-code-icon.svg" alt="Copy to clipboard"></div></button>');
-                    $(this).append(clipButton);
-                    var troyan = codeBlock.find('pre.highlight');
-                    var Tooltip = $('<div class="customTooltip"><div class="tooltipText">Copied!</div></div>');
-                    troyan.append(Tooltip);
-                    troyan.addClass('clipboard-btn');
-                    troyan.attr('data-clipboard-target', "#" + currentId);
-                    troyan.on('mouseleave', clearTooltip);
-                    troyan.on('blur', clearTooltip);
-                    troyan.on('click', function(e) {
-                        var el = $(e.currentTarget);
-                        if (el.hasClass('showTool')) {
-                            clearTooltip(e);
-                            troyan.attr('data-skip-tooltip', "true");
-                        }
-                    });
-                });
-            });
-
-            var clipboard = new Clipboard('.noChars');
-            clipboard.on('success', function (e) {
-                $('.clipboard-btn').removeClass('noChars');
-                e.clearSelection();
-                var trigger = e.trigger;
-                if (!$(trigger).attr('data-skip-tooltip')) {
-                    showTooltip(e.trigger, 'Copied!');
-                } else {
-                    $(trigger).removeAttr('data-skip-tooltip');
-                }
-            });
 
             $('#search').focus(
                 function(){
@@ -232,18 +179,6 @@
                 }
             });
         });
-
-        function clearTooltip(e) {
-            var el = $(e.currentTarget);
-            el.removeClass('showTool');
-            el.attr('aria-label', null);
-        }
-
-        function showTooltip(elem, msg) {
-            var el = $(elem);
-            el.addClass('showTool');
-            el.attr('aria-label', msg);
-        }
     });
 </script>
 {% if hasTocContent == "true" %}
@@ -255,31 +190,39 @@
         var firstAnchor = null;
         var lastAnchor = null;
 
-        function updatePositions() {
-            contentAnchors = [];
-            markdownTocs.each(function (i) {
-                var tocAnchor = $(this).children('a');
-                var href = tocAnchor.attr('href');
-                var contentAnchor = $('div#content ' + href);
-                var top = Math.floor(contentAnchor.offset().top);
-                var bottom;
-                if (i < markdownTocs.length - 1) {
-                    var nextHref = $(markdownTocs[i + 1]).children('a').attr('href');
-                    var nextContentAnchor = $('div#content ' + nextHref);
-                    bottom = Math.floor(nextContentAnchor.offset().top);
-                } else {
-                    bottom = $('div#content').offset().top + $('div#content').innerHeight();
-                }
-                var contentAnchorInfo = {anchor: contentAnchor, toc: $(this), top: top, bottom: bottom, href: href};
-                contentAnchors.push(contentAnchorInfo);
-                if (i === 0) {
-                    firstAnchor = contentAnchorInfo;
-                }
-                if (i === markdownTocs.length - 1) {
-                    lastAnchor = contentAnchorInfo;
-                }
-            });
-        }
+            function updatePositions() {
+                contentAnchors = [];
+                markdownTocs.each(function (i) {
+                    if (!$(this).hasClass('hide')) {
+                        var tocAnchor = $(this).children('a');
+                        var href = tocAnchor.attr('href');
+                        var contentAnchor = $('div#content ' + href);
+                        var top = Math.floor(contentAnchor.offset().top);
+                        var bottom;
+                        if (i < markdownTocs.length - 1) {
+                            var nextHref = null;
+                            for (let j = 1; j < markdownTocs.length; j++) {
+                                if (!$(markdownTocs[i + j]).hasClass('hide')) {
+                                    nextHref = $(markdownTocs[i + j]).children('a').attr('href');
+                                    break;
+                                }
+                            }
+                            var nextContentAnchor = $('div#content ' + nextHref);
+                            bottom = Math.floor(nextContentAnchor.offset().top);
+                        } else {
+                            bottom = $('div#content').offset().top + $('div#content').innerHeight();
+                        }
+                        var contentAnchorInfo = {anchor: contentAnchor, toc: $(this), top: top, bottom: bottom, href: href};
+                        contentAnchors.push(contentAnchorInfo);
+                        if (i === 0) {
+                            firstAnchor = contentAnchorInfo;
+                        }
+                        if (i === markdownTocs.length - 1) {
+                            lastAnchor = contentAnchorInfo;
+                        }
+                    }
+                });
+            }
 
         function findActiveContentToc() {
             var top = $(window).scrollTop();
@@ -319,11 +262,12 @@
                 }
             }
         }
-        $( document ).ready(function() {
+        $(document).ready(function () {
             var tocs = $('#content > ul#markdown-toc');
             var tableOfContents = $('#table-of-contents');
             tableOfContents.append(tocs);
-            markdownTocs = $('#table-of-contents ul#markdown-toc li').filter(function() {
+
+            markdownTocs = $('#table-of-contents ul#markdown-toc li').filter(function () {
                 var tocAnchor = $(this).children('a');
                 var href = tocAnchor.attr('href');
                 if (!href.startsWith('#')) {
@@ -334,6 +278,15 @@
                 }
             });
             updateActiveToc(true);
+            $('#table-of-contents ul#markdown-toc > li > ul').each(function() {
+                let i = 0;
+                $(this).find('li').each(function() {
+                    var tocAnchor = $(this).children('a');
+                    if (!$(tocAnchor.attr('href')).parent().hasClass('panel-body')) return true;
+                    tocAnchor.attr('href', tocAnchor.attr('href') + i);
+                    tocAnchor.attr('id', tocAnchor.attr('id') + i++);
+                })
+            })
         });
 
         $(document).on("scroll", function() {
@@ -342,6 +295,8 @@
 
     });
 </script>
+
 {% endif %}
+
 </body>
 </html>

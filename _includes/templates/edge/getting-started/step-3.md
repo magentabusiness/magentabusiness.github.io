@@ -1,19 +1,11 @@
-To connect the device you need to get the device credentials first.
-IoT Hub support different device credentials. We recommend to use default auto-generated credentials which is access token for this guide.
+To process data on site, and communicate with local and cloud-side services, the **Edge Rule Chain Template** is used.  
+In essence, the **Edge Root Rule Chain** refers to the **Rule Chain** within the **IoT Hub Edge** that processes incoming data and can trigger specific actions based on certain conditions.
 
-{% include images-gallery.html imageCollection="step31" showListImageTitles="true" %}
+To understand how the telemetry data is transmitted from the **Edge** to the **Cloud**, let's review the default **Edge Root Rule Chain**:
 
-Now you are ready to publish telemetry data on behalf of your device.
-We will use simple commands to publish data over HTTP or MQTT in this example.
+{% include images-gallery.html imageCollection="step3" showListImageTitles="true" %}
 
-{% capture connectdevicetogglespec %}
-HTTP<small>Linux, macOS or Windows</small>%,%http%,%templates/edge/getting-started/http.md%br%
-MQTT<small>Linux or macOS</small>%,%mqtt-linux%,%templates/edge/getting-started/mqtt-linux.md%br%
-MQTT<small>Windows</small>%,%mqtt-windows%,%templates/edge/getting-started/mqtt-windows.md%br%
-CoAP<small>Linux or macOS</small>%,%coap%,%templates/edge/getting-started/coap.md%br%
-Other Protocols<small>Modbus, SNMP, LoRaWAN, etc</small>%,%other%,%templates/edge/getting-started/other.md{% endcapture %}
-{% include content-toggle.html content-toggle-id="connectdevice" toggle-spec=connectdevicetogglespec %}
-
-Once you have successfully published the "temperature" readings, you should immediately see them in the Device Telemetry Tab:
-
-{% include images-gallery.html imageCollection="step32" showListImageTitles="true" %}
+{% capture local-deployment %}
+To edit the **Edge Rule Chain Template** or create a new one, log in to your **IoT Hub Server** instance at **SERVER_URL** and navigate to the **Edge management > Rule chain templates** section and follow [these instructions](/docs/{{docsPrefix}}rule-engine/rule-chain-templates/){: target="_blank"}.
+{% endcapture %}
+{% include templates/info-banner.md content=local-deployment %}

@@ -1,23 +1,23 @@
 
-Start edge service:
+Start the **IoT Hub Edge** service:
 ```bash
 sudo service tb-edge start
 ```
 {: .copy-code}
 
-Stop edge service:
+Stop the **IoT Hub Edge** service:
 ```bash
 sudo service tb-edge stop
 ```
 {: .copy-code}
 
-Restart edge service:
+Restart the **IoT Hub Edge** service:
 ```bash
 sudo service tb-edge restart
 ```
 {: .copy-code}
 
-Check status of IoT Hub Edge service:
+Check the status of the **IoT Hub Edge** service:
 ```bash
 sudo service tb-edge status
 ```

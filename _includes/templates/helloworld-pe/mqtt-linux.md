@@ -12,24 +12,32 @@ brew install mosquitto-clients
 ```
 {: .copy-code}
 
-**Access via public Internet**  
+{% if docsPrefix contains 'paas/' %}
 
-Replace $ACCESS_TOKEN with corresponding values.
+Replace $ACCESS_TOKEN with corresponding value.
 
 ```bash
-mosquitto_pub -d -q 1 -h "iothub.magenta.at" -p "8883" -t "v1/devices/me/telemetry" -u "$ACCESS_TOKEN" -m {"temperature":25} --capath /etc/ssl/certs
+mosquitto_pub -d -q 1 -h "{{mqttHostName}}" -p "1883" -t "v1/devices/me/telemetry" -u "$ACCESS_TOKEN" -m {"temperature":25}
 ```
 {: .copy-code}
 
-For access token is ABC123:
+For example, $ACCESS_TOKEN is ABC123:
 
 ```bash
-mosquitto_pub -d -q 1 -h "iothub.magenta.at" -p "8883" -t "v1/devices/me/telemetry" -u "ABC123" -m {"temperature":25} --capath /etc/ssl/certs
+mosquitto_pub -d -q 1 -h "{{mqttHostName}}" -p "1883" -t "v1/devices/me/telemetry" -u "ABC123" -m {"temperature":25}
 ```
 {: .copy-code}
 
-**Direct connected Device (with IoT Hub SIM-Card)**  
-Replace $ACCESS_TOKEN with corresponding values.
+{% else %}
+
+Replace iothub.magenta.at and $ACCESS_TOKEN with corresponding values.
+
+```bash
+mosquitto_pub -d -q 1 -h "iothub.magenta.at" -p "1883" -t "v1/devices/me/telemetry" -u "$ACCESS_TOKEN" -m {"temperature":25}
+```
+{: .copy-code}
+
+For example, iothub.magenta.at reference your local installation, $ACCESS_TOKEN is ABC123:
 
 ```bash
 mosquitto_pub -d -q 1 -h "172.31.64.64" -p "1883" -t "v1/devices/me/telemetry" -u "$ACCESS_TOKEN" -m {"temperature":25}  
@@ -43,6 +51,8 @@ mosquitto_pub -d -q 1 -h "172.31.64.64" -p "1883" -t "v1/devices/me/telemetry" -
 ```
 {: .copy-code}
 
+{% endif %}
+
 Successful output should look similar to this one:
 
 ```text
@@ -53,9 +63,8 @@ Client mosqpub|xxx received PUBACK (Mid: 1)
 Client mosqpub|xxx sending DISCONNECT
 ```
 
-**Note:** You are able to use basic MQTT credentials (combination of client id, user name and password ) 
+{% capture difference %}
+**Note:** Since IoT Hub 3.2, you are able to use basic MQTT credentials (combination of client id, username and password)
 and customize **topic names** and **payload type** using Device Profile. See more info [here](/docs/user-guide/device-profiles/#mqtt-transport-type).
-
-<br/>
-<br/>
-  
+{% endcapture %}
+{% include templates/info-banner.md content=difference %}

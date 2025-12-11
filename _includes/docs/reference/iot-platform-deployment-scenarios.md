@@ -80,7 +80,7 @@ See diagram below.
 
 **Pros**:
 
-* Very simple setup, literally: 10 minutes to deploy using [our installation guides](/docs/{{docsPrefix}}user-guide/install/installation-options/).
+* Very simple setup, literally: 10 minutes to deploy using [our installation guides](/docs/user-guide/install/{{docsPrefix}}installation-options/).
 * Easy to maintain and update the software instance.
 
 **Cons**:
@@ -109,7 +109,7 @@ Approximate infrastructure cost, respectively, is ~100 USD per month.
 Single IoT Hub perpetual license (below v3.0) cost is 2,999 USD (including with optional updates and basic support within initial year of usage). 1,199 USD is the respective pricing for the subsequent years of software updates + basic support.
 
 TCO: ~350 USD per month. This price correlates with 0.035 USD per month per device, while the amount of devices is 10k. 
-Adding [Premium support](/docs/services/support/) package results in ~850 USD per month or 0.085 USD per month per device.  
+Adding [Premium support](/services/support/) package results in ~850 USD per month or 0.085 USD per month per device.  
 
 **Comments and Recommendations**:
 
@@ -122,7 +122,7 @@ If you would like to minimize resources spent for the database maintenance, we r
 
 This deployment scenario rather similar to scenario A, but requires fully-managed database deployed on a separate server(s). 
 IoT Hub customers successfully utilize [AWS RDS](https://aws.amazon.com/rds/postgresql/), [Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/services/postgresql/) and
-[Google Cloud SQL](https://cloud.google.com/sql/docs/{{docsPrefix}}postgres/) to minimize efforts on database setup, backups and support.
+[Google Cloud SQL](https://cloud.google.com/sql/docs/postgres/) to minimize efforts on database setup, backups and support.
 See diagram below.
 
 <object width="80%" data="/images/reference/deployment/standalone.svg"></object>
@@ -158,13 +158,13 @@ Approximate infrastructure cost: ~250 USD/month.
 Single IoT Hub perpetual license costs 2,999 USD (including optional updates and basic support within initial year of usage). 1,199 USD  is the respective pricing for the subsequent years of software updates + basic support.
 
 TCO: ~500 USD per month or 0.05 USD per month per device for up to 10k devices use case. 
-Adding [Premium support](/docs/services/support/) package results in ~1000 USD per month or 0.1 USD per month per device.  
+Adding [Premium support](/services/support/) package results in ~1000 USD per month or 0.1 USD per month per device.  
 
 ### Cluster deployment with the Microservices architecture (Scenario C)
 
 IoT Hub supports Microservices architecture (MSA) to perform scalable deployments for millions of devices. See [platform architecture](/docs/{{docsPrefix}}reference/msa/) for more details, please. With MSA deployments, system administrator can flexibly tune number of transport, rule-engine, web-ui and JavaScript executor microservices to optimize the cluster according to the current load.
 
-IoT Hub uses [Kafka](https://kafka.apache.org/) as a main message queue and streaming solution, [Redis](https://redis.io/) as a distributed cache and [Cassandra](http://cassandra.apache.org/) as a highly available, scalable and fast NoSQL database. 
+IoT Hub uses [Kafka](https://kafka.apache.org/) as a main message queue and streaming solution, [Redis](https://redis.io/) as a distributed cache and [Cassandra](https://cassandra.apache.org/) as a highly available, scalable and fast NoSQL database.
 Note that Cassandra usage is optional and is recommended in case of high telemetry data rate (more then 20,000 data points per second)
 In other cases PostgreSQL based deployment is sufficient.
 

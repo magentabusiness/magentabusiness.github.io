@@ -8,18 +8,17 @@ description: Send RPC Request to a Device
 IoT Hub allows you to send remote procedure calls [**RPC**](/docs/user-guide/rpc/#server-side-rpc-api) from server-side applications to devices and vice versa. <br>
 This Tutorial is to show you how to send a remote request call to a Related Device using Rule Engine.
 
-
 * TOC
 {:toc}
 
-# Use case
+## Use case
 Let’s assume the following use case:
 
   - you have the following devices connected to IoT Hub:	
 	- Wind Direction Sensor.	
-	- Rotating System.	
+	- Rotating System.
   - also, you have one asset:
-	- Wind Turbine. 
+	- Wind Turbine.
  - You want to initiate an RPC request to the Rotating System and change the direction of the Wind Turbine according to the direction of the wind.
  - The RPC call will have two properties:
 	- method: **spinLeft** or **spinRight**.
@@ -40,16 +39,14 @@ Let’s assume the following use case:
    </tbody>
 </table>
 
-
 ## Prerequisites
 
 We assume you have completed the following guides and reviewed the articles listed below:
 
  * [Getting Started](/docs/getting-started-guides/helloworld/) guide.
  * [Rule Engine Overview](/docs/user-guide/rule-engine-2-0/overview/).
- 
- 
-# Model definition
+
+## Model definition
 The Wind Turbine has two devices installed: Wind Direction Sensor and Rotating System.
 
 - The Wind turbine is represented as an Asset. Its name is **Wind Turbine** and its type is **Wind turbine**. 
@@ -62,7 +59,7 @@ The Wind Turbine has two devices installed: Wind Direction Sensor and Rotating S
 	- from **Rotating System** to **Wind Direction Sensor**.
 
 
-# Message flow
+## Message flow
 In this section, we explain the purpose of each node in this tutorial:
 
 - Node A: [**Message Type Switch**](/docs/user-guide/rule-engine-2-0/filter-nodes/#message-type-switch-node) node.
@@ -81,37 +78,36 @@ In this section, we explain the purpose of each node in this tutorial:
   - Checks if msgType of incoming message is **RPC message**.
 - Node H: [**RPC call request**](/docs/user-guide/rule-engine-2-0/action-nodes/#rpc-call-request-node) node.
   - Takes the message payload and sends it as a response to the **Rotating System**.
-  
 
-<br/>
-<br/>
+<br>
+<br>
 
-# Configuring the Rule Chain
+## Configuring the Rule Chain
 
 The following screenshot shows how the **Tutorial of RPC Call Request** Rule Chain should look like:
 
 ![image](/images/user-guide/rule-engine-2-0/tutorials/rpc-request/chain.png)
 
 - Download the attached json [**file**](/docs/user-guide/rule-engine-2-0/tutorials/resources/tutorial_of_rpc_call_request.json) for the rule chain indicated above and import it.
-- Don't forget to mark the new rule chain as "root".  
+- Don't forget to mark the new rule chain as "root".
 
 Also, you can create the new Rule Chain from scratch. The following section shows you how to create it.
 
 
-#### Creating a new Rule Chain (**Tutorial of RPC Call Request**)
+### Creating a new Rule Chain (**Tutorial of RPC Call Request**)
 
-- Go to **Rule Chains** -> **Add new Rule Chain** 
+- Go to **Rule Chains** -> **Add new Rule Chain**
 - Enter the Name field as **Tutorial of RPC Call Request**, then click the **ADD** button.
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/rpc-request/create-chain.png) ![image](/images/user-guide/rule-engine-2-0/tutorials/rpc-request/root-chain.png) 
+![image](/images/user-guide/rule-engine-2-0/tutorials/rpc-request/create-chain.png) ![image](/images/user-guide/rule-engine-2-0/tutorials/rpc-request/root-chain.png)
 
 - The new Rule Chain is now created. Don’t forget to mark it as “root”.
 
-##### Adding the required nodes
+#### Adding the required nodes
 
 In this tutorial, you will create 8 nodes as it will be explained in the following sections:
 
-###### Node A: **Message Type Switch**
+##### Node A: **Message Type Switch**
 - Add the **Message Type Switch** node and connect it to the **Input** node. <br>
   This node will route the incoming messages according to the message type, namely **POST_TELEMETRY_REQUEST**.
 
@@ -120,21 +116,21 @@ In this tutorial, you will create 8 nodes as it will be explained in the followi
 
 ![image](/images/user-guide/rule-engine-2-0/tutorials/rpc-request/message-type-switch.png)
 
-######  Node B: **Save TimeSeries**
+#####  Node B: **Save TimeSeries**
 - Add the **Save TimeSeries** node and connect it to the **Message Type Switch** node with a relation type **Post telemetry**. <br>
   This node will store TimeSeries data from incoming Message payload to the database and associate them to the Device, that is identified by the Message Originator, namely **Wind Direction Sensor** and **Rotating System**.
-  
+
 - Enter the Name field as **Save Time Series**.
 
 
 ![image](/images/user-guide/rule-engine-2-0/tutorials/rpc-request/save-ts.png)
 
-###### Node C: **Related attributes**
+##### Node C: **Related attributes**
 - Add the **Related attributes** node and connect it to the **Save TimeSeries** node with a relation type **Success**. <br>
   This node will load the source telemetry **windDirection** from the related **Wind Direction Sensor** to **Rotating System** and save it into the Message metadata with the name **windDirection**.
-- Fill in the fields with the input data shown in the following table: 
+- Fill in the fields with the input data shown in the following table:
 
-<table style="width: 25%">
+<table>
   <thead>
       <tr>
           <td><b>Field</b></td><td><b>Input Data</b></td>
@@ -180,13 +176,13 @@ In this tutorial, you will create 8 nodes as it will be explained in the followi
 
 ![image](/images/user-guide/rule-engine-2-0/tutorials/rpc-request/get-related.png)
 
-###### Node D: **Change Originator**
+##### Node D: **Change Originator**
 - Add the **Change Originator** node and connect it to the **Save TimeSeries** node with a relation type **Success**. <br>
   This node will change the originator from Devices **Wind Direction Sensor** and **Rotating System** to the Related Asset **Wind Turbine** that has a relation of the type **Contains** from each of them. 
-  <br/>As a result, the submitted message will be processed as a message from this Entity
+  <br>As a result, the submitted message will be processed as a message from this Entity
 - Fill in the fields with the input data shown in the following table: 
 
-<table style="width: 25%">
+<table>
   <thead>
       <tr>
           <td><b>Field</b></td><td><b>Input Data</b></td>
@@ -222,7 +218,7 @@ In this tutorial, you will create 8 nodes as it will be explained in the followi
 
 ![image](/images/user-guide/rule-engine-2-0/tutorials/rpc-request/change-originator.png)
 
-###### Node E: **Save TimeSeries**
+##### Node E: **Save TimeSeries**
 - Add the **Save TimeSeries** node and connect it to the **Change Orignator** node with a relation type **Success**. <br>
   This node will store the TimeSeries data from the incoming Message payload into the database from the Asset **Wind Turbine** that is Message Originator.
 - Enter the Name field as **Save Time Series**.
@@ -230,7 +226,7 @@ In this tutorial, you will create 8 nodes as it will be explained in the followi
 
 ![image](/images/user-guide/rule-engine-2-0/tutorials/rpc-request/save-ts.png)
 
-###### Node F: **Transform Script**
+##### Node F: **Transform Script**
 - Add the **Transform Script** node and connect it to the **Related attributes** node with a relation type **Success**. <br>
 This node will transform an original message into RPC request message. 
 - The RPC call will have 2 properties:
@@ -259,7 +255,7 @@ This node will transform an original message into RPC request message.
  return {msg: newMsg, metadata: metadata, msgType: msgType}; {% endhighlight %}
 
 
-###### Node G: **Filter Script**
+##### Node G: **Filter Script**
 
 - Add the the **Filter Script** node and connect it to the **Transform Script** node with a relation type **Success**. <br> 
   This node will check if msgType of incoming message is **RPC message**.
@@ -270,7 +266,7 @@ This node will transform an original message into RPC request message.
 ![image](/images/user-guide/rule-engine-2-0/tutorials/rpc-request/check-validity.png)
 
 
-###### Node H: **RPC call request**
+##### Node H: **RPC call request**
 - Add the **RPC call request** node and connect it to the **Filter Script** node with a relation type **True**. <br>
   This node takes the message payload and sends it as a response to the Message Originator.
 - Enter the Name field as **Rotating System**.
@@ -278,14 +274,14 @@ This node will transform an original message into RPC request message.
 
 ![image](/images/user-guide/rule-engine-2-0/tutorials/rpc-request/request.png)
 
-<br/>
+<br>
 
 This Rule chain is now ready and you need to save it.
 
-<br/>
-<br/>
+<br>
+<br>
 
-# How to verify the Rule Chain
+## How to verify the Rule Chain
 
 - Use the following javascript code to emulate the **Wind Direction Sensor** device.
     - [**WindDirectionEmulator.js**](/docs/user-guide/rule-engine-2-0/tutorials/resources/WindDirectionEmulator.js).
@@ -311,10 +307,10 @@ To run the scripts, you need to do the following steps:
     - node RotatingSystemEmulator.js
 
 
-<br/>
-<br/>
+<br>
+<br>
 
-# Configuring Dashboards
+## Configuring Dashboards
 The following screenshot shows how the **Wind Turbine Dashboard** should look like:
 
 ![image](/images/user-guide/rule-engine-2-0/tutorials/rpc-request/dashboard.png)
@@ -324,12 +320,12 @@ Download the attached json [**file**](/docs/user-guide/rule-engine-2-0/tutorials
 - Go to **Dashboards** -> **Add new Dashboard** -> **Import Dashboard** and drop the downloaded json file.
 
 The next Step is to configure the aliases used by the imported dashboard.
- 
+
 ![image](/images/user-guide/rule-engine-2-0/tutorials/rpc-request/aliases.png)
 
 Click the **Edit alias** button and enter the input data shown in the following table:
 
-<table style="width: 30%">
+<table>
   <thead>
       <tr>
        <td>Alias </td>
@@ -413,7 +409,7 @@ Please refer to the second link under the **See Also** section to see how to do 
 <br>
 <br>
 
-# See Also
+## See Also
 
  - For more details about how RPC works in Thignsboard, please refer to the [RPC capabilities](/docs/user-guide/rpc/#server-side-rpc-api) guide.
 

@@ -23,15 +23,15 @@ The application that is running on ESP8266 is written using Arduino SDK which is
 
 The video below demonstrates the final result of this tutorial.
 
-<br/>
-<br/>
+<br>
+<br>
 <div id="video">  
     <div id="video_wrapper">
         <iframe src="https://www.youtube.com/embed/S8JNPYsdT_M" frameborder="0" allowfullscreen></iframe>
     </div>
 </div>
-<br/>
-<br/>
+<br>
+<br>
 
 Once you complete this sample/tutorial, you will see your sensor data on the following dashboard.
 
@@ -128,7 +128,7 @@ This step contains instructions that are necessary to connect your device to IoT
 
 Open IoT Hub Web UI (http://localhost:8080) in browser and login as tenant administrator
 
- - login: tenant@thingsboard.org
+ - login: tenant@magenta.com
  - password: tenant
  
 Go to "Devices" section. Click "+" button and create a device with the name "ESP8266 Demo Device". 
@@ -241,7 +241,7 @@ Then connect USB-TTL adapter with PC and select port of the USB-TTL adapter in A
 
 Finally, open IoT Hub Web UI. You can access this dashboard by logging in as a tenant administrator. Use:
 
- - login: tenant@thingsboard.org
+ - login: tenant@magenta.com
  - password: tenant
  
 in case of local IoT Hub installation.

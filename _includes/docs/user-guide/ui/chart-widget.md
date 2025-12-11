@@ -15,26 +15,26 @@ To add any chart widgets to your dashboards, you should:
 
 ## Chart widget types
 
-Chart widgets are divided into Timeseries and Latest value widgets. Timeseries widgets are useful for visualizing changes in time series data over time.
+Chart widgets are divided into Time series and Latest value widgets. Time series widgets are useful for visualizing changes in time series data over time.
 Latest values widgets are used when you need to see the latest attribute values or time series data for multiple entities.
 
-### Timeseries widgets
+### Time series widgets
 
 Time series widgets visualize changes in time series data over time. Read [here](/docs/{{docsPrefix}}user-guide/dashboards/#time-window) how to set up the time window.
 
-##### Bar Chart
+#### Bar Chart
 
 [Bar Chart](/docs/{{docsPrefix}}user-guide/ui/chart-widget/#timeseries-bar-chart) widget displays changes to time series data over time. The example shows the temperature readings.
 
 {% include images-gallery.html imageCollection="charts-bar" %}
 
-##### Line Chart
+#### Line Chart
 
 [Line Chart](/docs/{{docsPrefix}}user-guide/ui/chart-widget/#timeseries-line-chart) widget displays changes to time series data over time. The example shows temperature and humidity readings.
 
 {% include images-gallery.html imageCollection="charts-line" %}
 
-##### State Chart
+#### State Chart
 
 [State Chart](/docs/{{docsPrefix}}user-guide/ui/chart-widget/#state-chart-1) widget displays changes to the state of the entity over time. 
 For example, if a device on and off, its states and conditions.
@@ -45,7 +45,7 @@ For example, if a device on and off, its states and conditions.
 
 Latest values widgets render the latest values of attributes or time series data for multiple entities. Latest values widgets mostly support numeric values.
 
-##### Radar
+#### Radar
 
 Radar widget displays the latest attribute or time series data values for multiple entities in a radar chart. Supports numeric values only.
 
@@ -53,7 +53,7 @@ In the example, the widget displays the latest pressure time series data for thr
 
 {% include images-gallery.html imageCollection="charts-radar" %}
 
-##### Polar Area
+#### Polar Area
 
 Polar Area widget displays the latest attribute or time series data values for multiple entities in a polar area chart. Supports numeric values only.
 
@@ -61,7 +61,7 @@ In the example, the widget displays the latest pressure time series data for thr
 
 {% include images-gallery.html imageCollection="charts-polar" %}
 
-##### Pie - Chart.js
+#### Pie - Chart.js
 
 Pie - Chart.js widget displays the latest attribute or time series data values for multiple entities in a pie chart. Supports numeric values only.
 
@@ -69,7 +69,7 @@ In the example, the widget displays the latest temperature time series data valu
 
 {% include images-gallery.html imageCollection="charts-piejs" %}
 
-##### Pie - Flot
+#### Pie - Flot
 
 [Pie - Flot](/docs/{{docsPrefix}}user-guide/ui/chart-widget/#latest-values-pie---flot) widget displays the latest attribute or time series data values for multiple entities in a pie chart. 
 Supports numeric values only.
@@ -78,7 +78,7 @@ In the example, the widget displays the latest pressure time series data values 
 
 {% include images-gallery.html imageCollection="charts-pieflot" %}
 
-##### Doughnut
+#### Doughnut
 
 [Doughnut](/docs/{{docsPrefix}}user-guide/ui/chart-widget/#latest-values-doughnut) widget displays the latest attribute or time series data values for multiple entities in a donut chart. 
 Supports numeric values only.
@@ -87,7 +87,7 @@ In the example, the widget displays the latest humidity time series data values 
 
 {% include images-gallery.html imageCollection="charts-doughnut" %}
 
-##### Bars
+#### Bars
 
 Bars widget displays the latest values of the attributes or time series data for multiple entities as separate bars.
 The only latest values chart widget that allows using not only numeric values.
@@ -110,7 +110,7 @@ To enter the widget Edit mode and start configuring its Advanced settings, first
 
 {% include images-gallery.html imageCollection="charts-bar-advanced" showListImageTitles="true" %}
 
-#### Timeseries Bar Chart
+#### Time series Bar Chart
 
 ##### 1. Common Settings
 
@@ -126,7 +126,7 @@ If your data is not aggregated, you can adjust **the Default bar width for non-a
 
 **Bar alignment** is responsible for the placement of the bars on the Chart widget relative to the time point.
 
-**Default line width for all thresholds**, **Shadow size**, **Font color and size** work for Timeseries Line Chart and State Chart widgets.
+**Default line width for all thresholds**, **Shadow size**, **Font color and size** work for Time series Line Chart and State Chart widgets.
 
 **Tooltip value format function, f(value)** is used when you want to manually customize the tooltip.
 You can customize the values that will be displayed in the tooltip via [Settings](/docs/{{docsPrefix}}user-guide/dashboards/#5-other-settings) or 
@@ -170,9 +170,9 @@ For the example let's use active/inactive attributes that can not be displayed o
 
 {% include images-gallery.html imageCollection="bars-legend" showListImageTitles="true" %}
 
-#### Timeseries Line Chart
+#### Time series Line Chart
 
-Advanced settings for the _Timeseries Line Chart_ widget are the same as for Timeseries Bar Chart. You can learn about these settings [above](/docs/{{docsPrefix}}user-guide/ui/chart-widget/#timeseries-bar-chart).
+Advanced settings for the _Time series Line Chart_ widget are the same as for Time series Bar Chart. You can learn about these settings [above](/docs/{{docsPrefix}}user-guide/ui/chart-widget/#timeseries-bar-chart).
 
 ##### 1. Display smooth (curved) lines 
 
@@ -222,11 +222,11 @@ return celsiusValue + ' °C (' + farenheitValue + ' °F)';
 
 **1.6. Grid settings**
 
-Grid settings are the same as in [Timeseries Bar Chart](/docs/{{docsPrefix}}user-guide/ui/chart-widget/#1-common-settings). 
+Grid settings are the same as in [Time series Bar Chart](/docs/{{docsPrefix}}user-guide/ui/chart-widget/#1-common-settings). 
 
 **1.7. Axis settings**
 
-Axis settings are the same as in [Timeseries Bar Chart](/docs/{{docsPrefix}}user-guide/ui/chart-widget/#1-common-settings).
+Axis settings are the same as in [Time series Bar Chart](/docs/{{docsPrefix}}user-guide/ui/chart-widget/#1-common-settings).
 
 **1.8. Ticks formatter function**
 
@@ -238,7 +238,7 @@ Axis settings are the same as in [Timeseries Bar Chart](/docs/{{docsPrefix}}user
 
 ##### 3. Custom Legend Settings
 
-Custom Legend Settings are the same as in [Timeseries Bar Chart](/docs/{{docsPrefix}}user-guide/ui/chart-widget/#3-custom-legend-settings).
+Custom Legend Settings are the same as in [Time series Bar Chart](/docs/{{docsPrefix}}user-guide/ui/chart-widget/#3-custom-legend-settings).
 
 #### Latest values Pie - Flot
 

@@ -1,58 +1,133 @@
-
 * TOC
 {:toc}
 
-## Swagger UI
+IoT Hub provides interactive REST API documentation via [Swagger UI](https://swagger.io/){:target="_blank"}. This tool allows you to explore available API methods, understand their parameters, and execute API requests directly from your browser.
 
-IoT Hub REST API may be explored using Swagger UI.
-You can explore REST API of the live-demo server using this **[Swagger UI link.](https://iothub.magenta.at/swagger-ui.html)**
+## Where to find Swagger UI?
 
-To explore REST API provided by IoT Hub please use the following **[Swagger UI link.](https://iothub.magenta.at/swagger-ui.html)**
+{% if docsPrefix == "pe/" %}
+Every IoT Hub instance has its own Swagger UI page, accessible at:
 
-Once you will install IoT Hub server you can open UI using the following URL:
-    
-``` 
-http://YOUR_HOST:PORT/swagger-ui.html
+```text
+http://iothub.magenta.at:PORT/swagger-ui.html
 ```
+{: .copy-code}
 
-## REST API Auth
+&#42;Replace **iothub.magenta.at:PORT** with your actual IoT Hub server address.
 
-IoT Hub uses JWT for request auth.
-You will need to populate "X-Authorization" header using "Authorize" button in the top-right corner of the Swagger UI.
+For example, you may browse IoT Hub API documentation using the [Swagger UI link](https://{{hostName}}/swagger-ui.html){:target="_blank"}.
+{% endif %}
+{% if docsPrefix == null %}
+Every IoT Hub instance has its own Swagger UI page, accessible at:
 
- ![image](/images/reference/swagger-ui.png)
+```text
+http://iothub.magenta.at:PORT/swagger-ui.html
+```
+{: .copy-code}
 
-In order to get the JWT token, you need to execute the following request:
+&#42;Replace **iothub.magenta.at:PORT** with your actual IoT Hub server address.
 
-In case of local installation:
- 
- - replace **$THINGSBOARD_URL** with **127.0.0.1:8080**
+For example, you may browse Community Edition demo server API documentation using the [Swagger UI link](https://iothub.magenta.at/swagger-ui.html){:target="_blank"}.
+{% endif %}
+{% if docsPrefix == "paas/" %}
+Every [IoT Hub](https://iothub.magenta.at/){:target="_blank"} instance has its own Swagger UI page.   
+Browse IoT Hub REST API documentation by clicking the button below:
 
-In case of live-demo server:
- 
- - replace **$THINGSBOARD_URL** with **iothub.magenta.at**
- - replace **tenant@thingsboard.org** with your live-demo username (email)
- - replace **tenant** password with your live-demo password
+<br>
+<p><a href="https://iothub.magenta.at/swagger-ui.html" target="_blank" class="n-button add-device">IoT Hub REST API documentation</a></p>
+{% endif %}
+{% if docsPrefix == "paas/eu/" %}
+Every [ThingsBoard EU Cloud](https://eu.iothub.magenta.at/){:target="_blank"} instance has its own Swagger UI page.   
+Browse IoT Hub EU Cloud REST API documentation by clicking the button below:
 
-{% if docsPrefix == "pe/" or docsPrefix == "paas/" %}
-
-The easiest way to get your account is to use [IoT Hub](https://iothub.magenta.at/signup) server.
-
-{% else %}
-
-See **[live-demo](/docs/{{docsPrefix}}user-guide/live-demo/)** page for more details how to get your account.
-
+<br>
+<p><a href="https://eu.iothub.magenta.at/swagger-ui.html" target="_blank" class="n-button add-device">IoT Hub EU Cloud REST API documentation</a></p>
 {% endif %}
 
-{% capture tabspec %}token
-A,get-token.sh,shell,resources/get-token.sh,/docs/reference/resources/get-token.sh
-B,response.json,json,resources/get-token-response.json,/docs/reference/resources/get-token-response.json{% endcapture %}
-{% include tabs.html %}
+## How to authenticate in Swagger UI?
 
- - Now, you should set  'X-Authorization' to "Bearer $YOUR_JWT_TOKEN"
- 
- 
-## Java REST API Client
+- If you are already logged in via the main IoT Hub login page, Swagger UI will automatically use your credentials.
+- You can manually authenticate or authorize as a different user using the "**Authorize**" button in the top-right corner of the Swagger page. Enter the username and password. Then, click "Authorize".
 
-IoT Hub team provides client library written in Java to simplify consumption of the REST API.
-Please see Java REST API Client [documentation page](/docs/{{docsPrefix}}reference/rest-client/) for more details.
+{% include images-gallery.html imageCollection="swagger-ui" %}
+
+{% if docsPrefix == "pe/" or docsPrefix contains "paas/" or (docsPrefix == "paas/eu/") %}
+The easiest way to get your account is to use [IoT Hub](https://{{hostName}}/signup){:target="_blank"} server.
+{% else %}
+{% endif %}
+
+## How API authentication works?
+
+IoT Hub uses [JWT](https://jwt.io/) tokens for representing claims securely between the API client (browser, scripts, etc) and the platform.
+When you login to the platform, your username and password is exchanged to the pair of tokens.
+
+- **Access Token (JWT)** – short-lived token, used for executing API calls.
+- **Refresh Token** – used to obtain a new access token when the current one expires.
+
+{% if docsPrefix == "pe/" or docsPrefix == null %}
+The expiration time of main and refresh tokens is configurable in system settings via **JWT_TOKEN_EXPIRATION_TIME** and **JWT_REFRESH_TOKEN_EXPIRATION_TIME** parameters.
+{% endif %}
+
+Default token expiration:
+
+- **Access Token** is valid for **2.5 hours**.
+- **Refresh Token** is valid for **1 week**.
+
+## How to obtain a JWT token?
+
+{% if docsPrefix == null or docsPrefix == "pe/" %}
+To obtain a JWT token for the user "tenant@magenta.com" with password "tenant" on "iothub.magenta.at" (actual IoT Hub server address), execute the following command:
+
+```text
+curl -X POST --header 'Content-Type: application/json' \
+             --header 'Accept: application/json' \
+             -d '{"username":"tenant@magenta.com", "password":"tenant"}' \
+             'https://iothub.magenta.at/api/auth/login'
+```
+{: .copy-code}
+{% endif %}
+{% if docsPrefix == "paas/" %}
+To obtain a JWT token for the user "your_user@company.com" with password "secret", execute the following command:
+
+```text
+curl -X POST --header 'Content-Type: application/json' \
+             --header 'Accept: application/json' \
+             -d '{"username":"tenant@magenta.com", "password":"tenant"}' \
+             'https://iothub.magenta.at/api/auth/login'
+```
+{: .copy-code}
+{% endif %}
+{% if docsPrefix == "paas/eu/" %}
+To obtain a JWT token for the user "your_user@company.com" with password "secret", execute the following command:
+
+```text
+curl -X POST --header 'Content-Type: application/json' \
+             --header 'Accept: application/json' \
+             -d '{"username":"tenant@magenta.com", "password":"tenant"}' \
+             'https://iothub.magenta.at/api/auth/login'
+```
+{: .copy-code}
+{% endif %}
+
+Response:
+
+```json
+{"token":"$YOUR_JWT_TOKEN", "refreshToken":"$YOUR_JWT_REFRESH_TOKEN"}
+```
+{: .copy-code}
+
+Once authenticated, use the obtained JWT token in the X-Authorization header for all API requests:
+
+```text
+X-Authorization: Bearer $YOUR_JWT_TOKEN
+```
+{: .copy-code}
+
+## Additional tools
+
+For easier integration with the IoT Hub API, you can use IoT Hub team client libraries:
+
+- [Java REST API Client](/docs/{{docsPrefix}}reference/rest-client/){:target="_blank"} – client library written in Java to simplify consumption of the REST API.
+- [Python REST API Client](/docs/{{docsPrefix}}reference/python-rest-client/){:target="_blank"} – client library written in Python to simplify the consumption of the REST API.
+
+These clients allow you to create devices, assets, users, and other entities, as well as manage their relationships within IoT Hub.

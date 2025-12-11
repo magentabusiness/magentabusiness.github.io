@@ -50,7 +50,7 @@ NodeMCU D5|DHT-11 Data (S)
 ## Programming the NodeMCU device
 
 We need to download and build firmware with Lua interpreter for NodeMCU. 
-This process is described in [official documentation](https://nodemcu.readthedocs.io/en/master/en/build/) and there are multiple ways to do this.
+This process is described in [official documentation](https://nodemcu.readthedocs.io/) and there are multiple ways to do this.
 You can use [cloud build service](http://nodemcu-build.com/) for this purpose, however, we will use [Docker Image](https://hub.docker.com/r/marcelstoer/nodemcu-build/).
 
 ### Firmware download
@@ -114,12 +114,12 @@ Our application consists of three *.lua* files:
    You need to modify this file in order to setup your wifi network parameters and address of IoT Hub server.
    - your wifi network SSID - name of the wifi network.
    - your wifi network password - password to the network.
-   - thingsboard server IP - host of your thingsboard installation. Use "iothub.magenta.at" if you are using [live demo](https://iothub.magenta.at/) server.
-   - thingsboard mqtt port - 1883 is the default value.
-   - thingsboard access token - DHT11_DEMO_TOKEN is the default value that corresponds to pre-provisioned [demo account](/docs/samples/demo-account/#tenant-devices).
+   - iot hub server IP - host of your iot hub installation. Use "iothub.magenta.at" if you are using [live demo](https://iothub.magenta.at/) server.
+   - iot hub mqtt port - 1883 is the default value.
+   - iot hub access token - DHT11_DEMO_TOKEN is the default value that corresponds to pre-provisioned [demo account](/docs/samples/demo-account/#tenant-devices).
    
    If you are using [live demo](https://iothub.magenta.at/) server - [get the access token](/docs/user-guide/ui/devices/#manage-device-credentials) for pre-provisioned "DHT11 Demo Device".
- - dht11.lua - sending temperature and humidity every 10 seconds to thingsboard server via MQTT protocol.
+ - dht11.lua - sending temperature and humidity every 10 seconds to iot hub server via MQTT protocol.
  - init.lua - initalization file that contains 
 config.lua:
 
@@ -181,7 +181,7 @@ In order to simplify this guide, we have included "Temperature & Humidity Demo D
 You still can modify this dashboard: tune, add, delete widgets, etc.
 You can access this dashboard by logging in as a tenant administrator. Use
 
- - login: tenant@thingsboard.org
+ - login: tenant@magenta.com
  - password: tenant
  
 in case of local IoT Hub installation.

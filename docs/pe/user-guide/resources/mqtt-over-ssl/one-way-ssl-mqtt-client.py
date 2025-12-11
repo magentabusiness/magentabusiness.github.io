@@ -25,13 +25,13 @@ def collect_required_data():
     print(" " * 20, "IoT Hub one way RPC example script.", sep="")
     print("=" * 80, "\n\n", sep="")
     host = input("Please write your IoT Hub host or leave it blank to use default (iothub.magenta.at): ")
-    config["host"] = host if host else "iothub.magenta.at"
-    if config["host"] != "iothub.magenta.at":
+    config["host"] = host if host else "mqtt.iothub.magenta.at"
+    if config["host"] != "mqtt.iothub.magenta.at":
         ca_cert = input(
             "Please write path to your server public certificate or leave it blank to use default (mqttserver.pub.pem): ")
         config["ca_cert"] = ca_cert if ca_cert else "mqttserver.pub.pem"
     else:
-        config["ca_cert"] = "tb-cloud-chain.pem"
+        config["ca_cert"] = "ca-root.pem"
     token = ""
     while not token:
         token = input("Please write accessToken for device: ")

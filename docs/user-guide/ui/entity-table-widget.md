@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - ashvayka 
 title: Entities Table Widget
-description: Entities Table Widget
+description: Advanced Settings of the Entities Table Widget
 
 add-widget:
     0:
@@ -170,4 +170,5 @@ actions-column:
 
 ---
 
+{% include get-hosts-name.html %}
 {% include docs/user-guide/ui/entity-table-widget.md %}

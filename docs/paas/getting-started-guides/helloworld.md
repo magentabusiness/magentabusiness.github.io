@@ -18,13 +18,18 @@ step1:
         image: /images/helloworld/hello-world-pe-step-1-item-4.png
         title: 'Input device name. For example, "My New Device". No other changes are required at this time. Click "Add" to add the device.'
     4:
-        image: /images/helloworld/hello-world-pe-step-1-item-5.png
-        title: 'Now your device should be listed first, since the table sorts devices using the time of the creation by default. '
-        
+        image: /images/helloworld/getting-started-pe/hello-world-1-1-provision-device-5-pe.png
+        title: 'Congratulations on adding your first device! As you add more devices, they will be added at the top of the table, as the table automatically sorts devices by their creation time, with the newest ones listed first.'
+
+step11:
+    0:
+        image: /images/helloworld/getting-started-pe/hello-world-1-1-provision-device-6-pe.png
+        title: 'You can view notification about adding a new device by clicking on the "bell" icon in the top right corner.'
+    
 step2:
     0:
-        image: /images/helloworld/hello-world-pe-step-2-item-1.png
-        title: 'Click on the device row in the table to open device details;'
+        image: /images/helloworld/getting-started-pe/check-connectivity-device-1-pe.png
+        title: 'Click on your device, then click the "Check connectivity” button in the "Device details" window;'
     1:
         image: /images/helloworld/hello-world-pe-step-2-item-2.png
         title: 'Click "Copy access token". Token will be copied to your clipboard. Save it to a safe place.'
@@ -96,8 +101,8 @@ step34:
         image: /images/helloworld/hello-world-pe-step-34-item-3.png 
         title: 'Click "Create new widget" icon.'
     3:
-        image: /images/helloworld/hello-world-pe-step-34-item-4.png 
-        title: 'Select "Charts" bundle. Scroll down and click on the "Timeseries - Flot" chart widget.'        
+        image: /images/helloworld/getting-started-pe/hello-world-3-4-add-alarm-widget-4-pe.png
+        title: 'Specify the previously created device "My New Device" as the data source in the "Device" field. Next, we will configure the filters. All alarms have specific severities and statuses. Mark those you want to see in the widget. If none are marked, all alarms will be displayed regardless of their status or severity;'
     4:
         image: /images/helloworld/hello-world-pe-step-34-item-5.png  
         title: 'Click "Add datasource" button.'
@@ -229,8 +234,8 @@ step71:
          image: /images/helloworld/hello-world-pe-step-7-item-2.png
          title: 'Then navigate to the default customer group "All".'
     2:
-        image: /images/helloworld/hello-world-pe-step-7-item-3.png 
-        title: 'Click the "+" sign to add a customer.'
+        image: /images/helloworld/getting-started-pe/hello-world-7-create-customer-3-pe.png
+        title: 'If needed, you can assign a different owner for this customer. We will leave this option unchanged. Enter a name for the new group and click "Create a new one!";'
     3:
         image: /images/helloworld/hello-world-pe-step-7-item-4.png 
         title: 'Add customer title and click "Add".' 
@@ -252,17 +257,68 @@ step72:
         image: /images/helloworld/hello-world-pe-step-72-item-5.png 
         title: 'Your device list should be empty now. This is because it displays the devices of the tenant. Navigate to the customer hierarchy to see your device.' 
     5:
-        image: /images/helloworld/hello-world-pe-step-72-item-6.png 
-        title: 'Your device is now in the Customers group "All".'                          
-        
+        image: /images/helloworld/getting-started-pe/hello-world-71-assign-device-to-customer-6-pe.png
+        title: 'Click "Update" to add to the group and change the owner of your device. You can always change the owner back to the tenant;'
+    6:
+        image: /images/helloworld/getting-started-pe/hello-world-71-assign-device-to-customer-7-pe.png
+        title: 'By default, the general device list displays both tenant devices and devices of your customers. Disable "Include customer entities" to only see tenant devices in the device list;'
+    7:
+        image: /images/helloworld/getting-started-pe/hello-world-71-assign-device-to-customer-8-pe.png
+        title: 'Your device list should be empty now.'
+
+step72_1:
+    0:
+        image: /images/helloworld/getting-started-pe/hello-world-71-assign-device-to-customer-9-pe.png
+        title: 'Navigate to "Customers" page. Find your customer in the list of customers and then click on the "Manage customer devices" icon;'
+    1:
+        image: /images/helloworld/getting-started-pe/hello-world-71-assign-device-to-customer-10-pe.png
+        title: 'Your device is owned by the customer and is located in the customer&#39;s device group "My Devices".'
+
+step72_2:
+    0:
+        image: /images/helloworld/getting-started-pe/hello-world-71-assign-device-to-customer-11-pe.png
+        title: 'Open the "Devices" page. Click on the "+" icon in the top right corner of the table and then select "Add new device" from drop-down menu;'
+    1:
+        image: /images/helloworld/getting-started-pe/hello-world-71-assign-device-to-customer-12-pe.png
+        title: 'Input device name (for example, "Thermostat") and select the new owner in the "Owner" field. Then, click "Add";'
+    2:
+        image: /images/helloworld/getting-started-pe/hello-world-71-assign-device-to-customer-13-pe.png
+        title: 'Close check connectivity window;'
+    3:
+        image: /images/helloworld/getting-started-pe/hello-world-71-assign-device-to-customer-14-pe.png
+        title: 'The device has been created, and it immediately belongs to your customer.'
+
 step73:
     0:
-        image: /images/helloworld/hello-world-pe-step-73-item-1.png 
-        title: 'Open "Dashboard Groups" and click the "Share" button.'
+        image: /images/helloworld/getting-started-pe/hello-world-71-share-the-dashboard-3-pe.png
+        title: 'Open the "Dashboards" page and go to the "Groups" tab. Click the "Share" icon next to the "All" dashboard group;'
     1:
-        image: /images/helloworld/hello-world-pe-step-73-item-2.png
-        title: 'Select the customer and click "Share".'
-        
+        image: /images/helloworld/getting-started-pe/hello-world-71-share-the-dashboard-4-pe.png
+        title: 'Select the customer you want to share the dashboard with and set the permission level. In this case, choose "Read", then click "Share".'
+
+step73_1:
+    0:
+        image: /images/helloworld/getting-started-pe/hello-world-71-share-the-dashboard-5-pe.png
+        title: 'On the "All" tab of the "Dashboards" page, click on the "+" icon in the top right corner of the table and select "Create new dashboard" from the drop-down menu;'
+    1:
+        image: /images/helloworld/getting-started-pe/hello-world-71-share-the-dashboard-6-pe.png
+        title: 'Enter a name for the dashboard (e.g., "Thermostats"). In the "Groups" field of the "Owner and groups" section, select an existing group or enter a name for a new dashboard group (for example, "Thermostats group") and click "Create a new one!";'
+    2:
+        image: /images/helloworld/getting-started-pe/hello-world-71-share-the-dashboard-7-pe.png
+        title: 'In the "Add entity group" window that opens, click "Next: Share entity group";'
+    3:
+        image: /images/helloworld/getting-started-pe/hello-world-71-share-the-dashboard-8-pe.png
+        title: 'Check the "Share entity group" box, select the customer to share the dashboard with, and set their permissions. Then click "Add";'
+    4:
+        image: /images/helloworld/getting-started-pe/hello-world-71-share-the-dashboard-9-pe.png
+        title: 'Click "Add" again to confirm dashboard creation;'
+    5:
+        image: /images/helloworld/getting-started-pe/hello-world-71-share-the-dashboard-10-pe.png
+        title: 'The new dashboard will open automatically — click "Save" in the top-right corner;'
+    6:
+        image: /images/helloworld/getting-started-pe/hello-world-71-share-the-dashboard-11-pe.png
+        title: 'Your dashboard has been created and placed in the "Thermostats group". You can quickly access it by clicking the group name.'
+
 step74:
     0:
         image: /images/helloworld/hello-world-pe-step-74-item-1.png 
@@ -282,13 +338,12 @@ step74:
 
 step75:
     0:
-        image: /images/helloworld/hello-world-pe-step-75-item-1.png 
-        title: 'Use activation link to set the password. Click "Create Password". You will automatically login as a customer user.'
+        image: /images/helloworld/getting-started-pe/hello-world-7-5-activate-customer-user-1-pe.png
+        title: 'Paste the previously copied link into a new browser tab and press the "Enter" key. Now create a password by entering it twice and clicking "Create Password".'
     1:
-        image: /images/helloworld/hello-world-pe-step-75-item-2.png 
-        title: 'You have logged in as a Customer User. You may browse the data and acknowledge/clear alarms.'
+        image: /images/helloworld/getting-started-pe/hello-world-7-5-activate-customer-user-2-pe.png
+        title: 'You are now logged in as a customer user. Since this user has read-only access, you can view device data and its alarms, but you cannot acknowledge or clear them.'
 
-        
 mqttWindows:
     0:
         image: /images/helloworld/hello-world-pe-step-3-item-1.png

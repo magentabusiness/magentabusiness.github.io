@@ -11,7 +11,7 @@ There are multiple ways to customize IoT Hub platform to suit your needs:
  - [Device Connectivity Protocols](/docs/reference/protocols/) - add new protocol or customize [existing implementations](https://github.com/thingsboard/thingsboard/tree/master/transport)
 {% else %}
 {% assign peDocsPrefix = '' %}
-{% if docsPrefix == 'paas/' %}
+{% if docsPrefix contains 'paas/' %}
 {% assign peDocsPrefix = docsPrefix %}
 {% endif %}
  - [Custom Integration](/docs/{{peDocsPrefix}}user-guide/integrations/custom/) - allows to create integration with custom configuration that will use any transport protocol for communication with your devices.

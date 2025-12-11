@@ -1,10 +1,11 @@
 ---
 layout: docwithnav-pe
 assignees:
-- vsosliuk
+- ashvayka
 title: MQTT over SSL
 description: Launching IoT Hub with secure MQTT protocol to connect your IoT devices and projects.
 
 ---
 
-{% include docs/user-guide/mqtt-over-ssl.md %}
+{% include get-hosts-name.html %}
+{% include docs/user-guide/ssl/mqtt-over-ssl.md %}

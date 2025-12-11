@@ -15,7 +15,7 @@ IoT Hub support following edge management features using Web UI and [REST API](/
 
 ## Add and delete edges
 
-Tenant administrator is able to register new edges or delete them from IoT Hub cloud service.
+Tenant administrator is able to register new edges or delete them from IoT Hub service.
 
 ![image](/images/edge/help/edges.png)
 

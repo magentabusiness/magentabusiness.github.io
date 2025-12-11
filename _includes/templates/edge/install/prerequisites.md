@@ -1,14 +1,53 @@
-#### Prerequisites
-##### IoT Hub server 
-To start using IoT Hub **Edge** you need to have IoT Hub CE/PE server that supports edge functionality up and running.
+{% if docsPrefix == 'pe/edge/' %}
+{% assign appPrefix = "Professional Edition" %}
+{% else %}
+{% assign appPrefix = "Community Edition" %}
+{% endif %}
 
-{% capture contenttogglespec %}
-Community Edition%,%ce%,%templates/edge/obtain-ce-cloud.md%br%
-IoT Hub%,%pe%,%templates/edge/obtain-pe-cloud.md{% endcapture %}
+## Prerequisites
 
-{% include content-toggle.html content-toggle-id="edgeInstallCloud" toggle-spec=contenttogglespec %} 
- 
-##### Edge provision on cloud
-Additionally, you will need to provision IoT Hub **Edge** on cloud server. Please visit this guide [Provision edge on CE server](/docs/edge/provision-edge-on-server-ce/) or [Provision edge on PE server](/docs/edge/provision-edge-on-server-pe/) respectively.
+To start running **IoT Hub {{appPrefix}} Edge**, you will need an active **IoT Hub {{appPrefix}} account** that supports **Edge** functionality.
 
-Once IoT Hub **Edge** provisioned on cloud server please follow installation steps below.
+{% if docsPrefix == 'pe/edge/' %}
+{% include templates/edge/obtain-pe-cloud.md %}
+{% else %}
+{% include templates/edge/obtain-ce-cloud.md %}
+{% endif %}
+
+{% include templates/edge/install/hardware-requirements.md %}
+
+### Deploying a New Edge Instance
+
+To create a new **Edge**:
+
+{% if docsPrefix == 'pe/edge/' %}
+{% assign addEdge = '
+    ===
+        image: /images/pe/edge/installation-add-edge-item-1.png,
+        title: Sign in to your **IoT Hub** instance and navigate to the **Edge Management > Instances** section. Click the **"+"** icon in the top right corner and select the **"Add new edge"** option.
+    ===
+        image: /images/pe/edge/installation-add-edge-item-2.png,
+        title: Enter a name for the Edge you are creating. For example, "My New Edge". **If needed**, update the **cloud endpoint**. 
+* If the **Edge** runs in a [Docker container](https://docs.docker.com/get-started/docker-overview/){:target="_blank"}, **do not** use “localhost” as the endpoint. Instead, use the **IP address** of the machine where **IoT Hub** is hosted and accessible by the Edge container. For example, http://10.7.2.143:8080.
+* If you are using the **IoT Hub**, there’s no need to change this setting — keep it as is.
+* Click the **"Add"** button to confirm the addition of the **Edge instance**. 
+
+    ===
+        image: /images/pe/edge/installation-add-edge-item-3.png,
+        title: Your new **Edge** is created and will appear at the top of the list, as entries are sorted by creation time by default.
+'%}
+{% else %}
+{% assign addEdge = '
+    ===
+        image: /images/edge/installation-add-edge-item-1.png,
+        title: Sign in to your **IoT Hub** instance and navigate to the **Edge Management > Instances** section. Click the **"+"** icon in the top right corner and select the **"Add new edge"** option.
+    ===
+        image: /images/edge/installation-add-edge-item-2.png,
+        title: Enter a name for the Edge you are creating. For example, "My New Edge". Click the **"Add"** button to confirm the addition of the **Edge instance**.
+    ===
+        image: /images/edge/installation-add-edge-item-3.png,
+        title: Your new **Edge** is created and will appear at the top of the list, as entries are sorted by creation time by default.
+'%}
+{% endif %}
+
+{% include images-gallery.liquid imageCollection=addEdge showListImageTitles="true" %}

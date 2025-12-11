@@ -16,9 +16,12 @@ IoT Hub cluster can handle millions of devices.
 The diagram below shows key system components and interfaces they provide. Let's walk through them.
 
 
-
- <object width="100%" data="/images/reference/thingsboard-architecture.svg"></object>
-
+{% if docsPrefix == null %}
+<object width="100%" data="/images/reference/thingsboard-architecture.svg"></object>
+{% endif %}
+{% if docsPrefix == "pe/" %}
+<object width="100%" data="/images/reference/thingsboard-architecture-pe.svg"></object>
+{% endif %}
 
 
 **IoT Hub Transports**
@@ -45,11 +48,11 @@ Rule Engine nodes can join the cluster, where each node is responsible for certa
 
 Rule Engine subscribes to incoming data feed from queue(s) and acknowledge the message only once it is processed. 
 There are multiple strategies available that control the order or message processing and the criteria of message acknowledgement.
-See [submit strategies](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#queue-submit-strategy) and [processing strategies](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#queue-processing-strategy)
+See [submit strategies](/docs/{{docsPrefix}}user-guide/rule-engine-2-5/queues/#queue-submit-strategy) and [processing strategies](/docs/{{docsPrefix}}user-guide/rule-engine-2-5/queues/#queue-processing-strategy)
 for more details.
 
 IoT Hub Rule Engine may operate in two modes: shared and isolated. In shared mode, rule engine process messages that belong to multiple tenants.
-In isolated mode Rule Engine may be configured to process messages for specific tenant only. 
+In isolated mode Rule Engine may be configured to process messages for tenants of specific tenant profile only.
 
 **IoT Hub Web UI**
 
@@ -57,10 +60,13 @@ IoT Hub provides a lightweight component written using Express.js framework to h
 Those components are completely stateless and no much configuration available. 
 The static web UI contains application bundle. Once it is loaded, the application starts using the REST API and WebSockets API provided by IoT Hub Core.  
  
-## Message Queues are awesome!
+## IoT Hub message queues
 
-IoT Hub supports multiple message queue implementations: Kafka, RabbitMQ, AWS SQS, Azure Service Bus and Google Pub/Sub. We plan to extend this list in the future.
-Using durable and scalable queues allow IoT Hub to implement back-pressure and load balancing. Back-pressure is extremely important in case of peak loads.  
+IoT Hub supports two types of message queues: **Kafka** and **In-Memory**.
+- **Kafka** is a widely used, distributed, and durable message queue system designed to handle large volumes of data. It is well-suited for production environments where high throughput, fault tolerance, and scalability are critical.
+- **In-Memory** queue is a lightweight, fast, and simple message queue implementation designed for testing, smaller-scale or development environments. It stores messages in memory rather than on disk, prioritizing speed over persistence.
+
+Using durable and scalable Kafka queue allow IoT Hub to implement back-pressure and load balancing. Back-pressure is extremely important in case of peak loads.
 We provide "abstraction layer" over specific queue implementations and maintain two main concepts: topic and topic partition. 
 One topic may have configurable number of partitions. Since most of the queue implementations does not support partitions, we use *topic + "." + partition* pattern.
   
@@ -75,13 +81,18 @@ IoT Hub uses following topics:
  * **tb_transport.api.responses**: to receive device credentials verification results from IoT Hub Core to Transport.
  * **tb_core**: to push messages from Transport or Rule Engine to IoT Hub Core. Messages include session lifecycle events, attribute and RPC subscriptions, etc.
  * **tb_rule_engine**: to push messages from Transport or IoT Hub Core to Rule Engine. Messages include incoming telemetry, device states, entity lifecycle events, etc.
- 
-<!-- **Note:** All topic properties including names and number of partitions are [configurable](/docs/{{docsPrefix}}user-guide/install/config/) via thingsboard.yml or environment variables. 
-We plan to enable configuration via UI in IoT Hub 2.6 and/or 3.1.  -->
 
-<!-- **Note:** Starting version 2.5 we have switched from using [gRPC](https://grpc.io/) to  [Message Queues](/docs/{{docsPrefix}}reference/#message-queues-are-awesome)
+{% capture difference %}
+Since IoT Hub 3.4 we can configure Rule Engine queues by the UI, see the [documentation](/docs/{{docsPrefix}}user-guide/rule-engine-2-5/queues/){:target="_blank"}.
+{% endcapture %}
+{% include templates/info-banner.md content=difference %}
+
+{% capture difference %}
+**Note:** Starting version 2.5 we have switched from using [gRPC](https://grpc.io/){:target="_blank"} to [Message Queues](/docs/{{docsPrefix}}reference/#thingsboard-message-queues)
 for all communication between IoT Hub components. 
-The main idea was to sacrifice small performance/latency penalties in favor of persistent and reliable message delivery and automatic load balancing.   -->
+The main idea was to sacrifice small performance/latency penalties in favor of persistent and reliable message delivery and automatic load balancing.  
+{% endcapture %}
+{% include templates/info-banner.md content=difference %}
 
 <!-- ## On-premise vs cloud deployments
 
@@ -127,23 +138,18 @@ Platform supports three database options at the moment:
 
 * **SQL** - Stores all entities and telemetry in SQL database. IoT Hub authors recommend to use PostgreSQL and this is the main SQL database that IoT Hub supports. 
 It is possible to use HSQLDB for local development purposes. **We do not recommend to use HSQLDB** for anything except running tests and launching dev instance that has minimum possible load.
-* **NoSQL (Deprecated)** - Stores all entities and telemetry in NoSQL database. IoT Hub authors recommend to use Cassandra and this is the only NoSQL database that IoT Hub supports at the moment.
-Please note that this option is deprecated in favor of Hybrid approach due to many limitations of NoSQL for transactions and "joins" that are required to enable advanced search over IoT entities.
 * **Hybrid (PostgreSQL + Cassandra)** - Stores all entities in PostgreSQL database and timeseries data in Cassandra database. 
 * **Hybrid (PostgreSQL + TimescaleDB)** - Stores all entities in PostgreSQL database and timeseries data in Timescale database. 
-
-It is possible to configure this options using **thingsboard.yml** file. See database [configuration](/docs/{{docsPrefix}}user-guide/install/config/) page for more details.
 
 ```yaml
 database:
   ts_max_intervals: "${DATABASE_TS_MAX_INTERVALS:700}" # Max number of DB queries generated by single API call to fetch telemetry records
-  entities:
-    type: "${DATABASE_ENTITIES_TYPE:sql}" # cassandra OR sql
   ts:
     type: "${DATABASE_TS_TYPE:sql}" # cassandra, sql, or timescale (for hybrid mode, DATABASE_TS_TYPE value should be cassandra, or timescale)
+  ts_latest:
+    type: "${DATABASE_TS_LATEST_TYPE:sql}" # cassandra, sql, or timescale (for hybrid mode, DATABASE_TS_TYPE value should be cassandra, or timescale)
 
-# note: timescale works only with postgreSQL database for DATABASE_ENTITIES_TYPE.
-``` -->
+```
 
 ## Programming languages and third-party
 

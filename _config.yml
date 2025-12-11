@@ -5,15 +5,15 @@ logo: /images/thingsboard_logo.png
 url: https://magentabusiness.github.io
 
 twitter:
-  username: thingsboard
+  username: IoT Hub
 
 social:
   name: IoT Hub
-  links:
-    - https://twitter.com/thingsboard
-    - https://github.com/thingsboard/thingsboard
-    - https://www.facebook.com/thingsboard
-    - https://www.youtube.com/channel/thingsboard
+#  links:
+#    - https://twitter.com/thingsboard
+#    - https://github.com/thingsboard/thingsboard
+#    - https://www.facebook.com/thingsboard
+#    - https://www.youtube.com/channel/thingsboard
 
 seo:
   type: WebSite
@@ -37,6 +37,12 @@ incremental: true
 
 exclude:
   - .idea
+#  - docs
+#  - blog
+#  - careers
+#  - case-study
+#  - case-studies
+#  - _includes/docs
 
 safe: false
 lsi: false
@@ -50,9 +56,9 @@ defaults:
       path: ""
     values:
       image:
-        path: /images/thingsboard_logo.png
-        twitter: /images/thingsboard_logo.png
-        facebook: /images/thingsboard_logo.png
+        path: /images/IoT_4_512.png
+        twitter: /images/IoT_4_512.png
+        facebook: /images/IoT_4_512.png
       version: "v1.0"
       githubbranch: "master"
       docsbranch: "master"
@@ -74,11 +80,26 @@ collections:
     output: true
 
 release:
-  branch: release-3.3
-  ce_ver: 3.3
-  ce_tag: v3.3
-  ce_full_ver: 3.3.0
-  pe_ver: 3.3pe
-  pe_full_ver: 3.3.0PE
-
-
+  branch: release-4.1
+  branch_major_next: master
+  ver: 4.1
+  ce_ver: 4.1
+  ce_tag: v4.1
+  ce_full_ver: 4.1.0
+  pe_ver: 4.1pe
+  pe_full_ver: 4.1.0PE
+  wd_examples_commit: v4.1
+  # >>> EDGE
+  edge_ver: 4.1
+  edge_tag: v4.1
+  edge_full_ver: 4.1.0EDGE
+  pe_edge_ver: 4.1pe
+  pe_edge_full_ver: 4.1.0EDGEPE
+  # <<< EDGE
+  ce_flutter_app_ver: 1.6.0
+  pe_flutter_app_ver: 1.6.0
+  ce_dart_client_ver: 4.0.0
+  pe_dart_client_ver: 4.0.0
+  broker_full_ver: 2.1.0
+  broker_branch: release-2.1.0
+  trendz_ver: 1.13.2

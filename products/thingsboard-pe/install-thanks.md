@@ -19,37 +19,37 @@ hidetoc: "true"
         <div id="maker-form" class="instructions" style="display: none;">
             <p>In order to proceed please visit the official product page on AWS marketplace:</p>
             <p class="center"><a target="_blank" href="https://aws.amazon.com/marketplace/pp/B07MLRVF3Q">IoT Hub Maker</a></p>
-            <br/>
+            <br>
             <p>For detailed installation instructions please visit:</p>
-            <p class="center"><a href="/docs/user-guide/install/aws-marketplace-pe/">Installing IoT Hub on AWS</a></p>
+            <p class="center"><a href="/docs/user-guide/install/pe/aws-marketplace/">Installing IoT Hub on AWS</a></p>
         </div>    
         <div id="prototype-form" class="instructions" style="display: none;">
             <p>In order to proceed please visit the official product page on AWS marketplace:</p>
             <p class="center"><a target="_blank" href="https://aws.amazon.com/marketplace/pp/B07MLS5VMB">IoT Hub Prototype</a></p>
-            <br/>
+            <br>
             <p>For detailed installation instructions please visit:</p>
-            <p class="center"><a href="/docs/user-guide/install/aws-marketplace-pe/">Installing IoT Hub on AWS</a></p>
+            <p class="center"><a href="/docs/user-guide/install/pe/aws-marketplace/">Installing IoT Hub on AWS</a></p>
         </div>    
         <div id="startup-form" class="instructions" style="display: none;">
             <p>In order to proceed please visit the official product page on AWS marketplace:</p>
             <p class="center"><a target="_blank" href="https://aws.amazon.com/marketplace/pp/B07MQ1G36K">IoT Hub Startup</a></p>
-            <br/>
+            <br>
             <p>For detailed installation instructions please visit:</p>
-            <p class="center"><a href="/docs/user-guide/install/aws-marketplace-pe/">Installing IoT Hub on AWS</a></p>
+            <p class="center"><a href="/docs/user-guide/install/pe/aws-marketplace/">Installing IoT Hub on AWS</a></p>
         </div>    
         <div id="business-form" class="instructions" style="display: none;">
             <p>In order to proceed please visit the official product page on AWS marketplace:</p>
             <p class="center"><a target="_blank" href="https://aws.amazon.com/marketplace/pp/B07MLRWV22">IoT Hub Business</a></p>
-            <br/>
+            <br>
             <p>For detailed installation instructions please visit:</p>
-            <p class="center"><a href="/docs/user-guide/install/aws-marketplace-pe/">Installing IoT Hub on AWS</a></p>
+            <p class="center"><a href="/docs/user-guide/install/pe/aws-marketplace/">Installing IoT Hub on AWS</a></p>
         </div>    
         <div id="enterprise-form" class="instructions" style="display: none;">
             <p>In order to proceed please visit the official product page on AWS marketplace:</p>
             <p class="center"><a target="_blank" href="https://aws.amazon.com/marketplace/pp/B07MBYZSFQ">IoT Hub Enterprise</a></p>
-            <br/>
+            <br>
             <p>For detailed installation instructions please visit:</p>
-            <p class="center"><a href="/docs/user-guide/install/aws-marketplace-pe/">Installing IoT Hub on AWS</a></p>
+            <p class="center"><a href="/docs/user-guide/install/pe/aws-marketplace/">Installing IoT Hub on AWS</a></p>
         </div>
         <a class="homepage" href="/">Homepage</a>
     </div>

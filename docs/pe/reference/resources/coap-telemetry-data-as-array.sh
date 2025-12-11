@@ -1,0 +1,1 @@
+cat telemetry-data-as-array.json | coap post coap://iothub.magenta.at/api/v1/$ACCESS_TOKEN/telemetry

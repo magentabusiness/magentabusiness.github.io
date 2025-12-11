@@ -1,7 +1,7 @@
 Download installation package:
 
 ```bash
-wget https://dist.iothub.magenta.at/tb-opc-ua-integration-{{ site.release.pe_ver }}.deb
+wget https://dist.thingsboard.io/tb-opc-ua-integration-{{ site.release.pe_ver }}.deb
 ```
 {: .copy-code}
 
@@ -39,7 +39,7 @@ export INTEGRATION_ROUTING_KEY=b75**************************34d
 export INTEGRATION_SECRET=vna**************mik
 ```
 
-Execute the following command to start IoT Hub:
+Execute the following command to start integration:
 
 ```bash
 sudo service tb-opc-ua-integration start

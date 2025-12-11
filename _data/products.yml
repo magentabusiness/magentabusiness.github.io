@@ -17,7 +17,7 @@
   getStarted: /docs/pe/getting-started-guides/helloworld/
   docsPrefix: /docs/pe/
 #- title: Community Edition
-#  fulltitle: IoT Hub Community Edition
+#  fulltitle: IoT Hub
 #  description: IoT Hub Documentation
 #  tag: ce
 #  icon: /images/thingsboard-cm-icon.svg
@@ -25,6 +25,12 @@
 #  guides: /docs/guides/
 #  getStarted: /docs/getting-started-guides/helloworld/
 #  docsPrefix: /docs/
+#- title: Edge
+#  fulltitle: IoT Hub Edge
+#  description: IoT Hub Documentation
+#  tag: edge
+#  icon: /images/thingsboard-e-icon.svg
+#  path: /docs/edge/
 #- title: IoT Gateway
 #  fulltitle: IoT Hub IoT Gateway
 #  description: IoT Hub Documentation
@@ -45,3 +51,83 @@
 #  icon: /images/trendz-icon.svg
 #  path: /docs/trendz/
 #  getStarted: /docs/trendz/getting-started/
+#- title: Mobile Application
+#  fulltitle: IoT Hub Mobile Application
+#  description: Mobile Application Documentation
+#  tag: mobile
+#  icon: /images/tb-mobile-icon.svg
+#  path: /docs/mobile/
+#  docsPrefix: /docs/mobile/
+#  getStarted: /docs/mobile/getting-started/
+#- title: PE Mobile Application
+#  fulltitle: IoT Hub PE Mobile Application
+#  description: PE Mobile Application Documentation
+#  tag: mobile-pe
+#  icon: /images/tb-pe-mobile-icon.svg
+#  path: /docs/pe/mobile/
+#  docsPrefix: /docs/pe/mobile/
+#  getStarted: /docs/pe/mobile/getting-started/
+#- title: Cloud
+#  fulltitle: IoT Hub
+#  description: IoT Hub Documentation
+#  tag: paas
+#  icon: /images/thingsboard-c-icon.svg
+#  path: /docs/paas/
+#  guides: /docs/paas/guides/
+#  getStarted: /docs/paas/getting-started-guides/helloworld/
+#  docsPrefix: /docs/paas/
+#- title: Edge
+#  fulltitle: IoT Hub Edge
+#  description: IoT Hub Edge Documentation
+#  tag: edge
+#  icon: /images/thingsboard-e-icon.svg
+#  path: /docs/edge/
+#- title: PE Edge
+#  fulltitle: IoT Hub PE Edge
+#  description: IoT Hub PE Edge Documentation
+#  tag: edge-pe
+#  icon: /images/thingsboard-e-icon.svg
+#  path: /docs/pe/edge/
+#- title: IoT Gateway
+#  fulltitle: IoT Hub IoT Gateway
+#  description: IoT Hub Documentation
+#  tag: gw
+#  icon: /images/gateway-icon.svg
+#  path: /docs/iot-gateway/
+#  getStarted: /docs/iot-gateway/getting-started/
+#- title: License Server
+#  fulltitle: IoT Hub License Server
+#  description: IoT Hub Documentation
+#  tag: license
+#  icon: /images/license-icon.svg
+#  path: /products/license-server/
+#- title: Trendz Analytics
+#  fulltitle: Trendz Analytics
+#  description: Trendz Documentation
+#  tag: trendz
+#  icon: /images/trendz-icon.svg
+#  path: /docs/trendz/
+#  getStarted: /docs/trendz/getting-started/
+#- title: Mobile Application
+#  fulltitle: IoT Hub Mobile Application
+#  description: Mobile Application Documentation
+#  tag: mobile
+#  icon: /images/tb-mobile-icon.svg
+#  path: /docs/mobile/
+#  docsPrefix: /docs/mobile/
+#  getStarted: /docs/mobile/getting-started/
+#- title: PE Mobile Application
+#  fulltitle: IoT Hub PE Mobile Application
+#  description: PE Mobile Application Documentation
+#  tag: mobile-pe
+#  icon: /images/tb-pe-mobile-icon.svg
+#  path: /docs/pe/mobile/
+#  docsPrefix: /docs/pe/mobile/
+#  getStarted: /docs/pe/mobile/getting-started/
+#- title: MQTT Broker
+#  fulltitle: MQTT Broker
+#  description: MQTT Broker Documentation
+#  tag: mqtt-broker
+#  icon: /images/tbmq-icon.svg
+#  path: /docs/mqtt-broker/
+#  getStarted: /docs/mqtt-broker/getting-started/

@@ -1,4 +1,6 @@
-Timeseries data and attributes pushed to the cloud according to the [Edge Rule Engine](/docs/edge/rule-engine/general/).
-We will go over default **Edge Root Rule chain** to see how temperature data is going to be pushed from edge to cloud.
+Any real-world assets, devices, sensors or other logical components are represented within **IoT Hub** as corresponding [entities](/docs/{{peDocsPrefix}}user-guide/entities-and-relations/){: target="_blank"}.
+Most of the entities can be created on the **Edge instance**. Once an entity is created on the **Edge instance**, it will be automatically published to the **IoT Hub Server**, requiring no additional actions.
+
+To view the published entity (e.g., device), log in to the **{{currentThingsBoardVersion}}** at **SERVER_URL**:
 
 {% include images-gallery.html imageCollection="step4" showListImageTitles="true" %}

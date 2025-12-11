@@ -28,9 +28,6 @@ In case if you require to have an advanced customization you can refer to the [M
 ### Preparations 
 
 The Azure Active Directory does require to use the SSL. Please, make sure that you have configured the HTTPS for the domain of yours, so that those can be configured with the **Azure Active Directory**.
-  
-In case if SSL is not configured please, follow [this guide](/docs/user-guide/install/pe/add-haproxy-ubuntu/) to install HAProxy and generate valid SSL certificate using Let’s Encrypt.
-                                 
 
 
 To apply the configurations properly, we need to obtain the **clientName**,  **clientId** and **clientSecret** first.  
@@ -176,7 +173,7 @@ security:
 After all the changes being applied, please, make sure to have the IoT Hub restart.
 The IoT Hub restart can be invoked with the next command on the Linux Server: 
 ```bash
-$ sudo service thingsboard restart
+$ sudo service iot hub restart
 ```  
 After that, proceed to the User Interface of yours, to make sure there are no troubles, press the **Login With Azure Active Directory**.
 

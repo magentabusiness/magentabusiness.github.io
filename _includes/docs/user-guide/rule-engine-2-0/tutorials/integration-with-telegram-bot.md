@@ -98,7 +98,7 @@ In this tutorial, we used Rule Chains from [create & clear alarms](/docs/user-gu
 We modified Rule Chain **Create & Clear Alarms** by adding nodes that was described above in the section [Message flow](#message-flow)<br>
  and renamed this rule chain to: **Create/Clear Alarms & send notifications to Telegram**.
 
-<br/>The following screenshots show how the above Rule Chains should look like:
+<br>The following screenshots show how the above Rule Chains should look like:
  
   - **Create/Clear Alarms & send notifications to Telegram:**
 
@@ -108,11 +108,11 @@ We modified Rule Chain **Create & Clear Alarms** by adding nodes that was descri
 
 ![image](/images/gateway/telegram-bot/root-rule-chain.png)
 
-<br/> 
+<br> 
 
 
 The following section shows you how to modify this rule chain from scratch.
-<br/> 
+<br> 
 
 ### Modify **Create/Clear Alarm & Send Email**
 
@@ -156,7 +156,7 @@ In this rule chain, you will create 2 nodes as it will be explained in the follo
   
 - Fill in the fields with the input data shown in the following table: 
   
-  <table style="width: 25%">
+  <table>
     <thead>
         <tr>
             <td><b>Field</b></td><td><b>Input Data</b></td>
@@ -229,7 +229,7 @@ Also, you can:
 
 Please refer to the links under the **See Also** section to see how to do this.
   
-<br/>
+<br>
 
 ## See Also
 

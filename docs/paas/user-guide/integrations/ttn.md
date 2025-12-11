@@ -1,9 +1,10 @@
 ---
 layout: docwithnav-paas
-title: TheThingsNetwork Integration
-description: TheThingsNetwork Integration Guide 
+title: The Things Stack Community integration
+description: The Things Stack Community integration guide
 
 ---
 {% assign docsPrefix = "paas/" %}
-{% include docs/pe/user-guide/integrations/ttn.md %}
+{% include get-hosts-name.html docsPrefix=docsPrefix %}
+{% include docs/pe/user-guide/integrations/the-things-stack.md %}
 

@@ -1,9 +1,4 @@
-Server UI will be available using the URL: [Live Demo](https://iothub.magenta.at/signup).
-Please use your [Live Demo](https://iothub.magenta.at/signup) tenant credentials to log in.
+Once Edge is installed, you’ll be able to access the interface via [http://localhost:8080](http://localhost:8080){:target="_blank"}. 
+Throughout the rest of this tutorial, this URL will be referred to as **EDGE_URL**
 
-{% include templates/edge/oauth2-not-supported.md %}
-
-We are going to refer to this URL as **http://SERVER_URL** below in tutorial.
-
-IoT Hub **Edge** UI will be available using the URL: [http://localhost:8080](http://localhost:8080).
-You may use your [Live Demo](https://iothub.magenta.at/signup) tenant credentials to log in.
+Please log in using your [Live Demo](https://iothub.magenta.at/signup){:target="_blank"} tenant credentials.

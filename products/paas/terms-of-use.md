@@ -5,13 +5,13 @@ description: IoT Hub Terms of Use
 
 ---
 
-<br />
+<br>
 <p style="text-align: center; font-size: 1.5em; font-weight: bold;">TERMS OF USE</p>
 
 <h2>PLEASE READ THESE TERMS AND CONDITIONS</h2> 
 
 <br>
-<p>These Terms of Service, including its appendixes specific to the country (<b>“TBCP Service Agreement”</b>, <b>“TBCP Agreement”</b>, <b>“Agreement”</b>) represent the terms and conditions applied to the access and use of the IoT Hub Platform, currently reachable at URL: <a href="https://iothub.magenta.at">https://iothub.magenta.at</a> by default or other configured custom domain that might be in use from time to time. This document is a legally binding agreement between the entity or person accepting these terms (<b>“Customer”</b> or <b>“You”</b>) that govern the application to services provided by IoT Hub entity listed in Paragraph 2 below (referred to as <b>“We”</b>, <b>“Our”</b> or <b>“IoT Hub Platform”</b>). By using the IoT Hub Platform, the Customer acknowledges and agrees that they have read, understood, and consent to be bound by the Terms and all Your affiliate users or users approached by You (<b>“End User”</b>) to use Service are bound to this Terms of Service.</p>
+<p>These Terms of Service, including its appendixes specific to the country (<b>“TBCP Service Agreement”</b>, <b>“TBCP Agreement”</b>, <b>“Agreement”</b>) represent the terms and conditions applied to the access and use of the IoT Hub Platform, currently reachable at URL: <a href="https://iothub.magenta.at" target="_blank">https://iothub.magenta.at</a> by default or other configured custom domain that might be in use from time to time. This document is a legally binding agreement between the entity or person accepting these terms (<b>“Customer”</b> or <b>“You”</b>) that govern the application to services provided by IoT Hub entity listed in Paragraph 2 below (referred to as <b>“We”</b>, <b>“Our”</b> or <b>“IoT Hub Platform”</b>). By using the IoT Hub Platform, the Customer acknowledges and agrees that they have read, understood, and consent to be bound by the Terms and all Your affiliate users or users approached by You (<b>“End User”</b>) to use Service are bound to this Terms of Service.</p>
 
 <p> <b>1. Submission and Acceptance of the Terms</b> </p> 
 <p> 1.1 Customer use of the IoT Hub Platform is subject to the terms and conditions contained in this document as well as IoT Hub Platform Privacy Policy, Stripe Terms of Service and any other website or service policies or conditions as adopted and integrated with the IoT Hub Platform from time to time (jointly, the <b>“Terms”</b>).</p>
@@ -69,7 +69,7 @@ description: IoT Hub Terms of Use
 
 <p>3.10 With respect to any other Information that you provide to us or collected by us, including Information provided at registration, Information we record pertaining to your activities, and Information provided voluntarily by you, we will not disclose such Information outside of us, our affiliates or our third party service providers unless: i) you request us to do so; ii) your end user has provided consent for us to do so; iii) as provided in these Terms of Use or in accordance with your agreement(s) with us, or iv) to comply with applicable law, legal process or lawful government requests, or in respect of any claims or potential claims brought against us.</p>
 
-<p>3.11 “THINGSBOARD” is a registered trademark in multiple regions. Customer is permitted to state publicly that it is a customer of the Service, consistent with the trademark guidelines. IoT Hub, Inc. may include Customer's name in a list of IoT Hub customers, online or in promotional materials. IoT Hub, Inc. may also verbally reference you as a customer of the Service.</p> 
+<p>3.11 “IOT HUB” is a registered trademark in multiple regions. Customer is permitted to state publicly that it is a customer of the Service, consistent with the trademark guidelines. IoT Hub, Inc. may include Customer's name in a list of IoT Hub customers, online or in promotional materials. IoT Hub, Inc. may also verbally reference you as a customer of the Service.</p> 
 
 <br>
 <p> <b>4. Withdrawal and suspension of the Service</b> </p> 
@@ -119,7 +119,7 @@ description: IoT Hub Terms of Use
 <p> <b>8. Notice and Procedure for Making Claims of Copyright Infringement</b> </p> 
 <p>8.1 If you believe that your work has been copied in a way that constitutes copyright infringement, you may provide written notice to IoT Hub, Inc. (in English only) to the address, as follows:
 <br><br><i>Legal Counsel</i>
-<br>42 Broadway Suite 12-400, New York, 10004 NY, USA
+<br>110 Duane Street, Suite 1C, New York, 10007 NY, USA
 </p> 
 
 <br>

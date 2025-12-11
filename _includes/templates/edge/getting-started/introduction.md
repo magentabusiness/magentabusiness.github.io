@@ -1,8 +1,7 @@
-The goal of this tutorial is to demonstrate the basic usage of the most popular IoT Hub Edge features. You will learn how to:
+This tutorial will guide you through the fundamentals of the **IoT Hub Edge** platform and introduce you to the most widely used features. From this tutorial, you will learn how to:
+* Install and run **IoT Hub Edge** on your machine.
+* Connect local devices, such as temperature sensors.
+* Transmit data from the device to the **Edge** and then from the **Edge** to the **IoT Hub**.
+* Create and configure real-time dashboards.
 
-- Connect devices to IoT Hub Edge;
-- Provision devices from IoT Hub Edge to {{currentIoT HubVersion}} server (cloud); 
-- Push data from devices to IoT Hub Edge and propagate this data to {{currentIoT HubVersion}} server (cloud);
-- Build real-time end-user dashboards on cloud and provision them to edge;
-
-We will connect and visualize data from the temperature sensor to keep it simple.
+To keep it simple, we will skip over lengthy descriptions. However, if you need more detailed information, check out the [“What is ThingsBoard Edge” article](/docs/{{docsPrefix}}getting-started-guides/what-is-edge/){:target="_blank"} and explore our other documentation. 

@@ -1,7 +1,7 @@
 IoT Hub provides the ability to track user actions in order to keep audit log. 
 It is possible to log user actions related to main entities: assets, devices, dashboard, rules, etc. 
 
-### User Interface
+## User Interface
 
 Tenant Administrator is able to review audit logs that belong to corresponding tenant account. The administrator is able to setup date range and executes a full-text search for fetched entities.
 
@@ -11,15 +11,13 @@ The "details" button allows reviewing low-level details of the logged action.
 
 ![image](/images/user-guide/ui/audit-log-details.png)
 
-### REST API
+## REST API
 
 It is possible to fetch audit logs via [REST API](https://iothub.magenta.at/swagger-ui.html#/audit-log-controller). 
 There are several API calls that allow to fetch entities related to particular user, entity, customer or fetch all records using page links.  
 
-{% unless docsPrefix == "paas/" %}
-### General configuration
-
-System administrator is able to configure audit log levels using [thingsboard.yml](/docs/{{docsPrefix}}user-guide/install/config/). You can find sample configuration below:
+{% unless docsPrefix contains "paas/" %}
+## General configuration
 
 ```yaml
 # Audit log parameters
@@ -50,7 +48,7 @@ We recommend to modify "by_tenant_partitioning" parameter based on the number of
 The more actions you plan to log, the more precise partitioning is required. 
 The approximate amount of records per partition should not exceed 500 000 records.
 
-### External log sink configuration
+## External log sink configuration
 
 System administrator is able to configure connection to external system. This connection will be used to push audit logs.
 The configuration parameters are well documented inline.
@@ -71,7 +69,7 @@ The configuration parameters are well documented inline.
     host: "${AUDIT_LOG_SINK_HOST:localhost}"
     port: "${AUDIT_LOG_SINK_POST:9200}"
     user_name: "${AUDIT_LOG_SINK_USER_NAME:}"
-    password: "${AUDIT_LOG_SINK_PASSWORD:}"      
+    password: "${AUDIT_LOG_SINK_PASSWORD:}"
 ```
 {% endunless %}
 

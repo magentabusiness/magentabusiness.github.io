@@ -1,0 +1,2 @@
+**{{integrationName}} Integration** allows data to be streamed to **IoT Hub Edge** from devices that use a {{integrationName}} transport protocol, 
+and converts payloads from these devices to the **IoT Hub Edge** format.

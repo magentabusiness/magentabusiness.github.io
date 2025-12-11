@@ -1,5 +1,11 @@
-Once started, you will be able to open IoT Hub **Edge** UI using the following link [http://localhost:8080](http://localhost:8080).
+{% if docsPrefix == 'pe/edge/' %}
+{% assign cloudLink = "[**ThingsBoard Cloud**](https://iothub.magenta.at/signup)" %}
+{% else %}
+{% assign cloudLink = "[**ThingsBoard Live Demo**](https://iothub.magenta.at/signup)" %}
+{% endif %}
+
+Once the **Edge** service is started, open the **Edge UI** at [http://localhost:8080](http://localhost:8080){: target="_blank"}.
 
 {% include templates/edge/bind-port-changed-banner.md %}
 
-Please use your tenant credentials from local cloud instance, [**IoT Hub**](https://iothub.magenta.at/signup) or [**IoT Hub Live Demo**](https://iothub.magenta.at/signup) to log in to the IoT Hub Edge.
+Please use your tenant credentials from local Server instance or {{cloudLink}}{: target="_blank"} to log in to the **IoT Hub Edge**.

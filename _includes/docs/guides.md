@@ -97,20 +97,18 @@
     }
 
     function reportSearchInput(searchText) {
-
-        if (!ga.hasOwnProperty("loaded") || ga.loaded !== true) {
-            return;
+        if (checkGTagDataLayer()) {
+                return;
         }
 
-        ga(
-            "send", "event", "Guides", "search",
-            searchText, searchPageCount
-        );
+        gtag("event", "search", {
+                "search_term": searchText,
+                "event_label": "Guides", 
+                "searchPageCount": searchPageCount  
+        });
     }
     
 </script>
-
-{% assign guides = site.data.guides-data %}
 
 <ul id="markdown-toc">
     {% for item in guides %}
@@ -118,9 +116,11 @@
     {% elsif guidesVersion == 'ce' and item.cepage == 'false' %}
     {% elsif guidesVersion == 'pe' and item.pepage == 'false' %}
     {% else %}
+        {% if item.title %}
         <li>
             <a href="#AnchorID{{ item.id }}" id="markdown-toc-AnchorID{{ item.id }}">{{ item.title }}</a>
         </li>
+        {% endif %}
     {% endif %}
     {% endfor %}
 </ul>

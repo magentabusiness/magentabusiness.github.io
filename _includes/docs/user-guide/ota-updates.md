@@ -144,10 +144,10 @@ for software:
 ```
 
 {% capture contenttogglespec %}
-HTTP<br/>%,%http%,%templates/install/http-firmware.md%br%
-MQTT<br/>%,%mqtt%,%templates/install/mqtt-firmware.md%br%
-CoAP<br/>%,%aws%,%templates/install/coap-firmware.md%br%{% endcapture %}
-{% include content-toggle.html content-toggle-id="remoteintegrationdockerinstall" toggle-spec=contenttogglespec %}
+HTTP<br>%,%http%,%templates/install/http-firmware.md%br%
+MQTT<br>%,%mqtt%,%templates/install/mqtt-firmware.md%br%
+CoAP<br>%,%aws%,%templates/install/coap-firmware.md%br%{% endcapture %}
+{% include content-toggle.liquid content-toggle-id="remoteintegrationdockerinstall" toggle-spec=contenttogglespec %}
 
 ## Dashboard
 
@@ -166,8 +166,6 @@ Click the "History of the firmware updates" button next to the device name to le
 
 {% include images-gallery.html imageCollection="fw-status" %}
 
-{% include images-gallery.html imageCollection="fw-status-1" %}
-
 ### Software update monitoring dashboard
 
 The dashboard is created automatically for each new tenant that you add to IoT Hub.
@@ -177,17 +175,13 @@ There you can see a list of all devices with full information about their softwa
 
 {% include images-gallery.html imageCollection="sw-dashboard" %}
 
-Click the "History of the software updates" button next to the device name to learn about the software update status of specific device.
+{% unless docsPrefix contains "paas/" %}
 
-{% include images-gallery.html imageCollection="sw-status" %}
+### Configuration
 
-{% include images-gallery.html imageCollection="sw-status-1" %}
+#### Queue processing pace
 
-## Configuration
-
-##### Queue processing pace
-
-To set the max number of devices that will be notified in the chosen time period using the following [configuration](/docs/{{docsPrefix}}user-guide/install/config/) properties:
+To set the max number of devices that will be notified in the chosen time period using the following [configuration](/docs/user-guide/install/{{docsPrefix}}config/) properties:
 
 ```bash
 export TB_QUEUE_CORE_FW_PACK_INTERVAL_MS=60000
@@ -195,6 +189,8 @@ export TB_QUEUE_CORE_FW_PACK_SIZE=100
 ```
 {: .copy-code}
 
-##### Max size setting
+#### Max size setting
 
 By default, the maximum size of firmware that we can save in database is 2 gb. It can not be configured.
+
+{% endunless %}

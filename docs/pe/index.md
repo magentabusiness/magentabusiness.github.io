@@ -5,4 +5,5 @@ description: IoT Hub documentation - learn about the platform and get your IoT p
 ---
 
 {% assign docsPrefix = "pe/" %}
+{% include get-hosts-name.html docsPrefix=docsPrefix %}
 {% include docs/pe/index.md %}

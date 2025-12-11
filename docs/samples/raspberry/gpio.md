@@ -19,15 +19,15 @@ Current GPIO state and GPIO control widget is visualized using built-in customiz
 
 The video below demonstrates the final result of this tutorial.
 
-<br/>
-<br/>
+<br>
+<br>
 <div id="video">  
     <div id="video_wrapper">
         <iframe src="https://www.youtube.com/embed/SRnYjoS3M0Y" frameborder="0" allowfullscreen></iframe>
     </div>
 </div>
-<br/>
-<br/>
+<br>
+<br>
 
 {% include templates/prerequisites.md %}
 
@@ -42,7 +42,7 @@ The video below demonstrates the final result of this tutorial.
 ## Wiring schema
 
  Since our application will allow controlling the state of all available GPIO pins, we recommend attaching some LEDs to those pins for visibility.
- You can use this [basic instruction](https://www.raspberrypi.org/documentation/usage/gpio/) or [another one](https://projects.drogon.net/raspberry-pi/gpio-examples/tux-crossing/gpio-examples-1-a-single-led/) to wire some LEDs.
+ You can use this [basic instruction](https://www.raspberrypi.com/documentation/usage/gpio/) or [another one](https://projects.drogon.net/raspberry-pi/gpio-examples/tux-crossing/gpio-examples-1-a-single-led/) to wire some LEDs.
 
 ## Programming the Raspberry Pi
 
@@ -81,7 +81,7 @@ In order to simplify this guide, we have included "Raspberry PI GPIO Demo Dashbo
 You still can modify this dashboard: tune, add, delete widgets, etc.
 You can access this dashboard by logging in as a tenant administrator. Use
 
- - login: tenant@thingsboard.org
+ - login: tenant@magenta.com
  - password: tenant
  
 in case of local IoT Hub installation.

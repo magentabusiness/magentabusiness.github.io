@@ -4,11 +4,9 @@ In this case, IoT Hub will be storing timeseries data in Cassandra while continu
 {% endcapture %}
 {% include templates/info-banner.md content=hybrid-info %}
 
-{% include templates/install/cassandra-4x-beta.md %}
-
 ##### PostgreSQL Installation
 
-Download the installation file (PostgreSQL 11.7 or newer releases) [here](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads#windows) and follow the installation instructions.
+Download the installation file (PostgreSQL 12.17 or newer releases) [here](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads#windows) and follow the installation instructions.
 
 During PostgreSQL installation, you will be prompted for superuser (postgres) password.
 Don't forget this password. It will be used later. For simplicity, we will substitute it with "postgres".
@@ -16,7 +14,7 @@ Don't forget this password. It will be used later. For simplicity, we will subst
 ##### Create IoT Hub Database
 
 Once installed, launch the "pgAdmin" software and login as superuser (postgres). 
-Open your server and create database "thingsboard" with owner "postgres".
+Open your server and create database "iot hub" with owner "postgres".
 
 ##### Cassandra Installation
 
@@ -63,7 +61,7 @@ Open the Notepad or other editor as administrator user (right click on the app i
 Open the following file for editing (select "All Files" instead of "Text Documents" in file choosing dialog, the encoding is UTF-8):
 
 ```text 
-C:\Program Files (x86)\thingsboard\conf\thingsboard.yml
+C:\Program Files (x86)\iot hub\conf\thingsboard.yml
 ``` 
 {: .copy-code}
 
@@ -81,7 +79,6 @@ spring:
     open-in-view: "false"
     hibernate:
       ddl-auto: "none"
-    database-platform: "${SPRING_JPA_DATABASE_PLATFORM:org.hibernate.dialect.PostgreSQLDialect}"
   datasource:
     driverClassName: "${SPRING_DRIVER_CLASS_NAME:org.postgresql.Driver}"
     url: "${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/thingsboard}"

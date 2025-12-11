@@ -1,4 +1,5 @@
 {% capture oauth2-not-supported %}
-At the moment Edge doesn't support OAuth 2.0 login. To be able to login into Edge with your OAuth 2.0 user, you must set password for this user in the IoT Hub server. 
+Currently, **Edge** does not support **OAuth 2.0** for login purposes. 
+If you wish to access Edge using your OAuth 2.0 **user credentials**, it is necessary to **assign a password** for this user on the **IoT Hub server.**
 {% endcapture %}
-{% include templates/info-banner.md content=oauth2-not-supported %}
+{% include templates/warn-banner.md content=oauth2-not-supported %}

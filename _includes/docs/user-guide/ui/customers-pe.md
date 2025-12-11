@@ -3,35 +3,67 @@
 
 ## Introduction
 
-[Tenant administrators](/docs/{{docsPrefix}}user-guide/ui/tenants/) can create customer groups and customers. In turn, a customer can manage the account at its own level: devices, rule chains, assets, etc.
+A **Customer** in IoT Hub can represent a distinct business entity — either an **individual or an organization** — that **purchases or uses the tenant’s devices and/or assets**. 
+A customer can also act as a **department or subdivision** within the tenant&#39;s organization.
+Customers can scale from small units to large ecosystems with **many users, sub-customers**, and **a large number of devices and assets**.
 
-{% include images-gallery.html imageCollection="customers-pe" %}
+[Tenant Administrators](/docs/{{docsPrefix}}user-guide/ui/tenants/) have the ability to create customer groups as well as individual customers.
 
-##### Add new customer
+Customers, once created, can manage their own environment, including:
+- Creating and managing customer users
+- Adding and editing devices, assets, dashboards and other entities.
 
-Customer can add a custom user to his account with limited rights that customer can adjust in user details.
-To add a new customer:
-1. Click the plus sign in the upper right corner of the screen. In the opened dialog box, enter a name of the new customer, adjust white labeling ability,
-   dashboard configuration and personal information. After entering, click Add;
-2. You can add as many customers as you want in the same way. Opposite to the customer names, you can manage customer account fastly.
+## Create new customer
 
-{% include images-gallery.html imageCollection="customer-addnew-pe" %}
+The tenant administrator can add a new customer using the following steps.
 
-##### Edit customer
+{% include images-gallery.html imageCollection="customer-add-new-pe" showListImageTitles="true" %}
+{% include images-gallery.html imageCollection="customer-add-new-pe" showListImageTitles="true" %}
 
-Customers have an opportunity to add and edit their own customers, users, assets, devices, entity views, and dashboards.
-All of these you and your customers are able to do in the user details:
-to manage such options as customer groups, [user groups](/docs/{{docsPrefix}}user-guide/ui/users/), [asset groups](/docs/{{docsPrefix}}user-guide/ui/assets/),
-[device groups](/docs/{{docsPrefix}}user-guide/ui/devices/), [entity view groups](/docs/{{docsPrefix}}user-guide/entity-views/),
-[dashboard groups](/docs/user-guide/dashboards/), and delete a customer.
+In this case, the new customer will be located in the "All" customer's group.
+You can specify a separate group during the process of creating a customer.
 
-{% include images-gallery.html imageCollection="edit-customer-pe" %}
+Let's create another client and a separate customer group for it.
 
-##### Deleting customer
+{% include images-gallery.html imageCollection="customer-add-new-2-pe" showListImageTitles="true" %}
 
-You can delete a customer account from IoT Hub in two ways:
-1. Click a trash can opposite to the customer name and confirm deleting an account in the dialog box.
-2. In the customer details, select Delete customer and confirm deleting an account in the dialog box.
+Read more information about entity groups [here](/docs/{{docsPrefix}}user-guide/groups/).
 
-{% include images-gallery.html imageCollection="deleting-customer-pe" %}
+## Create customer user
 
+The tenant administrator can add a customer user to his account with limited permissions. Permissions for the new customer user can be configured later with the help of [Roles](/docs/{{docsPrefix}}user-guide/rbac/).
+
+{% include images-gallery.html imageCollection="add-customer-user" showListImageTitles="true" %}
+
+## Edit customer or customer user
+
+The Tenant administrator can edit the title, specify a home dashboard and edit the rest of the fields for the customer.
+Let’s see how to do this:
+
+{% include images-gallery.html imageCollection="edit-customer-pe" showListImageTitles="true" %}
+
+Also, you can edit customer user information.
+
+The steps are similar to how we edit the customer:
+
+{% include images-gallery.html imageCollection="edit-customer-user" showListImageTitles="true" %}
+
+## Delete customer or customer user
+
+The tenant administrator can delete a customer along with all its customer users using one of the following ways:
+
+First way:
+
+{% include images-gallery.html imageCollection="delete-customer-pe" showListImageTitles="true" %}
+
+Second way:
+
+{% include images-gallery.html imageCollection="delete-customer-2-pe" showListImageTitles="true" %}
+
+You can also delete multiple customers at once.
+
+{% include images-gallery.html imageCollection="delete-customer-3-pe" showListImageTitles="true" %}
+
+Also, you can delete any customer user from the customer. The steps are the same as when deleting a customer.
+
+{% include images-gallery.html imageCollection="delete-customer-user-1" showListImageTitles="true" %}

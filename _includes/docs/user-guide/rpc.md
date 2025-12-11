@@ -54,7 +54,7 @@ The RPC response may be any number, string or JSON. For example:
 1631881236974
 ```
 
-#### Sending the client-side RPC from the device
+### Sending the client-side RPC from the device
 
 IoT Hub provides an API to send RPC commands from the device.
 The API is specific for each supported network protocol.
@@ -66,7 +66,7 @@ You may review the API and examples on the corresponding reference page:
 
 LwM2M and SNMP protocols do not support the client-side RPC yet.
 
-#### Processing the client-side RPC by the platform
+### Processing the client-side RPC by the platform
 
 The client-side RPC command is transformed to the Rule Engine 
 message with the "TO_SERVER_RPC_REQUEST" [message type](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#predefined-message-types). 
@@ -126,7 +126,7 @@ Persistent RPC has a configurable lifetime and is stored in the database.
 Persistent RPC is extremely useful when your device may not be reachable for long period of time. 
 This typically happens in case of poor network connection or [Power-Saving Mode](/docs/{{docsPrefix}}user-guide/psm) (PSM).
 
-#### Server-side RPC structure
+### Server-side RPC structure
 
 The body of server-side RPC request consists of multiple fields:
 
@@ -163,7 +163,7 @@ The RPC response may be any JSON. For example:
 }
 ```
 
-#### Sending server-side RPC
+### Sending server-side RPC
 
 The server-side RPC are typically sent using REST API or dashboard widgets. In fact, dashboard widgets use the same REST API. 
 Once platform received the RPC, it validates the payload and runs permission checks.
@@ -172,7 +172,7 @@ The Rule Engine may enrich the command with additional parameters and finally is
 
 Let's review how to send the command in details:
 
-##### Using the REST API
+#### Using the REST API
 
 In order to send an RPC request you need to execute an HTTP POST request to the following URL:
 
@@ -220,14 +220,14 @@ When user sends the **persistent** RPC via REST API, the response contains the u
 You may use this identifier to track the state of the command. See persistent RPC [states](#persistent-rpc-states) for more details.
 
 
-##### Using the Dashboard
+#### Using the Dashboard
 
 The [Control Widgets](/docs/{{docsPrefix}}user-guide/ui/widget-library/#rpc-control-widget) are used to send RPC commands to the device.
 The most popular widgets are "RPC Button", "Round Switch", "Switch Control" and "Knob Control". 
 The advanced settings of those widgets allow you to define RPC method name and params.
 You may also develop [custom widgets](/docs/{{docsPrefix}}user-guide/contribution/widgets-development) and use [control api](/docs/{{docsPrefix}}user-guide/contribution/widgets-development/#control-api) to send RPC commands.
 
-##### Using the Rule Engine
+#### Using the Rule Engine
 
 All server-side RPC commands that are sent from the widgets or REST API are eventually transformed to the rule engine message 
 with the "RPC_CALL_FROM_SERVER_TO_DEVICE" [message type](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#predefined-message-types).
@@ -254,7 +254,7 @@ return { msg: msg, metadata: metadata, msgType: msgType };
 
 {% include images-gallery.html imageCollection="server-side-rpc-rule-chain" %}
 
-#### Processing server-side RPC on the device
+### Processing server-side RPC on the device
 
 IoT Hub provides a convenient API to receive and process server-side RPC commands on the device.
 This API is specific for each supported network protocol.
@@ -265,29 +265,52 @@ You can review API and examples on the corresponding reference page:
  - [HTTP RPC API reference](/docs/{{docsPrefix}}reference/http-api/#rpc-api) 
 
 
-#### Persistent RPC
+### Persistent RPC
 
-##### States
+#### States
 
 IoT Hub tracks state of the persistent RPC. There are 7 available states:
+
+{% if docsPrefix contains 'paas/' %}
 
 * **QUEUED** - RPC was created and saved to the database; 
   No attempt to send the RPC to device yet;
   IoT Hub will attempt to send the RPC immediately when device becomes online or if it is already online;
   The platform will attempt to send all pending RPC calls at once by default. 
   In rare cased of constrained devices and multiple messages in the queue this may lead to overload of the network or device.
-  To avoid the overload, you may enable sequential delivery of RPC calls using "ACTORS_RPC_SEQUENTIAL" [configuration](/docs/{{docsPrefix}}user-guide/install/config/) parameter.
 * **SENT** - IoT Hub performed attempt to send the RPC to device.
 * **DELIVERED** - device confirmed that the RPC was delivered; This is the last step of processing for **one-way** RPC;   
 * **SUCCESSFUL** - IoT Hub received reply for the **two-way** RPC;  
 * **TIMEOUT** - IoT Hub transport layer (MQTT/CoAP/LwM2M, etc) detected timeout of the RPC delivery;
-The timeout is controlled using one of the corresponding [configuration](/docs/{{docsPrefix}}user-guide/install/config/) parameters: 
+The timeout is controlled using one of the corresponding configuration parameters: 
 MQTT_TIMEOUT (10 seconds by default), COAP_TIMEOUT (10 seconds by default), LWM2M_TIMEOUT (120 seconds by default)
 By default, platform will not retry delivery of the RPC, and the state will change to FAILED.
 You may configure number of retries in the RPC body. 
-The maximum number of retries is controlled by "ACTORS_RPC_MAX_RETRIES" [configuration](/docs/{{docsPrefix}}user-guide/install/config/) parameter (5 by default).
+The maximum number of retries is 5 by default.
 * **EXPIRED** - The RPC was not delivered or platform did not receive the reply from device within configured expiration time;
 * **FAILED** - failed to deliver the RPC during configurable number of retries or device firmware does not support such a command.
+
+{% else %}
+
+* **QUEUED** - RPC was created and saved to the database;
+  No attempt to send the RPC to device yet;
+  IoT Hub will attempt to send the RPC immediately when device becomes online or if it is already online;
+  The platform will attempt to send all pending RPC calls at once by default.
+  In rare cased of constrained devices and multiple messages in the queue this may lead to overload of the network or device.
+  To avoid the overload, you may enable sequential delivery of RPC calls using "ACTORS_RPC_SEQUENTIAL" configuration parameter.
+* **SENT** - IoT Hub performed attempt to send the RPC to device.
+* **DELIVERED** - device confirmed that the RPC was delivered; This is the last step of processing for **one-way** RPC;
+* **SUCCESSFUL** - IoT Hub received reply for the **two-way** RPC;
+* **TIMEOUT** - IoT Hub transport layer (MQTT/CoAP/LwM2M, etc) detected timeout of the RPC delivery;
+  The timeout is controlled using one of the corresponding configuration parameters:
+  MQTT_TIMEOUT (10 seconds by default), COAP_TIMEOUT (10 seconds by default), LWM2M_TIMEOUT (120 seconds by default)
+  By default, platform will not retry delivery of the RPC, and the state will change to FAILED.
+  You may configure number of retries in the RPC body.
+  The maximum number of retries is controlled by "ACTORS_RPC_MAX_RETRIES" configuration parameter (5 by default).
+* **EXPIRED** - The RPC was not delivered or platform did not receive the reply from device within configured expiration time;
+* **FAILED** - failed to deliver the RPC during configurable number of retries or device firmware does not support such a command.
+
+{% endif %}
 
 {% capture sequential-rpc-deadlock-warning %}
 Be careful while configuring sequential RPC delivery in combination with increased expiration time, delivery timeout and number of retries.
@@ -295,7 +318,7 @@ If sequential RPC delivery is enabled and your device will not be able to handle
 {% endcapture %}
 {% include templates/info-banner.md content=sequential-rpc-deadlock-warning %} 
 
-##### Rule chain events 
+#### Rule chain events 
 
 Changes to the [RPC states](/docs/{{docsPrefix}}user-guide/rpc/#rpc-states) are pushed to the Rule Engine as separate messages. 
 Each RPC state has corresponding message type. See image below:
@@ -352,10 +375,16 @@ See example of successful RPC message below:
 ```
 
 
-##### TTL configuration
+#### TTL configuration
 
+{% if docsPrefix contains 'paas/' %}
+
+The time-to-live of persistent RPC depends on the subscription plan. See 'RPC TTL' parameter in [Subscriptions](/docs/{{docsPrefix}}subscription/) for more details.
+
+{% else %}
 The time-to-live of persistent RPC is configured by the System Administrator in the [Tenant Profile](/docs/{{docsPrefix}}user-guide/tenant-profiles/) using **RPC TTL days configuration** parameter.
-The System administrator may completely disable the cleanup of the persistent RPC from the database using **SQL_TTL_RPC_ENABLED** [configuration](/docs/{{docsPrefix}}user-guide/install/config/) parameter.
-The frequency of RPC cleanup procedure is controlled using **SQL_RPC_TTL_CHECKING_INTERVAL** parameters which is set to 2 hours by defailt.
+The System administrator may completely disable the cleanup of the persistent RPC from the database using **SQL_TTL_RPC_ENABLED** configuration parameter.
+The frequency of RPC cleanup procedure is controlled using **SQL_RPC_TTL_CHECKING_INTERVAL** parameters which is set to 2 hours by default.
 
 {% include images-gallery.html imageCollection="tenant-profile-rpc" %}
+{% endif %}

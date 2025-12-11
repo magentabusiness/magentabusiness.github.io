@@ -30,19 +30,39 @@ npm install coap-cli -g
 
 {: .copy-code}
 
-Replace $ACCESS_TOKEN with corresponding values.
+{% if docsPrefix contains 'paas/' %}
+
+Replace $ACCESS_TOKEN with corresponding value.
 
 ```bash
-echo -n '{"temperature": 25}' | coap post coap://172.31.78.49/api/v1/$ACCESS_TOKEN/telemetry
+echo -n '{"temperature": 25}' | coap post coap://{{coapHostName}}/api/v1/$ACCESS_TOKEN/telemetry
 ```
 {: .copy-code}
 
-For example access token is ABC123:
+For example, $ACCESS_TOKEN is ABC123:
 
 ```bash
-echo -n '{"temperature": 25}' | coap post coap://172.31.78.49/api/v1/ABC123/telemetry 
+echo -n '{"temperature": 25}' | coap post coap://{{coapHostName}}/api/v1/ABC123/telemetry
 ```
 {: .copy-code}
 
-<br/>
-<br/>
+{% else %}
+
+Replace iothub.magenta.at and $ACCESS_TOKEN with corresponding values.
+
+```bash
+echo -n '{"temperature": 25}' | coap post coap://iothub.magenta.at/api/v1/$ACCESS_TOKEN/telemetry
+```
+{: .copy-code}
+
+For example, iothub.magenta.at reference your local installation, $ACCESS_TOKEN is ABC123:
+
+```bash
+echo -n '{"temperature": 25}' | coap post coap://localhost/api/v1/ABC123/telemetry
+```
+{: .copy-code}
+
+{% endif %}
+
+<br>
+<br>

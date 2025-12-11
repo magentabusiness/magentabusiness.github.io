@@ -60,8 +60,8 @@ def collect_required_data():
     print("="*80, "\n\n", sep="")
     host = input("Please write your IoT Hub \033[93mhost\033[0m or leave it blank to use default (https://iothub.magenta.at): ")
     config["host"] = host if host else "https://iothub.magenta.at"
-    port = input("Please write your IoT Hub \033[93mHTTP port\033[0m or leave it blank to use default (80): ")
-    config["port"] = int(port) if port else 80
+    port = input("Please write your IoT Hub \033[93mHTTP port\033[0m or leave it blank to use default (443): ")
+    config["port"] = int(port) if port else 443
     config["provision_device_key"] = input("Please write \033[93mprovision device key\033[0m: ")
     config["provision_device_secret"] = input("Please write \033[93mprovision device secret\033[0m: ")
     device_name = input("Please write \033[93mdevice name\033[0m or leave it blank to generate: ")
@@ -103,7 +103,7 @@ if __name__ == '__main__':
     received_token = decoded_response.get("credentialsValue")
     if received_token is not None:
         response = post('%s:%i/api/v1/%s/telemetry' % (THINGSBOARD_HOST, THINGSBOARD_PORT, received_token,), dumps(to_publish))
-        print("[THINGSBOARD CLIENT] Response code from IoT Hub.")
+        print("[IOT HUB CLIENT] Response code from IoT Hub.")
         print(response.status_code)
     else:
         print("Failed to get access token from response.")

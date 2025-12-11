@@ -22,7 +22,7 @@ def collect_required_data():
     print(" "*20, "IoT Hub basic device claiming example script.", sep="")
     print("="*80, "\n\n", sep="")
     host = input("Please write your IoT Hub host or leave it blank to use default (iothub.magenta.at): ")
-    config["host"] = host if host else "iothub.magenta.at"
+    config["host"] = host if host else "mqtt.iothub.magenta.at"
     token = ""
     while not token:
         token = input("Please write accessToken for device: ")

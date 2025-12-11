@@ -1,10 +1,11 @@
 ---
 layout: docwithnav-pe
-title: Enrichment Nodes
-description: Rule Engine 2.0 Enrichment Nodes
+title: Enrichment nodes
+description: Rule Engine 2.0 Enrichment nodes
 
 ---
 
 {% assign docsPrefix = "pe/" %}
-{% include docs/user-guide/rule-engine-2-0/ce-enrichment-nodes.md %}
+{% include get-hosts-name.html docsPrefix=docsPrefix %}
+{% include docs/user-guide/rule-engine-2-0/enrichment-nodes.md %}
 

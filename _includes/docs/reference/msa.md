@@ -25,7 +25,7 @@ Each of the transport servers listed above communicates with the main IoT Hub No
 [Apache Kafka](https://kafka.apache.org) is a distributed, reliable and scalable persistent message queue and streaming platform.
 
 The messages that are sent to Kafka are serialized using [protocol buffers](https://developers.google.com/protocol-buffers/) 
-with the messages definition available [here](https://github.com/thingsboard/thingsboard/blob/master/common/transport/transport-api/src/main/proto/transport.proto).
+with the messages definition available [here](https://github.com/thingsboard/thingsboard/blob/master/common/proto/src/main/proto/transport.proto).
 
 **Note**: Starting v2.5, IoT Hub is going to support alternative queue implementation: Amazon DynamoDB. See [roadmap](/docs/{{docsPrefix}}reference/roadmap) for more details.
  
@@ -99,10 +99,15 @@ The main idea is to sacrifice small performance/latency penalties in favor of pe
 [Apache Kafka](https://kafka.apache.org/) is an open-source stream-processing software platform. IoT Hub uses Kafka to persist incoming telemetry from HTTP/MQTT/CoAP transpots 
 until it is processed by the rule engine. IoT Hub also uses Kafka for some API calls between micro-services.
 
-### Redis
+### Cache database
 
-[Redis](https://redis.io/) is an open source (BSD licensed), in-memory data structure store used by IoT Hub for caching. 
 IoT Hub caches assets, entity views, devices, device credentials, device sessions and entity relations.
+
+##### Redis
+[Redis](https://redis.io/) is source-available (under [RSALv2](https://redis.io/legal/rsalv2-agreement/) and [SSPLv1](https://redis.io/legal/server-side-public-license-sspl/)) in-memory data structure store used by IoT Hub for caching.
+
+##### Valkey
+[Valkey](https://valkey.io/) is an open-source (BSD licensed), in-memory data structure store that could be used as a drop-in replacement for Redis.
 
 ### Zookeeper
 
@@ -250,7 +255,7 @@ and corresponding [documentation](https://github.com/thingsboard/thingsboard/blo
 TODO: 2.5  
 
 {% highlight yaml %}
-version: '2.2'
+version: '3.0'
 
 services:
   zookeeper:
@@ -278,7 +283,8 @@ services:
   tb-js-executor:
     restart: always
     image: "${DOCKER_REPO}/${JS_EXECUTOR_DOCKER_NAME}:${TB_VERSION}"
-    scale: 20
+    deploy:
+      replicas: 20
     env_file:
       - tb-js-executor.env
     depends_on:

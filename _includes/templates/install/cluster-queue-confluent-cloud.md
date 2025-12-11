@@ -3,13 +3,13 @@
 Configure IoT Hub environment file:
 
 ```text
-sudo nano .env
+nano .env
 ```
 {: .copy-code}
 
 Check following line:
 
-```.env
+```bash
 TB_QUEUE_TYPE=confluent
 ```
 {: .copy-code}
@@ -17,13 +17,13 @@ TB_QUEUE_TYPE=confluent
 Configure Confluent Cloud environment file for IoT Hub queue service:
 
 ```text
-sudo nano queue-confluent-cloud.env
+nano queue-confluent-cloud.env
 ```
 {: .copy-code}
 
 Don’t forget to replace "CLUSTER_API_KEY", "CLUSTER_API_SECRET" and "confluent.cloud:9092" with your real Confluent Cloud bootstrap servers:
 
-```.env
+```bash
 TB_QUEUE_TYPE=kafka
 
 TB_KAFKA_SERVERS=confluent.cloud:9092
@@ -32,7 +32,7 @@ TB_QUEUE_KAFKA_REPLICATION_FACTOR=3
 TB_QUEUE_KAFKA_USE_CONFLUENT_CLOUD=true
 TB_QUEUE_KAFKA_CONFLUENT_SSL_ALGORITHM=https
 TB_QUEUE_KAFKA_CONFLUENT_SASL_MECHANISM=PLAIN
-TB_QUEUE_KAFKA_CONFLUENT_SASL_JAAS_CONFIG=org.apache.kafka.common.security.plain.PlainLoginModule required username="CLUSTER_API_KEY" password="CLUSTER_API_SECRET";
+TB_QUEUE_KAFKA_CONFLUENT_SASL_JAAS_CONFIG='org.apache.kafka.common.security.plain.PlainLoginModule required username="CLUSTER_API_KEY" password="CLUSTER_API_SECRET";'
 TB_QUEUE_KAFKA_CONFLUENT_SECURITY_PROTOCOL=SASL_SSL
 TB_QUEUE_KAFKA_CONFLUENT_USERNAME=CLUSTER_API_KEY
 TB_QUEUE_KAFKA_CONFLUENT_PASSWORD=CLUSTER_API_SECRET
@@ -58,19 +58,18 @@ TB_QUEUE_KAFKA_JE_TOPIC_PROPERTIES=retention.ms:604800000;segment.bytes:52428800
 # Number of requests per second = 44 * 1000 / 25 = 1760 requests
 
 # Based on the use case, you can compromise latency and decrease number of partitions/requests to the queue, if the message load is low.
+# By UI set the parameters - interval (1000) and partitions (1) for Rule Engine queues.
 # Sample parameters to fit into 10 requests per second on a "monolith" deployment: 
 
 TB_QUEUE_CORE_POLL_INTERVAL_MS=1000
 TB_QUEUE_CORE_PARTITIONS=2
 TB_QUEUE_RULE_ENGINE_POLL_INTERVAL_MS=1000
-TB_QUEUE_RE_MAIN_POLL_INTERVAL_MS=1000
-TB_QUEUE_RE_MAIN_PARTITIONS=2
-TB_QUEUE_RE_HP_POLL_INTERVAL_MS=1000
-TB_QUEUE_RE_HP_PARTITIONS=1
-TB_QUEUE_RE_SQ_POLL_INTERVAL_MS=1000
-TB_QUEUE_RE_SQ_PARTITIONS=1
 TB_QUEUE_TRANSPORT_REQUEST_POLL_INTERVAL_MS=1000
 TB_QUEUE_TRANSPORT_RESPONSE_POLL_INTERVAL_MS=1000
 TB_QUEUE_TRANSPORT_NOTIFICATIONS_POLL_INTERVAL_MS=1000
+TB_QUEUE_VC_INTERVAL_MS=1000
+TB_QUEUE_VC_PARTITIONS=1
 ```
 {: .copy-code}
+
+You can update default Rule Engine queues configuration using UI. More about IoT Hub Rule Engine queues see in [documentation](/docs/{{docsPrefix}}user-guide/rule-engine-2-5/queues/).

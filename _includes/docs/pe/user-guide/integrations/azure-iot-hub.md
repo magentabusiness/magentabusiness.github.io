@@ -67,7 +67,7 @@ return result;
 
 ![image](/images/user-guide/integrations/azure/iot-hub-converter.png)
 
-##### Azure IoT Hub Integration
+### Azure IoT Hub Integration
 
 Next we will create Integration with Azure IoT Hub inside the IoT Hub. Open **Integrations** section and add new Integration with type
 **Azure IoT Hub**
@@ -120,7 +120,7 @@ Send test message to device.
 
 Go to **Device Group** -> **All** -> **T1** - you can see that 
 
-- new device was registered in the thingsboard
+- new device was registered in the IoT Hub
 - In the **Latest Telemetry** section you will see that last submitted temperature = 42 and humidity = 77.
 
 ![image](/images/user-guide/integrations/azure/iot-hub-validate-telemetry.png)

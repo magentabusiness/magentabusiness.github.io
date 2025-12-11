@@ -33,10 +33,10 @@ Provisioning response example:
 
 #### Sample script
 
-To communicate with IoT Hub we will use CoAPthon3 module, so we should install it:
+To communicate with IoT Hub we will use asyncio and aiocoap modules, so we should install it:
 
 ```bash
-pip3 install coapthon3 --user
+pip3 install asyncio aiocoap --user
 ```
 {: .copy-code}
 
@@ -58,9 +58,16 @@ python3 device-provision-example.py
 The script source code: 
 
 ```python
+import logging
+import asyncio
 
-from coapthon.client.helperclient import HelperClient
+from aiocoap import Context, Message, Code
 from json import loads, dumps
+
+THINGSBOARD_HOST = ""
+THINGSBOARD_PORT = ""
+
+logging.basicConfig(level=logging.INFO)
 
 
 def collect_required_data():
@@ -68,8 +75,8 @@ def collect_required_data():
     print("\n\n", "="*80, sep="")
     print(" "*10, "\033[1m\033[94mIoT Hub device provisioning with access token authorization example script. CoAP API\033[0m", sep="")
     print("="*80, "\n\n", sep="")
-    host = input("Please write your IoT Hub \033[93mhost\033[0m or leave it blank to use default (iothub.magenta.at): ")
-    config["host"] = host if host else "iothub.magenta.at"
+    host = input("Please write your IoT Hub \033[93mhost\033[0m or leave it blank to use default ({{coapHostName}}): ")
+    config["host"] = host if host else "{{coapHostName}}"
     port = input("Please write your IoT Hub \033[93mCoAP port\033[0m or leave it blank to use default (5683): ")
     config["port"] = int(port) if port else 5683
     config["provision_device_key"] = input("Please write \033[93mprovision device key\033[0m: ")
@@ -95,6 +102,48 @@ to_publish = {
   }
 }
 
+
+async def process():
+    server_address = "coap://" + THINGSBOARD_HOST + ":" + str(THINGSBOARD_PORT)
+
+    client_context = await Context.create_client_context()
+    await asyncio.sleep(2)
+    try:
+        msg = Message(code=Code.POST, payload=str.encode(dumps(PROVISION_REQUEST)), uri=server_address+'/api/v1/provision')
+        request = client_context.request(msg)
+        try:
+            response = await asyncio.wait_for(request.response, 60000)
+        except asyncio.TimeoutError:
+            raise Exception("Request timed out!")
+
+        if response is None:
+            raise Exception("Response is empty!")
+
+        decoded_response = loads(response.payload)
+        logging.info("Received response: %s", decoded_response)
+        received_token = decoded_response.get("credentialsValue")
+        if received_token is not None:
+            msg = Message(code=Code.POST, payload=str.encode(dumps(to_publish)),
+                          uri=server_address+('/api/v1/%s/telemetry' % received_token))
+            request = client_context.request(msg)
+            try:
+                response = await asyncio.wait_for(request.response, 60000)
+            except asyncio.TimeoutError:
+                raise Exception("Request timed out!")
+
+            if response:
+                logging.info("[IOT HUB CLIENT] Response from IoT Hub.")
+                logging.info(response)
+            else:
+                raise Exception("[IOT HUB CLIENT] Cannot save telemetry with received credentials!")
+        else:
+            logging.error("Failed to get access token from response.")
+            logging.error(decoded_response.get("errorMsg"))
+    except Exception as e:
+        logging.error(e)
+    finally:
+        await client_context.shutdown()
+
 if __name__ == '__main__':
 
     config = collect_required_data()
@@ -109,22 +158,8 @@ if __name__ == '__main__':
                          }
     if config.get("device_name") is not None:
         PROVISION_REQUEST["deviceName"] = config["device_name"]
-    client = HelperClient(server=(THINGSBOARD_HOST, THINGSBOARD_PORT))
-    response = client.post('/api/v1/provision', dumps(PROVISION_REQUEST))
-    client.stop()
-    decoded_response = loads(response.payload)
-    print("Received response: ")
-    print(decoded_response)
-    received_token = decoded_response.get("credentialsValue")
-    if received_token is not None:
-        thingsboardClient = HelperClient(server=(THINGSBOARD_HOST, THINGSBOARD_PORT))
-        response = thingsboardClient.post('/api/v1/%s/telemetry' % (received_token,), dumps(to_publish))
-        print("[THINGSBOARD CLIENT] Response from IoT Hub.")
-        print(response)
-        thingsboardClient.stop()
-    else:
-        print("Failed to get access token from response.")
-        print(decoded_response.get("errorMsg"))
+
+    asyncio.run(process())
 
 ```
 {: .copy-code}

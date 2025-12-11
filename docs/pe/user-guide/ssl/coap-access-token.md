@@ -1,0 +1,12 @@
+---
+layout: docwithnav-pe
+assignees:
+- ashvayka
+title: Access Token based authentication for CoAP
+description: IoT Hub Access Token based authentication for CoAP transport.
+
+---
+
+{% assign docsPrefix = "pe/" %}
+{% include get-hosts-name.html docsPrefix=docsPrefix %}
+{% include docs/user-guide/ssl/coap-access-token.md %}

@@ -3,30 +3,46 @@
 Create docker compose file for IoT Hub queue service:
 
 ```text
-docker-compose.yml
+notepad docker-compose.yml
 ```
 {: .copy-code}
 
 Add the following line to the yml file. Don’t forget to replace “CLUSTER_API_KEY”, "CLUSTER_API_SECRET" and "localhost:9092" with your real Confluent Cloud bootstrap servers:
 
 ```yml
-version: '2.2'
 services:
-  mytb:
+  postgres:
     restart: always
-    image: "thingsboard/tb-postgres"
+    image: "postgres:16"
     ports:
-      - "8080:9090"
-      - "1883:1883"
-      - "7070:7070"
-      - "5683-5688:5683-5688/udp"
+      - "5432"
     environment:
+      POSTGRES_DB: iot hub
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+  thingsboard-ce:
+    restart: always
+    image: "thingsboard/tb-node:{{ site.release.ce_full_ver }}"
+    ports:
+      - "8080:8080"
+      - "7070:7070"
+      - "1883:1883"
+      - "8883:8883"
+      - "5683-5688:5683-5688/udp"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "10"
+    environment:
+      TB_SERVICE_ID: tb-ce-node
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/thingsboard
       TB_QUEUE_TYPE: kafka
       TB_KAFKA_SERVERS: localhost:9092
       TB_QUEUE_KAFKA_REPLICATION_FACTOR: 3
       TB_QUEUE_KAFKA_USE_CONFLUENT_CLOUD: true
-      TB_QUEUE_KAFKA_CONFLUENT_SASL_JAAS_CONFIG: org.apache.kafka.common.security.plain.PlainLoginModule required username="CLUSTER_API_KEY" password="CLUSTER_API_SECRET";}
-
+      TB_QUEUE_KAFKA_CONFLUENT_SASL_JAAS_CONFIG: 'org.apache.kafka.common.security.plain.PlainLoginModule required username="CLUSTER_API_KEY" password="CLUSTER_API_SECRET";'
       # These params affect the number of requests per second from each partitions per each queue.
       # Number of requests to particular Message Queue is calculated based on the formula:
       # ((Number of Rule Engine and Core Queues) * (Number of partitions per Queue) + (Number of transport queues)
@@ -41,26 +57,24 @@ services:
       # Number of requests per second = 44 * 1000 / 25 = 1760 requests
       # 
       # Based on the use case, you can compromise latency and decrease number of partitions/requests to the queue, if the message load is low.
+      # By UI set the parameters - interval (1000) and partitions (1) for Rule Engine queues.
       # Sample parameters to fit into 10 requests per second on a "monolith" deployment: 
       TB_QUEUE_CORE_POLL_INTERVAL_MS: 1000
       TB_QUEUE_CORE_PARTITIONS: 2
       TB_QUEUE_RULE_ENGINE_POLL_INTERVAL_MS: 1000
-      TB_QUEUE_RE_MAIN_POLL_INTERVAL_MS: 1000
-      TB_QUEUE_RE_MAIN_PARTITIONS: 2
-      TB_QUEUE_RE_HP_POLL_INTERVAL_MS: 1000
-      TB_QUEUE_RE_HP_PARTITIONS: 1
-      TB_QUEUE_RE_SQ_POLL_INTERVAL_MS: 1000
-      TB_QUEUE_RE_SQ_PARTITIONS: 1
       TB_QUEUE_TRANSPORT_REQUEST_POLL_INTERVAL_MS: 1000
       TB_QUEUE_TRANSPORT_RESPONSE_POLL_INTERVAL_MS: 1000
       TB_QUEUE_TRANSPORT_NOTIFICATIONS_POLL_INTERVAL_MS: 1000
-    volumes:
-      - mytb-data:/data
-      - mytb-logs:/var/log/thingsboard
+      TB_QUEUE_VC_INTERVAL_MS: 1000
+      TB_QUEUE_VC_PARTITIONS: 1      
+    depends_on:
+      - postgres
+
 volumes:
-  mytb-data:
-    external: true
-  mytb-logs:
-    external: true
+  postgres-data:
+    name: tb-postgres-data
+    driver: local
 ```
-{: .copy-code}
+{: .copy-code.expandable-15}
+
+You can update default Rule Engine queues configuration using UI. More about IoT Hub Rule Engine queues see in [documentation](/docs/{{docsPrefix}}user-guide/rule-engine-2-5/queues/).

@@ -2,13 +2,13 @@
 {:toc}
 
 
-### Overview
+## Overview
 
 IoT Hub allows you to generate reports using existing dashboards.
 
 Reports can be generated either from the currently opened dashboard or scheduled using the [Scheduler](/docs/{{docsPrefix}}user-guide/scheduler/#generate-report) capabilities.
 
-<br/>
+<br>
 
 ![image](/images/user-guide/reporting.svg)
 
@@ -16,14 +16,14 @@ Reports can be generated either from the currently opened dashboard or scheduled
 
 See video tutorial below for step-by-step instruction how to use this feature.
 
-<br/>
+<br>
 <div id="video">  
     <div id="video_wrapper">
         <iframe src="https://www.youtube.com/embed/QTeCoe5rUF0" frameborder="0" allowfullscreen></iframe>
     </div>
 </div> 
 
-### Reports Server
+## Reports Server
 
 The Reports Server is a standalone service used to generate reports by rendering dashboards in a headless browser.
 
@@ -33,7 +33,7 @@ The Reports Server opens a web page with the target dashboard URL in the headles
 then it captures the dashboard web page into the specified format (*PDF \| PNG \| JPEG*) and sends the captured data as a response to IoT Hub.
 
 {% if docsPrefix == 'pe/' %}
-The system administrator can configure the Reports Server endpoint URL using [thingsboard.yml](/docs/{{docsPrefix}}user-guide/install/config/).
+The system administrator can configure the Reports Server endpoint URL using thingsboard.yml.
 
 The following is a sample configuration:
 
@@ -45,7 +45,7 @@ reports:
 ```
 {% endif %}
 
-### Generate Report from Dashboard
+## Generate Report from Dashboard
 
 The Tenant Administrator or Customer User can generate a report from the currently opened dashboard.
 
@@ -63,11 +63,11 @@ The Tenant Administrator or Customer User can generate a report from the current
 
 - And finally, the report file will be automatically downloaded in the format selected.
 
-### Generate Report by schedule
+## Generate Report by schedule
 
 Report generation can be invoked by a schedule using the [**Generate Report** Scheduler Event](/docs/{{docsPrefix}}user-guide/scheduler/#generate-report).
 
-### Generate Report Rule Chain
+## Generate Report Rule Chain
 
 Scheduled reports generation is supported by the default **Root Rule Chain** of IoT Hub.
 By default, a message of type **Generate Report** is routed to the **Generate Report Rule Chain**.
@@ -83,7 +83,7 @@ The Email Rule Nodes will prepare the email message with a report file in the at
 
 ![image](/images/user-guide/ui/reporting-generate-report-rule-chain.png)
 
-### Reports Widget
+## Reports Widget
 
 IoT Hub provides access to the generated report files via the **Reports** Widget that is a part of the **Files** Widgets Bundle.
 

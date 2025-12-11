@@ -8,8 +8,6 @@ The Gateway is a special type of device in IoT Hub that is able to act as a brid
 Gateway API provides the ability to exchange data between **multiple devices** and the platform using **single MQTT connection**.
 The Gateway also acts as a IoT Hub device and can leverage existing [MQTT Device API](/docs/{{docsPrefix}}reference/mqtt-api/) to report stats, receive configuration updates and much more.
 
-The API listed below is used by [**IoT Hub open-source IoT Gateway**](/docs/iot-gateway/what-is-iot-gateway/).
-
 ## Basic MQTT API
 
 Please refer to generic [MQTT Device API](/docs/{{docsPrefix}}reference/mqtt-api/) to get information about data format, authentication options, etc.
@@ -20,10 +18,11 @@ In order to inform IoT Hub that device is connected to the Gateway, one needs to
  
 ```shell
 Topic: v1/gateway/connect
-Message: {"device":"Device A"}
+Message: {"device":"Device A", "type": "Sensor A"}
 ```
+{: .copy-code}
 
-where **Device A** is your device name.
+where **Device A** is your device name and **Sensor A** is the name of your device profile, **type** is an optional key (**default** device profile will be used when no **type** is included).
 
 Once received, IoT Hub will lookup or create a device with the name specified.
 Also, IoT Hub will publish messages about new attribute updates and RPC commands for a particular device to this Gateway.
@@ -36,6 +35,7 @@ In order to inform IoT Hub that device is disconnected from the Gateway, one nee
 Topic: v1/gateway/disconnect
 Message: {"device":"Device A"}
 ```
+{: .copy-code}
 
 where **Device A** is your device name.
 
@@ -48,8 +48,8 @@ IoT Hub attributes API allows devices to
 * Upload [client-side](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types) device attributes to the server.
 * Request [client-side](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types) and [shared](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types) device attributes from the server.
 * Subscribe to [shared](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types) device attributes from the server.
- 
-##### Publish attribute update to the server
+
+### Publish attribute update to the server
 
 In order to publish client-side device attributes to IoT Hub server node, send PUBLISH message to the following topic:
 
@@ -57,10 +57,11 @@ In order to publish client-side device attributes to IoT Hub server node, send P
 Topic: v1/gateway/attributes
 Message: {"Device A":{"attribute1":"value1", "attribute2": 42}, "Device B":{"attribute1":"value1", "attribute2": 42}}
 ```
+{: .copy-code}
 
 where **Device A** and **Device B** are your device names, **attribute1** and **attribute2** are attribute keys.
 
-##### Request attribute values from the server
+### Request attribute values from the server
 
 In order to request client-side or shared device attributes to IoT Hub server node, send PUBLISH message to the following topic:
 
@@ -68,14 +69,16 @@ In order to request client-side or shared device attributes to IoT Hub server no
 Topic: v1/gateway/attributes/request
 Message: {"id": $request_id, "device": "Device A", "client": true, "key": "attribute1"}
 ```
+{: .copy-code}
 
 where **$request_id** is your integer request identifier, **Device A** is your device name, **client** identifies a client or shared attribute scope and **key** is the attribute key.
 
-Before sending PUBLISH message with the request, client need to subscribe to 
+Before sending PUBLISH message with the request, client needs to subscribe to 
 
 ```shell
 Topic: v1/gateway/attributes/response
 ```
+{: .copy-code}
 
 and expect messages with result in the following format:
 
@@ -83,13 +86,14 @@ and expect messages with result in the following format:
 Message: {"id": $request_id, "device": "Device A", "value": "value1"}
 ```
 
-##### Subscribe to attribute updates from the server
+### Subscribe to attribute updates from the server
 
 In order to subscribe to shared device attribute changes, send SUBSCRIBE message to the following topic:
 
 ```shell
 v1/gateway/attributes
 ```
+{: .copy-code}
 
 and expect messages with result in the following format:
 
@@ -104,6 +108,7 @@ In order to publish device telemetry to IoT Hub server node, send PUBLISH messag
 ```shell
 Topic: v1/gateway/telemetry
 ```
+{: .copy-code}
 
 Message:
 
@@ -136,6 +141,7 @@ Message:
   ]
 }
 ```
+{: .copy-code}
 
 where **Device A** and **Device B** are your device names, **temperature** and **humidity** are telemetry keys and **ts** is unix timestamp in milliseconds.
 
@@ -148,6 +154,7 @@ In order to subscribe to RPC commands from the server, send SUBSCRIBE message to
 ```shell
 v1/gateway/rpc
 ```
+{: .copy-code}
 
 and expect messages with individual commands in the following format:
 
@@ -160,6 +167,7 @@ Once command is processed by device, gateway can send commands back using follow
 ```shell
 {"device": "Device A", "id": $request_id, "data": {"success": true}}
 ```
+{: .copy-code}
 
 where **$request_id** is your integer request identifier, **Device A** is your device name and **method** is your RPC method name. 
 
@@ -172,6 +180,7 @@ In order to initiate claiming device, send PUBLISH message to the following topi
 ```shell
 Topic: v1/gateway/claim
 ```
+{: .copy-code}
 
 Message:
 
@@ -187,6 +196,7 @@ Message:
   }
 }
 ```
+{: .copy-code}
 
 where **Device A** and **Device B** are your device names, **secretKey** and **durationMs** are optional keys.
 In case the **secretKey** is not specified, the empty string as a default value is used.
@@ -195,7 +205,6 @@ In case the **durationMs** is not specified, the system parameter **device.claim
 ## Protocol customization
 
 MQTT transport can be fully customized for specific use-case by changing the corresponding [module](https://github.com/thingsboard/thingsboard/tree/master/transport/mqtt).
-
 
 ## Next steps
 

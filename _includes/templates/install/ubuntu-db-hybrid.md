@@ -27,14 +27,10 @@ Add the following lines to the configuration file. Don't forget **to replace** "
 
 ```bash
 # DB Configuration 
-export DATABASE_ENTITIES_TYPE=sql
 export DATABASE_TS_TYPE=cassandra
-export SPRING_JPA_DATABASE_PLATFORM=org.hibernate.dialect.PostgreSQLDialect
-export SPRING_DRIVER_CLASS_NAME=org.postgresql.Driver
 export SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/thingsboard
 export SPRING_DATASOURCE_USERNAME=postgres
 export SPRING_DATASOURCE_PASSWORD=PUT_YOUR_POSTGRESQL_PASSWORD_HERE
-export SPRING_DATASOURCE_MAXIMUM_POOL_SIZE=5
 ``` 
 {: .copy-code}
 
@@ -42,7 +38,7 @@ You can optionally add the following parameters to reconfigure your IoT Hub inst
 
 ```bash
 export CASSANDRA_CLUSTER_NAME=IoT Hub Cluster
-export CASSANDRA_KEYSPACE_NAME=thingsboard
+export CASSANDRA_KEYSPACE_NAME=iot hub
 export CASSANDRA_URL=127.0.0.1:9042
 export CASSANDRA_USE_CREDENTIALS=false
 export CASSANDRA_USERNAME=

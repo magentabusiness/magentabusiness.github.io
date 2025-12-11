@@ -23,15 +23,15 @@ The application that is running on Raspberry Pi is written in Python which is qu
 
 The video below demonstrates the final result of this tutorial.
 
-<br/>
-<br/>
+<br>
+<br>
 <div id="video">  
     <div id="video_wrapper">
         <iframe src="https://www.youtube.com/embed/-26bxb90tt0" frameborder="0" allowfullscreen></iframe>
     </div>
 </div>
-<br/>
-<br/>
+<br>
+<br>
 
 Once you complete this sample/tutorial, you will see your sensor data on the following dashboard.
 
@@ -81,7 +81,7 @@ This step contains instructions that are necessary to connect your device to IoT
 
 Open IoT Hub Web UI (http://localhost:8080) in browser and login as tenant administrator
 
- - login: tenant@thingsboard.org
+ - login: tenant@magenta.com
  - password: tenant
  
 Goto "Devices" section. Click "+" button and create a device with the name "DHT22 Demo Device". 
@@ -155,7 +155,7 @@ Finally, open IoT Hub Web UI. You can access this dashboard by logging in as a t
 
 In case of local installation:
  
- - login: tenant@thingsboard.org
+ - login: tenant@magenta.com
  - password: tenant
 
 In case of live-demo server:
